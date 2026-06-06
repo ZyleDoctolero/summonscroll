@@ -2,7 +2,6 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import {
-  applyXp,
   nextValueMinus,
   nextValuePlus,
   rewardGems,
@@ -12,6 +11,7 @@ import {
   todayISO,
   type Difficulty,
 } from "./constants";
+import { applyXp } from "./engine.server";
 import { applyDeath, type ProfileRow } from "./engine.server";
 
 const TaskInput = z.object({
