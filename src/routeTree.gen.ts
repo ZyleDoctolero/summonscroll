@@ -9,100 +9,116 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ProfileRouteImport } from './routes/profile'
-import { Route as IslandRouteImport } from './routes/island'
-import { Route as GuildRouteImport } from './routes/guild'
-import { Route as FusionRouteImport } from './routes/fusion'
-import { Route as CompendiumRouteImport } from './routes/compendium'
-import { Route as BazaarRouteImport } from './routes/bazaar'
-import { Route as BattleRouteImport } from './routes/battle'
-import { Route as AltarRouteImport } from './routes/altar'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
+import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
+import { Route as AuthenticatedIslandRouteImport } from './routes/_authenticated/island'
+import { Route as AuthenticatedGuildRouteImport } from './routes/_authenticated/guild'
+import { Route as AuthenticatedFusionRouteImport } from './routes/_authenticated/fusion'
+import { Route as AuthenticatedCompendiumRouteImport } from './routes/_authenticated/compendium'
+import { Route as AuthenticatedBazaarRouteImport } from './routes/_authenticated/bazaar'
+import { Route as AuthenticatedBattleRouteImport } from './routes/_authenticated/battle'
+import { Route as AuthenticatedAltarRouteImport } from './routes/_authenticated/altar'
 
-const ProfileRoute = ProfileRouteImport.update({
-  id: '/profile',
-  path: '/profile',
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IslandRoute = IslandRouteImport.update({
-  id: '/island',
-  path: '/island',
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GuildRoute = GuildRouteImport.update({
-  id: '/guild',
-  path: '/guild',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FusionRoute = FusionRouteImport.update({
-  id: '/fusion',
-  path: '/fusion',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CompendiumRoute = CompendiumRouteImport.update({
-  id: '/compendium',
-  path: '/compendium',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BazaarRoute = BazaarRouteImport.update({
-  id: '/bazaar',
-  path: '/bazaar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BattleRoute = BattleRouteImport.update({
-  id: '/battle',
-  path: '/battle',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AltarRoute = AltarRouteImport.update({
-  id: '/altar',
-  path: '/altar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
+const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedProfileRoute = AuthenticatedProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedIslandRoute = AuthenticatedIslandRouteImport.update({
+  id: '/island',
+  path: '/island',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedGuildRoute = AuthenticatedGuildRouteImport.update({
+  id: '/guild',
+  path: '/guild',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedFusionRoute = AuthenticatedFusionRouteImport.update({
+  id: '/fusion',
+  path: '/fusion',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedCompendiumRoute = AuthenticatedCompendiumRouteImport.update({
+  id: '/compendium',
+  path: '/compendium',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedBazaarRoute = AuthenticatedBazaarRouteImport.update({
+  id: '/bazaar',
+  path: '/bazaar',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedBattleRoute = AuthenticatedBattleRouteImport.update({
+  id: '/battle',
+  path: '/battle',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedAltarRoute = AuthenticatedAltarRouteImport.update({
+  id: '/altar',
+  path: '/altar',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/altar': typeof AltarRoute
-  '/battle': typeof BattleRoute
-  '/bazaar': typeof BazaarRoute
-  '/compendium': typeof CompendiumRoute
-  '/fusion': typeof FusionRoute
-  '/guild': typeof GuildRoute
-  '/island': typeof IslandRoute
-  '/profile': typeof ProfileRoute
+  '/': typeof AuthenticatedIndexRoute
+  '/auth': typeof AuthRoute
+  '/altar': typeof AuthenticatedAltarRoute
+  '/battle': typeof AuthenticatedBattleRoute
+  '/bazaar': typeof AuthenticatedBazaarRoute
+  '/compendium': typeof AuthenticatedCompendiumRoute
+  '/fusion': typeof AuthenticatedFusionRoute
+  '/guild': typeof AuthenticatedGuildRoute
+  '/island': typeof AuthenticatedIslandRoute
+  '/profile': typeof AuthenticatedProfileRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/altar': typeof AltarRoute
-  '/battle': typeof BattleRoute
-  '/bazaar': typeof BazaarRoute
-  '/compendium': typeof CompendiumRoute
-  '/fusion': typeof FusionRoute
-  '/guild': typeof GuildRoute
-  '/island': typeof IslandRoute
-  '/profile': typeof ProfileRoute
+  '/auth': typeof AuthRoute
+  '/altar': typeof AuthenticatedAltarRoute
+  '/battle': typeof AuthenticatedBattleRoute
+  '/bazaar': typeof AuthenticatedBazaarRoute
+  '/compendium': typeof AuthenticatedCompendiumRoute
+  '/fusion': typeof AuthenticatedFusionRoute
+  '/guild': typeof AuthenticatedGuildRoute
+  '/island': typeof AuthenticatedIslandRoute
+  '/profile': typeof AuthenticatedProfileRoute
+  '/': typeof AuthenticatedIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/altar': typeof AltarRoute
-  '/battle': typeof BattleRoute
-  '/bazaar': typeof BazaarRoute
-  '/compendium': typeof CompendiumRoute
-  '/fusion': typeof FusionRoute
-  '/guild': typeof GuildRoute
-  '/island': typeof IslandRoute
-  '/profile': typeof ProfileRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/auth': typeof AuthRoute
+  '/_authenticated/altar': typeof AuthenticatedAltarRoute
+  '/_authenticated/battle': typeof AuthenticatedBattleRoute
+  '/_authenticated/bazaar': typeof AuthenticatedBazaarRoute
+  '/_authenticated/compendium': typeof AuthenticatedCompendiumRoute
+  '/_authenticated/fusion': typeof AuthenticatedFusionRoute
+  '/_authenticated/guild': typeof AuthenticatedGuildRoute
+  '/_authenticated/island': typeof AuthenticatedIslandRoute
+  '/_authenticated/profile': typeof AuthenticatedProfileRoute
+  '/_authenticated/': typeof AuthenticatedIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/auth'
     | '/altar'
     | '/battle'
     | '/bazaar'
@@ -113,7 +129,7 @@ export interface FileRouteTypes {
     | '/profile'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
+    | '/auth'
     | '/altar'
     | '/battle'
     | '/bazaar'
@@ -122,110 +138,150 @@ export interface FileRouteTypes {
     | '/guild'
     | '/island'
     | '/profile'
+    | '/'
   id:
     | '__root__'
-    | '/'
-    | '/altar'
-    | '/battle'
-    | '/bazaar'
-    | '/compendium'
-    | '/fusion'
-    | '/guild'
-    | '/island'
-    | '/profile'
+    | '/_authenticated'
+    | '/auth'
+    | '/_authenticated/altar'
+    | '/_authenticated/battle'
+    | '/_authenticated/bazaar'
+    | '/_authenticated/compendium'
+    | '/_authenticated/fusion'
+    | '/_authenticated/guild'
+    | '/_authenticated/island'
+    | '/_authenticated/profile'
+    | '/_authenticated/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AltarRoute: typeof AltarRoute
-  BattleRoute: typeof BattleRoute
-  BazaarRoute: typeof BazaarRoute
-  CompendiumRoute: typeof CompendiumRoute
-  FusionRoute: typeof FusionRoute
-  GuildRoute: typeof GuildRoute
-  IslandRoute: typeof IslandRoute
-  ProfileRoute: typeof ProfileRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AuthRoute: typeof AuthRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/profile': {
-      id: '/profile'
-      path: '/profile'
-      fullPath: '/profile'
-      preLoaderRoute: typeof ProfileRouteImport
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/island': {
-      id: '/island'
-      path: '/island'
-      fullPath: '/island'
-      preLoaderRoute: typeof IslandRouteImport
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/guild': {
-      id: '/guild'
-      path: '/guild'
-      fullPath: '/guild'
-      preLoaderRoute: typeof GuildRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fusion': {
-      id: '/fusion'
-      path: '/fusion'
-      fullPath: '/fusion'
-      preLoaderRoute: typeof FusionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/compendium': {
-      id: '/compendium'
-      path: '/compendium'
-      fullPath: '/compendium'
-      preLoaderRoute: typeof CompendiumRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bazaar': {
-      id: '/bazaar'
-      path: '/bazaar'
-      fullPath: '/bazaar'
-      preLoaderRoute: typeof BazaarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/battle': {
-      id: '/battle'
-      path: '/battle'
-      fullPath: '/battle'
-      preLoaderRoute: typeof BattleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/altar': {
-      id: '/altar'
-      path: '/altar'
-      fullPath: '/altar'
-      preLoaderRoute: typeof AltarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/': {
-      id: '/'
+    '/_authenticated/': {
+      id: '/_authenticated/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof AuthenticatedIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/profile': {
+      id: '/_authenticated/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof AuthenticatedProfileRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/island': {
+      id: '/_authenticated/island'
+      path: '/island'
+      fullPath: '/island'
+      preLoaderRoute: typeof AuthenticatedIslandRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/guild': {
+      id: '/_authenticated/guild'
+      path: '/guild'
+      fullPath: '/guild'
+      preLoaderRoute: typeof AuthenticatedGuildRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/fusion': {
+      id: '/_authenticated/fusion'
+      path: '/fusion'
+      fullPath: '/fusion'
+      preLoaderRoute: typeof AuthenticatedFusionRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/compendium': {
+      id: '/_authenticated/compendium'
+      path: '/compendium'
+      fullPath: '/compendium'
+      preLoaderRoute: typeof AuthenticatedCompendiumRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/bazaar': {
+      id: '/_authenticated/bazaar'
+      path: '/bazaar'
+      fullPath: '/bazaar'
+      preLoaderRoute: typeof AuthenticatedBazaarRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/battle': {
+      id: '/_authenticated/battle'
+      path: '/battle'
+      fullPath: '/battle'
+      preLoaderRoute: typeof AuthenticatedBattleRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/altar': {
+      id: '/_authenticated/altar'
+      path: '/altar'
+      fullPath: '/altar'
+      preLoaderRoute: typeof AuthenticatedAltarRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAltarRoute: typeof AuthenticatedAltarRoute
+  AuthenticatedBattleRoute: typeof AuthenticatedBattleRoute
+  AuthenticatedBazaarRoute: typeof AuthenticatedBazaarRoute
+  AuthenticatedCompendiumRoute: typeof AuthenticatedCompendiumRoute
+  AuthenticatedFusionRoute: typeof AuthenticatedFusionRoute
+  AuthenticatedGuildRoute: typeof AuthenticatedGuildRoute
+  AuthenticatedIslandRoute: typeof AuthenticatedIslandRoute
+  AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
+  AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAltarRoute: AuthenticatedAltarRoute,
+  AuthenticatedBattleRoute: AuthenticatedBattleRoute,
+  AuthenticatedBazaarRoute: AuthenticatedBazaarRoute,
+  AuthenticatedCompendiumRoute: AuthenticatedCompendiumRoute,
+  AuthenticatedFusionRoute: AuthenticatedFusionRoute,
+  AuthenticatedGuildRoute: AuthenticatedGuildRoute,
+  AuthenticatedIslandRoute: AuthenticatedIslandRoute,
+  AuthenticatedProfileRoute: AuthenticatedProfileRoute,
+  AuthenticatedIndexRoute: AuthenticatedIndexRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AltarRoute: AltarRoute,
-  BattleRoute: BattleRoute,
-  BazaarRoute: BazaarRoute,
-  CompendiumRoute: CompendiumRoute,
-  FusionRoute: FusionRoute,
-  GuildRoute: GuildRoute,
-  IslandRoute: IslandRoute,
-  ProfileRoute: ProfileRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AuthRoute: AuthRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
