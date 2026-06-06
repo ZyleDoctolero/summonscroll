@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import html from "../screens/profile.html?raw";
-import { Screen } from "../screens/Screen";
+import html from "../../screens/profile.html?raw";
+import { Screen } from "../../screens/Screen";
 
 export const Route = createFileRoute("/_authenticated/profile")({
   head: () => ({ meta: [{ title: "SummonScroll - Player Profile" }] }),

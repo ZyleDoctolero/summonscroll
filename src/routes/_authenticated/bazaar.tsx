@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import html from "../screens/bazaar.html?raw";
-import { Screen } from "../screens/Screen";
+import html from "../../screens/bazaar.html?raw";
+import { Screen } from "../../screens/Screen";
 
 export const Route = createFileRoute("/_authenticated/bazaar")({
   head: () => ({ meta: [{ title: "SummonScroll Shop" }] }),
