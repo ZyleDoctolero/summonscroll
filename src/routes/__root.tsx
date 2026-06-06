@@ -70,9 +70,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     scripts: [
-      // Config must be defined BEFORE the Tailwind CDN script loads.
-      { children: twConfigRaw },
+      // Tailwind play CDN must load first so the `tailwind` global exists,
+      // then we set the custom config (matching the source mockups' order).
       { src: "https://cdn.tailwindcss.com?plugins=forms,container-queries" },
+      { children: twConfigRaw },
     ],
   }),
   shellComponent: RootShell,
