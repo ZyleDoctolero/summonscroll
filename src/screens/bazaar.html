@@ -1,0 +1,190 @@
+
+<!-- SideNavBar -->
+<nav class="hidden md:flex w-[280px] h-full fixed left-0 top-0 border-r border-white/10 bg-surface-container-low shadow-2xl flex-col h-full py-lg px-md z-50">
+<div class="mb-xl flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-bright border border-white/10 overflow-hidden relative">
+<img alt="" class="w-full h-full object-cover" data-alt="A dark fantasy wizard avatar with glowing purple eyes and a dark hooded cloak. The background is a swirling void." src="https://lh3.googleusercontent.com/aida/AP1WRLsS4RpWvsa1vaNhWQUUprE84-cNFVVBzDxO-J_nRCzoNwOHKwIOMxr_-4tvGMQ_nrA3-yAXkR6sBedsN1kllFatdwOUlgwG1ZaKYDkoGSue6RFj8kI-j27cfKcWizYIXi8FZowFP10A5TJmMoMWPFbvDHHpPGsDd8oI8lx-GqCv_l7JIEJ1fxU_xUndrD8zzyY_lKhlKW0DRRf4HrcNSP6KPzGsJ4inTQVzCHm0nDhOLhMpWHO3gIw3sbQ"/>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-text-primary">Level 42 Archmage</h2>
+<p class="font-stats-sm text-stats-sm text-primary mt-1">850/1200 XP</p>
+</div>
+</div>
+<button class="bg-gradient-gold text-on-primary font-label-caps text-label-caps uppercase tracking-widest py-3 px-4 rounded-md mb-lg font-bold hover:brightness-110 transition-all shadow-[0_0_16px_rgba(200,154,62,0.4)]">
+            Summon Now
+        </button>
+<div class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="/">
+<span class="material-symbols-outlined">castle</span>
+<span class="font-label-caps text-label-caps uppercase">Hub</span>
+</a>
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="/island">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-caps text-label-caps uppercase">Island</span>
+</a>
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="/altar">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-label-caps text-label-caps uppercase">Altar</span>
+</a>
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="/battle">
+<span class="material-symbols-outlined">swords</span>
+<span class="font-label-caps text-label-caps uppercase">Battle</span>
+</a>
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="/compendium">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-caps text-label-caps uppercase">Compendium</span>
+</a>
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="/guild">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-label-caps text-label-caps uppercase">Guild</span>
+</a>
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="/fusion">
+<span class="material-symbols-outlined">cyclone</span>
+<span class="font-label-caps text-label-caps uppercase">Fusion</span>
+</a>
+<a class="flex items-center gap-3 border-l-4 border-primary bg-surface-container-high text-primary font-bold px-4 py-3 rounded-r-md" href="/bazaar">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-caps text-label-caps uppercase">Shop</span>
+</a>
+</div>
+<div class="mt-auto pt-4 border-t border-white/10 flex flex-col gap-2">
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-caps text-label-caps uppercase">Settings</span>
+</a>
+<a class="flex items-center gap-3 text-text-secondary hover:text-text-primary px-4 py-3 transition-colors rounded-md hover:bg-bg-hover" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-caps text-label-caps uppercase">Support</span>
+</a>
+</div>
+</nav>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-full md:w-[calc(100%-280px)] z-40 bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-lg flex justify-between items-center px-lg h-16">
+<div class="font-headline-md text-headline-md text-primary font-bold hidden md:block">SummonScroll</div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold md:hidden">SummonScroll</div>
+<div class="flex items-center gap-lg">
+<div class="hidden sm:flex items-center gap-4">
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-primary text-sm">diamond</span>
+<span class="font-stats-md text-stats-md text-text-primary">1,240</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-rarity-epic text-sm">token</span>
+<span class="font-stats-md text-stats-md text-text-primary">85</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-rarity-elite text-sm">stars</span>
+<span class="font-stats-md text-stats-md text-text-primary">12</span>
+</div>
+</div>
+<button class="text-text-secondary hover:text-primary transition-colors hover:brightness-125 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-danger rounded-full"></span>
+</button>
+<button class="text-text-secondary hover:text-primary transition-colors hover:brightness-125">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full md:ml-[280px] pt-24 px-margin-mobile md:px-margin-desktop pb-24 min-h-screen relative overflow-hidden">
+<!-- Ambient Background Glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto">
+<!-- Shop Header & Tabs -->
+<div class="mb-xl">
+<h1 class="font-display-lg text-display-lg text-text-primary mb-2 hidden md:block">The Grand Bazaar</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-text-primary mb-2 md:hidden">The Grand Bazaar</h1>
+<p class="font-body-md text-body-md text-text-secondary mb-8">Exchange your hard-earned currencies for rare artifacts and summoning materials.</p>
+<div class="flex items-center gap-8 border-b border-white/10 pb-4 overflow-x-auto no-scrollbar">
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b-2 border-primary pb-4 -mb-[18px] whitespace-nowrap">Daily Deals</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-text-secondary hover:text-text-primary transition-colors pb-4 -mb-[18px] whitespace-nowrap">Crystal Shop</button>
+<button class="font-label-caps text-label-caps uppercase tracking-widest text-text-secondary hover:text-text-primary transition-colors pb-4 -mb-[18px] whitespace-nowrap">Premium</button>
+</div>
+</div>
+<!-- Shop Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md md:gap-lg">
+<!-- Item 1: Summoning Scroll (Legendary) -->
+<div class="bg-bg-card rounded-xl border border-white/10 p-md flex flex-col relative overflow-hidden glow-legendary card-hover transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-rarity-elite"></div>
+<div class="absolute top-md right-md bg-surface-container-high px-2 py-1 rounded text-xs font-stats-sm text-rarity-elite flex items-center gap-1 border border-rarity-elite/30">
+<span class="w-1.5 h-1.5 rounded-full bg-rarity-elite"></span> Limited: 1/5
+                    </div>
+<div class="w-full h-40 bg-surface-container-lowest rounded-lg mb-4 flex items-center justify-center relative border border-white/5 group">
+<div class="absolute inset-0 bg-gradient-to-b from-rarity-elite/10 to-transparent opacity-50"></div>
+<img alt="" class="w-24 h-24 object-contain filter drop-shadow-[0_0_12px_rgba(255,183,77,0.6)] group-hover:scale-110 transition-transform duration-500" data-alt="A glowing ancient scroll tied with a golden ribbon, floating in a dark void. Surrounded by ethereal golden particles and mystical runes. High fantasy style." src="https://lh3.googleusercontent.com/aida/AP1WRLvZe0rdBwPjCl0izeBFGNsjShkdh0-OwQSiOI_vBYoQSmcwfN2JpDCNJL5Tqf0t-pQT4tRBaf46NMMG8JGMWMgXhiEZCjrLCSJNB6ftZ2mzNY36jOYj-65FOrAxKsJgQ5ZhxA8Y7WoSe4n18hA5nwCHDro7EoFzJEY0RfGZGj_kislivoaV8CDg1hrOdK6FviceSQvP-fBryNG9jrwt21AYi2RsM8XjiSuVGhyewGiXNW6jkfUBjRXMJY4"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Mythic Summon Scroll</h3>
+<p class="font-body-md text-body-md text-text-secondary line-clamp-2 mb-4 flex-1">Guarantees a summoning of an Elite tier or higher familiar.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm">diamond</span>
+<span class="font-stats-lg text-stats-lg text-text-primary">500</span>
+</div>
+<button class="bg-gradient-gold text-on-primary font-label-caps text-label-caps uppercase px-4 py-2 rounded font-bold hover:brightness-110 transition-all">
+                            Purchase
+                        </button>
+</div>
+</div>
+<!-- Item 2: Void Shard Bundle (Epic) -->
+<div class="bg-bg-card rounded-xl border border-white/10 p-md flex flex-col relative overflow-hidden card-hover transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-rarity-epic"></div>
+<div class="w-full h-40 bg-surface-container-lowest rounded-lg mb-4 flex items-center justify-center relative border border-white/5 group">
+<div class="absolute inset-0 bg-gradient-to-b from-rarity-epic/10 to-transparent opacity-50"></div>
+<img alt="" class="w-24 h-24 object-contain filter drop-shadow-[0_0_12px_rgba(206,147,216,0.6)] group-hover:scale-110 transition-transform duration-500" data-alt="A cluster of glowing purple crystals hovering over a dark stone pedestal. Ethereal purple smoke trails around them in a dark atmosphere." src="https://lh3.googleusercontent.com/aida/AP1WRLsAle2QzZKq0am6z1BthzcktBWtom6xJCNF624k2aq3qPcHgiGcTEoQlFbgnBH_myfF_JupQ725TzOLgeyBzCfncqRF6fXkSRk2BMiFrHWBi5BTY7fPZCYwh70mUbGplsXZmAXuJN5X2JIEJmImPezzJxq8xqtae5-GdL31eOkahBBPVhbYvVgInl2vjEawjbcbIFcycPpzdyoMwbVVV14oj5XUjzpffnIvu8ZGr2VgvUNLMMKtxrtm-A"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Void Shard Bundle</h3>
+<p class="font-body-md text-body-md text-text-secondary line-clamp-2 mb-4 flex-1">A bundle of 50 Void Shards used for dark infusions.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm">diamond</span>
+<span class="font-stats-lg text-stats-lg text-text-primary">120</span>
+</div>
+<button class="bg-gradient-gold text-on-primary font-label-caps text-label-caps uppercase px-4 py-2 rounded font-bold hover:brightness-110 transition-all">
+                            Purchase
+                        </button>
+</div>
+</div>
+<!-- Item 3: XP Booster (Uncommon) -->
+<div class="bg-bg-card rounded-xl border border-white/10 p-md flex flex-col relative overflow-hidden glow-uncommon card-hover transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-rarity-uncommon"></div>
+<div class="w-full h-40 bg-surface-container-lowest rounded-lg mb-4 flex items-center justify-center relative border border-white/5 group">
+<div class="absolute inset-0 bg-gradient-to-b from-rarity-uncommon/10 to-transparent opacity-50"></div>
+<img alt="" class="w-24 h-24 object-contain filter drop-shadow-[0_0_12px_rgba(129,199,132,0.6)] group-hover:scale-110 transition-transform duration-500" data-alt="A small glowing green potion vial filled with luminescent liquid. Corked top. Sitting on a dark rustic wooden table under moody lighting." src="https://lh3.googleusercontent.com/aida/AP1WRLsKWWZWcYY_x3Zg-NXxfvzCIHuEiv2p6trMHwhsTiN_vrYVsfc4Ep_UCx42eYZ0iQbtVmimZp9EM6wqHCv4K30LwZze30pvEQbKwvfjQTDY2RguRp4-2XzJ2hxgdpc3iBM7nmeg9kAIbO-7dWUdhL8bgwUNEjl1kRJtOa7LEOgCHWQM2zaw5R_nYn_EVjYxPAGL3fauCXQrwLej-eiT5cndBzaAKBusvXaE3taxfPF8LOCuzJu1G3AhfwU"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-1">Lesser Insight Potion</h3>
+<p class="font-body-md text-body-md text-text-secondary line-clamp-2 mb-4 flex-1">Grants +50% XP from habits for 24 hours.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm">diamond</span>
+<span class="font-stats-lg text-stats-lg text-text-primary">50</span>
+</div>
+<button class="bg-gradient-gold text-on-primary font-label-caps text-label-caps uppercase px-4 py-2 rounded font-bold hover:brightness-110 transition-all">
+                            Purchase
+                        </button>
+</div>
+</div>
+<!-- Item 4: Sold Out Item -->
+<div class="bg-surface-container-lowest rounded-xl border border-white/5 p-md flex flex-col relative overflow-hidden opacity-60 grayscale cursor-not-allowed">
+<div class="absolute top-0 left-0 w-full h-1 bg-surface-variant"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface-container/90 px-4 py-2 rounded-lg border border-white/10 z-10 transform -rotate-12 backdrop-blur-sm">
+<span class="font-headline-md text-headline-md text-danger font-bold uppercase tracking-widest text-shadow">Sold Out</span>
+</div>
+<div class="w-full h-40 bg-surface-container rounded-lg mb-4 flex items-center justify-center relative border border-white/5">
+<img alt="" class="w-24 h-24 object-contain opacity-50" data-alt="A shadowy, empty ornate chest open in a dark room. Faint lingering sparkles suggest something valuable was recently removed." src="https://lh3.googleusercontent.com/aida/AP1WRLtB53aDBU-SjLTcVVXi_ubcUWop9B6sPbfGT8DnxzhKZcNlyCnwBzwopedRfYbWffEGxAd2xxj0J5Yn1TDKZOlnJtutMXwVYnqq05D3jTTlmLK2-sZAZTtbWNgLX-XkvoHjzhIFlwz98nvxVcG8ruYSactG52uq8DN3bjJH3-X2adnN66XmOg-GTDpeCz7U9N856g7dW52Kqcfn-7EBErKvzIfsO-8kFxdAJeAxtQOg7qcjSWbpF3hKOyA"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-secondary mb-1">Pact Seal Fragment</h3>
+<p class="font-body-md text-body-md text-text-tertiary line-clamp-2 mb-4 flex-1">Used to forge a new covenant. Out of stock.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-1.5 opacity-50">
+<span class="material-symbols-outlined text-text-secondary text-sm">diamond</span>
+<span class="font-stats-lg text-stats-lg text-text-secondary">250</span>
+</div>
+<button class="bg-surface-variant text-text-secondary font-label-caps text-label-caps uppercase px-4 py-2 rounded font-bold cursor-not-allowed" disabled="">
+                            Unavailable
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
