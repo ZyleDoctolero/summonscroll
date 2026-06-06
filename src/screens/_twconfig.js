@@ -1,0 +1,208 @@
+
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#b2acff",
+                    "inverse-on-surface": "#2e3037",
+                    "on-surface-variant": "#d2c5b1",
+                    "on-secondary-fixed": "#140067",
+                    "bg-hover": "#1E2333",
+                    "tertiary-fixed-dim": "#ebc23e",
+                    "secondary": "#c5c0ff",
+                    "surface-tint": "#f1bf5f",
+                    "tertiary-container": "#c29d14",
+                    "secondary-container": "#41379b",
+                    "on-secondary-fixed-variant": "#41379b",
+                    "text-tertiary": "#6B6864",
+                    "bg-modal": "#1A1E2A",
+                    "rarity-uncommon": "#81C784",
+                    "rarity-ex": "#FFFFFF",
+                    "background": "#111319",
+                    "surface-container-lowest": "#0c0e14",
+                    "secondary-fixed-dim": "#c5c0ff",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "danger": "#E05252",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "surface": "#111319",
+                    "secondary-fixed": "#e4dfff",
+                    "on-primary": "#412d00",
+                    "surface-container-high": "#282a30",
+                    "tertiary": "#ebc23e",
+                    "rarity-mythic": "#FF8A65",
+                    "surface-bright": "#373940",
+                    "primary-container": "#c89a3e",
+                    "primary-fixed": "#ffdea6",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#271900",
+                    "on-error": "#690005",
+                    "on-secondary": "#2a1c84",
+                    "surface-variant": "#33343b",
+                    "success": "#5FAD41",
+                    "rarity-epic": "#CE93D8",
+                    "inverse-surface": "#e2e2eb",
+                    "bg-card": "#13161F",
+                    "text-secondary": "#A09D96",
+                    "text-primary": "#F0EDE6",
+                    "surface-container-low": "#191b22",
+                    "rarity-elite": "#FFB74D",
+                    "rarity-common": "#9E9E9E",
+                    "surface-container": "#1e1f26",
+                    "on-tertiary-container": "#453600",
+                    "primary-fixed-dim": "#f1bf5f",
+                    "surface-container-highest": "#33343b",
+                    "bg-page": "#0C0E14",
+                    "inverse-primary": "#7c5800",
+                    "on-surface": "#e2e2eb",
+                    "rarity-rare": "#4FC3F7",
+                    "on-error-container": "#ffdad6",
+                    "surface-dim": "#111319",
+                    "primary": "#f1bf5f",
+                    "on-background": "#e2e2eb",
+                    "outline": "#9b8f7d",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#3c2f00",
+                    "on-primary-container": "#4b3400",
+                    "outline-variant": "#4f4537",
+                    "tertiary-fixed": "#ffe087",
+                    "on-tertiary-fixed": "#241a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "margin-mobile": "16px",
+                    "lg": "24px",
+                    "margin-desktop": "40px",
+                    "2xl": "48px",
+                    "gutter": "16px",
+                    "unit": "4px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "stats-lg": [
+                            "JetBrains Mono"
+                    ],
+                    "headline-lg-mobile": [
+                            "Cinzel"
+                    ],
+                    "body-lg": [
+                            "DM Sans"
+                    ],
+                    "label-caps": [
+                            "DM Sans"
+                    ],
+                    "headline-lg": [
+                            "Cinzel"
+                    ],
+                    "stats-md": [
+                            "JetBrains Mono"
+                    ],
+                    "headline-sm": [
+                            "Cinzel"
+                    ],
+                    "headline-md": [
+                            "Cinzel"
+                    ],
+                    "display-lg": [
+                            "Cinzel"
+                    ],
+                    "body-md": [
+                            "DM Sans"
+                    ],
+                    "stats-sm": [
+                            "JetBrains Mono"
+                    ]
+            },
+            "fontSize": {
+                    "stats-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "stats-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-sm": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "stats-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    

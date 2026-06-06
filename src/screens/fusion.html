@@ -1,0 +1,188 @@
+
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-surface-container-low dark:bg-surface-container-low fixed left-0 top-0 h-full w-[280px] z-40 border-r border-white/10 shadow-[4px_0_24px_rgba(0,0,0,0.5)] flex-col py-lg justify-between">
+<div class="px-md mb-xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-lg">SummonScroll</h1>
+<div class="flex flex-col gap-sm">
+<a class="flex items-center gap-md p-md text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-all duration-300 rounded hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-headline-sm text-headline-sm">Hub</span>
+</a>
+<a class="flex items-center gap-md p-md text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-all duration-300 rounded hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="fort">fort</span>
+<span class="font-headline-sm text-headline-sm">Island</span>
+</a>
+<a class="flex items-center gap-md p-md text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-all duration-300 rounded hover:translate-x-1" href="/altar">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-headline-sm text-headline-sm">Altar</span>
+</a>
+<a class="flex items-center gap-md p-md text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-all duration-300 rounded hover:translate-x-1" href="/battle">
+<span class="material-symbols-outlined" data-icon="swords">swords</span>
+<span class="font-headline-sm text-headline-sm">Battle</span>
+</a>
+<a class="flex items-center gap-md p-md text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-all duration-300 rounded hover:translate-x-1" href="/compendium">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-headline-sm text-headline-sm">Compendium</span>
+</a>
+<a class="flex items-center gap-md p-md text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-all duration-300 rounded hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-headline-sm text-headline-sm">Guild</span>
+</a>
+<a class="flex items-center gap-md p-md border-l-4 border-primary bg-bg-hover text-primary font-bold rounded" href="#">
+<span class="material-symbols-outlined" data-icon="join_inner" style="font-variation-settings: 'FILL' 1;">join_inner</span>
+<span class="font-headline-sm text-headline-sm">Fusion</span>
+</a>
+<a class="flex items-center gap-md p-md text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-all duration-300 rounded hover:translate-x-1" href="/bazaar">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-headline-sm text-headline-sm">Shop</span>
+</a>
+</div>
+</div>
+<div class="px-md mt-auto">
+<button class="w-full bg-gradient-to-r from-primary-container to-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest py-md rounded mb-xl hover:opacity-90 transition-opacity">
+                Summon Now
+            </button>
+<div class="flex items-center gap-md p-md border-t border-white/10 mt-md">
+<div class="w-10 h-10 rounded-full bg-surface-bright overflow-hidden">
+<img alt="Summoner Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLs4vAJgBCx9NHww4zM7iKFrmfHP068DspmpaQ1p2SFGZQ0mnt_oi3Sp_z6Kh5MgSMxqXINBdrJeiP-RMdMQe2qqLULvdhI_0HXmVxgpvtpyrIo2m9r4MTPcqgcuXCKpoCVBHs6vB79XNu0Rke9tSd4y5_HMGW2Dut2A2efOBzgLpVQkRxnePslwckWxvvVH6swJhqLiLPpWKyUqsfPfqbEq9X3Oqlu4WKhRh2_9DlsWrdSIaz3vygAd_SE"/>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-text-primary">Summoner</div>
+<div class="font-stats-sm text-stats-sm text-text-secondary">Level 42 Archmage</div>
+</div>
+</div>
+<div class="flex gap-sm mt-sm px-sm text-text-tertiary">
+<a class="hover:text-primary transition-colors p-sm" href="#"><span class="material-symbols-outlined text-xl" data-icon="settings">settings</span></a>
+<a class="hover:text-primary transition-colors p-sm" href="#"><span class="material-symbols-outlined text-xl" data-icon="help">help</span></a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 md:ml-[280px] relative flex flex-col h-screen overflow-hidden bg-bg-page bg-arcane-pattern">
+<!-- TopAppBar (Mobile & Minimal Desktop Context) -->
+<header class="bg-surface dark:bg-surface text-primary dark:text-primary font-headline-sm text-headline-sm fixed top-0 w-full z-50 bg-gradient-to-b from-surface-container-high to-transparent shadow-md flex justify-between items-center px-lg py-sm md:hidden">
+<div class="font-display-lg text-display-lg text-primary uppercase tracking-widest">SummonScroll</div>
+<div class="flex gap-md">
+<button class="text-on-surface-variant hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform"><span class="material-symbols-outlined" data-icon="diamond">diamond</span></button>
+<button class="text-on-surface-variant hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform"><span class="material-symbols-outlined" data-icon="history_edu">history_edu</span></button>
+<button class="text-on-surface-variant hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform"><span class="material-symbols-outlined" data-icon="account_circle">account_circle</span></button>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto pt-[80px] md:pt-lg px-margin-mobile md:px-margin-desktop pb-2xl flex flex-col xl:flex-row gap-xl items-center xl:items-stretch justify-center relative z-10">
+<!-- Left/Center: Fusion Matrix -->
+<div class="flex-1 flex flex-col items-center justify-center max-w-3xl w-full">
+<h2 class="font-display-lg text-display-lg text-primary mb-2xl text-glow uppercase tracking-widest">FUSION MATRIX</h2>
+<!-- Hexagonal Slots -->
+<div class="relative w-full aspect-square max-w-[500px] flex items-center justify-center mb-xl">
+<!-- Central connection lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" viewbox="0 0 100 100">
+<line stroke="#f1bf5f" stroke-dasharray="2,1" stroke-width="0.5" x1="50" x2="50" y1="20" y2="50"></line>
+<line stroke="#f1bf5f" stroke-dasharray="2,1" stroke-width="0.5" x1="25" x2="50" y1="75" y2="50"></line>
+<line stroke="#f1bf5f" stroke-dasharray="2,1" stroke-width="0.5" x1="75" x2="50" y1="75" y2="50"></line>
+<circle cx="50" cy="50" fill="none" r="3" stroke="#f1bf5f" stroke-width="0.5"></circle>
+</svg>
+<!-- Slot 1 (Top) -->
+<div class="absolute top-[10%] left-1/2 -translate-x-1/2 w-32 h-36 hex-clip bg-bg-card border-2 border-white/10 flex flex-col items-center justify-center hover:border-primary/50 transition-colors cursor-pointer group shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+<div class="w-12 h-12 rounded-full border border-dashed border-text-secondary flex items-center justify-center group-hover:border-primary group-hover:text-primary transition-colors text-text-secondary bg-surface-container-low">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-secondary mt-sm group-hover:text-primary">Core</span>
+</div>
+<!-- Slot 2 (Bottom Left) -->
+<div class="absolute bottom-[20%] left-[15%] w-32 h-36 hex-clip bg-bg-card border-2 border-white/10 flex flex-col items-center justify-center hover:border-primary/50 transition-colors cursor-pointer group shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+<div class="w-12 h-12 rounded-full border border-dashed border-text-secondary flex items-center justify-center group-hover:border-primary group-hover:text-primary transition-colors text-text-secondary bg-surface-container-low">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-secondary mt-sm group-hover:text-primary">Catalyst A</span>
+</div>
+<!-- Slot 3 (Bottom Right) -->
+<div class="absolute bottom-[20%] right-[15%] w-32 h-36 hex-clip bg-bg-card border-2 border-white/10 flex flex-col items-center justify-center hover:border-primary/50 transition-colors cursor-pointer group shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+<div class="w-12 h-12 rounded-full border border-dashed border-text-secondary flex items-center justify-center group-hover:border-primary group-hover:text-primary transition-colors text-text-secondary bg-surface-container-low">
+<span class="material-symbols-outlined text-2xl" data-icon="add">add</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-secondary mt-sm group-hover:text-primary">Catalyst B</span>
+</div>
+</div>
+<!-- Result Preview -->
+<div class="w-full max-w-md bg-bg-card rounded-xl border border-white/5 p-lg flex items-center gap-lg mb-2xl relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+<div class="w-24 h-24 rounded-lg bg-surface-container-lowest border border-tertiary/30 flex items-center justify-center glow-legendary relative z-10">
+<span class="material-symbols-outlined text-5xl text-tertiary opacity-30" data-icon="psychiatry">psychiatry</span>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-lg"></div>
+<span class="absolute bottom-sm font-stats-sm text-stats-sm text-primary">???</span>
+</div>
+<div class="flex-1 relative z-10">
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-xs">RESULT PREVIEW</h3>
+<p class="font-body-md text-body-md text-text-secondary">Legendary Entity</p>
+<div class="mt-sm flex gap-xs">
+<div class="h-1 flex-1 bg-surface-container-highest rounded overflow-hidden">
+<div class="h-full w-[85%] bg-success"></div>
+</div>
+<span class="font-stats-sm text-stats-sm text-text-secondary">85% Success Rate</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full max-w-md bg-gradient-to-r from-primary-container to-primary text-on-primary font-headline-sm text-headline-sm uppercase tracking-widest py-lg px-xl rounded-lg shadow-[0_0_30px_rgba(200,154,62,0.3)] hover:shadow-[0_0_40px_rgba(200,154,62,0.5)] transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                    PERFORM FUSION
+                </button>
+</div>
+<!-- Right Sidebar: Recipes -->
+<div class="w-full xl:w-96 bg-bg-card/80 backdrop-blur-md rounded-xl border border-white/10 flex flex-col h-full max-h-[800px]">
+<div class="p-lg border-b border-white/10 flex justify-between items-center bg-surface-container-low/50 rounded-t-xl">
+<h3 class="font-headline-sm text-headline-sm text-text-primary">Fusion Recipes</h3>
+<span class="material-symbols-outlined text-text-secondary cursor-pointer hover:text-primary transition-colors" data-icon="filter_list">filter_list</span>
+</div>
+<div class="flex-1 overflow-y-auto p-md flex flex-col gap-md custom-scrollbar">
+<!-- Recipe Item 1 -->
+<div class="bg-surface-container p-md rounded-lg border border-white/5 hover:border-white/20 transition-colors cursor-pointer flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-headline-sm text-primary-fixed">Void Walker</span>
+<span class="font-stats-sm text-stats-sm bg-rarity-epic/20 text-rarity-epic px-2 py-1 rounded">Epic</span>
+</div>
+<div class="flex items-center gap-sm text-text-secondary font-stats-sm text-stats-sm mt-xs">
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-xs">A</div>
+<span class="text-xs">+</span>
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-xs">B</div>
+<span class="text-xs">+</span>
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-xs">C</div>
+</div>
+</div>
+<!-- Recipe Item 2 -->
+<div class="bg-surface-container p-md rounded-lg border border-primary/30 shadow-[inset_0_0_15px_rgba(200,154,62,0.1)] cursor-pointer flex flex-col gap-sm">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-headline-sm text-tertiary">Astral Dragon</span>
+<span class="font-stats-sm text-stats-sm bg-tertiary/20 text-tertiary px-2 py-1 rounded">Legendary</span>
+</div>
+<div class="flex items-center gap-sm text-text-secondary font-stats-sm text-stats-sm mt-xs">
+<div class="w-8 h-8 rounded bg-surface-bright border border-tertiary/50 flex items-center justify-center text-xs text-primary">S</div>
+<span class="text-xs">+</span>
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-xs">A</div>
+<span class="text-xs">+</span>
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-xs">A</div>
+</div>
+</div>
+<!-- Recipe Item 3 -->
+<div class="bg-surface-container p-md rounded-lg border border-white/5 hover:border-white/20 transition-colors cursor-pointer flex flex-col gap-sm opacity-60 grayscale hover:grayscale-0 hover:opacity-100">
+<div class="flex justify-between items-start">
+<span class="font-headline-sm text-headline-sm text-text-primary">Shadow Fiend</span>
+<span class="font-stats-sm text-stats-sm bg-rarity-rare/20 text-rarity-rare px-2 py-1 rounded">Rare</span>
+</div>
+<div class="flex items-center gap-sm text-text-secondary font-stats-sm text-stats-sm mt-xs">
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-xs">C</div>
+<span class="text-xs">+</span>
+<div class="w-8 h-8 rounded bg-surface-bright flex items-center justify-center text-xs">C</div>
+</div>
+</div>
+</div>
+<div class="p-md border-t border-white/10 bg-surface-container-low/50 rounded-b-xl">
+<div class="flex items-center gap-sm text-text-secondary font-body-md text-body-md">
+<span class="material-symbols-outlined text-lg" data-icon="info">info</span>
+<span>Select ingredients to view potential outcomes.</span>
+</div>
+</div>
+</div>
+</main>
+</div>
