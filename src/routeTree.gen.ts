@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as IslandRouteImport } from './routes/island'
+import { Route as GuildRouteImport } from './routes/guild'
+import { Route as FusionRouteImport } from './routes/fusion'
+import { Route as CompendiumRouteImport } from './routes/compendium'
+import { Route as BazaarRouteImport } from './routes/bazaar'
+import { Route as BattleRouteImport } from './routes/battle'
+import { Route as AltarRouteImport } from './routes/altar'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IslandRoute = IslandRouteImport.update({
+  id: '/island',
+  path: '/island',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuildRoute = GuildRouteImport.update({
+  id: '/guild',
+  path: '/guild',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FusionRoute = FusionRouteImport.update({
+  id: '/fusion',
+  path: '/fusion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompendiumRoute = CompendiumRouteImport.update({
+  id: '/compendium',
+  path: '/compendium',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BazaarRoute = BazaarRouteImport.update({
+  id: '/bazaar',
+  path: '/bazaar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BattleRoute = BattleRouteImport.update({
+  id: '/battle',
+  path: '/battle',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AltarRoute = AltarRouteImport.update({
+  id: '/altar',
+  path: '/altar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/altar': typeof AltarRoute
+  '/battle': typeof BattleRoute
+  '/bazaar': typeof BazaarRoute
+  '/compendium': typeof CompendiumRoute
+  '/fusion': typeof FusionRoute
+  '/guild': typeof GuildRoute
+  '/island': typeof IslandRoute
+  '/profile': typeof ProfileRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/altar': typeof AltarRoute
+  '/battle': typeof BattleRoute
+  '/bazaar': typeof BazaarRoute
+  '/compendium': typeof CompendiumRoute
+  '/fusion': typeof FusionRoute
+  '/guild': typeof GuildRoute
+  '/island': typeof IslandRoute
+  '/profile': typeof ProfileRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/altar': typeof AltarRoute
+  '/battle': typeof BattleRoute
+  '/bazaar': typeof BazaarRoute
+  '/compendium': typeof CompendiumRoute
+  '/fusion': typeof FusionRoute
+  '/guild': typeof GuildRoute
+  '/island': typeof IslandRoute
+  '/profile': typeof ProfileRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/altar'
+    | '/battle'
+    | '/bazaar'
+    | '/compendium'
+    | '/fusion'
+    | '/guild'
+    | '/island'
+    | '/profile'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/altar'
+    | '/battle'
+    | '/bazaar'
+    | '/compendium'
+    | '/fusion'
+    | '/guild'
+    | '/island'
+    | '/profile'
+  id:
+    | '__root__'
+    | '/'
+    | '/altar'
+    | '/battle'
+    | '/bazaar'
+    | '/compendium'
+    | '/fusion'
+    | '/guild'
+    | '/island'
+    | '/profile'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AltarRoute: typeof AltarRoute
+  BattleRoute: typeof BattleRoute
+  BazaarRoute: typeof BazaarRoute
+  CompendiumRoute: typeof CompendiumRoute
+  FusionRoute: typeof FusionRoute
+  GuildRoute: typeof GuildRoute
+  IslandRoute: typeof IslandRoute
+  ProfileRoute: typeof ProfileRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/island': {
+      id: '/island'
+      path: '/island'
+      fullPath: '/island'
+      preLoaderRoute: typeof IslandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guild': {
+      id: '/guild'
+      path: '/guild'
+      fullPath: '/guild'
+      preLoaderRoute: typeof GuildRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fusion': {
+      id: '/fusion'
+      path: '/fusion'
+      fullPath: '/fusion'
+      preLoaderRoute: typeof FusionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compendium': {
+      id: '/compendium'
+      path: '/compendium'
+      fullPath: '/compendium'
+      preLoaderRoute: typeof CompendiumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bazaar': {
+      id: '/bazaar'
+      path: '/bazaar'
+      fullPath: '/bazaar'
+      preLoaderRoute: typeof BazaarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/battle': {
+      id: '/battle'
+      path: '/battle'
+      fullPath: '/battle'
+      preLoaderRoute: typeof BattleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/altar': {
+      id: '/altar'
+      path: '/altar'
+      fullPath: '/altar'
+      preLoaderRoute: typeof AltarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +217,25 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AltarRoute: AltarRoute,
+  BattleRoute: BattleRoute,
+  BazaarRoute: BazaarRoute,
+  CompendiumRoute: CompendiumRoute,
+  FusionRoute: FusionRoute,
+  GuildRoute: GuildRoute,
+  IslandRoute: IslandRoute,
+  ProfileRoute: ProfileRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
