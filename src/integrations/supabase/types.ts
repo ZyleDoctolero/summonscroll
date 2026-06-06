@@ -14,7 +14,188 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          class: Database["public"]["Enums"]["player_class"]
+          con_stat: number
+          created_at: string
+          deaths: number
+          display_name: string
+          email: string | null
+          gems: number
+          gold: number
+          hp: number
+          id: string
+          last_cron_date: string | null
+          last_login_date: string | null
+          level: number
+          max_hp: number
+          pact_seals: number
+          streak: number
+          updated_at: string
+          xp: number
+        }
+        Insert: {
+          class?: Database["public"]["Enums"]["player_class"]
+          con_stat?: number
+          created_at?: string
+          deaths?: number
+          display_name: string
+          email?: string | null
+          gems?: number
+          gold?: number
+          hp?: number
+          id: string
+          last_cron_date?: string | null
+          last_login_date?: string | null
+          level?: number
+          max_hp?: number
+          pact_seals?: number
+          streak?: number
+          updated_at?: string
+          xp?: number
+        }
+        Update: {
+          class?: Database["public"]["Enums"]["player_class"]
+          con_stat?: number
+          created_at?: string
+          deaths?: number
+          display_name?: string
+          email?: string | null
+          gems?: number
+          gold?: number
+          hp?: number
+          id?: string
+          last_cron_date?: string | null
+          last_login_date?: string | null
+          level?: number
+          max_hp?: number
+          pact_seals?: number
+          streak?: number
+          updated_at?: string
+          xp?: number
+        }
+        Relationships: []
+      }
+      task_events: {
+        Row: {
+          created_at: string
+          delta_value: number
+          hp_change: number
+          id: string
+          kind: Database["public"]["Enums"]["task_event_kind"]
+          note: string | null
+          reward_gems: number
+          reward_gold: number
+          reward_xp: number
+          task_id: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          delta_value?: number
+          hp_change?: number
+          id?: string
+          kind: Database["public"]["Enums"]["task_event_kind"]
+          note?: string | null
+          reward_gems?: number
+          reward_gold?: number
+          reward_xp?: number
+          task_id?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          delta_value?: number
+          hp_change?: number
+          id?: string
+          kind?: Database["public"]["Enums"]["task_event_kind"]
+          note?: string | null
+          reward_gems?: number
+          reward_gold?: number
+          reward_xp?: number
+          task_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "task_events_task_id_fkey"
+            columns: ["task_id"]
+            isOneToOne: false
+            referencedRelation: "tasks"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tasks: {
+        Row: {
+          archived: boolean
+          category: string | null
+          completed: boolean
+          created_at: string
+          difficulty: Database["public"]["Enums"]["task_difficulty"]
+          due_date: string | null
+          id: string
+          last_completed_at: string | null
+          last_completed_date: string | null
+          negative_enabled: boolean
+          notes: string | null
+          positive_enabled: boolean
+          schedule_days: number[]
+          sort_order: number
+          streak: number
+          title: string
+          type: Database["public"]["Enums"]["task_type"]
+          updated_at: string
+          user_id: string
+          value: number
+        }
+        Insert: {
+          archived?: boolean
+          category?: string | null
+          completed?: boolean
+          created_at?: string
+          difficulty?: Database["public"]["Enums"]["task_difficulty"]
+          due_date?: string | null
+          id?: string
+          last_completed_at?: string | null
+          last_completed_date?: string | null
+          negative_enabled?: boolean
+          notes?: string | null
+          positive_enabled?: boolean
+          schedule_days?: number[]
+          sort_order?: number
+          streak?: number
+          title: string
+          type: Database["public"]["Enums"]["task_type"]
+          updated_at?: string
+          user_id: string
+          value?: number
+        }
+        Update: {
+          archived?: boolean
+          category?: string | null
+          completed?: boolean
+          created_at?: string
+          difficulty?: Database["public"]["Enums"]["task_difficulty"]
+          due_date?: string | null
+          id?: string
+          last_completed_at?: string | null
+          last_completed_date?: string | null
+          negative_enabled?: boolean
+          notes?: string | null
+          positive_enabled?: boolean
+          schedule_days?: number[]
+          sort_order?: number
+          streak?: number
+          title?: string
+          type?: Database["public"]["Enums"]["task_type"]
+          updated_at?: string
+          user_id?: string
+          value?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +204,16 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      player_class: "none" | "warrior" | "mage" | "rogue" | "healer"
+      task_difficulty: "trivial" | "easy" | "medium" | "hard"
+      task_event_kind:
+        | "plus"
+        | "minus"
+        | "complete"
+        | "uncomplete"
+        | "miss"
+        | "cron_drift"
+      task_type: "habit" | "daily" | "todo"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +340,18 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      player_class: ["none", "warrior", "mage", "rogue", "healer"],
+      task_difficulty: ["trivial", "easy", "medium", "hard"],
+      task_event_kind: [
+        "plus",
+        "minus",
+        "complete",
+        "uncomplete",
+        "miss",
+        "cron_drift",
+      ],
+      task_type: ["habit", "daily", "todo"],
+    },
   },
 } as const
