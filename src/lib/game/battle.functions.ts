@@ -135,13 +135,18 @@ export const startArenaBattle = createServerFn({ method: "POST" })
       );
     }
 
-    // Add bond XP to team monsters
+    // Add bond XP to team monsters — victories grant meaningful bond progress
     if (won) {
+      const bondPerMonster = 1 + Math.floor(data.floor / 10); // higher floors = more bond
       for (const um of team) {
-        const bondGain = Math.min(100, um.bond_percent + 0.5);
-        await supabaseAdmin.from("user_monsters")
-          .update({ bond_percent: bondGain })
-          .eq("id", um.id);
+        const newBond = Math.min(100, Number(um.bond_percent) + bondPerMonster);
+        const newXp = um.xp + rewardXp;
+        const newLevel = um.level + (newXp >= um.level * 50 ? 1 : 0);
+        await supabaseAdmin.from("user_monsters").update({
+          bond_percent: newBond,
+          xp: newXp >= um.level * 50 ? 0 : newXp,
+          level: Math.min(100, newLevel),
+        }).eq("id", um.id);
       }
     }
 

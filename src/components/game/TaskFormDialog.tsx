@@ -225,19 +225,7 @@ export function TaskFormDialog({
             {saving ? "Saving…" : initial ? "Save" : "Create"}
           </button>
         </div>
-        <style>{`
-          .ss-input {
-            width: 100%;
-            background: #0C0E14;
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 8px;
-            padding: 10px 12px;
-            color: #F0EDE6;
-            font-size: 14px;
-            outline: none;
-          }
-          .ss-input:focus { border-color: #C89A3E; }
-        `}</style>
+        {/* .ss-input styles defined globally in styles.css */}
       </form>
     </div>
   );

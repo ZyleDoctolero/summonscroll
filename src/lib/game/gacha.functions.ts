@@ -161,19 +161,17 @@ export const pullBanner = createServerFn({ method: "POST" })
       // Update owned set
       ownedSet.add(monster.id);
 
-      // Update pity counters
-      const resetRarities = Object.keys(RARITY_ORDER).filter(
-        (r) => RARITY_ORDER[r as Rarity] <= RARITY_ORDER[rolledRarity]
-      ) as Rarity[];
-
+      // Update pity counters — reset counters for rarities at or below what we rolled,
+      // increment counters for rarities above what we rolled (those are still building toward pity)
       for (const r of Object.keys(RARITY_ORDER) as Rarity[]) {
         const key = `${r}_pity` as keyof typeof pity;
-        if (typeof pity[key] === "number") {
-          if (resetRarities.includes(r)) {
-            (pity as Record<string, number>)[key] = 0;
-          } else {
-            (pity as Record<string, number>)[key] = (pity[key] as number) + 1;
-          }
+        if (typeof pity[key] !== "number") continue;
+        if (RARITY_ORDER[r] <= RARITY_ORDER[rolledRarity]) {
+          // We got this rarity or better — reset its pity counter
+          (pity as Record<string, number>)[key] = 0;
+        } else {
+          // Still building toward this higher rarity
+          (pity as Record<string, number>)[key] = (pity[key] as number) + 1;
         }
       }
       pity.total_pulls = (pity.total_pulls as number) + 1;
@@ -186,12 +184,29 @@ export const pullBanner = createServerFn({ method: "POST" })
       : { gems: profile.gems - totalCost };
     await supabaseAdmin.from("profiles").update(currencyUpdate).eq("id", userId);
 
-    // 2. Insert user_monsters for new ones
+    // 2. Insert new monsters OR grant awakening XP for duplicates
     const newMonsterInserts = results
       .filter((r) => r.isNew)
       .map((r) => ({ user_id: userId, monster_id: r.monster.id }));
     if (newMonsterInserts.length > 0) {
       await supabaseAdmin.from("user_monsters").insert(newMonsterInserts);
+    }
+
+    // Duplicate pulls: +10 bond XP and +1 awakening star (up to 5) on the existing monster
+    const dupes = results.filter((r) => !r.isNew && !r.transcendenceStone);
+    for (const dupe of dupes) {
+      const { data: existing } = await supabaseAdmin
+        .from("user_monsters")
+        .select("id, bond_percent, awakening_stars")
+        .eq("user_id", userId)
+        .eq("monster_id", dupe.monster.id)
+        .maybeSingle();
+      if (existing) {
+        await supabaseAdmin.from("user_monsters").update({
+          bond_percent: Math.min(100, existing.bond_percent + 10),
+          awakening_stars: Math.min(5, existing.awakening_stars + 1),
+        }).eq("id", existing.id);
+      }
     }
 
     // 3. Insert pull records

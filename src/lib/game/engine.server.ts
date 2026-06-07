@@ -145,6 +145,45 @@ export async function runCronIfNeeded(
     else next.streak = 0;
   }
 
+  // FR04 §3.2: If in a guild with active boss quest, missed dailies fill boss rage
+  // and boss attacks ALL guild members (Habitica party damage mechanic)
+  if (missedCount > 0) {
+    try {
+      const { data: membership } = await admin
+        .from("guild_members").select("guild_id").eq("user_id", userId).maybeSingle();
+      if (membership) {
+        const { data: quest } = await admin
+          .from("guild_quests")
+          .select("id, boss_rage, quest_template_id, quest_templates(boss_rage_max, boss_hp)")
+          .eq("guild_id", membership.guild_id)
+          .eq("status", "active")
+          .maybeSingle();
+        if (quest && quest.boss_rage != null) {
+          // Fill boss rage from missed dailies
+          const rageGain = missedCount * 20;
+          const template = quest.quest_templates as { boss_rage_max: number | null; boss_hp: number | null } | null;
+          const maxRage = template?.boss_rage_max ?? 1000;
+          let newRage = Math.min(maxRage, quest.boss_rage + rageGain);
+          const questUpdate: Record<string, unknown> = { boss_rage: newRage };
+
+          // If rage fills, boss heals (FR04 §3.2 rage mechanic)
+          if (newRage >= maxRage) {
+            const bossHealAmount = Math.round((template?.boss_hp ?? 5000) * 0.1);
+            const { data: currentQuest } = await admin.from("guild_quests").select("boss_hp_remaining").eq("id", quest.id).single();
+            if (currentQuest) {
+              questUpdate.boss_hp_remaining = Math.min(
+                template?.boss_hp ?? 99999,
+                (currentQuest.boss_hp_remaining ?? 0) + bossHealAmount
+              );
+            }
+            questUpdate.boss_rage = 0; // reset after activation
+          }
+          await admin.from("guild_quests").update(questUpdate).eq("id", quest.id);
+        }
+      }
+    } catch { /* non-critical */ }
+  }
+
   // Apply death if HP <= 0
   const deathResult = applyDeath(next as ProfileRow);
   next = deathResult.profile;

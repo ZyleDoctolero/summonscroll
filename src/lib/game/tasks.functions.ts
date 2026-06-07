@@ -2,6 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import {
+  DIFFICULTY_MULT,
   nextValueMinus,
   nextValuePlus,
   rewardGems,
@@ -210,11 +211,80 @@ export const scoreTask = createServerFn({ method: "POST" })
       hp_change: hpChange,
     });
 
+    // FR04 §3.2: Deal damage to guild boss quest when completing tasks (Habitica mechanic)
+    let bossDamage = 0;
+    if (isPositive) {
+      try {
+        const { data: membership } = await supabaseAdmin
+          .from("guild_members").select("guild_id").eq("user_id", userId).maybeSingle();
+        if (membership) {
+          const { data: quest } = await supabaseAdmin
+            .from("guild_quests")
+            .select("id, boss_hp_remaining, quest_template_id, quest_templates(boss_hp)")
+            .eq("guild_id", membership.guild_id)
+            .eq("status", "active")
+            .maybeSingle();
+          if (quest && quest.boss_hp_remaining != null && quest.boss_hp_remaining > 0) {
+            const strBonus = 1 + ((profile.str_stat ?? 0) * 0.005);
+            const critMult = Math.random() < 0.1 ? 1.5 : 1;
+            bossDamage = Math.max(1, Math.round(
+              (10 - Number(task.value)) * 0.5 * DIFFICULTY_MULT[diff] * strBonus * critMult
+            ));
+            const newBossHp = Math.max(0, quest.boss_hp_remaining - bossDamage);
+            const questUpdate: Record<string, unknown> = {
+              boss_hp_remaining: newBossHp,
+              total_damage_dealt: (quest as unknown as { total_damage_dealt: number }).total_damage_dealt + bossDamage,
+            };
+            if (newBossHp <= 0) {
+              questUpdate.status = "completed";
+              questUpdate.completed_at = new Date().toISOString();
+            }
+            await supabaseAdmin.from("guild_quests").update(questUpdate).eq("id", quest.id);
+            // Track participant damage
+            await supabaseAdmin.from("quest_participants").upsert({
+              guild_quest_id: quest.id,
+              user_id: userId,
+              damage_dealt: bossDamage,
+            }, { onConflict: "guild_quest_id,user_id" });
+          }
+        }
+      } catch { /* non-critical — don't fail the task score */ }
+    }
+
+    // FR01 §2.7: Random drops from task completion
+    let drop: { type: string; name: string } | null = null;
+    if (isPositive) {
+      const perBonus = 1 + ((profile.per_stat ?? 0) * 0.005);
+      const dropRoll = Math.random() / perBonus;
+      if (dropRoll < 0.03) {
+        const eggNames = ["Wolf", "Dragon", "Phoenix", "Serpent", "Griffin", "Owl", "Bear", "Fox"];
+        const egg = eggNames[Math.floor(Math.random() * eggNames.length)];
+        drop = { type: "egg", name: `${egg} Egg` };
+      } else if (dropRoll < 0.06) {
+        const realmNames = ["Arcane", "Chaos", "Void", "Death", "Nature", "Divine", "Dread", "Digital", "Primal", "Stellar", "Primordial", "Synthetic"];
+        const realm = realmNames[Math.floor(Math.random() * realmNames.length)];
+        drop = { type: "realm_potion", name: `${realm} Potion` };
+      } else if (dropRoll < 0.10) {
+        drop = { type: "food", name: ["Meat", "Fish", "Fruit", "Cheese", "Honey"][Math.floor(Math.random() * 5)] };
+      }
+      if (drop) {
+        const existing = await supabaseAdmin.from("inventory")
+          .select("id, quantity").eq("user_id", userId).eq("item_type", drop.type).eq("item_name", drop.name).maybeSingle();
+        if (existing.data) {
+          await supabaseAdmin.from("inventory").update({ quantity: existing.data.quantity + 1 }).eq("id", existing.data.id);
+        } else {
+          await supabaseAdmin.from("inventory").insert({ user_id: userId, item_type: drop.type, item_name: drop.name, quantity: 1 });
+        }
+      }
+    }
+
     return {
       ok: true,
       reward: { gold: goldGain, xp: xpGain, gems: gemGain, hp: hpChange },
       newValue: newVal,
       died: death.died,
       isPositive,
+      bossDamage: bossDamage > 0 ? bossDamage : undefined,
+      drop: drop ?? undefined,
     };
   });

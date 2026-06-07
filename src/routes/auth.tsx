@@ -176,20 +176,7 @@ function AuthPage() {
           </button>
         </form>
       </div>
-      <style>{`
-        .ss-input {
-          width: 100%;
-          background: #1A1E2A;
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 8px;
-          padding: 10px 12px;
-          color: #F0EDE6;
-          font-size: 14px;
-          outline: none;
-          transition: border-color .15s;
-        }
-        .ss-input:focus { border-color: #C89A3E; }
-      `}</style>
+      {/* .ss-input styles are defined globally in styles.css */}
     </div>
   );
 }

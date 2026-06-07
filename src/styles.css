@@ -142,3 +142,72 @@
     color: var(--color-foreground);
   }
 }
+
+/* ─── SummonScroll Game Design Tokens ─── */
+:root {
+  /* Backgrounds */
+  --ss-bg-deep: #0C0E14;
+  --ss-bg-surface: #13161F;
+  --ss-bg-elevated: #1A1E2A;
+  --ss-bg-hover: #1E2333;
+  --ss-bg-overlay: rgba(0,0,0,0.72);
+
+  /* Text */
+  --ss-text-primary: #F0EDE6;
+  --ss-text-secondary: #A09D96;
+  --ss-text-tertiary: #6B6864;
+
+  /* Accents */
+  --ss-gold: #C89A3E;
+  --ss-gold-bright: #FFD54F;
+  --ss-void: #7F77DD;
+  --ss-danger: #E05252;
+  --ss-success: #5FAD41;
+  --ss-warning: #FFB74D;
+
+  /* Rarity */
+  --ss-rarity-common: #9E9E9E;
+  --ss-rarity-uncommon: #81C784;
+  --ss-rarity-rare: #4FC3F7;
+  --ss-rarity-elite: #FFB74D;
+  --ss-rarity-epic: #CE93D8;
+  --ss-rarity-legendary: #FFD54F;
+  --ss-rarity-mythic: #FF8A65;
+  --ss-rarity-ex: #FFFFFF;
+
+  /* Borders */
+  --ss-border: rgba(255,255,255,0.07);
+  --ss-border-active: rgba(255,255,255,0.18);
+}
+
+/* Global input styling for game forms */
+.ss-input {
+  width: 100%;
+  background: var(--ss-bg-elevated);
+  border: 1px solid var(--ss-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--ss-text-primary);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.ss-input:focus {
+  border-color: var(--ss-gold);
+}
+
+/* Pulse animation for streak badge */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Force dark theme globally for the game */
+html {
+  color-scheme: dark;
+}
+body {
+  background: var(--ss-bg-deep) !important;
+  color: var(--ss-text-primary) !important;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}

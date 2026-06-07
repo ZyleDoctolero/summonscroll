@@ -80,10 +80,21 @@ function HubPage() {
           if (res.isPositive) toast.success(parts.join("  "));
           else toast.error(parts.join("  "));
         }
+        // FR04 §3.2: Show boss damage dealt
+        if ("bossDamage" in res && res.bossDamage) {
+          toast(`⚔ Dealt ${res.bossDamage} damage to quest boss!`);
+        }
+        // FR01 §2.7: Show random drops
+        if ("drop" in res && res.drop) {
+          const dropRes = res.drop as { type: string; name: string };
+          const icon = dropRes.type === "egg" ? "🥚" : dropRes.type === "realm_potion" ? "🧪" : "🍖";
+          toast.success(`${icon} Drop: ${dropRes.name}!`);
+        }
         if (res.died) setDeathTick((n) => n + 1);
       }
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["tasks"] });
+      qc.invalidateQueries({ queryKey: ["my-guild"] });
     },
     onError: (e: Error) => toast.error(e.message),
   });
