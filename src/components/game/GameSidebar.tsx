@@ -15,6 +15,7 @@ const NAV_PRIMARY = [
 ] as const;
 
 const NAV_SECONDARY = [
+  { to: "/codex", label: "Codex", icon: "import_contacts" },
   { to: "/guild", label: "Guild", icon: "groups" },
   { to: "/fusion", label: "Fusion", icon: "cyclone" },
   { to: "/bazaar", label: "Shop", icon: "storefront" },

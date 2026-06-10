@@ -20,6 +20,7 @@ import { Route as AuthenticatedFusionRouteImport } from './routes/_authenticated
 import { Route as AuthenticatedForgeRouteImport } from './routes/_authenticated/forge'
 import { Route as AuthenticatedExpeditionsRouteImport } from './routes/_authenticated/expeditions'
 import { Route as AuthenticatedCompendiumRouteImport } from './routes/_authenticated/compendium'
+import { Route as AuthenticatedCodexRouteImport } from './routes/_authenticated/codex'
 import { Route as AuthenticatedBazaarRouteImport } from './routes/_authenticated/bazaar'
 import { Route as AuthenticatedBattleRouteImport } from './routes/_authenticated/battle'
 import { Route as AuthenticatedAltarRouteImport } from './routes/_authenticated/altar'
@@ -79,6 +80,11 @@ const AuthenticatedCompendiumRoute = AuthenticatedCompendiumRouteImport.update({
   path: '/compendium',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedCodexRoute = AuthenticatedCodexRouteImport.update({
+  id: '/codex',
+  path: '/codex',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedBazaarRoute = AuthenticatedBazaarRouteImport.update({
   id: '/bazaar',
   path: '/bazaar',
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/altar': typeof AuthenticatedAltarRoute
   '/battle': typeof AuthenticatedBattleRoute
   '/bazaar': typeof AuthenticatedBazaarRoute
+  '/codex': typeof AuthenticatedCodexRoute
   '/compendium': typeof AuthenticatedCompendiumRoute
   '/expeditions': typeof AuthenticatedExpeditionsRoute
   '/forge': typeof AuthenticatedForgeRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/altar': typeof AuthenticatedAltarRoute
   '/battle': typeof AuthenticatedBattleRoute
   '/bazaar': typeof AuthenticatedBazaarRoute
+  '/codex': typeof AuthenticatedCodexRoute
   '/compendium': typeof AuthenticatedCompendiumRoute
   '/expeditions': typeof AuthenticatedExpeditionsRoute
   '/forge': typeof AuthenticatedForgeRoute
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/_authenticated/altar': typeof AuthenticatedAltarRoute
   '/_authenticated/battle': typeof AuthenticatedBattleRoute
   '/_authenticated/bazaar': typeof AuthenticatedBazaarRoute
+  '/_authenticated/codex': typeof AuthenticatedCodexRoute
   '/_authenticated/compendium': typeof AuthenticatedCompendiumRoute
   '/_authenticated/expeditions': typeof AuthenticatedExpeditionsRoute
   '/_authenticated/forge': typeof AuthenticatedForgeRoute
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/altar'
     | '/battle'
     | '/bazaar'
+    | '/codex'
     | '/compendium'
     | '/expeditions'
     | '/forge'
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/altar'
     | '/battle'
     | '/bazaar'
+    | '/codex'
     | '/compendium'
     | '/expeditions'
     | '/forge'
@@ -180,6 +191,7 @@ export interface FileRouteTypes {
     | '/_authenticated/altar'
     | '/_authenticated/battle'
     | '/_authenticated/bazaar'
+    | '/_authenticated/codex'
     | '/_authenticated/compendium'
     | '/_authenticated/expeditions'
     | '/_authenticated/forge'
@@ -275,6 +287,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedCompendiumRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/codex': {
+      id: '/_authenticated/codex'
+      path: '/codex'
+      fullPath: '/codex'
+      preLoaderRoute: typeof AuthenticatedCodexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/bazaar': {
       id: '/_authenticated/bazaar'
       path: '/bazaar'
@@ -303,6 +322,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedAltarRoute: typeof AuthenticatedAltarRoute
   AuthenticatedBattleRoute: typeof AuthenticatedBattleRoute
   AuthenticatedBazaarRoute: typeof AuthenticatedBazaarRoute
+  AuthenticatedCodexRoute: typeof AuthenticatedCodexRoute
   AuthenticatedCompendiumRoute: typeof AuthenticatedCompendiumRoute
   AuthenticatedExpeditionsRoute: typeof AuthenticatedExpeditionsRoute
   AuthenticatedForgeRoute: typeof AuthenticatedForgeRoute
@@ -318,6 +338,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAltarRoute: AuthenticatedAltarRoute,
   AuthenticatedBattleRoute: AuthenticatedBattleRoute,
   AuthenticatedBazaarRoute: AuthenticatedBazaarRoute,
+  AuthenticatedCodexRoute: AuthenticatedCodexRoute,
   AuthenticatedCompendiumRoute: AuthenticatedCompendiumRoute,
   AuthenticatedExpeditionsRoute: AuthenticatedExpeditionsRoute,
   AuthenticatedForgeRoute: AuthenticatedForgeRoute,

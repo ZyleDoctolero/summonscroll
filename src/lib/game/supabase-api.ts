@@ -523,6 +523,11 @@ export type { AwakeningDef } from "./awakening-client";
 export { listGoals, createGoal, deleteGoal, linkTaskToGoal } from "./quests-client";
 export type { Goal, GoalType, GoalStatus } from "./quests-client";
 
+// ─── Codex ──────────────────────────────────────────────────────────────────
+
+export { buildHeatmap, listDailyLogs } from "./codex-client";
+export type { HeatmapCell } from "./codex-client";
+
 // ─── Gacha ──────────────────────────────────────────────────────────────────
 
 export { listBanners, pullBanner } from "./gacha-client";
