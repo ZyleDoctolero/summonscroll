@@ -38,7 +38,7 @@ function IslandPage() {
   });
 
   const userMonsters = monstersQ.data?.userMonsters ?? [];
-  const team = useMemo(() => userMonsters.filter((um: any) => um.is_on_team).sort((a: any) => (a.team_slot ?? 99) - (b.team_slot ?? 99)), [userMonsters]);
+  const team = useMemo(() => userMonsters.filter((um: any) => um.is_on_team).sort((a: any, b: any) => (a.team_slot ?? 99) - (b.team_slot ?? 99)), [userMonsters]);
   const roster = useMemo(() => userMonsters.filter((um: any) => !um.is_on_team), [userMonsters]);
 
   // Weather based on today's task completion
