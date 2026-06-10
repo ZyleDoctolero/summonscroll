@@ -39,7 +39,7 @@ export const purchaseItem = createServerFn({ method: "POST" })
     if (balance < totalCost) throw new Error(`Insufficient ${item.currency}. Need ${totalCost}, have ${balance}.`);
 
     // Deduct currency
-    await supabaseAdmin.from("profiles").update({ [balanceField]: balance - totalCost }).eq("id", userId);
+    await supabaseAdmin.from("profiles").update({ [balanceField]: balance - totalCost } as never).eq("id", userId);
 
     // Apply effect
     if (item.effect_type === "heal_hp") {
@@ -121,7 +121,7 @@ export const equipItem = createServerFn({ method: "POST" })
 
     // Equip new
     await supabaseAdmin.from("user_equipment").update({ is_equipped: true }).eq("id", data.userEquipmentId);
-    await supabaseAdmin.from("profiles").update({ [profileField]: ue.equipment_id }).eq("id", userId);
+    await supabaseAdmin.from("profiles").update({ [profileField]: ue.equipment_id } as never).eq("id", userId);
 
     // Recalculate stats
     const { data: equipped } = await supabaseAdmin.from("user_equipment").select("equipment(*)").eq("user_id", userId).eq("is_equipped", true);

@@ -30,6 +30,11 @@ export type ProfileRow = {
   last_login_date: string | null;
   deaths: number;
   class: string;
+  str_stat?: number;
+  int_stat?: number;
+  per_stat?: number;
+  mp?: number;
+  max_mp?: number;
 };
 
 export function applyXp(p: { level: number; xp: number; hp: number; max_hp: number }, gain: number) {
@@ -161,7 +166,7 @@ export async function runCronIfNeeded(
         if (quest && quest.boss_rage != null) {
           // Fill boss rage from missed dailies
           const rageGain = missedCount * 20;
-          const template = quest.quest_templates as { boss_rage_max: number | null; boss_hp: number | null } | null;
+          const template = quest.quest_templates as unknown as { boss_rage_max: number | null; boss_hp: number | null } | null;
           const maxRage = template?.boss_rage_max ?? 1000;
           let newRage = Math.min(maxRage, quest.boss_rage + rageGain);
           const questUpdate: Record<string, unknown> = { boss_rage: newRage };

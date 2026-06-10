@@ -27,7 +27,7 @@ function AltarPage() {
   const [revealIndex, setRevealIndex] = useState(0);
 
   const pullMut = useMutation({
-    mutationFn: async (v: { bannerId: string; count: 1 | 10 }) => {
+    mutationFn: async (v: any) => {
       return await doPull({ data: v });
     },
     onSuccess: (res) => {
@@ -57,7 +57,7 @@ function AltarPage() {
 
   const profile = profileQ.data.profile;
   const banners = bannersQ.data.banners;
-  const selectedBanner = banners.find((b: { id: string }) => b.id === selectedBannerId) ?? banners[0];
+  const selectedBanner = banners.find((b: any) => b.id === selectedBannerId) ?? banners[0];
 
   // If showing pull results
   if (pullResults) {
@@ -94,7 +94,7 @@ function AltarPage() {
           role="tablist"
           aria-label="Banner selection"
         >
-          {banners.map((banner: { id: string; name: string; banner_type: string }) => (
+          {banners.map((banner: any) => (
             <button
               key={banner.id}
               role="tab"
@@ -116,7 +116,7 @@ function AltarPage() {
 
         {selectedBanner && (
           <BannerDisplay
-            banner={selectedBanner}
+            banner={selectedBanner as unknown as BannerData}
             profile={profile}
             pulling={pullMut.isPending}
             onPull={(count) => pullMut.mutate({ bannerId: selectedBanner.id, count })}
