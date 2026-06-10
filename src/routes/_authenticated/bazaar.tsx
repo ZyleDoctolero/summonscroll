@@ -41,7 +41,7 @@ function ShopPage() {
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
-  const items = (itemsQ.data?.items ?? []).filter((i: { category: string }) => i.category === tab);
+  const items = (itemsQ.data?.items ?? []).filter((i: any) => i.category === tab);
 
   return (
     <AppShell profile={profile}>
@@ -74,7 +74,7 @@ function ShopPage() {
             <p className="text-sm mb-4" style={{ color: "#A09D96" }}>Spend 100💎 for a chance at rare equipment, food for your pets, or bonus XP!</p>
             <button
               onClick={() => {
-                const armoireItem = (itemsQ.data?.items ?? []).find((i: { category: string }) => i.category === "armoire");
+                const armoireItem = (itemsQ.data?.items ?? []).find((i: any) => i.category === "armoire");
                 if (armoireItem) purchaseMut.mutate(armoireItem.id);
               }}
               disabled={purchaseMut.isPending || profile.gems < 100}
@@ -88,7 +88,7 @@ function ShopPage() {
         {/* Item grid */}
         {tab !== "armoire" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {items.map((item: { id: string; name: string; description: string; price: number; currency: string; effect_type: string; effect_value: number }) => {
+            {items.map((item: any) => {
               const canAfford = item.currency === "pact_seals" ? profile.pact_seals >= item.price : profile.gems >= item.price;
               const icon = item.currency === "pact_seals" ? "🔑" : "💎";
               return (

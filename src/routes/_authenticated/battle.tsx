@@ -31,7 +31,7 @@ function BattlePage() {
   const [logIndex, setLogIndex] = useState(0);
 
   const battleMut = useMutation({
-    mutationFn: async (v: { mode: "chaos_tower" | "event" | "boss_rush"; floor: number }) => doBattle({ data: v }),
+    mutationFn: async (v: any) => doBattle({ data: v }),
     onSuccess: (res) => {
       setResult(res as BattleResult);
       setLogIndex(0);
@@ -150,7 +150,7 @@ function BattlePage() {
           <div>
             <h2 className="text-lg font-bold mb-3" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Recent Battles</h2>
             <div className="space-y-2">
-              {(historyQ.data?.battles ?? []).slice(0, 10).map((b: { id: string; mode: string; floor: number; player_won: boolean; enemy_name: string; rounds: number; reward_gems: number; created_at: string }) => (
+              {(historyQ.data?.battles ?? []).slice(0, 10).map((b: any) => (
                 <div key={b.id} className="rounded-md p-3 flex items-center justify-between text-sm"
                   style={{ background: "#13161F", border: "1px solid rgba(255,255,255,0.05)" }}>
                   <div>

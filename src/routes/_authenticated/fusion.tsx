@@ -40,7 +40,7 @@ function FusionPage() {
         {/* Ingredient slots */}
         <div className="flex gap-4 mb-6 justify-center">
           {slots.map((slotId, i) => {
-            const um = slotId ? userMonsters.find((m: { id: string }) => m.id === slotId) : null;
+            const um = slotId ? userMonsters.find((m: any) => m.id === slotId) : null;
             if (um) {
               const r = um.monster.rarity as Rarity;
               return (
@@ -102,7 +102,7 @@ function FusionPage() {
             style={{ background: "#1A1E2A", borderColor: "rgba(255,213,79,0.2)" }}>
             <h3 className="text-lg font-bold mb-4" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Select Monster for Slot {selectingSlot + 1}</h3>
             <div className="grid grid-cols-3 gap-2">
-              {userMonsters.filter((um: { id: string }) => !usedIds.has(um.id)).map((um: { id: string; monster: { name: string; rarity: string } }) => (
+              {userMonsters.filter((um: any) => !usedIds.has(um.id)).map((um: any) => (
                 <button key={um.id} onClick={() => {
                   const n = [...slots]; n[selectingSlot] = um.id; setSlots(n); setSelectingSlot(null);
                 }} className="rounded-lg p-2 text-center hover:scale-[1.03] transition-all"
@@ -113,7 +113,7 @@ function FusionPage() {
                 </button>
               ))}
             </div>
-            {userMonsters.filter((um: { id: string }) => !usedIds.has(um.id)).length === 0 && (
+            {userMonsters.filter((um: any) => !usedIds.has(um.id)).length === 0 && (
               <p className="text-center py-8 text-sm" style={{ color: "#6B6864" }}>No available monsters.</p>
             )}
           </div>

@@ -29,17 +29,17 @@ function CompendiumPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const ownedIds = useMemo(
-    () => new Set((myMonstersQ.data?.userMonsters ?? []).map((um: { monster_id: string }) => um.monster_id)),
+    () => new Set((myMonstersQ.data?.userMonsters ?? []).map((um: any) => um.monster_id)),
     [myMonstersQ.data],
   );
 
   const filtered = useMemo(() => {
     let list = monstersQ.data?.monsters ?? [];
-    if (realmFilter !== null) list = list.filter((m: { realm_id: number }) => m.realm_id === realmFilter);
-    if (rarityFilter) list = list.filter((m: { rarity: string }) => m.rarity === rarityFilter);
+    if (realmFilter !== null) list = list.filter((m: any) => m.realm_id === realmFilter);
+    if (rarityFilter) list = list.filter((m: any) => m.rarity === rarityFilter);
     if (search.trim()) {
       const q = search.toLowerCase();
-      list = list.filter((m: { name: string }) => m.name.toLowerCase().includes(q));
+      list = list.filter((m: any) => m.name.toLowerCase().includes(q));
     }
     return list;
   }, [monstersQ.data, realmFilter, rarityFilter, search]);
@@ -57,9 +57,9 @@ function CompendiumPage() {
   if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Loading…</div>;
   if (!profileQ.data) return null;
 
-  const sel = selectedId ? (monstersQ.data?.monsters ?? []).find((m: { id: string }) => m.id === selectedId) : null;
+  const sel = selectedId ? (monstersQ.data?.monsters ?? []).find((m: any) => m.id === selectedId) : null;
   const selOwned = selectedId ? ownedIds.has(selectedId) : false;
-  const selUm = selectedId ? (myMonstersQ.data?.userMonsters ?? []).find((um: { monster_id: string }) => um.monster_id === selectedId) : null;
+  const selUm = selectedId ? (myMonstersQ.data?.userMonsters ?? []).find((um: any) => um.monster_id === selectedId) : null;
 
   return (
     <AppShell profile={profileQ.data.profile}>
@@ -70,7 +70,7 @@ function CompendiumPage() {
         {/* Realm tabs */}
         <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
           <PillBtn active={realmFilter === null} onClick={() => setRealmFilter(null)}>All</PillBtn>
-          {(realmsQ.data?.realms ?? []).map((r: { id: number; name: string; icon: string }) => (
+          {(realmsQ.data?.realms ?? []).map((r: any) => (
             <PillBtn key={r.id} active={realmFilter === r.id} onClick={() => setRealmFilter(r.id)}>
               {r.icon} {r.name} {realmStats[r.id] ? `${realmStats[r.id].owned}/${realmStats[r.id].total}` : ""}
             </PillBtn>
@@ -93,7 +93,7 @@ function CompendiumPage() {
 
         {/* Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-          {filtered.map((m: { id: string; name: string; rarity: string; element: string; role: string; art_url: string | null }) => {
+          {filtered.map((m: any) => {
             const owned = ownedIds.has(m.id);
             const r = m.rarity as Rarity;
             return (
