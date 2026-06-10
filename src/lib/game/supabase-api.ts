@@ -448,7 +448,6 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
   }
 
   // ─── Skill Awakening evaluation ──────────────────────────────────────
-  // Cheap on a no-change day; expensive on rare unlocks. Worth it.
   let awakenings: Array<{ monsterName: string; skillName: string; flavor: string }> = [];
   if (isPositive) {
     try {
@@ -459,12 +458,24 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
     }
   }
 
+  // ─── Goal HP drain (quest engine) ───────────────────────────────────
+  let goalDamage: Awaited<ReturnType<typeof import("./quests-client").damageGoalsForTask>> | null = null;
+  if (isPositive && xpGain > 0) {
+    try {
+      const { damageGoalsForTask } = await import("./quests-client");
+      goalDamage = await damageGoalsForTask(user.id, id, xpGain);
+    } catch (e) {
+      console.warn("Goal damage skipped:", e);
+    }
+  }
+
   return {
     ok: true,
     reward: { gold: goldGain, xp: xpGain, crystals: gemGain, hp: hpChange },
     isPositive, died, drop, leveledUp,
     growthTicks,
     awakenings,
+    goalDamage,
   };
 }
 
@@ -506,6 +517,11 @@ export type { DailyLog, EveningReflection } from "./rituals-client";
 
 export { evaluateAwakenings, listAwakeningEvents, awakeningsForRole } from "./awakening-client";
 export type { AwakeningDef } from "./awakening-client";
+
+// ─── Quest Engine ───────────────────────────────────────────────────────────
+
+export { listGoals, createGoal, deleteGoal, linkTaskToGoal } from "./quests-client";
+export type { Goal, GoalType, GoalStatus } from "./quests-client";
 
 // ─── Gacha ──────────────────────────────────────────────────────────────────
 

@@ -5,6 +5,7 @@ import { useNavigate } from "@tanstack/react-router";
 
 const NAV_PRIMARY = [
   { to: "/", label: "Hub", icon: "castle" },
+  { to: "/quests", label: "Quests", icon: "flag" },
   { to: "/island", label: "Island", icon: "explore" },
   { to: "/altar", label: "Altar", icon: "auto_awesome" },
   { to: "/expeditions", label: "Expeditions", icon: "terrain" },

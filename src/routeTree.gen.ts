@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
+import { Route as AuthenticatedQuestsRouteImport } from './routes/_authenticated/quests'
 import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
 import { Route as AuthenticatedIslandRouteImport } from './routes/_authenticated/island'
 import { Route as AuthenticatedGuildRouteImport } from './routes/_authenticated/guild'
@@ -35,6 +36,11 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
 const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedQuestsRoute = AuthenticatedQuestsRouteImport.update({
+  id: '/quests',
+  path: '/quests',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedProfileRoute = AuthenticatedProfileRouteImport.update({
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/guild': typeof AuthenticatedGuildRoute
   '/island': typeof AuthenticatedIslandRoute
   '/profile': typeof AuthenticatedProfileRoute
+  '/quests': typeof AuthenticatedQuestsRoute
 }
 export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/guild': typeof AuthenticatedGuildRoute
   '/island': typeof AuthenticatedIslandRoute
   '/profile': typeof AuthenticatedProfileRoute
+  '/quests': typeof AuthenticatedQuestsRoute
   '/': typeof AuthenticatedIndexRoute
 }
 export interface FileRoutesById {
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   '/_authenticated/guild': typeof AuthenticatedGuildRoute
   '/_authenticated/island': typeof AuthenticatedIslandRoute
   '/_authenticated/profile': typeof AuthenticatedProfileRoute
+  '/_authenticated/quests': typeof AuthenticatedQuestsRoute
   '/_authenticated/': typeof AuthenticatedIndexRoute
 }
 export interface FileRouteTypes {
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
     | '/guild'
     | '/island'
     | '/profile'
+    | '/quests'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/auth'
@@ -161,6 +171,7 @@ export interface FileRouteTypes {
     | '/guild'
     | '/island'
     | '/profile'
+    | '/quests'
     | '/'
   id:
     | '__root__'
@@ -176,6 +187,7 @@ export interface FileRouteTypes {
     | '/_authenticated/guild'
     | '/_authenticated/island'
     | '/_authenticated/profile'
+    | '/_authenticated/quests'
     | '/_authenticated/'
   fileRoutesById: FileRoutesById
 }
@@ -205,6 +217,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof AuthenticatedIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/quests': {
+      id: '/_authenticated/quests'
+      path: '/quests'
+      fullPath: '/quests'
+      preLoaderRoute: typeof AuthenticatedQuestsRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/profile': {
@@ -291,6 +310,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedGuildRoute: typeof AuthenticatedGuildRoute
   AuthenticatedIslandRoute: typeof AuthenticatedIslandRoute
   AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
+  AuthenticatedQuestsRoute: typeof AuthenticatedQuestsRoute
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
 }
 
@@ -305,6 +325,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedGuildRoute: AuthenticatedGuildRoute,
   AuthenticatedIslandRoute: AuthenticatedIslandRoute,
   AuthenticatedProfileRoute: AuthenticatedProfileRoute,
+  AuthenticatedQuestsRoute: AuthenticatedQuestsRoute,
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
 }
 

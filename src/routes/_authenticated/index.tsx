@@ -120,6 +120,17 @@ function HubPage() {
         shootConfetti();
         toast.success(`⚡ ${a.monsterName} has awakened: ${a.skillName}`, { duration: 6000, description: a.flavor });
       }
+      const goal = (res as { goalDamage?: { slain: Array<{ title: string }>; damaged: Array<{ goal: { title: string }; damage: number }>; tomeMinted: boolean } | null } | undefined)?.goalDamage;
+      if (goal) {
+        if (goal.tomeMinted) {
+          shootConfetti();
+          const slainTitle = goal.slain[0]?.title ?? "your quest";
+          toast.success(`👑 ${slainTitle} slain! 📕 Tome of Reverse Heaven minted.`, { duration: 8000 });
+        } else if (goal.damaged.length > 0) {
+          const d = goal.damaged[0];
+          toast(`⚔ −${d.damage} HP to "${d.goal.title}"`, { duration: 2000 });
+        }
+      }
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["tasks"] });
       qc.invalidateQueries({ queryKey: ["my-monsters"] });

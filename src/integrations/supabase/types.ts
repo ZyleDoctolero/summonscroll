@@ -446,6 +446,51 @@ export type Database = {
           },
         ]
       }
+      goals: {
+        Row: {
+          created_at: string
+          deadline: string
+          hp_remaining: number
+          hp_total: number
+          id: string
+          identity: string | null
+          slain_at: string | null
+          starts_at: string
+          status: Database["public"]["Enums"]["goal_status"]
+          title: string
+          type: Database["public"]["Enums"]["goal_type"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          deadline: string
+          hp_remaining: number
+          hp_total: number
+          id?: string
+          identity?: string | null
+          slain_at?: string | null
+          starts_at?: string
+          status?: Database["public"]["Enums"]["goal_status"]
+          title: string
+          type: Database["public"]["Enums"]["goal_type"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          deadline?: string
+          hp_remaining?: number
+          hp_total?: number
+          id?: string
+          identity?: string | null
+          slain_at?: string | null
+          starts_at?: string
+          status?: Database["public"]["Enums"]["goal_status"]
+          title?: string
+          type?: Database["public"]["Enums"]["goal_type"]
+          user_id?: string
+        }
+        Relationships: []
+      }
       guild_members: {
         Row: {
           guild_id: string
@@ -1173,6 +1218,7 @@ export type Database = {
           created_at: string
           difficulty: Database["public"]["Enums"]["task_difficulty"]
           due_date: string | null
+          goal_id: string | null
           id: string
           is_starred: boolean
           last_completed_at: string | null
@@ -1197,6 +1243,7 @@ export type Database = {
           created_at?: string
           difficulty?: Database["public"]["Enums"]["task_difficulty"]
           due_date?: string | null
+          goal_id?: string | null
           id?: string
           is_starred?: boolean
           last_completed_at?: string | null
@@ -1221,6 +1268,7 @@ export type Database = {
           created_at?: string
           difficulty?: Database["public"]["Enums"]["task_difficulty"]
           due_date?: string | null
+          goal_id?: string | null
           id?: string
           is_starred?: boolean
           last_completed_at?: string | null
@@ -1238,7 +1286,15 @@ export type Database = {
           user_id?: string
           value?: number
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "tasks_goal_id_fkey"
+            columns: ["goal_id"]
+            isOneToOne: false
+            referencedRelation: "goals"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       tower_progress: {
         Row: {
@@ -1425,6 +1481,8 @@ export type Database = {
       banner_type: "standard" | "featured" | "streak" | "pact_seal" | "event"
       battle_mode: "chaos_tower" | "event" | "boss_rush"
       equipment_slot: "weapon" | "armor" | "helm" | "accessory"
+      goal_status: "active" | "slain" | "expired"
+      goal_type: "quarterly" | "monthly" | "weekly"
       guild_role: "leader" | "officer" | "member"
       monster_rarity:
         | "common"
@@ -1583,6 +1641,8 @@ export const Constants = {
       banner_type: ["standard", "featured", "streak", "pact_seal", "event"],
       battle_mode: ["chaos_tower", "event", "boss_rush"],
       equipment_slot: ["weapon", "armor", "helm", "accessory"],
+      goal_status: ["active", "slain", "expired"],
+      goal_type: ["quarterly", "monthly", "weekly"],
       guild_role: ["leader", "officer", "member"],
       monster_rarity: [
         "common",
