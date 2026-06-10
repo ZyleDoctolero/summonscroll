@@ -221,7 +221,7 @@ export const pullBanner = createServerFn({ method: "POST" })
       currency_spent: currency,
       amount_spent: data.count === 1 ? costPer1 : Math.round(costPer10 / data.count),
     }));
-    await supabaseAdmin.from("pulls").insert(pullInserts);
+    await supabaseAdmin.from("pulls").insert(pullInserts as never);
 
     // 4. Upsert pity counter
     await supabaseAdmin
