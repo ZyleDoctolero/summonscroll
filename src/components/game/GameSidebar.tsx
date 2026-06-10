@@ -7,6 +7,8 @@ const NAV_PRIMARY = [
   { to: "/", label: "Hub", icon: "castle" },
   { to: "/island", label: "Island", icon: "explore" },
   { to: "/altar", label: "Altar", icon: "auto_awesome" },
+  { to: "/expeditions", label: "Expeditions", icon: "terrain" },
+  { to: "/forge", label: "Forge", icon: "construction" },
   { to: "/battle", label: "Battle", icon: "swords" },
   { to: "/compendium", label: "Compendium", icon: "menu_book" },
 ] as const;
@@ -89,7 +91,13 @@ export function GameSidebar({ displayName, level, playerClass }: {
         className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t backdrop-blur-md"
         style={{ background: "rgba(15,18,26,0.95)", borderColor: "rgba(255,255,255,0.06)" }}
       >
-        {[...NAV_PRIMARY].map((item) => {
+        {[
+          { to: "/", label: "Hub", icon: "castle" },
+          { to: "/island", label: "Island", icon: "explore" },
+          { to: "/battle", label: "Battle", icon: "swords" },
+          { to: "/guild", label: "Guild", icon: "groups" },
+          { to: "/profile", label: "Profile", icon: "person" },
+        ].map((item) => {
           const active = path === item.to;
           return (
             <Link
@@ -100,7 +108,7 @@ export function GameSidebar({ displayName, level, playerClass }: {
             >
               <span className="material-symbols-outlined text-[20px]">{item.icon}</span>
               <span className="text-[9px] uppercase tracking-wider font-semibold">{item.label}</span>
-              {active && <div className="w-4 h-0.5 rounded-full" style={{ background: "#FFD54F" }} />}
+              {active && <div className="w-4 h-0.5 rounded-full mt-0.5" style={{ background: "#FFD54F" }} />}
             </Link>
           );
         })}

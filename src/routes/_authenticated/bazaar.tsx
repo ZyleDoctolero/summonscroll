@@ -1,14 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
-import { getMyProfile } from "@/lib/game/profile.functions";
-import { listShopItems, purchaseItem } from "@/lib/game/shop.functions";
+import { getMyProfile, listShopItems, purchaseItem } from "@/lib/game/supabase-api";
 
 export const Route = createFileRoute("/_authenticated/bazaar")({
-  head: () => ({ meta: [{ title: "Shop — SummonScroll" }] }),
   component: ShopPage,
 });
 
@@ -16,17 +13,14 @@ type ShopTab = "equipment" | "potion" | "scroll" | "armoire";
 
 function ShopPage() {
   const qc = useQueryClient();
-  const fetchProfile = useServerFn(getMyProfile);
-  const fetchItems = useServerFn(listShopItems);
-  const doPurchase = useServerFn(purchaseItem);
 
-  const profileQ = useQuery({ queryKey: ["profile"], queryFn: () => fetchProfile() });
-  const itemsQ = useQuery({ queryKey: ["shop-items"], queryFn: () => fetchItems() });
+  const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
+  const itemsQ = useQuery({ queryKey: ["shop-items"], queryFn: listShopItems });
 
   const [tab, setTab] = useState<ShopTab>("potion");
 
   const purchaseMut = useMutation({
-    mutationFn: async (shopItemId: string) => doPurchase({ data: { shopItemId, quantity: 1 } }),
+    mutationFn: async (shopItemId: string) => purchaseItem(shopItemId, 1),
     onSuccess: (res) => {
       if (res.reward) {
         toast.success(`Purchased: ${res.reward.name}${res.reward.type === "equipment" ? " (check Equipment)" : ""}`);
@@ -51,7 +45,8 @@ function ShopPage() {
 
         {/* Balance */}
         <div className="flex gap-4 mb-6 text-sm" style={{ color: "#A09D96" }}>
-          <span>💎 <b style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{profile.gems.toLocaleString()}</b></span>
+          <span>💰 <b style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{profile.gold.toLocaleString()}</b></span>
+          <span>💎 <b style={{ color: "#7FD4FF", fontFamily: "'JetBrains Mono',monospace" }}>{profile.crystals.toLocaleString()}</b></span>
           <span>🔑 <b style={{ color: "#CE93D8", fontFamily: "'JetBrains Mono',monospace" }}>{profile.pact_seals}</b></span>
         </div>
 
@@ -77,7 +72,7 @@ function ShopPage() {
                 const armoireItem = (itemsQ.data?.items ?? []).find((i: { category: string }) => i.category === "armoire");
                 if (armoireItem) purchaseMut.mutate(armoireItem.id);
               }}
-              disabled={purchaseMut.isPending || profile.gems < 100}
+              disabled={purchaseMut.isPending || profile.crystals < 100}
               className="px-8 py-3 rounded-lg font-bold uppercase tracking-widest text-sm disabled:opacity-40"
               style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14", boxShadow: "0 0 24px rgba(255,213,79,0.3)" }}>
               {purchaseMut.isPending ? "Opening…" : "🎰 Open Armoire — 100💎"}
@@ -89,8 +84,8 @@ function ShopPage() {
         {tab !== "armoire" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {items.map((item: { id: string; name: string; description: string; price: number; currency: string; effect_type: string; effect_value: number }) => {
-              const canAfford = item.currency === "pact_seals" ? profile.pact_seals >= item.price : profile.gems >= item.price;
-              const icon = item.currency === "pact_seals" ? "🔑" : "💎";
+              const canAfford = item.currency === "pact_seals" ? profile.pact_seals >= item.price : item.currency === "gold" ? profile.gold >= item.price : profile.crystals >= item.price;
+              const icon = item.currency === "pact_seals" ? "🔑" : item.currency === "gold" ? "💰" : "💎";
               return (
                 <div key={item.id} className="rounded-lg p-4 border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
                   <h3 className="font-bold text-sm mb-1" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>{item.name}</h3>

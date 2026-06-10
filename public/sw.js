@@ -1,0 +1,14 @@
+const CACHE_NAME = 'summonscroll-v1';
+
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', (event) => {
+  // Pass-through fetch for now, can be expanded to cache assets for offline support
+  event.respondWith(fetch(event.request));
+});

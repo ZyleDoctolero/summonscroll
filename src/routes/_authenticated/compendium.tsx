@@ -1,32 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { useMemo, useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
-import { getMyProfile } from "@/lib/game/profile.functions";
-import { listRealms, listAllMonsters, listMyMonsters } from "@/lib/game/compendium.functions";
+import { PromotionChamber } from "@/components/game/PromotionChamber";
+import { getMyProfile, listRealms, listAllMonsters, listMyMonsters } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 
 export const Route = createFileRoute("/_authenticated/compendium")({
-  head: () => ({ meta: [{ title: "Compendium — SummonScroll" }] }),
   component: CompendiumPage,
 });
 
 function CompendiumPage() {
-  const fetchProfile = useServerFn(getMyProfile);
-  const fetchRealms = useServerFn(listRealms);
-  const fetchMonsters = useServerFn(listAllMonsters);
-  const fetchMyMonsters = useServerFn(listMyMonsters);
-
-  const profileQ = useQuery({ queryKey: ["profile"], queryFn: () => fetchProfile() });
-  const realmsQ = useQuery({ queryKey: ["realms"], queryFn: () => fetchRealms() });
-  const monstersQ = useQuery({ queryKey: ["monsters"], queryFn: () => fetchMonsters() });
-  const myMonstersQ = useQuery({ queryKey: ["my-monsters"], queryFn: () => fetchMyMonsters() });
+  const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
+  const realmsQ = useQuery({ queryKey: ["realms"], queryFn: listRealms });
+  const monstersQ = useQuery({ queryKey: ["monsters"], queryFn: listAllMonsters });
+  const myMonstersQ = useQuery({ queryKey: ["my-monsters"], queryFn: listMyMonsters });
 
   const [realmFilter, setRealmFilter] = useState<number | null>(null);
   const [rarityFilter, setRarityFilter] = useState<string>("");
   const [search, setSearch] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [chamberFor, setChamberFor] = useState<{ id: string; name: string } | null>(null);
 
   const ownedIds = useMemo(
     () => new Set((myMonstersQ.data?.userMonsters ?? []).map((um: { monster_id: string }) => um.monster_id)),
@@ -104,8 +98,18 @@ function CompendiumPage() {
                   border: `1px solid ${owned ? RARITY_COLOR[r] : "rgba(255,255,255,0.05)"}`,
                   boxShadow: owned && r !== "common" ? RARITY_GLOW[r] : undefined,
                 }}>
-                <div className="w-full aspect-square rounded mb-2 flex items-center justify-center text-3xl" style={{ background: "#1A1E2A" }}>
-                  {owned ? "👾" : "❓"}
+                <div className="w-full aspect-square rounded mb-2 flex items-center justify-center text-3xl overflow-hidden" 
+                     style={{ 
+                       background: "#1A1E2A",
+                       border: owned ? `2px solid ${RARITY_COLOR[r]}` : "2px dashed rgba(255,255,255,0.1)",
+                       boxShadow: owned && r !== "common" ? `0 0 10px ${RARITY_COLOR[r]}40 inset` : undefined
+                     }}>
+                  {owned ? (
+                    <img src={m.art_url ? m.art_url : `/sprites/monsters/${m.name.toLowerCase().replace(/[^a-z0-9]+/g, '_')}.png`} 
+                         className="w-full h-full object-cover" 
+                         alt={m.name} 
+                         onError={(e) => { e.currentTarget.src = "/monsters/placeholder.png" }} />
+                  ) : "?"}
                 </div>
                 <p className="text-xs font-bold truncate" style={{ color: owned ? "#F0EDE6" : "#6B6864", fontFamily: "'Cinzel',serif" }}>
                   {owned ? m.name : "???"}
@@ -165,16 +169,36 @@ function CompendiumPage() {
                     <span key={m} className="text-[9px]" style={{ color: selUm.bond_percent >= m ? "#FFD54F" : "#6B6864" }}>{m}%</span>
                   ))}
                 </div>
-                <div className="mt-3 flex gap-2 text-xs" style={{ color: "#A09D96" }}>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "#A09D96" }}>
                   <span>Lvl {selUm.level}</span>
-                  <span>★ {selUm.awakening_stars}/5</span>
+                  <span>★ {selUm.star_level}/7</span>
                   {selUm.is_on_team && <span style={{ color: "#5FAD41" }}>On Team</span>}
                 </div>
+                <div className="mt-2 text-[11px]" style={{ color: "#6B6864" }}>
+                  Grew from <span style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{selUm.growth_xp ?? 0}</span> matching deeds.
+                </div>
+                {selUm.star_level < 7 && (
+                  <button
+                    onClick={() => setChamberFor({ id: selUm.id, name: sel.name })}
+                    className="mt-4 w-full py-2 rounded-md text-xs uppercase tracking-widest font-bold"
+                    style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+                  >
+                    Promote at the Chamber
+                  </button>
+                )}
               </div>
             )}
             {!selOwned && <p className="text-sm mt-4" style={{ color: "#6B6864" }}>Not yet discovered. Summon from the Altar!</p>}
           </div>
         </div>
+      )}
+
+      {chamberFor && (
+        <PromotionChamber
+          userMonsterId={chamberFor.id}
+          monsterName={chamberFor.name}
+          onClose={() => setChamberFor(null)}
+        />
       )}
     </AppShell>
   );

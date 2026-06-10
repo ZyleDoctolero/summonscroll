@@ -3,13 +3,8 @@ import {
   Outlet,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
-
-import twConfigRaw from "../screens/_twconfig.js?raw";
-import sharedStyles from "../screens/_styles.css?raw";
+import { useEffect } from "react";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -50,60 +45,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SummonScroll" },
-      { name: "description", content: "A dark-fantasy companion app for habits, summoning, and battles." },
-      { property: "og:title", content: "SummonScroll" },
-      { name: "twitter:title", content: "SummonScroll" },
-      { property: "og:description", content: "A dark-fantasy companion app for habits, summoning, and battles." },
-      { name: "twitter:description", content: "A dark-fantasy companion app for habits, summoning, and battles." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/62b3fe71-e75a-4b86-a38e-5f14ec6ae926/id-preview-a6f66fa9--3c3961ca-77f7-4edb-9354-72f7900db393.lovable.app-1780710689799.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/62b3fe71-e75a-4b86-a38e-5f14ec6ae926/id-preview-a6f66fa9--3c3961ca-77f7-4edb-9354-72f7900db393.lovable.app-1780710689799.png" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:type", content: "website" },
-    ],
-    links: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
-      },
-    ],
-    scripts: [
-      // Tailwind play CDN must load first so the `tailwind` global exists,
-      // then we set the custom config (matching the source mockups' order).
-      { src: "https://cdn.tailwindcss.com?plugins=forms,container-queries" },
-      { children: twConfigRaw },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en" className="dark">
-      <head>
-        <HeadContent />
-        <style dangerouslySetInnerHTML={{ __html: sharedStyles }} />
-      </head>
-      <body className="bg-[#0C0E14] text-[#F0EDE6]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

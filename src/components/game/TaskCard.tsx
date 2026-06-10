@@ -18,6 +18,8 @@ export type Task = {
   positive_enabled: boolean;
   negative_enabled: boolean;
   completed: boolean;
+  is_starred?: boolean;
+  tags?: string[];
 };
 
 // Category → realm affinity mapping per FR01 §2.8
@@ -71,13 +73,22 @@ export function TaskCard({
       className="rounded-lg p-4 flex gap-3 group relative transition-all"
       style={{
         background: `linear-gradient(90deg, ${color}14, #13161F 30%)`,
-        borderLeft: `4px solid ${color}`,
+        borderLeft: `4px solid ${task.is_starred ? "#FFD54F" : color}`,
         border: "1px solid rgba(255,255,255,0.07)",
-        borderLeftWidth: 4,
-        borderLeftColor: color,
+        borderLeftWidth: task.is_starred ? 6 : 4,
+        borderLeftColor: task.is_starred ? "#FFD54F" : color,
         opacity: task.completed && task.type !== "habit" ? 0.55 : 1,
+        boxShadow: task.is_starred ? "0 0 18px rgba(255,213,79,0.25)" : undefined,
       }}
     >
+      {task.is_starred && (
+        <div
+          className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow"
+          style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+        >
+          ⭐ Sacred
+        </div>
+      )}
       {/* Action buttons — FR01 §2.3: [+] and [−] for habits */}
       {task.type === "habit" ? (
         <div className="flex flex-col gap-1.5">

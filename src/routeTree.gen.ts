@@ -16,6 +16,8 @@ import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticate
 import { Route as AuthenticatedIslandRouteImport } from './routes/_authenticated/island'
 import { Route as AuthenticatedGuildRouteImport } from './routes/_authenticated/guild'
 import { Route as AuthenticatedFusionRouteImport } from './routes/_authenticated/fusion'
+import { Route as AuthenticatedForgeRouteImport } from './routes/_authenticated/forge'
+import { Route as AuthenticatedExpeditionsRouteImport } from './routes/_authenticated/expeditions'
 import { Route as AuthenticatedCompendiumRouteImport } from './routes/_authenticated/compendium'
 import { Route as AuthenticatedBazaarRouteImport } from './routes/_authenticated/bazaar'
 import { Route as AuthenticatedBattleRouteImport } from './routes/_authenticated/battle'
@@ -55,6 +57,17 @@ const AuthenticatedFusionRoute = AuthenticatedFusionRouteImport.update({
   path: '/fusion',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedForgeRoute = AuthenticatedForgeRouteImport.update({
+  id: '/forge',
+  path: '/forge',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedExpeditionsRoute =
+  AuthenticatedExpeditionsRouteImport.update({
+    id: '/expeditions',
+    path: '/expeditions',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedCompendiumRoute = AuthenticatedCompendiumRouteImport.update({
   id: '/compendium',
   path: '/compendium',
@@ -83,6 +96,8 @@ export interface FileRoutesByFullPath {
   '/battle': typeof AuthenticatedBattleRoute
   '/bazaar': typeof AuthenticatedBazaarRoute
   '/compendium': typeof AuthenticatedCompendiumRoute
+  '/expeditions': typeof AuthenticatedExpeditionsRoute
+  '/forge': typeof AuthenticatedForgeRoute
   '/fusion': typeof AuthenticatedFusionRoute
   '/guild': typeof AuthenticatedGuildRoute
   '/island': typeof AuthenticatedIslandRoute
@@ -94,6 +109,8 @@ export interface FileRoutesByTo {
   '/battle': typeof AuthenticatedBattleRoute
   '/bazaar': typeof AuthenticatedBazaarRoute
   '/compendium': typeof AuthenticatedCompendiumRoute
+  '/expeditions': typeof AuthenticatedExpeditionsRoute
+  '/forge': typeof AuthenticatedForgeRoute
   '/fusion': typeof AuthenticatedFusionRoute
   '/guild': typeof AuthenticatedGuildRoute
   '/island': typeof AuthenticatedIslandRoute
@@ -108,6 +125,8 @@ export interface FileRoutesById {
   '/_authenticated/battle': typeof AuthenticatedBattleRoute
   '/_authenticated/bazaar': typeof AuthenticatedBazaarRoute
   '/_authenticated/compendium': typeof AuthenticatedCompendiumRoute
+  '/_authenticated/expeditions': typeof AuthenticatedExpeditionsRoute
+  '/_authenticated/forge': typeof AuthenticatedForgeRoute
   '/_authenticated/fusion': typeof AuthenticatedFusionRoute
   '/_authenticated/guild': typeof AuthenticatedGuildRoute
   '/_authenticated/island': typeof AuthenticatedIslandRoute
@@ -123,6 +142,8 @@ export interface FileRouteTypes {
     | '/battle'
     | '/bazaar'
     | '/compendium'
+    | '/expeditions'
+    | '/forge'
     | '/fusion'
     | '/guild'
     | '/island'
@@ -134,6 +155,8 @@ export interface FileRouteTypes {
     | '/battle'
     | '/bazaar'
     | '/compendium'
+    | '/expeditions'
+    | '/forge'
     | '/fusion'
     | '/guild'
     | '/island'
@@ -147,6 +170,8 @@ export interface FileRouteTypes {
     | '/_authenticated/battle'
     | '/_authenticated/bazaar'
     | '/_authenticated/compendium'
+    | '/_authenticated/expeditions'
+    | '/_authenticated/forge'
     | '/_authenticated/fusion'
     | '/_authenticated/guild'
     | '/_authenticated/island'
@@ -210,6 +235,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedFusionRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/forge': {
+      id: '/_authenticated/forge'
+      path: '/forge'
+      fullPath: '/forge'
+      preLoaderRoute: typeof AuthenticatedForgeRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/expeditions': {
+      id: '/_authenticated/expeditions'
+      path: '/expeditions'
+      fullPath: '/expeditions'
+      preLoaderRoute: typeof AuthenticatedExpeditionsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/compendium': {
       id: '/_authenticated/compendium'
       path: '/compendium'
@@ -246,6 +285,8 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedBattleRoute: typeof AuthenticatedBattleRoute
   AuthenticatedBazaarRoute: typeof AuthenticatedBazaarRoute
   AuthenticatedCompendiumRoute: typeof AuthenticatedCompendiumRoute
+  AuthenticatedExpeditionsRoute: typeof AuthenticatedExpeditionsRoute
+  AuthenticatedForgeRoute: typeof AuthenticatedForgeRoute
   AuthenticatedFusionRoute: typeof AuthenticatedFusionRoute
   AuthenticatedGuildRoute: typeof AuthenticatedGuildRoute
   AuthenticatedIslandRoute: typeof AuthenticatedIslandRoute
@@ -258,6 +299,8 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedBattleRoute: AuthenticatedBattleRoute,
   AuthenticatedBazaarRoute: AuthenticatedBazaarRoute,
   AuthenticatedCompendiumRoute: AuthenticatedCompendiumRoute,
+  AuthenticatedExpeditionsRoute: AuthenticatedExpeditionsRoute,
+  AuthenticatedForgeRoute: AuthenticatedForgeRoute,
   AuthenticatedFusionRoute: AuthenticatedFusionRoute,
   AuthenticatedGuildRoute: AuthenticatedGuildRoute,
   AuthenticatedIslandRoute: AuthenticatedIslandRoute,
@@ -275,13 +318,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

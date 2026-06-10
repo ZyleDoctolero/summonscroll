@@ -183,6 +183,8 @@ insert into public.realms (name, element, habit_affinity, icon, sort_order) valu
 
 create table public.monsters (
   id uuid primary key default gen_random_uuid(),
+  bestiary_id int not null default 0,
+  release_set int not null default 1,
   realm_id int not null references public.realms(id),
   name text not null,
   rarity public.monster_rarity not null,
@@ -822,3 +824,36 @@ insert into public.shop_items (name, description, category, price, currency, eff
   ('Shadow Drake Scroll', 'Start the Shadow Drake Hunt quest.', 'scroll', 200, 'gems', 'quest_scroll', '{"quest":"Shadow Drake Hunt"}', 20),
   ('Tiamat Scroll',       'Start the Tiamat''s Wrath quest.',   'scroll', 500, 'gems', 'quest_scroll', '{"quest":"Tiamat''s Wrath"}', 21),
   ('Dragon Scale Scroll', 'Start the Dragon Scale Gathering quest.','scroll', 150, 'gems', 'quest_scroll', '{"quest":"Dragon Scale Gathering"}', 22);
+-- Remove pity mechanic entirely. Every pull is now an independent roll.
+
+-- Drop pity_counters table (RLS policies and trigger drop with it).
+drop trigger if exists pity_set_updated_at on public.pity_counters;
+drop policy if exists "pity_select_own" on public.pity_counters;
+drop policy if exists "pity_insert_own" on public.pity_counters;
+drop policy if exists "pity_update_own" on public.pity_counters;
+drop table if exists public.pity_counters;
+
+-- Drop is_pity column from pulls history.
+alter table public.pulls drop column if exists is_pity;
+-- 1. Streak freeze charges on profiles
+ALTER TABLE profiles ADD COLUMN IF NOT EXISTS streak_freeze_charges int NOT NULL DEFAULT 0;
+
+-- 2. Class change cooldown
+ALTER TABLE profiles ADD COLUMN IF NOT EXISTS last_class_change timestamptz;
+
+-- 3. Freeze Charm shop item (costs 1 Pact Seal)
+INSERT INTO shop_items (name, description, category, price, currency, effect_type, effect_value, sort_order)
+VALUES ('Freeze Charm', 'Preserves your streak when you miss a daily. Auto-consumed at cron.', 'potion', 1, 'pact_seals', 'streak_freeze', 1, 5)
+ON CONFLICT DO NOTHING;
+-- Phase 3 Features Migration
+
+-- Ascension
+ALTER TABLE public.user_monsters ADD COLUMN ascension_level INT NOT NULL DEFAULT 0;
+
+-- Talents, Combos
+ALTER TABLE public.profiles ADD COLUMN talents JSONB NOT NULL DEFAULT '{}'::jsonb;
+ALTER TABLE public.profiles ADD COLUMN combo_count INT NOT NULL DEFAULT 0;
+ALTER TABLE public.profiles ADD COLUMN last_task_time TIMESTAMP WITH TIME ZONE;
+
+-- Tags
+ALTER TABLE public.tasks ADD COLUMN tags TEXT[] NOT NULL DEFAULT '{}'::text[];

@@ -1,14 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
-import { getMyProfile } from "@/lib/game/profile.functions";
-import { getTeam, getTowerProgress, startArenaBattle, getBattleHistory } from "@/lib/game/battle.functions";
+import { getMyProfile, getTeam, getTowerProgress, startArenaBattle, getBattleHistory } from "@/lib/game/supabase-api";
 
 export const Route = createFileRoute("/_authenticated/battle")({
-  head: () => ({ meta: [{ title: "Battle — SummonScroll" }] }),
   component: BattlePage,
 });
 
@@ -16,22 +13,17 @@ type BattleResult = Awaited<ReturnType<typeof startArenaBattle>>;
 
 function BattlePage() {
   const qc = useQueryClient();
-  const fetchProfile = useServerFn(getMyProfile);
-  const fetchTeam = useServerFn(getTeam);
-  const fetchTower = useServerFn(getTowerProgress);
-  const fetchHistory = useServerFn(getBattleHistory);
-  const doBattle = useServerFn(startArenaBattle);
 
-  const profileQ = useQuery({ queryKey: ["profile"], queryFn: () => fetchProfile() });
-  const teamQ = useQuery({ queryKey: ["team"], queryFn: () => fetchTeam() });
-  const towerQ = useQuery({ queryKey: ["tower"], queryFn: () => fetchTower() });
-  const historyQ = useQuery({ queryKey: ["battle-history"], queryFn: () => fetchHistory() });
+  const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
+  const teamQ = useQuery({ queryKey: ["team"], queryFn: getTeam });
+  const towerQ = useQuery({ queryKey: ["tower"], queryFn: getTowerProgress });
+  const historyQ = useQuery({ queryKey: ["battle-history"], queryFn: getBattleHistory });
 
   const [result, setResult] = useState<BattleResult | null>(null);
   const [logIndex, setLogIndex] = useState(0);
 
   const battleMut = useMutation({
-    mutationFn: async (v: { mode: "chaos_tower" | "event" | "boss_rush"; floor: number }) => doBattle({ data: v }),
+    mutationFn: async (v: { mode: "chaos_tower" | "event" | "boss_rush"; floor: number }) => startArenaBattle(v.mode, v.floor),
     onSuccess: (res) => {
       setResult(res as BattleResult);
       setLogIndex(0);
@@ -95,7 +87,7 @@ function BattlePage() {
                   <div className="rounded-lg p-4 mb-4" style={{ background: "rgba(255,213,79,0.05)", border: "1px solid rgba(255,213,79,0.2)" }}>
                     <p className="text-xs uppercase tracking-wider font-semibold mb-2" style={{ color: "#A09D96", fontFamily: "'Cinzel',serif" }}>Rewards</p>
                     <div className="flex gap-4 text-sm font-bold" style={{ fontFamily: "'JetBrains Mono',monospace" }}>
-                      {result.rewards.gems > 0 && <span style={{ color: "#FFD54F" }}>+{result.rewards.gems} 💎</span>}
+                      {result.rewards.crystals > 0 && <span style={{ color: "#7FD4FF" }}>+{result.rewards.crystals} 💎</span>}
                       {result.rewards.shards > 0 && <span style={{ color: "#7FD4FF" }}>+{result.rewards.shards} 🔷</span>}
                       <span style={{ color: "#A09D96" }}>+{result.rewards.xp} XP</span>
                     </div>
@@ -150,7 +142,7 @@ function BattlePage() {
           <div>
             <h2 className="text-lg font-bold mb-3" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Recent Battles</h2>
             <div className="space-y-2">
-              {(historyQ.data?.battles ?? []).slice(0, 10).map((b: { id: string; mode: string; floor: number; player_won: boolean; enemy_name: string; rounds: number; reward_gems: number; created_at: string }) => (
+              {(historyQ.data?.battles ?? []).slice(0, 10).map((b: { id: string; mode: string; floor: number; player_won: boolean; enemy_name: string; rounds: number; reward_crystals: number; created_at: string }) => (
                 <div key={b.id} className="rounded-md p-3 flex items-center justify-between text-sm"
                   style={{ background: "#13161F", border: "1px solid rgba(255,255,255,0.05)" }}>
                   <div>
@@ -160,7 +152,7 @@ function BattlePage() {
                     <span className="ml-2" style={{ color: "#F0EDE6" }}>{b.enemy_name}</span>
                     <span className="ml-2 text-xs" style={{ color: "#6B6864" }}>Floor {b.floor} · {b.rounds}R</span>
                   </div>
-                  <span className="text-xs font-mono" style={{ color: "#FFD54F" }}>+{b.reward_gems}💎</span>
+                  <span className="text-xs font-mono" style={{ color: "#7FD4FF" }}>+{b.reward_crystals}💎</span>
                 </div>
               ))}
             </div>

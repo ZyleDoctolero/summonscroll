@@ -1,58 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
-import { getMyProfile } from "@/lib/game/profile.functions";
-import { getMyGuild, listGuilds, createGuild, joinGuild, leaveGuild, listQuestTemplates, startQuest } from "@/lib/game/guild.functions";
+import { getMyProfile, getMyGuild, listGuilds, createGuild, joinGuild, leaveGuild, listQuestTemplates, startQuest, getAvailableScrolls } from "@/lib/game/supabase-api";
+
+const SCROLL_MAPPING: Record<string, string> = {
+  "Shadow Drake Hunt": "Shadow Drake Scroll",
+  "Tiamat's Wrath": "Tiamat Scroll",
+  "Lich King's Return": "Lich King Scroll",
+  "Dragon Scale Gathering": "Dragon Scale Scroll",
+  "Void Essence Hunt": "Void Essence Scroll",
+};
 
 export const Route = createFileRoute("/_authenticated/guild")({
-  head: () => ({ meta: [{ title: "Guild — SummonScroll" }] }),
   component: GuildPage,
 });
 
 function GuildPage() {
   const qc = useQueryClient();
-  const fetchProfile = useServerFn(getMyProfile);
-  const fetchGuild = useServerFn(getMyGuild);
-  const fetchGuilds = useServerFn(listGuilds);
-  const fetchTemplates = useServerFn(listQuestTemplates);
-  const doCreate = useServerFn(createGuild);
-  const doJoin = useServerFn(joinGuild);
-  const doLeave = useServerFn(leaveGuild);
-  const doStartQuest = useServerFn(startQuest);
 
-  const profileQ = useQuery({ queryKey: ["profile"], queryFn: () => fetchProfile() });
-  const guildQ = useQuery({ queryKey: ["my-guild"], queryFn: () => fetchGuild() });
-  const guildsQ = useQuery({ queryKey: ["all-guilds"], queryFn: () => fetchGuilds() });
-  const templatesQ = useQuery({ queryKey: ["quest-templates"], queryFn: () => fetchTemplates() });
+  const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
+  const guildQ = useQuery({ queryKey: ["my-guild"], queryFn: getMyGuild });
+  const guildsQ = useQuery({ queryKey: ["all-guilds"], queryFn: listGuilds });
+  const templatesQ = useQuery({ queryKey: ["quest-templates"], queryFn: listQuestTemplates });
+  const scrollsQ = useQuery({ queryKey: ["my-scrolls"], queryFn: getAvailableScrolls });
 
   const [tab, setTab] = useState<"guild" | "browse" | "create">("guild");
   const [guildName, setGuildName] = useState("");
   const [guildDesc, setGuildDesc] = useState("");
 
   const createMut = useMutation({
-    mutationFn: () => doCreate({ data: { name: guildName, description: guildDesc } }),
+    mutationFn: () => createGuild(guildName, guildDesc),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); qc.invalidateQueries({ queryKey: ["profile"] }); toast.success("Guild created!"); setTab("guild"); },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const joinMut = useMutation({
-    mutationFn: (guildId: string) => doJoin({ data: { guildId } }),
+    mutationFn: (guildId: string) => joinGuild(guildId),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); toast.success("Joined!"); setTab("guild"); },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const leaveMut = useMutation({
-    mutationFn: () => doLeave(),
+    mutationFn: () => leaveGuild(),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); toast("Left guild."); },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const questMut = useMutation({
-    mutationFn: (templateId: string) => doStartQuest({ data: { questTemplateId: templateId } }),
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); toast.success("Quest started!"); },
+    mutationFn: (v: { templateId: string; scrollName: string }) => startQuest(v.templateId, v.scrollName),
+    onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); qc.invalidateQueries({ queryKey: ["my-scrolls"] }); toast.success("Quest started!"); },
     onError: (e: Error) => toast.error(e.message),
   });
 
@@ -131,17 +129,23 @@ function GuildPage() {
               <div className="rounded-xl p-6 border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
                 <h3 className="text-lg font-bold mb-3" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Start a Quest</h3>
                 <div className="space-y-2">
-                  {(templatesQ.data?.templates ?? []).map((t: { id: string; name: string; quest_type: string; boss_hp: number | null; difficulty: string; description: string }) => (
+                  {(templatesQ.data?.templates ?? []).map((t: { id: string; name: string; quest_type: string; boss_hp: number | null; difficulty: string; description: string }) => {
+                    const requiredScroll = SCROLL_MAPPING[t.name] ?? t.name + " Scroll";
+                    const hasScroll = (scrollsQ.data?.scrolls ?? []).some((s: { item_name: string }) => s.item_name === requiredScroll);
+                    return (
                     <div key={t.id} className="flex items-center justify-between p-3 rounded-md" style={{ background: "rgba(0,0,0,0.2)", border: "1px solid rgba(255,255,255,0.05)" }}>
                       <div>
                         <p className="text-sm font-bold" style={{ color: "#F0EDE6" }}>{t.name}</p>
                         <p className="text-xs" style={{ color: "#6B6864" }}>{t.quest_type === "boss" ? `Boss · HP ${t.boss_hp?.toLocaleString()}` : "Collection"} · {t.difficulty}</p>
+                        <p className="text-[10px] mt-1 font-semibold" style={{ color: hasScroll ? "#5FAD41" : "#E05252" }}>
+                          {hasScroll ? `✓ You have a ${requiredScroll}` : `Requires ${requiredScroll} (Buy in Shop)`}
+                        </p>
                       </div>
-                      <button onClick={() => questMut.mutate(t.id)} disabled={questMut.isPending}
+                      <button onClick={() => questMut.mutate({ templateId: t.id, scrollName: requiredScroll })} disabled={!hasScroll || questMut.isPending}
                         className="px-3 py-1.5 rounded text-xs font-bold uppercase disabled:opacity-40"
-                        style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}>Start</button>
+                        style={{ background: hasScroll ? "linear-gradient(135deg,#C89A3E,#FFD54F)" : "rgba(255,255,255,0.05)", color: hasScroll ? "#0C0E14" : "#6B6864" }}>Start</button>
                     </div>
-                  ))}
+                  )})}
                 </div>
               </div>
             )}
@@ -202,7 +206,7 @@ function GuildPage() {
         {tab === "create" && (
           <div className="rounded-xl p-6 border max-w-md" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
             <h2 className="text-lg font-bold mb-4" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Create Guild</h2>
-            <p className="text-xs mb-4" style={{ color: "#A09D96" }}>Costs 500💎 Spirit Crystals</p>
+            <p className="text-xs mb-4" style={{ color: "#A09D96" }}>Costs 500 💎 Crystals</p>
             <div className="space-y-3">
               <label className="block">
                 <span className="text-[11px] uppercase tracking-widest font-semibold" style={{ color: "#A09D96" }}>Guild Name</span>

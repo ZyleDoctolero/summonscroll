@@ -35,7 +35,7 @@ export function DeathOverlay({ trigger }: { trigger: number }) {
           YOU HAVE FALLEN
         </div>
         <div className="text-sm md:text-base mb-2" style={{ color: "#A09D96" }}>
-          Lost 1 level and all Spirit Crystals.
+          Lost 1 level and all Gold.
         </div>
         <div className="text-lg" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
           Revived — fight harder.

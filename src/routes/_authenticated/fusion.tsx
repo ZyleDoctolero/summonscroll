@@ -1,24 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
-import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
-import { getMyProfile } from "@/lib/game/profile.functions";
-import { listMyMonsters } from "@/lib/game/compendium.functions";
+import { getMyProfile, listMyMonsters } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
 
 export const Route = createFileRoute("/_authenticated/fusion")({
-  head: () => ({ meta: [{ title: "Fusion Matrix — SummonScroll" }] }),
   component: FusionPage,
 });
 
 function FusionPage() {
-  const fetchProfile = useServerFn(getMyProfile);
-  const fetchMonsters = useServerFn(listMyMonsters);
-
-  const profileQ = useQuery({ queryKey: ["profile"], queryFn: () => fetchProfile() });
-  const monstersQ = useQuery({ queryKey: ["my-monsters"], queryFn: () => fetchMonsters() });
+  const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
+  const monstersQ = useQuery({ queryKey: ["my-monsters"], queryFn: listMyMonsters });
 
   const [slots, setSlots] = useState<Array<string | null>>([null, null, null]);
   const [selectingSlot, setSelectingSlot] = useState<number | null>(null);
@@ -45,7 +38,9 @@ function FusionPage() {
               const r = um.monster.rarity as Rarity;
               return (
                 <div key={i} className="rounded-xl p-4 text-center w-32" style={{ background: "#13161F", border: `1px solid ${RARITY_COLOR[r]}` }}>
-                  <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center text-2xl" style={{ background: "#1A1E2A" }}>👾</div>
+                  <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center overflow-hidden" style={{ background: "#1A1E2A" }}>
+                    <img src="/monsters/placeholder.png" className="w-full h-full object-cover" alt="Monster" />
+                  </div>
                   <p className="text-[10px] font-bold truncate" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>{um.monster.name}</p>
                   <p className="text-[9px]" style={{ color: RARITY_COLOR[r] }}>{um.monster.rarity}</p>
                   <button onClick={() => { const n = [...slots]; n[i] = null; setSlots(n); }}
@@ -107,7 +102,9 @@ function FusionPage() {
                   const n = [...slots]; n[selectingSlot] = um.id; setSlots(n); setSelectingSlot(null);
                 }} className="rounded-lg p-2 text-center hover:scale-[1.03] transition-all"
                   style={{ background: "#13161F", border: `1px solid ${RARITY_COLOR[um.monster.rarity as Rarity]}40` }}>
-                  <div className="w-full aspect-square rounded mb-1 flex items-center justify-center text-xl" style={{ background: "#0C0E14" }}>👾</div>
+                  <div className="w-full aspect-square rounded mb-1 flex items-center justify-center overflow-hidden" style={{ background: "#0C0E14" }}>
+                    <img src="/monsters/placeholder.png" className="w-full h-full object-cover" alt="Monster" />
+                  </div>
                   <p className="text-[10px] font-bold truncate" style={{ color: "#F0EDE6" }}>{um.monster.name}</p>
                   <p className="text-[9px]" style={{ color: RARITY_COLOR[um.monster.rarity as Rarity] }}>{um.monster.rarity}</p>
                 </button>

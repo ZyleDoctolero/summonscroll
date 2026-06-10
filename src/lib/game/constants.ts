@@ -92,3 +92,6 @@ export function dowFromISO(iso: string): number {
   // 0..6 Sun..Sat
   return new Date(iso + "T00:00:00Z").getUTCDay();
 }
+
+export const CURRENT_RELEASED_MAX = 150;
+

@@ -13,6 +13,7 @@ export type TaskFormValue = {
   positive_enabled: boolean;
   negative_enabled: boolean;
   schedule_days: number[];
+  tags: string[];
 };
 
 export function TaskFormDialog({
@@ -24,7 +25,7 @@ export function TaskFormDialog({
 }: {
   open: boolean;
   defaultType: TaskType;
-  initial?: Task & { schedule_days?: number[] };
+  initial?: Task & { schedule_days?: number[]; tags?: string[] };
   onSubmit: (v: TaskFormValue) => void | Promise<void>;
   onClose: () => void;
 }) {
@@ -37,7 +38,9 @@ export function TaskFormDialog({
     positive_enabled: true,
     negative_enabled: false,
     schedule_days: [0, 1, 2, 3, 4, 5, 6],
+    tags: [],
   });
+  const [tagsInput, setTagsInput] = useState("");
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
@@ -51,7 +54,9 @@ export function TaskFormDialog({
       positive_enabled: initial?.positive_enabled ?? true,
       negative_enabled: initial?.negative_enabled ?? false,
       schedule_days: initial?.schedule_days ?? [0, 1, 2, 3, 4, 5, 6],
+      tags: initial?.tags ?? [],
     });
+    setTagsInput((initial?.tags ?? []).join(", "));
   }, [open, initial, defaultType]);
 
   if (!open) return null;
@@ -61,7 +66,8 @@ export function TaskFormDialog({
     if (!v.title.trim()) return;
     setSaving(true);
     try {
-      await onSubmit(v);
+      const finalTags = tagsInput.split(",").map(t => t.trim()).filter(Boolean);
+      await onSubmit({ ...v, tags: finalTags });
     } finally {
       setSaving(false);
     }
@@ -120,6 +126,15 @@ export function TaskFormDialog({
             onChange={(e) => setV({ ...v, category: e.target.value })}
             maxLength={40}
             placeholder="Mind · Body · Vaults…"
+          />
+        </Field>
+
+        <Field label="Tags (comma separated)">
+          <input
+            className="ss-input"
+            value={tagsInput}
+            onChange={(e) => setTagsInput(e.target.value)}
+            placeholder="fitness, work, reading"
           />
         </Field>
 

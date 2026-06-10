@@ -1,16 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
-import { getMyProfile } from "@/lib/game/profile.functions";
-import { getFullProfile, getAllAchievements, changeClass } from "@/lib/game/profile.extended.functions";
-import { listEquipment, equipItem } from "@/lib/game/shop.functions";
+import { getMyProfile, getFullProfile, getAllAchievements, changeClass, listEquipment, equipItem } from "@/lib/game/supabase-api";
 import { xpToNextLevel } from "@/lib/game/constants";
 
 export const Route = createFileRoute("/_authenticated/profile")({
-  head: () => ({ meta: [{ title: "Profile — SummonScroll" }] }),
   component: ProfilePage,
 });
 
@@ -25,32 +21,54 @@ type Tab = "stats" | "equipment" | "achievements" | "inventory";
 
 function ProfilePage() {
   const qc = useQueryClient();
-  const fetchProfile = useServerFn(getMyProfile);
-  const fetchFull = useServerFn(getFullProfile);
-  const fetchEquipment = useServerFn(listEquipment);
-  const fetchAchievements = useServerFn(getAllAchievements);
-  const doChangeClass = useServerFn(changeClass);
-  const doEquip = useServerFn(equipItem);
 
-  const profileQ = useQuery({ queryKey: ["profile"], queryFn: () => fetchProfile() });
-  const fullQ = useQuery({ queryKey: ["full-profile"], queryFn: () => fetchFull() });
-  const equipQ = useQuery({ queryKey: ["my-equipment"], queryFn: () => fetchEquipment() });
-  const achieveQ = useQuery({ queryKey: ["achievements"], queryFn: () => fetchAchievements() });
+  const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
+  const fullQ = useQuery({ queryKey: ["full-profile"], queryFn: getFullProfile });
+  const equipQ = useQuery({ queryKey: ["my-equipment"], queryFn: listEquipment });
+  const achieveQ = useQuery({ queryKey: ["achievements"], queryFn: getAllAchievements });
 
   const [tab, setTab] = useState<Tab>("stats");
   const [showClassPicker, setShowClassPicker] = useState(false);
 
   const classMut = useMutation({
-    mutationFn: (c: "warrior" | "mage" | "rogue" | "healer") => doChangeClass({ data: { newClass: c } }),
+    mutationFn: (c: "warrior" | "mage" | "rogue" | "healer") => changeClass(c),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["profile"] }); qc.invalidateQueries({ queryKey: ["full-profile"] }); setShowClassPicker(false); toast.success("Class changed!"); },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const equipMut = useMutation({
-    mutationFn: (ueId: string) => doEquip({ data: { userEquipmentId: ueId } }),
+    mutationFn: (ueId: string) => equipItem(ueId),
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["profile"] }); qc.invalidateQueries({ queryKey: ["full-profile"] }); qc.invalidateQueries({ queryKey: ["my-equipment"] }); toast.success("Equipped!"); },
     onError: (e: Error) => toast.error(e.message),
   });
+
+  const updateMut = useMutation({
+    mutationFn: async (patch: Record<string, unknown>) => {
+      const { data: { user } } = await supabase.auth.getUser();
+      await supabase.from("profiles").update(patch).eq("id", user!.id);
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["profile"] });
+      toast.success("Profile updated");
+    }
+  });
+
+  const heatmapQ = useQuery({ queryKey: ["heatmap"], queryFn: async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    const d = new Date();
+    d.setDate(d.getDate() - 30);
+    const { data } = await supabase.from("task_events")
+      .select("created_at")
+      .eq("user_id", user!.id)
+      .in("kind", ["plus", "complete"])
+      .gte("created_at", d.toISOString());
+    const counts: Record<string, number> = {};
+    for (const e of data ?? []) {
+      const dateStr = e.created_at.slice(0, 10);
+      counts[dateStr] = (counts[dateStr] ?? 0) + 1;
+    }
+    return counts;
+  } });
 
   if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Loading…</div>;
   if (!profileQ.data) return null;
@@ -61,6 +79,13 @@ function ProfilePage() {
   const xpPct = Math.min(100, (profile.xp / xpReq) * 100);
   const hpPct = Math.min(100, (profile.hp / profile.max_hp) * 100);
   const classInfo = CLASS_INFO[profile.class] ?? { icon: "👤", label: "None", desc: "Choose a class at Level 10", color: "#A09D96" };
+
+  const lastClassChange = full?.profile?.last_class_change;
+  let cooldownDays = 0;
+  if (lastClassChange && profile.class !== "none") {
+    const diff = (new Date().getTime() - new Date(lastClassChange).getTime()) / (1000 * 3600 * 24);
+    if (diff < 7) cooldownDays = Math.ceil(7 - diff);
+  }
 
   return (
     <AppShell profile={profile}>
@@ -115,6 +140,43 @@ function ProfilePage() {
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+            <div className="bg-[#13161F] border rounded-xl p-4 md:p-6" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+              <h3 className="font-bold text-lg mb-4 flex items-center gap-2" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>
+                <span className="material-symbols-outlined text-[#FFD54F]">psychiatry</span>
+                Talents
+              </h3>
+              <div className="text-sm text-[#A09D96] mb-4">
+                You earn 1 Talent Point every 5 levels. Points available: <strong className="text-white">{Math.max(0, Math.floor(profile.level / 5) - Object.values(profile.talents as Record<string, number> ?? {}).reduce((a,b) => a+b, 0))}</strong>
+              </div>
+              <div className="space-y-4">
+                {[
+                  { id: "greed", name: "Greed", desc: "+5% Gold from tasks per rank", max: 5 },
+                  { id: "scholar", name: "Scholar", desc: "+5% XP from tasks per rank", max: 5 },
+                  { id: "resilience", name: "Resilience", desc: "-10% HP loss from missed dailies", max: 3 },
+                  { id: "collector", name: "Collector", desc: "+5% Drop Chance", max: 3 },
+                ].map(t => {
+                  const currentRank = (profile.talents as Record<string, number>)?.[t.id] ?? 0;
+                  const ptsAvail = Math.floor(profile.level / 5) - Object.values(profile.talents as Record<string, number> ?? {}).reduce((a,b) => a+b, 0);
+                  const canUpgrade = ptsAvail > 0 && currentRank < t.max;
+                  return (
+                    <div key={t.id} className="flex justify-between items-center p-3 rounded-lg bg-[#0C0E14] border border-white/5">
+                      <div>
+                        <div className="font-bold text-sm text-[#F0EDE6]">{t.name} <span className="text-xs font-normal text-[#A09D96]">({currentRank}/{t.max})</span></div>
+                        <div className="text-xs text-[#A09D96]">{t.desc}</div>
+                      </div>
+                      <button 
+                        onClick={() => updateMut.mutate({ talents: { ...(profile.talents as any), [t.id]: currentRank + 1 } })}
+                        disabled={!canUpgrade || updateMut.isPending}
+                        className="px-3 py-1 rounded text-xs font-bold transition-all disabled:opacity-50"
+                        style={{ background: canUpgrade ? "#C89A3E" : "#333", color: canUpgrade ? "#0C0E14" : "#A09D96" }}
+                      >
+                        +
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           {([["stats", "Stats"], ["equipment", "Equipment"], ["achievements", "Achievements"], ["inventory", "Inventory"]] as const).map(([k, l]) => (
             <button key={k} onClick={() => setTab(k)} className="pb-2 text-sm font-semibold"
               style={{ color: tab === k ? "#FFD54F" : "#A09D96", borderBottom: `2px solid ${tab === k ? "#FFD54F" : "transparent"}` }}>{l}</button>
@@ -158,13 +220,13 @@ function ProfilePage() {
         {/* Achievements tab */}
         {tab === "achievements" && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {(achieveQ.data?.achievements ?? []).map((a: { id: string; name: string; description: string; icon: string; unlocked: boolean; reward_gems: number }) => (
+            {(achieveQ.data?.achievements ?? []).map((a: { id: string; name: string; description: string; icon: string; unlocked: boolean; reward_crystals: number }) => (
               <div key={a.id} className="rounded-lg p-4 text-center border"
                 style={{ background: "#13161F", borderColor: a.unlocked ? "#FFD54F" : "rgba(255,255,255,0.05)", opacity: a.unlocked ? 1 : 0.4 }}>
                 <div className="text-3xl mb-2">{a.unlocked ? a.icon : "🔒"}</div>
                 <p className="text-xs font-bold" style={{ color: a.unlocked ? "#F0EDE6" : "#6B6864", fontFamily: "'Cinzel',serif" }}>{a.name}</p>
                 <p className="text-[10px] mt-1" style={{ color: "#6B6864" }}>{a.description}</p>
-                {a.reward_gems > 0 && <p className="text-[10px] mt-1" style={{ color: "#FFD54F" }}>+{a.reward_gems}💎</p>}
+                {a.reward_crystals > 0 && <p className="text-[10px] mt-1" style={{ color: "#7FD4FF" }}>+{a.reward_crystals}💎</p>}
               </div>
             ))}
           </div>
@@ -207,15 +269,32 @@ function ProfilePage() {
 
         {/* Stats tab (default) */}
         {tab === "stats" && (
-          <div className="rounded-xl p-6 border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
-            <h2 className="text-lg font-bold mb-4" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Class Details</h2>
-            <p className="text-sm mb-2" style={{ color: "#A09D96" }}>{classInfo.desc}</p>
-            <p className="text-xs" style={{ color: "#6B6864" }}>
-              {profile.class !== "none"
-                ? "Equipment matching your class gets a 50% stat bonus!"
-                : "Choose a class at Level 10 to unlock class bonuses and skills."}
-            </p>
-          </div>
+          <>
+            <div className="rounded-xl p-6 border mb-4" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
+              <h2 className="text-lg font-bold mb-4" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Class Details</h2>
+              <p className="text-sm mb-2" style={{ color: "#A09D96" }}>{classInfo.desc}</p>
+              <p className="text-xs" style={{ color: "#6B6864" }}>
+                {profile.class !== "none"
+                  ? "Equipment matching your class gets a 50% stat bonus!"
+                  : "Choose a class at Level 10 to unlock class bonuses and skills."}
+              </p>
+            </div>
+            
+            {/* Heatmap */}
+            <div className="bg-[#13161F] p-6 rounded-xl border" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+              <h3 className="font-bold text-sm mb-4 text-[#A09D96] uppercase tracking-widest">30-Day Activity</h3>
+              <div className="flex gap-1 overflow-x-auto pb-2 no-scrollbar">
+                {Array.from({ length: 30 }).map((_, i) => {
+                  const d = new Date();
+                  d.setDate(d.getDate() - (29 - i));
+                  const ds = d.toISOString().slice(0, 10);
+                  const c = heatmapQ.data?.[ds] ?? 0;
+                  const color = c === 0 ? "#1A1E2A" : c < 3 ? "#5FAD4180" : c < 6 ? "#5FAD41" : "#FFD54F";
+                  return <div key={i} className="w-4 h-4 rounded-sm flex-shrink-0" style={{ background: color }} title={`${ds}: ${c} tasks`} />;
+                })}
+              </div>
+            </div>
+          </>
         )}
       </div>
 
@@ -223,11 +302,21 @@ function ProfilePage() {
       {showClassPicker && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.8)" }} onClick={() => setShowClassPicker(false)}>
           <div onClick={(e) => e.stopPropagation()} className="w-full max-w-md rounded-xl p-6 border" style={{ background: "#1A1E2A", borderColor: "rgba(255,213,79,0.2)" }}>
-            <h2 className="text-xl font-bold mb-4" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Choose Your Class</h2>
+            <h2 className="text-xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Choose Your Class</h2>
+            {profile.class !== "none" ? (
+              cooldownDays > 0 ? (
+                <p className="text-xs mb-4" style={{ color: "#E05252" }}>Class change is on cooldown for {cooldownDays} more day(s).</p>
+              ) : (
+                <p className="text-xs mb-4" style={{ color: "#A09D96" }}>Changing class costs <span style={{ color: "#FFD54F" }}>500💎</span> and has a 7-day cooldown.</p>
+              )
+            ) : (
+              <p className="text-xs mb-4" style={{ color: "#5FAD41" }}>Your first class choice is free!</p>
+            )}
+            
             <div className="grid grid-cols-2 gap-3">
               {(Object.entries(CLASS_INFO) as Array<[string, typeof CLASS_INFO[string]]>).map(([key, info]) => (
                 <button key={key} onClick={() => classMut.mutate(key as "warrior" | "mage" | "rogue" | "healer")}
-                  disabled={classMut.isPending}
+                  disabled={classMut.isPending || profile.class === key || cooldownDays > 0}
                   className="rounded-lg p-4 text-center border transition-all hover:scale-[1.03] disabled:opacity-40"
                   style={{ background: "#13161F", borderColor: profile.class === key ? info.color : "rgba(255,255,255,0.07)" }}>
                   <div className="text-3xl mb-2">{info.icon}</div>
