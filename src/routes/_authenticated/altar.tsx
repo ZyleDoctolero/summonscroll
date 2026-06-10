@@ -116,7 +116,7 @@ function AltarPage() {
 
         {selectedBanner && (
           <BannerDisplay
-            banner={selectedBanner}
+            banner={selectedBanner as unknown as BannerData}
             profile={profile}
             pulling={pullMut.isPending}
             onPull={(count) => pullMut.mutate({ bannerId: selectedBanner.id, count })}
