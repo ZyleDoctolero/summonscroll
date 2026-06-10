@@ -30,6 +30,11 @@ export type ProfileRow = {
   last_login_date: string | null;
   deaths: number;
   class: string;
+  str_stat?: number;
+  int_stat?: number;
+  per_stat?: number;
+  mp?: number;
+  max_mp?: number;
 };
 
 export function applyXp(p: { level: number; xp: number; hp: number; max_hp: number }, gain: number) {
