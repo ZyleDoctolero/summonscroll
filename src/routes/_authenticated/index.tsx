@@ -115,6 +115,11 @@ function HubPage() {
         const more = ticks.length > 3 ? ` +${ticks.length - 3} more` : "";
         toast(`✨ Bond grew with ${names}${more}`, { duration: 2500 });
       }
+      const awakened = (res as { awakenings?: Array<{ monsterName: string; skillName: string; flavor: string }> } | undefined)?.awakenings ?? [];
+      for (const a of awakened) {
+        shootConfetti();
+        toast.success(`⚡ ${a.monsterName} has awakened: ${a.skillName}`, { duration: 6000, description: a.flavor });
+      }
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["tasks"] });
       qc.invalidateQueries({ queryKey: ["my-monsters"] });

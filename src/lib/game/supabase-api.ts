@@ -447,11 +447,24 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
     }
   }
 
+  // ─── Skill Awakening evaluation ──────────────────────────────────────
+  // Cheap on a no-change day; expensive on rare unlocks. Worth it.
+  let awakenings: Array<{ monsterName: string; skillName: string; flavor: string }> = [];
+  if (isPositive) {
+    try {
+      const { evaluateAwakenings } = await import("./awakening-client");
+      awakenings = await evaluateAwakenings();
+    } catch (e) {
+      console.warn("Awakening evaluation skipped:", e);
+    }
+  }
+
   return {
     ok: true,
     reward: { gold: goldGain, xp: xpGain, crystals: gemGain, hp: hpChange },
     isPositive, died, drop, leveledUp,
     growthTicks,
+    awakenings,
   };
 }
 
@@ -488,6 +501,11 @@ export {
   isEveningWindow,
 } from "./rituals-client";
 export type { DailyLog, EveningReflection } from "./rituals-client";
+
+// ─── Skill Awakening by Deeds ──────────────────────────────────────────────
+
+export { evaluateAwakenings, listAwakeningEvents, awakeningsForRole } from "./awakening-client";
+export type { AwakeningDef } from "./awakening-client";
 
 // ─── Gacha ──────────────────────────────────────────────────────────────────
 

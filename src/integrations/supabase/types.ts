@@ -130,6 +130,41 @@ export type Database = {
         }
         Relationships: []
       }
+      awakening_events: {
+        Row: {
+          created_at: string
+          id: string
+          skill_name: string
+          trigger_text: string
+          user_id: string
+          user_monster_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          skill_name: string
+          trigger_text: string
+          user_id: string
+          user_monster_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          skill_name?: string
+          trigger_text?: string
+          user_id?: string
+          user_monster_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "awakening_events_user_monster_id_fkey"
+            columns: ["user_monster_id"]
+            isOneToOne: false
+            referencedRelation: "user_monsters"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       banners: {
         Row: {
           art_url: string | null
@@ -1287,6 +1322,7 @@ export type Database = {
       user_monsters: {
         Row: {
           ascension_level: number
+          awakened_skills: string[]
           bond_percent: number
           created_at: string
           growth_xp: number
@@ -1302,6 +1338,7 @@ export type Database = {
         }
         Insert: {
           ascension_level?: number
+          awakened_skills?: string[]
           bond_percent?: number
           created_at?: string
           growth_xp?: number
@@ -1317,6 +1354,7 @@ export type Database = {
         }
         Update: {
           ascension_level?: number
+          awakened_skills?: string[]
           bond_percent?: number
           created_at?: string
           growth_xp?: number

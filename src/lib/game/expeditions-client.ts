@@ -185,7 +185,16 @@ export async function runExpedition(runs: 1 | 5): Promise<{
     }
   }
 
-  return { totalDrops: finalDrops, runsCompleted, eliteCount, staminaAfter, staminaMax: profile.stamina_max };
+  // Run awakening evaluation after expedition
+  let awakenings: Array<{ monsterName: string; skillName: string; flavor: string }> = [];
+  try {
+    const { evaluateAwakenings } = await import("./awakening-client");
+    awakenings = await evaluateAwakenings();
+  } catch (e) {
+    console.warn("Awakening evaluation skipped:", e);
+  }
+
+  return { totalDrops: finalDrops, runsCompleted, eliteCount, staminaAfter, staminaMax: profile.stamina_max, awakenings };
 }
 
 function rollDrops(expType: ExpeditionType, isElite: boolean, perStat: number): Drop[] {

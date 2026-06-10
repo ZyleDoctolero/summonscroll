@@ -59,6 +59,9 @@ function ExpeditionsPage() {
         staminaAfter: res.staminaAfter,
         staminaMax: res.staminaMax,
       });
+      for (const a of res.awakenings ?? []) {
+        toast.success(`⚡ ${a.monsterName} has awakened: ${a.skillName}`, { duration: 6000, description: a.flavor });
+      }
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
     },

@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
 import { PromotionChamber } from "@/components/game/PromotionChamber";
-import { getMyProfile, listRealms, listAllMonsters, listMyMonsters } from "@/lib/game/supabase-api";
+import { getMyProfile, listRealms, listAllMonsters, listMyMonsters, awakeningsForRole } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 
 export const Route = createFileRoute("/_authenticated/compendium")({
@@ -176,6 +176,37 @@ function CompendiumPage() {
                 </div>
                 <div className="mt-2 text-[11px]" style={{ color: "#6B6864" }}>
                   Grew from <span style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{selUm.growth_xp ?? 0}</span> matching deeds.
+                </div>
+
+                {/* Dormant Powers */}
+                <div className="mt-4">
+                  <p className="text-[10px] uppercase tracking-widest font-semibold mb-2" style={{ color: "#A09D96" }}>
+                    Dormant Powers
+                  </p>
+                  <div className="space-y-1">
+                    {awakeningsForRole(sel.role).map((def) => {
+                      const unlocked = (selUm.awakened_skills as string[] | undefined)?.includes(def.name);
+                      return (
+                        <div
+                          key={def.name}
+                          className="rounded p-2 text-[11px]"
+                          style={{
+                            background: unlocked ? "rgba(255,213,79,0.08)" : "rgba(0,0,0,0.3)",
+                            border: `1px solid ${unlocked ? "#FFD54F" : "rgba(255,255,255,0.06)"}`,
+                          }}
+                        >
+                          <div className="flex items-center justify-between">
+                            <span style={{ color: unlocked ? "#FFD54F" : "#6B6864", fontWeight: 600 }}>
+                              {unlocked ? "⚡" : "🔒"} {def.name}
+                            </span>
+                          </div>
+                          <p className="mt-0.5 italic" style={{ color: unlocked ? "#F0EDE6" : "#6B6864" }}>
+                            {unlocked ? def.flavor : `Awakens when: ${def.triggerText}`}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
                 {selUm.star_level < 7 && (
                   <button
