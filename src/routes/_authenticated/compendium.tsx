@@ -143,7 +143,7 @@ function CompendiumPage() {
             </div>
             <div className="space-y-1 mb-4">
               <div className="text-[10px] uppercase tracking-wider font-semibold" style={{ color: "#A09D96" }}>Skills</div>
-              {[sel.skill_1, sel.skill_2, sel.skill_3].filter(Boolean).map((s: string, i: number) => (
+              {[sel.skill_1, sel.skill_2, sel.skill_3].filter(Boolean).map((s: any, i: number) => (
                 <div key={i} className="text-sm" style={{ color: selOwned ? "#F0EDE6" : "#6B6864" }}>
                   <span style={{ color: selOwned ? "#5FAD41" : "#6B6864" }}>●</span> {selOwned ? s : "???"}
                 </div>
