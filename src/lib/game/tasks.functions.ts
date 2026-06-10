@@ -239,7 +239,7 @@ export const scoreTask = createServerFn({ method: "POST" })
               questUpdate.status = "completed";
               questUpdate.completed_at = new Date().toISOString();
             }
-            await supabaseAdmin.from("guild_quests").update(questUpdate).eq("id", quest.id);
+            await supabaseAdmin.from("guild_quests").update(questUpdate as never).eq("id", quest.id);
             // Track participant damage
             await supabaseAdmin.from("quest_participants").upsert({
               guild_quest_id: quest.id,
