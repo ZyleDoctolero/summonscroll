@@ -86,11 +86,24 @@ function BattlePage() {
                 {result.won && (
                   <div className="rounded-lg p-4 mb-4" style={{ background: "rgba(255,213,79,0.05)", border: "1px solid rgba(255,213,79,0.2)" }}>
                     <p className="text-xs uppercase tracking-wider font-semibold mb-2" style={{ color: "#A09D96", fontFamily: "'Cinzel',serif" }}>Rewards</p>
-                    <div className="flex gap-4 text-sm font-bold" style={{ fontFamily: "'JetBrains Mono',monospace" }}>
+                    <div className="flex flex-wrap gap-4 text-sm font-bold" style={{ fontFamily: "'JetBrains Mono',monospace" }}>
                       {result.rewards.crystals > 0 && <span style={{ color: "#7FD4FF" }}>+{result.rewards.crystals} 💎</span>}
                       {result.rewards.shards > 0 && <span style={{ color: "#7FD4FF" }}>+{result.rewards.shards} 🔷</span>}
                       <span style={{ color: "#A09D96" }}>+{result.rewards.xp} XP</span>
+                      {(result as { milestoneDrops?: Array<{ name: string; qty: number }> }).milestoneDrops?.map((d, i) => (
+                        <span key={i} style={{ color: "#FFD54F" }}>+{d.qty} {d.name}</span>
+                      ))}
                     </div>
+                    {(result as { badges?: { wailingWall?: boolean; apex?: boolean } }).badges?.wailingWall && (
+                      <p className="mt-3 text-sm text-center" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+                        🏛 The Wailing Wall crumbles before you. <span style={{ color: "#F0EDE6" }}>Badge earned.</span>
+                      </p>
+                    )}
+                    {(result as { badges?: { wailingWall?: boolean; apex?: boolean } }).badges?.apex && (
+                      <p className="mt-3 text-sm text-center" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+                        👑 You are the Apex. <span style={{ color: "#F0EDE6" }}>Crown bestowed.</span>
+                      </p>
+                    )}
                   </div>
                 )}
                 <button onClick={() => setResult(null)} className="w-full py-3 rounded-lg font-bold text-sm uppercase tracking-widest"

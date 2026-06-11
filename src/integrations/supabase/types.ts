@@ -1298,19 +1298,28 @@ export type Database = {
       }
       tower_progress: {
         Row: {
+          apex_cleared_at: string | null
           highest_floor: number
+          last_defeat_at: string | null
           updated_at: string
           user_id: string
+          wailing_wall_cleared_at: string | null
         }
         Insert: {
+          apex_cleared_at?: string | null
           highest_floor?: number
+          last_defeat_at?: string | null
           updated_at?: string
           user_id: string
+          wailing_wall_cleared_at?: string | null
         }
         Update: {
+          apex_cleared_at?: string | null
           highest_floor?: number
+          last_defeat_at?: string | null
           updated_at?: string
           user_id?: string
+          wailing_wall_cleared_at?: string | null
         }
         Relationships: []
       }

@@ -146,13 +146,89 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
 
   await supabase.from("profiles").update({ crystals: newCrystals, pact_seals: newSeals, level: newLevel, xp: newXp, hp: newHp }).eq("id", user.id);
 
+  // ─── Tower milestone drops (Pick Me Up restructure) ─────────────────
+  const milestoneDrops: Array<{ type: string; name: string; qty: number }> = [];
+  let badges: { wailingWall?: boolean; apex?: boolean } = {};
+
   if (won && mode === "chaos_tower") {
-    await supabase.from("tower_progress").upsert({ user_id: user.id, highest_floor: Math.max(floor, 0) }, { onConflict: "user_id" });
+    // Build a tower_progress snapshot first
+    const { data: progress } = await supabase
+      .from("tower_progress")
+      .select("highest_floor, wailing_wall_cleared_at, apex_cleared_at")
+      .eq("user_id", user.id)
+      .maybeSingle();
+
+    const floorType = classifyFloor(floor);
+
+    // Mini-boss (every 5): guaranteed common stone
+    if (floorType === "mini_boss") {
+      milestoneDrops.push({ type: "stone", name: "Wayfarer Stone", qty: 1 });
+    }
+    // Greater boss (25/50/75): guaranteed rare material
+    if (floorType === "greater_boss") {
+      milestoneDrops.push({ type: "material", name: "Tome Shard", qty: 2 });
+    }
+    // Event floor (33/66): no drop, but team is fully healed (handled via log)
+    // Wailing Wall (50): 1 Tome Shard + permanent badge
+    if (floor === 50 && !progress?.wailing_wall_cleared_at) {
+      milestoneDrops.push({ type: "tome_shard", name: "Tome Shard", qty: 5 });
+      badges.wailingWall = true;
+    }
+    // Apex (100): 1 Tome of Reverse Heaven + crown badge
+    if (floor === 100 && !progress?.apex_cleared_at) {
+      milestoneDrops.push({ type: "tome", name: "Tome of Reverse Heaven", qty: 1 });
+      badges.apex = true;
+    }
+
+    // Apply drops
+    for (const d of milestoneDrops) {
+      const { data: existing } = await supabase
+        .from("inventory")
+        .select("id, quantity")
+        .eq("user_id", user.id)
+        .eq("item_type", d.type)
+        .eq("item_name", d.name)
+        .maybeSingle();
+      if (existing) {
+        await supabase.from("inventory").update({ quantity: existing.quantity + d.qty }).eq("id", existing.id);
+      } else {
+        await supabase.from("inventory").insert({ user_id: user.id, item_type: d.type, item_name: d.name, quantity: d.qty });
+      }
+    }
+
+    // Update tower_progress with new highest_floor + flags
+    const update: Record<string, unknown> = { user_id: user.id, highest_floor: Math.max(progress?.highest_floor ?? 0, floor) };
+    if (badges.wailingWall) update.wailing_wall_cleared_at = new Date().toISOString();
+    if (badges.apex) update.apex_cleared_at = new Date().toISOString();
+    await supabase.from("tower_progress").upsert(update, { onConflict: "user_id" });
+
+    // Bond ticks
     const bondGain = 1 + Math.floor(floor / 10);
     for (const um of team) {
       await supabase.from("user_monsters").update({ bond_percent: Math.min(100, Number(um.bond_percent) + bondGain) }).eq("id", um.id);
     }
+  } else if (!won && mode === "chaos_tower") {
+    await supabase.from("tower_progress").upsert({ user_id: user.id, last_defeat_at: new Date().toISOString() }, { onConflict: "user_id" });
   }
 
-  return { won, rounds: round, playerHp, playerMaxHp: teamHp, enemyHp, enemyMaxHp: enemy.hp, enemyName: enemy.name, log, rewards: { crystals: rewardCrystals, xp: rewardXp, shards: rewardShards } };
+  return {
+    won, rounds: round, playerHp, playerMaxHp: teamHp, enemyHp, enemyMaxHp: enemy.hp, enemyName: enemy.name, log,
+    rewards: { crystals: rewardCrystals, xp: rewardXp, shards: rewardShards },
+    floorType: classifyFloor(floor),
+    milestoneDrops,
+    badges,
+  };
+}
+
+// ─── Floor type classification ──────────────────────────────────────────────
+
+export type FloorType = "standard" | "mini_boss" | "greater_boss" | "event" | "wailing_wall" | "apex";
+
+export function classifyFloor(floor: number): FloorType {
+  if (floor === 100) return "apex";
+  if (floor === 50)  return "wailing_wall";
+  if (floor === 33 || floor === 66) return "event";
+  if (floor === 25 || floor === 75) return "greater_boss";
+  if (floor % 5 === 0) return "mini_boss";
+  return "standard";
 }

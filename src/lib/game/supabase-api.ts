@@ -579,7 +579,8 @@ export async function getBattleHistory() {
   return { battles: data ?? [] };
 }
 
-export { startArenaBattle } from "./battle-client";
+export { startArenaBattle, classifyFloor } from "./battle-client";
+export type { FloorType } from "./battle-client";
 
 // ─── Shop ───────────────────────────────────────────────────────────────────
 
