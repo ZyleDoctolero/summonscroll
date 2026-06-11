@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
+import { Route as AuthenticatedTrialRouteImport } from './routes/_authenticated/trial'
 import { Route as AuthenticatedQuestsRouteImport } from './routes/_authenticated/quests'
 import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
 import { Route as AuthenticatedIslandRouteImport } from './routes/_authenticated/island'
@@ -37,6 +38,11 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
 const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedTrialRoute = AuthenticatedTrialRouteImport.update({
+  id: '/trial',
+  path: '/trial',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedQuestsRoute = AuthenticatedQuestsRouteImport.update({
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/island': typeof AuthenticatedIslandRoute
   '/profile': typeof AuthenticatedProfileRoute
   '/quests': typeof AuthenticatedQuestsRoute
+  '/trial': typeof AuthenticatedTrialRoute
 }
 export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
@@ -131,6 +138,7 @@ export interface FileRoutesByTo {
   '/island': typeof AuthenticatedIslandRoute
   '/profile': typeof AuthenticatedProfileRoute
   '/quests': typeof AuthenticatedQuestsRoute
+  '/trial': typeof AuthenticatedTrialRoute
   '/': typeof AuthenticatedIndexRoute
 }
 export interface FileRoutesById {
@@ -149,6 +157,7 @@ export interface FileRoutesById {
   '/_authenticated/island': typeof AuthenticatedIslandRoute
   '/_authenticated/profile': typeof AuthenticatedProfileRoute
   '/_authenticated/quests': typeof AuthenticatedQuestsRoute
+  '/_authenticated/trial': typeof AuthenticatedTrialRoute
   '/_authenticated/': typeof AuthenticatedIndexRoute
 }
 export interface FileRouteTypes {
@@ -168,6 +177,7 @@ export interface FileRouteTypes {
     | '/island'
     | '/profile'
     | '/quests'
+    | '/trial'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/auth'
@@ -183,6 +193,7 @@ export interface FileRouteTypes {
     | '/island'
     | '/profile'
     | '/quests'
+    | '/trial'
     | '/'
   id:
     | '__root__'
@@ -200,6 +211,7 @@ export interface FileRouteTypes {
     | '/_authenticated/island'
     | '/_authenticated/profile'
     | '/_authenticated/quests'
+    | '/_authenticated/trial'
     | '/_authenticated/'
   fileRoutesById: FileRoutesById
 }
@@ -229,6 +241,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof AuthenticatedIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/trial': {
+      id: '/_authenticated/trial'
+      path: '/trial'
+      fullPath: '/trial'
+      preLoaderRoute: typeof AuthenticatedTrialRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/quests': {
@@ -331,6 +350,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedIslandRoute: typeof AuthenticatedIslandRoute
   AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
   AuthenticatedQuestsRoute: typeof AuthenticatedQuestsRoute
+  AuthenticatedTrialRoute: typeof AuthenticatedTrialRoute
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
 }
 
@@ -347,6 +367,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedIslandRoute: AuthenticatedIslandRoute,
   AuthenticatedProfileRoute: AuthenticatedProfileRoute,
   AuthenticatedQuestsRoute: AuthenticatedQuestsRoute,
+  AuthenticatedTrialRoute: AuthenticatedTrialRoute,
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
 }
 

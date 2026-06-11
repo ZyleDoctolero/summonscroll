@@ -538,6 +538,11 @@ export type { Recipe, CraftQuality } from "./forge-client";
 export { moodForBond, MOOD_META, getDevotedCommentary } from "./companion-client";
 export type { Mood } from "./companion-client";
 
+// ─── Trial of Echoes ────────────────────────────────────────────────────────
+
+export { runTrial, getTrialCooldown, listMemorial } from "./trial-client";
+export type { TrialResult } from "./trial-client";
+
 // ─── Gacha ──────────────────────────────────────────────────────────────────
 
 export { listBanners, pullBanner } from "./gacha-client";

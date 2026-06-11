@@ -777,6 +777,7 @@ export type Database = {
           crystals: number
           deaths: number
           display_name: string
+          echo_touched: boolean
           email: string | null
           equipped_accessory: string | null
           equipped_armor: string | null
@@ -790,6 +791,7 @@ export type Database = {
           last_cron_date: string | null
           last_login_date: string | null
           last_task_time: string | null
+          last_trial_at: string | null
           level: number
           max_hp: number
           max_mp: number
@@ -816,6 +818,7 @@ export type Database = {
           crystals?: number
           deaths?: number
           display_name: string
+          echo_touched?: boolean
           email?: string | null
           equipped_accessory?: string | null
           equipped_armor?: string | null
@@ -829,6 +832,7 @@ export type Database = {
           last_cron_date?: string | null
           last_login_date?: string | null
           last_task_time?: string | null
+          last_trial_at?: string | null
           level?: number
           max_hp?: number
           max_mp?: number
@@ -855,6 +859,7 @@ export type Database = {
           crystals?: number
           deaths?: number
           display_name?: string
+          echo_touched?: boolean
           email?: string | null
           equipped_accessory?: string | null
           equipped_armor?: string | null
@@ -868,6 +873,7 @@ export type Database = {
           last_cron_date?: string | null
           last_login_date?: string | null
           last_task_time?: string | null
+          last_trial_at?: string | null
           level?: number
           max_hp?: number
           max_mp?: number
@@ -1406,6 +1412,39 @@ export type Database = {
           updated_at?: string
           user_id?: string
           wailing_wall_cleared_at?: string | null
+        }
+        Relationships: []
+      }
+      trial_runs: {
+        Row: {
+          created_at: string
+          fallen: Json
+          floors_cleared: number
+          full_clear: boolean
+          id: string
+          rewards: Json
+          team_user_monster_ids: string[]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          fallen?: Json
+          floors_cleared?: number
+          full_clear?: boolean
+          id?: string
+          rewards?: Json
+          team_user_monster_ids: string[]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          fallen?: Json
+          floors_cleared?: number
+          full_clear?: boolean
+          id?: string
+          rewards?: Json
+          team_user_monster_ids?: string[]
+          user_id?: string
         }
         Relationships: []
       }

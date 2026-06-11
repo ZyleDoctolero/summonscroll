@@ -16,6 +16,7 @@ const NAV_PRIMARY = [
 
 const NAV_SECONDARY = [
   { to: "/codex", label: "Codex", icon: "import_contacts" },
+  { to: "/trial", label: "Trial of Echoes", icon: "skull" },
   { to: "/guild", label: "Guild", icon: "groups" },
   { to: "/fusion", label: "Fusion", icon: "cyclone" },
   { to: "/bazaar", label: "Shop", icon: "storefront" },
