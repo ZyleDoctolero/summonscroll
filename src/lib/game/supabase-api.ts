@@ -528,6 +528,11 @@ export type { Goal, GoalType, GoalStatus } from "./quests-client";
 export { buildHeatmap, listDailyLogs } from "./codex-client";
 export type { HeatmapCell } from "./codex-client";
 
+// ─── Blacksmith Forge ───────────────────────────────────────────────────────
+
+export { listRecipes, craft } from "./forge-client";
+export type { Recipe, CraftQuality } from "./forge-client";
+
 // ─── Gacha ──────────────────────────────────────────────────────────────────
 
 export { listBanners, pullBanner } from "./gacha-client";

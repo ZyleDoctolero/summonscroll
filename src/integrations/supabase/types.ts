@@ -228,6 +228,51 @@ export type Database = {
           },
         ]
       }
+      crafts: {
+        Row: {
+          affix: Json | null
+          created_at: string
+          id: string
+          quality: string
+          recipe_id: string
+          user_equipment_id: string | null
+          user_id: string
+        }
+        Insert: {
+          affix?: Json | null
+          created_at?: string
+          id?: string
+          quality?: string
+          recipe_id: string
+          user_equipment_id?: string | null
+          user_id: string
+        }
+        Update: {
+          affix?: Json | null
+          created_at?: string
+          id?: string
+          quality?: string
+          recipe_id?: string
+          user_equipment_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "crafts_recipe_id_fkey"
+            columns: ["recipe_id"]
+            isOneToOne: false
+            referencedRelation: "recipes"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "crafts_user_equipment_id_fkey"
+            columns: ["user_equipment_id"]
+            isOneToOne: false
+            referencedRelation: "user_equipment"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       daily_logs: {
         Row: {
           am_completed_at: string | null
@@ -1098,6 +1143,47 @@ export type Database = {
         }
         Relationships: []
       }
+      recipes: {
+        Row: {
+          base_gold_cost: number
+          created_at: string
+          equipment_id: string
+          id: string
+          ingredients: Json
+          name: string
+          sort_order: number
+          unlock_condition: Json
+        }
+        Insert: {
+          base_gold_cost?: number
+          created_at?: string
+          equipment_id: string
+          id?: string
+          ingredients: Json
+          name: string
+          sort_order?: number
+          unlock_condition?: Json
+        }
+        Update: {
+          base_gold_cost?: number
+          created_at?: string
+          equipment_id?: string
+          id?: string
+          ingredients?: Json
+          name?: string
+          sort_order?: number
+          unlock_condition?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "recipes_equipment_id_fkey"
+            columns: ["equipment_id"]
+            isOneToOne: false
+            referencedRelation: "equipment"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       shop_items: {
         Row: {
           category: Database["public"]["Enums"]["shop_category"]
@@ -1354,24 +1440,30 @@ export type Database = {
       }
       user_equipment: {
         Row: {
+          affix: Json | null
           equipment_id: string
           id: string
           is_equipped: boolean
           obtained_at: string
+          quality: string
           user_id: string
         }
         Insert: {
+          affix?: Json | null
           equipment_id: string
           id?: string
           is_equipped?: boolean
           obtained_at?: string
+          quality?: string
           user_id: string
         }
         Update: {
+          affix?: Json | null
           equipment_id?: string
           id?: string
           is_equipped?: boolean
           obtained_at?: string
+          quality?: string
           user_id?: string
         }
         Relationships: [
