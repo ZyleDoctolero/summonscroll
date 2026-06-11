@@ -35,7 +35,7 @@ function ShopPage() {
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
-  const items = (itemsQ.data?.items ?? []).filter((i: { category: string }) => i.category === tab);
+  const items = (itemsQ.data?.items ?? []).filter((i: any) => i.category === tab);
 
   return (
     <AppShell profile={profile}>
@@ -69,7 +69,7 @@ function ShopPage() {
             <p className="text-sm mb-4" style={{ color: "#A09D96" }}>Spend 100💎 for a chance at rare equipment, food for your pets, or bonus XP!</p>
             <button
               onClick={() => {
-                const armoireItem = (itemsQ.data?.items ?? []).find((i: { category: string }) => i.category === "armoire");
+                const armoireItem = (itemsQ.data?.items ?? []).find((i: any) => i.category === "armoire");
                 if (armoireItem) purchaseMut.mutate(armoireItem.id);
               }}
               disabled={purchaseMut.isPending || profile.crystals < 100}

@@ -32,7 +32,7 @@ function AltarPage() {
 
   const profile = profileQ.data.profile;
   const banners = bannersQ.data.banners;
-  const selectedBanner = banners.find((b: { id: string }) => b.id === selectedBannerId) ?? banners[0];
+  const selectedBanner = banners.find((b: any) => b.id === selectedBannerId) ?? banners[0];
 
   if (pullResults) {
     const allRevealed = revealIndex >= pullResults.length - 1;

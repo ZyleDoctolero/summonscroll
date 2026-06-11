@@ -191,7 +191,7 @@ function ProfilePage() {
               <p className="text-sm py-8 text-center" style={{ color: "#6B6864" }}>No equipment yet. Visit the Shop!</p>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {(equipQ.data?.equipment ?? []).map((ue: { id: string; is_equipped: boolean; equipment: { name: string; slot: string; str_bonus: number; int_bonus: number; con_bonus: number; per_bonus: number; rarity: string } }) => (
+                {(equipQ.data?.equipment ?? []).map((ue: any) => (
                   <div key={ue.id} className="flex items-center justify-between p-3 rounded-lg border"
                     style={{ background: "#13161F", borderColor: ue.is_equipped ? "#FFD54F" : "rgba(255,255,255,0.05)" }}>
                     <div>
@@ -239,7 +239,7 @@ function ProfilePage() {
               <p className="text-sm py-8 text-center" style={{ color: "#6B6864" }}>Inventory empty. Complete tasks to earn drops!</p>
             ) : (
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                {(full?.inventory ?? []).map((inv: { id: string; item_type: string; item_name: string; quantity: number }) => (
+                {(full?.inventory ?? []).map((inv: any) => (
                   <div key={inv.id} className="rounded-lg p-3 text-center border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.05)" }}>
                     <div className="text-2xl mb-1">{inv.item_type === "egg" ? "🥚" : inv.item_type === "realm_potion" ? "🧪" : inv.item_type === "food" ? "🍖" : "📦"}</div>
                     <p className="text-xs font-bold" style={{ color: "#F0EDE6" }}>{inv.item_name}</p>
@@ -254,7 +254,7 @@ function ProfilePage() {
               <div>
                 <h3 className="text-lg font-bold mt-6 mb-3" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Pets & Mounts</h3>
                 <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-                  {(full?.pets ?? []).map((pet: { id: string; pet_name: string; is_mount: boolean; food_fed: number }) => (
+                  {(full?.pets ?? []).map((pet: any) => (
                     <div key={pet.id} className="rounded-lg p-3 text-center border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.05)" }}>
                       <div className="text-2xl mb-1">{pet.is_mount ? "🐴" : "🐾"}</div>
                       <p className="text-xs font-bold" style={{ color: "#F0EDE6" }}>{pet.pet_name}</p>

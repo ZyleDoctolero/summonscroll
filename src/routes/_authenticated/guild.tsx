@@ -154,7 +154,7 @@ function GuildPage() {
             <div className="rounded-xl p-6 border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
               <h3 className="text-lg font-bold mb-3" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Members</h3>
               <div className="space-y-2">
-                {members.map((m: { id: string; role: string; profile: { display_name: string; level: number; class: string } }) => (
+                {members.map((m: any) => (
                   <div key={m.id} className="flex items-center gap-3 p-2 rounded" style={{ background: "rgba(0,0,0,0.2)" }}>
                     <div className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs"
                       style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}>
@@ -183,7 +183,7 @@ function GuildPage() {
         {/* Browse */}
         {tab === "browse" && (
           <div className="space-y-2">
-            {(guildsQ.data?.guilds ?? []).map((g: { id: string; name: string; description: string; level: number; privacy: string; guild_members: Array<{ count: number }> }) => (
+            {(guildsQ.data?.guilds ?? []).map((g: any) => (
               <div key={g.id} className="flex items-center justify-between p-4 rounded-lg border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
                 <div>
                   <p className="font-bold text-sm" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>{g.name}</p>

@@ -1613,6 +1613,171 @@ export type Database = {
         }
         Relationships: []
       }
+      tower_progress: {
+        Row: {
+          highest_floor: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          highest_floor?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          highest_floor?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_achievements: {
+        Row: {
+          achievement_id: string
+          id: string
+          unlocked_at: string
+          user_id: string
+        }
+        Insert: {
+          achievement_id: string
+          id?: string
+          unlocked_at?: string
+          user_id: string
+        }
+        Update: {
+          achievement_id?: string
+          id?: string
+          unlocked_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_achievements_achievement_id_fkey"
+            columns: ["achievement_id"]
+            isOneToOne: false
+            referencedRelation: "achievements"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_equipment: {
+        Row: {
+          equipment_id: string
+          id: string
+          is_equipped: boolean
+          obtained_at: string
+          user_id: string
+        }
+        Insert: {
+          equipment_id: string
+          id?: string
+          is_equipped?: boolean
+          obtained_at?: string
+          user_id: string
+        }
+        Update: {
+          equipment_id?: string
+          id?: string
+          is_equipped?: boolean
+          obtained_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_equipment_equipment_id_fkey"
+            columns: ["equipment_id"]
+            isOneToOne: false
+            referencedRelation: "equipment"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_monsters: {
+        Row: {
+          awakening_stars: number
+          bond_percent: number
+          created_at: string
+          id: string
+          is_on_team: boolean
+          level: number
+          monster_id: string
+          obtained_at: string
+          team_slot: number | null
+          user_id: string
+          xp: number
+        }
+        Insert: {
+          awakening_stars?: number
+          bond_percent?: number
+          created_at?: string
+          id?: string
+          is_on_team?: boolean
+          level?: number
+          monster_id: string
+          obtained_at?: string
+          team_slot?: number | null
+          user_id: string
+          xp?: number
+        }
+        Update: {
+          awakening_stars?: number
+          bond_percent?: number
+          created_at?: string
+          id?: string
+          is_on_team?: boolean
+          level?: number
+          monster_id?: string
+          obtained_at?: string
+          team_slot?: number | null
+          user_id?: string
+          xp?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_monsters_monster_id_fkey"
+            columns: ["monster_id"]
+            isOneToOne: false
+            referencedRelation: "monsters"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_pets: {
+        Row: {
+          created_at: string
+          egg_type: string
+          food_fed: number
+          id: string
+          is_active: boolean
+          is_mount: boolean
+          pet_name: string
+          potion_type: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          egg_type: string
+          food_fed?: number
+          id?: string
+          is_active?: boolean
+          is_mount?: boolean
+          pet_name: string
+          potion_type: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          egg_type?: string
+          food_fed?: number
+          id?: string
+          is_active?: boolean
+          is_mount?: boolean
+          pet_name?: string
+          potion_type?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

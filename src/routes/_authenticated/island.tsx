@@ -63,8 +63,8 @@ function IslandPage() {
   });
 
   const userMonsters = monstersQ.data?.userMonsters ?? [];
-  const team = useMemo(() => userMonsters.filter((um: { is_on_team: boolean }) => um.is_on_team).sort((a: { team_slot: number }, b: { team_slot: number }) => (a.team_slot ?? 99) - (b.team_slot ?? 99)), [userMonsters]);
-  const roster = useMemo(() => userMonsters.filter((um: { is_on_team: boolean }) => !um.is_on_team), [userMonsters]);
+  const team = useMemo(() => userMonsters.filter((um: any) => um.is_on_team).sort((a: any, b: any) => (a.team_slot ?? 99) - (b.team_slot ?? 99)), [userMonsters]);
+  const roster = useMemo(() => userMonsters.filter((um: any) => !um.is_on_team), [userMonsters]);
 
   // Weather based on today's task completion
   const tasks = (tasksQ.data?.tasks ?? []) as Array<{ type: string; completed: boolean }>;
@@ -122,7 +122,7 @@ function IslandPage() {
           </div>
           <div className="grid grid-cols-5 gap-3">
             {[1, 2, 3, 4, 5].map((slot) => {
-              const um = team.find((t: { team_slot: number }) => t.team_slot === slot);
+              const um = team.find((t: any) => t.team_slot === slot);
               if (um) {
                 const r = um.monster.rarity as Rarity;
                 const fatigued = um.bond_percent < 10;
