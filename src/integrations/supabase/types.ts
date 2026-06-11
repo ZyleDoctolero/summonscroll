@@ -1485,6 +1485,7 @@ export type Database = {
           growth_xp: number
           id: string
           is_on_team: boolean
+          last_active_at: string
           level: number
           monster_id: string
           obtained_at: string
@@ -1501,6 +1502,7 @@ export type Database = {
           growth_xp?: number
           id?: string
           is_on_team?: boolean
+          last_active_at?: string
           level?: number
           monster_id: string
           obtained_at?: string
@@ -1517,6 +1519,7 @@ export type Database = {
           growth_xp?: number
           id?: string
           is_on_team?: boolean
+          last_active_at?: string
           level?: number
           monster_id?: string
           obtained_at?: string

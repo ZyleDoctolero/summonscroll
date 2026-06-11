@@ -533,6 +533,11 @@ export type { HeatmapCell } from "./codex-client";
 export { listRecipes, craft } from "./forge-client";
 export type { Recipe, CraftQuality } from "./forge-client";
 
+// ─── Sentient Companions ───────────────────────────────────────────────────
+
+export { moodForBond, MOOD_META, getDevotedCommentary } from "./companion-client";
+export type { Mood } from "./companion-client";
+
 // ─── Gacha ──────────────────────────────────────────────────────────────────
 
 export { listBanners, pullBanner } from "./gacha-client";

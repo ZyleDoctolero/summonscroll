@@ -8,7 +8,7 @@ import { TaskCard, type Task } from "@/components/game/TaskCard";
 import { TaskFormDialog, type TaskFormValue } from "@/components/game/TaskFormDialog";
 import { DeathOverlay } from "@/components/game/DeathOverlay";
 import { MorningRitual, EveningRitual, RitualStatusPill } from "@/components/game/DailyRitual";
-import { getMyProfile, listTasks, createTask, updateTask, deleteTask, scoreTask } from "@/lib/game/supabase-api";
+import { getMyProfile, listTasks, createTask, updateTask, deleteTask, scoreTask, getDevotedCommentary } from "@/lib/game/supabase-api";
 import type { TaskType } from "@/lib/game/constants";
 
 function shootConfetti() {
@@ -72,6 +72,7 @@ function HubPage() {
 
   const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile, refetchOnWindowFocus: false });
   const tasksQ = useQuery({ queryKey: ["tasks"], queryFn: listTasks, refetchOnWindowFocus: false });
+  const commentaryQ = useQuery({ queryKey: ["devoted-line"], queryFn: getDevotedCommentary, refetchOnWindowFocus: false });
 
   const [tab, setTab] = useState<TaskType>("habit");
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -165,6 +166,24 @@ function HubPage() {
       <DeathOverlay trigger={deathTick} />
       <div className="p-6 md:p-10 max-w-6xl mx-auto">
         <RitualStatusPill onClickMorning={() => setShowMorning(true)} onClickEvening={() => setShowEvening(true)} />
+        {commentaryQ.data && (
+          <div
+            className="mb-4 rounded-lg px-4 py-3 border flex gap-3 items-start"
+            style={{ background: "rgba(255,213,79,0.06)", borderColor: "rgba(255,213,79,0.2)" }}
+          >
+            <div className="text-xl">👁</div>
+            <div className="flex-1">
+              <p className="text-xs" style={{ color: "#A09D96" }}>
+                <span style={{ color: "#FFD54F", fontWeight: 700, fontFamily: "'Cinzel',serif" }}>
+                  {commentaryQ.data.monsterName}
+                </span> whispers:
+              </p>
+              <p className="text-sm italic mt-0.5" style={{ color: "#F0EDE6" }}>
+                "{commentaryQ.data.line}"
+              </p>
+            </div>
+          </div>
+        )}
         <FocusRitual />
         <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>

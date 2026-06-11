@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
 import { PromotionChamber } from "@/components/game/PromotionChamber";
-import { getMyProfile, listRealms, listAllMonsters, listMyMonsters, awakeningsForRole } from "@/lib/game/supabase-api";
+import { getMyProfile, listRealms, listAllMonsters, listMyMonsters, awakeningsForRole, moodForBond, MOOD_META } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 
 export const Route = createFileRoute("/_authenticated/compendium")({
@@ -158,8 +158,19 @@ function CompendiumPage() {
             </div>
             {selUm && (
               <div>
-                <div className="flex justify-between text-[10px] uppercase mb-1" style={{ color: "#A09D96" }}>
-                  <span>Bond</span><span style={{ fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(selUm.bond_percent)}%</span>
+                <div className="flex justify-between items-center text-[10px] uppercase mb-1" style={{ color: "#A09D96" }}>
+                  <span>Bond</span>
+                  <span className="flex items-center gap-2">
+                    {(() => {
+                      const m = MOOD_META[moodForBond(selUm.bond_percent)];
+                      return (
+                        <span style={{ color: m.color }} title={m.effect}>
+                          {m.icon} {m.label}
+                        </span>
+                      );
+                    })()}
+                    <span style={{ fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(selUm.bond_percent)}%</span>
+                  </span>
                 </div>
                 <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
                   <div className="h-full" style={{ width: `${selUm.bond_percent}%`, background: "linear-gradient(90deg,#C89A3E,#FFD54F)" }} />
