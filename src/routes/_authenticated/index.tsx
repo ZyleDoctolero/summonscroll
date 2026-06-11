@@ -8,6 +8,8 @@ import { TaskCard, type Task } from "@/components/game/TaskCard";
 import { TaskFormDialog, type TaskFormValue } from "@/components/game/TaskFormDialog";
 import { DeathOverlay } from "@/components/game/DeathOverlay";
 import { MorningRitual, EveningRitual, RitualStatusPill } from "@/components/game/DailyRitual";
+import { showCascade, type CascadeEvent } from "@/components/game/CascadeCard";
+import { whisper } from "@/components/game/WhisperFeed";
 import { getMyProfile, listTasks, createTask, updateTask, deleteTask, scoreTask, getDevotedCommentary } from "@/lib/game/supabase-api";
 import type { TaskType } from "@/lib/game/constants";
 
@@ -90,6 +92,18 @@ function HubPage() {
     }
   }, [profileQ.data?.cron]);
 
+  // Surface today's Devoted-monster commentary into the WhisperFeed once per
+  // mount. The query is non-refetching so this stays a single moment per session.
+  useEffect(() => {
+    if (commentaryQ.data) {
+      whisper({
+        monsterName: commentaryQ.data.monsterName,
+        line: commentaryQ.data.line,
+        tone: "calm",
+      });
+    }
+  }, [commentaryQ.data]);
+
   const tasks = (tasksQ.data?.tasks ?? []) as unknown as Task[];
   const sideQuests = useMemo(() => tasks.filter((t) => t.category === "side_quest"), [tasks]);
   const filtered = useMemo(() => tasks.filter((t) => {
@@ -105,33 +119,63 @@ function HubPage() {
       finally { setBusyIds((s) => { const n = new Set(s); n.delete(v.id); return n; }); }
     },
     onSuccess: (res) => {
-      if (res?.reward) {
-        if (res.drop) shootConfetti();
-        if (res.leveledUp) shootConfetti();
-        if (res.died) setDeathTick((n) => n + 1);
+      // Build the cascade — one unified card showing every consequence.
+      const events: CascadeEvent[] = [];
+
+      if (res?.reward && (res.reward.gold || res.reward.xp || res.reward.crystals || res.reward.hp)) {
+        events.push({ kind: "reward", gold: res.reward.gold, xp: res.reward.xp, crystals: res.reward.crystals, hp: res.reward.hp });
       }
-      const ticks = (res as { growthTicks?: Array<{ monster_name: string; stat: string }> } | undefined)?.growthTicks ?? [];
-      if (ticks.length > 0) {
-        const names = ticks.slice(0, 3).map((t) => t.monster_name).join(", ");
-        const more = ticks.length > 3 ? ` +${ticks.length - 3} more` : "";
-        toast(`✨ Bond grew with ${names}${more}`, { duration: 2500 });
-      }
-      const awakened = (res as { awakenings?: Array<{ monsterName: string; skillName: string; flavor: string }> } | undefined)?.awakenings ?? [];
-      for (const a of awakened) {
+
+      if (res?.leveledUp && res.reward) {
+        events.push({ kind: "leveledUp", level: profileQ.data?.profile.level ? profileQ.data.profile.level + 1 : 1 });
         shootConfetti();
-        toast.success(`⚡ ${a.monsterName} has awakened: ${a.skillName}`, { duration: 6000, description: a.flavor });
       }
-      const goal = (res as { goalDamage?: { slain: Array<{ title: string }>; damaged: Array<{ goal: { title: string }; damage: number }>; tomeMinted: boolean } | null } | undefined)?.goalDamage;
-      if (goal) {
-        if (goal.tomeMinted) {
-          shootConfetti();
-          const slainTitle = goal.slain[0]?.title ?? "your quest";
-          toast.success(`👑 ${slainTitle} slain! 📕 Tome of Reverse Heaven minted.`, { duration: 8000 });
-        } else if (goal.damaged.length > 0) {
-          const d = goal.damaged[0];
-          toast(`⚔ −${d.damage} HP to "${d.goal.title}"`, { duration: 2000 });
+
+      const ticks = (res as { growthTicks?: Array<{ monster_name: string }> } | undefined)?.growthTicks ?? [];
+      // Bond rows: show first 2 monsters (third+ collapse into a count via reward-style label)
+      if (ticks.length > 0) {
+        // We don't have new bond percent in result; show generic +0.5% rise per matching monster
+        for (const t of ticks.slice(0, 2)) {
+          events.push({ kind: "bond", monsterName: t.monster_name, from: 0, to: 0.5 });
         }
       }
+
+      const awakened = (res as { awakenings?: Array<{ monsterName: string; skillName: string; flavor: string }> } | undefined)?.awakenings ?? [];
+      for (const a of awakened) {
+        events.push({ kind: "awakening", monsterName: a.monsterName, skillName: a.skillName, flavor: a.flavor });
+        shootConfetti();
+        whisper({ monsterName: a.monsterName, line: `Something has awakened in me. ${a.skillName}.`, tone: "grave" });
+      }
+
+      const goal = (res as { goalDamage?: { slain: Array<{ title: string; hp_total: number }>; damaged: Array<{ goal: { title: string; hp_total: number; hp_remaining: number }; damage: number }>; tomeMinted: boolean } | null } | undefined)?.goalDamage;
+      if (goal) {
+        if (goal.slain.length > 0) {
+          const s = goal.slain[0];
+          events.push({ kind: "boss", title: s.title, damage: 0, hpRemaining: 0, hpTotal: s.hp_total ?? 0 });
+        }
+        for (const d of goal.damaged) {
+          events.push({ kind: "boss", title: d.goal.title, damage: d.damage, hpRemaining: d.goal.hp_remaining, hpTotal: d.goal.hp_total });
+        }
+        if (goal.tomeMinted) {
+          events.push({ kind: "tomeMint" });
+          shootConfetti();
+          const slainTitle = goal.slain[0]?.title ?? "the boss";
+          whisper({ monsterName: "Vault Keeper", line: `${slainTitle} has fallen. The Tome is yours.`, tone: "grave" });
+        }
+      }
+
+      if (res?.drop) {
+        events.push({ kind: "drop", itemType: res.drop.type, itemName: res.drop.name, quantity: 1 });
+        shootConfetti();
+      }
+
+      if (res?.died) {
+        events.push({ kind: "died" });
+        setDeathTick((n) => n + 1);
+      }
+
+      showCascade(events);
+
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["tasks"] });
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
@@ -166,24 +210,6 @@ function HubPage() {
       <DeathOverlay trigger={deathTick} />
       <div className="p-6 md:p-10 max-w-6xl mx-auto">
         <RitualStatusPill onClickMorning={() => setShowMorning(true)} onClickEvening={() => setShowEvening(true)} />
-        {commentaryQ.data && (
-          <div
-            className="mb-4 rounded-lg px-4 py-3 border flex gap-3 items-start"
-            style={{ background: "rgba(255,213,79,0.06)", borderColor: "rgba(255,213,79,0.2)" }}
-          >
-            <div className="text-xl">👁</div>
-            <div className="flex-1">
-              <p className="text-xs" style={{ color: "#A09D96" }}>
-                <span style={{ color: "#FFD54F", fontWeight: 700, fontFamily: "'Cinzel',serif" }}>
-                  {commentaryQ.data.monsterName}
-                </span> whispers:
-              </p>
-              <p className="text-sm italic mt-0.5" style={{ color: "#F0EDE6" }}>
-                "{commentaryQ.data.line}"
-              </p>
-            </div>
-          </div>
-        )}
         <FocusRitual />
         <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>

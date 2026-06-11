@@ -18,10 +18,10 @@ export const Route = createFileRoute("/_authenticated/expeditions")({
 });
 
 const ELEMENT_COLORS: Record<string, string> = {
-  str: "#E05252",
-  int: "#7FD4FF",
-  con: "#5FAD41",
-  all: "#FFD54F",
+  str: "var(--ss-stat-str)",
+  int: "var(--ss-stat-int)",
+  con: "var(--ss-stat-con)",
+  all: "var(--ss-gold-bright)",
 };
 
 const DROP_ICONS: Record<string, string> = {
@@ -146,16 +146,16 @@ function ExpeditionsPage() {
                 {def.name}
               </h2>
             </div>
-            <span
-              className="px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
-              style={{
-                background: `${ELEMENT_COLORS[def.element]}20`,
-                color: ELEMENT_COLORS[def.element],
-                border: `1px solid ${ELEMENT_COLORS[def.element]}60`,
-              }}
-            >
-              {def.element === "all" ? "All Elements" : def.element.toUpperCase()}
-            </span>
+            {def.element === "all" ? (
+              <span
+                className="px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+                style={{ background: "rgba(255,213,79,0.13)", color: "var(--ss-gold-bright)", border: "1px solid rgba(255,213,79,0.32)" }}
+              >
+                All Elements
+              </span>
+            ) : (
+              <span className="ss-stat-chip" data-stat={def.element}>{def.element.toUpperCase()}</span>
+            )}
           </div>
           <p className="text-sm italic mb-4" style={{ color: "#A09D96" }}>{def.flavor}</p>
 

@@ -1,0 +1,147 @@
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { trans, ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
+
+// ─── Whisper Feed ───────────────────────────────────────────────────────────
+// Bottom-right scroll of recent diegetic monster commentary. Each whisper:
+//   • Fades in from the right at 240ms
+//   • Sits for 12 seconds (8s if the user is active)
+//   • Slides out to the right
+//
+// The feed maintains last 5 in memory. Older fall off the top.
+//
+// Source of whispers is imperative via the published API. Whispers can come
+// from anywhere in the app:
+//   - Devoted monster commentary (cron-style, once per session)
+//   - State-transition reactions (streak milestone, awakening, boss slain)
+//   - Manual diegetic flavor on specific user actions
+
+export type Whisper = {
+  id: string;
+  monsterName: string;
+  line: string;
+  tone?: "calm" | "urgent" | "playful" | "grave";
+  createdAt: number;
+};
+
+// ─── Imperative API ─────────────────────────────────────────────────────────
+
+let publish: null | ((w: Omit<Whisper, "id" | "createdAt">) => void) = null;
+
+export function whisper(input: Omit<Whisper, "id" | "createdAt">) {
+  if (publish) publish(input);
+}
+
+// ─── Provider ───────────────────────────────────────────────────────────────
+
+export function WhisperProvider() {
+  const [items, setItems] = useState<Whisper[]>([]);
+  const rm = reducedMotion();
+
+  useEffect(() => {
+    publish = (input) => {
+      const next: Whisper = {
+        ...input,
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+        createdAt: Date.now(),
+      };
+      setItems((prev) => {
+        const cleaned = prev.slice(-4); // last 4 + new = 5 max
+        return [...cleaned, next];
+      });
+    };
+    return () => { publish = null; };
+  }, []);
+
+  // Sweep: drop whispers older than 12s
+  useEffect(() => {
+    if (items.length === 0) return;
+    const t = setInterval(() => {
+      const cutoff = Date.now() - 12000;
+      setItems((prev) => prev.filter((w) => w.createdAt > cutoff));
+    }, 1000);
+    return () => clearInterval(t);
+  }, [items.length]);
+
+  const dismiss = (id: string) => setItems((prev) => prev.filter((w) => w.id !== id));
+
+  return (
+    <div className="fixed bottom-4 right-4 z-[70] flex flex-col-reverse gap-2 pointer-events-none w-[min(320px,calc(100%-2rem))]">
+      <AnimatePresence>
+        {items.map((w) => (
+          <motion.div
+            key={w.id}
+            initial={rm ? { opacity: 0 } : { opacity: 0, x: 32, scale: 0.96 }}
+            animate={rm ? { opacity: 1 } : { opacity: 1, x: 0, scale: 1 }}
+            exit={rm ? { opacity: 0 } : { opacity: 0, x: 32, scale: 0.97 }}
+            transition={{ duration: dur.normal, ease: ease.out }}
+            layout
+            onClick={() => dismiss(w.id)}
+            className="pointer-events-auto cursor-pointer rounded-lg border backdrop-blur-md px-3 py-2 shadow-lg"
+            style={whisperStyle(w.tone)}
+          >
+            <div className="flex items-start gap-2">
+              <div className="text-base leading-none mt-0.5">{toneIcon(w.tone)}</div>
+              <div className="flex-1 min-w-0">
+                <p
+                  className="text-[10px] uppercase tracking-[0.18em] truncate font-bold"
+                  style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}
+                >
+                  {w.monsterName}
+                </p>
+                <p
+                  className="text-xs leading-snug italic mt-0.5"
+                  style={{ color: "#F0EDE6" }}
+                >
+                  "{w.line}"
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ─── Style per tone ────────────────────────────────────────────────────────
+
+function whisperStyle(tone?: Whisper["tone"]): React.CSSProperties {
+  switch (tone) {
+    case "urgent":
+      return {
+        background: "rgba(224,82,82,0.10)",
+        borderColor: "rgba(224,82,82,0.32)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.45), 0 0 12px rgba(224,82,82,0.15)",
+      };
+    case "playful":
+      return {
+        background: "rgba(95,173,65,0.08)",
+        borderColor: "rgba(95,173,65,0.28)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.45)",
+      };
+    case "grave":
+      return {
+        background: "rgba(127,119,221,0.08)",
+        borderColor: "rgba(127,119,221,0.28)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+      };
+    case "calm":
+    default:
+      return {
+        background: "rgba(19,22,31,0.85)",
+        borderColor: "rgba(255,213,79,0.18)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.45)",
+      };
+  }
+}
+
+function toneIcon(tone?: Whisper["tone"]): string {
+  switch (tone) {
+    case "urgent":  return "⚠";
+    case "playful": return "✦";
+    case "grave":   return "🌙";
+    case "calm":
+    default:        return "·";
+  }
+}

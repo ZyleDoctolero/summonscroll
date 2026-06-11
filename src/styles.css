@@ -175,10 +175,39 @@
   --ss-rarity-mythic: #FF8A65;
   --ss-rarity-ex: #FFFFFF;
 
+  /* Stat colors — the cross-cutting visual language. STR/INT/CON/PER are used
+     consistently across tasks, expeditions, monster roles, stones, stat readouts. */
+  --ss-stat-str: #E05252;
+  --ss-stat-str-rgb: 224,82,82;
+  --ss-stat-int: #7FD4FF;
+  --ss-stat-int-rgb: 127,212,255;
+  --ss-stat-con: #5FAD41;
+  --ss-stat-con-rgb: 95,173,65;
+  --ss-stat-per: #CE93D8;
+  --ss-stat-per-rgb: 206,147,216;
+
   /* Borders */
   --ss-border: rgba(255,255,255,0.07);
   --ss-border-active: rgba(255,255,255,0.18);
 }
+
+/* Stat chip utility — used on task tags, monster role labels, expedition badges. */
+.ss-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1;
+}
+.ss-stat-chip[data-stat="str"] { background: rgba(var(--ss-stat-str-rgb),0.12); color: var(--ss-stat-str); border: 1px solid rgba(var(--ss-stat-str-rgb),0.32); }
+.ss-stat-chip[data-stat="int"] { background: rgba(var(--ss-stat-int-rgb),0.12); color: var(--ss-stat-int); border: 1px solid rgba(var(--ss-stat-int-rgb),0.32); }
+.ss-stat-chip[data-stat="con"] { background: rgba(var(--ss-stat-con-rgb),0.12); color: var(--ss-stat-con); border: 1px solid rgba(var(--ss-stat-con-rgb),0.32); }
+.ss-stat-chip[data-stat="per"] { background: rgba(var(--ss-stat-per-rgb),0.12); color: var(--ss-stat-per); border: 1px solid rgba(var(--ss-stat-per-rgb),0.32); }
 
 /* Global input styling for game forms */
 .ss-input {

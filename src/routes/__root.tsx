@@ -6,6 +6,8 @@ import {
 } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { CascadeProvider } from "../components/game/CascadeCard";
+import { WhisperProvider } from "../components/game/WhisperFeed";
 
 function NotFoundComponent() {
   return (
@@ -55,6 +57,8 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <CascadeProvider />
+      <WhisperProvider />
     </QueryClientProvider>
   );
 }

@@ -1,9 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import NumberFlow from "@number-flow/react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
+import { whisper } from "@/components/game/WhisperFeed";
+import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens";
 import {
   getMyProfile,
   listMyMonsters,
@@ -32,7 +36,11 @@ function TrialPage() {
     mutationFn: () => runTrial(picked),
     onSuccess: (res) => {
       if (res.fullClear) {
-        confetti({ particleCount: 300, spread: 100 });
+        confetti({ particleCount: 300, spread: 100, colors: ["#C89A3E", "#FFD54F", "#F0EDE6"] });
+        whisper({ monsterName: "Trial Keeper", line: "All five returned. The Echo is touched.", tone: "grave" });
+      }
+      for (const f of res.fallen) {
+        whisper({ monsterName: f.name, line: "I will remember the road.", tone: "grave" });
       }
       setResults(res);
       setConfirming(false);
@@ -164,28 +172,34 @@ function TrialPage() {
         {/* Confirm modal */}
         {confirming && (
           <Modal onClose={() => setConfirming(false)}>
-            <h2 className="text-xl font-bold mb-2 text-center" style={{ color: "#E05252", fontFamily: "'Cinzel',serif" }}>
+            <motion.h2
+              initial={{ opacity: 0, y: -6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: dur.measured, ease: ease.weighty }}
+              className="text-xl font-bold mb-3 text-center"
+              style={{ color: "#E05252", fontFamily: "'Cinzel',serif", letterSpacing: "0.04em" }}
+            >
               The Trial is Final
-            </h2>
-            <p className="text-sm text-center mb-4" style={{ color: "#A09D96" }}>
+            </motion.h2>
+            <p className="text-sm text-center mb-5" style={{ color: "#A09D96" }}>
               Once you enter, any monster that falls is <b style={{ color: "#E05252" }}>gone forever</b>. They will be honored in the Memorial. Continue?
             </p>
             <div className="flex gap-2">
-              <button
+              <SpringyButton
                 onClick={() => setConfirming(false)}
-                className="flex-1 py-2.5 rounded-md text-xs uppercase tracking-widest font-bold"
-                style={{ background: "rgba(255,255,255,0.05)", color: "#A09D96" }}
+                className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
+                style={{ background: "rgba(255,255,255,0.04)", color: "#A09D96", border: "1px solid rgba(255,255,255,0.06)" }}
               >
                 Stay Home
-              </button>
-              <button
+              </SpringyButton>
+              <SpringyButton
                 onClick={() => runMut.mutate()}
                 disabled={runMut.isPending}
-                className="flex-[2] py-2.5 rounded-md text-xs uppercase tracking-widest font-bold disabled:opacity-40"
-                style={{ background: "linear-gradient(135deg,#8B1A1A,#E05252)", color: "#F0EDE6" }}
+                className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
+                style={{ background: "linear-gradient(135deg,#8B1A1A,#E05252)", color: "#F0EDE6", boxShadow: "0 4px 20px rgba(224,82,82,0.35)" }}
               >
                 {runMut.isPending ? "Echoes…" : "We Walk Together"}
-              </button>
+              </SpringyButton>
             </div>
           </Modal>
         )}
@@ -193,42 +207,78 @@ function TrialPage() {
         {/* Results modal */}
         {results && (
           <Modal onClose={() => setResults(null)}>
-            <h2 className="text-xl font-bold mb-1 text-center" style={{ color: results.fullClear ? "#FFD54F" : results.fallen.length === 0 ? "#5FAD41" : "#E05252", fontFamily: "'Cinzel',serif" }}>
-              {results.fullClear ? "👑 Full Clear" : results.fallen.length === 0 ? "✓ Returned Intact" : `Floor ${results.floorsCleared} reached`}
-            </h2>
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: dur.measured, ease: ease.weighty }}
+              className="text-2xl font-bold mb-1 text-center"
+              style={{
+                color: results.fullClear ? "#FFD54F" : results.fallen.length === 0 ? "#5FAD41" : "#E05252",
+                fontFamily: "'Cinzel',serif",
+                letterSpacing: "0.04em",
+              }}
+            >
+              {results.fullClear ? "👑 Full Clear" : results.fallen.length === 0 ? "✓ Returned Intact" : "Floor "}
+              {!results.fullClear && results.fallen.length > 0 && (
+                <NumberFlow value={results.floorsCleared} />
+              )}
+              {!results.fullClear && results.fallen.length > 0 && " reached"}
+            </motion.h2>
             {results.echoTouched && (
-              <p className="text-center text-xs" style={{ color: "#FFD54F" }}>✨ Echo-Touched bestowed.</p>
+              <motion.p
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ...trans.cascadeIn, delay: 0.2 }}
+                className="text-center text-xs mb-4"
+                style={{ color: "#FFD54F" }}
+              >
+                ✨ Echo-Touched bestowed.
+              </motion.p>
             )}
 
             {results.fallen.length > 0 && (
-              <div className="rounded-lg p-3 my-4 border" style={{ background: "rgba(224,82,82,0.05)", borderColor: "rgba(224,82,82,0.3)" }}>
-                <p className="text-[10px] uppercase tracking-widest mb-2" style={{ color: "#A09D96" }}>Fallen</p>
+              <div className="rounded-lg p-3 my-4 border" style={{ background: "rgba(224,82,82,0.05)", borderColor: "rgba(224,82,82,0.32)" }}>
+                <p className="text-[10px] uppercase tracking-[0.18em] mb-2" style={{ color: "#A09D96" }}>Fallen</p>
                 {results.fallen.map((f, i) => (
-                  <p key={i} className="text-sm" style={{ color: "#F0EDE6" }}>
+                  <motion.p
+                    key={i}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: dur.fast, ease: ease.out, delay: stagger(results.fallen.length, 0.12, 0.1)[i] }}
+                    className="text-sm"
+                    style={{ color: "#F0EDE6" }}
+                  >
                     🪦 <b style={{ color: "#E05252" }}>{f.name}</b> — {f.star_level}★ · bond {Math.round(f.bond_percent)}%
-                  </p>
+                  </motion.p>
                 ))}
               </div>
             )}
 
             {results.rewards.length > 0 && (
-              <div className="rounded-lg p-3 mb-4" style={{ background: "rgba(255,213,79,0.06)", border: "1px solid rgba(255,213,79,0.2)" }}>
-                <p className="text-[10px] uppercase tracking-widest mb-2" style={{ color: "#A09D96" }}>Rewards</p>
+              <div className="rounded-lg p-3 mb-4" style={{ background: "rgba(255,213,79,0.06)", border: "1px solid rgba(255,213,79,0.22)" }}>
+                <p className="text-[10px] uppercase tracking-[0.18em] mb-2" style={{ color: "#A09D96" }}>Rewards</p>
                 {results.rewards.map((r, i) => (
-                  <p key={i} className="text-sm" style={{ color: "#FFD54F" }}>
-                    +{r.qty} {r.name}
-                  </p>
+                  <motion.p
+                    key={i}
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: dur.fast, ease: ease.out, delay: 0.25 + i * 0.08 }}
+                    className="text-sm"
+                    style={{ color: "#FFD54F" }}
+                  >
+                    +<NumberFlow value={r.qty} /> {r.name}
+                  </motion.p>
                 ))}
               </div>
             )}
 
-            <button
+            <SpringyButton
               onClick={() => setResults(null)}
-              className="w-full py-2.5 rounded-md text-xs uppercase tracking-widest font-bold"
-              style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+              className="w-full py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
+              style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14", boxShadow: "0 4px 20px rgba(255,213,79,0.28)" }}
             >
               Continue
-            </button>
+            </SpringyButton>
           </Modal>
         )}
       </div>
@@ -265,15 +315,60 @@ function Memorial({ memorials }: { memorials: Array<{ id: string; fallen: Array<
 }
 
 function Modal({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
+  const rm = reducedMotion();
+  const prevFocus = useRef<Element | null>(null);
+  useEffect(() => {
+    prevFocus.current = document.activeElement;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      (prevFocus.current as HTMLElement | null)?.focus?.();
+    };
+  }, [onClose]);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.92)" }} onClick={onClose}>
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-md rounded-xl p-6 border"
-        style={{ background: "#1A1E2A", borderColor: "rgba(224,82,82,0.3)" }}
+    <AnimatePresence>
+      <motion.div
+        key="backdrop"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={trans.modalIn}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        style={{ background: "rgba(0,0,0,0.88)", backdropFilter: "blur(3px)" }}
+        onClick={onClose}
       >
-        {children}
-      </div>
-    </div>
+        <motion.div
+          initial={rm ? { opacity: 0 } : { opacity: 0, y: 18, scale: 0.98 }}
+          animate={rm ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+          exit={rm ? { opacity: 0 } : { opacity: 0, y: 8, scale: 0.99 }}
+          transition={{ duration: dur.measured, ease: ease.weighty }}
+          onClick={(e) => e.stopPropagation()}
+          className="w-full max-w-md rounded-2xl p-6 border relative"
+          style={{
+            background: "linear-gradient(180deg, #1B1F2A 0%, #15181F 100%)",
+            borderColor: "rgba(224,82,82,0.32)",
+            boxShadow: "0 24px 64px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.03) inset",
+          }}
+        >
+          {children}
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 }
+
+type SpringyButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+const SpringyButton = forwardRef<HTMLButtonElement, SpringyButtonProps>(function SpringyButton(props, ref) {
+  const rm = reducedMotion();
+  return (
+    <motion.button
+      ref={ref}
+      whileTap={rm ? undefined : { scale: 0.97 }}
+      whileHover={rm ? undefined : { y: -1 }}
+      transition={trans.springy}
+      {...(props as React.ComponentProps<typeof motion.button>)}
+    />
+  );
+});
