@@ -1,10 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import NumberFlow from "@number-flow/react";
 import { AppShell } from "@/components/game/AppShell";
 import { PromotionChamber } from "@/components/game/PromotionChamber";
 import { getMyProfile, listRealms, listAllMonsters, listMyMonsters, awakeningsForRole, moodForBond, MOOD_META } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
+import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens";
 
 export const Route = createFileRoute("/_authenticated/compendium")({
   component: CompendiumPage,
@@ -124,116 +127,17 @@ function CompendiumPage() {
       </div>
 
       {/* Detail modal */}
-      {sel && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.8)" }} onClick={() => setSelectedId(null)}>
-          <div onClick={(e) => e.stopPropagation()} className="w-full max-w-md rounded-xl p-6 border" style={{ background: "#1A1E2A", borderColor: RARITY_COLOR[sel.rarity as Rarity] }}>
-            <div className="flex justify-between items-start mb-4">
-              <div>
-                <h2 className="text-xl font-bold" style={{ color: RARITY_COLOR[sel.rarity as Rarity], fontFamily: "'Cinzel',serif" }}>{sel.name}</h2>
-                <div className="flex gap-2 mt-1">
-                  <RarityBadge rarity={sel.rarity as Rarity} />
-                  <span className="text-xs" style={{ color: "#A09D96" }}>{sel.element} · {sel.role}</span>
-                </div>
-              </div>
-              <button onClick={() => setSelectedId(null)} style={{ color: "#6B6864" }}>✕</button>
-            </div>
-            <div className="grid grid-cols-4 gap-2 mb-4 text-center">
-              {([["HP", sel.base_hp], ["ATK", sel.base_atk], ["DEF", sel.base_def], ["SPD", sel.base_spd]] as const).map(([l, v]) => (
-                <div key={l} className="rounded-md p-2" style={{ background: "rgba(0,0,0,0.3)" }}>
-                  <div className="text-[10px] uppercase" style={{ color: "#6B6864" }}>{l}</div>
-                  <div className="font-bold text-sm" style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{v}</div>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-1 mb-4">
-              <div className="text-[10px] uppercase tracking-wider font-semibold" style={{ color: "#A09D96" }}>Skills</div>
-              {[sel.skill_1, sel.skill_2, sel.skill_3].filter(Boolean).map((s: any, i: number) => (
-                <div key={i} className="text-sm" style={{ color: selOwned ? "#F0EDE6" : "#6B6864" }}>
-                  <span style={{ color: selOwned ? "#5FAD41" : "#6B6864" }}>●</span> {selOwned ? s : "???"}
-                </div>
-              ))}
-              {sel.realm_skill && (
-                <div className="text-sm" style={{ color: "#CE93D8" }}>★ {selOwned ? sel.realm_skill : "???"}</div>
-              )}
-            </div>
-            {selUm && (
-              <div>
-                <div className="flex justify-between items-center text-[10px] uppercase mb-1" style={{ color: "#A09D96" }}>
-                  <span>Bond</span>
-                  <span className="flex items-center gap-2">
-                    {(() => {
-                      const m = MOOD_META[moodForBond(selUm.bond_percent)];
-                      return (
-                        <span style={{ color: m.color }} title={m.effect}>
-                          {m.icon} {m.label}
-                        </span>
-                      );
-                    })()}
-                    <span style={{ fontFamily: "'JetBrains Mono',monospace" }}>{Math.round(selUm.bond_percent)}%</span>
-                  </span>
-                </div>
-                <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
-                  <div className="h-full" style={{ width: `${selUm.bond_percent}%`, background: "linear-gradient(90deg,#C89A3E,#FFD54F)" }} />
-                </div>
-                <div className="flex justify-between mt-1">
-                  {[25, 50, 100].map((m) => (
-                    <span key={m} className="text-[9px]" style={{ color: selUm.bond_percent >= m ? "#FFD54F" : "#6B6864" }}>{m}%</span>
-                  ))}
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "#A09D96" }}>
-                  <span>Lvl {selUm.level}</span>
-                  <span>★ {selUm.star_level}/7</span>
-                  {selUm.is_on_team && <span style={{ color: "#5FAD41" }}>On Team</span>}
-                </div>
-                <div className="mt-2 text-[11px]" style={{ color: "#6B6864" }}>
-                  Grew from <span style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{selUm.growth_xp ?? 0}</span> matching deeds.
-                </div>
-
-                {/* Dormant Powers */}
-                <div className="mt-4">
-                  <p className="text-[10px] uppercase tracking-widest font-semibold mb-2" style={{ color: "#A09D96" }}>
-                    Dormant Powers
-                  </p>
-                  <div className="space-y-1">
-                    {awakeningsForRole(sel.role).map((def) => {
-                      const unlocked = (selUm.awakened_skills as string[] | undefined)?.includes(def.name);
-                      return (
-                        <div
-                          key={def.name}
-                          className="rounded p-2 text-[11px]"
-                          style={{
-                            background: unlocked ? "rgba(255,213,79,0.08)" : "rgba(0,0,0,0.3)",
-                            border: `1px solid ${unlocked ? "#FFD54F" : "rgba(255,255,255,0.06)"}`,
-                          }}
-                        >
-                          <div className="flex items-center justify-between">
-                            <span style={{ color: unlocked ? "#FFD54F" : "#6B6864", fontWeight: 600 }}>
-                              {unlocked ? "⚡" : "🔒"} {def.name}
-                            </span>
-                          </div>
-                          <p className="mt-0.5 italic" style={{ color: unlocked ? "#F0EDE6" : "#6B6864" }}>
-                            {unlocked ? def.flavor : `Awakens when: ${def.triggerText}`}
-                          </p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-                {selUm.star_level < 7 && (
-                  <button
-                    onClick={() => setChamberFor({ id: selUm.id, name: sel.name })}
-                    className="mt-4 w-full py-2 rounded-md text-xs uppercase tracking-widest font-bold"
-                    style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
-                  >
-                    Promote at the Chamber
-                  </button>
-                )}
-              </div>
-            )}
-            {!selOwned && <p className="text-sm mt-4" style={{ color: "#6B6864" }}>Not yet discovered. Summon from the Altar!</p>}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {sel && (
+          <DetailModal
+            sel={sel}
+            selOwned={selOwned}
+            selUm={selUm}
+            onClose={() => setSelectedId(null)}
+            onPromote={(id, name) => setChamberFor({ id, name })}
+          />
+        )}
+      </AnimatePresence>
 
       {chamberFor && (
         <PromotionChamber
@@ -243,6 +147,236 @@ function CompendiumPage() {
         />
       )}
     </AppShell>
+  );
+}
+
+// ─── Detail Modal (Emil template) ───────────────────────────────────────────
+
+function DetailModal({
+  sel, selOwned, selUm, onClose, onPromote,
+}: {
+  sel: any;
+  selOwned: boolean;
+  selUm: any;
+  onClose: () => void;
+  onPromote: (userMonsterId: string, name: string) => void;
+}) {
+  const rm = reducedMotion();
+  const prevFocus = useRef<Element | null>(null);
+  const roleToStat: Record<string, string> = { attacker: "str", tank: "con", healer: "con", support: "int", debuffer: "per" };
+  const stat = roleToStat[sel.role] ?? "str";
+
+  useEffect(() => {
+    prevFocus.current = document.activeElement;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      (prevFocus.current as HTMLElement | null)?.focus?.();
+    };
+  }, [onClose]);
+
+  const skills = [sel.skill_1, sel.skill_2, sel.skill_3].filter(Boolean);
+  const skillDelays = stagger(skills.length, 0.06, 0.15);
+  const dormant = selUm ? awakeningsForRole(sel.role) : [];
+  const dormantDelays = stagger(dormant.length, 0.06, 0.25);
+
+  return (
+    <motion.div
+      key="backdrop"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={trans.modalIn}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: "rgba(0,0,0,0.78)", backdropFilter: "blur(2px)" }}
+      onClick={onClose}
+    >
+      <motion.div
+        initial={rm ? { opacity: 0 } : { opacity: 0, y: 18, scale: 0.98 }}
+        animate={rm ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+        exit={rm ? { opacity: 0 } : { opacity: 0, y: 8, scale: 0.99 }}
+        transition={{ duration: dur.measured, ease: ease.weighty }}
+        onClick={(e) => e.stopPropagation()}
+        className="w-full max-w-md rounded-2xl p-6 border relative max-h-[88vh] overflow-y-auto"
+        style={{
+          background: "linear-gradient(180deg, #1B1F2A 0%, #15181F 100%)",
+          borderColor: `${RARITY_COLOR[sel.rarity as Rarity]}40`,
+          boxShadow: `0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.03) inset, 0 0 32px ${RARITY_COLOR[sel.rarity as Rarity]}18`,
+        }}
+      >
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <motion.h2
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: dur.measured, ease: ease.weighty }}
+              className="text-xl font-bold"
+              style={{ color: RARITY_COLOR[sel.rarity as Rarity], fontFamily: "'Cinzel',serif", letterSpacing: "0.04em" }}
+            >
+              {sel.name}
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ ...trans.itemIn, delay: 0.1 }}
+              className="flex gap-2 mt-1 items-center flex-wrap"
+            >
+              <RarityBadge rarity={sel.rarity as Rarity} />
+              <span className="ss-stat-chip" data-stat={stat}>{sel.role}</span>
+              <span className="text-xs" style={{ color: "#A09D96" }}>{sel.element}</span>
+            </motion.div>
+          </div>
+          <motion.button
+            onClick={onClose}
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ rotate: 90 }}
+            transition={trans.springy}
+            className="w-7 h-7 rounded-full grid place-items-center"
+            style={{ color: "#6B6864", background: "rgba(255,255,255,0.04)" }}
+            aria-label="Close"
+          >
+            ✕
+          </motion.button>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...trans.itemIn, delay: 0.06 }}
+          className="grid grid-cols-4 gap-2 mb-4 text-center"
+        >
+          {([["HP", sel.base_hp], ["ATK", sel.base_atk], ["DEF", sel.base_def], ["SPD", sel.base_spd]] as const).map(([l, v]) => (
+            <div key={l} className="rounded-md p-2" style={{ background: "rgba(0,0,0,0.32)" }}>
+              <div className="text-[10px] uppercase tracking-[0.18em]" style={{ color: "#6B6864" }}>{l}</div>
+              <div className="font-bold text-sm mt-0.5" style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>
+                <NumberFlow value={v} />
+              </div>
+            </div>
+          ))}
+        </motion.div>
+
+        <div className="space-y-1 mb-4">
+          <div className="text-[10px] uppercase tracking-[0.18em] font-semibold" style={{ color: "#A09D96" }}>Skills</div>
+          {skills.map((s: any, i: number) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -6 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: dur.fast, ease: ease.out, delay: skillDelays[i] }}
+              className="text-sm"
+              style={{ color: selOwned ? "#F0EDE6" : "#6B6864" }}
+            >
+              <span style={{ color: selOwned ? "#5FAD41" : "#6B6864" }}>●</span> {selOwned ? s : "???"}
+            </motion.div>
+          ))}
+          {sel.realm_skill && (
+            <motion.div
+              initial={{ opacity: 0, x: -6 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: dur.fast, ease: ease.out, delay: skillDelays[skills.length] ?? 0.2 }}
+              className="text-sm"
+              style={{ color: "#CE93D8" }}
+            >
+              ★ {selOwned ? sel.realm_skill : "???"}
+            </motion.div>
+          )}
+        </div>
+
+        {selUm && (
+          <div>
+            <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.18em] mb-1" style={{ color: "#A09D96" }}>
+              <span>Bond</span>
+              <span className="flex items-center gap-2">
+                {(() => {
+                  const m = MOOD_META[moodForBond(selUm.bond_percent)];
+                  return (
+                    <span style={{ color: m.color }} title={m.effect}>
+                      {m.icon} {m.label}
+                    </span>
+                  );
+                })()}
+                <NumberFlow
+                  value={Math.round(selUm.bond_percent)}
+                  suffix="%"
+                  className="font-mono"
+                  style={{ color: "#FFD54F" }}
+                />
+              </span>
+            </div>
+            <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${selUm.bond_percent}%` }}
+                transition={{ duration: dur.weighty, ease: ease.weighty, delay: 0.18 }}
+                className="h-full"
+                style={{ background: "linear-gradient(90deg,#C89A3E,#FFD54F)" }}
+              />
+            </div>
+            <div className="flex justify-between mt-1">
+              {[25, 50, 100].map((m) => (
+                <span key={m} className="text-[9px]" style={{ color: selUm.bond_percent >= m ? "#FFD54F" : "#6B6864" }}>{m}%</span>
+              ))}
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "#A09D96" }}>
+              <span>Lvl <NumberFlow value={selUm.level} /></span>
+              <span>★ <NumberFlow value={selUm.star_level} />/7</span>
+              {selUm.is_on_team && <span style={{ color: "#5FAD41" }}>On Team</span>}
+            </div>
+            <div className="mt-2 text-[11px]" style={{ color: "#6B6864" }}>
+              Grew from <NumberFlow value={selUm.growth_xp ?? 0} className="font-mono" style={{ color: "#FFD54F" }} /> matching deeds.
+            </div>
+
+            {/* Dormant Powers */}
+            <div className="mt-4">
+              <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-2" style={{ color: "#A09D96" }}>
+                Dormant Powers
+              </p>
+              <div className="space-y-1">
+                {dormant.map((def, i) => {
+                  const unlocked = (selUm.awakened_skills as string[] | undefined)?.includes(def.name);
+                  return (
+                    <motion.div
+                      key={def.name}
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: dur.fast, ease: ease.out, delay: dormantDelays[i] }}
+                      className="rounded-md p-2 text-[11px]"
+                      style={{
+                        background: unlocked ? "rgba(255,213,79,0.08)" : "rgba(0,0,0,0.3)",
+                        border: `1px solid ${unlocked ? "rgba(255,213,79,0.45)" : "rgba(255,255,255,0.06)"}`,
+                        boxShadow: unlocked ? "0 0 12px rgba(255,213,79,0.08) inset" : "none",
+                      }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span style={{ color: unlocked ? "#FFD54F" : "#6B6864", fontWeight: 600 }}>
+                          {unlocked ? "⚡" : "🔒"} {def.name}
+                        </span>
+                      </div>
+                      <p className="mt-0.5 italic" style={{ color: unlocked ? "#F0EDE6" : "#6B6864" }}>
+                        {unlocked ? def.flavor : `Awakens when: ${def.triggerText}`}
+                      </p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+            {selUm.star_level < 7 && (
+              <motion.button
+                onClick={() => onPromote(selUm.id, sel.name)}
+                whileTap={rm ? undefined : { scale: 0.97 }}
+                whileHover={rm ? undefined : { y: -1 }}
+                transition={trans.springy}
+                className="mt-4 w-full py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
+                style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14", boxShadow: "0 4px 20px rgba(255,213,79,0.25)" }}
+              >
+                Promote at the Chamber
+              </motion.button>
+            )}
+          </div>
+        )}
+        {!selOwned && <p className="text-sm mt-4" style={{ color: "#6B6864" }}>Not yet discovered. Summon from the Altar!</p>}
+      </motion.div>
+    </motion.div>
   );
 }
 

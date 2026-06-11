@@ -2,6 +2,8 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
+import { setMuted } from "@/lib/ui/sounds";
 
 const NAV_PRIMARY = [
   { to: "/", label: "Hub", icon: "castle" },
@@ -36,6 +38,15 @@ export function GameSidebar({ displayName, level, playerClass }: {
   const path = useRouterState({ select: (s) => s.location.pathname });
   const nav = useNavigate();
   const qc = useQueryClient();
+  const [mute, setMute] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return window.localStorage?.getItem("ss-mute") === "1";
+  });
+  const toggleMute = () => {
+    const next = !mute;
+    setMute(next);
+    setMuted(next);
+  };
 
   async function signOut() {
     await qc.cancelQueries();
@@ -80,13 +91,24 @@ export function GameSidebar({ displayName, level, playerClass }: {
           {NAV_BOTTOM.map((item) => <NavLink key={item.to} item={item} path={path} />)}
         </nav>
 
-        <button
-          onClick={signOut}
-          className="mt-4 mx-2 px-3 py-2 text-xs uppercase tracking-widest rounded-md border transition-colors hover:bg-white/5"
-          style={{ color: "#A09D96", borderColor: "rgba(255,255,255,0.08)" }}
-        >
-          Sign out
-        </button>
+        <div className="mt-4 mx-2 flex gap-2">
+          <button
+            onClick={toggleMute}
+            title={mute ? "Unmute" : "Mute"}
+            aria-label={mute ? "Unmute" : "Mute"}
+            className="px-3 py-2 text-base rounded-md border transition-colors hover:bg-white/5"
+            style={{ color: mute ? "#6B6864" : "#FFD54F", borderColor: "rgba(255,255,255,0.08)" }}
+          >
+            {mute ? "🔇" : "🔊"}
+          </button>
+          <button
+            onClick={signOut}
+            className="flex-1 px-3 py-2 text-xs uppercase tracking-widest rounded-md border transition-colors hover:bg-white/5"
+            style={{ color: "#A09D96", borderColor: "rgba(255,255,255,0.08)" }}
+          >
+            Sign out
+          </button>
+        </div>
       </aside>
 
       {/* Mobile Bottom Nav */}

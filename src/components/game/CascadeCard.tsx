@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
 import { trans, stagger, reducedMotion } from "@/lib/ui/motion-tokens";
+import { sounds } from "@/lib/ui/sounds";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 // The CascadeCard receives the *full* result envelope from a system action
@@ -44,6 +45,15 @@ export function CascadeProvider() {
     publish = (e) => {
       setEvents(e);
       setSeed((s) => s + 1);
+      // Tier the audio by the heaviest event in the cascade.
+      const hasAwakening = e.some((x) => x.kind === "awakening");
+      const hasLevel = e.some((x) => x.kind === "leveledUp");
+      const hasTome = e.some((x) => x.kind === "tomeMint");
+      const hasDeath = e.some((x) => x.kind === "died");
+      if (hasDeath) sounds.toll();
+      else if (hasTome || hasAwakening) sounds.bell();
+      else if (hasLevel) sounds.ascend();
+      else sounds.chime();
     };
     return () => { publish = null; };
   }, []);

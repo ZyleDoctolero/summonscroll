@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { checkPromotionEligibility, promoteMonster } from "@/lib/game/supabase-api";
 import { trans, ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
+import { sounds } from "@/lib/ui/sounds";
 
 type Props = {
   userMonsterId: string;
@@ -50,6 +51,7 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
   const promoteMut = useMutation({
     mutationFn: () => promoteMonster(userMonsterId),
     onSuccess: (res) => {
+      sounds.ascend();
       confetti({ particleCount: 220, spread: 90, origin: { y: 0.45 }, colors: ["#C89A3E", "#FFD54F", "#F0EDE6"] });
       toast.success(`Promoted to ${res.to}★`);
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
@@ -66,6 +68,7 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
   // Ritual progress — measured + deliberate (480ms budget x 6 frames ≈ 3s feel)
   useEffect(() => {
     if (stage !== "ritual") return;
+    sounds.drum();
     const start = performance.now();
     const total = rm ? 600 : 3000;
     let frame = 0;

@@ -8,6 +8,7 @@ import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
 import { whisper } from "@/components/game/WhisperFeed";
 import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens";
+import { sounds } from "@/lib/ui/sounds";
 import {
   getMyProfile,
   listMyMonsters,
@@ -36,8 +37,13 @@ function TrialPage() {
     mutationFn: () => runTrial(picked),
     onSuccess: (res) => {
       if (res.fullClear) {
+        sounds.ascend();
         confetti({ particleCount: 300, spread: 100, colors: ["#C89A3E", "#FFD54F", "#F0EDE6"] });
         whisper({ monsterName: "Trial Keeper", line: "All five returned. The Echo is touched.", tone: "grave" });
+      } else if (res.fallen.length > 0) {
+        sounds.toll();
+      } else {
+        sounds.bell();
       }
       for (const f of res.fallen) {
         whisper({ monsterName: f.name, line: "I will remember the road.", tone: "grave" });

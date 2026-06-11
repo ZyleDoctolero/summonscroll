@@ -1,8 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import NumberFlow from "@number-flow/react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
+import { whisper } from "@/components/game/WhisperFeed";
+import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens";
 import { getMyProfile, getTeam, getTowerProgress, startArenaBattle, getBattleHistory } from "@/lib/game/supabase-api";
 
 export const Route = createFileRoute("/_authenticated/battle")({
@@ -25,8 +29,15 @@ function BattlePage() {
   const battleMut = useMutation({
     mutationFn: async (v: { mode: "chaos_tower" | "event" | "boss_rush"; floor: number }) => startArenaBattle(v.mode, v.floor),
     onSuccess: (res) => {
-      setResult(res as BattleResult);
+      const r = res as BattleResult & { badges?: { wailingWall?: boolean; apex?: boolean }; floorType?: string };
+      setResult(r);
       setLogIndex(0);
+      if (r.badges?.wailingWall) {
+        whisper({ monsterName: "Wailing Wall", line: "The wall remembers your name now.", tone: "grave" });
+      }
+      if (r.badges?.apex) {
+        whisper({ monsterName: "The Apex", line: "All hundred floors climbed. The crown is yours.", tone: "grave" });
+      }
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["tower"] });
       qc.invalidateQueries({ queryKey: ["battle-history"] });
@@ -48,71 +59,155 @@ function BattlePage() {
   if (result) {
     const visibleLog = result.log.slice(0, logIndex + 5);
     const allShown = logIndex + 5 >= result.log.length;
+    const milestoneDrops = (result as { milestoneDrops?: Array<{ name: string; qty: number }> }).milestoneDrops ?? [];
+    const badges = (result as { badges?: { wailingWall?: boolean; apex?: boolean } }).badges ?? {};
+    const rm = reducedMotion();
+    const logDelays = stagger(visibleLog.length, 0.035);
     return (
       <AppShell profile={profile}>
         <div className="p-6 md:p-10 max-w-2xl mx-auto">
-          <div className="rounded-xl p-6 border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
-            <div className="text-center mb-6">
-              <p className="text-4xl font-bold mb-1" style={{ color: result.won ? "#FFD54F" : "#E05252", fontFamily: "'Cinzel',serif" }}>
+          <motion.div
+            initial={rm ? { opacity: 0 } : { opacity: 0, y: 16, scale: 0.985 }}
+            animate={rm ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: dur.measured, ease: ease.weighty }}
+            className="rounded-2xl p-6 border"
+            style={{
+              background: "linear-gradient(180deg, #1B1F2A 0%, #15181F 100%)",
+              borderColor: result.won ? "rgba(255,213,79,0.32)" : "rgba(224,82,82,0.32)",
+              boxShadow: `0 24px 64px rgba(0,0,0,0.55), 0 0 32px ${result.won ? "rgba(255,213,79,0.12)" : "rgba(224,82,82,0.12)"}`,
+            }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.04 }}
+              className="text-center mb-6"
+            >
+              <motion.p
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.08 }}
+                className="text-4xl font-bold mb-1"
+                style={{
+                  color: result.won ? "#FFD54F" : "#E05252",
+                  fontFamily: "'Cinzel',serif",
+                  letterSpacing: "0.05em",
+                }}
+              >
                 {result.won ? "⚔ VICTORY" : "💀 DEFEAT"}
+              </motion.p>
+              <p className="text-sm" style={{ color: "#A09D96" }}>
+                vs {result.enemyName} — <NumberFlow value={result.rounds} /> rounds
               </p>
-              <p className="text-sm" style={{ color: "#A09D96" }}>vs {result.enemyName} — {result.rounds} rounds</p>
-            </div>
+            </motion.div>
 
             {/* HP bars */}
             <div className="space-y-3 mb-4">
-              <HpBar label="Your Team" current={result.playerHp} max={result.playerMaxHp} color="#5FAD41" />
-              <HpBar label={result.enemyName} current={result.enemyHp} max={result.enemyMaxHp} color="#E05252" />
+              <AnimatedHpBar label="Your Team" current={result.playerHp} max={result.playerMaxHp} color="#5FAD41" delay={0.15} />
+              <AnimatedHpBar label={result.enemyName} current={result.enemyHp} max={result.enemyMaxHp} color="#E05252" delay={0.22} />
             </div>
 
             {/* Battle log */}
             <div className="rounded-lg p-3 mb-4 max-h-48 overflow-y-auto space-y-1" style={{ background: "#0C0E14" }}>
               {visibleLog.map((entry, i) => (
-                <div key={i} className="text-xs flex items-center gap-2"
-                  style={{ color: entry.actor === "player" ? "#F0EDE6" : "#E05252" }}>
+                <motion.div
+                  key={`${i}-${entry.round}`}
+                  initial={{ opacity: 0, x: -6 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: dur.fast, ease: ease.out, delay: logDelays[i] }}
+                  className="text-xs flex items-center gap-2"
+                  style={{ color: entry.actor === "player" ? "#F0EDE6" : "#E05252" }}
+                >
                   <span className="font-mono w-8 flex-shrink-0" style={{ color: "#6B6864" }}>R{entry.round}</span>
                   <span className="flex-1">{entry.action}</span>
                   <span className="font-mono font-bold">-{entry.damage}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {!allShown ? (
-              <button onClick={() => setLogIndex((i) => i + 5)} className="w-full py-2 rounded-lg text-sm" style={{ background: "rgba(255,255,255,0.05)", color: "#A09D96" }}>
+              <motion.button
+                onClick={() => setLogIndex((i) => i + 5)}
+                whileTap={{ scale: 0.97 }}
+                whileHover={{ y: -1 }}
+                transition={trans.springy}
+                className="w-full py-2.5 rounded-lg text-sm"
+                style={{ background: "rgba(255,255,255,0.05)", color: "#A09D96" }}
+              >
                 Next →
-              </button>
+              </motion.button>
             ) : (
               <>
                 {result.won && (
-                  <div className="rounded-lg p-4 mb-4" style={{ background: "rgba(255,213,79,0.05)", border: "1px solid rgba(255,213,79,0.2)" }}>
-                    <p className="text-xs uppercase tracking-wider font-semibold mb-2" style={{ color: "#A09D96", fontFamily: "'Cinzel',serif" }}>Rewards</p>
-                    <div className="flex flex-wrap gap-4 text-sm font-bold" style={{ fontFamily: "'JetBrains Mono',monospace" }}>
-                      {result.rewards.crystals > 0 && <span style={{ color: "#7FD4FF" }}>+{result.rewards.crystals} 💎</span>}
-                      {result.rewards.shards > 0 && <span style={{ color: "#7FD4FF" }}>+{result.rewards.shards} 🔷</span>}
-                      <span style={{ color: "#A09D96" }}>+{result.rewards.xp} XP</span>
-                      {(result as { milestoneDrops?: Array<{ name: string; qty: number }> }).milestoneDrops?.map((d, i) => (
-                        <span key={i} style={{ color: "#FFD54F" }}>+{d.qty} {d.name}</span>
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: dur.measured, ease: ease.weighty }}
+                    className="rounded-lg p-4 mb-4"
+                    style={{ background: "rgba(255,213,79,0.05)", border: "1px solid rgba(255,213,79,0.22)" }}
+                  >
+                    <p className="text-xs uppercase tracking-[0.18em] font-semibold mb-2" style={{ color: "#A09D96", fontFamily: "'Cinzel',serif" }}>
+                      Rewards
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-sm font-bold" style={{ fontFamily: "'JetBrains Mono',monospace" }}>
+                      {result.rewards.crystals > 0 && (
+                        <RewardChip>
+                          <span style={{ color: "#7FD4FF" }}>💎 +<NumberFlow value={result.rewards.crystals} /></span>
+                        </RewardChip>
+                      )}
+                      {result.rewards.shards > 0 && (
+                        <RewardChip>
+                          <span style={{ color: "#7FD4FF" }}>🔷 +<NumberFlow value={result.rewards.shards} /></span>
+                        </RewardChip>
+                      )}
+                      <RewardChip>
+                        <span style={{ color: "#A09D96" }}>✦ +<NumberFlow value={result.rewards.xp} /> XP</span>
+                      </RewardChip>
+                      {milestoneDrops.map((d, i) => (
+                        <RewardChip key={i} delay={0.06 + i * 0.05}>
+                          <span style={{ color: "#FFD54F" }}>+<NumberFlow value={d.qty} /> {d.name}</span>
+                        </RewardChip>
                       ))}
                     </div>
-                    {(result as { badges?: { wailingWall?: boolean; apex?: boolean } }).badges?.wailingWall && (
-                      <p className="mt-3 text-sm text-center" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
-                        🏛 The Wailing Wall crumbles before you. <span style={{ color: "#F0EDE6" }}>Badge earned.</span>
-                      </p>
+                    {badges.wailingWall && (
+                      <motion.p
+                        initial={{ opacity: 0, scale: 0.92 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.25 }}
+                        className="mt-3 text-sm text-center"
+                        style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif", letterSpacing: "0.04em" }}
+                      >
+                        🏛 The Wailing Wall crumbles before you.{" "}
+                        <span style={{ color: "#F0EDE6" }}>Badge earned.</span>
+                      </motion.p>
                     )}
-                    {(result as { badges?: { wailingWall?: boolean; apex?: boolean } }).badges?.apex && (
-                      <p className="mt-3 text-sm text-center" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
-                        👑 You are the Apex. <span style={{ color: "#F0EDE6" }}>Crown bestowed.</span>
-                      </p>
+                    {badges.apex && (
+                      <motion.p
+                        initial={{ opacity: 0, scale: 0.92 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.3 }}
+                        className="mt-3 text-sm text-center"
+                        style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif", letterSpacing: "0.04em" }}
+                      >
+                        👑 You are the Apex.{" "}
+                        <span style={{ color: "#F0EDE6" }}>Crown bestowed.</span>
+                      </motion.p>
                     )}
-                  </div>
+                  </motion.div>
                 )}
-                <button onClick={() => setResult(null)} className="w-full py-3 rounded-lg font-bold text-sm uppercase tracking-widest"
-                  style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}>
+                <motion.button
+                  onClick={() => setResult(null)}
+                  whileTap={{ scale: 0.97 }}
+                  whileHover={{ y: -1 }}
+                  transition={trans.springy}
+                  className="w-full py-3 rounded-lg font-bold text-sm uppercase tracking-[0.18em]"
+                  style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14", boxShadow: "0 4px 20px rgba(255,213,79,0.28)" }}
+                >
                   Continue
-                </button>
+                </motion.button>
               </>
             )}
-          </div>
+          </motion.div>
         </div>
       </AppShell>
     );
@@ -200,16 +295,38 @@ function ModeCard({ title, icon, desc, sub, progress, disabled, loading, onClick
   );
 }
 
-function HpBar({ label, current, max, color }: { label: string; current: number; max: number; color: string }) {
+function AnimatedHpBar({ label, current, max, color, delay = 0 }: { label: string; current: number; max: number; color: string; delay?: number }) {
+  const pct = Math.max(0, Math.min(100, (current / max) * 100));
   return (
     <div>
       <div className="flex justify-between text-xs mb-1" style={{ color: "#A09D96" }}>
         <span>{label}</span>
-        <span style={{ fontFamily: "'JetBrains Mono',monospace" }}>{Math.max(0, current).toLocaleString()} / {max.toLocaleString()}</span>
+        <span style={{ fontFamily: "'JetBrains Mono',monospace" }}>
+          <NumberFlow value={Math.max(0, current)} /> / {max.toLocaleString()}
+        </span>
       </div>
       <div className="h-3 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
-        <div className="h-full rounded-full transition-all" style={{ width: `${Math.max(0, (current / max) * 100)}%`, background: color }} />
+        <motion.div
+          initial={{ width: "100%" }}
+          animate={{ width: `${pct}%` }}
+          transition={{ duration: dur.weighty, ease: ease.weighty, delay }}
+          className="h-full rounded-full"
+          style={{ background: color, boxShadow: `0 0 10px ${color}80` }}
+        />
       </div>
     </div>
+  );
+}
+
+function RewardChip({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  return (
+    <motion.span
+      initial={{ opacity: 0, y: 4, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: dur.fast, ease: ease.weighty, delay }}
+      className="inline-flex items-center"
+    >
+      {children}
+    </motion.span>
   );
 }

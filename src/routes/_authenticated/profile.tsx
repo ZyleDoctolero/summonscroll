@@ -119,12 +119,34 @@ function ProfilePage() {
               pct={Math.min(100, ((profile.mp ?? 30) / (profile.max_mp ?? 30)) * 100)} color="#7F77DD" />
           </div>
 
-          {/* Stats */}
+          {/* Stats — using stat-color language */}
           <div className="grid grid-cols-4 gap-2 mt-4">
-            {[["STR", profile.str_stat ?? 0], ["INT", profile.int_stat ?? 0], ["CON", profile.con_stat ?? 0], ["PER", profile.per_stat ?? 0]].map(([l, v]) => (
-              <div key={l as string} className="text-center rounded-md p-2" style={{ background: "rgba(0,0,0,0.3)" }}>
-                <div className="text-[10px] uppercase" style={{ color: "#6B6864" }}>{l}</div>
-                <div className="text-lg font-bold" style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{v}</div>
+            {([
+              ["STR", "str", profile.str_stat ?? 0],
+              ["INT", "int", profile.int_stat ?? 0],
+              ["CON", "con", profile.con_stat ?? 0],
+              ["PER", "per", profile.per_stat ?? 0],
+            ] as const).map(([label, stat, v]) => (
+              <div
+                key={label}
+                className="text-center rounded-md p-2"
+                style={{
+                  background: `rgba(var(--ss-stat-${stat}-rgb),0.06)`,
+                  border: `1px solid rgba(var(--ss-stat-${stat}-rgb),0.18)`,
+                }}
+              >
+                <div
+                  className="text-[10px] uppercase tracking-[0.18em] font-semibold"
+                  style={{ color: `var(--ss-stat-${stat})` }}
+                >
+                  {label}
+                </div>
+                <div
+                  className="text-lg font-bold"
+                  style={{ color: `var(--ss-stat-${stat})`, fontFamily: "'JetBrains Mono',monospace" }}
+                >
+                  {v}
+                </div>
               </div>
             ))}
           </div>
