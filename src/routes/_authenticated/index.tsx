@@ -227,7 +227,11 @@ function HubPage() {
   }
 
   const profile = profileQ.data?.profile;
-  const showOnboarding = profile?.onboarding_completed_at == null;
+  // Only show onboarding if the column exists in the DB and is explicitly null.
+  // If the column doesn't exist at all (migration not run), skip onboarding entirely.
+  const showOnboarding = profile != null
+    && "onboarding_completed_at" in profile
+    && profile.onboarding_completed_at === null;
 
   return (
     <AppShell profile={profile}>
