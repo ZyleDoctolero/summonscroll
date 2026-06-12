@@ -1,4 +1,3 @@
-Initialising login role...
 export type Json =
   | string
   | number
@@ -796,6 +795,7 @@ export type Database = {
           max_hp: number
           max_mp: number
           mp: number
+          onboarding_completed_at: string | null
           pact_seals: number
           per_stat: number
           ritual_streak: number
@@ -806,6 +806,7 @@ export type Database = {
           streak: number
           streak_freeze_charges: number
           talents: Json
+          tutorial_directive_id: string | null
           updated_at: string
           wind_down_hour: number
           xp: number
@@ -847,6 +848,7 @@ export type Database = {
           streak?: number
           streak_freeze_charges?: number
           talents?: Json
+          tutorial_directive_id?: string | null
           updated_at?: string
           wind_down_hour?: number
           xp?: number
@@ -878,6 +880,7 @@ export type Database = {
           max_hp?: number
           max_mp?: number
           mp?: number
+          onboarding_completed_at?: string | null
           pact_seals?: number
           per_stat?: number
           ritual_streak?: number
@@ -888,6 +891,7 @@ export type Database = {
           streak?: number
           streak_freeze_charges?: number
           talents?: Json
+          tutorial_directive_id?: string | null
           updated_at?: string
           wind_down_hour?: number
           xp?: number

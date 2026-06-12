@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { trans, ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
+import { Icon } from "@/components/ui/Icon";
 
 // ─── Whisper Feed ───────────────────────────────────────────────────────────
 // Bottom-right scroll of recent diegetic monster commentary. Each whisper:
@@ -77,22 +78,16 @@ export function WhisperProvider() {
             transition={{ duration: dur.normal, ease: ease.out }}
             layout
             onClick={() => dismiss(w.id)}
-            className="pointer-events-auto cursor-pointer rounded-lg border backdrop-blur-md px-3 py-2 shadow-lg"
+            className="pointer-events-auto cursor-pointer ss-card"
             style={whisperStyle(w.tone)}
           >
             <div className="flex items-start gap-2">
-              <div className="text-base leading-none mt-0.5">{toneIcon(w.tone)}</div>
+              <div className="mt-0.5">{toneIcon(w.tone)}</div>
               <div className="flex-1 min-w-0">
-                <p
-                  className="text-[10px] uppercase tracking-[0.18em] truncate font-bold"
-                  style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}
-                >
+                <p className="t-label truncate" style={{ color: "var(--gold-bright)" }}>
                   {w.monsterName}
                 </p>
-                <p
-                  className="text-xs leading-snug italic mt-0.5"
-                  style={{ color: "#F0EDE6" }}
-                >
+                <p className="t-lore mt-0.5">
                   "{w.line}"
                 </p>
               </div>
@@ -129,19 +124,19 @@ function whisperStyle(tone?: Whisper["tone"]): React.CSSProperties {
     case "calm":
     default:
       return {
-        background: "rgba(19,22,31,0.85)",
+        background: "var(--bg-stage)",
         borderColor: "rgba(255,213,79,0.18)",
         boxShadow: "0 8px 24px rgba(0,0,0,0.45)",
       };
   }
 }
 
-function toneIcon(tone?: Whisper["tone"]): string {
+function toneIcon(tone?: Whisper["tone"]): React.ReactNode {
   switch (tone) {
-    case "urgent":  return "⚠";
-    case "playful": return "✦";
-    case "grave":   return "🌙";
+    case "urgent":  return <Icon name="battle" size={14} color="var(--danger)" />;
+    case "playful": return <Icon name="sparkle" size={14} color="var(--success)" />;
+    case "grave":   return <Icon name="evening" size={14} color="var(--violet)" />;
     case "calm":
-    default:        return "·";
+    default:        return <Icon name="star" size={14} color="var(--gold-bright)" />;
   }
 }

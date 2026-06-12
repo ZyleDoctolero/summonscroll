@@ -145,24 +145,46 @@
 
 /* ─── SummonScroll Game Design Tokens ─── */
 :root {
+  /* ─── Proposal D Color Palette ─── */
   /* Backgrounds */
-  --ss-bg-deep: #0C0E14;
-  --ss-bg-surface: #13161F;
-  --ss-bg-elevated: #1A1E2A;
-  --ss-bg-hover: #1E2333;
+  --bg-deep: #08080d;         /* void black */
+  --bg-stage: #11111c;        /* deep slate */
+  --bg-panel: #1a1a2a;        /* console panel */
+  --bg-pane: #232336;         /* elevated panel */
+  
+  /* Text/Ink */
+  --ink-primary: #f5f0e6;     /* paper white */
+  --ink-secondary: #9089a8;   /* muted lilac */
+  --ink-tertiary: #5a566b;    /* dim */
+  
+  /* Signature Colors */
+  --gold-bright: #ffd95c;     /* signature gold */
+  --gold-glow: #ffb83d;       /* gold particle */
+  --violet: #a374ff;          /* sigil purple */
+  --cyan: #5ae0ff;            /* arcane cyan */
+  --rose: #ff5e85;            /* mythic accent */
+  --ember: #ff7843;           /* fire/damage */
+  
+  /* Utility */
+  --success: #5dd39e;
+  --danger: #ff5e5e;
+  
+  /* ─── Legacy Token Aliases (backward compatibility) ─── */
+  --ss-bg-deep: var(--bg-deep);
+  --ss-bg-surface: var(--bg-stage);
+  --ss-bg-elevated: var(--bg-panel);
+  --ss-bg-hover: var(--bg-pane);
   --ss-bg-overlay: rgba(0,0,0,0.72);
 
-  /* Text */
-  --ss-text-primary: #F0EDE6;
-  --ss-text-secondary: #A09D96;
-  --ss-text-tertiary: #6B6864;
+  --ss-text-primary: var(--ink-primary);
+  --ss-text-secondary: var(--ink-secondary);
+  --ss-text-tertiary: var(--ink-tertiary);
 
-  /* Accents */
   --ss-gold: #C89A3E;
-  --ss-gold-bright: #FFD54F;
-  --ss-void: #7F77DD;
-  --ss-danger: #E05252;
-  --ss-success: #5FAD41;
+  --ss-gold-bright: var(--gold-bright);
+  --ss-void: var(--violet);
+  --ss-danger: var(--danger);
+  --ss-success: var(--success);
   --ss-warning: #FFB74D;
 
   /* Rarity */
@@ -189,6 +211,108 @@
   /* Borders */
   --ss-border: rgba(255,255,255,0.07);
   --ss-border-active: rgba(255,255,255,0.18);
+
+  /* ─── Spacing scale ─── */
+  --ss-space-1: 4px;
+  --ss-space-2: 8px;
+  --ss-space-3: 12px;
+  --ss-space-4: 16px;
+  --ss-space-5: 24px;
+  --ss-space-6: 32px;
+  --ss-space-8: 48px;
+
+  /* ─── Radius scale ─── */
+  --ss-radius-sm: 4px;     /* chips */
+  --ss-radius-md: 8px;     /* inputs */
+  --ss-radius-lg: 12px;    /* cards */
+  --ss-radius-xl: 16px;    /* modals */
+  --ss-radius-pill: 9999px;
+
+  /* ─── Elevation scale ─── */
+  --ss-shadow-low:    0 2px 6px rgba(0,0,0,0.25);
+  --ss-shadow-mid:    0 8px 24px rgba(0,0,0,0.40);
+  --ss-shadow-high:   0 24px 64px rgba(0,0,0,0.55);
+
+  /* Inset highlight — gives surfaces faux "rim lighting" */
+  --ss-inset-edge: inset 0 1px 0 rgba(255,255,255,0.04);
+
+  /* ─── Hairlines ─── */
+  --ss-hairline:        1px solid rgba(255,255,255,0.06);
+  --ss-hairline-soft:   1px solid rgba(255,255,255,0.03);
+  --ss-hairline-active: 1px solid rgba(255,213,79,0.32);
+
+  /* ─── Realm Palettes (12 realms × 4 colors each) ─── */
+  /* I. Ancient Vaults — Arcane */
+  --realm-vaults-base:    #2c1f17;
+  --realm-vaults-accent:  #d4af3f;
+  --realm-vaults-glow:    #6f4d8c;
+  --realm-vaults-atmos:   #1a1410;
+
+  /* II. Chaos Wastes — Chaos */
+  --realm-chaos-base:    #1a0808;
+  --realm-chaos-accent:  #c44e2a;
+  --realm-chaos-glow:    #732424;
+  --realm-chaos-atmos:   #2a0e08;
+
+  /* III. The Outer Dark — Void */
+  --realm-dark-base:    #06060c;
+  --realm-dark-accent:  #6f4d8c;
+  --realm-dark-glow:    #4fb0ff;
+  --realm-dark-atmos:   #0e0e1c;
+
+  /* IV. Blighted Expanse — Death */
+  --realm-blight-base:    #1a1812;
+  --realm-blight-accent:  #5a7b3a;
+  --realm-blight-glow:    #d8d4b8;
+  --realm-blight-atmos:   #1c2218;
+
+  /* V. Wild Frontier — Nature */
+  --realm-wild-base:    #1e2418;
+  --realm-wild-accent:  #6ec07a;
+  --realm-wild-glow:    #ffb85c;
+  --realm-wild-atmos:   #16201a;
+
+  /* VI. Divine Threshold — Divine */
+  --realm-divine-base:    #f4ead8;
+  --realm-divine-accent:  #ffd95c;
+  --realm-divine-glow:    #fff5d0;
+  --realm-divine-atmos:   #3c2e1a;
+
+  /* VII. Haunted Veil — Dread */
+  --realm-veil-base:    #15101a;
+  --realm-veil-accent:  #c44e2a;
+  --realm-veil-glow:    #8a9bb5;
+  --realm-veil-atmos:   #1c1622;
+
+  /* VIII. Digital Nexus — Digital */
+  --realm-digital-base:   #08081c;
+  --realm-digital-accent: #5ae0ff;
+  --realm-digital-glow:   #ff5e85;
+  --realm-digital-atmos:  #0a0a22;
+
+  /* IX. Elder Realm — Primal */
+  --realm-elder-base:    #061018;
+  --realm-elder-accent:  #4fb0ff;
+  --realm-elder-glow:    #ffd95c;
+  --realm-elder-atmos:   #0a1828;
+
+  /* X. Void Frontier — Stellar */
+  --realm-void-base:    #08081c;
+  --realm-void-accent:  #a374ff;
+  --realm-void-glow:    #5ae0ff;
+  --realm-void-atmos:   #0e0822;
+
+  /* XI. Myth Eternal — Primordial */
+  --realm-myth-base:    #2c1f0f;
+  --realm-myth-accent:  #ffd95c;
+  --realm-myth-glow:    #fff5d0;
+  --realm-myth-atmos:   #1e1208;
+
+  /* XII. Iron Dominion — Synthetic */
+  --realm-iron-base:    #15161a;
+  --realm-iron-accent:  #b8973c;
+  --realm-iron-glow:    #c44e2a;
+  --realm-iron-atmos:   #1c1d22;
 }
 
 /* Stat chip utility — used on task tags, monster role labels, expedition badges. */
@@ -208,6 +332,72 @@
 .ss-stat-chip[data-stat="int"] { background: rgba(var(--ss-stat-int-rgb),0.12); color: var(--ss-stat-int); border: 1px solid rgba(var(--ss-stat-int-rgb),0.32); }
 .ss-stat-chip[data-stat="con"] { background: rgba(var(--ss-stat-con-rgb),0.12); color: var(--ss-stat-con); border: 1px solid rgba(var(--ss-stat-con-rgb),0.32); }
 .ss-stat-chip[data-stat="per"] { background: rgba(var(--ss-stat-per-rgb),0.12); color: var(--ss-stat-per); border: 1px solid rgba(var(--ss-stat-per-rgb),0.32); }
+
+/* ─── Nav Hierarchy (Daily / Weekly / Rare tiers) ─── */
+.ss-nav-primary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--ss-radius-md);
+  font-family: var(--ss-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  border-left: 3px solid transparent;
+  transition: all 160ms ease-out;
+}
+.ss-nav-primary:hover {
+  background: rgba(255,255,255,0.03);
+  color: var(--ink-primary);
+}
+.ss-nav-primary.active {
+  color: var(--gold-bright);
+  background: rgba(255,213,79,0.08);
+  border-left-color: var(--gold-bright);
+}
+
+.ss-nav-secondary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: var(--ss-radius-md);
+  font-family: var(--ss-font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-tertiary);
+  border-left: 2px solid transparent;
+  transition: all 140ms ease-out;
+}
+.ss-nav-secondary:hover {
+  background: rgba(255,255,255,0.02);
+  color: var(--ink-secondary);
+}
+.ss-nav-secondary.active {
+  color: var(--ink-primary);
+  background: rgba(255,255,255,0.03);
+  border-left-color: var(--ink-secondary);
+}
+
+.ss-nav-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: var(--ss-radius-md);
+  color: var(--ink-tertiary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 8px;
+  transition: all 140ms ease-out;
+}
+.ss-nav-more:hover {
+  color: var(--ink-secondary);
+  background: rgba(255,255,255,0.04);
+}
 
 /* Global input styling for game forms */
 .ss-input {
@@ -231,6 +421,18 @@
   50% { opacity: 0.7; }
 }
 
+/* Tutorial pulse animation — Proposal D glow */
+@keyframes tutorial-pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(255, 213, 79, 0.3), 0 0 24px rgba(255, 213, 79, 0.15);
+    border-left-color: var(--gold-bright);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 213, 79, 0.5), 0 0 40px rgba(255, 213, 79, 0.25);
+    border-left-color: var(--gold-glow);
+  }
+}
+
 /* Force dark theme globally for the game */
 html {
   color-scheme: dark;
@@ -238,5 +440,478 @@ html {
 body {
   background: var(--ss-bg-deep) !important;
   color: var(--ss-text-primary) !important;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: var(--ss-font-body, 'Inter', system-ui, sans-serif);
 }
+
+/* ─── Surface System Primitives ─── */
+
+/* ─── Cards ─── */
+.ss-card {
+  background: var(--bg-pane);
+  border: var(--ss-hairline);
+  border-radius: var(--ss-radius-lg);
+  padding: var(--ss-space-4);
+  box-shadow: var(--ss-shadow-low), var(--ss-inset-edge);
+  transition: border-color 160ms ease-out, transform 160ms ease-out;
+}
+.ss-card:hover {
+  border-color: var(--ss-hairline-active);
+}
+
+/* Bigger, more important surface — hero card on a screen */
+.ss-card-hero {
+  background: linear-gradient(180deg, var(--bg-pane) 0%, var(--bg-stage) 100%);
+  border: var(--ss-hairline-active);
+  border-radius: var(--ss-radius-lg);
+  padding: var(--ss-space-5);
+  box-shadow: var(--ss-shadow-mid), var(--ss-inset-edge);
+}
+
+/* ─── Modals ─── */
+.ss-modal {
+  background: linear-gradient(180deg, var(--bg-pane) 0%, var(--bg-deep) 100%);
+  border: var(--ss-hairline-active);
+  border-radius: var(--ss-radius-xl);
+  padding: var(--ss-space-5);
+  box-shadow: var(--ss-shadow-high), var(--ss-inset-edge);
+  max-width: 28rem;
+  width: 100%;
+}
+
+.ss-modal-backdrop {
+  background: rgba(0,0,0,0.78);
+  backdrop-filter: blur(3px);
+}
+
+/* ─── Panes (sub-sections within a card) ─── */
+.ss-pane {
+  background: rgba(0,0,0,0.32);
+  border-radius: var(--ss-radius-md);
+  padding: var(--ss-space-3);
+}
+
+/* ─── Buttons ─── */
+.ss-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ss-space-2);
+  padding: 10px 16px;
+  border-radius: var(--ss-radius-md);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out;
+  user-select: none;
+}
+
+.ss-btn-primary {
+  background: linear-gradient(135deg, var(--gold-glow), var(--gold-bright));
+  color: var(--bg-deep);
+  border: none;
+  box-shadow: 0 4px 20px rgba(255,213,79,0.28);
+}
+.ss-btn-primary:hover { transform: translateY(-1px); }
+.ss-btn-primary:active { transform: translateY(0); }
+.ss-btn-primary:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.ss-btn-secondary {
+  background: rgba(255,255,255,0.04);
+  color: var(--ink-secondary);
+  border: var(--ss-hairline);
+}
+.ss-btn-secondary:hover {
+  border-color: var(--ss-hairline-active);
+  color: var(--ink-primary);
+}
+
+.ss-btn-danger {
+  background: linear-gradient(135deg, #5a1818, #781d1d);
+  color: var(--ink-primary);
+  border: none;
+  box-shadow: 0 4px 20px rgba(120,29,29,0.35);
+}
+
+.ss-btn-ghost {
+  background: transparent;
+  color: var(--ink-secondary);
+  border: none;
+  padding: 8px 12px;
+}
+.ss-btn-ghost:hover { color: var(--ink-primary); }
+
+/* ─── Chips ─── */
+.ss-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--ss-radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  border: 1px solid transparent;
+}
+.ss-chip-gold {
+  background: rgba(255,213,79,0.12);
+  color: var(--gold-bright);
+  border-color: rgba(255,213,79,0.32);
+}
+.ss-chip-muted {
+  background: rgba(255,255,255,0.04);
+  color: var(--ink-tertiary);
+}
+
+/* ─── Dividers ─── */
+.ss-divider {
+  height: 1px;
+  background: var(--ss-hairline);
+  border: 0;
+  margin: var(--ss-space-3) 0;
+}
+
+/* For Proposal A (illuminated): use a fleuron divider */
+.ss-divider-fleuron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--ss-space-4) 0;
+  color: var(--ink-tertiary);
+}
+.ss-divider-fleuron::before,
+.ss-divider-fleuron::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--ss-hairline);
+}
+.ss-divider-fleuron::before { margin-right: var(--ss-space-3); }
+.ss-divider-fleuron::after  { margin-left:  var(--ss-space-3); }
+
+/* ─── Proposal D Chrome — Gradient borders, glows, and signature effects ─── */
+
+/* Gradient border card (the signature chrome) */
+.ss-card-d-glow {
+  position: relative;
+  background: var(--bg-panel);
+  border-radius: var(--ss-radius-lg);
+  padding: var(--ss-space-4);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.55), var(--ss-inset-edge);
+}
+/* The gradient border trick: a pseudo-element behind the card with a
+   linear-gradient masked to look like a 1px outline. */
+.ss-card-d-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--gold-glow), var(--violet) 60%, transparent);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Radial burst (used behind modal headers + hero reveals) */
+.ss-burst {
+  position: relative;
+}
+.ss-burst::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at center,
+    rgba(255,213,79,0.18) 0%,
+    rgba(163,116,255,0.10) 30%,
+    transparent 65%);
+  pointer-events: none;
+  z-index: -1;
+  animation: ss-burst-pulse 4s ease-in-out infinite;
+}
+@keyframes ss-burst-pulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50%      { opacity: 1.0; transform: scale(1.06); }
+}
+
+/* Tab under-bar (signature gacha-game nav) */
+.ss-tab-d {
+  position: relative;
+  padding: 12px 18px;
+  color: var(--ink-secondary);
+  transition: color 160ms ease-out;
+}
+.ss-tab-d.active {
+  color: var(--ink-primary);
+}
+.ss-tab-d.active::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+
+/* Buttons with metallic plate feel */
+.ss-btn-d-primary {
+  background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold-glow) 100%);
+  color: var(--bg-deep);
+  border: none;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.4),   /* top highlight */
+    0 4px 12px rgba(255,213,79,0.35),       /* glow */
+    0 2px 0 rgba(120,90,0,0.6);             /* hard bottom edge */
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+}
+.ss-btn-d-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.ss-btn-d-primary:active {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+/* Rarity star (with particle glow) */
+.ss-rarity-star-d {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--gold-bright);
+  filter: drop-shadow(0 0 6px var(--gold-glow));
+  animation: ss-star-twinkle 2.5s ease-in-out infinite;
+}
+@keyframes ss-star-twinkle {
+  0%, 100% { filter: drop-shadow(0 0 4px var(--gold-glow)); }
+  50%      { filter: drop-shadow(0 0 12px var(--gold-glow)); }
+}
+/* Variants per rarity tint */
+.ss-rarity-star-d.rarity-rare      { color: var(--cyan);   filter: drop-shadow(0 0 6px var(--cyan)); }
+.ss-rarity-star-d.rarity-epic      { color: var(--violet); filter: drop-shadow(0 0 6px var(--violet)); }
+.ss-rarity-star-d.rarity-legendary { color: var(--gold-bright); filter: drop-shadow(0 0 8px var(--gold-glow)); }
+.ss-rarity-star-d.rarity-mythic    { color: var(--rose);   filter: drop-shadow(0 0 10px var(--rose)); }
+.ss-rarity-star-d.rarity-ex        { color: var(--ink-primary); filter: drop-shadow(0 0 12px var(--gold-bright)) drop-shadow(0 0 24px var(--violet)); }
+
+/* Stat readout (Genshin-style big numbers) */
+.ss-stat-d {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: var(--ss-radius-md);
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.ss-stat-d-label {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  margin-bottom: 4px;
+}
+.ss-stat-d-value {
+  font-family: 'Orbitron', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold-bright);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Proposal D: Lucide Icon Glow Utility ─── */
+/* Apply to hero moment icons: modal headers, ceremony banners, compass icon */
+.lucide-glow {
+  filter: drop-shadow(0 0 4px currentColor);
+  transition: filter 160ms ease-out;
+}
+.lucide-glow:hover {
+  filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 16px currentColor);
+}
+
+/* ─── Typography System — Proposal D ─── */
+/* Five roles: Display (Orbitron), Heading (Saira Condensed), Body (Inter),
+   Mono (JetBrains Mono), Lore (Spectral italic)                            */
+
+:root {
+  /* Font family variables */
+  --ss-font-display: 'Orbitron', sans-serif;
+  --ss-font-heading: 'Saira Condensed', sans-serif;
+  --ss-font-body:    'Inter', system-ui, sans-serif;
+  --ss-font-mono:    'JetBrains Mono', monospace;
+  --ss-font-lore:    'Spectral', serif;
+
+  /* Text size scale */
+  --ss-text-xs:   12px;
+  --ss-text-sm:   13px;
+  --ss-text-base: 15px;
+  --ss-text-lg:   18px;
+  --ss-text-xl:   22px;
+  --ss-text-2xl:  28px;
+  --ss-text-3xl:  36px;
+  --ss-text-4xl:  48px;
+  --ss-text-5xl:  64px;
+
+  /* Letter-spacing scale */
+  --ss-track-tight:   -0.01em;
+  --ss-track-normal:   0;
+  --ss-track-wide:     0.04em;
+  --ss-track-wider:    0.08em;
+  --ss-track-widest:   0.18em;
+}
+
+/* Apply base body typography */
+body {
+  font-family: var(--ss-font-body) !important;
+  font-size: var(--ss-text-base);
+  color: var(--ink-primary);
+  line-height: 1.5;
+}
+
+/* ─── Display role — Orbitron, hero numbers, big reveals ─── */
+.t-display {
+  font-family: var(--ss-font-display);
+  font-size: var(--ss-text-4xl);
+  font-weight: 700;
+  letter-spacing: var(--ss-track-wide);
+  line-height: 1.05;
+}
+
+/* ─── Heading roles — Saira Condensed ─── */
+.t-h1 {
+  font-family: var(--ss-font-heading);
+  font-size: var(--ss-text-3xl);
+  font-weight: 700;
+  letter-spacing: var(--ss-track-wider);
+  line-height: 1.1;
+}
+.t-h2 {
+  font-family: var(--ss-font-heading);
+  font-size: var(--ss-text-xl);
+  font-weight: 700;
+  letter-spacing: var(--ss-track-normal);
+  line-height: 1.2;
+}
+.t-h3 {
+  font-family: var(--ss-font-heading);
+  font-size: var(--ss-text-base);
+  font-weight: 700;
+  letter-spacing: var(--ss-track-wider);
+}
+
+/* ─── Label role ─── */
+.t-label {
+  font-family: var(--ss-font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: var(--ss-track-widest);
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+/* ─── Body roles — Inter ─── */
+.t-body {
+  font-family: var(--ss-font-body);
+  font-size: var(--ss-text-base);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ink-primary);
+}
+.t-body-sm {
+  font-family: var(--ss-font-body);
+  font-size: var(--ss-text-sm);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--ink-secondary);
+}
+
+/* ─── Mono roles — JetBrains Mono, stat/number displays ─── */
+.t-mono {
+  font-family: var(--ss-font-mono);
+  font-size: var(--ss-text-base);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.t-mono-lg {
+  font-family: var(--ss-font-mono);
+  font-size: var(--ss-text-lg);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Lore roles — Spectral italic, flavor text / journal ─── */
+.t-lore {
+  font-family: var(--ss-font-lore);
+  font-size: var(--ss-text-sm);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+}
+.t-lore-sm {
+  font-family: var(--ss-font-lore);
+  font-size: var(--ss-text-xs);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink-tertiary);
+}
+
+/* Tabular nums utility for all stat/currency displays */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Atmosphere Background System — Proposal D ─── */
+/* Each primary route gets its own anime gacha key art background.
+   Images live in public/atmos/. See public/atmos/README.md for gen prompts. */
+
+.bg-atmos {
+  position: relative;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* Darkening veil — ensures text contrast ≥ 4.5:1 */
+.bg-atmos::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure route content sits above the veil */
+.bg-atmos > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-route atmosphere classes */
+.bg-atmos-hub        { background-image: url(/atmos/hub.png); }
+.bg-atmos-altar      { background-image: url(/atmos/altar.png); }
+.bg-atmos-expedition { background-image: url(/atmos/expedition.png); }
+.bg-atmos-battle     { background-image: url(/atmos/battle.png); }
+.bg-atmos-codex      { background-image: url(/atmos/codex.png); }
+.bg-atmos-trial      { background-image: url(/atmos/trial.png); }
+.bg-atmos-compendium { background-image: url(/atmos/compendium.png); }
+
+/* Fallback gradient when image hasn't loaded yet */
+.bg-atmos-hub        { background-color: var(--bg-deep); }
+.bg-atmos-altar      { background-color: #0d0816; }
+.bg-atmos-expedition { background-color: #080d10; }
+.bg-atmos-battle     { background-color: #0d0808; }
+.bg-atmos-codex      { background-color: #0a0808; }
+.bg-atmos-trial      { background-color: #0a0808; }

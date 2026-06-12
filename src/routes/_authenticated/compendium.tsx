@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
 import { AppShell } from "@/components/game/AppShell";
+import { Icon } from "@/components/ui/Icon";
+import { EmptyState } from "@/components/ui/EmptyState";
+import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
 import { PromotionChamber } from "@/components/game/PromotionChamber";
 import { getMyProfile, listRealms, listAllMonsters, listMyMonsters, awakeningsForRole, moodForBond, MOOD_META } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
@@ -51,7 +54,7 @@ function CompendiumPage() {
     return stats;
   }, [monstersQ.data, ownedIds]);
 
-  if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Loading…</div>;
+  if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Loading…</div>;
   if (!profileQ.data) return null;
 
   const sel = selectedId ? (monstersQ.data?.monsters ?? []).find((m: any) => m.id === selectedId) : null;
@@ -60,9 +63,9 @@ function CompendiumPage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
-      <div className="p-6 md:p-10 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Compendium</h1>
-        <p className="text-sm mb-6" style={{ color: "#A09D96" }}>{ownedIds.size} / {monstersQ.data?.monsters?.length ?? 0} discovered</p>
+      <div className="bg-atmos bg-atmos-compendium p-6 md:p-10 max-w-6xl mx-auto min-h-screen">
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Compendium</h1>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>{ownedIds.size} / {monstersQ.data?.monsters?.length ?? 0} discovered</p>
 
         {/* Realm tabs */}
         <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
@@ -77,10 +80,9 @@ function CompendiumPage() {
         {/* Filters */}
         <div className="flex gap-3 mb-6 flex-wrap">
           <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search…"
-            className="px-3 py-2 rounded-md text-sm flex-1 min-w-[180px]"
-            style={{ background: "#1A1E2A", color: "#F0EDE6", border: "1px solid rgba(255,255,255,0.08)" }} />
+            className="ss-input flex-1 min-w-[180px]" />
           <select value={rarityFilter} onChange={(e) => setRarityFilter(e.target.value)}
-            className="px-3 py-2 rounded-md text-sm" style={{ background: "#1A1E2A", color: "#F0EDE6", border: "1px solid rgba(255,255,255,0.08)" }}>
+            className="ss-input w-auto">
             <option value="">All Rarities</option>
             {["common","uncommon","rare","elite","epic","legendary","mythic","ex"].map((r) => (
               <option key={r} value={r}>{r[0].toUpperCase() + r.slice(1)}</option>
@@ -95,49 +97,59 @@ function CompendiumPage() {
             const r = m.rarity as Rarity;
             return (
               <button key={m.id} onClick={() => setSelectedId(m.id)}
-                className="rounded-lg p-3 text-center transition-all hover:scale-[1.03]"
+                className="ss-card rounded-lg p-3 text-center transition-all hover:scale-[1.03]"
                 style={{
-                  background: "#13161F", opacity: owned ? 1 : 0.5,
-                  border: `1px solid ${owned ? RARITY_COLOR[r] : "rgba(255,255,255,0.05)"}`,
+                  opacity: owned ? 1 : 0.5,
+                  borderColor: owned ? RARITY_COLOR[r] : undefined,
                   boxShadow: owned && r !== "common" ? RARITY_GLOW[r] : undefined,
                 }}>
-                <div className="w-full aspect-square rounded mb-2 flex items-center justify-center text-3xl overflow-hidden" 
+                <div className="w-full aspect-square rounded mb-2 flex items-center justify-center text-3xl overflow-hidden ss-pane"
                      style={{ 
-                       background: "#1A1E2A",
                        border: owned ? `2px solid ${RARITY_COLOR[r]}` : "2px dashed rgba(255,255,255,0.1)",
                        boxShadow: owned && r !== "common" ? `0 0 10px ${RARITY_COLOR[r]}40 inset` : undefined
                      }}>
                   {owned ? (
                     <img src={m.art_url ? m.art_url : `/sprites/monsters/${m.name.toLowerCase().replace(/[^a-z0-9]+/g, '_')}.png`} 
                          className="w-full h-full object-cover" 
-                         alt={m.name} 
+                         alt={m.name}
+                         loading="lazy"
+                         decoding="async"
                          onError={(e) => { e.currentTarget.src = "/monsters/placeholder.png" }} />
                   ) : "?"}
                 </div>
-                <p className="text-xs font-bold truncate" style={{ color: owned ? "#F0EDE6" : "#6B6864", fontFamily: "'Cinzel',serif" }}>
+                <p className="text-xs font-bold truncate" style={{ color: owned ? "var(--ink-primary)" : "var(--ink-tertiary)" }}>
                   {owned ? m.name : "???"}
                 </p>
-                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase"
+                <span className="ss-chip mt-1"
                   style={{ background: `${RARITY_COLOR[r]}20`, color: RARITY_COLOR[r] }}>{r}</span>
               </button>
             );
           })}
         </div>
-        {filtered.length === 0 && <div className="text-center py-16" style={{ color: "#6B6864" }}><p className="text-4xl mb-2">📖</p><p>No monsters match your filters.</p></div>}
+        {filtered.length === 0 && (
+          <EmptyState
+            icon="tome"
+            title="The bestiary is silent on this query."
+            body="Loosen your filters, or summon a kind of monster you haven't met."
+          />
+        )}
       </div>
 
       {/* Detail modal */}
-      <AnimatePresence>
+      <ResponsiveDialog 
+        open={!!sel} 
+        onOpenChange={(open) => !open && setSelectedId(null)}
+        title={sel?.name || ""}
+      >
         {sel && (
-          <DetailModal
+          <DetailModalContent
             sel={sel}
             selOwned={selOwned}
             selUm={selUm}
-            onClose={() => setSelectedId(null)}
             onPromote={(id, name) => setChamberFor({ id, name })}
           />
         )}
-      </AnimatePresence>
+      </ResponsiveDialog>
 
       {chamberFor && (
         <PromotionChamber
@@ -150,31 +162,18 @@ function CompendiumPage() {
   );
 }
 
-// ─── Detail Modal (Emil template) ───────────────────────────────────────────
+// ─── Detail Modal Content ──────────────────────────────────────────────────
 
-function DetailModal({
-  sel, selOwned, selUm, onClose, onPromote,
+function DetailModalContent({
+  sel, selOwned, selUm, onPromote,
 }: {
   sel: any;
   selOwned: boolean;
   selUm: any;
-  onClose: () => void;
   onPromote: (userMonsterId: string, name: string) => void;
 }) {
-  const rm = reducedMotion();
-  const prevFocus = useRef<Element | null>(null);
   const roleToStat: Record<string, string> = { attacker: "str", tank: "con", healer: "con", support: "int", debuffer: "per" };
   const stat = roleToStat[sel.role] ?? "str";
-
-  useEffect(() => {
-    prevFocus.current = document.activeElement;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
-    window.addEventListener("keydown", onKey);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      (prevFocus.current as HTMLElement | null)?.focus?.();
-    };
-  }, [onClose]);
 
   const skills = [sel.skill_1, sel.skill_2, sel.skill_3].filter(Boolean);
   const skillDelays = stagger(skills.length, 0.06, 0.15);
@@ -182,63 +181,21 @@ function DetailModal({
   const dormantDelays = stagger(dormant.length, 0.06, 0.25);
 
   return (
-    <motion.div
-      key="backdrop"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={trans.modalIn}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.78)", backdropFilter: "blur(2px)" }}
-      onClick={onClose}
-    >
-      <motion.div
-        initial={rm ? { opacity: 0 } : { opacity: 0, y: 18, scale: 0.98 }}
-        animate={rm ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
-        exit={rm ? { opacity: 0 } : { opacity: 0, y: 8, scale: 0.99 }}
-        transition={{ duration: dur.measured, ease: ease.weighty }}
-        onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-md rounded-2xl p-6 border relative max-h-[88vh] overflow-y-auto"
-        style={{
-          background: "linear-gradient(180deg, #1B1F2A 0%, #15181F 100%)",
-          borderColor: `${RARITY_COLOR[sel.rarity as Rarity]}40`,
-          boxShadow: `0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.03) inset, 0 0 32px ${RARITY_COLOR[sel.rarity as Rarity]}18`,
-        }}
-      >
-        <div className="flex justify-between items-start mb-4">
-          <div>
-            <motion.h2
-              initial={{ opacity: 0, y: -4 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: dur.measured, ease: ease.weighty }}
-              className="text-xl font-bold"
-              style={{ color: RARITY_COLOR[sel.rarity as Rarity], fontFamily: "'Cinzel',serif", letterSpacing: "0.04em" }}
-            >
-              {sel.name}
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ ...trans.itemIn, delay: 0.1 }}
-              className="flex gap-2 mt-1 items-center flex-wrap"
-            >
-              <RarityBadge rarity={sel.rarity as Rarity} />
-              <span className="ss-stat-chip" data-stat={stat}>{sel.role}</span>
-              <span className="text-xs" style={{ color: "#A09D96" }}>{sel.element}</span>
-            </motion.div>
-          </div>
-          <motion.button
-            onClick={onClose}
-            whileTap={{ scale: 0.9 }}
-            whileHover={{ rotate: 90 }}
-            transition={trans.springy}
-            className="w-7 h-7 rounded-full grid place-items-center"
-            style={{ color: "#6B6864", background: "rgba(255,255,255,0.04)" }}
-            aria-label="Close"
+    <div className="relative">
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ...trans.itemIn, delay: 0.1 }}
+            className="flex gap-2 mt-1 items-center flex-wrap"
           >
-            ✕
-          </motion.button>
+            <RarityBadge rarity={sel.rarity as Rarity} />
+            <span className="ss-stat-chip" data-stat={stat}>{sel.role}</span>
+            <span className="text-xs" style={{ color: "var(--ink-secondary)" }}>{sel.element}</span>
+          </motion.div>
         </div>
+      </div>
         <motion.div
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
@@ -246,9 +203,9 @@ function DetailModal({
           className="grid grid-cols-4 gap-2 mb-4 text-center"
         >
           {([["HP", sel.base_hp], ["ATK", sel.base_atk], ["DEF", sel.base_def], ["SPD", sel.base_spd]] as const).map(([l, v]) => (
-            <div key={l} className="rounded-md p-2" style={{ background: "rgba(0,0,0,0.32)" }}>
-              <div className="text-[10px] uppercase tracking-[0.18em]" style={{ color: "#6B6864" }}>{l}</div>
-              <div className="font-bold text-sm mt-0.5" style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>
+            <div key={l} className="ss-pane rounded-md p-2">
+              <div className="text-[10px] uppercase tracking-[0.18em]" style={{ color: "var(--ink-tertiary)" }}>{l}</div>
+              <div className="t-mono-lg font-bold mt-0.5" style={{ color: "var(--gold-bright)" }}>
                 <NumberFlow value={v} />
               </div>
             </div>
@@ -256,7 +213,7 @@ function DetailModal({
         </motion.div>
 
         <div className="space-y-1 mb-4">
-          <div className="text-[10px] uppercase tracking-[0.18em] font-semibold" style={{ color: "#A09D96" }}>Skills</div>
+          <div className="text-[10px] uppercase tracking-[0.18em] font-semibold" style={{ color: "var(--ink-secondary)" }}>Skills</div>
           {skills.map((s: any, i: number) => (
             <motion.div
               key={i}
@@ -264,9 +221,9 @@ function DetailModal({
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: dur.fast, ease: ease.out, delay: skillDelays[i] }}
               className="text-sm"
-              style={{ color: selOwned ? "#F0EDE6" : "#6B6864" }}
+              style={{ color: selOwned ? "var(--ink-primary)" : "var(--ink-tertiary)" }}
             >
-              <span style={{ color: selOwned ? "#5FAD41" : "#6B6864" }}>●</span> {selOwned ? s : "???"}
+              <span style={{ color: selOwned ? "var(--success)" : "var(--ink-tertiary)" }}>●</span> {selOwned ? s : "???"}
             </motion.div>
           ))}
           {sel.realm_skill && (
@@ -275,7 +232,7 @@ function DetailModal({
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: dur.fast, ease: ease.out, delay: skillDelays[skills.length] ?? 0.2 }}
               className="text-sm"
-              style={{ color: "#CE93D8" }}
+              style={{ color: "var(--violet)" }}
             >
               ★ {selOwned ? sel.realm_skill : "???"}
             </motion.div>
@@ -284,7 +241,7 @@ function DetailModal({
 
         {selUm && (
           <div>
-            <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.18em] mb-1" style={{ color: "#A09D96" }}>
+            <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.18em] mb-1" style={{ color: "var(--ink-secondary)" }}>
               <span>Bond</span>
               <span className="flex items-center gap-2">
                 {(() => {
@@ -299,7 +256,7 @@ function DetailModal({
                   value={Math.round(selUm.bond_percent)}
                   suffix="%"
                   className="font-mono"
-                  style={{ color: "#FFD54F" }}
+                  style={{ color: "var(--gold-bright)" }}
                 />
               </span>
             </div>
@@ -309,26 +266,26 @@ function DetailModal({
                 animate={{ width: `${selUm.bond_percent}%` }}
                 transition={{ duration: dur.weighty, ease: ease.weighty, delay: 0.18 }}
                 className="h-full"
-                style={{ background: "linear-gradient(90deg,#C89A3E,#FFD54F)" }}
+                style={{ background: "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))" }}
               />
             </div>
             <div className="flex justify-between mt-1">
               {[25, 50, 100].map((m) => (
-                <span key={m} className="text-[9px]" style={{ color: selUm.bond_percent >= m ? "#FFD54F" : "#6B6864" }}>{m}%</span>
+                <span key={m} className="text-[9px]" style={{ color: selUm.bond_percent >= m ? "var(--gold-bright)" : "var(--ink-tertiary)" }}>{m}%</span>
               ))}
             </div>
-            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "#A09D96" }}>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--ink-secondary)" }}>
               <span>Lvl <NumberFlow value={selUm.level} /></span>
               <span>★ <NumberFlow value={selUm.star_level} />/7</span>
-              {selUm.is_on_team && <span style={{ color: "#5FAD41" }}>On Team</span>}
+              {selUm.is_on_team && <span style={{ color: "var(--success)" }}>On Team</span>}
             </div>
-            <div className="mt-2 text-[11px]" style={{ color: "#6B6864" }}>
-              Grew from <NumberFlow value={selUm.growth_xp ?? 0} className="font-mono" style={{ color: "#FFD54F" }} /> matching deeds.
+            <div className="mt-2 text-[11px]" style={{ color: "var(--ink-tertiary)" }}>
+              Grew from <NumberFlow value={selUm.growth_xp ?? 0} className="font-mono" style={{ color: "var(--gold-bright)" }} /> matching deeds.
             </div>
 
             {/* Dormant Powers */}
             <div className="mt-4">
-              <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-2" style={{ color: "#A09D96" }}>
+              <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-2" style={{ color: "var(--ink-secondary)" }}>
                 Dormant Powers
               </p>
               <div className="space-y-1">
@@ -348,11 +305,11 @@ function DetailModal({
                       }}
                     >
                       <div className="flex items-center justify-between">
-                        <span style={{ color: unlocked ? "#FFD54F" : "#6B6864", fontWeight: 600 }}>
-                          {unlocked ? "⚡" : "🔒"} {def.name}
+                        <span style={{ color: unlocked ? "var(--gold-bright)" : "var(--ink-tertiary)", fontWeight: 600 }}>
+                          <span className="inline-flex items-center gap-1"><Icon name={unlocked ? "stamina" : "close"} size={12} color={unlocked ? "var(--gold-bright)" : "var(--ink-tertiary)"} /> {def.name}</span>
                         </span>
                       </div>
-                      <p className="mt-0.5 italic" style={{ color: unlocked ? "#F0EDE6" : "#6B6864" }}>
+                      <p className="mt-0.5 italic" style={{ color: unlocked ? "var(--ink-primary)" : "var(--ink-tertiary)" }}>
                         {unlocked ? def.flavor : `Awakens when: ${def.triggerText}`}
                       </p>
                     </motion.div>
@@ -363,36 +320,32 @@ function DetailModal({
             {selUm.star_level < 7 && (
               <motion.button
                 onClick={() => onPromote(selUm.id, sel.name)}
-                whileTap={rm ? undefined : { scale: 0.97 }}
-                whileHover={rm ? undefined : { y: -1 }}
+                whileTap={{ scale: 0.97 }}
+                whileHover={{ y: -1 }}
                 transition={trans.springy}
-                className="mt-4 w-full py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-                style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14", boxShadow: "0 4px 20px rgba(255,213,79,0.25)" }}
+                className="ss-btn ss-btn-d-primary mt-4 w-full"
               >
                 Promote at the Chamber
               </motion.button>
             )}
           </div>
         )}
-        {!selOwned && <p className="text-sm mt-4" style={{ color: "#6B6864" }}>Not yet discovered. Summon from the Altar!</p>}
-      </motion.div>
-    </motion.div>
+        {!selOwned && <p className="text-sm mt-4" style={{ color: "var(--ink-tertiary)" }}>Not yet discovered. Summon from the Altar!</p>}
+    </div>
   );
 }
 
 function PillBtn({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
   return (
-    <button onClick={onClick} className="px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap"
-      style={{
-        background: active ? "linear-gradient(135deg,#C89A3E,#FFD54F)" : "rgba(255,255,255,0.05)",
-        color: active ? "#0C0E14" : "#A09D96",
-      }}>{children}</button>
+    <button onClick={onClick} className={`ss-btn whitespace-nowrap ${active ? "ss-btn-d-primary" : "ss-btn-secondary"}`}>
+      {children}
+    </button>
   );
 }
 
 function RarityBadge({ rarity }: { rarity: Rarity }) {
   return (
-    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase"
-      style={{ background: `${RARITY_COLOR[rarity]}20`, color: RARITY_COLOR[rarity], border: `1px solid ${RARITY_COLOR[rarity]}40` }}>{rarity}</span>
+    <span className="ss-chip"
+      style={{ background: `${RARITY_COLOR[rarity]}20`, color: RARITY_COLOR[rarity], borderColor: `${RARITY_COLOR[rarity]}40` }}>{rarity}</span>
   );
 }

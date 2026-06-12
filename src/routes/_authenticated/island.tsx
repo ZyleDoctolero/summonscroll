@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listMyMonsters, updateTeamSlot, listTasks } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 
@@ -101,7 +102,7 @@ function IslandPage() {
     <AppShell profile={profileQ.data.profile}>
       <div className="p-6 md:p-10 max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
-          <h1 className="text-3xl font-bold" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Your Island</h1>
+          <h1 className="t-h1 text-3xl font-bold" style={{ color: "var(--gold-bright)" }}>Your Island</h1>
           <span className="text-2xl">{weatherEmoji}</span>
         </div>
 
@@ -117,7 +118,7 @@ function IslandPage() {
         {/* Team slots */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-lg font-bold" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Your Team</h2>
+            <h2 className="t-h3 text-lg font-bold" style={{ color: "var(--ink-primary)" }}>Your Team</h2>
             <span className="text-sm font-mono" style={{ color: "#FFD54F" }}>Power: {teamPower.toLocaleString()}</span>
           </div>
           <div className="grid grid-cols-5 gap-3">
@@ -142,7 +143,7 @@ function IslandPage() {
                     <div className="w-full aspect-square rounded mb-2 flex items-center justify-center overflow-hidden" style={{ background: "#1A1E2A" }}>
                       <img src="/monsters/placeholder.png" className="w-full h-full object-cover" alt="Monster" />
                     </div>
-                    <p className="text-[10px] font-bold truncate" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>{um.monster.name}</p>
+                    <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>{um.monster.name}</p>
                     <p className="text-[9px]" style={{ color: "#A09D96" }}>Lvl {um.level} · Bond {Math.round(um.bond_percent)}%</p>
                     {fatigued && <div className="absolute top-1 right-1 text-[10px] px-1 rounded" style={{ background: "rgba(224,82,82,0.8)", color: "#fff" }}>⚡FATIGUE</div>}
                     <button onClick={() => slotMut.mutate({ userMonsterId: um.id, slot: null })}
@@ -163,14 +164,15 @@ function IslandPage() {
         </div>
 
         {/* Monster roster */}
-        <h2 className="text-lg font-bold mb-3" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>
+        <h2 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
           Available Monsters ({roster.length})
         </h2>
         {roster.length === 0 ? (
-          <div className="text-center py-12 rounded-xl border-2 border-dashed" style={{ borderColor: "rgba(255,255,255,0.08)", color: "#6B6864" }}>
-            <p className="text-3xl mb-2">📖</p>
-            <p className="text-sm">No monsters yet. Visit the Altar to summon!</p>
-          </div>
+          <EmptyState
+            icon="sparkle"
+            title="The island feels empty."
+            body="Visit the Altar to summon your first companion."
+          />
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
             {roster.map((um: { id: string; monster: { name: string; rarity: string; element: string }; level: number; bond_percent: number; ascension_level: number; is_on_team: boolean }) => {

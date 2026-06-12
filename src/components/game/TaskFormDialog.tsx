@@ -82,10 +82,9 @@ export function TaskFormDialog({
       <form
         onClick={(e) => e.stopPropagation()}
         onSubmit={submit}
-        className="w-full max-w-md rounded-xl p-6 border space-y-4"
-        style={{ background: "#1A1E2A", borderColor: "rgba(255,213,79,0.2)" }}
+        className="ss-modal"
       >
-        <h2 className="text-xl font-bold" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+        <h2 className="t-h2 text-xl font-bold" style={{ color: "var(--gold-bright)" }}>
           {initial ? "Edit Directive" : "New Directive"}
         </h2>
 

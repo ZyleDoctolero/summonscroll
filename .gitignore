@@ -36,3 +36,7 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# Development artifacts
+batch_generation_test_report.md
+triage_report.csv

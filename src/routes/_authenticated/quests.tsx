@@ -4,6 +4,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listGoals, createGoal, deleteGoal, type GoalType, type Goal } from "@/lib/game/supabase-api";
 
 export const Route = createFileRoute("/_authenticated/quests")({
@@ -48,15 +49,15 @@ function QuestsPage() {
   });
 
   if (profileQ.isLoading) {
-    return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Loading the war room…</div>;
+    return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Loading the war room…</div>;
   }
   if (!profileQ.data) return null;
 
   return (
     <AppShell profile={profileQ.data.profile}>
       <div className="p-6 md:p-10 max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Quests</h1>
-        <p className="text-sm mb-6" style={{ color: "#A09D96" }}>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Quests</h1>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
           A goal is a boss. Each task you finish drains its HP. Slay one → mint a Tome of Reverse Heaven.
         </p>
 
@@ -70,11 +71,7 @@ function QuestsPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className="pb-2 text-sm font-semibold transition-colors"
-              style={{
-                color: tab === t.key ? "#FFD54F" : "#A09D96",
-                borderBottom: `2px solid ${tab === t.key ? "#FFD54F" : "transparent"}`,
-              }}
+              className={`ss-tab-d pb-2 text-sm font-semibold ${tab === t.key ? "active" : ""}`}
             >
               {t.label}
             </button>
@@ -85,17 +82,15 @@ function QuestsPage() {
         {tab === "active" && (
           <div className="space-y-3">
             {(activeQ.data?.goals ?? []).length === 0 ? (
-              <div className="text-center py-16 rounded-xl border-2 border-dashed" style={{ borderColor: "rgba(255,255,255,0.08)", color: "#A09D96" }}>
-                <p className="text-3xl mb-2">⚔</p>
-                <p className="mb-3">No active quests.</p>
-                <button
-                  onClick={() => setTab("forge")}
-                  className="px-4 py-2 rounded text-xs uppercase tracking-widest font-bold"
-                  style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
-                >
-                  Forge a Quest
-                </button>
-              </div>
+              <EmptyState
+                icon="crown"
+                title="No boss has been named."
+                body="Choose one. Three months from now, what will you have slain?"
+                cta={{
+                  label: "Name the Boss",
+                  onClick: () => setTab("forge")
+                }}
+              />
             ) : (
               (activeQ.data?.goals ?? []).map((g) => <GoalCard key={g.id} goal={g} onDelete={() => delMut.mutate(g.id)} />)
             )}
@@ -106,20 +101,22 @@ function QuestsPage() {
         {tab === "slain" && (
           <div className="space-y-3">
             {(slainQ.data?.goals ?? []).length === 0 ? (
-              <p className="text-center py-16 text-sm" style={{ color: "#6B6864" }}>
-                No quests slain yet. Forge one and grind it to zero.
-              </p>
+              <EmptyState
+                icon="crown"
+                title="The wall is bare."
+                body="When you slay your first quarterly boss, the head hangs here."
+              />
             ) : (
               (slainQ.data?.goals ?? []).map((g) => (
-                <div key={g.id} className="p-4 rounded-lg border" style={{ background: "#13161F", borderColor: "rgba(255,213,79,0.3)" }}>
+                <div key={g.id} className="ss-card" style={{ borderColor: "rgba(255,213,79,0.3)" }}>
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-bold" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>👑 {g.title}</p>
-                      <p className="text-xs mt-1" style={{ color: "#6B6864" }}>
+                      <p className="font-bold" style={{ color: "var(--gold-bright)" }}>👑 {g.title}</p>
+                      <p className="text-xs mt-1" style={{ color: "var(--ink-tertiary)" }}>
                         {TYPE_LABELS[g.type].label} · slain {g.slain_at ? new Date(g.slain_at).toLocaleDateString() : "—"}
                       </p>
                     </div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded-full" style={{ background: "rgba(255,213,79,0.15)", color: "#FFD54F" }}>📕 +1 Tome</span>
+                    <span className="ss-chip ss-chip-gold">📕 +1 Tome</span>
                   </div>
                 </div>
               ))
@@ -129,8 +126,8 @@ function QuestsPage() {
 
         {/* Forge */}
         {tab === "forge" && (
-          <div className="rounded-xl p-6 border max-w-lg" style={{ background: "#13161F", borderColor: "rgba(255,213,79,0.15)" }}>
-            <h2 className="text-lg font-bold mb-4" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+          <div className="ss-card max-w-lg">
+            <h2 className="text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
               Forge a Quest
             </h2>
             <div className="space-y-4">
@@ -155,7 +152,7 @@ function QuestsPage() {
               </Field>
 
               <div>
-                <p className="text-[10px] uppercase tracking-widest mb-2 font-semibold" style={{ color: "#A09D96" }}>Cadence</p>
+                <p className="text-[10px] uppercase tracking-widest mb-2 font-semibold" style={{ color: "var(--ink-secondary)" }}>Cadence</p>
                 <div className="grid grid-cols-3 gap-2">
                   {(["quarterly", "monthly", "weekly"] as GoalType[]).map((k) => {
                     const def = TYPE_LABELS[k];
@@ -163,16 +160,16 @@ function QuestsPage() {
                       <button
                         key={k}
                         onClick={() => setType(k)}
-                        className="rounded p-3 text-left transition-all"
+                        className="ss-card rounded p-3 text-left transition-all"
                         style={{
-                          background: type === k ? `${def.color}20` : "rgba(255,255,255,0.03)",
-                          border: `1px solid ${type === k ? def.color : "rgba(255,255,255,0.06)"}`,
+                          background: type === k ? `${def.color}20` : undefined,
+                          borderColor: type === k ? def.color : undefined,
                         }}
                       >
-                        <p className="text-xs font-bold" style={{ color: type === k ? def.color : "#F0EDE6" }}>
+                        <p className="text-xs font-bold" style={{ color: type === k ? def.color : "var(--ink-primary)" }}>
                           {def.label}
                         </p>
-                        <p className="text-[10px] mt-0.5" style={{ color: "#6B6864" }}>
+                        <p className="text-[10px] mt-0.5" style={{ color: "var(--ink-tertiary)" }}>
                           {def.hp.toLocaleString()} HP · {def.days}d
                         </p>
                       </button>
@@ -184,8 +181,7 @@ function QuestsPage() {
               <button
                 onClick={() => createMut.mutate()}
                 disabled={!title.trim() || createMut.isPending}
-                className="w-full py-3 rounded-md text-xs uppercase tracking-widest font-bold disabled:opacity-40"
-                style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+                className="ss-btn ss-btn-d-primary w-full disabled:opacity-40"
               >
                 {createMut.isPending ? "Forging…" : "Forge Quest"}
               </button>
@@ -203,31 +199,27 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
   const daysLeft = Math.max(0, Math.ceil((Date.parse(goal.deadline) - Date.now()) / 86400000));
 
   return (
-    <div
-      className="rounded-xl p-5 border"
-      style={{ background: "#13161F", borderColor: `${def.color}40` }}
-    >
+    <div className="ss-card" style={{ borderColor: `${def.color}40` }}>
       <div className="flex items-start justify-between mb-3">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-[10px] uppercase tracking-widest font-bold px-2 py-0.5 rounded-full"
-              style={{ background: `${def.color}20`, color: def.color }}>
+            <span className="ss-chip" style={{ background: `${def.color}20`, color: def.color }}>
               {def.label}
             </span>
             {goal.identity && (
-              <span className="text-[10px] uppercase tracking-widest" style={{ color: "#A09D96" }}>
+              <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--ink-secondary)" }}>
                 · {goal.identity}
               </span>
             )}
           </div>
-          <h3 className="text-base font-bold" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>{goal.title}</h3>
+          <h3 className="text-base font-bold" style={{ color: "var(--ink-primary)" }}>{goal.title}</h3>
         </div>
-        <button onClick={onDelete} className="text-[10px] px-2 py-1 rounded" style={{ color: "#6B6864", background: "rgba(255,255,255,0.03)" }}>
+        <button onClick={onDelete} className="ss-btn ss-btn-ghost text-[10px] min-h-[32px] px-3">
           Abandon
         </button>
       </div>
 
-      <div className="flex justify-between text-xs mb-1" style={{ color: "#A09D96" }}>
+      <div className="flex justify-between text-xs mb-1" style={{ color: "var(--ink-secondary)" }}>
         <span>Boss HP</span>
         <span className="font-mono" style={{ color: def.color }}>
           {goal.hp_remaining.toLocaleString()} / {goal.hp_total.toLocaleString()}
@@ -243,7 +235,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
           }}
         />
       </div>
-      <p className="text-[10px] mt-2" style={{ color: "#6B6864" }}>
+      <p className="text-[10px] mt-2" style={{ color: "var(--ink-tertiary)" }}>
         {daysLeft} day{daysLeft === 1 ? "" : "s"} left · Link tasks via Task Edit dialog to drain HP.
       </p>
     </div>
@@ -253,7 +245,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <div className="text-[10px] uppercase tracking-widest mb-1 font-semibold" style={{ color: "#A09D96" }}>
+      <div className="text-[10px] uppercase tracking-widest mb-1 font-semibold" style={{ color: "var(--ink-secondary)" }}>
         {label}
       </div>
       {children}

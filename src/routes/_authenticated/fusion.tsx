@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listMyMonsters } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
 
@@ -27,8 +28,8 @@ function FusionPage() {
   return (
     <AppShell profile={profileQ.data.profile}>
       <div className="p-6 md:p-10 max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Fusion Matrix</h1>
-        <p className="text-sm mb-6" style={{ color: "#A09D96" }}>Combine monsters to create more powerful forms. Consumed monsters are permanently removed.</p>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Fusion Matrix</h1>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>Combine monsters to create more powerful forms. Consumed monsters are permanently removed.</p>
 
         {/* Ingredient slots */}
         <div className="flex gap-4 mb-6 justify-center">
@@ -41,7 +42,7 @@ function FusionPage() {
                   <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center overflow-hidden" style={{ background: "#1A1E2A" }}>
                     <img src="/monsters/placeholder.png" className="w-full h-full object-cover" alt="Monster" />
                   </div>
-                  <p className="text-[10px] font-bold truncate" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>{um.monster.name}</p>
+                  <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>{um.monster.name}</p>
                   <p className="text-[9px]" style={{ color: RARITY_COLOR[r] }}>{um.monster.rarity}</p>
                   <button onClick={() => { const n = [...slots]; n[i] = null; setSlots(n); }}
                     className="mt-2 text-[9px] px-2 py-0.5 rounded" style={{ color: "#E05252", background: "rgba(224,82,82,0.1)" }}>Remove</button>
@@ -63,10 +64,10 @@ function FusionPage() {
         {filledSlots >= 2 && (
           <div className="text-center mb-6">
             <div className="text-2xl mb-2" style={{ color: "#6B6864" }}>↓</div>
-            <div className="inline-block rounded-xl p-6 border" style={{ background: "#13161F", borderColor: "rgba(255,213,79,0.3)" }}>
-              <p className="text-xs uppercase tracking-wider mb-1" style={{ color: "#A09D96" }}>Fusion Result</p>
-              <p className="text-lg font-bold" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Unknown Fusion</p>
-              <p className="text-xs mt-1" style={{ color: "#6B6864" }}>Fusion recipes coming soon — the Matrix pulses with potential.</p>
+            <div className="ss-card-d-glow inline-block p-6">
+              <p className="t-label mb-1">Fusion Result</p>
+              <p className="t-h3 text-lg font-bold" style={{ color: "var(--gold-bright)" }}>Unknown Fusion</p>
+              <p className="text-xs mt-1" style={{ color: "var(--ink-tertiary)" }}>Fusion recipes coming soon — the Matrix pulses with potential.</p>
             </div>
           </div>
         )}
@@ -83,19 +84,19 @@ function FusionPage() {
         )}
 
         {filledSlots === 0 && userMonsters.length === 0 && (
-          <div className="text-center py-16 rounded-xl border-2 border-dashed" style={{ borderColor: "rgba(255,255,255,0.08)", color: "#6B6864" }}>
-            <p className="text-4xl mb-2">🔮</p>
-            <p>No monsters to fuse. Visit the Altar to summon!</p>
-          </div>
+          <EmptyState
+            icon="sparkle"
+            title="The Matrix is dormant."
+            body="Summon two or more monsters to begin fusing."
+          />
         )}
       </div>
 
       {/* Monster selector modal */}
       {selectingSlot !== null && (
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center" style={{ background: "rgba(0,0,0,0.8)" }} onClick={() => setSelectingSlot(null)}>
-          <div onClick={(e) => e.stopPropagation()} className="w-full max-w-lg max-h-[70vh] overflow-y-auto rounded-t-xl sm:rounded-xl p-6 border"
-            style={{ background: "#1A1E2A", borderColor: "rgba(255,213,79,0.2)" }}>
-            <h3 className="text-lg font-bold mb-4" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Select Monster for Slot {selectingSlot + 1}</h3>
+          <div onClick={(e) => e.stopPropagation()} className="ss-modal">
+            <h3 className="t-h3 text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>Select Monster for Slot {selectingSlot + 1}</h3>
             <div className="grid grid-cols-3 gap-2">
               {userMonsters.filter((um: any) => !usedIds.has(um.id)).map((um: any) => (
                 <button key={um.id} onClick={() => {
@@ -111,7 +112,11 @@ function FusionPage() {
               ))}
             </div>
             {userMonsters.filter((um: any) => !usedIds.has(um.id)).length === 0 && (
-              <p className="text-center py-8 text-sm" style={{ color: "#6B6864" }}>No available monsters.</p>
+              <EmptyState
+                icon="sparkle"
+                title="All companions are occupied."
+                body="Free some monsters from the current fusion slots to select new ones."
+              />
             )}
           </div>
         </div>

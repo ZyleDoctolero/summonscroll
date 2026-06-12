@@ -25,19 +25,18 @@ export function DeathOverlay({ trigger }: { trigger: number }) {
     >
       <div className="text-center">
         <div
-          className="text-5xl md:text-6xl font-bold mb-4"
+          className="t-display text-5xl md:text-6xl font-bold mb-4"
           style={{
-            color: "#E05252",
-            fontFamily: "'Cinzel',serif",
+            color: "var(--danger)",
             textShadow: "0 0 32px rgba(224,82,82,0.7), 0 0 64px rgba(224,82,82,0.3)",
           }}
         >
           YOU HAVE FALLEN
         </div>
-        <div className="text-sm md:text-base mb-2" style={{ color: "#A09D96" }}>
+        <div className="text-sm md:text-base mb-2" style={{ color: "var(--ink-secondary)" }}>
           Lost 1 level and all Gold.
         </div>
-        <div className="text-lg" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+        <div className="t-h3 text-lg" style={{ color: "var(--gold-bright)" }}>
           Revived — fight harder.
         </div>
       </div>

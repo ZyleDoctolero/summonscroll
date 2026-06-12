@@ -2,7 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import { AppShell } from "@/components/game/AppShell";
+import { Icon } from "@/components/ui/Icon";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, getFullProfile, getAllAchievements, changeClass, listEquipment, equipItem } from "@/lib/game/supabase-api";
 import { xpToNextLevel } from "@/lib/game/constants";
 
@@ -11,10 +14,10 @@ export const Route = createFileRoute("/_authenticated/profile")({
 });
 
 const CLASS_INFO: Record<string, { icon: string; label: string; desc: string; color: string }> = {
-  warrior: { icon: "⚔", label: "Warrior", desc: "+STR, +crit damage, moderate risk/reward", color: "#E05252" },
-  mage:    { icon: "🔮", label: "Mage", desc: "+INT, +XP, +mana regen, high risk", color: "#4FC3F7" },
-  healer:  { icon: "💚", label: "Healer", desc: "+CON, -damage taken, can heal party", color: "#5FAD41" },
-  rogue:   { icon: "🗡", label: "Rogue", desc: "+PER, +gold, +drop chance, dodge", color: "#CE93D8" },
+  warrior: { icon: "battle", label: "Warrior", desc: "+STR, +crit damage, moderate risk/reward", color: "var(--danger)" },
+  mage:    { icon: "summon", label: "Mage", desc: "+INT, +XP, +mana regen, high risk", color: "var(--cyan)" },
+  healer:  { icon: "hp",     label: "Healer", desc: "+CON, -damage taken, can heal party", color: "var(--success)" },
+  rogue:   { icon: "crown",  label: "Rogue", desc: "+PER, +gold, +drop chance, dodge", color: "var(--violet)" },
 };
 
 type Tab = "stats" | "equipment" | "achievements" | "inventory";
@@ -78,7 +81,7 @@ function ProfilePage() {
   const xpReq = xpToNextLevel(profile.level);
   const xpPct = Math.min(100, (profile.xp / xpReq) * 100);
   const hpPct = Math.min(100, (profile.hp / profile.max_hp) * 100);
-  const classInfo = CLASS_INFO[profile.class] ?? { icon: "👤", label: "None", desc: "Choose a class at Level 10", color: "#A09D96" };
+  const classInfo = CLASS_INFO[profile.class] ?? { icon: "sparkle", label: "None", desc: "Choose a class at Level 10", color: "var(--ink-secondary)" };
 
   const lastClassChange = full?.profile?.last_class_change;
   let cooldownDays = 0;
@@ -98,13 +101,12 @@ function ProfilePage() {
               {profile.display_name[0].toUpperCase()}
             </div>
             <div>
-              <h1 className="text-2xl font-bold" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>{profile.display_name}</h1>
+              <h1 className="t-h1 text-2xl" style={{ color: "var(--gold-bright)" }}>{profile.display_name}</h1>
               <div className="flex items-center gap-2 mt-1">
-                <span className="text-sm" style={{ color: classInfo.color }}>{classInfo.icon} {classInfo.label}</span>
-                <span className="text-xs" style={{ color: "#6B6864" }}>Level {profile.level}</span>
+                <span className="text-sm flex items-center gap-1" style={{ color: classInfo.color }}><Icon name={classInfo.icon as any} size={14} color={classInfo.color} /> {classInfo.label}</span>
+                <span className="t-label" style={{ color: "var(--ink-tertiary)" }}>Level {profile.level}</span>
                 {profile.level >= 10 && (
-                  <button onClick={() => setShowClassPicker(true)} className="text-[10px] px-2 py-0.5 rounded"
-                    style={{ color: "#A09D96", background: "rgba(255,255,255,0.05)" }}>Change</button>
+                  <button onClick={() => setShowClassPicker(true)} className="ss-btn ss-btn-ghost text-[10px] px-2 py-0.5">Change</button>
                 )}
               </div>
             </div>
@@ -142,8 +144,8 @@ function ProfilePage() {
                   {label}
                 </div>
                 <div
-                  className="text-lg font-bold"
-                  style={{ color: `var(--ss-stat-${stat})`, fontFamily: "'JetBrains Mono',monospace" }}
+                  className="t-mono-lg font-bold"
+                  style={{ color: `var(--ss-stat-${stat})` }}
                 >
                   {v}
                 </div>
@@ -152,18 +154,18 @@ function ProfilePage() {
           </div>
 
           {/* Quick stats */}
-          <div className="flex gap-4 mt-4 text-xs" style={{ color: "#A09D96" }}>
-            <span>🐾 {full?.stats?.monstersCollected ?? 0} monsters</span>
-            <span>⚔ {full?.stats?.battlesWon ?? 0} victories</span>
-            <span>🔥 {profile.streak} streak</span>
-            <span>💀 {profile.deaths} deaths</span>
+          <div className="flex gap-4 mt-4 text-xs" style={{ color: "var(--ink-secondary)" }}>
+            <span className="flex items-center gap-1"><Icon name="sparkle" size={12} /> {full?.stats?.monstersCollected ?? 0} monsters</span>
+            <span className="flex items-center gap-1"><Icon name="battle" size={12} /> {full?.stats?.battlesWon ?? 0} victories</span>
+            <span className="flex items-center gap-1"><Icon name="streak" size={12} color="var(--ember)" /> {profile.streak} streak</span>
+            <span className="flex items-center gap-1"><Icon name="death" size={12} color="var(--danger)" /> {profile.deaths} deaths</span>
           </div>
         </div>
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
             <div className="bg-[#13161F] border rounded-xl p-4 md:p-6" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-              <h3 className="font-bold text-lg mb-4 flex items-center gap-2" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>
+              <h3 className="t-h2 font-bold text-lg mb-4 flex items-center gap-2" style={{ color: "var(--ink-primary)" }}>
                 <span className="material-symbols-outlined text-[#FFD54F]">psychiatry</span>
                 Talents
               </h3>
@@ -208,9 +210,13 @@ function ProfilePage() {
         {/* Equipment tab */}
         {tab === "equipment" && (
           <div className="space-y-3">
-            <h2 className="text-lg font-bold" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Your Equipment</h2>
+            <h2 className="t-h2 text-lg font-bold" style={{ color: "var(--ink-primary)" }}>Your Equipment</h2>
             {(equipQ.data?.equipment ?? []).length === 0 ? (
-              <p className="text-sm py-8 text-center" style={{ color: "#6B6864" }}>No equipment yet. Visit the Shop!</p>
+              <EmptyState
+                icon="stone"
+                title="You stand unarmored."
+                body="The Bazaar and the Forge both make gear. The Forge is cheaper."
+              />
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {(equipQ.data?.equipment ?? []).map((ue: any) => (
@@ -243,12 +249,12 @@ function ProfilePage() {
         {tab === "achievements" && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {(achieveQ.data?.achievements ?? []).map((a: { id: string; name: string; description: string; icon: string; unlocked: boolean; reward_crystals: number }) => (
-              <div key={a.id} className="rounded-lg p-4 text-center border"
-                style={{ background: "#13161F", borderColor: a.unlocked ? "#FFD54F" : "rgba(255,255,255,0.05)", opacity: a.unlocked ? 1 : 0.4 }}>
-                <div className="text-3xl mb-2">{a.unlocked ? a.icon : "🔒"}</div>
-                <p className="text-xs font-bold" style={{ color: a.unlocked ? "#F0EDE6" : "#6B6864", fontFamily: "'Cinzel',serif" }}>{a.name}</p>
-                <p className="text-[10px] mt-1" style={{ color: "#6B6864" }}>{a.description}</p>
-                {a.reward_crystals > 0 && <p className="text-[10px] mt-1" style={{ color: "#7FD4FF" }}>+{a.reward_crystals}💎</p>}
+              <div key={a.id} className="ss-card rounded-lg p-4 text-center"
+                style={{ borderColor: a.unlocked ? "var(--gold-bright)" : undefined, opacity: a.unlocked ? 1 : 0.4 }}>
+                <div className="text-3xl mb-2 flex justify-center">{a.unlocked ? a.icon : <Icon name="close" size={24} color="var(--ink-tertiary)" />}</div>
+                <p className="text-xs font-bold" style={{ color: a.unlocked ? "var(--ink-primary)" : "var(--ink-tertiary)" }}>{a.name}</p>
+                <p className="text-[10px] mt-1" style={{ color: "var(--ink-tertiary)" }}>{a.description}</p>
+                {a.reward_crystals > 0 && <p className="text-[10px] mt-1 flex items-center justify-center gap-0.5" style={{ color: "var(--cyan)" }}><Icon name="crystal" size={10} color="var(--cyan)" />+{a.reward_crystals}</p>}
               </div>
             ))}
           </div>
@@ -258,7 +264,11 @@ function ProfilePage() {
         {tab === "inventory" && (
           <div className="space-y-3">
             {(full?.inventory ?? []).length === 0 ? (
-              <p className="text-sm py-8 text-center" style={{ color: "#6B6864" }}>Inventory empty. Complete tasks to earn drops!</p>
+              <EmptyState
+                icon="sparkle"
+                title="Your satchel is empty."
+                body="Tasks drop materials, eggs, food, and rarities. Keep moving."
+              />
             ) : (
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                 {(full?.inventory ?? []).map((inv: any) => (
@@ -274,7 +284,7 @@ function ProfilePage() {
             {/* Pets */}
             {(full?.pets ?? []).length > 0 && (
               <div>
-                <h3 className="text-lg font-bold mt-6 mb-3" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Pets & Mounts</h3>
+                <h3 className="t-h2 text-lg font-bold mt-6 mb-3" style={{ color: "var(--ink-primary)" }}>Pets &amp; Mounts</h3>
                 <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                   {(full?.pets ?? []).map((pet: any) => (
                     <div key={pet.id} className="rounded-lg p-3 text-center border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.05)" }}>
@@ -292,10 +302,10 @@ function ProfilePage() {
         {/* Stats tab (default) */}
         {tab === "stats" && (
           <>
-            <div className="rounded-xl p-6 border mb-4" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
-              <h2 className="text-lg font-bold mb-4" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>Class Details</h2>
-              <p className="text-sm mb-2" style={{ color: "#A09D96" }}>{classInfo.desc}</p>
-              <p className="text-xs" style={{ color: "#6B6864" }}>
+            <div className="ss-card mb-4">
+              <h2 className="text-lg font-bold mb-4" style={{ color: "var(--ink-primary)" }}>Class Details</h2>
+              <p className="text-sm mb-2" style={{ color: "var(--ink-secondary)" }}>{classInfo.desc}</p>
+              <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
                 {profile.class !== "none"
                   ? "Equipment matching your class gets a 50% stat bonus!"
                   : "Choose a class at Level 10 to unlock class bonuses and skills."}
@@ -303,15 +313,15 @@ function ProfilePage() {
             </div>
             
             {/* Heatmap */}
-            <div className="bg-[#13161F] p-6 rounded-xl border" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
-              <h3 className="font-bold text-sm mb-4 text-[#A09D96] uppercase tracking-widest">30-Day Activity</h3>
+            <div className="ss-card">
+              <h3 className="font-bold text-sm mb-4" style={{ color: "var(--ink-secondary)" }}>30-Day Activity</h3>
               <div className="flex gap-1 overflow-x-auto pb-2 no-scrollbar">
                 {Array.from({ length: 30 }).map((_, i) => {
                   const d = new Date();
                   d.setDate(d.getDate() - (29 - i));
                   const ds = d.toISOString().slice(0, 10);
                   const c = heatmapQ.data?.[ds] ?? 0;
-                  const color = c === 0 ? "#1A1E2A" : c < 3 ? "#5FAD4180" : c < 6 ? "#5FAD41" : "#FFD54F";
+                  const color = c === 0 ? "rgba(255,255,255,0.06)" : c < 3 ? "rgba(93,211,158,0.5)" : c < 6 ? "var(--success)" : "var(--gold-bright)";
                   return <div key={i} className="w-4 h-4 rounded-sm flex-shrink-0" style={{ background: color }} title={`${ds}: ${c} tasks`} />;
                 })}
               </div>
@@ -322,28 +332,28 @@ function ProfilePage() {
 
       {/* Class picker modal */}
       {showClassPicker && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.8)" }} onClick={() => setShowClassPicker(false)}>
-          <div onClick={(e) => e.stopPropagation()} className="w-full max-w-md rounded-xl p-6 border" style={{ background: "#1A1E2A", borderColor: "rgba(255,213,79,0.2)" }}>
-            <h2 className="text-xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Choose Your Class</h2>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 ss-modal-backdrop" onClick={() => setShowClassPicker(false)}>
+          <div onClick={(e) => e.stopPropagation()} className="ss-modal">
+            <h2 className="text-xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Choose Your Class</h2>
             {profile.class !== "none" ? (
               cooldownDays > 0 ? (
-                <p className="text-xs mb-4" style={{ color: "#E05252" }}>Class change is on cooldown for {cooldownDays} more day(s).</p>
+                <p className="text-xs mb-4" style={{ color: "var(--danger)" }}>Class change is on cooldown for {cooldownDays} more day(s).</p>
               ) : (
-                <p className="text-xs mb-4" style={{ color: "#A09D96" }}>Changing class costs <span style={{ color: "#FFD54F" }}>500💎</span> and has a 7-day cooldown.</p>
+              <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>Changing class costs <span className="inline-flex items-center gap-0.5" style={{ color: "var(--gold-bright)" }}>500<Icon name="crystal" size={11} color="var(--cyan)" /></span> and has a 7-day cooldown.</p>
               )
             ) : (
-              <p className="text-xs mb-4" style={{ color: "#5FAD41" }}>Your first class choice is free!</p>
+              <p className="text-xs mb-4" style={{ color: "var(--success)" }}>Your first class choice is free!</p>
             )}
             
             <div className="grid grid-cols-2 gap-3">
               {(Object.entries(CLASS_INFO) as Array<[string, typeof CLASS_INFO[string]]>).map(([key, info]) => (
                 <button key={key} onClick={() => classMut.mutate(key as "warrior" | "mage" | "rogue" | "healer")}
                   disabled={classMut.isPending || profile.class === key || cooldownDays > 0}
-                  className="rounded-lg p-4 text-center border transition-all hover:scale-[1.03] disabled:opacity-40"
-                  style={{ background: "#13161F", borderColor: profile.class === key ? info.color : "rgba(255,255,255,0.07)" }}>
-                  <div className="text-3xl mb-2">{info.icon}</div>
+                  className="ss-card rounded-lg p-4 text-center transition-all hover:scale-[1.03] disabled:opacity-40"
+                  style={{ borderColor: profile.class === key ? info.color : undefined }}>
+                  <div className="mb-2 flex justify-center"><Icon name={info.icon as any} size={28} color={info.color} /></div>
                   <p className="font-bold text-sm" style={{ color: info.color }}>{info.label}</p>
-                  <p className="text-[10px] mt-1" style={{ color: "#A09D96" }}>{info.desc}</p>
+                  <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>{info.desc}</p>
                 </button>
               ))}
             </div>
@@ -359,7 +369,7 @@ function Bar({ label, current, max, pct, color, gradient }: { label: string; cur
     <div>
       <div className="flex justify-between text-[10px] uppercase tracking-wider mb-0.5" style={{ color: "#A09D96" }}>
         <span>{label}</span>
-        <span style={{ color, fontFamily: "'JetBrains Mono',monospace" }}>{current}/{max}</span>
+        <span className="t-mono" style={{ color }}>{current}/{max}</span>
       </div>
       <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
         <div className="h-full rounded-full" style={{ width: `${pct}%`, background: gradient ? "linear-gradient(90deg,#C89A3E,#FFD54F)" : color }} />

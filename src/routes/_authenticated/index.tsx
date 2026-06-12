@@ -7,10 +7,14 @@ import { AppShell } from "@/components/game/AppShell";
 import { TaskCard, type Task } from "@/components/game/TaskCard";
 import { TaskFormDialog, type TaskFormValue } from "@/components/game/TaskFormDialog";
 import { DeathOverlay } from "@/components/game/DeathOverlay";
-import { MorningRitual, EveningRitual, RitualStatusPill } from "@/components/game/DailyRitual";
+import { MorningRitual, EveningRitual } from "@/components/game/DailyRitual";
+import { Compass } from "@/components/game/Compass";
+import { Onboarding } from "@/components/game/Onboarding";
+import { TutorialFollowUpModal } from "@/components/game/TutorialFollowUpModal";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { showCascade, type CascadeEvent } from "@/components/game/CascadeCard";
 import { whisper } from "@/components/game/WhisperFeed";
-import { getMyProfile, listTasks, createTask, updateTask, deleteTask, scoreTask, getDevotedCommentary } from "@/lib/game/supabase-api";
+import { getMyProfile, listTasks, createTask, updateTask, deleteTask, scoreTask, getDevotedCommentary, completeOnboarding } from "@/lib/game/supabase-api";
 import type { TaskType } from "@/lib/game/constants";
 
 function shootConfetti() {
@@ -43,19 +47,18 @@ function FocusRitual() {
   const secs = (timeLeft % 60).toString().padStart(2, "0");
 
   return (
-    <div className="bg-[#13161F] p-4 rounded-xl border border-white/5 mb-6 flex items-center justify-between">
+    <div className="ss-card mb-6 flex items-center justify-between">
       <div>
-        <h3 className="font-bold text-[#F0EDE6] flex items-center gap-2" style={{ fontFamily: "'Cinzel',serif" }}>
+        <h3 className="font-bold flex items-center gap-2" style={{ color: "var(--ink-primary)" }}>
           Focus Ritual
         </h3>
-        <p className="text-xs text-[#A09D96]">25 minutes of deep focus.</p>
+        <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>25 minutes of deep focus.</p>
       </div>
       <div className="flex items-center gap-4">
-        <div className="text-2xl font-mono font-bold text-[#FFD54F]">{mins}:{secs}</div>
+        <div className="text-2xl font-mono font-bold" style={{ color: "var(--gold-bright)" }}>{mins}:{secs}</div>
         <button 
           onClick={() => setActive(!active)}
-          className="px-4 py-1.5 rounded font-bold text-xs"
-          style={{ background: active ? "#E05252" : "#C89A3E", color: "#0C0E14" }}
+          className={`ss-btn ${active ? "ss-btn-danger" : "ss-btn-d-primary"}`}
         >
           {active ? "Stop" : "Start"}
         </button>
@@ -84,6 +87,7 @@ function HubPage() {
   const [tourStep, setTourStep] = useState(3);
   const [showMorning, setShowMorning] = useState(false);
   const [showEvening, setShowEvening] = useState(false);
+  const [showTutorialFollowUp, setShowTutorialFollowUp] = useState(false);
 
   useEffect(() => {
     if (profileQ.data?.cron?.died) {
@@ -118,7 +122,16 @@ function HubPage() {
       try { return await scoreTask(v.id, v.direction); }
       finally { setBusyIds((s) => { const n = new Set(s); n.delete(v.id); return n; }); }
     },
-    onSuccess: (res) => {
+    onSuccess: (res, variables) => {
+      // Check if this was the tutorial directive being scored for the first time
+      const wasTutorialDirective = profile?.tutorial_directive_id === variables.id;
+      const wasPositiveScore = variables.direction === "plus" || variables.direction === "complete";
+      
+      if (wasTutorialDirective && wasPositiveScore) {
+        // Show the follow-up modal after a brief delay to let the cascade complete
+        setTimeout(() => setShowTutorialFollowUp(true), 1500);
+      }
+
       // Build the cascade — one unified card showing every consequence.
       const events: CascadeEvent[] = [];
 
@@ -199,25 +212,38 @@ function HubPage() {
     onSuccess: () => { qc.invalidateQueries({ queryKey: ["tasks"] }); },
   });
 
+  const onboardingMut = useMutation({
+    mutationFn: () => completeOnboarding(),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["profile"] });
+      qc.invalidateQueries({ queryKey: ["tasks"] });
+      toast.success("Welcome to SummonScroll!");
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
   if (profileQ.isLoading || tasksQ.isLoading) {
-    return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Loading the realm…</div>;
+    return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Loading the realm…</div>;
   }
 
   const profile = profileQ.data?.profile;
+  const showOnboarding = profile?.onboarding_completed_at == null;
 
   return (
     <AppShell profile={profile}>
+      {showOnboarding && (
+        <Onboarding onComplete={() => onboardingMut.mutate()} />
+      )}
       <DeathOverlay trigger={deathTick} />
       <div className="p-6 md:p-10 max-w-6xl mx-auto">
-        <RitualStatusPill onClickMorning={() => setShowMorning(true)} onClickEvening={() => setShowEvening(true)} />
+        <Compass onOpenMorning={() => setShowMorning(true)} onOpenEvening={() => setShowEvening(true)} />
         <FocusRitual />
         <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Hub Directives</h1>
+            <h1 className="t-h1 text-3xl md:text-4xl mb-1" style={{ color: "var(--gold-bright)" }}>Hub Directives</h1>
           </div>
           <button onClick={() => { setEditing(null); setDialogOpen(true); }}
-            className="px-5 py-2.5 rounded-md font-bold uppercase tracking-widest text-xs transition-transform hover:scale-105"
-            style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}>
+            className="ss-btn ss-btn-d-primary">
             + New Directive
           </button>
         </header>
@@ -227,11 +253,7 @@ function HubPage() {
             <button
               key={t}
               onClick={() => setTab(t)}
-              className="pb-2 text-base font-semibold capitalize transition-colors"
-              style={{
-                color: tab === t ? "#FFD54F" : "#A09D96",
-                borderBottom: `2px solid ${tab === t ? "#FFD54F" : "transparent"}`,
-              }}
+              className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active" : ""}`}
             >
               {t === "habit" ? "Habits" : t === "daily" ? "Dailies" : "To-Dos"}
             </button>
@@ -239,17 +261,27 @@ function HubPage() {
         </div>
 
         {filtered.length === 0 ? (
-          <div className="text-center py-16 rounded-xl border-2 border-dashed" style={{ borderColor: "rgba(255,255,255,0.08)", color: "#A09D96" }}>
-            <div className="text-lg mb-1" style={{ fontFamily: "'Cinzel',serif" }}>No {tab === "habit" ? "habits" : tab === "daily" ? "dailies" : "to-dos"} yet</div>
-            <div className="text-sm">Forge your first directive to start earning Gold and XP.</div>
-          </div>
+          <EmptyState
+            icon={tab === "habit" ? "morning" : tab === "daily" ? "morning" : "checklist"}
+            title={tab === "habit" ? "The grove is quiet." : tab === "daily" ? "The dawn awaits your decree." : "The list is blank."}
+            body={tab === "habit" ? "Forge one small directive. Something you'd do anyway." : "Create your first directive to begin earning Gold and XP."}
+            cta={{
+              label: "Forge a Directive",
+              onClick: () => { setEditing(null); setDialogOpen(true); }
+            }}
+          />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {filtered.map((task) => (
-              <TaskCard key={task.id} task={task} busy={busyIds.has(task.id)}
+              <TaskCard 
+                key={task.id} 
+                task={task} 
+                busy={busyIds.has(task.id)}
+                isTutorial={profile?.tutorial_directive_id === task.id}
                 onScore={(dir) => scoreMut.mutate({ id: task.id, direction: dir })}
                 onEdit={() => { setEditing(task); setDialogOpen(true); }}
-                onDelete={() => deleteMut.mutate(task.id)} />
+                onDelete={() => deleteMut.mutate(task.id)} 
+              />
             ))}
           </div>
         )}
@@ -264,6 +296,12 @@ function HubPage() {
 
       {showMorning && <MorningRitual tasks={tasks} onClose={() => setShowMorning(false)} />}
       {showEvening && <EveningRitual tasks={tasks} onClose={() => setShowEvening(false)} />}
+      {showTutorialFollowUp && (
+        <TutorialFollowUpModal 
+          open={showTutorialFollowUp} 
+          onClose={() => setShowTutorialFollowUp(false)} 
+        />
+      )}
     </AppShell>
   );
 }

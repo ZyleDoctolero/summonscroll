@@ -92,27 +92,20 @@ function CascadeBody({ events }: { events: CascadeEvent[] }) {
   const delays = stagger(events.length, 0.05, 0.04);
 
   return (
-    <div
-      className="rounded-xl border backdrop-blur-md shadow-2xl"
-      style={{
-        background: "rgba(19,22,31,0.94)",
-        borderColor: "rgba(255,213,79,0.18)",
-        boxShadow: "0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,213,79,0.04) inset",
-      }}
-    >
+    <div className="ss-modal backdrop-blur-md">
       <div className="px-4 pt-3 pb-2 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span
-            className="text-[10px] uppercase tracking-[0.2em] font-bold"
-            style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}
+            className="t-label"
+            style={{ color: "var(--gold-bright)" }}
           >
             Cascade
           </span>
-          <span className="text-[10px]" style={{ color: "#6B6864" }}>
+          <span className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
             {events.length} effect{events.length === 1 ? "" : "s"}
           </span>
         </div>
-        <span className="text-[10px]" style={{ color: "#6B6864" }}>tap to dismiss</span>
+        <span className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>tap to dismiss</span>
       </div>
 
       <div className="px-4 pb-4 space-y-1.5">
@@ -139,16 +132,16 @@ function EventRow({ event }: { event: CascadeEvent }) {
       return (
         <div className="flex items-center gap-3 text-sm">
           {event.gold && event.gold > 0 ? (
-            <span style={{ color: "#FFD54F" }}>💰 <NumberFlow value={event.gold} prefix="+" /></span>
+            <span style={{ color: "var(--gold-bright)" }}>💰 <NumberFlow value={event.gold} prefix="+" /></span>
           ) : null}
           {event.xp && event.xp > 0 ? (
-            <span style={{ color: "#A09D96" }}>✦ <NumberFlow value={event.xp} prefix="+" /> XP</span>
+            <span style={{ color: "var(--ink-secondary)" }}>✦ <NumberFlow value={event.xp} prefix="+" /> XP</span>
           ) : null}
           {event.crystals && event.crystals > 0 ? (
-            <span style={{ color: "#7FD4FF" }}>💎 <NumberFlow value={event.crystals} prefix="+" /></span>
+            <span style={{ color: "var(--cyan)" }}>💎 <NumberFlow value={event.crystals} prefix="+" /></span>
           ) : null}
           {event.hp && event.hp !== 0 ? (
-            <span style={{ color: event.hp < 0 ? "#E05252" : "#5FAD41" }}>
+            <span style={{ color: event.hp < 0 ? "var(--danger)" : "var(--success)" }}>
               ❤ <NumberFlow value={event.hp} prefix={event.hp > 0 ? "+" : ""} />
             </span>
           ) : null}
@@ -158,15 +151,15 @@ function EventRow({ event }: { event: CascadeEvent }) {
     case "bond":
       return (
         <div className="text-sm">
-          <span style={{ color: "#FFD54F" }}>💖</span>{" "}
-          <span style={{ color: "#F0EDE6" }}>{event.monsterName}</span>{" "}
-          <span style={{ color: "#A09D96" }}>bond</span>{" "}
+          <span style={{ color: "var(--gold-bright)" }}>💖</span>{" "}
+          <span style={{ color: "var(--ink-primary)" }}>{event.monsterName}</span>{" "}
+          <span style={{ color: "var(--ink-secondary)" }}>bond</span>{" "}
           <NumberFlow
             value={event.to}
             format={{ maximumFractionDigits: 1 }}
             suffix="%"
             className="font-mono"
-            style={{ color: "#FFD54F" }}
+            style={{ color: "var(--gold-bright)" }}
           />
         </div>
       );
@@ -174,11 +167,11 @@ function EventRow({ event }: { event: CascadeEvent }) {
     case "boss":
       return (
         <div className="text-sm">
-          <span style={{ color: "#E05252" }}>👑</span>{" "}
-          <span style={{ color: "#F0EDE6" }}>{event.title}</span>{" "}
-          <span style={{ color: "#A09D96" }}>−</span>
-          <NumberFlow value={event.damage} style={{ color: "#E05252" }} />
-          <span style={{ color: "#6B6864" }} className="text-xs ml-2">
+          <span style={{ color: "var(--danger)" }}>👑</span>{" "}
+          <span style={{ color: "var(--ink-primary)" }}>{event.title}</span>{" "}
+          <span style={{ color: "var(--ink-secondary)" }}>−</span>
+          <NumberFlow value={event.damage} style={{ color: "var(--danger)" }} />
+          <span style={{ color: "var(--ink-tertiary)" }} className="text-xs ml-2">
             ({event.hpRemaining.toLocaleString()} / {event.hpTotal.toLocaleString()})
           </span>
         </div>
@@ -187,11 +180,11 @@ function EventRow({ event }: { event: CascadeEvent }) {
     case "awakening":
       return (
         <div className="text-sm rounded-md p-2" style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}>
-          <span style={{ color: "#FFD54F" }}>⚡</span>{" "}
-          <span style={{ color: "#FFD54F", fontWeight: 600 }}>{event.monsterName}</span>
-          <span style={{ color: "#A09D96" }}> awakened </span>
-          <span style={{ color: "#FFD54F", fontStyle: "italic" }}>{event.skillName}</span>
-          <p className="text-[11px] mt-1 italic" style={{ color: "#A09D96" }}>{event.flavor}</p>
+          <span style={{ color: "var(--gold-bright)" }}>⚡</span>{" "}
+          <span style={{ color: "var(--gold-bright)", fontWeight: 600 }}>{event.monsterName}</span>
+          <span style={{ color: "var(--ink-secondary)" }}> awakened </span>
+          <span style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>{event.skillName}</span>
+          <p className="text-[11px] mt-1 italic" style={{ color: "var(--ink-secondary)" }}>{event.flavor}</p>
         </div>
       );
 
@@ -199,7 +192,7 @@ function EventRow({ event }: { event: CascadeEvent }) {
       return (
         <div className="text-sm">
           <span>🔥</span>{" "}
-          <span style={{ color: "#FF8A65" }}>
+          <span style={{ color: "var(--ember)" }}>
             <NumberFlow value={event.days} /> day streak
           </span>
         </div>
@@ -209,25 +202,25 @@ function EventRow({ event }: { event: CascadeEvent }) {
       return (
         <div className="text-sm">
           <span>{event.itemType === "egg" ? "🥚" : event.itemType === "realm_potion" ? "🧪" : event.itemType === "food" ? "🍖" : "📦"}</span>{" "}
-          <span style={{ color: "#F0EDE6" }}>{event.itemName}</span>{" "}
-          <span style={{ color: "#A09D96" }}>×{event.quantity}</span>
+          <span style={{ color: "var(--ink-primary)" }}>{event.itemName}</span>{" "}
+          <span style={{ color: "var(--ink-secondary)" }}>×{event.quantity}</span>
         </div>
       );
 
     case "leveledUp":
       return (
         <div className="text-sm rounded-md p-2" style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}>
-          <span style={{ color: "#FFD54F", fontWeight: 700 }}>
+          <span style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
             ✦ Level <NumberFlow value={event.level} />
           </span>
-          <span style={{ color: "#A09D96" }} className="ml-2 text-xs">HP restored</span>
+          <span style={{ color: "var(--ink-secondary)" }} className="ml-2 text-xs">HP restored</span>
         </div>
       );
 
     case "tomeMint":
       return (
         <div className="text-sm rounded-md p-2" style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.3)" }}>
-          <span style={{ color: "#FFD54F", fontWeight: 700 }}>
+          <span style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
             📕 Tome of Reverse Heaven minted
           </span>
         </div>
@@ -236,7 +229,7 @@ function EventRow({ event }: { event: CascadeEvent }) {
     case "died":
       return (
         <div className="text-sm rounded-md p-2" style={{ background: "rgba(224,82,82,0.1)", border: "1px solid rgba(224,82,82,0.3)" }}>
-          <span style={{ color: "#E05252", fontWeight: 700 }}>
+          <span style={{ color: "var(--danger)", fontWeight: 700 }}>
             💀 You fell — Gold lost, level −1
           </span>
         </div>

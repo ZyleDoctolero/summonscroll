@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
+import { Icon } from "@/components/ui/Icon";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listAwakeningEvents } from "@/lib/game/supabase-api";
 import { buildHeatmap, listDailyLogs, type HeatmapCell } from "@/lib/game/codex-client";
 
@@ -21,7 +23,7 @@ function CodexPage() {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
   if (profileQ.isLoading) {
-    return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Opening the Codex…</div>;
+    return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Opening the Codex…</div>;
   }
   if (!profileQ.data) return null;
 
@@ -31,9 +33,9 @@ function CodexPage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
-      <div className="p-6 md:p-10 max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>Codex</h1>
-        <p className="text-sm mb-6" style={{ color: "#A09D96" }}>
+      <div className="bg-atmos bg-atmos-codex p-6 md:p-10 max-w-4xl mx-auto min-h-screen">
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Codex</h1>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
           What you did, what you felt, what you forged. The mirror.
         </p>
 
@@ -46,11 +48,7 @@ function CodexPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className="pb-2 text-sm font-semibold transition-colors"
-              style={{
-                color: tab === t.key ? "#FFD54F" : "#A09D96",
-                borderBottom: `2px solid ${tab === t.key ? "#FFD54F" : "transparent"}`,
-              }}
+              className={`ss-tab-d pb-2 text-sm font-semibold ${tab === t.key ? "active" : ""}`}
             >
               {t.label}
             </button>
@@ -65,16 +63,14 @@ function CodexPage() {
       {/* Day detail modal */}
       {selectedDate && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ background: "rgba(0,0,0,0.85)" }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 ss-modal-backdrop"
           onClick={() => setSelectedDate(null)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-md rounded-xl p-6 border"
-            style={{ background: "#1A1E2A", borderColor: "rgba(255,213,79,0.2)" }}
+            className="ss-modal"
           >
-            <h2 className="text-lg font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+            <h2 className="text-lg font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
               {new Date(selectedDate).toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}
             </h2>
             {selectedLog ? (
@@ -92,13 +88,13 @@ function CodexPage() {
                   <Block label="What didn't" body={selectedLog.pm_didnt_go} />
                 )}
                 {(selectedLog.am_intent_task_ids ?? []).length > 0 && (
-                  <p className="text-xs" style={{ color: "#A09D96" }}>
+                  <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
                     ⭐ {selectedLog.am_intent_task_ids.length} Sacred Directive{selectedLog.am_intent_task_ids.length === 1 ? "" : "s"} set
                   </p>
                 )}
               </div>
             ) : (
-              <p className="text-sm mt-4 italic" style={{ color: "#6B6864" }}>The page is blank that day.</p>
+              <p className="text-sm mt-4 italic" style={{ color: "var(--ink-tertiary)" }}>The page is blank that day.</p>
             )}
           </div>
         </div>
@@ -137,13 +133,13 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
 
   return (
     <div>
-      <div className="flex flex-wrap gap-4 mb-4 text-xs" style={{ color: "#A09D96" }}>
-        <span><b style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{activeDays}</b> active days</span>
-        <span><b style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{totalDays}</b> days tracked</span>
-        <span>⚡ <b style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>{totalAwakenings}</b> awakening days</span>
+      <div className="flex flex-wrap gap-4 mb-4 text-xs" style={{ color: "var(--ink-secondary)" }}>
+        <span><b className="t-mono" style={{ color: "var(--gold-bright)" }}>{activeDays}</b> active days</span>
+        <span><b className="t-mono" style={{ color: "var(--gold-bright)" }}>{totalDays}</b> days tracked</span>
+        <span><Icon name="stamina" size={12} color="var(--gold-bright)" /> <b className="t-mono" style={{ color: "var(--gold-bright)" }}>{totalAwakenings}</b> awakening days</span>
       </div>
 
-      <div className="rounded-xl p-4 border overflow-x-auto" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
+      <div className="ss-card overflow-x-auto">
         <div className="flex gap-[3px]">
           {weeks.map((week, wi) => (
             <div key={wi} className="flex flex-col gap-[3px]">
@@ -155,8 +151,8 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
                   className="w-3 h-3 rounded-sm transition-all hover:scale-150 disabled:cursor-default"
                   style={{
                     background: cell ? cellColor(cell) : "transparent",
-                    boxShadow: cell?.hasAwakening ? "0 0 6px #FFD54F" : undefined,
-                    border: cell?.hasAwakening ? "1px solid #FFD54F" : "none",
+                    boxShadow: cell?.hasAwakening ? "0 0 6px var(--gold-bright)" : undefined,
+                    border: cell?.hasAwakening ? "1px solid var(--gold-bright)" : "none",
                   }}
                   title={cell ? `${cell.date}${cell.mood ? ` · mood ${cell.mood}/5` : ""}${cell.hasAwakening ? " · ⚡ awakening" : ""}` : ""}
                 />
@@ -165,7 +161,7 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
           ))}
         </div>
 
-        <div className="flex items-center gap-2 mt-4 text-[10px]" style={{ color: "#6B6864" }}>
+        <div className="flex items-center gap-2 mt-4 text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
           <span>Less</span>
           {[0, 0.5, 1].map((a) => (
             <div key={a} className="w-3 h-3 rounded-sm" style={{ background: cellColor({ activity: a, ritualScore: a * 2, mood: null, hasJournal: false, hasAwakening: false, date: "" }) }} />
@@ -190,24 +186,30 @@ function cellColor(c: HeatmapCell): string {
 function Journal({ logs }: { logs: Array<{ log_date: string; pm_went_well: string | null; pm_didnt_go: string | null; pm_mood: number | null; pm_energy: number | null }> }) {
   const withReflection = logs.filter((l) => l.pm_went_well || l.pm_didnt_go);
   if (withReflection.length === 0) {
-    return <p className="text-center py-16 text-sm" style={{ color: "#6B6864" }}>No journal entries yet. Reflect tonight.</p>;
+    return (
+      <EmptyState
+        icon="evening"
+        title="The page hasn't seen ink."
+        body="An evening reflection takes ninety seconds. The first one matters most."
+      />
+    );
   }
   return (
     <div className="space-y-3">
       {withReflection.map((l) => (
-        <div key={l.log_date} className="rounded-lg p-4 border" style={{ background: "#13161F", borderColor: "rgba(255,255,255,0.07)" }}>
+        <div key={l.log_date} className="ss-card">
           <div className="flex items-center justify-between mb-2">
-            <p className="text-xs uppercase tracking-widest" style={{ color: "#A09D96" }}>
+            <p className="text-xs uppercase tracking-widest" style={{ color: "var(--ink-secondary)" }}>
               {new Date(l.log_date).toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" })}
             </p>
             {l.pm_mood && (
               <span className="text-xs">
-                {MOOD_EMOJI[l.pm_mood - 1]} <span style={{ color: "#FFD54F" }}>{l.pm_mood}/5</span>
+                {MOOD_EMOJI[l.pm_mood - 1]} <span style={{ color: "var(--gold-bright)" }}>{l.pm_mood}/5</span>
               </span>
             )}
           </div>
-          {l.pm_went_well && <p className="text-sm mb-1" style={{ color: "#5FAD41" }}>✓ {l.pm_went_well}</p>}
-          {l.pm_didnt_go && <p className="text-sm" style={{ color: "#E05252" }}>✗ {l.pm_didnt_go}</p>}
+          {l.pm_went_well && <p className="text-sm mb-1" style={{ color: "var(--success)" }}>✓ {l.pm_went_well}</p>}
+          {l.pm_didnt_go && <p className="text-sm" style={{ color: "var(--danger)" }}>✗ {l.pm_didnt_go}</p>}
         </div>
       ))}
     </div>
@@ -218,22 +220,28 @@ function Journal({ logs }: { logs: Array<{ log_date: string; pm_went_well: strin
 
 function AwakeningLog({ events }: { events: Array<{ id: string; skill_name: string; trigger_text: string; created_at: string; user_monster?: { monster?: { name: string; role: string } } }> }) {
   if (events.length === 0) {
-    return <p className="text-center py-16 text-sm" style={{ color: "#6B6864" }}>No skills awakened yet. Keep grinding.</p>;
+    return (
+      <EmptyState
+        icon="sparkle"
+        title="Nothing has awakened in your company."
+        body="Discipline triggers awakenings. Your monsters are listening."
+      />
+    );
   }
   return (
     <div className="space-y-2">
       {events.map((e) => (
-        <div key={e.id} className="rounded-lg p-3 border flex items-start gap-3" style={{ background: "#13161F", borderColor: "rgba(255,213,79,0.2)" }}>
+        <div key={e.id} className="ss-card flex items-start gap-3" style={{ borderColor: "rgba(255,213,79,0.2)" }}>
           <div className="text-2xl">⚡</div>
           <div className="flex-1">
-            <p className="text-sm font-bold" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+            <p className="text-sm font-bold" style={{ color: "var(--gold-bright)" }}>
               {e.skill_name}
             </p>
-            <p className="text-xs" style={{ color: "#F0EDE6" }}>
+            <p className="text-xs" style={{ color: "var(--ink-primary)" }}>
               {e.user_monster?.monster?.name ?? "Unknown"}
             </p>
-            <p className="text-[10px] italic mt-1" style={{ color: "#A09D96" }}>{e.trigger_text}</p>
-            <p className="text-[10px] mt-1" style={{ color: "#6B6864" }}>{new Date(e.created_at).toLocaleString()}</p>
+            <p className="text-[10px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>{e.trigger_text}</p>
+            <p className="text-[10px] mt-1" style={{ color: "var(--ink-tertiary)" }}>{new Date(e.created_at).toLocaleString()}</p>
           </div>
         </div>
       ))}
@@ -243,18 +251,18 @@ function AwakeningLog({ events }: { events: Array<{ id: string; skill_name: stri
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-md px-3 py-2 flex-1" style={{ background: "rgba(0,0,0,0.3)" }}>
-      <div className="text-[10px] uppercase" style={{ color: "#6B6864" }}>{label}</div>
-      <div className="text-sm font-bold mt-0.5" style={{ color: "#FFD54F" }}>{value}</div>
+    <div className="ss-pane flex-1">
+      <div className="text-[10px] uppercase" style={{ color: "var(--ink-tertiary)" }}>{label}</div>
+      <div className="text-sm font-bold mt-0.5" style={{ color: "var(--gold-bright)" }}>{value}</div>
     </div>
   );
 }
 
 function Block({ label, body }: { label: string; body: string }) {
   return (
-    <div className="rounded-md p-3" style={{ background: "rgba(0,0,0,0.3)" }}>
-      <div className="text-[10px] uppercase tracking-wider mb-1" style={{ color: "#A09D96" }}>{label}</div>
-      <p className="text-sm" style={{ color: "#F0EDE6" }}>{body}</p>
+    <div className="ss-pane">
+      <div className="text-[10px] uppercase tracking-wider mb-1" style={{ color: "var(--ink-secondary)" }}>{label}</div>
+      <p className="text-sm" style={{ color: "var(--ink-primary)" }}>{body}</p>
     </div>
   );
 }

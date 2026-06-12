@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile } from "@/lib/game/supabase-api";
 import { listRecipes, craft, type Recipe, type CraftQuality } from "@/lib/game/forge-client";
 
@@ -13,9 +14,9 @@ export const Route = createFileRoute("/_authenticated/forge")({
 });
 
 const QUALITY_LABELS: Record<CraftQuality, { label: string; color: string; goldMult: number; desc: string }> = {
-  standard:   { label: "Standard",   color: "#A09D96", goldMult: 1, desc: "Functional." },
-  refined:    { label: "Refined",    color: "#7FD4FF", goldMult: 3, desc: "+50% stats." },
-  masterwork: { label: "Masterwork", color: "#FFD54F", goldMult: 9, desc: "Random affix." },
+  standard:   { label: "Standard",   color: "var(--ink-secondary)", goldMult: 1, desc: "Functional." },
+  refined:    { label: "Refined",    color: "var(--cyan)",          goldMult: 3, desc: "+50% stats." },
+  masterwork: { label: "Masterwork", color: "var(--gold-bright)",   goldMult: 9, desc: "Random affix." },
 };
 
 function ForgePage() {
@@ -58,15 +59,15 @@ function ForgePage() {
   const level = profileQ.data?.profile.level ?? 1;
 
   if (profileQ.isLoading || recipesQ.isLoading) {
-    return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Stoking the forge…</div>;
+    return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Stoking the forge…</div>;
   }
   if (!profileQ.data) return null;
 
   return (
     <AppShell profile={profileQ.data.profile}>
       <div className="p-6 md:p-10 max-w-5xl mx-auto">
-        <h1 className="text-3xl font-bold mb-1" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>The Forge</h1>
-        <p className="text-sm mb-6" style={{ color: "#A09D96" }}>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>The Forge</h1>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
           Combine stones and materials from Expeditions into wearable gear. Burn extra Gold for Refined or Masterwork quality.
         </p>
 
@@ -79,26 +80,25 @@ function ForgePage() {
             return (
               <div
                 key={r.id}
-                className="rounded-lg p-4 border"
+                className="ss-card"
                 style={{
-                  background: "#13161F",
                   borderColor: locked ? "rgba(255,255,255,0.04)" : "rgba(255,213,79,0.15)",
                   opacity: locked ? 0.5 : 1,
                 }}
               >
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h3 className="font-bold text-sm" style={{ color: "#F0EDE6", fontFamily: "'Cinzel',serif" }}>
+                    <h3 className="font-bold text-sm" style={{ color: "var(--ink-primary)" }}>
                       {locked ? "🔒 " : ""}{r.name}
                     </h3>
                     {r.equipment && (
-                      <p className="text-[10px] uppercase tracking-wider mt-1" style={{ color: "#6B6864" }}>
+                      <p className="text-[10px] uppercase tracking-wider mt-1" style={{ color: "var(--ink-tertiary)" }}>
                         {r.equipment.slot} ·{" "}
                         {[r.equipment.str_bonus && `+${r.equipment.str_bonus} STR`, r.equipment.int_bonus && `+${r.equipment.int_bonus} INT`, r.equipment.con_bonus && `+${r.equipment.con_bonus} CON`, r.equipment.per_bonus && `+${r.equipment.per_bonus} PER`].filter(Boolean).join(" / ")}
                       </p>
                     )}
                   </div>
-                  <span className="text-xs font-mono" style={{ color: goldOk ? "#FFD54F" : "#E05252" }}>
+                  <span className="text-xs font-mono" style={{ color: goldOk ? "var(--gold-bright)" : "var(--danger)" }}>
                     💰 {r.base_gold_cost}
                   </span>
                 </div>
@@ -109,8 +109,8 @@ function ForgePage() {
                     const ok = have >= ing.qty;
                     return (
                       <div key={ing.name} className="flex justify-between text-xs">
-                        <span style={{ color: ok ? "#A09D96" : "#E05252" }}>✨ {ing.name}</span>
-                        <span className="font-mono" style={{ color: ok ? "#5FAD41" : "#E05252" }}>
+                        <span style={{ color: ok ? "var(--ink-secondary)" : "var(--danger)" }}>✨ {ing.name}</span>
+                        <span className="font-mono" style={{ color: ok ? "var(--success)" : "var(--danger)" }}>
                           {have} / {ing.qty}
                         </span>
                       </div>
@@ -119,7 +119,7 @@ function ForgePage() {
                 </div>
 
                 {locked && (
-                  <p className="text-[10px] text-center mb-2" style={{ color: "#6B6864" }}>
+                  <p className="text-[10px] text-center mb-2" style={{ color: "var(--ink-tertiary)" }}>
                     Unlocks at Level {r.unlock_condition.level}
                   </p>
                 )}
@@ -127,11 +127,7 @@ function ForgePage() {
                 <button
                   onClick={() => { setSelectedRecipe(r); setSelectedQuality("standard"); }}
                   disabled={!canCraft || craftMut.isPending}
-                  className="w-full py-2 rounded text-xs uppercase tracking-widest font-bold disabled:opacity-40"
-                  style={{
-                    background: canCraft ? "linear-gradient(135deg,#C89A3E,#FFD54F)" : "rgba(255,255,255,0.05)",
-                    color: canCraft ? "#0C0E14" : "#6B6864",
-                  }}
+                  className={`ss-btn w-full disabled:opacity-40 ${canCraft ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
                 >
                   Strike the Anvil
                 </button>
@@ -141,28 +137,28 @@ function ForgePage() {
         </div>
 
         {(recipesQ.data?.recipes ?? []).length === 0 && (
-          <p className="text-center py-16 text-sm" style={{ color: "#6B6864" }}>
-            No recipes yet. (Database may need seeding.)
-          </p>
+          <EmptyState
+            icon="stone"
+            title="The anvil is cold."
+            body="Reach Level 5 to unlock your first recipe."
+          />
         )}
       </div>
 
       {/* Quality picker modal */}
       {selectedRecipe && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ background: "rgba(0,0,0,0.85)" }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 ss-modal-backdrop"
           onClick={() => setSelectedRecipe(null)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-md rounded-xl p-6 border"
-            style={{ background: "#1A1E2A", borderColor: "rgba(255,213,79,0.3)" }}
+            className="ss-modal"
           >
-            <h2 className="text-lg font-bold mb-1 text-center" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif" }}>
+            <h2 className="text-lg font-bold mb-1 text-center" style={{ color: "var(--gold-bright)" }}>
               Choose Quality
             </h2>
-            <p className="text-xs text-center mb-4" style={{ color: "#A09D96" }}>
+            <p className="text-xs text-center mb-4" style={{ color: "var(--ink-secondary)" }}>
               Higher quality consumes more Gold. Masterwork rolls an affix.
             </p>
 
@@ -176,17 +172,17 @@ function ForgePage() {
                     key={q}
                     onClick={() => setSelectedQuality(q)}
                     disabled={!canAfford}
-                    className="w-full text-left p-3 rounded transition-all disabled:opacity-30"
+                    className="ss-card w-full text-left p-3 disabled:opacity-30"
                     style={{
-                      background: selectedQuality === q ? `${def.color}18` : "rgba(0,0,0,0.3)",
-                      border: `1px solid ${selectedQuality === q ? def.color : "rgba(255,255,255,0.06)"}`,
+                      background: selectedQuality === q ? `rgba(255,213,79,0.08)` : undefined,
+                      borderColor: selectedQuality === q ? def.color : undefined,
                     }}
                   >
                     <div className="flex justify-between items-center">
                       <span style={{ color: def.color, fontWeight: 700 }}>{def.label}</span>
-                      <span className="text-xs font-mono" style={{ color: canAfford ? "#FFD54F" : "#E05252" }}>💰 {cost}</span>
+                      <span className="text-xs font-mono" style={{ color: canAfford ? "var(--gold-bright)" : "var(--danger)" }}>💰 {cost}</span>
                     </div>
-                    <p className="text-[10px] mt-1" style={{ color: "#A09D96" }}>{def.desc}</p>
+                    <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>{def.desc}</p>
                   </button>
                 );
               })}
@@ -195,16 +191,14 @@ function ForgePage() {
             <div className="flex gap-2">
               <button
                 onClick={() => setSelectedRecipe(null)}
-                className="flex-1 py-2.5 rounded-md text-xs uppercase tracking-widest font-bold"
-                style={{ background: "rgba(255,255,255,0.05)", color: "#A09D96" }}
+                className="ss-btn ss-btn-secondary flex-1"
               >
                 Cancel
               </button>
               <button
                 onClick={() => craftMut.mutate({ recipeId: selectedRecipe.id, quality: selectedQuality })}
                 disabled={craftMut.isPending}
-                className="flex-[2] py-2.5 rounded-md text-xs uppercase tracking-widest font-bold disabled:opacity-40"
-                style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+                className="ss-btn ss-btn-d-primary flex-[2] disabled:opacity-40"
               >
                 {craftMut.isPending ? "Striking…" : "Forge"}
               </button>

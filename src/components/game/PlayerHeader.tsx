@@ -1,4 +1,5 @@
 import { xpToNextLevel } from "@/lib/game/constants";
+import { Icon } from "@/components/ui/Icon";
 
 type Profile = {
   display_name: string;
@@ -48,15 +49,15 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
       className="hidden md:flex items-center gap-4 fixed top-0 right-0 z-40 h-14 px-6 border-b backdrop-blur-md"
       style={{
         left: 260,
-        background: "rgba(15,18,26,0.85)",
-        borderColor: "rgba(255,255,255,0.06)",
+        background: "var(--bg-stage)",
+        borderColor: "var(--ss-hairline)",
       }}
     >
       {/* Level + Class */}
       <div className="flex items-center gap-1.5 relative">
         <span className="text-sm" title={profile.class ?? "none"}>{classIcon}</span>
-        <span className="text-[10px] uppercase tracking-wider" style={{ color: "#A09D96" }}>LVL</span>
-        <span className="text-sm font-bold" style={{ color: "#FFD54F", fontFamily: "'JetBrains Mono',monospace" }}>
+        <span className="text-[10px] uppercase tracking-wider" style={{ color: "var(--ink-tertiary)" }}>LVL</span>
+        <span className="t-mono font-bold" style={{ color: "var(--gold-bright)" }}>
           {profile.level}
         </span>
         {isComboActive && (
@@ -78,40 +79,38 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
 
       {/* Stamina */}
       {profile.stamina_max !== undefined && (
-        <Currency icon="bolt" label="⚡" value={profile.stamina ?? 0} color="#FFB74D" />
+        <Currency icon="stamina" label={<Icon name="stamina" size={14} color="var(--gold-glow)" />} value={profile.stamina ?? 0} color="#FFB74D" />
       )}
 
       {/* Currencies */}
-      <Currency icon="paid" label="💰" value={profile.gold} color="#FFD54F" />
-      <Currency icon="diamond" label="💎" value={profile.crystals} color="#7FD4FF" />
-      <Currency icon="key" label="🔑" value={profile.pact_seals} color="#CE93D8" />
+      <Currency icon="gold" label={<Icon name="gold" size={14} color="var(--gold-bright)" />} value={profile.gold} color="#FFD54F" />
+      <Currency icon="crystal" label={<Icon name="crystal" size={14} color="var(--cyan)" />} value={profile.crystals} color="#7FD4FF" />
+      <Currency icon="seal" label={<Icon name="seal" size={14} color="var(--violet)" />} value={profile.pact_seals} color="#CE93D8" />
 
       {/* Streak */}
       <div className="flex gap-2">
         <div
-          className="flex items-center gap-1 px-2 py-1 rounded border"
+          className="ss-chip ss-chip-muted"
           style={{
-            background: "rgba(0,0,0,0.3)",
-            borderColor: profile.streak > 0 ? "rgba(255,138,101,0.3)" : "rgba(255,255,255,0.06)",
+            borderColor: profile.streak > 0 ? "rgba(255,138,101,0.3)" : "var(--ss-hairline)",
             animation: profile.streak > 0 ? "pulse 2s ease-in-out infinite" : undefined,
           }}
         >
-          <span className="text-sm">{profile.streak > 0 ? "🔥" : "❄"}</span>
-          <span className="text-sm font-bold" style={{
-            color: profile.streak > 0 ? "#FF8A65" : "#6B6864",
-            fontFamily: "'JetBrains Mono',monospace",
+          <Icon name={profile.streak > 0 ? "streak" : "cold"} size={14} color={profile.streak > 0 ? "#FF8A65" : "var(--ink-tertiary)"} />
+          <span className="t-mono font-bold" style={{
+            color: profile.streak > 0 ? "#FF8A65" : "var(--ink-tertiary)",
           }}>
             {profile.streak}
           </span>
         </div>
         {(profile.streak_freeze_charges ?? 0) > 0 && (
           <div
-            className="flex items-center gap-1 px-2 py-1 rounded border"
-            style={{ background: "rgba(0,0,0,0.3)", borderColor: "rgba(79,195,247,0.3)" }}
+            className="ss-chip ss-chip-muted"
+            style={{ borderColor: "rgba(79,195,247,0.3)" }}
             title="Freeze Charms (Protects streak)"
           >
-            <span className="text-sm">🧊</span>
-            <span className="text-sm font-bold" style={{ color: "#4FC3F7", fontFamily: "'JetBrains Mono',monospace" }}>
+            <Icon name="cold" size={14} color="var(--cyan)" />
+            <span className="t-mono font-bold" style={{ color: "#4FC3F7" }}>
               ×{profile.streak_freeze_charges}
             </span>
           </div>
@@ -126,9 +125,9 @@ function MiniBar({ label, current, max, pct, color, glow, gradient }: {
 }) {
   return (
     <div className="flex-1 max-w-[140px]">
-      <div className="flex justify-between text-[10px] uppercase tracking-wider mb-0.5" style={{ color: "#A09D96" }}>
+      <div className="flex justify-between text-[10px] uppercase tracking-wider mb-0.5" style={{ color: "var(--ink-tertiary)" }}>
         <span>{label}</span>
-        <span style={{ color, fontFamily: "'JetBrains Mono',monospace" }}>
+        <span style={{ color }} className="t-mono">
           {current}/{max}
         </span>
       </div>
@@ -146,14 +145,11 @@ function MiniBar({ label, current, max, pct, color, glow, gradient }: {
   );
 }
 
-function Currency({ icon, label, value, color }: { icon: string; label: string; value: number; color: string }) {
+function Currency({ icon, label, value, color }: { icon: string; label: React.ReactNode; value: number; color: string }) {
   return (
-    <div
-      className="flex items-center gap-1 px-2 py-1 rounded border"
-      style={{ background: "rgba(0,0,0,0.3)", borderColor: "rgba(255,255,255,0.06)" }}
-    >
-      <span className="text-xs">{label}</span>
-      <span className="text-sm font-bold" style={{ color: "#F0EDE6", fontFamily: "'JetBrains Mono',monospace" }}>
+    <div className="ss-chip ss-chip-muted">
+      <span className="flex items-center">{label}</span>
+      <span className="t-mono font-bold" style={{ color: "var(--ink-primary)" }}>
         {value.toLocaleString()}
       </span>
     </div>

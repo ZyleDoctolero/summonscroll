@@ -1,6 +1,8 @@
 # 10 — Monster Art
 
-> **Standalone** — runs in parallel with all other files.
+> **Standalone** — runs in parallel with all other files. **Pairs tightly
+> with [13_REALM_WORLDGEN.md](./13_REALM_WORLDGEN.md)** — every monster gets a
+> per-realm style fragment injected into its prompt for visual cohesion.
 
 ## The problem
 
@@ -95,6 +97,28 @@ game called SummonScroll. Every output must obey these rules without exception.
 - Role: {role}          (attacker / tank / healer / support / debuffer)
 - Element: {element}    (Arcane / Chaos / Death / Divine / Dread / Digital / Nature / Stellar / Primal)
 - Origin: {origin}
+- Realm: {realm_name}   — pulled from realms table via realm_id
+
+## Realm context (auto-injected — see file 13)
+
+After the rarity/element/role hints, inject this block based on the monster's
+realm. The text comes from `prompts/redesign/13_REALM_WORLDGEN.md`.
+
+```
+[REALM CONTEXT — {realm_name}]
+Palette: {realm_palette_string}
+Visual motifs to incorporate: {realm_motifs}
+Voice / stance: {realm_voice_stance}
+
+This monster lives in the {realm_name}. It must visually belong to the
+same realm as: {3-5 sibling monster names from same realm_id}. If you
+wouldn't put this creature beside them in a single illustrated plate,
+regenerate.
+```
+
+The `scripts/regen_monsters.mjs` runner builds this fragment by looking up
+the monster's `realm_id`, fetching the realm fragment from file 13's content
+(or a JSON map of it), and querying 3 sibling monsters from the same realm.
 
 ## Rarity visual budget
 - common/uncommon: simple silhouette, 1–2 distinguishing features, muted color

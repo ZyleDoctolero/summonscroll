@@ -1,16 +1,18 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { checkPromotionEligibility, promoteMonster } from "@/lib/game/supabase-api";
 import { trans, ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
 import { sounds } from "@/lib/ui/sounds";
+import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
 
 type Props = {
   userMonsterId: string;
   monsterName: string;
+  open: boolean;
   onClose: () => void;
 };
 
@@ -84,9 +86,11 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
   }, [stage, rm]);
 
   return (
-    <ModalShell onClose={onClose} stage={stage}>
-      <Title>The Promotion Chamber</Title>
-
+    <ResponsiveDialog 
+      open={true} 
+      onOpenChange={(open) => !open && stage !== "ritual" && onClose()}
+      title="The Promotion Chamber"
+    >
       {checkQ.isLoading ? (
         <p className="text-center text-sm py-12" style={{ color: "#A09D96" }}>Reading the soul…</p>
       ) : !checkQ.data ? null : (
@@ -100,54 +104,7 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
           closeBtnRef={closeBtnRef}
         />
       )}
-    </ModalShell>
-  );
-}
-
-// ─── Modal shell ────────────────────────────────────────────────────────────
-
-function ModalShell({ children, onClose, stage }: { children: React.ReactNode; onClose: () => void; stage: string }) {
-  const rm = reducedMotion();
-  return (
-    <AnimatePresence>
-      <motion.div
-        key="backdrop"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={trans.modalIn}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
-        style={{ background: "rgba(0,0,0,0.78)", backdropFilter: "blur(2px)" }}
-        onClick={() => stage !== "ritual" && onClose()}
-      >
-        <motion.div
-          initial={rm ? { opacity: 0 } : { opacity: 0, y: 20, scale: 0.98 }}
-          animate={rm ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
-          exit={rm ? { opacity: 0 } : { opacity: 0, y: 8, scale: 0.99 }}
-          transition={{ duration: dur.measured, ease: ease.weighty }}
-          onClick={(e) => e.stopPropagation()}
-          className="w-full max-w-md rounded-2xl p-6 border relative"
-          style={{
-            background: "linear-gradient(180deg, #1B1F2A 0%, #15181F 100%)",
-            borderColor: "rgba(255,213,79,0.18)",
-            boxShadow: "0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.03) inset",
-          }}
-        >
-          {children}
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  );
-}
-
-function Title({ children }: { children: React.ReactNode }) {
-  return (
-    <h2
-      className="text-xl font-bold text-center mb-4"
-      style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif", letterSpacing: "0.02em" }}
-    >
-      {children}
-    </h2>
+    </ResponsiveDialog>
   );
 }
 
@@ -174,9 +131,9 @@ function Body({
 
   return (
     <>
-      <p className="text-xs text-center mb-6" style={{ color: "#A09D96" }}>
-        Bring <span style={{ color: "#F0EDE6", fontWeight: 600 }}>{monsterName}</span> to{" "}
-        <NumberFlow value={req.newStarLevel} suffix="★" className="font-bold" style={{ color: "#FFD54F" }} />
+      <p className="text-xs text-center mb-6" style={{ color: "var(--ink-secondary)" }}>
+        Bring <span style={{ color: "var(--ink-primary)", fontWeight: 600 }}>{monsterName}</span> to{" "}
+        <NumberFlow value={req.newStarLevel} suffix="★" className="font-bold" style={{ color: "var(--gold-bright)" }} />
       </p>
 
       {/* Ritual circle */}
@@ -190,7 +147,7 @@ function Body({
           transition={{ duration: 1.5, repeat: stage === "ritual" ? Infinity : 0, ease: ease.inOut }}
           className="w-32 h-32 rounded-full border-2 relative grid place-items-center"
           style={{
-            borderColor: stage === "ritual" ? "#FFD54F" : "rgba(255,213,79,0.3)",
+            borderColor: stage === "ritual" ? "var(--gold-bright)" : "rgba(255,213,79,0.3)",
             background: "radial-gradient(circle, rgba(255,213,79,0.18), transparent 70%)",
           }}
         >
@@ -207,7 +164,7 @@ function Body({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.1 }}
               className="absolute -bottom-2 px-2 py-0.5 rounded-full text-[10px] font-bold"
-              style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+              style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
             >
               {req.newStarLevel}★
             </motion.div>
@@ -219,7 +176,7 @@ function Body({
         <>
           {/* Requirements grid */}
           <div className="rounded-xl p-3 mb-4 space-y-1" style={{ background: "rgba(0,0,0,0.32)" }}>
-            <p className="text-[10px] uppercase tracking-[0.18em] mb-1.5" style={{ color: "#6B6864" }}>Requirements</p>
+            <p className="text-[10px] uppercase tracking-[0.18em] mb-1.5" style={{ color: "var(--ink-tertiary)" }}>Requirements</p>
             <ReqRow ok={stoneOk}>
               <span><span className="mr-1">🪨</span>{reqStone}</span>
               <span className="font-mono"><NumberFlow value={c.have.stones} /> <span style={{ color: "#6B6864" }}>/ {req.stones.qty}</span></span>
@@ -245,13 +202,13 @@ function Body({
           </div>
 
           {req.unlocks && (
-            <p className="text-xs text-center mb-4 italic" style={{ color: "#FFD54F" }}>
+            <p className="text-xs text-center mb-4 italic" style={{ color: "var(--gold-bright)" }}>
               ↳ Unlocks: {req.unlocks}
             </p>
           )}
 
           {!c.canPromote && (
-            <p className="text-xs text-center mb-4" style={{ color: "#E05252" }}>{c.reason}</p>
+            <p className="text-xs text-center mb-4" style={{ color: "var(--danger)" }}>{c.reason}</p>
           )}
 
           <div className="flex gap-2">
@@ -259,7 +216,7 @@ function Body({
               ref={closeBtnRef}
               onClick={onClose}
               className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-              style={{ background: "rgba(255,255,255,0.04)", color: "#A09D96", border: "1px solid rgba(255,255,255,0.06)" }}
+              style={{ background: "rgba(255,255,255,0.04)", color: "var(--ink-secondary)", border: "1px solid rgba(255,255,255,0.06)" }}
             >
               Cancel
             </SpringyButton>
@@ -268,8 +225,8 @@ function Body({
               disabled={!c.canPromote}
               className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
               style={{
-                background: c.canPromote ? "linear-gradient(135deg,#C89A3E,#FFD54F)" : "rgba(255,255,255,0.05)",
-                color: c.canPromote ? "#0C0E14" : "#6B6864",
+                background: c.canPromote ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))" : "rgba(255,255,255,0.05)",
+                color: c.canPromote ? "var(--bg-deep)" : "var(--ink-tertiary)",
                 boxShadow: c.canPromote ? "0 4px 20px rgba(255,213,79,0.28)" : "none",
               }}
             >
@@ -281,13 +238,13 @@ function Body({
 
       {stage === "ritual" && (
         <>
-          <p className="text-center text-sm mb-4" style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif", letterSpacing: "0.06em" }}>
+          <p className="t-label text-center text-sm mb-4" style={{ color: "var(--gold-bright)", letterSpacing: "0.06em" }}>
             The Chamber sings.
           </p>
           <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
             <motion.div
               className="h-full"
-              style={{ background: "linear-gradient(90deg, #C89A3E, #FFD54F)", width: `${ritualPct}%` }}
+              style={{ background: "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))", width: `${ritualPct}%` }}
               transition={{ duration: 0.05 }}
             />
           </div>
@@ -300,21 +257,21 @@ function Body({
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={trans.cascadeIn}
-            className="text-2xl mb-2"
-            style={{ color: "#FFD54F", fontFamily: "'Cinzel',serif", letterSpacing: "0.04em" }}
+            className="t-h2 text-2xl mb-2"
+            style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
           >
             ★ Promoted
           </motion.p>
-          <p className="text-sm mb-1" style={{ color: "#F0EDE6" }}>
-            {monsterName} now stands at <NumberFlow value={req.newStarLevel} suffix="★" className="font-bold" style={{ color: "#FFD54F" }} />
+          <p className="text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
+            {monsterName} now stands at <NumberFlow value={req.newStarLevel} suffix="★" className="font-bold" style={{ color: "var(--gold-bright)" }} />
           </p>
           {req.unlocks && (
-            <p className="text-xs italic mb-4" style={{ color: "#FFD54F" }}>{req.unlocks}</p>
+            <p className="text-xs italic mb-4" style={{ color: "var(--gold-bright)" }}>{req.unlocks}</p>
           )}
           <SpringyButton
             onClick={onClose}
             className="w-full py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-            style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+            style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
           >
             Continue
           </SpringyButton>
@@ -335,11 +292,11 @@ function ReqRow({ ok, children }: { ok: boolean; children: React.ReactNode }) {
       className="flex justify-between items-center text-xs px-2 py-1.5 rounded"
       style={{
         background: ok ? "rgba(95,173,65,0.08)" : "rgba(224,82,82,0.05)",
-        color: ok ? "#5FAD41" : "#E05252",
+        color: ok ? "var(--success)" : "var(--danger)",
       }}
     >
       {children}
-      <span className="ml-2 text-[11px]" style={{ color: ok ? "#5FAD41" : "#E05252" }}>{ok ? "✓" : "—"}</span>
+      <span className="ml-2 text-[11px]" style={{ color: ok ? "var(--success)" : "var(--danger)" }}>{ok ? "✓" : "—"}</span>
     </motion.div>
   );
 }

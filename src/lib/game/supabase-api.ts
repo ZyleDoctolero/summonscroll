@@ -513,6 +513,10 @@ export {
 } from "./rituals-client";
 export type { DailyLog, EveningReflection } from "./rituals-client";
 
+// ─── Onboarding ─────────────────────────────────────────────────────────────
+
+export { completeOnboarding, hasCompletedOnboarding } from "./onboarding-client";
+
 // ─── Skill Awakening by Deeds ──────────────────────────────────────────────
 
 export { evaluateAwakenings, listAwakeningEvents, awakeningsForRole } from "./awakening-client";

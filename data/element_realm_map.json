@@ -1,0 +1,18 @@
+{
+  "element_to_realm": {
+    "Arcane": "Ancient Vaults",
+    "Chaos": "Chaos Wastes",
+    "Void": "The Outer Dark",
+    "Death": "Blighted Expanse",
+    "Nature": "Wild Frontier",
+    "Divine": "Divine Threshold",
+    "Dread": "Haunted Veil",
+    "Digital": "Digital Nexus",
+    "Primal": "Elder Realm",
+    "Stellar": "Void Frontier"
+  },
+  "name_overrides": {
+    "Iron Dominion": ["cog", "gear", "steam", "automaton", "forge", "iron", "machine", "construct", "lathe", "boiler", "foundry", "brass", "piston", "wrench", "factory", "engine", "mecha", "robot"],
+    "Myth Eternal": ["primordial", "first", "eternal", "genesis", "origin", "ancient", "mythic", "titan", "progenitor", "ur-", "proto", "archetype", "golden", "dawn", "lotus", "bronze"]
+  }
+}

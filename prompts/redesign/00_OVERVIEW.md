@@ -31,6 +31,7 @@ This redesign fixes all of that systematically. Each file is one decision area.
 | 10 | [MONSTER_ART](./10_MONSTER_ART.md) | The Gemini prompt + triage script + batch runner for the 202 existing images. | 0.5 day setup, ongoing generation |
 | 11 | [MOBILE_FIRST](./11_MOBILE_FIRST.md) | Vaul drawers replacing modals on small viewports. Touch targets. | 1.5 days |
 | 12 | [IMPLEMENTATION_ORDER](./12_IMPLEMENTATION_ORDER.md) | Dependency graph + recommended sequencing + rollback plan. | reference only |
+| 13 | [REALM_WORLDGEN](./13_REALM_WORLDGEN.md) | **The world story.** Meta-cosmology + lore + palette + voice + sample creatures for all 12 realms. Origin→realm mapping. 3-act storyline arc. Pairs with file 10 for cohesive monster generation per realm. | 1 day to seed lore + 0.5 day to inject prompts |
 
 **Total committed effort: ~9 working days** (if a single dev) for proposals
 A/B/C. Add **+3 to +5 days** if Proposal D is chosen (extra chrome + monster

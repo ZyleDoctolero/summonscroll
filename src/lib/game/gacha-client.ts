@@ -23,7 +23,16 @@ export async function pullBanner(bannerId: string, count: 1 | 10) {
   const isPactSeal = banner.banner_type === "pact_seal";
   const cost1 = isPactSeal ? (banner.pull_cost_seals ?? 1) : banner.pull_cost_crystals;
   const cost10 = isPactSeal ? (banner.pull_cost_seals ?? 1) * 10 : banner.pull_cost_10_crystals;
-  const totalCost = count === 1 ? cost1 : cost10;
+  
+  // Check if this is the user's first pull EVER (free first pull for onboarding)
+  const { count: pullCount } = await supabase
+    .from("pulls")
+    .select("id", { count: "exact", head: true })
+    .eq("user_id", user.id);
+  
+  const isFirstPull = (pullCount ?? 0) === 0;
+  const totalCost = isFirstPull ? 0 : (count === 1 ? cost1 : cost10);
+  
   const balance = isPactSeal ? profile.pact_seals : profile.crystals;
   if (balance < totalCost) throw new Error(`Insufficient ${isPactSeal ? "Pact Seals" : "Crystals"}. Need ${totalCost}, have ${balance}.`);
 
@@ -41,6 +50,11 @@ export async function pullBanner(bannerId: string, count: 1 | 10) {
 
   for (let i = 0; i < count; i++) {
     let rolledRarity = rollRarity(bannerType);
+    
+    // First pull guarantee: ensure at least one Rare in the first 10-pull
+    if (isFirstPull && i === 0 && count === 10) {
+      rolledRarity = "rare";
+    }
 
     if (rolledRarity === "ex" && bannerType !== "pact_seal" && bannerType !== "streak") rolledRarity = "mythic";
 

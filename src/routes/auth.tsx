@@ -76,8 +76,8 @@ function AuthPage() {
           style={{ background: "linear-gradient(90deg,transparent, #FFD54F, transparent)" }}
         />
         <h1
-          className="text-center text-3xl font-bold"
-          style={{ color: "#FFD54F", fontFamily: "'Cinzel', serif", letterSpacing: "0.04em" }}
+          className="t-h1 text-center text-3xl font-bold"
+          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
         >
           SummonScroll
         </h1>
