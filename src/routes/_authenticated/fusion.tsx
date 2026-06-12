@@ -20,7 +20,7 @@ function FusionPage() {
   const userMonsters = monstersQ.data?.userMonsters ?? [];
   const usedIds = new Set(slots.filter(Boolean));
 
-  if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Loading…</div>;
+  if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Loading…</div>;
   if (!profileQ.data) return null;
 
   const filledSlots = slots.filter(Boolean).length;
@@ -38,21 +38,21 @@ function FusionPage() {
             if (um) {
               const r = um.monster.rarity as Rarity;
               return (
-                <div key={i} className="rounded-xl p-4 text-center w-32" style={{ background: "#13161F", border: `1px solid ${RARITY_COLOR[r]}` }}>
-                  <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center overflow-hidden" style={{ background: "#1A1E2A" }}>
+                <div key={i} className="ss-card text-center w-32" style={{ borderColor: RARITY_COLOR[r] }}>
+                  <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center overflow-hidden ss-pane">
                     <img src="/monsters/placeholder.png" className="w-full h-full object-cover" alt="Monster" />
                   </div>
                   <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>{um.monster.name}</p>
                   <p className="text-[9px]" style={{ color: RARITY_COLOR[r] }}>{um.monster.rarity}</p>
                   <button onClick={() => { const n = [...slots]; n[i] = null; setSlots(n); }}
-                    className="mt-2 text-[9px] px-2 py-0.5 rounded" style={{ color: "#E05252", background: "rgba(224,82,82,0.1)" }}>Remove</button>
+                    className="mt-2 text-[9px] px-2 py-0.5 rounded font-semibold" style={{ color: "var(--danger)", background: "rgba(255,94,94,0.1)" }}>Remove</button>
                 </div>
               );
             }
             return (
               <button key={i} onClick={() => setSelectingSlot(i)}
-                className="rounded-xl p-4 border-2 border-dashed w-32 min-h-[120px] flex flex-col items-center justify-center"
-                style={{ borderColor: "rgba(255,255,255,0.1)", color: "#6B6864" }}>
+                className="rounded-xl p-4 border-2 border-dashed w-32 min-h-[120px] flex flex-col items-center justify-center transition-colors hover:border-white/20"
+                style={{ borderColor: "var(--ss-border)", color: "var(--ink-tertiary)" }}>
                 <span className="text-2xl mb-1">+</span>
                 <span className="text-[10px]">Slot {i + 1}{i === 2 ? " (opt)" : ""}</span>
               </button>
@@ -63,7 +63,7 @@ function FusionPage() {
         {/* Arrow + result preview */}
         {filledSlots >= 2 && (
           <div className="text-center mb-6">
-            <div className="text-2xl mb-2" style={{ color: "#6B6864" }}>↓</div>
+            <div className="text-2xl mb-2" style={{ color: "var(--ink-tertiary)" }}>↓</div>
             <div className="ss-card-d-glow inline-block p-6">
               <p className="t-label mb-1">Fusion Result</p>
               <p className="t-h3 text-lg font-bold" style={{ color: "var(--gold-bright)" }}>Unknown Fusion</p>
@@ -75,9 +75,8 @@ function FusionPage() {
         {/* Warning */}
         {filledSlots >= 2 && (
           <div className="text-center mb-6">
-            <p className="text-xs" style={{ color: "#E05252" }}>⚠ Consumed monsters will be permanently removed from your collection.</p>
-            <button disabled className="mt-3 px-8 py-3 rounded-lg font-bold uppercase tracking-widest text-sm opacity-40"
-              style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}>
+            <p className="text-xs" style={{ color: "var(--danger)" }}>⚠ Consumed monsters will be permanently removed from your collection.</p>
+            <button disabled className="ss-btn ss-btn-d-primary mt-3 px-8 py-3 opacity-40">
               🔮 Perform Fusion (Coming Soon)
             </button>
           </div>
@@ -94,19 +93,19 @@ function FusionPage() {
 
       {/* Monster selector modal */}
       {selectingSlot !== null && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center" style={{ background: "rgba(0,0,0,0.8)" }} onClick={() => setSelectingSlot(null)}>
-          <div onClick={(e) => e.stopPropagation()} className="ss-modal">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center ss-modal-backdrop" onClick={() => setSelectingSlot(null)}>
+          <div onClick={(e) => e.stopPropagation()} className="ss-modal max-w-md">
             <h3 className="t-h3 text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>Select Monster for Slot {selectingSlot + 1}</h3>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 gap-2 max-h-[300px] overflow-y-auto pr-1">
               {userMonsters.filter((um: any) => !usedIds.has(um.id)).map((um: any) => (
                 <button key={um.id} onClick={() => {
                   const n = [...slots]; n[selectingSlot] = um.id; setSlots(n); setSelectingSlot(null);
-                }} className="rounded-lg p-2 text-center hover:scale-[1.03] transition-all"
-                  style={{ background: "#13161F", border: `1px solid ${RARITY_COLOR[um.monster.rarity as Rarity]}40` }}>
-                  <div className="w-full aspect-square rounded mb-1 flex items-center justify-center overflow-hidden" style={{ background: "#0C0E14" }}>
+                }} className="ss-card text-center p-2 hover:scale-[1.03] transition-all"
+                  style={{ borderColor: `${RARITY_COLOR[um.monster.rarity as Rarity]}40` }}>
+                  <div className="w-full aspect-square rounded mb-1 flex items-center justify-center overflow-hidden ss-pane">
                     <img src="/monsters/placeholder.png" className="w-full h-full object-cover" alt="Monster" />
                   </div>
-                  <p className="text-[10px] font-bold truncate" style={{ color: "#F0EDE6" }}>{um.monster.name}</p>
+                  <p className="text-[10px] font-bold truncate" style={{ color: "var(--ink-primary)" }}>{um.monster.name}</p>
                   <p className="text-[9px]" style={{ color: RARITY_COLOR[um.monster.rarity as Rarity] }}>{um.monster.rarity}</p>
                 </button>
               ))}

@@ -239,56 +239,58 @@ function HubPage() {
         <Onboarding onComplete={() => onboardingMut.mutate()} />
       )}
       <DeathOverlay trigger={deathTick} />
-      <div className="p-6 md:p-10 max-w-6xl mx-auto">
-        <Compass onOpenMorning={() => setShowMorning(true)} onOpenEvening={() => setShowEvening(true)} />
-        <FocusRitual />
-        <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-          <div>
-            <h1 className="t-h1 text-3xl md:text-4xl mb-1" style={{ color: "var(--gold-bright)" }}>Hub Directives</h1>
-          </div>
-          <button onClick={() => { setEditing(null); setDialogOpen(true); }}
-            className="ss-btn ss-btn-d-primary">
-            + New Directive
-          </button>
-        </header>
-
-        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-          {(["habit", "daily", "todo"] as const).map((t) => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active" : ""}`}
-            >
-              {t === "habit" ? "Habits" : t === "daily" ? "Dailies" : "To-Dos"}
+      <div className="bg-atmos bg-atmos-hub relative min-h-screen">
+        <div className="p-6 md:p-10 max-w-6xl mx-auto">
+          <Compass onOpenMorning={() => setShowMorning(true)} onOpenEvening={() => setShowEvening(true)} />
+          <FocusRitual />
+          <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <h1 className="t-h1 text-3xl md:text-4xl mb-1" style={{ color: "var(--gold-bright)" }}>Hub Directives</h1>
+            </div>
+            <button onClick={() => { setEditing(null); setDialogOpen(true); }}
+              className="ss-btn ss-btn-d-primary">
+              + New Directive
             </button>
-          ))}
-        </div>
+          </header>
 
-        {filtered.length === 0 ? (
-          <EmptyState
-            icon={tab === "habit" ? "morning" : tab === "daily" ? "morning" : "checklist"}
-            title={tab === "habit" ? "The grove is quiet." : tab === "daily" ? "The dawn awaits your decree." : "The list is blank."}
-            body={tab === "habit" ? "Forge one small directive. Something you'd do anyway." : "Create your first directive to begin earning Gold and XP."}
-            cta={{
-              label: "Forge a Directive",
-              onClick: () => { setEditing(null); setDialogOpen(true); }
-            }}
-          />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {filtered.map((task) => (
-              <TaskCard 
-                key={task.id} 
-                task={task} 
-                busy={busyIds.has(task.id)}
-                isTutorial={profile?.tutorial_directive_id === task.id}
-                onScore={(dir) => scoreMut.mutate({ id: task.id, direction: dir })}
-                onEdit={() => { setEditing(task); setDialogOpen(true); }}
-                onDelete={() => deleteMut.mutate(task.id)} 
-              />
+          <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+            {(["habit", "daily", "todo"] as const).map((t) => (
+              <button
+                key={t}
+                onClick={() => setTab(t)}
+                className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active" : ""}`}
+              >
+                {t === "habit" ? "Habits" : t === "daily" ? "Dailies" : "To-Dos"}
+              </button>
             ))}
           </div>
-        )}
+
+          {filtered.length === 0 ? (
+            <EmptyState
+              icon={tab === "habit" ? "morning" : tab === "daily" ? "morning" : "checklist"}
+              title={tab === "habit" ? "The grove is quiet." : tab === "daily" ? "The dawn awaits your decree." : "The list is blank."}
+              body={tab === "habit" ? "Forge one small directive. Something you'd do anyway." : "Create your first directive to begin earning Gold and XP."}
+              cta={{
+                label: "Forge a Directive",
+                onClick: () => { setEditing(null); setDialogOpen(true); }
+              }}
+            />
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {filtered.map((task) => (
+                <TaskCard 
+                  key={task.id} 
+                  task={task} 
+                  busy={busyIds.has(task.id)}
+                  isTutorial={profile?.tutorial_directive_id === task.id}
+                  onScore={(dir) => scoreMut.mutate({ id: task.id, direction: dir })}
+                  onEdit={() => { setEditing(task); setDialogOpen(true); }}
+                  onDelete={() => deleteMut.mutate(task.id)} 
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
       <TaskFormDialog open={dialogOpen} defaultType={tab} initial={editing ?? undefined}

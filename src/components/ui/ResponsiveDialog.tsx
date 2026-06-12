@@ -23,9 +23,6 @@ export function ResponsiveDialog({
           <Drawer.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm" />
           <Drawer.Content
             className="ss-modal fixed bottom-0 left-0 right-0 rounded-b-none mt-24 max-h-[92vh] overflow-y-auto"
-            style={{ 
-              background: "linear-gradient(180deg, #1B1F2A 0%, #15181F 100%)" 
-            }}
           >
             {/* Drag handle */}
             <div className="mx-auto w-12 h-1.5 rounded-full bg-white/20 mb-4" />

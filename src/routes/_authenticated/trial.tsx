@@ -66,7 +66,7 @@ function TrialPage() {
   });
 
   if (profileQ.isLoading || monstersQ.isLoading) {
-    return <div className="min-h-screen grid place-items-center" style={{ background: "#0C0E14", color: "#A09D96" }}>Echoes gather…</div>;
+    return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Echoes gather…</div>;
   }
   if (!profileQ.data) return null;
 
@@ -90,11 +90,7 @@ function TrialPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className="pb-2 text-sm font-semibold transition-colors"
-              style={{
-                color: tab === t.key ? "#FFD54F" : "#A09D96",
-                borderBottom: `2px solid ${tab === t.key ? "#FFD54F" : "transparent"}`,
-              }}
+              className={`ss-tab-d pb-2 text-sm font-semibold capitalize ${tab === t.key ? "active" : ""}`}
             >
               {t.label}
             </button>
@@ -105,8 +101,8 @@ function TrialPage() {
           <>
             {/* Cooldown banner */}
             {cooldownQ.data && !cooldownQ.data.canStart && (
-              <div className="rounded-lg p-4 mb-4 border" style={{ background: "rgba(224,82,82,0.08)", borderColor: "rgba(224,82,82,0.3)" }}>
-                <p className="text-sm" style={{ color: "#E05252" }}>
+              <div className="ss-card mb-4" style={{ background: "rgba(255,94,94,0.08)", borderColor: "rgba(255,94,94,0.3)" }}>
+                <p className="text-sm" style={{ color: "var(--danger)" }}>
                   ⏳ Cooldown: {cooldownQ.data.daysRemaining} day{cooldownQ.data.daysRemaining === 1 ? "" : "s"} until next trial.
                 </p>
               </div>
@@ -129,7 +125,7 @@ function TrialPage() {
                   );
                 }
                 return (
-                  <div key={i} className="ss-card rounded-md p-2 text-center border-2 border-dashed" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
+                  <div key={i} className="ss-card rounded-md p-2 text-center border-2 border-dashed" style={{ borderColor: "var(--ss-border)" }}>
                     <div className="aspect-square grid place-items-center" style={{ color: "var(--ink-tertiary)" }}>?</div>
                     <p className="text-[9px] mt-1" style={{ color: "var(--ink-tertiary)" }}>Slot {i + 1}</p>
                   </div>
@@ -141,7 +137,7 @@ function TrialPage() {
               onClick={() => setConfirming(true)}
               disabled={picked.length !== 5 || !cooldownQ.data?.canStart || runMut.isPending}
               className="ss-btn w-full disabled:opacity-40"
-              style={{ background: "linear-gradient(135deg,#8B1A1A,#E05252)", color: "var(--ink-primary)", boxShadow: "0 0 24px rgba(224,82,82,0.4)" }}
+              style={{ background: "linear-gradient(135deg,#5a1818,var(--danger))", color: "var(--ink-primary)", boxShadow: "0 0 24px rgba(255,94,94,0.4)" }}
             >
               <span className="flex items-center justify-center gap-2"><Icon name="death" size={16} /> Enter the Trial ({picked.length}/5)</span>
             </button>
@@ -162,7 +158,7 @@ function TrialPage() {
                     }}
                     className="ss-card rounded p-2 text-center transition-all"
                     style={{
-                      background: isPicked ? "rgba(224,82,82,0.1)" : undefined,
+                      background: isPicked ? "rgba(255,94,94,0.1)" : undefined,
                       borderColor: isPicked ? "var(--danger)" : undefined,
                     }}
                   >
@@ -188,14 +184,13 @@ function TrialPage() {
           onOpenChange={(open) => !open && setConfirming(false)}
           title="The Trial is Final"
         >
-          <p className="text-sm text-center mb-5" style={{ color: "#A09D96" }}>
-            Once you enter, any monster that falls is <b style={{ color: "#E05252" }}>gone forever</b>. They will be honored in the Memorial. Continue?
+          <p className="text-sm text-center mb-5" style={{ color: "var(--ink-secondary)" }}>
+            Once you enter, any monster that falls is <b style={{ color: "var(--danger)" }}>gone forever</b>. They will be honored in the Memorial. Continue?
           </p>
           <div className="flex gap-2">
             <SpringyButton
               onClick={() => setConfirming(false)}
-              className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-              style={{ background: "rgba(255,255,255,0.04)", color: "#A09D96", border: "1px solid rgba(255,255,255,0.06)" }}
+              className="ss-btn ss-btn-secondary flex-1 py-2.5 font-bold"
             >
               Stay Home
             </SpringyButton>
@@ -203,7 +198,7 @@ function TrialPage() {
               onClick={() => runMut.mutate()}
               disabled={runMut.isPending}
               className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
-              style={{ background: "linear-gradient(135deg,#8B1A1A,#E05252)", color: "#F0EDE6", boxShadow: "0 4px 20px rgba(224,82,82,0.35)" }}
+              style={{ background: "linear-gradient(135deg,#5a1818,var(--danger))", color: "var(--ink-primary)", boxShadow: "0 4px 20px rgba(255,94,94,0.35)" }}
             >
               {runMut.isPending ? "Echoes…" : "We Walk Together"}
             </SpringyButton>
@@ -246,7 +241,7 @@ function TrialPage() {
               )}
 
               {results.fallen.length > 0 && (
-                <div className="ss-pane my-4" style={{ borderColor: "rgba(224,82,82,0.32)" }}>
+                <div className="ss-pane my-4" style={{ borderColor: "rgba(255,94,94,0.32)" }}>
                   <p className="text-[10px] uppercase tracking-[0.18em] mb-2" style={{ color: "var(--ink-secondary)" }}>Fallen</p>
                   {results.fallen.map((f, i) => (
                     <motion.p
@@ -257,15 +252,15 @@ function TrialPage() {
                       className="text-sm"
                       style={{ color: "var(--ink-primary)" }}
                     >
-                      🪦 <b style={{ color: "#E05252" }}>{f.name}</b> — {f.star_level}★ · bond {Math.round(f.bond_percent)}%
+                      🪦 <b style={{ color: "var(--danger)" }}>{f.name}</b> — {f.star_level}★ · bond {Math.round(f.bond_percent)}%
                     </motion.p>
                   ))}
                 </div>
               )}
 
               {results.rewards.length > 0 && (
-                <div className="rounded-lg p-3 mb-4" style={{ background: "rgba(255,213,79,0.06)", border: "1px solid rgba(255,213,79,0.22)" }}>
-                  <p className="text-[10px] uppercase tracking-[0.18em] mb-2" style={{ color: "#A09D96" }}>Rewards</p>
+                <div className="ss-card mb-4" style={{ background: "rgba(255,213,79,0.06)", borderColor: "rgba(255,213,79,0.22)" }}>
+                  <p className="text-[10px] uppercase tracking-[0.18em] mb-2" style={{ color: "var(--gold-bright)" }}>Rewards</p>
                   {results.rewards.map((r, i) => (
                     <motion.p
                       key={i}
@@ -273,7 +268,7 @@ function TrialPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: dur.fast, ease: ease.out, delay: 0.25 + i * 0.08 }}
                       className="text-sm"
-                      style={{ color: "#FFD54F" }}
+                      style={{ color: "var(--gold-bright)" }}
                     >
                       +<NumberFlow value={r.qty} /> {r.name}
                     </motion.p>
@@ -283,8 +278,7 @@ function TrialPage() {
 
               <SpringyButton
                 onClick={() => setResults(null)}
-                className="w-full py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-                style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14", boxShadow: "0 4px 20px rgba(255,213,79,0.28)" }}
+                className="w-full py-2.5 ss-btn ss-btn-d-primary"
               >
                 Continue
               </SpringyButton>
@@ -309,19 +303,19 @@ function Memorial({ memorials }: { memorials: Array<{ id: string; fallen: Array<
   }
   return (
     <div>
-      <p className="text-xs mb-4" style={{ color: "#A09D96" }}>
+      <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>
         {allFallen.length} souls honored across {memorials.length} trial{memorials.length === 1 ? "" : "s"}.
       </p>
       <div className="space-y-2">
         {allFallen.map((f, i) => (
-          <div key={i} className="rounded-lg p-3 border flex items-start gap-3" style={{ background: "#13161F", borderColor: "rgba(224,82,82,0.2)" }}>
+          <div key={i} className="ss-card flex items-start gap-3" style={{ borderColor: "rgba(255,94,94,0.2)" }}>
             <div className="text-2xl"><Icon name="memorial" size={20} color="var(--danger)" /></div>
             <div className="flex-1">
               <p className="t-h3 text-sm" style={{ color: "var(--danger)" }}>{f.name}</p>
               <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
                 Fell on floor {f.floor + 1} · {f.star_level}★ · bond {Math.round(f.bond_percent)}%
               </p>
-              <p className="text-[10px] mt-1" style={{ color: "#6B6864" }}>{new Date(f.when).toLocaleString()}</p>
+              <p className="text-[10px] mt-1" style={{ color: "var(--ink-tertiary)" }}>{new Date(f.when).toLocaleString()}</p>
             </div>
           </div>
         ))}

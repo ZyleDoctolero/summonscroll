@@ -18,7 +18,7 @@ export function AppShell({
   withHeader?: boolean;
 }) {
   return (
-    <div className="min-h-screen" style={{ background: "#0C0E14", color: "#F0EDE6" }}>
+    <div className="min-h-screen" style={{ background: "var(--bg-deep)", color: "var(--ink-primary)" }}>
       <GameSidebar displayName={profile.display_name} level={profile.level} playerClass={profile.class} />
       {withHeader && <MobilePlayerHeader profile={profile as any} />}
       {withHeader && <PlayerHeader profile={profile} />}

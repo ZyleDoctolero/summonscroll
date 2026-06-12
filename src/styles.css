@@ -874,44 +874,110 @@ body {
 
 /* ─── Atmosphere Background System — Proposal D ─── */
 /* Each primary route gets its own anime gacha key art background.
-   Images live in public/atmos/. See public/atmos/README.md for gen prompts. */
+   Images live in public/atmos/. Fallbacks use premium animated CSS gradients. */
 
 .bg-atmos {
   position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-deep);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
-/* Darkening veil — ensures text contrast ≥ 4.5:1 */
+/* Ambient glow & darkening veil — ensures contrast >= 4.5:1 */
 .bg-atmos::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.52);
+  background: radial-gradient(circle at 50% 0%, rgba(26,26,42,0.6) 0%, rgba(8,8,13,0.95) 75%), rgba(0,0,0,0.52);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Ensure route content sits above the veil */
+/* Floating sparkles/embers (drifting particles overlay) */
+.bg-atmos::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 217, 92, 0.15) 1.5px, transparent 3px),
+    radial-gradient(circle at 80% 15%, rgba(163, 116, 255, 0.2) 2px, transparent 4px),
+    radial-gradient(circle at 35% 60%, rgba(90, 224, 255, 0.15) 1.5px, transparent 3px),
+    radial-gradient(circle at 75% 75%, rgba(255, 94, 133, 0.15) 2.5px, transparent 5px),
+    radial-gradient(circle at 90% 40%, rgba(255, 217, 92, 0.12) 1px, transparent 2.5px),
+    radial-gradient(circle at 15% 80%, rgba(163, 116, 255, 0.18) 2px, transparent 4px);
+  background-size: 200% 200%;
+  animation: bg-particle-drift 35s linear infinite;
+  opacity: 0.65;
+}
+
+@keyframes bg-particle-drift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Ensure route content sits above overlays */
 .bg-atmos > * {
   position: relative;
   z-index: 1;
 }
 
-/* Per-route atmosphere classes */
-.bg-atmos-hub        { background-image: url(/atmos/hub.png); }
-.bg-atmos-altar      { background-image: url(/atmos/altar.png); }
-.bg-atmos-expedition { background-image: url(/atmos/expedition.png); }
-.bg-atmos-battle     { background-image: url(/atmos/battle.png); }
-.bg-atmos-codex      { background-image: url(/atmos/codex.png); }
-.bg-atmos-trial      { background-image: url(/atmos/trial.png); }
-.bg-atmos-compendium { background-image: url(/atmos/compendium.png); }
+/* Per-screen backgrounds with fallback CSS radial glows layered behind the images */
+.bg-atmos-hub {
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(163, 116, 255, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 15% 75%, rgba(90, 224, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(255, 217, 92, 0.03) 0%, transparent 70%),
+    url(/atmos/hub.png);
+}
 
-/* Fallback gradient when image hasn't loaded yet */
-.bg-atmos-hub        { background-color: var(--bg-deep); }
-.bg-atmos-altar      { background-color: #0d0816; }
-.bg-atmos-expedition { background-color: #080d10; }
-.bg-atmos-battle     { background-color: #0d0808; }
-.bg-atmos-codex      { background-color: #0a0808; }
-.bg-atmos-trial      { background-color: #0a0808; }
+.bg-atmos-altar {
+  background-image: 
+    radial-gradient(circle at 50% 60%, rgba(163, 116, 255, 0.22) 0%, rgba(255, 94, 133, 0.06) 35%, transparent 65%),
+    radial-gradient(circle at 10% 20%, rgba(255, 217, 92, 0.05) 0%, transparent 35%),
+    radial-gradient(circle at 90% 80%, rgba(90, 224, 255, 0.05) 0%, transparent 35%),
+    url(/atmos/altar.png);
+}
+
+.bg-atmos-expedition {
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(90, 224, 255, 0.12) 0%, rgba(93, 211, 158, 0.04) 40%, transparent 70%),
+    radial-gradient(circle at 80% 80%, rgba(163, 116, 255, 0.06) 0%, transparent 40%),
+    url(/atmos/expedition.png);
+}
+
+.bg-atmos-battle {
+  background-image: 
+    radial-gradient(circle at 50% 80%, rgba(255, 120, 67, 0.18) 0%, rgba(255, 94, 94, 0.05) 45%, transparent 70%),
+    radial-gradient(circle at 20% 20%, rgba(255, 217, 92, 0.04) 0%, transparent 40%),
+    url(/atmos/battle.png);
+}
+
+.bg-atmos-codex {
+  background-image: 
+    radial-gradient(circle at 50% 45%, rgba(255, 217, 92, 0.08) 0%, rgba(163, 116, 255, 0.04) 40%, transparent 70%),
+    url(/atmos/codex.png);
+}
+
+.bg-atmos-trial {
+  background-image: 
+    radial-gradient(circle at 50% 45%, rgba(163, 116, 255, 0.25) 0%, rgba(0, 0, 0, 0.8) 55%, transparent 95%),
+    radial-gradient(circle at 15% 15%, rgba(255, 94, 94, 0.05) 0%, transparent 40%),
+    url(/atmos/trial.png);
+}
+
+.bg-atmos-compendium {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 217, 92, 0.06) 0%, rgba(163, 116, 255, 0.03) 45%, transparent 75%),
+    url(/atmos/compendium.png);
+}
