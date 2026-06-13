@@ -279,13 +279,7 @@ export function TaskCard({
           </div>
         )}
 
-        {/* Reward preview — FR01 §2.3 */}
-        <div
-          className="mt-1.5 text-[10px] flex gap-2 t-mono"
-          style={{ color: "var(--ink-tertiary)" }}
-        >
-          <span style={{ color: `${color}99` }}>val {Number(task.value).toFixed(1)}</span>
-        </div>
+        {/* value is conveyed by the colored left border; no raw dev readout */}
       </div>
     </article>
   );

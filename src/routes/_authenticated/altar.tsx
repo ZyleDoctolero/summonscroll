@@ -227,19 +227,46 @@ function AltarPage() {
             return (
               <div className="ss-card-hero overflow-hidden">
                 <div
-                  className="relative h-48 flex items-end p-6"
+                  className="relative h-48 flex items-end p-6 overflow-hidden"
                   style={{
                     background:
-                      "linear-gradient(180deg, rgba(255,213,79,0.15) 0%, var(--bg-pane) 100%)",
+                      `radial-gradient(120% 90% at 80% 10%, ${iconColor}22 0%, transparent 55%), linear-gradient(180deg, rgba(255,213,79,0.10) 0%, var(--bg-stage) 70%, var(--bg-pane) 100%)`,
                   }}
                 >
-                  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--gold-glow)] to-transparent opacity-50" />
-                  <div>
-                    <h2 className="text-2xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+                  {/* large faded realm glyph watermark */}
+                  <div
+                    className="absolute -right-4 -top-6 select-none pointer-events-none"
+                    style={{ fontSize: "9rem", opacity: 0.08, lineHeight: 1 }}
+                    aria-hidden
+                  >
+                    {selectedBanner.realms?.icon ?? "✦"}
+                  </div>
+                  {/* concentric summon-ring suggestion */}
+                  <div
+                    className="absolute pointer-events-none"
+                    style={{
+                      right: "1.5rem", top: "50%", transform: "translateY(-50%)",
+                      width: 140, height: 140, borderRadius: "9999px",
+                      border: `1px solid ${iconColor}33`,
+                      boxShadow: `inset 0 0 40px ${iconColor}18, 0 0 24px ${iconColor}14`,
+                    }}
+                  />
+                  <div
+                    className="absolute pointer-events-none"
+                    style={{
+                      right: "2.6rem", top: "50%", transform: "translateY(-50%)",
+                      width: 92, height: 92, borderRadius: "9999px",
+                      border: `1px solid ${iconColor}22`,
+                    }}
+                  />
+                  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--gold-glow)] to-transparent opacity-60" />
+                  <div className="relative">
+                    <h2 className="t-h2 mb-1" style={{ color: "var(--gold-bright)" }}>
                       {selectedBanner.name}
                     </h2>
-                    <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
-                      {selectedBanner.realms?.icon} {selectedBanner.realms?.name ?? "All Realms"}
+                    <p className="text-sm flex items-center gap-1.5" style={{ color: "var(--ink-secondary)" }}>
+                      <span style={{ fontSize: "1rem" }}>{selectedBanner.realms?.icon}</span>
+                      {selectedBanner.realms?.name ?? "All Realms"}
                     </p>
                   </div>
                 </div>

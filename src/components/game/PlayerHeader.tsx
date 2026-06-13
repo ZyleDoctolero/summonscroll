@@ -96,6 +96,9 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
         color="var(--violet)"
       />
 
+      {/* divider: vitals | resources */}
+      <div className="w-px h-6 self-center shrink-0" style={{ background: "var(--ss-hairline)" }} />
+
       {/* Stamina */}
       {profile.stamina_max !== undefined && (
         <Currency
@@ -125,6 +128,9 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
         value={profile.pact_seals}
         color="var(--violet)"
       />
+
+      {/* divider: resources | streak */}
+      <div className="w-px h-6 self-center shrink-0" style={{ background: "var(--ss-hairline)" }} />
 
       {/* Streak */}
       <div className="flex gap-2">

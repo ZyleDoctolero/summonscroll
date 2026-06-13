@@ -81,7 +81,16 @@ export function GameSidebar({
         style={{ background: "var(--bg-stage)", borderColor: "var(--ss-border)" }}
       >
         <div className="mb-6 px-3">
-          <div className="t-display text-xl font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
+          <div
+            className="font-bold mb-4 whitespace-nowrap"
+            style={{
+              color: "var(--gold-bright)",
+              fontFamily: "var(--ss-font-display)",
+              fontSize: "17px",
+              letterSpacing: "-0.01em",
+              lineHeight: 1.1,
+            }}
+          >
             SummonScroll
           </div>
           <div className="flex items-center gap-3">
