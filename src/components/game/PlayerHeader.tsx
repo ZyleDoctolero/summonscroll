@@ -68,7 +68,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
           {profile.level}
         </span>
         {isComboActive && (
-          <div className="absolute -bottom-6 -left-1 bg-[#E05252] text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg border border-[#0C0E14] animate-pulse whitespace-nowrap">
+          <div className="absolute -bottom-6 -left-1 bg-[var(--danger)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg border border-[var(--bg-deep)] animate-pulse whitespace-nowrap">
             {comboCount}x COMBO
           </div>
         )}
@@ -85,7 +85,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
       />
 
       {/* XP bar */}
-      <MiniBar label="XP" current={profile.xp} max={xpReq} pct={xpPct} color="#FFD54F" gradient />
+      <MiniBar label="XP" current={profile.xp} max={xpReq} pct={xpPct} color="var(--gold-bright)" gradient />
 
       {/* MP bar */}
       <MiniBar
@@ -93,7 +93,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
         current={profile.mp ?? 30}
         max={profile.max_mp ?? 30}
         pct={mpPct}
-        color="#7F77DD"
+        color="var(--violet)"
       />
 
       {/* Stamina */}
@@ -102,7 +102,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
           icon="stamina"
           label={<Icon name="stamina" size={14} color="var(--gold-glow)" />}
           value={profile.stamina ?? 0}
-          color="#FFB74D"
+          color="var(--ember)"
         />
       )}
 
@@ -111,19 +111,19 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
         icon="gold"
         label={<Icon name="gold" size={14} color="var(--gold-bright)" />}
         value={profile.gold}
-        color="#FFD54F"
+        color="var(--gold-bright)"
       />
       <Currency
         icon="crystal"
         label={<Icon name="crystal" size={14} color="var(--cyan)" />}
         value={profile.crystals}
-        color="#7FD4FF"
+        color="var(--cyan)"
       />
       <Currency
         icon="seal"
         label={<Icon name="seal" size={14} color="var(--violet)" />}
         value={profile.pact_seals}
-        color="#CE93D8"
+        color="var(--violet)"
       />
 
       {/* Streak */}
@@ -138,12 +138,12 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
           <Icon
             name={profile.streak > 0 ? "streak" : "cold"}
             size={14}
-            color={profile.streak > 0 ? "#FF8A65" : "var(--ink-tertiary)"}
+            color={profile.streak > 0 ? "var(--ember)" : "var(--ink-tertiary)"}
           />
           <span
             className="t-mono font-bold"
             style={{
-              color: profile.streak > 0 ? "#FF8A65" : "var(--ink-tertiary)",
+              color: profile.streak > 0 ? "var(--ember)" : "var(--ink-tertiary)",
             }}
           >
             {profile.streak}
@@ -156,7 +156,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
             title="Freeze Charms (Protects streak)"
           >
             <Icon name="cold" size={14} color="var(--cyan)" />
-            <span className="t-mono font-bold" style={{ color: "#4FC3F7" }}>
+            <span className="t-mono font-bold" style={{ color: "var(--cyan)" }}>
               ×{profile.streak_freeze_charges}
             </span>
           </div>

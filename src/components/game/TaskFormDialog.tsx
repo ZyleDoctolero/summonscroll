@@ -98,9 +98,9 @@ export function TaskFormDialog({
                 style={{
                   background:
                     v.type === t
-                      ? "linear-gradient(135deg,#C89A3E,#FFD54F)"
+                      ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
                       : "rgba(255,255,255,0.05)",
-                  color: v.type === t ? "#0C0E14" : "#A09D96",
+                  color: v.type === t ? "var(--bg-deep)" : "var(--ink-secondary)",
                 }}
               >
                 {t}
@@ -160,7 +160,7 @@ export function TaskFormDialog({
                 style={{
                   background:
                     v.difficulty === d ? "rgba(255,213,79,0.18)" : "rgba(255,255,255,0.04)",
-                  color: v.difficulty === d ? "#FFD54F" : "#A09D96",
+                  color: v.difficulty === d ? "var(--gold-bright)" : "var(--ink-secondary)",
                   border: `1px solid ${v.difficulty === d ? "rgba(255,213,79,0.4)" : "transparent"}`,
                 }}
               >
@@ -173,7 +173,7 @@ export function TaskFormDialog({
         {v.type === "habit" && (
           <Field label="Buttons">
             <div className="flex gap-3">
-              <label className="flex items-center gap-2 text-sm" style={{ color: "#F0EDE6" }}>
+              <label className="flex items-center gap-2 text-sm" style={{ color: "var(--ink-primary)" }}>
                 <input
                   type="checkbox"
                   checked={v.positive_enabled}
@@ -181,7 +181,7 @@ export function TaskFormDialog({
                 />
                 Positive (+)
               </label>
-              <label className="flex items-center gap-2 text-sm" style={{ color: "#F0EDE6" }}>
+              <label className="flex items-center gap-2 text-sm" style={{ color: "var(--ink-primary)" }}>
                 <input
                   type="checkbox"
                   checked={v.negative_enabled}
@@ -213,9 +213,9 @@ export function TaskFormDialog({
                     className="flex-1 py-2 text-xs font-bold rounded"
                     style={{
                       background: on
-                        ? "linear-gradient(135deg,#C89A3E,#FFD54F)"
+                        ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
                         : "rgba(255,255,255,0.05)",
-                      color: on ? "#0C0E14" : "#A09D96",
+                      color: on ? "var(--bg-deep)" : "var(--ink-secondary)",
                     }}
                   >
                     {d}
@@ -231,7 +231,7 @@ export function TaskFormDialog({
             type="button"
             onClick={onClose}
             className="flex-1 py-2 rounded text-sm uppercase tracking-widest"
-            style={{ background: "rgba(255,255,255,0.05)", color: "#A09D96" }}
+            style={{ background: "rgba(255,255,255,0.05)", color: "var(--ink-secondary)" }}
           >
             Cancel
           </button>
@@ -239,7 +239,7 @@ export function TaskFormDialog({
             type="submit"
             disabled={saving}
             className="flex-1 py-2 rounded text-sm uppercase tracking-widest font-bold disabled:opacity-50"
-            style={{ background: "linear-gradient(135deg,#C89A3E,#FFD54F)", color: "#0C0E14" }}
+            style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
           >
             {saving ? "Saving…" : initial ? "Save" : "Create"}
           </button>
@@ -255,7 +255,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
     <label className="block">
       <div
         className="text-[11px] uppercase tracking-widest mb-1 font-semibold"
-        style={{ color: "#A09D96" }}
+        style={{ color: "var(--ink-secondary)" }}
       >
         {label}
       </div>

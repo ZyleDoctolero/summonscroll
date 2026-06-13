@@ -99,7 +99,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
       title="The Promotion Chamber"
     >
       {checkQ.isLoading ? (
-        <p className="text-center text-sm py-12" style={{ color: "#A09D96" }}>
+        <p className="text-center text-sm py-12" style={{ color: "var(--ink-secondary)" }}>
           Reading the soul…
         </p>
       ) : !checkQ.data ? null : (
@@ -233,7 +233,7 @@ function Body({
               </span>
               <span className="font-mono">
                 <NumberFlow value={c.have.stones} />{" "}
-                <span style={{ color: "#6B6864" }}>/ {req.stones.qty}</span>
+                <span style={{ color: "var(--ink-tertiary)" }}>/ {req.stones.qty}</span>
               </span>
             </ReqRow>
             {req.materials.map((mat) => {
@@ -247,7 +247,7 @@ function Body({
                   </span>
                   <span className="font-mono">
                     <NumberFlow value={have} />{" "}
-                    <span style={{ color: "#6B6864" }}>/ {mat.qty}</span>
+                    <span style={{ color: "var(--ink-tertiary)" }}>/ {mat.qty}</span>
                   </span>
                 </ReqRow>
               );
@@ -263,7 +263,7 @@ function Body({
                   format={{ maximumFractionDigits: 0 }}
                   suffix="%"
                 />{" "}
-                <span style={{ color: "#6B6864" }}>/ {req.bondRequired}%</span>
+                <span style={{ color: "var(--ink-tertiary)" }}>/ {req.bondRequired}%</span>
               </span>
             </ReqRow>
             <ReqRow ok={levelOk}>
@@ -273,7 +273,7 @@ function Body({
               </span>
               <span className="font-mono">
                 <NumberFlow value={c.have.level} />{" "}
-                <span style={{ color: "#6B6864" }}>/ {req.levelRequired}</span>
+                <span style={{ color: "var(--ink-tertiary)" }}>/ {req.levelRequired}</span>
               </span>
             </ReqRow>
           </div>

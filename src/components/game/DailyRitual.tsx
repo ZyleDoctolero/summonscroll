@@ -29,7 +29,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
         particleCount: 90,
         spread: 60,
         origin: { y: 0.5 },
-        colors: ["#C89A3E", "#FFD54F"],
+        colors: ["#C89A3E", "var(--gold-bright)"],
       });
       qc.invalidateQueries({ queryKey: ["tasks"] });
       qc.invalidateQueries({ queryKey: ["today-log"] });
@@ -58,7 +58,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
     >
       <Glyph emoji="☀" />
       <Sub>
-        Pick today's <strong style={{ color: "#FFD54F" }}>3 Sacred Directives</strong>. They earn
+        Pick today's <strong style={{ color: "var(--gold-bright)" }}>3 Sacred Directives</strong>. They earn
         1.5× rewards and unlock a Reflection Pull tonight if all three are completed.
       </Sub>
 
@@ -171,7 +171,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           particleCount: 180,
           spread: 90,
           origin: { y: 0.5 },
-          colors: ["#C89A3E", "#FFD54F", "#7F77DD"],
+          colors: ["#C89A3E", "var(--gold-bright)", "#7F77DD"],
         });
         whisper({
           monsterName: "Reflection Spirit",

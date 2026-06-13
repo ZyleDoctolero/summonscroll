@@ -142,14 +142,14 @@ function BattlePage() {
                 label="Your Team"
                 current={result.playerHp}
                 max={result.playerMaxHp}
-                color="#5FAD41"
+                color="var(--success)"
                 delay={0.15}
               />
               <AnimatedHpBar
                 label={result.enemyName}
                 current={result.enemyHp}
                 max={result.enemyMaxHp}
-                color="#E05252"
+                color="var(--danger)"
                 delay={0.22}
               />
             </div>
