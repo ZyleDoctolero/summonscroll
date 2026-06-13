@@ -58,7 +58,7 @@ function initializeClients() {
   supa = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
   genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
   // Updated model name to match Gemini 2.0 image generation capability
-  model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-thinking-exp" });
+  model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-image" });
 }
 
 // Load the prompt template
