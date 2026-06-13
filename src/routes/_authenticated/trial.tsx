@@ -83,7 +83,7 @@ function TrialPage() {
 
   const roster = (monstersQ.data?.userMonsters ?? []) as Array<{
     id: string;
-    monster: { name: string; role: string; rarity: string };
+    monster: { name: string; role: string; rarity: string; art_url?: string | null };
     level: number;
     bond_percent: number;
     star_level: number;
@@ -145,9 +145,16 @@ function TrialPage() {
                     >
                       <div className="aspect-square mb-1 grid place-items-center overflow-hidden ss-pane rounded">
                         <img
-                          src="/monsters/placeholder.png"
+                          src={
+                            um.monster.art_url
+                              ? um.monster.art_url
+                              : `/sprites/monsters/${um.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                          }
                           className="w-full h-full object-cover"
                           alt={um.monster.name}
+                          onError={(e) => {
+                            e.currentTarget.src = "/monsters/placeholder.png";
+                          }}
                         />
                       </div>
                       <p
@@ -223,9 +230,16 @@ function TrialPage() {
                   >
                     <div className="aspect-square grid place-items-center mb-1 overflow-hidden ss-pane rounded">
                       <img
-                        src="/monsters/placeholder.png"
+                        src={
+                          um.monster.art_url
+                            ? um.monster.art_url
+                            : `/sprites/monsters/${um.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                        }
                         className="w-full h-full object-cover"
                         alt={um.monster.name}
+                        onError={(e) => {
+                          e.currentTarget.src = "/monsters/placeholder.png";
+                        }}
                       />
                     </div>
                     <p

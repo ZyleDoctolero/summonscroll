@@ -1,7 +1,8 @@
 # 01 — Visual Identity Decision
 
-> **This is the only file in this redesign that requires a human decision before
-> implementation can start.** Files 02–11 all reference the choice made here.
+> **CHOSEN: Proposal D — Summoner's Console**
+>
+> (Decided 2026-06-13)
 
 ## The problem
 

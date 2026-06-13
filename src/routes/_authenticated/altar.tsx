@@ -73,9 +73,16 @@ function AltarPage() {
             >
               <div className="w-40 h-40 mx-auto rounded-lg mb-4 flex items-center justify-center overflow-hidden ss-pane">
                 <img
-                  src="/monsters/placeholder.png"
+                  src={
+                    current.monster.artUrl
+                      ? current.monster.artUrl
+                      : `/sprites/monsters/${current.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                  }
                   className="w-full h-full object-cover"
-                  alt="Monster"
+                  alt={current.monster.name}
+                  onError={(e) => {
+                    e.currentTarget.src = "/monsters/placeholder.png";
+                  }}
                 />
               </div>
               <h2
@@ -151,9 +158,16 @@ function AltarPage() {
                   >
                     <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center overflow-hidden ss-pane">
                       <img
-                        src="/monsters/placeholder.png"
+                        src={
+                          res.monster.artUrl
+                            ? res.monster.artUrl
+                            : `/sprites/monsters/${res.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                        }
                         className="w-full h-full object-cover"
-                        alt="Monster"
+                        alt={res.monster.name}
+                        onError={(e) => {
+                          e.currentTarget.src = "/monsters/placeholder.png";
+                        }}
                       />
                     </div>
                     <p className="text-xs font-bold truncate text-foreground">{res.monster.name}</p>

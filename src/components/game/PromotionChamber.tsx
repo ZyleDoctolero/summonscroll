@@ -8,10 +8,12 @@ import { checkPromotionEligibility, promoteMonster } from "@/lib/game/supabase-a
 import { trans, ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
 import { sounds } from "@/lib/ui/sounds";
 import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
+import { Icon } from "@/components/ui/Icon";
 
 type Props = {
   userMonsterId: string;
   monsterName: string;
+  artUrl?: string | null;
   open: boolean;
   onClose: () => void;
 };
@@ -23,7 +25,7 @@ type Props = {
 // • Springy buttons via motion's whileTap; respects prefers-reduced-motion.
 // • Cancel always visible. Confirmation is two-step (Begin Ritual → consume).
 
-export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props) {
+export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }: Props) {
   const qc = useQueryClient();
   const [stage, setStage] = useState<"check" | "ritual" | "done">("check");
   const [ritualPct, setRitualPct] = useState(0);
@@ -103,6 +105,7 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
       ) : !checkQ.data ? null : (
         <Body
           monsterName={monsterName}
+          artUrl={artUrl}
           c={checkQ.data}
           stage={stage}
           ritualPct={ritualPct}
@@ -121,6 +124,7 @@ type CheckData = Awaited<ReturnType<typeof checkPromotionEligibility>>;
 
 function Body({
   monsterName,
+  artUrl,
   c,
   stage,
   ritualPct,
@@ -129,6 +133,7 @@ function Body({
   closeBtnRef,
 }: {
   monsterName: string;
+  artUrl?: string | null;
   c: CheckData;
   stage: "check" | "ritual" | "done";
   ritualPct: number;
@@ -174,19 +179,26 @@ function Body({
             repeat: stage === "ritual" ? Infinity : 0,
             ease: ease.inOut,
           }}
-          className="w-32 h-32 rounded-full border-2 relative grid place-items-center"
+          className="w-32 h-32 rounded-full border-2 relative overflow-hidden grid place-items-center"
           style={{
             borderColor: stage === "ritual" ? "var(--gold-bright)" : "rgba(255,213,79,0.3)",
             background: "radial-gradient(circle, rgba(255,213,79,0.18), transparent 70%)",
           }}
         >
-          <motion.span
-            className="text-5xl"
-            animate={stage === "done" ? { scale: [1, 1.4, 1], rotate: [0, 8, -6, 0] } : {}}
+          <motion.img
+            src={
+              artUrl
+                ? artUrl
+                : `/sprites/monsters/${monsterName.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+            }
+            className="w-24 h-24 object-cover rounded-full"
+            alt={monsterName}
+            onError={(e) => {
+              e.currentTarget.src = "/monsters/placeholder.png";
+            }}
+            animate={stage === "done" ? { scale: [1, 1.3, 1], rotate: [0, 8, -6, 0] } : {}}
             transition={{ duration: dur.weighty, ease: ease.weighty }}
-          >
-            👾
-          </motion.span>
+          />
           {stage === "done" && (
             <motion.div
               initial={{ opacity: 0, scale: 0.4 }}
@@ -215,9 +227,9 @@ function Body({
               Requirements
             </p>
             <ReqRow ok={stoneOk}>
-              <span>
-                <span className="mr-1">🪨</span>
-                {reqStone}
+              <span className="flex items-center gap-1.5">
+                <Icon name="stone" size={13} color={stoneOk ? "var(--success)" : "var(--danger)"} />
+                <span>{reqStone}</span>
               </span>
               <span className="font-mono">
                 <NumberFlow value={c.have.stones} />{" "}
@@ -229,9 +241,9 @@ function Body({
               const ok = have >= mat.qty;
               return (
                 <ReqRow key={mat.name} ok={ok}>
-                  <span>
-                    <span className="mr-1">✨</span>
-                    {mat.name}
+                  <span className="flex items-center gap-1.5">
+                    <Icon name="sparkle" size={13} color={ok ? "var(--success)" : "var(--danger)"} />
+                    <span>{mat.name}</span>
                   </span>
                   <span className="font-mono">
                     <NumberFlow value={have} />{" "}
@@ -241,8 +253,9 @@ function Body({
               );
             })}
             <ReqRow ok={bondOk}>
-              <span>
-                <span className="mr-1">💖</span>Bond
+              <span className="flex items-center gap-1.5">
+                <Icon name="bond" size={13} color={bondOk ? "var(--success)" : "var(--danger)"} />
+                <span>Bond</span>
               </span>
               <span className="font-mono">
                 <NumberFlow
@@ -254,8 +267,9 @@ function Body({
               </span>
             </ReqRow>
             <ReqRow ok={levelOk}>
-              <span>
-                <span className="mr-1">⚜</span>Level
+              <span className="flex items-center gap-1.5">
+                <Icon name="user" size={13} color={levelOk ? "var(--success)" : "var(--danger)"} />
+                <span>Level</span>
               </span>
               <span className="font-mono">
                 <NumberFlow value={c.have.level} />{" "}

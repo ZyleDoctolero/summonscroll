@@ -259,9 +259,16 @@ function IslandPage() {
                       )}
                       <div className="w-full aspect-square rounded mb-2 flex items-center justify-center overflow-hidden ss-pane">
                         <img
-                          src="/monsters/placeholder.png"
+                          src={
+                            um.monster.art_url
+                              ? um.monster.art_url
+                              : `/sprites/monsters/${um.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                          }
                           className="w-full h-full object-cover"
-                          alt="Monster"
+                          alt={um.monster.name}
+                          onError={(e) => {
+                            e.currentTarget.src = "/monsters/placeholder.png";
+                          }}
                         />
                       </div>
                       <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>
@@ -346,9 +353,16 @@ function IslandPage() {
                       >
                         <div className="w-full aspect-square rounded mb-1 flex items-center justify-center overflow-hidden ss-pane">
                           <img
-                            src="/monsters/placeholder.png"
+                            src={
+                              (um.monster as any).art_url
+                                ? (um.monster as any).art_url
+                                : `/sprites/monsters/${um.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                            }
                             className="w-full h-full object-cover"
-                            alt="Monster"
+                            alt={um.monster.name}
+                            onError={(e) => {
+                              e.currentTarget.src = "/monsters/placeholder.png";
+                            }}
                           />
                         </div>
                         <p

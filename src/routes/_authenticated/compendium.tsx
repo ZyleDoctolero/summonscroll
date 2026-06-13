@@ -34,7 +34,7 @@ function CompendiumPage() {
   const [rarityFilter, setRarityFilter] = useState<string>("");
   const [search, setSearch] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [chamberFor, setChamberFor] = useState<{ id: string; name: string } | null>(null);
+  const [chamberFor, setChamberFor] = useState<{ id: string; name: string; artUrl?: string | null } | null>(null);
 
   const ownedIds = useMemo(
     () => new Set((myMonstersQ.data?.userMonsters ?? []).map((um: any) => um.monster_id)),
@@ -209,7 +209,7 @@ function CompendiumPage() {
             sel={sel}
             selOwned={selOwned}
             selUm={selUm}
-            onPromote={(id, name) => setChamberFor({ id, name })}
+            onPromote={(id, name, artUrl) => setChamberFor({ id, name, artUrl })}
           />
         )}
       </ResponsiveDialog>
@@ -218,6 +218,7 @@ function CompendiumPage() {
         <PromotionChamber
           userMonsterId={chamberFor.id}
           monsterName={chamberFor.name}
+          artUrl={chamberFor.artUrl}
           onClose={() => setChamberFor(null)}
         />
       )}
@@ -236,7 +237,7 @@ function DetailModalContent({
   sel: any;
   selOwned: boolean;
   selUm: any;
-  onPromote: (userMonsterId: string, name: string) => void;
+  onPromote: (userMonsterId: string, name: string, artUrl?: string | null) => void;
 }) {
   const roleToStat: Record<string, string> = {
     attacker: "str",
@@ -467,7 +468,7 @@ function DetailModalContent({
           </div>
           {selUm.star_level < 7 && (
             <motion.button
-              onClick={() => onPromote(selUm.id, sel.name)}
+              onClick={() => onPromote(selUm.id, sel.name, sel.art_url)}
               whileTap={{ scale: 0.97 }}
               whileHover={{ y: -1 }}
               transition={trans.springy}
