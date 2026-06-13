@@ -39,6 +39,33 @@ export async function completeOnboarding(): Promise<{ taskId: string }> {
   } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
+  // 0. Idempotency guard — never seed twice. Prevents the duplicate-task bug.
+  const { data: existingProfile } = await supabase
+    .from("profiles")
+    .select("onboarding_completed_at, tutorial_directive_id")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (existingProfile?.onboarding_completed_at) {
+    return { taskId: existingProfile.tutorial_directive_id ?? "" };
+  }
+  const { data: existingTutorial } = await supabase
+    .from("tasks")
+    .select("id")
+    .eq("user_id", user.id)
+    .eq("title", "Drink water (first habit)")
+    .eq("archived", false)
+    .maybeSingle();
+  if (existingTutorial) {
+    await supabase
+      .from("profiles")
+      .update({
+        onboarding_completed_at: new Date().toISOString(),
+        tutorial_directive_id: existingTutorial.id,
+      })
+      .eq("id", user.id);
+    return { taskId: existingTutorial.id };
+  }
+
   // 1. Create the tutorial directive
   const { data: task, error: taskErr } = await supabase
     .from("tasks")

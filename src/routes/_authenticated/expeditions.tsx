@@ -107,7 +107,7 @@ function ExpeditionsPage() {
 
   return (
     <AppShell profile={profile}>
-      <div className="bg-atmos bg-atmos-expedition p-6 md:p-10 max-w-3xl mx-auto min-h-screen">
+      <div className="bg-atmos bg-atmos-expedition p-6 md:p-10 max-w-5xl min-h-screen">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Expeditions
         </h1>

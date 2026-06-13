@@ -568,10 +568,21 @@ body {
 .ss-btn-primary:active {
   transform: translateY(0);
 }
-.ss-btn-primary:disabled {
-  opacity: 0.4;
+/* Clean disabled state — flat muted slate, NOT a faded gold gradient.
+   A 40%-opacity gold reads as "broken/muddy"; flat grey reads as "locked". */
+.ss-btn-primary:disabled,
+.ss-btn-d-primary:disabled,
+.ss-btn-primary.disabled\:opacity-40:disabled,
+.ss-btn-d-primary.disabled\:opacity-40:disabled {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--ink-tertiary) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
   pointer-events: none;
-  box-shadow: none;
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 .ss-btn-secondary {

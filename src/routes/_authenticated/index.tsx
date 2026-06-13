@@ -381,7 +381,7 @@ function HubPage() {
       {showOnboarding && <Onboarding onComplete={() => onboardingMut.mutate()} />}
       <DeathOverlay trigger={deathTick} />
       <div className="bg-atmos bg-atmos-hub relative min-h-screen">
-        <div className="p-6 md:p-10 max-w-6xl mx-auto">
+        <div className="p-6 md:p-10 max-w-6xl">
           <Compass
             onOpenMorning={() => setShowMorning(true)}
             onOpenEvening={() => setShowEvening(true)}

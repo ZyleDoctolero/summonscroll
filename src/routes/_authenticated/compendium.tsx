@@ -101,7 +101,7 @@ function CompendiumPage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
-      <div className="bg-atmos bg-atmos-compendium p-6 md:p-10 max-w-6xl mx-auto min-h-screen">
+      <div className="bg-atmos bg-atmos-compendium p-6 md:p-10 max-w-6xl min-h-screen">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Compendium
         </h1>

@@ -84,7 +84,7 @@ function ForgePage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
-      <div className="p-6 md:p-10 max-w-5xl mx-auto">
+      <div className="p-6 md:p-10 max-w-6xl">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           The Forge
         </h1>

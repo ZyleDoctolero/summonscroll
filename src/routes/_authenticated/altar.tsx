@@ -195,7 +195,7 @@ function AltarPage() {
 
   return (
     <AppShell profile={profile}>
-      <div className="bg-atmos bg-atmos-altar p-6 md:p-10 max-w-4xl mx-auto min-h-screen">
+      <div className="bg-atmos bg-atmos-altar p-6 md:p-10 max-w-6xl min-h-screen">
         <h1 className="t-h1 text-3xl mb-2 text-gold-bright">The Altar</h1>
         <p className="text-sm mb-8" style={{ color: "var(--ink-secondary)" }}>
           Spend Crystals to summon monsters.

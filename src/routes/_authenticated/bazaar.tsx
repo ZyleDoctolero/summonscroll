@@ -51,7 +51,7 @@ function ShopPage() {
 
   return (
     <AppShell profile={profile}>
-      <div className="p-6 md:p-10 max-w-4xl mx-auto">
+      <div className="p-6 md:p-10 max-w-6xl">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           The Bazaar
         </h1>

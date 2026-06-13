@@ -151,7 +151,7 @@ function ProfilePage() {
   return (
     <AppShell profile={profile}>
       <div className="bg-atmos bg-atmos-hub relative min-h-screen">
-        <div className="p-6 md:p-10 max-w-4xl mx-auto">
+        <div className="p-6 md:p-10 max-w-6xl">
           {/* Hero section */}
           <div className="ss-card mb-6">
             <div className="flex items-center gap-4 mb-4">
