@@ -675,7 +675,12 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, var(--gold-glow), var(--violet) 60%, transparent);
+  background: linear-gradient(
+    135deg,
+    var(--ss-glow-start, var(--gold-glow)),
+    var(--ss-glow-end, var(--violet)) 60%,
+    transparent
+  );
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);

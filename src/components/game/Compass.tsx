@@ -66,7 +66,7 @@ export function Compass({
         reason: "Mornings shape the day. Three tasks earn 1.5× rewards.",
         cta: "Begin Ritual",
         action: onOpenMorning,
-        icon: "Sunrise",
+        icon: "morning",
         tone: "calm",
       });
     }
@@ -81,7 +81,7 @@ export function Compass({
         reason: "Ninety seconds. Builds the ritual streak.",
         cta: "Reflect",
         action: onOpenEvening,
-        icon: "Sunset",
+        icon: "evening",
         tone: "calm",
       });
     }
@@ -95,7 +95,7 @@ export function Compass({
         reason: "Earned tonight. Claim before midnight.",
         cta: "Open the Altar",
         to: "/altar",
-        icon: "Sparkles",
+        icon: "sparkle",
         tone: "rare",
       });
     }
@@ -112,7 +112,7 @@ export function Compass({
         reason: `${finishingGoal.hp_remaining.toLocaleString()} HP left. Strike now.`,
         cta: "View Quests",
         to: "/quests",
-        icon: "Crown",
+        icon: "crown",
         tone: "urgent",
       });
     }
@@ -129,7 +129,7 @@ export function Compass({
         reason: "Visit the Chamber to check the stones.",
         cta: "Inspect",
         to: "/compendium",
-        icon: "Star",
+        icon: "star",
         tone: "calm",
       });
     }
@@ -149,7 +149,7 @@ export function Compass({
           reason: "Five expedition runs ready.",
           cta: "Send the team",
           to: "/expeditions",
-          icon: "Zap",
+          icon: "stamina",
           tone: "calm",
         });
       }
@@ -169,7 +169,7 @@ export function Compass({
           reason: "First clear earns 5 Tome Shards and a permanent badge.",
           cta: "Enter the Tower",
           to: "/battle",
-          icon: "Swords",
+          icon: "battle",
           tone: "urgent",
         });
       }
@@ -198,7 +198,7 @@ export function Compass({
             reason: "Triple completion grants bonus rewards.",
             cta: "View Directives",
             action: () => {}, // Stay on Hub
-            icon: "Target",
+            icon: "target",
             tone: "calm",
           });
         }
@@ -214,7 +214,7 @@ export function Compass({
         reason: "Small wins compound.",
         cta: "Forge",
         action: () => {},
-        icon: "Sparkles",
+        icon: "sparkle",
         tone: "calm",
       });
     }
@@ -234,10 +234,25 @@ export function Compass({
 
   if (!suggestion) return null;
 
-  const toneStyles: Record<string, React.CSSProperties> = {
-    calm: { background: "rgba(255,213,79,0.06)", borderColor: "rgba(255,213,79,0.22)" },
-    urgent: { background: "rgba(224,82,82,0.06)", borderColor: "rgba(224,82,82,0.28)" },
-    rare: { background: "rgba(127,119,221,0.06)", borderColor: "rgba(127,119,221,0.28)" },
+  const toneStyles: Record<string, React.CSSProperties & Record<string, string>> = {
+    calm: {
+      background: "rgba(255, 217, 92, 0.03)",
+      "--ss-glow-start": "var(--gold-glow)",
+      "--ss-glow-end": "var(--gold-bright)",
+      boxShadow: "0 4px 20px rgba(255, 217, 92, 0.03)",
+    },
+    urgent: {
+      background: "rgba(255, 94, 94, 0.03)",
+      "--ss-glow-start": "var(--danger)",
+      "--ss-glow-end": "var(--rose)",
+      boxShadow: "0 4px 20px rgba(255, 94, 94, 0.03)",
+    },
+    rare: {
+      background: "rgba(163, 116, 255, 0.03)",
+      "--ss-glow-start": "var(--violet)",
+      "--ss-glow-end": "var(--cyan)",
+      boxShadow: "0 4px 20px rgba(163, 116, 255, 0.03)",
+    },
   };
 
   return (
@@ -247,7 +262,7 @@ export function Compass({
       transition={trans.cascadeIn}
       role="region"
       aria-label="Next action"
-      className="ss-card mb-4 flex items-center gap-4"
+      className="ss-card-d-glow mb-4 flex items-center gap-4"
       style={toneStyles[suggestion.tone]}
     >
       <div className="shrink-0">
