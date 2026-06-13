@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
 import { trans, stagger, reducedMotion } from "@/lib/ui/motion-tokens";
 import { sounds } from "@/lib/ui/sounds";
+import { Icon } from "@/components/ui/Icon";
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 // The CascadeCard receives the *full* result envelope from a system action
@@ -133,23 +134,23 @@ function EventRow({ event }: { event: CascadeEvent }) {
       return (
         <div className="flex items-center gap-3 text-sm">
           {event.gold && event.gold > 0 ? (
-            <span style={{ color: "var(--gold-bright)" }}>
-              💰 <NumberFlow value={event.gold} prefix="+" />
+            <span className="inline-flex items-center gap-1" style={{ color: "var(--gold-bright)" }}>
+              <Icon name="gold" size={14} color="var(--gold-bright)" /> <NumberFlow value={event.gold} prefix="+" />
             </span>
           ) : null}
           {event.xp && event.xp > 0 ? (
-            <span style={{ color: "var(--ink-secondary)" }}>
-              ✦ <NumberFlow value={event.xp} prefix="+" /> XP
+            <span className="inline-flex items-center gap-1" style={{ color: "var(--ink-secondary)" }}>
+              <Icon name="xp" size={14} color="var(--ink-secondary)" /> <NumberFlow value={event.xp} prefix="+" /> XP
             </span>
           ) : null}
           {event.crystals && event.crystals > 0 ? (
-            <span style={{ color: "var(--cyan)" }}>
-              💎 <NumberFlow value={event.crystals} prefix="+" />
+            <span className="inline-flex items-center gap-1" style={{ color: "var(--cyan)" }}>
+              <Icon name="crystal" size={14} color="var(--cyan)" /> <NumberFlow value={event.crystals} prefix="+" />
             </span>
           ) : null}
           {event.hp && event.hp !== 0 ? (
-            <span style={{ color: event.hp < 0 ? "var(--danger)" : "var(--success)" }}>
-              ❤ <NumberFlow value={event.hp} prefix={event.hp > 0 ? "+" : ""} />
+            <span className="inline-flex items-center gap-1" style={{ color: event.hp < 0 ? "var(--danger)" : "var(--success)" }}>
+              <Icon name="hp" size={14} color={event.hp < 0 ? "var(--danger)" : "var(--success)"} /> <NumberFlow value={event.hp} prefix={event.hp > 0 ? "+" : ""} />
             </span>
           ) : null}
         </div>
@@ -157,8 +158,8 @@ function EventRow({ event }: { event: CascadeEvent }) {
 
     case "bond":
       return (
-        <div className="text-sm">
-          <span style={{ color: "var(--gold-bright)" }}>💖</span>{" "}
+        <div className="text-sm inline-flex items-center gap-1 flex-wrap">
+          <Icon name="bond" size={14} color="var(--gold-bright)" />{" "}
           <span style={{ color: "var(--ink-primary)" }}>{event.monsterName}</span>{" "}
           <span style={{ color: "var(--ink-secondary)" }}>bond</span>{" "}
           <NumberFlow
@@ -173,8 +174,8 @@ function EventRow({ event }: { event: CascadeEvent }) {
 
     case "boss":
       return (
-        <div className="text-sm">
-          <span style={{ color: "var(--danger)" }}>👑</span>{" "}
+        <div className="text-sm inline-flex items-center gap-1 flex-wrap">
+          <Icon name="crown" size={14} color="var(--danger)" />{" "}
           <span style={{ color: "var(--ink-primary)" }}>{event.title}</span>{" "}
           <span style={{ color: "var(--ink-secondary)" }}>−</span>
           <NumberFlow value={event.damage} style={{ color: "var(--danger)" }} />
@@ -190,7 +191,7 @@ function EventRow({ event }: { event: CascadeEvent }) {
           className="text-sm rounded-md p-2"
           style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}
         >
-          <span style={{ color: "var(--gold-bright)" }}>⚡</span>{" "}
+          <Icon name="sparkle" size={14} color="var(--gold-bright)" />{" "}
           <span style={{ color: "var(--gold-bright)", fontWeight: 600 }}>{event.monsterName}</span>
           <span style={{ color: "var(--ink-secondary)" }}> awakened </span>
           <span style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>
@@ -204,8 +205,8 @@ function EventRow({ event }: { event: CascadeEvent }) {
 
     case "streak":
       return (
-        <div className="text-sm">
-          <span>🔥</span>{" "}
+        <div className="text-sm inline-flex items-center gap-1">
+          <Icon name="streak" size={14} color="var(--ember)" />{" "}
           <span style={{ color: "var(--ember)" }}>
             <NumberFlow value={event.days} /> day streak
           </span>
@@ -214,16 +215,20 @@ function EventRow({ event }: { event: CascadeEvent }) {
 
     case "drop":
       return (
-        <div className="text-sm">
-          <span>
-            {event.itemType === "egg"
-              ? "🥚"
-              : event.itemType === "realm_potion"
-                ? "🧪"
-                : event.itemType === "food"
-                  ? "🍖"
-                  : "📦"}
-          </span>{" "}
+        <div className="text-sm inline-flex items-center gap-1">
+          <Icon
+            name={
+              event.itemType === "egg"
+                ? "egg"
+                : event.itemType === "realm_potion"
+                  ? "potion"
+                  : event.itemType === "food"
+                    ? "food"
+                    : "stone"
+            }
+            size={14}
+            color="var(--ink-secondary)"
+          />{" "}
           <span style={{ color: "var(--ink-primary)" }}>{event.itemName}</span>{" "}
           <span style={{ color: "var(--ink-secondary)" }}>×{event.quantity}</span>
         </div>
@@ -235,8 +240,8 @@ function EventRow({ event }: { event: CascadeEvent }) {
           className="text-sm rounded-md p-2"
           style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}
         >
-          <span style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
-            ✦ Level <NumberFlow value={event.level} />
+          <span className="inline-flex items-center gap-1" style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
+            <Icon name="xp" size={14} color="var(--gold-bright)" /> Level <NumberFlow value={event.level} />
           </span>
           <span style={{ color: "var(--ink-secondary)" }} className="ml-2 text-xs">
             HP restored
@@ -250,8 +255,8 @@ function EventRow({ event }: { event: CascadeEvent }) {
           className="text-sm rounded-md p-2"
           style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.3)" }}
         >
-          <span style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
-            📕 Tome of Reverse Heaven minted
+          <span className="inline-flex items-center gap-1" style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
+            <Icon name="tome" size={14} color="var(--gold-bright)" /> Tome of Reverse Heaven minted
           </span>
         </div>
       );
@@ -262,8 +267,8 @@ function EventRow({ event }: { event: CascadeEvent }) {
           className="text-sm rounded-md p-2"
           style={{ background: "rgba(224,82,82,0.1)", border: "1px solid rgba(224,82,82,0.3)" }}
         >
-          <span style={{ color: "var(--danger)", fontWeight: 700 }}>
-            💀 You fell — Gold lost, level −1
+          <span className="inline-flex items-center gap-1" style={{ color: "var(--danger)", fontWeight: 700 }}>
+            <Icon name="death" size={14} color="var(--danger)" /> You fell — Gold lost, level −1
           </span>
         </div>
       );
