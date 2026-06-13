@@ -35,6 +35,21 @@ function shootConfetti() {
   });
 }
 
+const REALM_VOICES: Record<string, string> = {
+  "Ancient Vaults": "The text remembers being read.",
+  "Chaos Wastes": "Stronger today. Smaller tomorrow. Pull the bow again.",
+  "The Outer Dark": "I am here. I have always been here.",
+  "Blighted Expanse": "Lay your weapon down a moment. Sit beside the candle.",
+  "Wild Frontier": "Run with me. There will be a reason.",
+  "Divine Threshold": "The breath comes. The breath goes.",
+  "Haunted Veil": "You came back. Most don't.",
+  "Digital Nexus": "Process complete. Beginning next process.",
+  "Elder Realm": "You came hungry. We have soup.",
+  "Void Frontier": "There — that light. We go there.",
+  "Myth Eternal": "This is older than you think. So are you.",
+  "Iron Dominion": "This task. I will finish it. With you.",
+};
+
 function FocusRitual() {
   const [active, setActive] = useState(false);
   const [timeLeft, setTimeLeft] = useState(25 * 60);
@@ -194,12 +209,25 @@ function HubPage() {
       }
 
       const ticks =
-        (res as { growthTicks?: Array<{ monster_name: string }> } | undefined)?.growthTicks ?? [];
+        (res as { growthTicks?: Array<{ monster_name: string; realm_name: string | null }> } | undefined)?.growthTicks ?? [];
       // Bond rows: show first 2 monsters (third+ collapse into a count via reward-style label)
       if (ticks.length > 0) {
         // We don't have new bond percent in result; show generic +0.5% rise per matching monster
         for (const t of ticks.slice(0, 2)) {
           events.push({ kind: "bond", monsterName: t.monster_name, from: 0, to: 0.5 });
+        }
+
+        // 30% chance to play a realm whisper on habit/directive completion
+        if (Math.random() < 0.3) {
+          const validTicks = ticks.filter((t) => t.realm_name && REALM_VOICES[t.realm_name]);
+          if (validTicks.length > 0) {
+            const chosen = validTicks[Math.floor(Math.random() * validTicks.length)];
+            whisper({
+              monsterName: chosen.monster_name,
+              line: REALM_VOICES[chosen.realm_name!],
+              tone: "calm",
+            });
+          }
         }
       }
 

@@ -509,16 +509,16 @@ export async function scoreTask(
     .filter((t) => (statTags as readonly string[]).includes(t.toLowerCase()))
     .map((t) => t.toLowerCase());
 
-  const growthTicks: Array<{ user_monster_id: string; monster_name: string; stat: string }> = [];
+  const growthTicks: Array<{ user_monster_id: string; monster_name: string; stat: string; realm_name: string | null }> = [];
 
   if (isPositive && targetStats.length > 0) {
     const { data: roster } = await supabase
       .from("user_monsters")
-      .select("id, bond_percent, growth_xp, monster:monsters(name, role)")
+      .select("id, bond_percent, growth_xp, monster:monsters(name, role, realms(name))")
       .eq("user_id", user.id);
 
     for (const um of roster ?? []) {
-      const m = um.monster as unknown as { name: string; role: string } | null;
+      const m = um.monster as unknown as { name: string; role: string; realms: { name: string } | null } | null;
       if (!m) continue;
       const stat = roleToStat(m.role);
       if (!targetStats.includes(stat)) continue;
@@ -530,7 +530,12 @@ export async function scoreTask(
         .update({ bond_percent: newBond, growth_xp: newGrowthXp })
         .eq("id", um.id);
 
-      growthTicks.push({ user_monster_id: um.id, monster_name: m.name, stat });
+      growthTicks.push({
+        user_monster_id: um.id,
+        monster_name: m.name,
+        stat,
+        realm_name: m.realms?.name ?? null,
+      });
     }
   }
 

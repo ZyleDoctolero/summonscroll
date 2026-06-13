@@ -24,6 +24,24 @@ export const Route = createFileRoute("/_authenticated/compendium")({
   component: CompendiumPage,
 });
 
+function getRealmClass(realmName: string): string {
+  switch (realmName) {
+    case "Ancient Vaults": return "vaults";
+    case "Chaos Wastes": return "chaos";
+    case "The Outer Dark": return "dark";
+    case "Blighted Expanse": return "blight";
+    case "Wild Frontier": return "wild";
+    case "Divine Threshold": return "divine";
+    case "Haunted Veil": return "veil";
+    case "Digital Nexus": return "digital";
+    case "Elder Realm": return "elder";
+    case "Void Frontier": return "void";
+    case "Myth Eternal": return "myth";
+    case "Iron Dominion": return "iron";
+    default: return "";
+  }
+}
+
 function CompendiumPage() {
   const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
   const realmsQ = useQuery({ queryKey: ["realms"], queryFn: listRealms });
@@ -104,6 +122,30 @@ function CompendiumPage() {
           ))}
         </div>
 
+        {/* Selected Realm tagline + lore */}
+        {realmFilter !== null && (() => {
+          const selectedRealm = (realmsQ.data?.realms ?? []).find((r: any) => r.id === realmFilter);
+          if (!selectedRealm) return null;
+          const realmClass = getRealmClass(selectedRealm.name);
+          return (
+            <div 
+              className="ss-card mb-6 p-4 border-l-4" 
+              style={{ 
+                borderColor: `var(--realm-${realmClass}-accent)`,
+                background: `linear-gradient(180deg, var(--realm-${realmClass}-base) 0%, var(--bg-pane) 100%)`,
+              }}
+            >
+              <h2 className="text-sm font-bold mb-1 flex items-center gap-1.5" style={{ color: `var(--realm-${realmClass}-accent)` }}>
+                <span>{selectedRealm.icon}</span>
+                <span>{selectedRealm.name}</span>
+              </h2>
+              <p className="text-xs leading-relaxed" style={{ color: "var(--ink-primary)" }}>
+                {selectedRealm.description}
+              </p>
+            </div>
+          );
+        })()}
+
         {/* Filters */}
         <div className="flex gap-3 mb-6 flex-wrap">
           <input
@@ -140,7 +182,7 @@ function CompendiumPage() {
                 className="ss-card rounded-lg p-3 text-center transition-all hover:scale-[1.03]"
                 style={{
                   opacity: owned ? 1 : 0.5,
-                  borderColor: owned ? RARITY_COLOR[r] : undefined,
+                  borderColor: m.realms?.name ? `var(--realm-${getRealmClass(m.realms.name)}-accent)` : undefined,
                   boxShadow: owned && r !== "common" ? RARITY_GLOW[r] : undefined,
                 }}
               >
