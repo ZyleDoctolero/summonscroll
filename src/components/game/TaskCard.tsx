@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@/components/ui/Icon";
-import {
-  valueColor,
-  VALUE_COLOR_HEX,
-  type Difficulty,
-  type TaskType,
-} from "@/lib/game/constants";
+import { valueColor, VALUE_COLOR_HEX, type Difficulty, type TaskType } from "@/lib/game/constants";
 
 export type Task = {
   id: string;
@@ -24,24 +19,42 @@ export type Task = {
 };
 
 // Category → realm affinity mapping per FR01 §2.8
+// Category → realm affinity mapping per FR01 §2.8
 const CATEGORY_ICONS: Record<string, string> = {
-  study: "📚", reading: "📚", mind: "📚",
-  strength: "💪", training: "💪", body: "💪",
-  meditation: "🧘", mindfulness: "🙏",
-  sleep: "😴", recovery: "😴",
-  exercise: "🏃", fitness: "🏃",
-  night: "🌙",
-  custom: "🎯",
-  water: "🥗", nutrition: "🥗",
-  goals: "🚀", ambition: "🚀",
-  productivity: "⚡", work: "⚡",
+  study: "tome",
+  reading: "tome",
+  mind: "tome",
+  strength: "dumbbell",
+  training: "dumbbell",
+  body: "dumbbell",
+  meditation: "morning",
+  mindfulness: "memorial",
+  sleep: "evening",
+  recovery: "evening",
+  exercise: "stamina",
+  fitness: "stamina",
+  night: "evening",
+  custom: "target",
+  water: "food",
+  nutrition: "food",
+  goals: "crown",
+  ambition: "crown",
+  productivity: "stamina",
+  work: "stamina",
 };
 
 const DIFFICULTY_LABELS: Record<string, string> = {
-  trivial: "☆ Trivial",
-  easy: "⭐ Easy",
-  medium: "⭐⭐ Medium",
-  hard: "⭐⭐⭐ Hard",
+  trivial: "Trivial",
+  easy: "Easy",
+  medium: "Medium",
+  hard: "Hard",
+};
+
+const DIFFICULTY_STARS: Record<string, number> = {
+  trivial: 0,
+  easy: 1,
+  medium: 2,
+  hard: 3,
 };
 
 export function TaskCard({
@@ -62,14 +75,24 @@ export function TaskCard({
   const color = VALUE_COLOR_HEX[valueColor(Number(task.value))];
   const [open, setOpen] = useState(false);
   const categoryIcon = task.category
-    ? CATEGORY_ICONS[task.category.toLowerCase()] ?? "🎯"
-    : "📋";
+    ? (CATEGORY_ICONS[task.category.toLowerCase()] ?? "target")
+    : "target";
 
   // Streak health calculation per FR01 §2.2
-  const streakHealth = task.streak > 0
-    ? Math.min(100, task.streak * 15) // rough approximation
-    : Number(task.value) > 0 ? 50 : 0;
-  const streakColor = streakHealth >= 75 ? "#5FAD41" : streakHealth >= 40 ? "#FFB74D" : streakHealth > 0 ? "#E05252" : "var(--ink-tertiary)";
+  const streakHealth =
+    task.streak > 0
+      ? Math.min(100, task.streak * 15) // rough approximation
+      : Number(task.value) > 0
+        ? 50
+        : 0;
+  const streakColor =
+    streakHealth >= 75
+      ? "#5FAD41"
+      : streakHealth >= 40
+        ? "#FFB74D"
+        : streakHealth > 0
+          ? "#E05252"
+          : "var(--ink-tertiary)";
 
   return (
     <article
@@ -86,10 +109,14 @@ export function TaskCard({
     >
       {task.is_starred && (
         <div
-          className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow"
-          style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
+          className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
+          style={{
+            background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
+            color: "var(--bg-deep)",
+          }}
         >
-          ⭐ Sacred
+          <Icon name="star" size={10} color="var(--bg-deep)" className="fill-current" />
+          Sacred
         </div>
       )}
       {/* Action buttons — FR01 §2.3: [+] and [−] for habits */}
@@ -100,7 +127,11 @@ export function TaskCard({
               disabled={busy}
               onClick={() => onScore("plus")}
               className="w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
-              style={{ background: "rgba(95,173,65,0.15)", color: "var(--success)", border: "1px solid rgba(95,173,65,0.4)" }}
+              style={{
+                background: "rgba(95,173,65,0.15)",
+                color: "var(--success)",
+                border: "1px solid rgba(95,173,65,0.4)",
+              }}
               aria-label="Score positive"
             >
               +
@@ -111,7 +142,11 @@ export function TaskCard({
               disabled={busy}
               onClick={() => onScore("minus")}
               className="w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
-              style={{ background: "rgba(224,82,82,0.15)", color: "var(--danger)", border: "1px solid rgba(224,82,82,0.4)" }}
+              style={{
+                background: "rgba(224,82,82,0.15)",
+                color: "var(--danger)",
+                border: "1px solid rgba(224,82,82,0.4)",
+              }}
               aria-label="Score negative"
             >
               −
@@ -130,7 +165,7 @@ export function TaskCard({
           }}
           aria-label="Toggle complete"
         >
-          {task.completed && "✓"}
+          {task.completed && <Icon name="check" size={18} strokeWidth={3} />}
         </button>
       )}
 
@@ -138,8 +173,11 @@ export function TaskCard({
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0">
             {task.category && (
-              <div className="text-[10px] uppercase tracking-widest mb-0.5 flex items-center gap-1" style={{ color }}>
-                <span>{categoryIcon}</span>
+              <div
+                className="text-[10px] uppercase tracking-widest mb-0.5 flex items-center gap-1"
+                style={{ color }}
+              >
+                <Icon name={categoryIcon as any} size={10} color={color} />
                 <span>{task.category}</span>
               </div>
             )}
@@ -147,7 +185,8 @@ export function TaskCard({
               className="t-h3 text-base truncate"
               style={{
                 color: "var(--ink-primary)",
-                textDecoration: task.completed && task.type !== "habit" ? "line-through" : undefined,
+                textDecoration:
+                  task.completed && task.type !== "habit" ? "line-through" : undefined,
               }}
             >
               {task.title}
@@ -169,18 +208,26 @@ export function TaskCard({
                 onMouseLeave={() => setOpen(false)}
               >
                 <button
-                  onClick={() => { setOpen(false); onEdit(); }}
-                  className="w-full text-left px-3 py-2 text-sm hover:bg-white/5"
+                  onClick={() => {
+                    setOpen(false);
+                    onEdit();
+                  }}
+                  className="w-full text-left px-3 py-2 text-sm hover:bg-white/5 flex items-center gap-1.5"
                   style={{ color: "var(--ink-primary)" }}
                 >
-                  ✏ Edit
+                  <Icon name="edit" size={13} />
+                  Edit
                 </button>
                 <button
-                  onClick={() => { setOpen(false); onDelete(); }}
-                  className="w-full text-left px-3 py-2 text-sm hover:bg-white/5"
+                  onClick={() => {
+                    setOpen(false);
+                    onDelete();
+                  }}
+                  className="w-full text-left px-3 py-2 text-sm hover:bg-white/5 flex items-center gap-1.5"
                   style={{ color: "var(--danger)" }}
                 >
-                  🗑 Delete
+                  <Icon name="delete" size={13} />
+                  Delete
                 </button>
               </div>
             )}
@@ -194,9 +241,18 @@ export function TaskCard({
         )}
 
         {/* Task meta row */}
-        <div className="flex items-center gap-3 mt-2 text-[11px]" style={{ color: "var(--ink-tertiary)" }}>
-          <span className="t-mono" style={{ color }}>
-            {DIFFICULTY_LABELS[task.difficulty] ?? task.difficulty}
+        <div
+          className="flex items-center gap-3 mt-2 text-[11px]"
+          style={{ color: "var(--ink-tertiary)" }}
+        >
+          <span className="t-mono flex items-center gap-1" style={{ color }}>
+            {Array.from({ length: DIFFICULTY_STARS[task.difficulty] ?? 0 }).map((_, i) => (
+              <Icon key={i} name="star" size={10} color={color} className="fill-current" />
+            ))}
+            {DIFFICULTY_STARS[task.difficulty] === 0 && (
+              <Icon name="star" size={10} color={color} className="opacity-40" />
+            )}
+            <span className="ml-1">{DIFFICULTY_LABELS[task.difficulty] ?? task.difficulty}</span>
           </span>
           {task.streak > 0 && (
             <span className="flex items-center gap-1">
@@ -211,7 +267,10 @@ export function TaskCard({
         {/* Streak health bar — FR01 §2.2 */}
         {task.type !== "todo" && task.streak > 0 && (
           <div className="mt-2">
-            <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
+            <div
+              className="h-1.5 rounded-full overflow-hidden"
+              style={{ background: "rgba(255,255,255,0.06)" }}
+            >
               <div
                 className="h-full rounded-full transition-all"
                 style={{ width: `${streakHealth}%`, background: streakColor }}
@@ -221,7 +280,10 @@ export function TaskCard({
         )}
 
         {/* Reward preview — FR01 §2.3 */}
-        <div className="mt-1.5 text-[10px] flex gap-2 t-mono" style={{ color: "var(--ink-tertiary)" }}>
+        <div
+          className="mt-1.5 text-[10px] flex gap-2 t-mono"
+          style={{ color: "var(--ink-tertiary)" }}
+        >
           <span style={{ color: `${color}99` }}>val {Number(task.value).toFixed(1)}</span>
         </div>
       </div>

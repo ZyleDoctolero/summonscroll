@@ -16,7 +16,7 @@ Every "no X yet" message in the app is functional and dead:
 
 Empty states are the moment a player decides whether your game has soul. These
 say "this is a feature waiting for content." A polished game writes them as
-*evocative*, *inviting*, and *diegetic* — they speak from inside the world.
+_evocative_, _inviting_, and _diegetic_ — they speak from inside the world.
 
 ## The fix
 
@@ -36,30 +36,30 @@ By identity:
 
 ### Proposal A — Burning Page (illuminated)
 
-| Type | Pattern |
-|---|---|
-| Mostly absent | "The page is blank. Let it burn into something." |
-| Recently empty | "Once there was an entry here. Begin again." |
-| Never started | "What you do shall be written. Nothing yet." |
-| Awaiting action | "The page waits, ink at the ready." |
+| Type            | Pattern                                          |
+| --------------- | ------------------------------------------------ |
+| Mostly absent   | "The page is blank. Let it burn into something." |
+| Recently empty  | "Once there was an entry here. Begin again."     |
+| Never started   | "What you do shall be written. Nothing yet."     |
+| Awaiting action | "The page waits, ink at the ready."              |
 
 ### Proposal B — Lantern Garden (pixel)
 
-| Type | Pattern |
-|---|---|
-| Mostly absent | "The grove is quiet. Nothing yet." |
-| Recently empty | "The fire's out. Light another." |
-| Never started | "First steps make the path." |
+| Type            | Pattern                                 |
+| --------------- | --------------------------------------- |
+| Mostly absent   | "The grove is quiet. Nothing yet."      |
+| Recently empty  | "The fire's out. Light another."        |
+| Never started   | "First steps make the path."            |
 | Awaiting action | "Your lantern is dim. Time to fill it." |
 
 ### Proposal C — Iron Court (gothic)
 
-| Type | Pattern |
-|---|---|
-| Mostly absent | "No record." |
-| Recently empty | "The ledger is closed." |
-| Never started | "Unwritten." |
-| Awaiting action | "Standing by." |
+| Type            | Pattern                 |
+| --------------- | ----------------------- |
+| Mostly absent   | "No record."            |
+| Recently empty  | "The ledger is closed." |
+| Never started   | "Unwritten."            |
+| Awaiting action | "Standing by."          |
 
 ---
 

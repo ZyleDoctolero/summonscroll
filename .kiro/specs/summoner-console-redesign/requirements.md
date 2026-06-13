@@ -117,7 +117,7 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 9. THE System SHALL replace monster placeholder emoji (👾) with /monsters/placeholder.png image OR Sphere icon at 50% opacity
 10. WHERE Proposal D is active, THE System SHALL define .lucide-glow utility class with drop-shadow(0 0 4px currentColor) filter and transition on filter
 11. WHERE Proposal D is active, THE .lucide-glow:hover state SHALL apply drop-shadow(0 0 8px currentColor) drop-shadow(0 0 16px currentColor) filter
-12. THE System SHALL migrate 8 high-impact files first (PlayerHeader.tsx, CascadeCard.tsx, WhisperFeed.tsx, DailyRitual.tsx, routes/_authenticated/index.tsx, routes/_authenticated/expeditions.tsx, routes/_authenticated/altar.tsx, routes/_authenticated/profile.tsx)
+12. THE System SHALL migrate 8 high-impact files first (PlayerHeader.tsx, CascadeCard.tsx, WhisperFeed.tsx, DailyRitual.tsx, routes/\_authenticated/index.tsx, routes/\_authenticated/expeditions.tsx, routes/\_authenticated/altar.tsx, routes/\_authenticated/profile.tsx)
 13. THE System SHALL migrate 4 lower-priority files (trial.tsx, quests.tsx, codex.tsx, battle.tsx)
 14. THE System SHALL tint icons with semantic colors (gold icons use var(--gold-leaf), crystal icons use var(--cyan) or var(--violet), HP icons use var(--danger), success icons use var(--success))
 15. THE System SHALL apply glow class to hero moment icons (modal headers, ceremony banners, compass icon)
@@ -159,7 +159,7 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 26. THE System SHALL migrate 15+ component files to use typography classes (PlayerHeader, TaskCard, CascadeCard, WhisperFeed, DailyRitual, PromotionChamber, altar route, compendium route, codex route, profile route, quests route, battle route, trial route, forge route, bazaar route, guild route)
 27. THE System SHALL apply tabular-nums font-variant to all elements displaying currency counts, HP/XP/stamina counts, percentages, and stat numbers
 28. WHEN migration completes, THE System SHALL have fewer than 5 inline fontFamily declarations in src tsx files (excluding motion-tokens or legacy auth files)
-29. WHEN migration completes, THE System SHALL have 40+ instances of .t-* typography classes in component files
+29. WHEN migration completes, THE System SHALL have 40+ instances of .t-\* typography classes in component files
 30. WHEN build completes after migration, THE System SHALL pass npm run build with fonts loading successfully
 
 ### Requirement 5: Atmosphere Background Generation
@@ -186,19 +186,18 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 16. THE System SHALL define .bg-atmos-codex class with background-image url(/atmos/codex.png)
 17. THE System SHALL define .bg-atmos-trial class with background-image url(/atmos/trial.png)
 18. THE System SHALL define .bg-atmos-compendium class with background-image url(/atmos/compendium.png) if generated
-19. THE System SHALL apply .bg-atmos-hub class to routes/_authenticated/index.tsx root container
-20. THE System SHALL apply .bg-atmos-altar class to routes/_authenticated/altar.tsx root container
-21. THE System SHALL apply .bg-atmos-expedition class to routes/_authenticated/expeditions.tsx root container
-22. THE System SHALL apply .bg-atmos-battle class to routes/_authenticated/battle.tsx root container
-23. THE System SHALL apply .bg-atmos-codex class to routes/_authenticated/codex.tsx root container
-24. THE System SHALL apply .bg-atmos-trial class to routes/_authenticated/trial.tsx root container
-25. THE System SHALL apply .bg-atmos-compendium class to routes/_authenticated/compendium.tsx root container if generated
+19. THE System SHALL apply .bg-atmos-hub class to routes/\_authenticated/index.tsx root container
+20. THE System SHALL apply .bg-atmos-altar class to routes/\_authenticated/altar.tsx root container
+21. THE System SHALL apply .bg-atmos-expedition class to routes/\_authenticated/expeditions.tsx root container
+22. THE System SHALL apply .bg-atmos-battle class to routes/\_authenticated/battle.tsx root container
+23. THE System SHALL apply .bg-atmos-codex class to routes/\_authenticated/codex.tsx root container
+24. THE System SHALL apply .bg-atmos-trial class to routes/\_authenticated/trial.tsx root container
+25. THE System SHALL apply .bg-atmos-compendium class to routes/\_authenticated/compendium.tsx root container if generated
 26. THE System SHALL add <link rel="preload" as="image" href="/atmos/hub.png"> to index.html for first paint optimization
 27. THE System SHALL add loading="lazy" attribute to atmosphere background images for non-Hub routes
 28. WHEN all atmospheres load, THE System SHALL maintain text contrast ratio ≥ 4.5:1 for body text (15px) against darkened backgrounds
 29. WHEN all atmospheres load, THE System SHALL maintain text contrast ratio ≥ 3:1 for large text (≥18px) against darkened backgrounds
 30. WHEN all 6-7 atmosphere images are compressed, THE combined file size SHALL be under 3MB total
-
 
 ### Requirement 6: Compass Component Implementation
 
@@ -213,7 +212,7 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 5. WHEN isEveningWindow() returns true AND log.am_completed_at is not null AND log.pm_completed_at is null, THE Compass SHALL create Evening Reflection candidate with score 90 + hoursPastWindDown, title "Reflect on the day.", reason "Ninety seconds. Builds the ritual streak.", cta "Reflect", action onOpenEvening callback, icon "evening", tone "calm"
 6. WHEN log.reflection_pull_granted is true AND log.reflection_pull_used is false, THE Compass SHALL create Reflection Pull candidate with score 95, title "A Reflection Pull is waiting.", reason "Earned tonight. Claim before midnight.", cta "Open the Altar", to "/altar", icon "summon", tone "rare"
 7. WHEN active quarterly goal exists AND hp_remaining / hp_total < 0.15, THE Compass SHALL create Quarterly Boss candidate with score 95, title "{goal.title} is close to falling.", reason "{hp_remaining} HP left. Strike now.", cta "View Quests", to "/quests", icon "crown", tone "urgent"
-8. WHEN any monster has bond_percent ≥ 60 AND star_level < 5 AND level ≥ 15, THE Compass SHALL create Promotion candidate with score 88 + (newStarLevel * 2), title "{monster.name} may be ready to promote.", reason "Visit the Chamber to check the stones.", cta "Inspect", to "/compendium", icon "star", tone "calm"
+8. WHEN any monster has bond_percent ≥ 60 AND star_level < 5 AND level ≥ 15, THE Compass SHALL create Promotion candidate with score 88 + (newStarLevel \* 2), title "{monster.name} may be ready to promote.", reason "Visit the Chamber to check the stones.", cta "Inspect", to "/compendium", icon "star", tone "calm"
 9. WHEN computeCurrentStamina() returns value ≥ stamina_max, THE Compass SHALL create Stamina Full candidate with score 70, title "Stamina is full.", reason "Five expedition runs ready.", cta "Send the team", to "/expeditions", icon "stamina", tone "calm"
 10. WHEN tower.highest_floor = 49 AND tower.wailing_wall_cleared_at is null, THE Compass SHALL create Wailing Wall candidate with score 92, title "Floor 50 is the Wailing Wall.", reason "First clear earns 5 Tome Shards and a permanent badge.", cta "Enter the Tower", to "/battle", icon "battle", tone "urgent"
 11. WHEN 2 of 3 starred tasks are completed today, THE Compass SHALL create Sacred Directives candidate with score 80, title "Two directives done. One remains.", reason "Perfection earns the triple crown.", cta "View Tasks", to "/", icon "star", tone "calm"
@@ -226,7 +225,7 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 18. THE Compass component SHALL render CTA button with .ss-btn .ss-btn-primary classes, onClick handler calling suggestion.action or navigating to suggestion.to
 19. THE Compass component SHALL refresh when ["profile"], ["today-log"], ["goals-active"], ["my-monsters"], or ["tower"] query keys invalidate
 20. THE Compass component SHALL accept onOpenMorning and onOpenEvening callback props
-21. THE System SHALL mount Compass component at top of Hub route (routes/_authenticated/index.tsx) as first element after RitualStatusPill removal
+21. THE System SHALL mount Compass component at top of Hub route (routes/\_authenticated/index.tsx) as first element after RitualStatusPill removal
 22. THE System SHALL remove RitualStatusPill component from Hub when Compass is mounted (Compass replaces its role)
 23. THE Compass component SHALL include role="region" and aria-label="Next action" for accessibility
 24. THE Compass CTA button SHALL be reachable by keyboard tab navigation
@@ -261,7 +260,7 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 16. THE completeOnboarding function SHALL insert tutorial directive task with user_id, type="habit", title="Drink water (first habit)", notes="Tap the [+] to score this habit. Watch what happens.", category="wellness", difficulty="easy", positive_enabled=true, negative_enabled=false, tags=["con"]
 17. THE completeOnboarding function SHALL update profile with onboarding_completed_at=current timestamp and tutorial_directive_id=inserted task id
 18. THE completeOnboarding function SHALL return taskId
-19. THE System SHALL mount Onboarding component in routes/_authenticated/index.tsx conditionally WHEN profile.onboarding_completed_at is null
+19. THE System SHALL mount Onboarding component in routes/\_authenticated/index.tsx conditionally WHEN profile.onboarding_completed_at is null
 20. THE System SHALL pass onComplete={() => completeOnboardingMutation.mutate()} prop to Onboarding component
 21. THE System SHALL modify TaskCard component to detect WHEN task.id matches profile.tutorial_directive_id
 22. WHEN task is tutorial directive, THE TaskCard SHALL apply .ss-card class with box-shadow: 0 0 24px rgba(255,213,79,0.45) and animation: tutorial-pulse 2s ease-in-out infinite
@@ -364,7 +363,6 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 38. WHEN EmptyState components render, THE dashed border AND centered icon SHALL visually distinguish empty state from error or loading state
 39. WHEN user sees EmptyState, THE body text SHALL guide them toward the action that populates that space
 40. WHEN build completes after empty state migration, THE System SHALL pass npm run build with no TypeScript errors
-
 
 ### Requirement 10: Monster Art Regeneration
 
@@ -487,7 +485,7 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 9. THE System SHALL preserve React Query cache keys (["profile"], ["today-log"], ["my-monsters"], ["goals-active"], ["tower"], etc.) unchanged
 10. THE System SHALL preserve TanStack Router navigation patterns and route definitions unchanged
 11. THE System SHALL preserve existing component prop interfaces unchanged (CascadeCard, WhisperFeed, PromotionChamber, DailyRitual, TaskCard, PlayerHeader)
-12. THE System SHALL preserve existing test suites passing (if test files exist in src/__tests__/)
+12. THE System SHALL preserve existing test suites passing (if test files exist in src/**tests**/)
 13. WHEN all 11 implementation files ship, THE System SHALL have visual identity reading consistently across all screens
 14. WHEN all 11 implementation files ship, THE System SHALL have zero emoji Unicode literals remaining in UI (< 5 in display-only contexts acceptable)
 15. WHEN all 11 implementation files ship, THE System SHALL have atmosphere backgrounds applied to 6 primary routes (Hub, Altar, Expedition, Battle, Codex, Trial)
@@ -590,4 +588,3 @@ The redesign encompasses 11 sequential implementation files covering: visual ide
 28. WHEN all 11 files deploy to production, THE System SHALL have zero breaking changes to existing user workflows
 29. WHEN all 11 files deploy to production, THE System SHALL have zero data loss or corruption
 30. WHEN all 11 files deploy to production, THE System SHALL have visual identity feeling like "the game from Pick Me Up, Infinite Gacha"
-

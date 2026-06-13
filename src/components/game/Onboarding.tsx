@@ -27,15 +27,15 @@ interface OnboardingProps {
 
 /**
  * Onboarding Welcome Carousel
- * 
+ *
  * A 3-screen welcome flow shown to new users (profile.onboarding_completed_at IS NULL).
  * Implements Proposal D visual identity with gradient accents and dramatic typography.
- * 
+ *
  * Flow:
  * 1. "Your habits forge a fantasy world" — context setting
  * 2. "Three rhythms, one game" — game loop explanation
  * 3. "Start with one directive" — tutorial prompt
- * 
+ *
  * After completion, a tutorial directive is seeded and the free first pull is enabled.
  */
 export function Onboarding({ onComplete }: OnboardingProps) {
@@ -59,9 +59,9 @@ export function Onboarding({ onComplete }: OnboardingProps) {
         >
           {/* Icon glyph with Proposal D glow */}
           <div className="mb-4 flex justify-center">
-            <Icon 
-              name={currentStep.icon} 
-              size={48} 
+            <Icon
+              name={currentStep.icon}
+              size={48}
               className="lucide-glow"
               color="var(--gold-bright)"
             />
@@ -94,10 +94,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
           {/* Navigation controls */}
           <div className="flex gap-3 justify-center">
             {step > 0 && (
-              <button 
-                onClick={() => setStep(step - 1)} 
-                className="ss-btn ss-btn-secondary"
-              >
+              <button onClick={() => setStep(step - 1)} className="ss-btn ss-btn-secondary">
                 Back
               </button>
             )}

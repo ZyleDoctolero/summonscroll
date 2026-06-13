@@ -5,7 +5,13 @@ import { supabase } from "@/integrations/supabase/client";
 export type TrialResult = {
   floorsCleared: number;
   fullClear: boolean;
-  fallen: Array<{ name: string; role: string; rarity: string; star_level: number; bond_percent: number }>;
+  fallen: Array<{
+    name: string;
+    role: string;
+    rarity: string;
+    star_level: number;
+    bond_percent: number;
+  }>;
   rewards: Array<{ type: string; name: string; qty: number }>;
   echoTouched: boolean;
 };
@@ -16,7 +22,9 @@ const COOLDOWN_DAYS = 7;
 // ─── Cooldown check ─────────────────────────────────────────────────────────
 
 export async function getTrialCooldown(): Promise<{ canStart: boolean; daysRemaining: number }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return { canStart: false, daysRemaining: 0 };
 
   const { data: profile } = await supabase
@@ -38,19 +46,25 @@ export async function runTrial(teamUserMonsterIds: string[]): Promise<TrialResul
     throw new Error("Trial of Echoes requires exactly 5 monsters.");
   }
 
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   // Cooldown check
   const cd = await getTrialCooldown();
   if (!cd.canStart) {
-    throw new Error(`Trial on cooldown for ${cd.daysRemaining} more day${cd.daysRemaining === 1 ? "" : "s"}.`);
+    throw new Error(
+      `Trial on cooldown for ${cd.daysRemaining} more day${cd.daysRemaining === 1 ? "" : "s"}.`,
+    );
   }
 
   // Load team
   const { data: team } = await supabase
     .from("user_monsters")
-    .select("id, level, bond_percent, star_level, awakened_skills, monster:monsters(name, role, rarity, base_atk, base_def, base_hp)")
+    .select(
+      "id, level, bond_percent, star_level, awakened_skills, monster:monsters(name, role, rarity, base_atk, base_def, base_hp)",
+    )
     .in("id", teamUserMonsterIds);
   if (!team || team.length !== 5) throw new Error("Could not load full team.");
 
@@ -69,7 +83,14 @@ export async function runTrial(teamUserMonsterIds: string[]): Promise<TrialResul
     alive: boolean;
   };
   const sim: SimMon[] = team.map((um) => {
-    const m = um.monster as unknown as { name: string; role: string; rarity: string; base_atk: number; base_def: number; base_hp: number };
+    const m = um.monster as unknown as {
+      name: string;
+      role: string;
+      rarity: string;
+      base_atk: number;
+      base_def: number;
+      base_hp: number;
+    };
     const levelMult = 1 + um.level * 0.05;
     const starMult = 1 + (um.star_level - 1) * 0.15;
     return {
@@ -123,10 +144,15 @@ export async function runTrial(teamUserMonsterIds: string[]): Promise<TrialResul
   }
 
   // Apply permadeath: delete fallen user_monsters
-  const fallen: TrialResult["fallen"] = sim.filter((s) => !s.alive).map((s) => ({
-    name: s.name, role: s.role, rarity: s.rarity,
-    star_level: s.star_level, bond_percent: s.bond_percent,
-  }));
+  const fallen: TrialResult["fallen"] = sim
+    .filter((s) => !s.alive)
+    .map((s) => ({
+      name: s.name,
+      role: s.role,
+      rarity: s.rarity,
+      star_level: s.star_level,
+      bond_percent: s.bond_percent,
+    }));
 
   const fallenIds = sim.filter((s) => !s.alive).map((s) => s.id);
   if (fallenIds.length > 0) {
@@ -155,9 +181,14 @@ export async function runTrial(teamUserMonsterIds: string[]): Promise<TrialResul
       .eq("item_name", r.name)
       .maybeSingle();
     if (existing) {
-      await supabase.from("inventory").update({ quantity: existing.quantity + r.qty }).eq("id", existing.id);
+      await supabase
+        .from("inventory")
+        .update({ quantity: existing.quantity + r.qty })
+        .eq("id", existing.id);
     } else {
-      await supabase.from("inventory").insert({ user_id: user.id, item_type: r.type, item_name: r.name, quantity: r.qty });
+      await supabase
+        .from("inventory")
+        .insert({ user_id: user.id, item_type: r.type, item_name: r.name, quantity: r.qty });
     }
   }
 
@@ -165,7 +196,11 @@ export async function runTrial(teamUserMonsterIds: string[]): Promise<TrialResul
   const updates: Record<string, unknown> = { last_trial_at: new Date().toISOString() };
   let echoTouched = false;
   if (fullClear) {
-    const { data: profile } = await supabase.from("profiles").select("echo_touched").eq("id", user.id).single();
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("echo_touched")
+      .eq("id", user.id)
+      .single();
     if (profile && !profile.echo_touched) {
       updates.echo_touched = true;
       echoTouched = true;
@@ -189,7 +224,9 @@ export async function runTrial(teamUserMonsterIds: string[]): Promise<TrialResul
 // ─── Memorial: list fallen across all trials ────────────────────────────────
 
 export async function listMemorial() {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return { memorials: [] };
 
   const { data, error } = await supabase

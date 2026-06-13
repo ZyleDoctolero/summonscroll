@@ -9,7 +9,7 @@ exceeding context.
 SummonScroll's mechanics are deep — 12 interlocking systems (Pick Me Up + 5
 Pillars) shipped. But the visual surface is a generic "dark fantasy" template
 with no committed art direction, emoji icons, and no first-time experience.
-Players don't know what to do, the screens don't feel like a *place*, and the
+Players don't know what to do, the screens don't feel like a _place_, and the
 polish (motion, sound, animations) is currently sitting on top of placeholder
 chrome.
 
@@ -17,21 +17,21 @@ This redesign fixes all of that systematically. Each file is one decision area.
 
 ## File index — read in order
 
-| # | File | Purpose | Effort |
-|---|---|---|---|
-| 01 | [VISUAL_IDENTITY](./01_VISUAL_IDENTITY.md) | Pick the single visual reference everything else hangs off. **FOUR proposals** — A/B/C are tabletop/RPG flavors; **D ("Summoner's Console") is the Pick Me Up–faithful modern anime gacha option**. | 0 (decision only) |
-| 02 | [SURFACE_SYSTEM](./02_SURFACE_SYSTEM.md) | Build the tokenized `.ss-card`, `.ss-modal`, `.ss-pane` CSS kit. Replace inline-style chaos with one source of truth. | 1 day |
-| 03 | [ICON_SYSTEM](./03_ICON_SYSTEM.md) | Replace every emoji with Phosphor Icons OR a chosen pixel set. Migration map included. | 1 day |
-| 04 | [TYPOGRAPHY_SYSTEM](./04_TYPOGRAPHY_SYSTEM.md) | Establish 5 type roles (display, heading, body, mono, lore). Pick Google Fonts. | 0.5 day |
-| 05 | [ATMOSPHERE_PER_SCREEN](./05_ATMOSPHERE_PER_SCREEN.md) | One backdrop per primary route. Altar gets a ritual circle, Battle gets an arena, Codex gets parchment. | 1.5 days |
-| 06 | [THE_COMPASS](./06_THE_COMPASS.md) | The "what should I do right now" component on Hub. Kills decision fatigue. | 1 day |
-| 07 | [FIRST_TIME_EXPERIENCE](./07_FIRST_TIME_EXPERIENCE.md) | Onboarding overlay, tutorial task, free first pull, day-1 walkthrough. | 1.5 days |
-| 08 | [NAV_HIERARCHY](./08_NAV_HIERARCHY.md) | Demote rare destinations. Three nav tiers. Mobile bottom-nav fix. | 0.5 day |
-| 09 | [EMPTY_STATES](./09_EMPTY_STATES.md) | Rewrite every "No X yet" message. Audit + replacement copy. | 0.5 day |
-| 10 | [MONSTER_ART](./10_MONSTER_ART.md) | The Gemini prompt + triage script + batch runner for the 202 existing images. | 0.5 day setup, ongoing generation |
-| 11 | [MOBILE_FIRST](./11_MOBILE_FIRST.md) | Vaul drawers replacing modals on small viewports. Touch targets. | 1.5 days |
-| 12 | [IMPLEMENTATION_ORDER](./12_IMPLEMENTATION_ORDER.md) | Dependency graph + recommended sequencing + rollback plan. | reference only |
-| 13 | [REALM_WORLDGEN](./13_REALM_WORLDGEN.md) | **The world story.** Meta-cosmology + lore + palette + voice + sample creatures for all 12 realms. Origin→realm mapping. 3-act storyline arc. Pairs with file 10 for cohesive monster generation per realm. | 1 day to seed lore + 0.5 day to inject prompts |
+| #   | File                                                   | Purpose                                                                                                                                                                                                     | Effort                                         |
+| --- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| 01  | [VISUAL_IDENTITY](./01_VISUAL_IDENTITY.md)             | Pick the single visual reference everything else hangs off. **FOUR proposals** — A/B/C are tabletop/RPG flavors; **D ("Summoner's Console") is the Pick Me Up–faithful modern anime gacha option**.         | 0 (decision only)                              |
+| 02  | [SURFACE_SYSTEM](./02_SURFACE_SYSTEM.md)               | Build the tokenized `.ss-card`, `.ss-modal`, `.ss-pane` CSS kit. Replace inline-style chaos with one source of truth.                                                                                       | 1 day                                          |
+| 03  | [ICON_SYSTEM](./03_ICON_SYSTEM.md)                     | Replace every emoji with Phosphor Icons OR a chosen pixel set. Migration map included.                                                                                                                      | 1 day                                          |
+| 04  | [TYPOGRAPHY_SYSTEM](./04_TYPOGRAPHY_SYSTEM.md)         | Establish 5 type roles (display, heading, body, mono, lore). Pick Google Fonts.                                                                                                                             | 0.5 day                                        |
+| 05  | [ATMOSPHERE_PER_SCREEN](./05_ATMOSPHERE_PER_SCREEN.md) | One backdrop per primary route. Altar gets a ritual circle, Battle gets an arena, Codex gets parchment.                                                                                                     | 1.5 days                                       |
+| 06  | [THE_COMPASS](./06_THE_COMPASS.md)                     | The "what should I do right now" component on Hub. Kills decision fatigue.                                                                                                                                  | 1 day                                          |
+| 07  | [FIRST_TIME_EXPERIENCE](./07_FIRST_TIME_EXPERIENCE.md) | Onboarding overlay, tutorial task, free first pull, day-1 walkthrough.                                                                                                                                      | 1.5 days                                       |
+| 08  | [NAV_HIERARCHY](./08_NAV_HIERARCHY.md)                 | Demote rare destinations. Three nav tiers. Mobile bottom-nav fix.                                                                                                                                           | 0.5 day                                        |
+| 09  | [EMPTY_STATES](./09_EMPTY_STATES.md)                   | Rewrite every "No X yet" message. Audit + replacement copy.                                                                                                                                                 | 0.5 day                                        |
+| 10  | [MONSTER_ART](./10_MONSTER_ART.md)                     | The Gemini prompt + triage script + batch runner for the 202 existing images.                                                                                                                               | 0.5 day setup, ongoing generation              |
+| 11  | [MOBILE_FIRST](./11_MOBILE_FIRST.md)                   | Vaul drawers replacing modals on small viewports. Touch targets.                                                                                                                                            | 1.5 days                                       |
+| 12  | [IMPLEMENTATION_ORDER](./12_IMPLEMENTATION_ORDER.md)   | Dependency graph + recommended sequencing + rollback plan.                                                                                                                                                  | reference only                                 |
+| 13  | [REALM_WORLDGEN](./13_REALM_WORLDGEN.md)               | **The world story.** Meta-cosmology + lore + palette + voice + sample creatures for all 12 realms. Origin→realm mapping. 3-act storyline arc. Pairs with file 10 for cohesive monster generation per realm. | 1 day to seed lore + 0.5 day to inject prompts |
 
 **Total committed effort: ~9 working days** (if a single dev) for proposals
 A/B/C. Add **+3 to +5 days** if Proposal D is chosen (extra chrome + monster
@@ -50,8 +50,8 @@ and the existing monster bestiary must be regenerated as anime portraits.
 Estimated extra effort: 3-5 days on top of the base 9-day plan.
 
 If you want SummonScroll to retain habit users for a year+, B might still be
-the more practical pick — it has a higher *floor* of consistency for less
-effort. D has the higher *ceiling*.
+the more practical pick — it has a higher _floor_ of consistency for less
+effort. D has the higher _ceiling_.
 
 ## Dependency graph
 
@@ -75,6 +75,7 @@ effort. D has the higher *ceiling*.
 ## How to use these with Kiro
 
 For each file:
+
 1. Open the file in Kiro
 2. Read the "Decision required" / "Out of scope" sections to confirm you're ready
 3. Use the "Tasks for agent" section as the prompt
@@ -88,6 +89,7 @@ the needle.
 ## What's already in place to build on
 
 The current codebase has good bones to work from:
+
 - `src/lib/ui/motion-tokens.ts` — duration budget + easing curves (Emil's principles)
 - `src/lib/ui/sounds.ts` — Web Audio synth (no asset files needed)
 - `src/components/game/CascadeCard.tsx` — connective-tissue card pattern
@@ -95,10 +97,11 @@ The current codebase has good bones to work from:
 - `src/components/game/PromotionChamber.tsx` — Emil template modal
 - 12 mechanical systems all working server-side (Pick Me Up + Pillars)
 
-The redesign builds *on top* of all of this. None of it gets deleted. The motion
-+ sound + cascade work was correct polish; it was applied before the foundational
-visual identity was decided. Now we go back and decide that, then the polish
-becomes a magnifier instead of a band-aid.
+The redesign builds _on top_ of all of this. None of it gets deleted. The motion
+
+- sound + cascade work was correct polish; it was applied before the foundational
+  visual identity was decided. Now we go back and decide that, then the polish
+  becomes a magnifier instead of a band-aid.
 
 ## The single decision that gates everything
 

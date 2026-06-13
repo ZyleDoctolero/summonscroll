@@ -15,7 +15,7 @@ This is broken because:
 2. **Emoji cannot be color-tinted.** A 💎 stays cyan even when you want it to
    match the stat-int variable.
 3. **Emoji are unrelated to each other visually.** 🪦 is realistic; 🍖 is
-   cartoon; 👾 is retro arcade. They don't form a *set*.
+   cartoon; 👾 is retro arcade. They don't form a _set_.
 4. **Emoji read as "AI prototype" or "Discord bot."** A polished app uses
    either a consistent line-icon set, custom commissioned glyphs, or pixel
    sprites that match the world.
@@ -82,7 +82,7 @@ npm install pixelarticons
 // Import as React components (each icon is a tiny SVG)
 import Sword from "pixelarticons/svg/sword.svg?react";
 
-<Sword className="w-4 h-4 text-[var(--lantern)]" />
+<Sword className="w-4 h-4 text-[var(--lantern)]" />;
 ```
 
 **CSS for pixel sharpness:**
@@ -90,7 +90,7 @@ import Sword from "pixelarticons/svg/sword.svg?react";
 ```css
 .pixel-icon {
   image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;  /* legacy */
+  image-rendering: -moz-crisp-edges; /* legacy */
 }
 ```
 
@@ -155,6 +155,7 @@ import { Sword, Heart, Coins, Sparkles, Crown, Skull } from "lucide-react";
 ```
 
 **Style discipline (Proposal D specific):**
+
 - All icons use **stroke-width 1.75–2.25** consistently (Lucide default is 2)
 - Tint with the accent color matching their meaning (gold for currency,
   violet for sigil/rare, cyan for arcane, rose for mythic)
@@ -170,56 +171,56 @@ for. (Phosphor names shown — adapt for Pixelarticons or your commissioned set.
 
 ### Currency / resource
 
-| Current | Where used | Phosphor | Pixelarticons | Notes |
-|---|---|---|---|---|
-| 💰 | gold balance, rewards | `Coins` | `coin` | tint: `var(--gold-leaf)` |
-| 💎 | crystals balance | `Diamond` | `diamond` | tint: `var(--river)` for B, `var(--sigil)` for A/C |
-| 🔑 | pact seals | `Key` | `key` | tint: `var(--blossom)` or `var(--gold-burn)` |
-| 📕 | Tome of Reverse Heaven | `BookOpen` (fill) | `book-open` | always gold |
-| 🪨 | crafting stones | `Cube` (duotone) | `stone` (custom) | tint per element |
-| ⚡ | stamina | `Lightning` | `bolt` | tint: `var(--lantern)` |
-| ✨ | rare materials | `Sparkle` | `sparkles` | tint: gold |
-| 🥚 | egg drops | `Egg` | (custom) | neutral |
-| 🧪 | realm potions | `TestTube` (or `Drop`) | `flask` | per realm color |
-| 🍖 | food drops | `ForkKnife` | `meat` | neutral warm |
+| Current | Where used             | Phosphor               | Pixelarticons    | Notes                                              |
+| ------- | ---------------------- | ---------------------- | ---------------- | -------------------------------------------------- |
+| 💰      | gold balance, rewards  | `Coins`                | `coin`           | tint: `var(--gold-leaf)`                           |
+| 💎      | crystals balance       | `Diamond`              | `diamond`        | tint: `var(--river)` for B, `var(--sigil)` for A/C |
+| 🔑      | pact seals             | `Key`                  | `key`            | tint: `var(--blossom)` or `var(--gold-burn)`       |
+| 📕      | Tome of Reverse Heaven | `BookOpen` (fill)      | `book-open`      | always gold                                        |
+| 🪨      | crafting stones        | `Cube` (duotone)       | `stone` (custom) | tint per element                                   |
+| ⚡      | stamina                | `Lightning`            | `bolt`           | tint: `var(--lantern)`                             |
+| ✨      | rare materials         | `Sparkle`              | `sparkles`       | tint: gold                                         |
+| 🥚      | egg drops              | `Egg`                  | (custom)         | neutral                                            |
+| 🧪      | realm potions          | `TestTube` (or `Drop`) | `flask`          | per realm color                                    |
+| 🍖      | food drops             | `ForkKnife`            | `meat`           | neutral warm                                       |
 
 ### Player state
 
-| Current | Where used | Phosphor | Pixelarticons | Notes |
-|---|---|---|---|---|
-| 🔥 | streak | `Flame` | `flame` | animated tint on active |
-| ❄ | broken streak | `Snowflake` | `snowflake` | dim |
-| 🧊 | freeze charm | `Snowflake` | `shield` | always blue |
-| 💖 | bond | `Heart` (fill) | `heart` | active animation |
-| 🥀 | despondent monster | `Heart` (regular, dim) | `heart-broken` | desaturated |
-| 💔 | fading monster | `HeartBreak` | `heart-broken` | red dim |
-| ❤ | HP | `Heart` | `heart` | red |
-| ✦ ✧ | XP marker | `Sparkle` | `sparkle` | gold |
-| 👑 | apex crown, boss slain | `Crown` (fill) | `crown` | gold |
-| 💀 | death state | `Skull` | `skull` | red dim |
+| Current | Where used             | Phosphor               | Pixelarticons  | Notes                   |
+| ------- | ---------------------- | ---------------------- | -------------- | ----------------------- |
+| 🔥      | streak                 | `Flame`                | `flame`        | animated tint on active |
+| ❄       | broken streak          | `Snowflake`            | `snowflake`    | dim                     |
+| 🧊      | freeze charm           | `Snowflake`            | `shield`       | always blue             |
+| 💖      | bond                   | `Heart` (fill)         | `heart`        | active animation        |
+| 🥀      | despondent monster     | `Heart` (regular, dim) | `heart-broken` | desaturated             |
+| 💔      | fading monster         | `HeartBreak`           | `heart-broken` | red dim                 |
+| ❤       | HP                     | `Heart`                | `heart`        | red                     |
+| ✦ ✧     | XP marker              | `Sparkle`              | `sparkle`      | gold                    |
+| 👑      | apex crown, boss slain | `Crown` (fill)         | `crown`        | gold                    |
+| 💀      | death state            | `Skull`                | `skull`        | red dim                 |
 
 ### Activity / system
 
-| Current | Where used | Phosphor | Pixelarticons | Notes |
-|---|---|---|---|---|
-| ☀ | morning ritual | `Sun` (regular for AM) | `sun` | warm yellow |
-| 🌙 | evening reflection | `MoonStars` | `moon-stars` | sigil violet |
-| ⚔ | battle, attack | `Sword` (duotone for hero) | `sword` | neutral |
-| 🗼 | tower | `Tower` or `BuildingApartment` | `castle` | stone |
-| 🔮 | summoning | `Sphere` or `CrystalBall` | `eye` | sigil |
-| 🪦 | memorial / fallen | `Cross` (regular) | `cross` | stone |
-| 🏝 | island | `Island` | `island` | warm green |
-| ⚜ | level / lvl marker | `Crown` (light) | `fleur-de-lis` | gold |
-| ⭐ | sacred directive | `Star` (fill) | `star` | gold |
-| ✓ | completed | `Check` | `check` | moss |
-| ✕ | dismiss / close | `X` | `close` | tertiary |
-| ← → | back / next | `ArrowLeft/Right` | `arrow-left/right` | secondary |
+| Current | Where used         | Phosphor                       | Pixelarticons      | Notes        |
+| ------- | ------------------ | ------------------------------ | ------------------ | ------------ |
+| ☀       | morning ritual     | `Sun` (regular for AM)         | `sun`              | warm yellow  |
+| 🌙      | evening reflection | `MoonStars`                    | `moon-stars`       | sigil violet |
+| ⚔       | battle, attack     | `Sword` (duotone for hero)     | `sword`            | neutral      |
+| 🗼      | tower              | `Tower` or `BuildingApartment` | `castle`           | stone        |
+| 🔮      | summoning          | `Sphere` or `CrystalBall`      | `eye`              | sigil        |
+| 🪦      | memorial / fallen  | `Cross` (regular)              | `cross`            | stone        |
+| 🏝      | island             | `Island`                       | `island`           | warm green   |
+| ⚜       | level / lvl marker | `Crown` (light)                | `fleur-de-lis`     | gold         |
+| ⭐      | sacred directive   | `Star` (fill)                  | `star`             | gold         |
+| ✓       | completed          | `Check`                        | `check`            | moss         |
+| ✕       | dismiss / close    | `X`                            | `close`            | tertiary     |
+| ← →     | back / next        | `ArrowLeft/Right`              | `arrow-left/right` | secondary    |
 
 ### Monster placeholder
 
-| Current | Where used | Replacement |
-|---|---|---|
-| 👾 | every monster card with no art_url | **Hard requirement**: replace with the placeholder `public/monsters/placeholder.png` already in the repo, OR a generic Phosphor `Sphere` (fill) at 50% opacity. NEVER emoji. |
+| Current | Where used                         | Replacement                                                                                                                                                                  |
+| ------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 👾      | every monster card with no art_url | **Hard requirement**: replace with the placeholder `public/monsters/placeholder.png` already in the repo, OR a generic Phosphor `Sphere` (fill) at 50% opacity. NEVER emoji. |
 
 ---
 
@@ -229,46 +230,68 @@ Create `src/components/ui/Icon.tsx` to centralize tinting + sizing:
 
 ```tsx
 import {
-  Coins, Diamond, Key, BookOpen, Cube, Lightning, Sparkle,
-  Egg, TestTube, ForkKnife, Flame, Snowflake, Heart, HeartBreak,
-  Crown, Skull, Sun, MoonStars, Sword, Sphere, Cross, Star,
-  Check, X, ArrowLeft, ArrowRight,
+  Coins,
+  Diamond,
+  Key,
+  BookOpen,
+  Cube,
+  Lightning,
+  Sparkle,
+  Egg,
+  TestTube,
+  ForkKnife,
+  Flame,
+  Snowflake,
+  Heart,
+  HeartBreak,
+  Crown,
+  Skull,
+  Sun,
+  MoonStars,
+  Sword,
+  Sphere,
+  Cross,
+  Star,
+  Check,
+  X,
+  ArrowLeft,
+  ArrowRight,
 } from "@phosphor-icons/react";
 
 const ICONS = {
   // Currency
-  gold:     Coins,
-  crystal:  Diamond,
-  seal:     Key,
-  tome:     BookOpen,
-  stone:    Cube,
-  stamina:  Lightning,
-  sparkle:  Sparkle,
-  egg:      Egg,
-  potion:   TestTube,
-  food:     ForkKnife,
+  gold: Coins,
+  crystal: Diamond,
+  seal: Key,
+  tome: BookOpen,
+  stone: Cube,
+  stamina: Lightning,
+  sparkle: Sparkle,
+  egg: Egg,
+  potion: TestTube,
+  food: ForkKnife,
   // Player
-  streak:   Flame,
-  cold:     Snowflake,
-  bond:     Heart,
-  bondLow:  HeartBreak,
-  hp:       Heart,
-  xp:       Sparkle,
-  crown:    Crown,
-  death:    Skull,
+  streak: Flame,
+  cold: Snowflake,
+  bond: Heart,
+  bondLow: HeartBreak,
+  hp: Heart,
+  xp: Sparkle,
+  crown: Crown,
+  death: Skull,
   // Activity
-  morning:  Sun,
-  evening:  MoonStars,
-  battle:   Sword,
-  tower:    Sphere,    // swap if your set has a better tower icon
-  summon:   Sphere,
+  morning: Sun,
+  evening: MoonStars,
+  battle: Sword,
+  tower: Sphere, // swap if your set has a better tower icon
+  summon: Sphere,
   memorial: Cross,
-  star:     Star,
+  star: Star,
   // Actions
-  check:    Check,
-  close:    X,
-  prev:     ArrowLeft,
-  next:     ArrowRight,
+  check: Check,
+  close: X,
+  prev: ArrowLeft,
+  next: ArrowRight,
 } as const;
 
 export type IconName = keyof typeof ICONS;
@@ -288,15 +311,7 @@ export function Icon({
   className?: string;
 }) {
   const Component = ICONS[name];
-  return (
-    <Component
-      size={size}
-      weight={weight}
-      color={color}
-      className={className}
-      aria-hidden
-    />
-  );
+  return <Component size={size} weight={weight} color={color} className={className} aria-hidden />;
 }
 ```
 
@@ -309,7 +324,7 @@ import { Icon } from "@/components/ui/Icon";
 <span className="inline-flex items-center gap-1">
   <Icon name="gold" size={14} color="var(--gold-leaf)" />
   {amount}
-</span>
+</span>;
 ```
 
 ---
@@ -335,11 +350,7 @@ The 8 highest-impact files to migrate first (these have the most emoji):
 7. `src/routes/_authenticated/altar.tsx` — pull cost icons, summon
 8. `src/routes/_authenticated/profile.tsx` — quick-stat icons
 
-Rare ones (still migrate, lower priority):
-9. `src/routes/_authenticated/trial.tsx` — 🪦, ☠
-10. `src/routes/_authenticated/quests.tsx` — 👑 on slain
-11. `src/routes/_authenticated/codex.tsx` — heatmap legend
-12. `src/routes/_authenticated/battle.tsx` — milestone icons
+Rare ones (still migrate, lower priority): 9. `src/routes/_authenticated/trial.tsx` — 🪦, ☠ 10. `src/routes/_authenticated/quests.tsx` — 👑 on slain 11. `src/routes/_authenticated/codex.tsx` — heatmap legend 12. `src/routes/_authenticated/battle.tsx` — milestone icons
 
 ---
 

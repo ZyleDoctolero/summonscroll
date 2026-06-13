@@ -1,156 +1,241 @@
-
 <!-- Top Navigation (Web) -->
-<nav class="hidden md:flex justify-between items-center px-lg h-16 bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-lg fixed top-0 right-0 w-[calc(100%-280px)] z-40">
-<div class="font-headline-md text-headline-md text-primary font-bold">SummonScroll</div>
-<div class="flex items-center gap-md">
-<button class="text-text-secondary hover:text-primary transition-colors hover:brightness-125">
-<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-</button>
-<button class="text-text-secondary hover:text-primary transition-colors hover:brightness-125">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
-</button>
-<div class="flex gap-sm font-stats-md text-stats-md text-primary">
-<span class="px-3 py-1 bg-surface-container rounded border border-white/5">Pact Seals</span>
-<span class="px-3 py-1 bg-surface-container rounded border border-white/5">Spirit Crystals</span>
-</div>
-</div>
+<nav
+  class="hidden md:flex justify-between items-center px-lg h-16 bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-lg fixed top-0 right-0 w-[calc(100%-280px)] z-40"
+>
+  <div class="font-headline-md text-headline-md text-primary font-bold">SummonScroll</div>
+  <div class="flex items-center gap-md">
+    <button class="text-text-secondary hover:text-primary transition-colors hover:brightness-125">
+      <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+    </button>
+    <button class="text-text-secondary hover:text-primary transition-colors hover:brightness-125">
+      <span class="material-symbols-outlined" data-icon="settings">settings</span>
+    </button>
+    <div class="flex gap-sm font-stats-md text-stats-md text-primary">
+      <span class="px-3 py-1 bg-surface-container rounded border border-white/5">Pact Seals</span>
+      <span class="px-3 py-1 bg-surface-container rounded border border-white/5"
+        >Spirit Crystals</span
+      >
+    </div>
+  </div>
 </nav>
 <!-- Side Navigation (Desktop) -->
-<aside class="hidden md:flex flex-col h-full py-lg px-md w-[280px] fixed left-0 top-0 border-r border-white/10 bg-surface-container-low shadow-2xl z-50">
-<div class="mb-xl px-4">
-<div class="flex items-center gap-sm mb-4">
-<img alt="User character avatar" class="w-10 h-10 rounded-full border border-primary" src="https://lh3.googleusercontent.com/aida/AP1WRLti0NYVJg71ek9MhBLvqD2CUReV9gBa-2xyTaIPz3HqAqPiKiBO6MIvxkCfMlDSqbTceK0rnTSpSgQGYw9J1Hyqdwd5OmQci7585Pl_lYIvpPeJVJGn6x99ZUjNlMzst9FUbB800Hqp-wqqKHB6psMk3t9SnR42Q5_J1ERWp-tlCk5J0KmwrcsJrDyK0ZqmjdQbqGgPv0w04Atf-e_lqg3-UMMamSLTyRiXCBWDBk-mrT6xIshtfPnokQ"/>
-<div>
-<h2 class="font-headline-sm text-headline-sm text-primary">Level 42 Archmage</h2>
-<p class="font-stats-sm text-stats-sm text-text-secondary">850/1200 XP</p>
-</div>
-</div>
-<button class="w-full gold-gradient-bg text-on-primary font-label-caps text-label-caps py-2 rounded font-bold tracking-widest hover:brightness-110 transition-all uppercase">Summon Now</button>
-</div>
-<nav class="flex-1 flex flex-col gap-xs">
-<a class="border-l-4 border-primary bg-surface-container-high text-primary font-bold px-4 py-3 flex items-center gap-md rounded-r hover:bg-bg-hover transition-all duration-300 scale-95" href="/">
-<span class="material-symbols-outlined" data-icon="castle">castle</span>
-<span class="font-label-caps text-label-caps">Hub</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="/island">
-<span class="material-symbols-outlined" data-icon="explore">explore</span>
-<span class="font-label-caps text-label-caps">Island</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="/altar">
-<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
-<span class="font-label-caps text-label-caps">Altar</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="/battle">
-<span class="material-symbols-outlined" data-icon="swords">swords</span>
-<span class="font-label-caps text-label-caps">Battle</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="/compendium">
-<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
-<span class="font-label-caps text-label-caps">Compendium</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="/guild">
-<span class="material-symbols-outlined" data-icon="groups">groups</span>
-<span class="font-label-caps text-label-caps">Guild</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="/fusion">
-<span class="material-symbols-outlined" data-icon="cyclone">cyclone</span>
-<span class="font-label-caps text-label-caps">Fusion</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="/bazaar">
-<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
-<span class="font-label-caps text-label-caps">Shop</span>
-</a>
-</nav>
-<div class="mt-auto flex flex-col gap-xs pt-4 border-t border-white/10">
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="settings">settings</span>
-<span class="font-label-caps text-label-caps">Settings</span>
-</a>
-<a class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300" href="#">
-<span class="material-symbols-outlined" data-icon="help">help</span>
-<span class="font-label-caps text-label-caps">Support</span>
-</a>
-</div>
+<aside
+  class="hidden md:flex flex-col h-full py-lg px-md w-[280px] fixed left-0 top-0 border-r border-white/10 bg-surface-container-low shadow-2xl z-50"
+>
+  <div class="mb-xl px-4">
+    <div class="flex items-center gap-sm mb-4">
+      <img
+        alt="User character avatar"
+        class="w-10 h-10 rounded-full border border-primary"
+        src="https://lh3.googleusercontent.com/aida/AP1WRLti0NYVJg71ek9MhBLvqD2CUReV9gBa-2xyTaIPz3HqAqPiKiBO6MIvxkCfMlDSqbTceK0rnTSpSgQGYw9J1Hyqdwd5OmQci7585Pl_lYIvpPeJVJGn6x99ZUjNlMzst9FUbB800Hqp-wqqKHB6psMk3t9SnR42Q5_J1ERWp-tlCk5J0KmwrcsJrDyK0ZqmjdQbqGgPv0w04Atf-e_lqg3-UMMamSLTyRiXCBWDBk-mrT6xIshtfPnokQ"
+      />
+      <div>
+        <h2 class="font-headline-sm text-headline-sm text-primary">Level 42 Archmage</h2>
+        <p class="font-stats-sm text-stats-sm text-text-secondary">850/1200 XP</p>
+      </div>
+    </div>
+    <button
+      class="w-full gold-gradient-bg text-on-primary font-label-caps text-label-caps py-2 rounded font-bold tracking-widest hover:brightness-110 transition-all uppercase"
+    >
+      Summon Now
+    </button>
+  </div>
+  <nav class="flex-1 flex flex-col gap-xs">
+    <a
+      class="border-l-4 border-primary bg-surface-container-high text-primary font-bold px-4 py-3 flex items-center gap-md rounded-r hover:bg-bg-hover transition-all duration-300 scale-95"
+      href="/"
+    >
+      <span class="material-symbols-outlined" data-icon="castle">castle</span>
+      <span class="font-label-caps text-label-caps">Hub</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="/island"
+    >
+      <span class="material-symbols-outlined" data-icon="explore">explore</span>
+      <span class="font-label-caps text-label-caps">Island</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="/altar"
+    >
+      <span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+      <span class="font-label-caps text-label-caps">Altar</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="/battle"
+    >
+      <span class="material-symbols-outlined" data-icon="swords">swords</span>
+      <span class="font-label-caps text-label-caps">Battle</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="/compendium"
+    >
+      <span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+      <span class="font-label-caps text-label-caps">Compendium</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="/guild"
+    >
+      <span class="material-symbols-outlined" data-icon="groups">groups</span>
+      <span class="font-label-caps text-label-caps">Guild</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="/fusion"
+    >
+      <span class="material-symbols-outlined" data-icon="cyclone">cyclone</span>
+      <span class="font-label-caps text-label-caps">Fusion</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="/bazaar"
+    >
+      <span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+      <span class="font-label-caps text-label-caps">Shop</span>
+    </a>
+  </nav>
+  <div class="mt-auto flex flex-col gap-xs pt-4 border-t border-white/10">
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="#"
+    >
+      <span class="material-symbols-outlined" data-icon="settings">settings</span>
+      <span class="font-label-caps text-label-caps">Settings</span>
+    </a>
+    <a
+      class="text-text-secondary hover:text-text-primary px-4 py-3 transition-colors flex items-center gap-md rounded-r hover:bg-bg-hover duration-300"
+      href="#"
+    >
+      <span class="material-symbols-outlined" data-icon="help">help</span>
+      <span class="font-label-caps text-label-caps">Support</span>
+    </a>
+  </div>
 </aside>
 <!-- Main Content Area -->
-<main class="md:ml-[280px] md:pt-16 min-h-screen p-margin-mobile md:p-margin-desktop flex flex-col gap-xl">
-<!-- Header Section -->
-<header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
-<div>
-<h1 class="font-display-lg text-display-lg md:font-display-lg text-primary mb-2">Hub Directives</h1>
-<p class="font-body-lg text-body-lg text-text-secondary">Manage your daily incantations and tasks.</p>
-</div>
-<button class="gold-gradient-bg text-on-primary px-lg py-sm rounded border border-primary-container font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110 transition-all glow-legendary">
-                Harvest All
-            </button>
-</header>
-<!-- Tabs -->
-<div class="border-b border-white/10 flex gap-lg">
-<button class="pb-2 border-b-2 border-primary text-primary font-headline-sm text-headline-sm">Habits</button>
-<button class="pb-2 border-b-2 border-transparent text-text-secondary hover:text-primary transition-colors font-headline-sm text-headline-sm">Dailies</button>
-<button class="pb-2 border-b-2 border-transparent text-text-secondary hover:text-primary transition-colors font-headline-sm text-headline-sm">To-Dos</button>
-</div>
-<!-- Habits Grid -->
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
-<!-- Habit Card 1: Good Health -->
-<article class="bg-bg-card border-subtle rounded-lg p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-bg-hover transition-colors border-l-4 border-l-rarity-rare">
-<div class="flex justify-between items-start mb-2">
-<div>
-<span class="text-xs text-rarity-rare font-label-caps uppercase tracking-wider mb-1 block">Vaults</span>
-<h3 class="font-headline-md text-headline-md text-text-primary">Arcane Study</h3>
-</div>
-<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded border border-white/10">
-<span class="text-tertiary text-sm">+20</span>
-<span class="material-symbols-outlined text-sm text-tertiary" data-icon="diamond">diamond</span>
-</div>
-</div>
-<div class="w-full bg-surface-container rounded-full h-2 mt-auto">
-<div class="bg-success h-2 rounded-full" style="width: 80%"></div>
-</div>
-<div class="flex justify-between text-xs text-text-tertiary mt-1">
-<span>Streak: 12 Days</span>
-<span>Health: Strong</span>
-</div>
-</article>
-<!-- Habit Card 2: Medium Health -->
-<article class="bg-bg-card border-subtle rounded-lg p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-bg-hover transition-colors border-l-4 border-l-rarity-epic">
-<div class="flex justify-between items-start mb-2">
-<div>
-<span class="text-xs text-rarity-epic font-label-caps uppercase tracking-wider mb-1 block">Physical</span>
-<h3 class="font-headline-md text-headline-md text-text-primary">Morning Ritual</h3>
-</div>
-<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded border border-white/10">
-<span class="text-tertiary text-sm">+15</span>
-<span class="material-symbols-outlined text-sm text-tertiary" data-icon="diamond">diamond</span>
-</div>
-</div>
-<div class="w-full bg-surface-container rounded-full h-2 mt-auto">
-<div class="bg-rarity-elite h-2 rounded-full" style="width: 50%"></div>
-</div>
-<div class="flex justify-between text-xs text-text-tertiary mt-1">
-<span>Streak: 3 Days</span>
-<span>Health: Fading</span>
-</div>
-</article>
-<!-- Habit Card 3: Danger Health -->
-<article class="bg-bg-card border-subtle rounded-lg p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-bg-hover transition-colors border-l-4 border-l-danger">
-<div class="flex justify-between items-start mb-2">
-<div>
-<span class="text-xs text-danger font-label-caps uppercase tracking-wider mb-1 block">Mind</span>
-<h3 class="font-headline-md text-headline-md text-text-primary">Void Meditation</h3>
-</div>
-<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded border border-white/10">
-<span class="text-tertiary text-sm">+30</span>
-<span class="material-symbols-outlined text-sm text-tertiary" data-icon="diamond">diamond</span>
-</div>
-</div>
-<div class="w-full bg-surface-container rounded-full h-2 mt-auto">
-<div class="bg-danger h-2 rounded-full" style="width: 15%"></div>
-</div>
-<div class="flex justify-between text-xs text-text-tertiary mt-1">
-<span>Streak: 0 Days</span>
-<span class="text-danger">Health: Critical</span>
-</div>
-</article>
-</section>
+<main
+  class="md:ml-[280px] md:pt-16 min-h-screen p-margin-mobile md:p-margin-desktop flex flex-col gap-xl"
+>
+  <!-- Header Section -->
+  <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md">
+    <div>
+      <h1 class="font-display-lg text-display-lg md:font-display-lg text-primary mb-2">
+        Hub Directives
+      </h1>
+      <p class="font-body-lg text-body-lg text-text-secondary">
+        Manage your daily incantations and tasks.
+      </p>
+    </div>
+    <button
+      class="gold-gradient-bg text-on-primary px-lg py-sm rounded border border-primary-container font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110 transition-all glow-legendary"
+    >
+      Harvest All
+    </button>
+  </header>
+  <!-- Tabs -->
+  <div class="border-b border-white/10 flex gap-lg">
+    <button class="pb-2 border-b-2 border-primary text-primary font-headline-sm text-headline-sm">
+      Habits
+    </button>
+    <button
+      class="pb-2 border-b-2 border-transparent text-text-secondary hover:text-primary transition-colors font-headline-sm text-headline-sm"
+    >
+      Dailies
+    </button>
+    <button
+      class="pb-2 border-b-2 border-transparent text-text-secondary hover:text-primary transition-colors font-headline-sm text-headline-sm"
+    >
+      To-Dos
+    </button>
+  </div>
+  <!-- Habits Grid -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+    <!-- Habit Card 1: Good Health -->
+    <article
+      class="bg-bg-card border-subtle rounded-lg p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-bg-hover transition-colors border-l-4 border-l-rarity-rare"
+    >
+      <div class="flex justify-between items-start mb-2">
+        <div>
+          <span class="text-xs text-rarity-rare font-label-caps uppercase tracking-wider mb-1 block"
+            >Vaults</span
+          >
+          <h3 class="font-headline-md text-headline-md text-text-primary">Arcane Study</h3>
+        </div>
+        <div
+          class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded border border-white/10"
+        >
+          <span class="text-tertiary text-sm">+20</span>
+          <span class="material-symbols-outlined text-sm text-tertiary" data-icon="diamond"
+            >diamond</span
+          >
+        </div>
+      </div>
+      <div class="w-full bg-surface-container rounded-full h-2 mt-auto">
+        <div class="bg-success h-2 rounded-full" style="width: 80%"></div>
+      </div>
+      <div class="flex justify-between text-xs text-text-tertiary mt-1">
+        <span>Streak: 12 Days</span>
+        <span>Health: Strong</span>
+      </div>
+    </article>
+    <!-- Habit Card 2: Medium Health -->
+    <article
+      class="bg-bg-card border-subtle rounded-lg p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-bg-hover transition-colors border-l-4 border-l-rarity-epic"
+    >
+      <div class="flex justify-between items-start mb-2">
+        <div>
+          <span class="text-xs text-rarity-epic font-label-caps uppercase tracking-wider mb-1 block"
+            >Physical</span
+          >
+          <h3 class="font-headline-md text-headline-md text-text-primary">Morning Ritual</h3>
+        </div>
+        <div
+          class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded border border-white/10"
+        >
+          <span class="text-tertiary text-sm">+15</span>
+          <span class="material-symbols-outlined text-sm text-tertiary" data-icon="diamond"
+            >diamond</span
+          >
+        </div>
+      </div>
+      <div class="w-full bg-surface-container rounded-full h-2 mt-auto">
+        <div class="bg-rarity-elite h-2 rounded-full" style="width: 50%"></div>
+      </div>
+      <div class="flex justify-between text-xs text-text-tertiary mt-1">
+        <span>Streak: 3 Days</span>
+        <span>Health: Fading</span>
+      </div>
+    </article>
+    <!-- Habit Card 3: Danger Health -->
+    <article
+      class="bg-bg-card border-subtle rounded-lg p-md flex flex-col gap-sm relative overflow-hidden group hover:bg-bg-hover transition-colors border-l-4 border-l-danger"
+    >
+      <div class="flex justify-between items-start mb-2">
+        <div>
+          <span class="text-xs text-danger font-label-caps uppercase tracking-wider mb-1 block"
+            >Mind</span
+          >
+          <h3 class="font-headline-md text-headline-md text-text-primary">Void Meditation</h3>
+        </div>
+        <div
+          class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded border border-white/10"
+        >
+          <span class="text-tertiary text-sm">+30</span>
+          <span class="material-symbols-outlined text-sm text-tertiary" data-icon="diamond"
+            >diamond</span
+          >
+        </div>
+      </div>
+      <div class="w-full bg-surface-container rounded-full h-2 mt-auto">
+        <div class="bg-danger h-2 rounded-full" style="width: 15%"></div>
+      </div>
+      <div class="flex justify-between text-xs text-text-tertiary mt-1">
+        <span>Streak: 0 Days</span>
+        <span class="text-danger">Health: Critical</span>
+      </div>
+    </article>
+  </section>
 </main>

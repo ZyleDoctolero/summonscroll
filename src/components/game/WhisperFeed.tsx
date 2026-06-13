@@ -51,7 +51,9 @@ export function WhisperProvider() {
         return [...cleaned, next];
       });
     };
-    return () => { publish = null; };
+    return () => {
+      publish = null;
+    };
   }, []);
 
   // Sweep: drop whispers older than 12s
@@ -87,9 +89,7 @@ export function WhisperProvider() {
                 <p className="t-label truncate" style={{ color: "var(--gold-bright)" }}>
                   {w.monsterName}
                 </p>
-                <p className="t-lore mt-0.5">
-                  "{w.line}"
-                </p>
+                <p className="t-lore mt-0.5">"{w.line}"</p>
               </div>
             </div>
           </motion.div>
@@ -133,10 +133,14 @@ function whisperStyle(tone?: Whisper["tone"]): React.CSSProperties {
 
 function toneIcon(tone?: Whisper["tone"]): React.ReactNode {
   switch (tone) {
-    case "urgent":  return <Icon name="battle" size={14} color="var(--danger)" />;
-    case "playful": return <Icon name="sparkle" size={14} color="var(--success)" />;
-    case "grave":   return <Icon name="evening" size={14} color="var(--violet)" />;
+    case "urgent":
+      return <Icon name="battle" size={14} color="var(--danger)" />;
+    case "playful":
+      return <Icon name="sparkle" size={14} color="var(--success)" />;
+    case "grave":
+      return <Icon name="evening" size={14} color="var(--violet)" />;
     case "calm":
-    default:        return <Icon name="star" size={14} color="var(--gold-bright)" />;
+    default:
+      return <Icon name="star" size={14} color="var(--gold-bright)" />;
   }
 }

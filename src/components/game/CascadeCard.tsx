@@ -11,12 +11,12 @@ import { sounds } from "@/lib/ui/sounds";
 // 3-6 systems at once. Surfacing only one breaks the player's mental model.
 
 export type CascadeEvent =
-  | { kind: "reward";    gold?: number; xp?: number; crystals?: number; hp?: number }
-  | { kind: "bond";      monsterName: string; from: number; to: number }
-  | { kind: "boss";      title: string; damage: number; hpRemaining: number; hpTotal: number }
+  | { kind: "reward"; gold?: number; xp?: number; crystals?: number; hp?: number }
+  | { kind: "bond"; monsterName: string; from: number; to: number }
+  | { kind: "boss"; title: string; damage: number; hpRemaining: number; hpTotal: number }
   | { kind: "awakening"; monsterName: string; skillName: string; flavor: string }
-  | { kind: "streak";    days: number }
-  | { kind: "drop";      itemType: string; itemName: string; quantity: number }
+  | { kind: "streak"; days: number }
+  | { kind: "drop"; itemType: string; itemName: string; quantity: number }
   | { kind: "leveledUp"; level: number }
   | { kind: "tomeMint" }
   | { kind: "died" };
@@ -55,7 +55,9 @@ export function CascadeProvider() {
       else if (hasLevel) sounds.ascend();
       else sounds.chime();
     };
-    return () => { publish = null; };
+    return () => {
+      publish = null;
+    };
   }, []);
 
   // Auto-dismiss
@@ -95,17 +97,16 @@ function CascadeBody({ events }: { events: CascadeEvent[] }) {
     <div className="ss-modal backdrop-blur-md">
       <div className="px-4 pt-3 pb-2 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span
-            className="t-label"
-            style={{ color: "var(--gold-bright)" }}
-          >
+          <span className="t-label" style={{ color: "var(--gold-bright)" }}>
             Cascade
           </span>
           <span className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
             {events.length} effect{events.length === 1 ? "" : "s"}
           </span>
         </div>
-        <span className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>tap to dismiss</span>
+        <span className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
+          tap to dismiss
+        </span>
       </div>
 
       <div className="px-4 pb-4 space-y-1.5">
@@ -132,13 +133,19 @@ function EventRow({ event }: { event: CascadeEvent }) {
       return (
         <div className="flex items-center gap-3 text-sm">
           {event.gold && event.gold > 0 ? (
-            <span style={{ color: "var(--gold-bright)" }}>💰 <NumberFlow value={event.gold} prefix="+" /></span>
+            <span style={{ color: "var(--gold-bright)" }}>
+              💰 <NumberFlow value={event.gold} prefix="+" />
+            </span>
           ) : null}
           {event.xp && event.xp > 0 ? (
-            <span style={{ color: "var(--ink-secondary)" }}>✦ <NumberFlow value={event.xp} prefix="+" /> XP</span>
+            <span style={{ color: "var(--ink-secondary)" }}>
+              ✦ <NumberFlow value={event.xp} prefix="+" /> XP
+            </span>
           ) : null}
           {event.crystals && event.crystals > 0 ? (
-            <span style={{ color: "var(--cyan)" }}>💎 <NumberFlow value={event.crystals} prefix="+" /></span>
+            <span style={{ color: "var(--cyan)" }}>
+              💎 <NumberFlow value={event.crystals} prefix="+" />
+            </span>
           ) : null}
           {event.hp && event.hp !== 0 ? (
             <span style={{ color: event.hp < 0 ? "var(--danger)" : "var(--success)" }}>
@@ -179,12 +186,19 @@ function EventRow({ event }: { event: CascadeEvent }) {
 
     case "awakening":
       return (
-        <div className="text-sm rounded-md p-2" style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}>
+        <div
+          className="text-sm rounded-md p-2"
+          style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}
+        >
           <span style={{ color: "var(--gold-bright)" }}>⚡</span>{" "}
           <span style={{ color: "var(--gold-bright)", fontWeight: 600 }}>{event.monsterName}</span>
           <span style={{ color: "var(--ink-secondary)" }}> awakened </span>
-          <span style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>{event.skillName}</span>
-          <p className="text-[11px] mt-1 italic" style={{ color: "var(--ink-secondary)" }}>{event.flavor}</p>
+          <span style={{ color: "var(--gold-bright)", fontStyle: "italic" }}>
+            {event.skillName}
+          </span>
+          <p className="text-[11px] mt-1 italic" style={{ color: "var(--ink-secondary)" }}>
+            {event.flavor}
+          </p>
         </div>
       );
 
@@ -201,7 +215,15 @@ function EventRow({ event }: { event: CascadeEvent }) {
     case "drop":
       return (
         <div className="text-sm">
-          <span>{event.itemType === "egg" ? "🥚" : event.itemType === "realm_potion" ? "🧪" : event.itemType === "food" ? "🍖" : "📦"}</span>{" "}
+          <span>
+            {event.itemType === "egg"
+              ? "🥚"
+              : event.itemType === "realm_potion"
+                ? "🧪"
+                : event.itemType === "food"
+                  ? "🍖"
+                  : "📦"}
+          </span>{" "}
           <span style={{ color: "var(--ink-primary)" }}>{event.itemName}</span>{" "}
           <span style={{ color: "var(--ink-secondary)" }}>×{event.quantity}</span>
         </div>
@@ -209,17 +231,25 @@ function EventRow({ event }: { event: CascadeEvent }) {
 
     case "leveledUp":
       return (
-        <div className="text-sm rounded-md p-2" style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}>
+        <div
+          className="text-sm rounded-md p-2"
+          style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}
+        >
           <span style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
             ✦ Level <NumberFlow value={event.level} />
           </span>
-          <span style={{ color: "var(--ink-secondary)" }} className="ml-2 text-xs">HP restored</span>
+          <span style={{ color: "var(--ink-secondary)" }} className="ml-2 text-xs">
+            HP restored
+          </span>
         </div>
       );
 
     case "tomeMint":
       return (
-        <div className="text-sm rounded-md p-2" style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.3)" }}>
+        <div
+          className="text-sm rounded-md p-2"
+          style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.3)" }}
+        >
           <span style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
             📕 Tome of Reverse Heaven minted
           </span>
@@ -228,7 +258,10 @@ function EventRow({ event }: { event: CascadeEvent }) {
 
     case "died":
       return (
-        <div className="text-sm rounded-md p-2" style={{ background: "rgba(224,82,82,0.1)", border: "1px solid rgba(224,82,82,0.3)" }}>
+        <div
+          className="text-sm rounded-md p-2"
+          style={{ background: "rgba(224,82,82,0.1)", border: "1px solid rgba(224,82,82,0.3)" }}
+        >
           <span style={{ color: "var(--danger)", fontWeight: 700 }}>
             💀 You fell — Gold lost, level −1
           </span>

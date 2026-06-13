@@ -24,24 +24,36 @@ export type PromotionCheck = {
 // Role → stone the monster needs to promote
 export function stoneForRole(role: string): string {
   switch (role) {
-    case "attacker": return "Strength Stone";
-    case "tank":     return "Hearth Stone";
-    case "healer":   return "Hearth Stone";
-    case "support":  return "Sage Stone";
-    case "debuffer": return "Wayfarer Stone";
-    default:         return "Strength Stone";
+    case "attacker":
+      return "Strength Stone";
+    case "tank":
+      return "Hearth Stone";
+    case "healer":
+      return "Hearth Stone";
+    case "support":
+      return "Sage Stone";
+    case "debuffer":
+      return "Wayfarer Stone";
+    default:
+      return "Strength Stone";
   }
 }
 
 // Role → rare material that drops in matching expedition
 function materialForRole(role: string): string {
   switch (role) {
-    case "attacker": return "Iron Shard";
-    case "tank":     return "Granite Core";
-    case "healer":   return "Granite Core";
-    case "support":  return "Vellum Page";
-    case "debuffer": return "Tome Shard";
-    default:         return "Iron Shard";
+    case "attacker":
+      return "Iron Shard";
+    case "tank":
+      return "Granite Core";
+    case "healer":
+      return "Granite Core";
+    case "support":
+      return "Vellum Page";
+    case "debuffer":
+      return "Tome Shard";
+    default:
+      return "Iron Shard";
   }
 }
 
@@ -110,7 +122,9 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       levelRequired: 70,
       newStarLevel: 7,
       unlocks: "Transcendent Title + portrait variant",
-      locked: { reason: "Needs Tome of Reverse Heaven — only obtainable from Quarterly Goals (Step 7)." },
+      locked: {
+        reason: "Needs Tome of Reverse Heaven — only obtainable from Quarterly Goals (Step 7).",
+      },
     };
   }
   return {
@@ -126,7 +140,9 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
 // ─── Check + Promote ────────────────────────────────────────────────────────
 
 export async function checkPromotionEligibility(userMonsterId: string): Promise<PromotionCheck> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const { data: um } = await supabase
@@ -156,19 +172,30 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
   }
 
   // Reasons for refusal, in order
-  if (req.locked) return {
-    canPromote: false,
-    reason: req.locked.reason,
-    requirement: req,
-    have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level },
-  };
+  if (req.locked)
+    return {
+      canPromote: false,
+      reason: req.locked.reason,
+      requirement: req,
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+      },
+    };
 
   if (um.bond_percent < req.bondRequired) {
     return {
       canPromote: false,
       reason: `Bond too low (${Math.round(um.bond_percent)}% / ${req.bondRequired}%).`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+      },
     };
   }
   if (um.level < req.levelRequired) {
@@ -176,7 +203,12 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Level too low (${um.level} / ${req.levelRequired}).`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+      },
     };
   }
 
@@ -185,7 +217,12 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Need ${req.stones.qty} ${stoneName} — have ${have[stoneName] ?? 0}.`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+      },
     };
   }
   for (const mat of req.materials) {
@@ -194,7 +231,12 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
         canPromote: false,
         reason: `Need ${mat.qty} ${mat.name} — have ${have[mat.name] ?? 0}.`,
         requirement: req,
-        have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level },
+        have: {
+          stones: have[stoneName] ?? 0,
+          materials: have,
+          bond: um.bond_percent,
+          level: um.level,
+        },
       };
     }
   }
@@ -206,8 +248,12 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
   };
 }
 
-export async function promoteMonster(userMonsterId: string): Promise<{ from: number; to: number; unlocks?: string }> {
-  const { data: { user } } = await supabase.auth.getUser();
+export async function promoteMonster(
+  userMonsterId: string,
+): Promise<{ from: number; to: number; unlocks?: string }> {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   // Re-check eligibility server-side-of-sorts (re-query to avoid TOCTOU)

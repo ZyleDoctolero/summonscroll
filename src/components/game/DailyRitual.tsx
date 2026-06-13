@@ -4,7 +4,13 @@ import { motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
-import { getTodayLog, setMorningIntents, submitEveningReflection, isMorningWindow, isEveningWindow } from "@/lib/game/rituals-client";
+import {
+  getTodayLog,
+  setMorningIntents,
+  submitEveningReflection,
+  isMorningWindow,
+  isEveningWindow,
+} from "@/lib/game/rituals-client";
 import { whisper } from "@/components/game/WhisperFeed";
 import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens";
 import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
@@ -19,10 +25,19 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
   const saveMut = useMutation({
     mutationFn: () => setMorningIntents(picked),
     onSuccess: () => {
-      confetti({ particleCount: 90, spread: 60, origin: { y: 0.5 }, colors: ["#C89A3E", "#FFD54F"] });
+      confetti({
+        particleCount: 90,
+        spread: 60,
+        origin: { y: 0.5 },
+        colors: ["#C89A3E", "#FFD54F"],
+      });
       qc.invalidateQueries({ queryKey: ["tasks"] });
       qc.invalidateQueries({ queryKey: ["today-log"] });
-      whisper({ monsterName: "Dawn Herald", line: "Three Directives. Today has shape.", tone: "calm" });
+      whisper({
+        monsterName: "Dawn Herald",
+        line: "Three Directives. Today has shape.",
+        tone: "calm",
+      });
       onClose();
     },
     onError: (e: Error) => toast.error(e.message),
@@ -36,16 +51,25 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
   const delays = stagger(Math.min(8, candidates.length), 0.04);
 
   return (
-    <ResponsiveDialog open={true} onOpenChange={(open) => !open && onClose()} title="Morning Ritual">
+    <ResponsiveDialog
+      open={true}
+      onOpenChange={(open) => !open && onClose()}
+      title="Morning Ritual"
+    >
       <Glyph emoji="☀" />
       <Sub>
-        Pick today's <strong style={{ color: "#FFD54F" }}>3 Sacred Directives</strong>. They earn 1.5× rewards
-        and unlock a Reflection Pull tonight if all three are completed.
+        Pick today's <strong style={{ color: "#FFD54F" }}>3 Sacred Directives</strong>. They earn
+        1.5× rewards and unlock a Reflection Pull tonight if all three are completed.
       </Sub>
 
-      <div className="max-h-[300px] overflow-y-auto rounded-xl p-2 my-4 space-y-1" style={{ background: "rgba(0,0,0,0.32)" }}>
+      <div
+        className="max-h-[300px] overflow-y-auto rounded-xl p-2 my-4 space-y-1"
+        style={{ background: "rgba(0,0,0,0.32)" }}
+      >
         {candidates.length === 0 ? (
-          <p className="text-center py-8 text-xs" style={{ color: "var(--ink-tertiary)" }}>Forge a directive first, then return.</p>
+          <p className="text-center py-8 text-xs" style={{ color: "var(--ink-tertiary)" }}>
+            Forge a directive first, then return.
+          </p>
         ) : (
           candidates.map((t, i) => {
             const isPicked = picked.includes(t.id);
@@ -54,7 +78,11 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
                 key={t.id}
                 initial={{ opacity: 0, y: 4 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: dur.fast, ease: ease.out, delay: delays[Math.min(i, delays.length - 1)] }}
+                transition={{
+                  duration: dur.fast,
+                  ease: ease.out,
+                  delay: delays[Math.min(i, delays.length - 1)],
+                }}
                 whileTap={{ scale: 0.985 }}
                 onClick={() => toggle(t.id)}
                 disabled={!isPicked && picked.length >= 3}
@@ -67,7 +95,12 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
               >
                 <span className="mr-2">{isPicked ? "⭐" : "○"}</span>
                 <span>{t.title}</span>
-                <span className="text-[10px] ml-2 uppercase tracking-wider" style={{ color: "var(--ink-tertiary)" }}>{t.type}</span>
+                <span
+                  className="text-[10px] ml-2 uppercase tracking-wider"
+                  style={{ color: "var(--ink-tertiary)" }}
+                >
+                  {t.type}
+                </span>
               </motion.button>
             );
           })
@@ -78,7 +111,11 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
         <SpringyButton
           onClick={onClose}
           className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-          style={{ background: "rgba(255,255,255,0.04)", color: "var(--ink-secondary)", border: "1px solid rgba(255,255,255,0.06)" }}
+          style={{
+            background: "rgba(255,255,255,0.04)",
+            color: "var(--ink-secondary)",
+            border: "1px solid rgba(255,255,255,0.06)",
+          }}
         >
           Skip Today
         </SpringyButton>
@@ -87,14 +124,20 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           disabled={picked.length === 0 || saveMut.isPending}
           className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
           style={{
-            background: picked.length > 0 ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))" : "rgba(255,255,255,0.05)",
+            background:
+              picked.length > 0
+                ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
+                : "rgba(255,255,255,0.05)",
             color: picked.length > 0 ? "var(--bg-deep)" : "var(--ink-tertiary)",
             boxShadow: picked.length > 0 ? "0 4px 20px rgba(255,213,79,0.28)" : "none",
           }}
         >
-          {saveMut.isPending ? "Setting…" : (
+          {saveMut.isPending ? (
+            "Setting…"
+          ) : (
             <>
-              Set <NumberFlow value={picked.length} />/3
+              Set <NumberFlow value={picked.length} />
+              /3
             </>
           )}
         </SpringyButton>
@@ -114,19 +157,34 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
   const [anchor, setAnchor] = useState<string>("");
 
   const submitMut = useMutation({
-    mutationFn: () => submitEveningReflection({
-      went_well: wentWell.trim(),
-      didnt_go: didntGo.trim(),
-      mood, energy,
-      tomorrow_anchor_task_id: anchor || null,
-    }),
+    mutationFn: () =>
+      submitEveningReflection({
+        went_well: wentWell.trim(),
+        didnt_go: didntGo.trim(),
+        mood,
+        energy,
+        tomorrow_anchor_task_id: anchor || null,
+      }),
     onSuccess: (res) => {
       if (res.rewards.reflectionPull) {
-        confetti({ particleCount: 180, spread: 90, origin: { y: 0.5 }, colors: ["#C89A3E", "#FFD54F", "#7F77DD"] });
-        whisper({ monsterName: "Reflection Spirit", line: "The Altar opens for you tonight.", tone: "grave" });
+        confetti({
+          particleCount: 180,
+          spread: 90,
+          origin: { y: 0.5 },
+          colors: ["#C89A3E", "#FFD54F", "#7F77DD"],
+        });
+        whisper({
+          monsterName: "Reflection Spirit",
+          line: "The Altar opens for you tonight.",
+          tone: "grave",
+        });
       }
       if (res.rewards.tomeShard) {
-        whisper({ monsterName: "Vault Keeper", line: "A Tome Shard fell from the sky.", tone: "grave" });
+        whisper({
+          monsterName: "Vault Keeper",
+          line: "A Tome Shard fell from the sky.",
+          tone: "grave",
+        });
       }
       toast(`🌙 Ritual streak: ${res.rewards.ritualStreak}`);
       qc.invalidateQueries({ queryKey: ["profile"] });
@@ -137,7 +195,11 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
   });
 
   return (
-    <ResponsiveDialog open={true} onOpenChange={(open) => !open && onClose()} title="Evening Reflection">
+    <ResponsiveDialog
+      open={true}
+      onOpenChange={(open) => !open && onClose()}
+      title="Evening Reflection"
+    >
       <Glyph emoji="🌙" />
       <Sub>Two lines, two sliders, one anchor. Ninety seconds.</Sub>
 
@@ -164,15 +226,29 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           />
         </Field>
 
-        <Slider label="Mood" emoji={["😞", "😐", "🙂", "😄", "🤩"]} value={mood} onChange={setMood} />
-        <Slider label="Energy" emoji={["🔋", "🔋", "🔋", "⚡", "⚡"]} value={energy} onChange={setEnergy} />
+        <Slider
+          label="Mood"
+          emoji={["😞", "😐", "🙂", "😄", "🤩"]}
+          value={mood}
+          onChange={setMood}
+        />
+        <Slider
+          label="Energy"
+          emoji={["🔋", "🔋", "🔋", "⚡", "⚡"]}
+          value={energy}
+          onChange={setEnergy}
+        />
 
         <Field label="Tomorrow's anchor (optional)">
           <select value={anchor} onChange={(e) => setAnchor(e.target.value)} className="ss-input">
             <option value="">— none —</option>
-            {tasks.filter((t) => !t.completed || t.type === "habit").map((t) => (
-              <option key={t.id} value={t.id}>{t.title}</option>
-            ))}
+            {tasks
+              .filter((t) => !t.completed || t.type === "habit")
+              .map((t) => (
+                <option key={t.id} value={t.id}>
+                  {t.title}
+                </option>
+              ))}
           </select>
         </Field>
       </div>
@@ -181,7 +257,11 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
         <SpringyButton
           onClick={onClose}
           className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-          style={{ background: "rgba(255,255,255,0.04)", color: "var(--ink-secondary)", border: "1px solid rgba(255,255,255,0.06)" }}
+          style={{
+            background: "rgba(255,255,255,0.04)",
+            color: "var(--ink-secondary)",
+            border: "1px solid rgba(255,255,255,0.06)",
+          }}
         >
           Later
         </SpringyButton>
@@ -189,7 +269,11 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           onClick={() => submitMut.mutate()}
           disabled={submitMut.isPending}
           className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
-          style={{ background: "linear-gradient(135deg,var(--violet),#A99DFF)", color: "var(--bg-deep)", boxShadow: "0 4px 20px rgba(127,119,221,0.32)" }}
+          style={{
+            background: "linear-gradient(135deg,var(--violet),#A99DFF)",
+            color: "var(--bg-deep)",
+            boxShadow: "0 4px 20px rgba(127,119,221,0.32)",
+          }}
         >
           {submitMut.isPending ? "Reflecting…" : "Sleep Well"}
         </SpringyButton>
@@ -197,8 +281,6 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
     </ResponsiveDialog>
   );
 }
-
-
 
 // ─── Shared atoms ───────────────────────────────────────────────────────────
 
@@ -216,23 +298,47 @@ function Glyph({ emoji }: { emoji: string }) {
 }
 
 function Sub({ children }: { children: React.ReactNode }) {
-  return <p className="text-xs text-center mb-2" style={{ color: "var(--ink-secondary)" }}>{children}</p>;
+  return (
+    <p className="text-xs text-center mb-2" style={{ color: "var(--ink-secondary)" }}>
+      {children}
+    </p>
+  );
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <div className="text-[10px] uppercase tracking-[0.18em] mb-1 font-semibold" style={{ color: "var(--ink-secondary)" }}>{label}</div>
+      <div
+        className="text-[10px] uppercase tracking-[0.18em] mb-1 font-semibold"
+        style={{ color: "var(--ink-secondary)" }}
+      >
+        {label}
+      </div>
       {children}
     </label>
   );
 }
 
-function Slider({ label, emoji, value, onChange }: { label: string; emoji: string[]; value: number; onChange: (v: number) => void }) {
+function Slider({
+  label,
+  emoji,
+  value,
+  onChange,
+}: {
+  label: string;
+  emoji: string[];
+  value: number;
+  onChange: (v: number) => void;
+}) {
   return (
     <div>
       <div className="flex justify-between items-end mb-1">
-        <span className="text-[10px] uppercase tracking-[0.18em] font-semibold" style={{ color: "var(--ink-secondary)" }}>{label}</span>
+        <span
+          className="text-[10px] uppercase tracking-[0.18em] font-semibold"
+          style={{ color: "var(--ink-secondary)" }}
+        >
+          {label}
+        </span>
         <motion.span
           key={value}
           initial={{ scale: 0.7, opacity: 0.6 }}
@@ -252,7 +358,10 @@ function Slider({ label, emoji, value, onChange }: { label: string; emoji: strin
             transition={trans.springy}
             className="flex-1 h-9 rounded-md text-xs font-bold"
             style={{
-              background: v <= value ? "linear-gradient(135deg,var(--violet),#A99DFF)" : "rgba(255,255,255,0.05)",
+              background:
+                v <= value
+                  ? "linear-gradient(135deg,var(--violet),#A99DFF)"
+                  : "rgba(255,255,255,0.05)",
               color: v <= value ? "var(--bg-deep)" : "var(--ink-tertiary)",
             }}
           >
@@ -269,15 +378,17 @@ function Actions({ children }: { children: React.ReactNode }) {
 }
 
 type SpringyButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-const SpringyButton = forwardRef<HTMLButtonElement, SpringyButtonProps>(function SpringyButton(props, ref) {
-  const rm = reducedMotion();
-  return (
-    <motion.button
-      ref={ref}
-      whileTap={rm ? undefined : { scale: 0.97 }}
-      whileHover={rm ? undefined : { y: -1 }}
-      transition={trans.springy}
-      {...(props as React.ComponentProps<typeof motion.button>)}
-    />
-  );
-});
+const SpringyButton = forwardRef<HTMLButtonElement, SpringyButtonProps>(
+  function SpringyButton(props, ref) {
+    const rm = reducedMotion();
+    return (
+      <motion.button
+        ref={ref}
+        whileTap={rm ? undefined : { scale: 0.97 }}
+        whileHover={rm ? undefined : { y: -1 }}
+        transition={trans.springy}
+        {...(props as React.ComponentProps<typeof motion.button>)}
+      />
+    );
+  },
+);

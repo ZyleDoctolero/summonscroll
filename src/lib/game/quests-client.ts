@@ -24,17 +24,23 @@ export type Goal = {
 
 const GOAL_DEFAULTS: Record<GoalType, { hp: number; days: number }> = {
   quarterly: { hp: 10000, days: 90 },
-  monthly:   { hp: 3500,  days: 30 },
-  weekly:    { hp: 800,   days: 7 },
+  monthly: { hp: 3500, days: 30 },
+  weekly: { hp: 800, days: 7 },
 };
 
 // ─── CRUD ──────────────────────────────────────────────────────────────────
 
 export async function listGoals(status?: GoalStatus) {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return { goals: [] };
 
-  let q = supabase.from("goals").select("*").eq("user_id", user.id).order("created_at", { ascending: false });
+  let q = supabase
+    .from("goals")
+    .select("*")
+    .eq("user_id", user.id)
+    .order("created_at", { ascending: false });
   if (status) q = q.eq("status", status);
   const { data, error } = await q;
   if (error) throw error;
@@ -42,7 +48,9 @@ export async function listGoals(status?: GoalStatus) {
 }
 
 export async function createGoal(input: { title: string; type: GoalType; identity?: string }) {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
   const def = GOAL_DEFAULTS[input.type];
   const now = new Date();
@@ -85,7 +93,7 @@ export async function linkTaskToGoal(taskId: string, goalId: string | null) {
 export async function damageGoalsForTask(
   userId: string,
   taskId: string,
-  damageBase: number
+  damageBase: number,
 ): Promise<{ slain: Goal[]; damaged: Array<{ goal: Goal; damage: number }>; tomeMinted: boolean }> {
   const { data: task } = await supabase
     .from("tasks")
@@ -129,7 +137,10 @@ export async function damageGoalsForTask(
       .eq("item_name", "Tome of Reverse Heaven")
       .maybeSingle();
     if (existing) {
-      await supabase.from("inventory").update({ quantity: existing.quantity + 1 }).eq("id", existing.id);
+      await supabase
+        .from("inventory")
+        .update({ quantity: existing.quantity + 1 })
+        .eq("id", existing.id);
     } else {
       await supabase.from("inventory").insert({
         user_id: userId,

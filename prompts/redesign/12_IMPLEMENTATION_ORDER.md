@@ -29,6 +29,7 @@ Reference for sequencing the redesign. Read this last; use during execution.
 ## Recommended week-by-week sequencing (solo dev, ~3h/day)
 
 ### Week 1 — Decisions + foundations
+
 - **Day 1**: Read file 01 carefully. Pick A / B / C. Commit the decision in
   the file header.
 - **Day 2**: File 02 — Surface System. Drop the CSS, refactor 5 core
@@ -39,6 +40,7 @@ Reference for sequencing the redesign. Read this last; use during execution.
   emoji across the 8 high-impact files.
 
 ### Week 2 — Atmosphere + meaning
+
 - **Day 6**: File 05 — Generate 6 atmosphere images. Apply per-route classes.
 - **Day 7**: File 09 — Empty states. Create EmptyState component. Rewrite
   every "No X yet" string with the chosen voice.
@@ -49,6 +51,7 @@ Reference for sequencing the redesign. Read this last; use during execution.
   things that look off in context.
 
 ### Week 3 — Adoption + mobile
+
 - **Day 11**: File 07 — First-Time Experience. Migration, welcome carousel,
   tutorial directive, free first pull.
 - **Day 12**: File 11 — Mobile-first. ResponsiveDialog. Touch target fixes.
@@ -58,6 +61,7 @@ Reference for sequencing the redesign. Read this last; use during execution.
   the original to confirm the new identity reads everywhere.
 
 ### Parallel track — Monster Art (any time, ongoing)
+
 - File 10 is independent. Triage existing 202, set up batch generator, run
   generations in evenings while doing other work in the day.
 
@@ -180,7 +184,7 @@ Reasonable stopping points if life gets in the way:
 
 ## Final note
 
-This redesign is mostly about *committing* to decisions. The hardest part is
+This redesign is mostly about _committing_ to decisions. The hardest part is
 file 01. Once that's chosen, everything else is mechanical.
 
 Don't sit on file 01. Decision velocity > decision quality at this stage. A B

@@ -7,12 +7,13 @@
 Every screen background is `#0C0E14` (or whatever the chosen identity's
 `--ss-bg-deep` is). The Hub, the Altar, the Battle screen, the Codex — they all
 look like the same admin dashboard. A player flipping between routes
-experiences no sense of *place*.
+experiences no sense of _place_.
 
 Compare to any RPG:
+
 - Genshin's menu has parallax stars behind it.
 - Persona 5's screens each pulse with their menu identity.
-- Pokemon HOME's box screen feels like a *physical box*.
+- Pokemon HOME's box screen feels like a _physical box_.
 
 The fix is six small background paintings (one per primary route) loaded as
 CSS background-image or React layered overlay. They sit behind the chrome at
@@ -38,10 +39,12 @@ surface. All atmosphere images live in `public/atmos/`.
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-    rgba(12,14,20,0.65) 0%,
-    rgba(12,14,20,0.85) 60%,
-    rgba(12,14,20,0.95) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 14, 20, 0.65) 0%,
+    rgba(12, 14, 20, 0.85) 60%,
+    rgba(12, 14, 20, 0.95) 100%
+  );
   pointer-events: none;
   z-index: 0;
 }
@@ -54,13 +57,27 @@ surface. All atmosphere images live in `public/atmos/`.
 Per-screen class:
 
 ```css
-.bg-atmos-hub        { --bg-atmos-image: url("/atmos/hub.png"); }
-.bg-atmos-altar      { --bg-atmos-image: url("/atmos/altar.png"); }
-.bg-atmos-expedition { --bg-atmos-image: url("/atmos/expedition.png"); }
-.bg-atmos-battle     { --bg-atmos-image: url("/atmos/battle.png"); }
-.bg-atmos-codex      { --bg-atmos-image: url("/atmos/codex.png"); }
-.bg-atmos-trial      { --bg-atmos-image: url("/atmos/trial.png"); }
-.bg-atmos-compendium { --bg-atmos-image: url("/atmos/compendium.png"); }
+.bg-atmos-hub {
+  --bg-atmos-image: url("/atmos/hub.png");
+}
+.bg-atmos-altar {
+  --bg-atmos-image: url("/atmos/altar.png");
+}
+.bg-atmos-expedition {
+  --bg-atmos-image: url("/atmos/expedition.png");
+}
+.bg-atmos-battle {
+  --bg-atmos-image: url("/atmos/battle.png");
+}
+.bg-atmos-codex {
+  --bg-atmos-image: url("/atmos/codex.png");
+}
+.bg-atmos-trial {
+  --bg-atmos-image: url("/atmos/trial.png");
+}
+.bg-atmos-compendium {
+  --bg-atmos-image: url("/atmos/compendium.png");
+}
 ```
 
 ---
@@ -195,9 +212,7 @@ return (
   <AppShell profile={profile}>
     <DeathOverlay trigger={deathTick} />
     <div className="bg-atmos bg-atmos-hub relative min-h-screen">
-      <div className="p-6 md:p-10 max-w-6xl mx-auto">
-        {/* existing Hub content unchanged */}
-      </div>
+      <div className="p-6 md:p-10 max-w-6xl mx-auto">{/* existing Hub content unchanged */}</div>
     </div>
   </AppShell>
 );
@@ -205,22 +220,22 @@ return (
 
 ### Per-route mapping
 
-| Route file | Class to add to root |
-|---|---|
-| `_authenticated/index.tsx` | `bg-atmos bg-atmos-hub` |
-| `_authenticated/altar.tsx` | `bg-atmos bg-atmos-altar` |
-| `_authenticated/expeditions.tsx` | `bg-atmos bg-atmos-expedition` |
-| `_authenticated/battle.tsx` | `bg-atmos bg-atmos-battle` |
-| `_authenticated/codex.tsx` | `bg-atmos bg-atmos-codex` |
-| `_authenticated/trial.tsx` | `bg-atmos bg-atmos-trial` |
-| `_authenticated/compendium.tsx` | `bg-atmos bg-atmos-compendium` (optional) |
-| `_authenticated/quests.tsx` | reuse `bg-atmos-codex` or leave plain |
-| `_authenticated/island.tsx` | reuse `bg-atmos-hub` or leave plain |
-| `_authenticated/forge.tsx` | none (forge has its own UI density — atmosphere would compete) |
-| `_authenticated/bazaar.tsx` | none |
-| `_authenticated/guild.tsx` | none |
-| `_authenticated/fusion.tsx` | none |
-| `_authenticated/profile.tsx` | none |
+| Route file                       | Class to add to root                                           |
+| -------------------------------- | -------------------------------------------------------------- |
+| `_authenticated/index.tsx`       | `bg-atmos bg-atmos-hub`                                        |
+| `_authenticated/altar.tsx`       | `bg-atmos bg-atmos-altar`                                      |
+| `_authenticated/expeditions.tsx` | `bg-atmos bg-atmos-expedition`                                 |
+| `_authenticated/battle.tsx`      | `bg-atmos bg-atmos-battle`                                     |
+| `_authenticated/codex.tsx`       | `bg-atmos bg-atmos-codex`                                      |
+| `_authenticated/trial.tsx`       | `bg-atmos bg-atmos-trial`                                      |
+| `_authenticated/compendium.tsx`  | `bg-atmos bg-atmos-compendium` (optional)                      |
+| `_authenticated/quests.tsx`      | reuse `bg-atmos-codex` or leave plain                          |
+| `_authenticated/island.tsx`      | reuse `bg-atmos-hub` or leave plain                            |
+| `_authenticated/forge.tsx`       | none (forge has its own UI density — atmosphere would compete) |
+| `_authenticated/bazaar.tsx`      | none                                                           |
+| `_authenticated/guild.tsx`       | none                                                           |
+| `_authenticated/fusion.tsx`      | none                                                           |
+| `_authenticated/profile.tsx`     | none                                                           |
 
 Use atmosphere sparingly. **Six routes, max.** Adding it everywhere kills its
 impact.
@@ -234,7 +249,7 @@ impact.
   this automatically.
 - Preload only the Hub atmosphere (first paint matters most):
   ```html
-  <link rel="preload" as="image" href="/atmos/hub.png">
+  <link rel="preload" as="image" href="/atmos/hub.png" />
   ```
 - Total atmosphere assets together should be under 3 MB for the full app.
 
@@ -290,6 +305,7 @@ text, no UI elements in the image, no characters.
 
 For Proposal D, additionally request **animated overlays** as separate small
 PNGs if budget allows:
+
 - `public/atmos/altar_particles.png` — tileable particle field for the Altar
 - `public/atmos/star_drift.png` — slow-drift starfield for Hub
 

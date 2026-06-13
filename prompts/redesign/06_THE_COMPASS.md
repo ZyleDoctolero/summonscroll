@@ -6,6 +6,7 @@
 ## The problem
 
 A returning user opens the app and faces:
+
 - 14 nav routes
 - ~10 systems with active state
 - No surface telling them which action right now has the highest payoff
@@ -16,7 +17,7 @@ open SummonScroll. That's a UX failure.
 Most successful games solve this with a **directive layer** — Genshin's daily
 commission, Stardew's "events today" banner, Habitica's "Pomodoro suggested
 because you've been idle 30 min." A single component at the top of the home
-screen surfaces the *one highest-leverage action available right now*.
+screen surfaces the _one highest-leverage action available right now_.
 
 ## The fix
 
@@ -34,16 +35,16 @@ the user invalidates `["profile"]` or `["today-log"]`.
 
 Eight candidates the Compass can suggest, ranked by score:
 
-| # | Candidate | Condition | Score factors |
-|---|---|---|---|
-| 1 | **Morning Ritual ready** | `morningWindow && !morning_done` | base 100 + urgency (linearly +1 per hour past 4am) |
-| 2 | **Evening Reflection ready** | `eveningWindow && morning_done && !evening_done` | base 90 + urgency |
-| 3 | **Reflection Pull available** | `reflection_pull_granted && !reflection_pull_used` | base 95 (rare reward) |
-| 4 | **Quarterly Boss almost slain** | `active_quarterly_goal && hp_remaining/hp_total < 0.15` | base 95 (close to Tome) |
-| 5 | **Promotion possible** | `any monster meets all promotion requirements` | base 88 + (newStar*2) |
-| 6 | **Stamina full** | `stamina >= stamina_max` | base 70 + 5 per missed-expedition day |
-| 7 | **Wailing Wall reached** | `tower.highest_floor === 49 && !wailing_wall_cleared_at` | base 92 (milestone) |
-| 8 | **Sacred Directives almost done** | `2 of 3 starred tasks completed today` | base 80 |
+| #   | Candidate                         | Condition                                                | Score factors                                      |
+| --- | --------------------------------- | -------------------------------------------------------- | -------------------------------------------------- |
+| 1   | **Morning Ritual ready**          | `morningWindow && !morning_done`                         | base 100 + urgency (linearly +1 per hour past 4am) |
+| 2   | **Evening Reflection ready**      | `eveningWindow && morning_done && !evening_done`         | base 90 + urgency                                  |
+| 3   | **Reflection Pull available**     | `reflection_pull_granted && !reflection_pull_used`       | base 95 (rare reward)                              |
+| 4   | **Quarterly Boss almost slain**   | `active_quarterly_goal && hp_remaining/hp_total < 0.15`  | base 95 (close to Tome)                            |
+| 5   | **Promotion possible**            | `any monster meets all promotion requirements`           | base 88 + (newStar\*2)                             |
+| 6   | **Stamina full**                  | `stamina >= stamina_max`                                 | base 70 + 5 per missed-expedition day              |
+| 7   | **Wailing Wall reached**          | `tower.highest_floor === 49 && !wailing_wall_cleared_at` | base 92 (milestone)                                |
+| 8   | **Sacred Directives almost done** | `2 of 3 starred tasks completed today`                   | base 80                                            |
 
 A 9th fallback: **"Forge a new directive"** if the user has 0 active tasks.
 
@@ -85,12 +86,12 @@ import { trans } from "@/lib/ui/motion-tokens";
 type Suggestion = {
   id: string;
   score: number;
-  title: string;          // verb-led sentence: "Set today's directives"
-  reason: string;         // one-line why: "Mornings shape the day."
-  cta: string;            // button text: "Open Ritual"
-  to?: string;            // route to navigate to
-  action?: () => void;    // OR a callback (for opening a modal)
-  icon: string;           // Icon name from the icon system
+  title: string; // verb-led sentence: "Set today's directives"
+  reason: string; // one-line why: "Mornings shape the day."
+  cta: string; // button text: "Open Ritual"
+  to?: string; // route to navigate to
+  action?: () => void; // OR a callback (for opening a modal)
+  icon: string; // Icon name from the icon system
   tone: "calm" | "urgent" | "rare";
 };
 
@@ -164,7 +165,7 @@ export function Compass({
 
     // Candidate 4: Quarterly Boss almost slain
     const finishingGoal = goals.find(
-      (g) => g.type === "quarterly" && g.hp_remaining / g.hp_total < 0.15
+      (g) => g.type === "quarterly" && g.hp_remaining / g.hp_total < 0.15,
     );
     if (finishingGoal) {
       candidates.push({
@@ -181,7 +182,7 @@ export function Compass({
 
     // Candidate 5: Promotion possible (cheap async check skipped — use heuristic)
     const promotable = monsters.find(
-      (m) => m.bond_percent >= 60 && m.star_level < 5 && m.level >= 15
+      (m) => m.bond_percent >= 60 && m.star_level < 5 && m.level >= 15,
     );
     if (promotable) {
       candidates.push({
@@ -198,7 +199,11 @@ export function Compass({
 
     // Candidate 6: Stamina full
     if (profile.stamina_max && profile.stamina != null && profile.stamina_last_tick) {
-      const current = computeCurrentStamina(profile.stamina, profile.stamina_max, profile.stamina_last_tick);
+      const current = computeCurrentStamina(
+        profile.stamina,
+        profile.stamina_max,
+        profile.stamina_last_tick,
+      );
       if (current >= profile.stamina_max) {
         candidates.push({
           id: "stamina",
@@ -239,7 +244,7 @@ export function Compass({
         title: "Quiet day. Add a small directive.",
         reason: "Small wins compound.",
         cta: "Forge",
-        action: () => {},  // Hub opens its own directive dialog
+        action: () => {}, // Hub opens its own directive dialog
         icon: "sparkle",
         tone: "calm",
       });
@@ -247,14 +252,22 @@ export function Compass({
 
     candidates.sort((a, b) => b.score - a.score);
     return candidates[0];
-  }, [profileQ.data, logQ.data, goalsQ.data, monstersQ.data, towerQ.data, onOpenMorning, onOpenEvening]);
+  }, [
+    profileQ.data,
+    logQ.data,
+    goalsQ.data,
+    monstersQ.data,
+    towerQ.data,
+    onOpenMorning,
+    onOpenEvening,
+  ]);
 
   if (!suggestion) return null;
 
   const toneStyles: Record<string, React.CSSProperties> = {
-    calm:   { background: "rgba(255,213,79,0.06)", borderColor: "rgba(255,213,79,0.22)" },
-    urgent: { background: "rgba(224,82,82,0.06)",  borderColor: "rgba(224,82,82,0.28)" },
-    rare:   { background: "rgba(127,119,221,0.06)",borderColor: "rgba(127,119,221,0.28)" },
+    calm: { background: "rgba(255,213,79,0.06)", borderColor: "rgba(255,213,79,0.22)" },
+    urgent: { background: "rgba(224,82,82,0.06)", borderColor: "rgba(224,82,82,0.28)" },
+    rare: { background: "rgba(127,119,221,0.06)", borderColor: "rgba(127,119,221,0.28)" },
   };
 
   return (
@@ -294,7 +307,7 @@ In `src/routes/_authenticated/index.tsx`:
 import { Compass } from "@/components/game/Compass";
 
 // inside the Hub return, FIRST element after RitualStatusPill removed:
-<Compass onOpenMorning={() => setShowMorning(true)} onOpenEvening={() => setShowEvening(true)} />
+<Compass onOpenMorning={() => setShowMorning(true)} onOpenEvening={() => setShowEvening(true)} />;
 ```
 
 You can remove `<RitualStatusPill />` once the Compass is shipped — the Compass

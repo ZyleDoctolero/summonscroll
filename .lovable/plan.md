@@ -4,17 +4,17 @@ A 9-screen, dark-fantasy game companion UI ported from the provided HTML mockups
 
 ## Routes
 
-| Route | Screen | Source |
-|---|---|---|
-| `/` → Hub | Hub Directives (landing) | 7.html |
-| `/profile` | CrimsonBlade player profile | 4.html |
-| `/bazaar` | The Grand Bazaar (shop) | 1.html |
-| `/fusion` | Fusion Matrix | 2.html |
-| `/guild` | The Vanguard guild dashboard | 3.html |
-| `/battle` | Battle Selection | 5.html |
-| `/island` | Ancient Vaults island map | 6.html |
-| `/altar` | Altar (summoning) | 8.html |
-| `/compendium` | The Compendium | 9.html |
+| Route         | Screen                       | Source |
+| ------------- | ---------------------------- | ------ |
+| `/` → Hub     | Hub Directives (landing)     | 7.html |
+| `/profile`    | CrimsonBlade player profile  | 4.html |
+| `/bazaar`     | The Grand Bazaar (shop)      | 1.html |
+| `/fusion`     | Fusion Matrix                | 2.html |
+| `/guild`      | The Vanguard guild dashboard | 3.html |
+| `/battle`     | Battle Selection             | 5.html |
+| `/island`     | Ancient Vaults island map    | 6.html |
+| `/altar`      | Altar (summoning)            | 8.html |
+| `/compendium` | The Compendium               | 9.html |
 
 A persistent top/bottom nav links all 9 screens.
 

@@ -4,7 +4,7 @@
 
 ## The problem
 
-SummonScroll is fundamentally a *habit tracker* — used in 30-second bursts on a
+SummonScroll is fundamentally a _habit tracker_ — used in 30-second bursts on a
 phone. Currently the app is desktop-first:
 
 - Modals are `<dialog>`-style centered cards — fine on desktop, awkward on
@@ -51,7 +51,7 @@ const MOBILE_BP = 768;
 
 function useIsMobile() {
   const [mobile, setMobile] = useState<boolean>(() =>
-    typeof window === "undefined" ? false : window.innerWidth < MOBILE_BP
+    typeof window === "undefined" ? false : window.innerWidth < MOBILE_BP,
   );
   useEffect(() => {
     const onResize = () => setMobile(window.innerWidth < MOBILE_BP);
@@ -130,14 +130,14 @@ export function ResponsiveDialog({
 These should swap their hand-rolled modal/backdrop pattern with
 `<ResponsiveDialog>`:
 
-| Component | Status |
-|---|---|
-| `PromotionChamber.tsx` | Wrap content in ResponsiveDialog |
-| `DailyRitual.tsx` (Morning + Evening) | Wrap |
-| `Trial confirm + results modals` | Wrap |
-| `Compendium detail modal` | Wrap |
-| `Onboarding` (from file 07) | Wrap |
-| `MoreSheet` (from file 08) | Already drawer-based; just use ResponsiveDialog instead |
+| Component                             | Status                                                  |
+| ------------------------------------- | ------------------------------------------------------- |
+| `PromotionChamber.tsx`                | Wrap content in ResponsiveDialog                        |
+| `DailyRitual.tsx` (Morning + Evening) | Wrap                                                    |
+| `Trial confirm + results modals`      | Wrap                                                    |
+| `Compendium detail modal`             | Wrap                                                    |
+| `Onboarding` (from file 07)           | Wrap                                                    |
+| `MoreSheet` (from file 08)            | Already drawer-based; just use ResponsiveDialog instead |
 
 The internal content of each modal stays exactly the same. Only the surrounding
 wrapper changes.
@@ -158,18 +158,18 @@ grep -rnE 'className="[^"]*py-(0|0\.5|1)[^"]*"' src --include='*.tsx'
 
 Per component:
 
-| File | Element | Current | Fix |
-|---|---|---|---|
-| PlayerHeader | Currency chips | py-1, font-size 14 | min-height 36px (acceptable for compact strip on desktop) |
-| TaskCard | +/− score buttons | w-9 h-9 (36px) | bump to **w-11 h-11 (44px)** |
-| GameSidebar mobile | Bottom nav items | py-2 | min-h-[44px] |
-| Battle ModeCard | "Enter →" button | py-2.5 | leave; full-width works |
-| Quests delete "Abandon" | text-[10px] px-2 py-1 | bump to **min-h-[32px] px-3** |
-| Compendium close ✕ | w-7 h-7 (28px) | bump to **w-11 h-11** with absolutely positioned X |
-| Compendium grid card | tap target | full card already large enough |
-| Codex heatmap cell | w-3 h-3 (12px) | leave on desktop; on mobile, **wrap in a bigger tap region** |
-| RitualStatusPill chips | px-3 py-1.5 | leave; chip-pattern is fine for chip-density |
-| Forge recipe rows | py-2 | bump to **py-3** on mobile |
+| File                    | Element               | Current                                                      | Fix                                                       |
+| ----------------------- | --------------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
+| PlayerHeader            | Currency chips        | py-1, font-size 14                                           | min-height 36px (acceptable for compact strip on desktop) |
+| TaskCard                | +/− score buttons     | w-9 h-9 (36px)                                               | bump to **w-11 h-11 (44px)**                              |
+| GameSidebar mobile      | Bottom nav items      | py-2                                                         | min-h-[44px]                                              |
+| Battle ModeCard         | "Enter →" button      | py-2.5                                                       | leave; full-width works                                   |
+| Quests delete "Abandon" | text-[10px] px-2 py-1 | bump to **min-h-[32px] px-3**                                |
+| Compendium close ✕      | w-7 h-7 (28px)        | bump to **w-11 h-11** with absolutely positioned X           |
+| Compendium grid card    | tap target            | full card already large enough                               |
+| Codex heatmap cell      | w-3 h-3 (12px)        | leave on desktop; on mobile, **wrap in a bigger tap region** |
+| RitualStatusPill chips  | px-3 py-1.5           | leave; chip-pattern is fine for chip-density                 |
+| Forge recipe rows       | py-2                  | bump to **py-3** on mobile                                   |
 
 ---
 

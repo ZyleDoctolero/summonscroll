@@ -4,7 +4,9 @@ import type { DailyLog } from "./rituals-client";
 // ─── Daily log feed (last N days) ───────────────────────────────────────────
 
 export async function listDailyLogs(days = 91): Promise<{ logs: DailyLog[] }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return { logs: [] };
 
   const start = new Date();
@@ -25,15 +27,17 @@ export async function listDailyLogs(days = 91): Promise<{ logs: DailyLog[] }> {
 
 export type HeatmapCell = {
   date: string;
-  activity: number;          // 0..1 normalized
-  ritualScore: number;       // 0..2 (am + pm)
+  activity: number; // 0..1 normalized
+  ritualScore: number; // 0..2 (am + pm)
   mood: number | null;
   hasJournal: boolean;
   hasAwakening: boolean;
 };
 
 export async function buildHeatmap(days = 91): Promise<HeatmapCell[]> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return [];
 
   const start = new Date();
@@ -54,7 +58,10 @@ export async function buildHeatmap(days = 91): Promise<HeatmapCell[]> {
     .eq("user_id", user.id)
     .gte("created_at", start.toISOString());
 
-  const logsByDate = new Map<string, { am: boolean; pm: boolean; mood: number | null; hasJournal: boolean }>();
+  const logsByDate = new Map<
+    string,
+    { am: boolean; pm: boolean; mood: number | null; hasJournal: boolean }
+  >();
   for (const l of logs ?? []) {
     const date = l.log_date;
     logsByDate.set(date, {

@@ -10,31 +10,33 @@ import type { Difficulty } from "./constants";
 
 /**
  * Complete onboarding flow
- * 
+ *
  * Creates a tutorial directive ("Drink water (first habit)") and updates the
  * profile with onboarding_completed_at and tutorial_directive_id.
- * 
+ *
  * The tutorial directive:
  * - Is a habit (type=habit)
  * - Has easy difficulty
  * - Is CON-tagged so it ticks monster bond when scored
  * - Has guidance notes explaining the cascade effect
- * 
+ *
  * After this completes:
  * - The tutorial task appears in the user's task list with a glowing pulse (Task 9.4)
  * - The onboarding modal will not show again
  * - When the user scores the task, the free first pull modal appears (Task 9.5)
- * 
+ *
  * Integration points:
  * - Called by Onboarding component's onComplete callback (Task 9.2)
  * - TaskCard checks profile.tutorial_directive_id to apply pulse effect (Task 9.4)
  * - gacha-client.ts checks for first pull to skip cost and guarantee Rare (Task 9.5)
- * 
+ *
  * @returns The created task ID
  * @throws Error if not authenticated or database operations fail
  */
 export async function completeOnboarding(): Promise<{ taskId: string }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   // 1. Create the tutorial directive
@@ -77,11 +79,13 @@ export async function completeOnboarding(): Promise<{ taskId: string }> {
 
 /**
  * Check if the user has completed onboarding
- * 
+ *
  * @returns true if onboarding_completed_at is set, false otherwise
  */
 export async function hasCompletedOnboarding(): Promise<boolean> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return false;
 
   const { data: profile } = await supabase

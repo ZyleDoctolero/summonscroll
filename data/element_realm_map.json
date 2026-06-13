@@ -12,7 +12,43 @@
     "Stellar": "Void Frontier"
   },
   "name_overrides": {
-    "Iron Dominion": ["cog", "gear", "steam", "automaton", "forge", "iron", "machine", "construct", "lathe", "boiler", "foundry", "brass", "piston", "wrench", "factory", "engine", "mecha", "robot"],
-    "Myth Eternal": ["primordial", "first", "eternal", "genesis", "origin", "ancient", "mythic", "titan", "progenitor", "ur-", "proto", "archetype", "golden", "dawn", "lotus", "bronze"]
+    "Iron Dominion": [
+      "cog",
+      "gear",
+      "steam",
+      "automaton",
+      "forge",
+      "iron",
+      "machine",
+      "construct",
+      "lathe",
+      "boiler",
+      "foundry",
+      "brass",
+      "piston",
+      "wrench",
+      "factory",
+      "engine",
+      "mecha",
+      "robot"
+    ],
+    "Myth Eternal": [
+      "primordial",
+      "first",
+      "eternal",
+      "genesis",
+      "origin",
+      "ancient",
+      "mythic",
+      "titan",
+      "progenitor",
+      "ur-",
+      "proto",
+      "archetype",
+      "golden",
+      "dawn",
+      "lotus",
+      "bronze"
+    ]
   }
 }

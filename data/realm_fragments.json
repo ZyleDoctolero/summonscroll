@@ -6,7 +6,13 @@
     "palette": "book leather #2c1f17 base, gold ink #d4af3f accent, arcane violet #6f4d8c glow, candlelit shadow #1a1410 atmosphere",
     "motifs": "Stacked-stone ziggurat, floating manuscripts, candle chandeliers, chained books, scroll wrappings, brass orreries, hex circles in chalk, robed figures with masks of porcelain or bronze.",
     "voice": "Slow, scholarly, slightly archaic. Pose suggests careful authority.",
-    "sample_siblings": ["Pawn Cursed", "Knight of Final Errata", "Liber Mortis Custodian", "Codex Beast", "Vecna the Ascended God"],
+    "sample_siblings": [
+      "Pawn Cursed",
+      "Knight of Final Errata",
+      "Liber Mortis Custodian",
+      "Codex Beast",
+      "Vecna the Ascended God"
+    ],
     "css_vars": {
       "base": "#2c1f17",
       "accent": "#d4af3f",
@@ -21,7 +27,13 @@
     "palette": "charred earth #1a0808 base, fire orange #c44e2a accent, dried blood #732424 glow, ember air #2a0e08 atmosphere",
     "motifs": "Bone armor, ritual scarification, jagged volcanic rock, chains and brands, double-bladed weapons, lava cracks, banners of stretched hide. No fine craft \u2014 everything is hammered, broken, re-forged.",
     "voice": "Clipped, defiant, almost playful in its violence. Pose suggests violence held just short of release.",
-    "sample_siblings": ["Wandering Fleshhound", "Dragon Chosen of Chaos", "Berserker Sovereign", "Magma Tyrant", "The First Bonfire"],
+    "sample_siblings": [
+      "Wandering Fleshhound",
+      "Dragon Chosen of Chaos",
+      "Berserker Sovereign",
+      "Magma Tyrant",
+      "The First Bonfire"
+    ],
     "css_vars": {
       "base": "#1a0808",
       "accent": "#c44e2a",
@@ -36,7 +48,13 @@
     "palette": "abyss #06060c base, witness violet #6f4d8c accent, cold star #4fb0ff glow, deep stillness #0e0e1c atmosphere",
     "motifs": "Single eye motifs, tendrils that hover (never thrash), geometric crowns, glassine skin, jellyfish-pulse glow, asymmetric forms, floating tablets covered in spirals.",
     "voice": "Quiet, slow, polite. Pose suggests eternal patience.",
-    "sample_siblings": ["Drift Witness", "Tentacled Confessor", "Star-Carrier", "The Listener", "Nyarlathotep's Quiet Mask"],
+    "sample_siblings": [
+      "Drift Witness",
+      "Tentacled Confessor",
+      "Star-Carrier",
+      "The Listener",
+      "Nyarlathotep's Quiet Mask"
+    ],
     "css_vars": {
       "base": "#06060c",
       "accent": "#6f4d8c",
@@ -51,7 +69,13 @@
     "palette": "swamp peat #1a1812 base, moss green #5a7b3a accent, bone white #d8d4b8 glow, mist green #1c2218 atmosphere",
     "motifs": "Bone wraps and burial cloth, candle-lanterns hung from ribs, willow trees, slow water, masks of clay and moss, lichens on armor, broken sword-grave markers, slow-burn incense smoke.",
     "voice": "Tired, kind, ceremonial. Pose suggests gentle dignity.",
-    "sample_siblings": ["Marsh Mourner", "Bone Florist", "Plague Saint", "Liminal Heron", "The Slumbering King"],
+    "sample_siblings": [
+      "Marsh Mourner",
+      "Bone Florist",
+      "Plague Saint",
+      "Liminal Heron",
+      "The Slumbering King"
+    ],
     "css_vars": {
       "base": "#1a1812",
       "accent": "#5a7b3a",
@@ -66,7 +90,13 @@
     "palette": "deep forest #1e2418 base, moss bright #6ec07a accent, amber sun #ffb85c glow, shaded grove #16201a atmosphere",
     "motifs": "Living armor of bark, antlers and horns of every kind, necklaces of teeth and seeds, war-paint in clay and pollen, leaf-mantles, totem masks, weapons of obsidian + bone, tribal scars in spirals.",
     "voice": "Direct, physical, present-tense. Pose suggests readiness to move.",
-    "sample_siblings": ["Bramblehound", "Tusked Walker", "Antlered Mother", "Old Grove King", "Ymir the First Trail"],
+    "sample_siblings": [
+      "Bramblehound",
+      "Tusked Walker",
+      "Antlered Mother",
+      "Old Grove King",
+      "Ymir the First Trail"
+    ],
     "css_vars": {
       "base": "#1e2418",
       "accent": "#6ec07a",
@@ -81,7 +111,13 @@
     "palette": "candle wax #f4ead8 base, sunlight gold #ffd95c accent, halo cream #fff5d0 glow, deep prayer #3c2e1a atmosphere",
     "motifs": "Robe and stole, halo-disc behind head, scale-and-feather wings, censers, sacred geometry on tile floors, columns wrapped in living flame, prayer beads, swords sheathed pointing down, golden arched windows.",
     "voice": "Calm, ritual, never-doubting. Pose suggests serene authority.",
-    "sample_siblings": ["Initiate of the First Step", "Censer-Bearer", "Twilight Templar", "Hierophant of the Climb", "The Final Step"],
+    "sample_siblings": [
+      "Initiate of the First Step",
+      "Censer-Bearer",
+      "Twilight Templar",
+      "Hierophant of the Climb",
+      "The Final Step"
+    ],
     "css_vars": {
       "base": "#f4ead8",
       "accent": "#ffd95c",
@@ -96,7 +132,13 @@
     "palette": "night purple #15101a base, warm window light #c44e2a accent, moon-frost #8a9bb5 glow, dusk haze #1c1622 atmosphere",
     "motifs": "Black-iron filigree, lace and corsets, single bloodstain, carriage lanterns, fog at knee height, broken music boxes, candle-melt drips, top hats, mourning veils, raven feathers.",
     "voice": "Honest about appetite, sometimes wry. Pose suggests restrained hunger.",
-    "sample_siblings": ["Cursed Villager", "Vampire Thrall", "Banshee Soprano", "Twilight Count", "Carmilla the Resigned"],
+    "sample_siblings": [
+      "Cursed Villager",
+      "Vampire Thrall",
+      "Banshee Soprano",
+      "Twilight Count",
+      "Carmilla the Resigned"
+    ],
     "css_vars": {
       "base": "#15101a",
       "accent": "#c44e2a",
@@ -111,7 +153,13 @@
     "palette": "server black #08081c base, cyan stream #5ae0ff accent, magenta error #ff5e85 glow, rack-light haze #0a0a22 atmosphere",
     "motifs": "Glowing wireframe overlays, holographic edges, scanline artifacts, masks with HUD displays, data-tendril hair, neon glyphs on armor, circuit-pattern wing veins, console blinks. Cyber-fantasy hybrid.",
     "voice": "Helpful, slightly literal. Pose suggests processing stance.",
-    "sample_siblings": ["Scout Drone Lesser", "Encryption Sentinel", "Data Warrior Prime", "Daemon of the Loop", "The Kernel"],
+    "sample_siblings": [
+      "Scout Drone Lesser",
+      "Encryption Sentinel",
+      "Data Warrior Prime",
+      "Daemon of the Loop",
+      "The Kernel"
+    ],
     "css_vars": {
       "base": "#08081c",
       "accent": "#5ae0ff",
@@ -126,7 +174,13 @@
     "palette": "deep ocean #061018 base, tide blue #4fb0ff accent, sunken sun #ffd95c glow, trench #0a1828 atmosphere",
     "motifs": "Coral crowns, mother-of-pearl scales, fins that double as sails, gills, kelp wraps, ancient bronze armor patinated green, tridents, shells the size of shields, jellyfish as lanterns, whale-bone rib temples.",
     "voice": "Slow, deep, generous. Pose suggests immovable patience.",
-    "sample_siblings": ["Tide-Walker Crab", "Reef Serpent", "Mer-Knight Choral", "Leviathan Calf", "Jormungandr Breathing"],
+    "sample_siblings": [
+      "Tide-Walker Crab",
+      "Reef Serpent",
+      "Mer-Knight Choral",
+      "Leviathan Calf",
+      "Jormungandr Breathing"
+    ],
     "css_vars": {
       "base": "#061018",
       "accent": "#4fb0ff",
@@ -141,7 +195,13 @@
     "palette": "deep space #08081c base, nebula violet #a374ff accent, starlight cyan #5ae0ff glow, stellar drift #0e0822 atmosphere",
     "motifs": "Star-map cloaks, comet-tail hair, helmets shaped like crescents, weapons that leave faint light trails, geometric crystal armor, wings of solid starfield, capes that fall like cosmic dust.",
     "voice": "Bold, forward-leaning, almost romantic. Pose suggests reaching outward.",
-    "sample_siblings": ["Scout Sigil", "Constellation Knight", "Astral Cartographer", "Solar Sovereign Aspirant", "Loki of the Open Sky"],
+    "sample_siblings": [
+      "Scout Sigil",
+      "Constellation Knight",
+      "Astral Cartographer",
+      "Solar Sovereign Aspirant",
+      "Loki of the Open Sky"
+    ],
     "css_vars": {
       "base": "#08081c",
       "accent": "#a374ff",
@@ -156,7 +216,13 @@
     "palette": "dawn umber #2c1f0f base, first sunlight #ffd95c accent, halo cream #fff5d0 glow, deep dawn #1e1208 atmosphere",
     "motifs": "Heavy gold leaf, archaic Greek-Egyptian-Vedic hybrid ornament, palm fronds, lotus, archaic crowns, simple weapons of bronze and flint, the first wheel, the first wine cup, hair plaited like rivers, sandals of gold leaf, eternal-flame lamps.",
     "voice": "Calm, ancient, slightly amused at the present. Pose suggests timeless knowledge.",
-    "sample_siblings": ["First Spear-Bearer", "Lotus Sage", "Bronze King's Son", "The First Forest's Mother", "Ymir the Source"],
+    "sample_siblings": [
+      "First Spear-Bearer",
+      "Lotus Sage",
+      "Bronze King's Son",
+      "The First Forest's Mother",
+      "Ymir the Source"
+    ],
     "css_vars": {
       "base": "#2c1f0f",
       "accent": "#ffd95c",
@@ -171,7 +237,13 @@
     "palette": "iron #15161a base, brass #b8973c accent, coal red #c44e2a glow, foundry smoke #1c1d22 atmosphere",
     "motifs": "Brass and iron plating, copper piping, exposed gears, steam vents, gauges and pressure dials, monocle-helmets, articulated mecha joints, factory aprons, wrench-swords, banner of crossed cogs. Steampunk-mecha hybrid.",
     "voice": "Direct, transactional, occasionally proud. Pose suggests mechanical precision.",
-    "sample_siblings": ["Lathe-Pup", "Cogswain", "Boiler Knight", "Foundry Marshal", "The Great Engineer"],
+    "sample_siblings": [
+      "Lathe-Pup",
+      "Cogswain",
+      "Boiler Knight",
+      "Foundry Marshal",
+      "The Great Engineer"
+    ],
     "css_vars": {
       "base": "#15161a",
       "accent": "#b8973c",

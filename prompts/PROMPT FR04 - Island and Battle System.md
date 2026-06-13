@@ -7,6 +7,7 @@ Build the SummonScroll Island (Monster Habitat) and Battle System modules. The I
 **Crucial Design Constraint:** SummonScroll is a dark-fantasy productivity RPG. Every screen uses a deep dark background (`#0C0E14`), gold accent colors (`#C89A3E` / `#FFD54F`), and the Cinzel font for headings. The Island must feel alive and reactive to player behavior. Quest battles tie directly into the habit loop (Habitica-style), while Arena battles provide traditional gacha RPG combat.
 
 **Core Design Tokens:**
+
 ```
 Backgrounds:   #0C0E14 (page) · #13161F (cards) · #1A1E2A (modals)
 Accents:        #C89A3E (gold) · #FFD54F (gold-bright) · #E05252 (danger) · #5FAD41 (success)
@@ -21,6 +22,7 @@ Fonts:          Cinzel (headings) · DM Sans (body) · JetBrains Mono (stats)
 ### Dynamic Weather System
 
 The island background and atmosphere change based on the player's habit completion for the day:
+
 ```
 Sunny (☀)    → All habits completed today    → Bright, warm tones, clear sky
 Overcast (🌥) → Partial completion            → Muted, grey overtones, clouds
@@ -34,14 +36,17 @@ Stormy (⛈)   → Multiple habits missed        → Dark, red-tinted, rain/ligh
 ### Biome Selector
 
 The island has multiple biome zones that correspond to the 12 realms:
+
 ```
 [ 🏛 Vaults ] [ 🔥 Wastes ] [ 🌀 Dark ] [ 💀 Blight ] [ 🌿 Wild ] [ ✨ Divine ] ...
 ```
+
 Each biome displays only the monsters from that realm's affinity. Biome visual style matches the realm's theme.
 
 ### Monster Sprites on Island
 
 Each team-assigned monster appears as a sprite on the island. Their behavior reflects bond percentage:
+
 ```
 Bond 0–25%:   Monster sits still, looks away from camera
 Bond 26–75%:  Monster roams idle, occasionally glances at camera
@@ -51,12 +56,14 @@ Bond 76–100%: Monster excited, waves, plays, bounces
 ### Activity Halo (Critical Feature)
 
 Each monster sprite has a colored halo ring beneath it:
+
 - **Green halo** → The habit linked to this monster's realm was completed today
 - **Grey halo** → The habit has NOT been completed today
 
 ### FATIGUED State
 
 When a habit streak is broken, the affected realm's monsters display:
+
 - Greyscale portrait (desaturated sprite)
 - Red crack overlay texture
 - "FATIGUED" badge in red text above the sprite
@@ -73,6 +80,7 @@ When a habit streak is broken, the affected realm's monsters display:
 │  [Manage Team →]                              │
 └──────────────────────────────────────────────┘
 ```
+
 - Tapping an empty `[+]` slot opens the Compendium for monster selection
 - Team monsters provide stat bonuses to the player (STR, INT, CON, PER) based on their element and role
 
@@ -152,6 +160,7 @@ A Boss Quest pits the entire guild party against a boss monster with a large HP 
 ```
 
 **Damage to Boss (from completing tasks):**
+
 ```
 bossDamage = taskValue × difficultyMultiplier × STR_bonus × critMultiplier
 
@@ -166,6 +175,7 @@ critMultiplier: random chance (influenced by STR), 1.5× on crit
 - Damage accumulates throughout the day and is applied at Cron (midnight)
 
 **Boss Attacks (from missing Dailies):**
+
 ```
 bossAttack = Σ(missedDaily.value × missedDaily.difficulty) × bossStrength
 
@@ -178,6 +188,7 @@ This damage is dealt to EVERY party member, not just the player who missed.
 - This motivates players to complete tasks to protect their guild mates
 
 **Boss Rage Mechanic:**
+
 - Some bosses have a Rage bar that fills from missed Dailies
 - If the Rage bar fills completely, the boss activates a special effect:
   - Most bosses: **heal themselves** (undo party progress)
@@ -186,6 +197,7 @@ This damage is dealt to EVERY party member, not just the player who missed.
 
 **Quest Completion:**
 When boss HP reaches 0:
+
 1. Victory animation: boss shatters, gold particle explosion
 2. **ALL party members receive rewards** (not just top damage dealers):
    - Quest-specific pet egg (e.g., "Dragon Egg 🥚")
@@ -223,15 +235,16 @@ Instead of fighting a boss, players collect items by completing tasks:
 
 Quest Scrolls are items that start quests:
 
-| Source | Example |
-|---|---|
-| Shop purchase (gold/crystals) | "Tiamat Quest Scroll — 500💎" |
-| Random drop from tasks | Rare drop (~1% chance) |
-| Quest completion reward | Completing a quest unlocks the next in a quest line |
-| Achievement reward | "Complete 100 habits → unlock Legendary Quest Scroll" |
-| Guild milestones | Guild reaches Level 10 → "Raid: Bahamut" scroll |
+| Source                        | Example                                               |
+| ----------------------------- | ----------------------------------------------------- |
+| Shop purchase (gold/crystals) | "Tiamat Quest Scroll — 500💎"                         |
+| Random drop from tasks        | Rare drop (~1% chance)                                |
+| Quest completion reward       | Completing a quest unlocks the next in a quest line   |
+| Achievement reward            | "Complete 100 habits → unlock Legendary Quest Scroll" |
+| Guild milestones              | Guild reaches Level 10 → "Raid: Bahamut" scroll       |
 
 **Starting a Quest:**
+
 1. Player uses a Quest Scroll from their inventory
 2. Invitation is sent to all guild party members
 3. Party members accept or decline
@@ -246,11 +259,11 @@ These are traditional automated monster battles for farming rewards. Unlike Ques
 
 ### 4.1 Arena Modes
 
-| Mode | Description | Unlock |
-|---|---|---|
-| **Chaos Tower** 🗼 | Floor-by-floor progression (1-100). Endless climb. Higher floors = better rewards. | Level 5 |
-| **Event Arena** 🎪 | Limited-time battles with special enemies and exclusive drops. | Level 10 |
-| **Boss Rush** ⚔ | Fight 5 bosses in sequence. No healing between fights. | Level 20 |
+| Mode               | Description                                                                        | Unlock   |
+| ------------------ | ---------------------------------------------------------------------------------- | -------- |
+| **Chaos Tower** 🗼 | Floor-by-floor progression (1-100). Endless climb. Higher floors = better rewards. | Level 5  |
+| **Event Arena** 🎪 | Limited-time battles with special enemies and exclusive drops.                     | Level 10 |
+| **Boss Rush** ⚔    | Fight 5 bosses in sequence. No healing between fights.                             | Level 20 |
 
 ### 4.2 Battle Preparation Screen
 
@@ -303,6 +316,7 @@ These are traditional automated monster battles for farming rewards. Unlike Ques
 ### 4.4 Fatigue Debuff in Arena
 
 Monsters with broken habit streaks (FATIGUED state from FR01 §2.4):
+
 - Red ⚡ debuff icon next to their name
 - **Damage reduced by 30%** (calculated server-side)
 - Visual indicator in log: "Team Attack (FATIGUED: -30%)"
@@ -310,10 +324,10 @@ Monsters with broken habit streaks (FATIGUED state from FR01 §2.4):
 
 ### 4.5 Arena Rewards
 
-| Outcome | Crystals | Shards | XP | Drops |
-|---|---|---|---|---|
+| Outcome | Crystals             | Shards          | XP                   | Drops                         |
+| ------- | -------------------- | --------------- | -------------------- | ----------------------------- |
 | Victory | 15× floor multiplier | 1 per 10 floors | 30× floor multiplier | Random egg/potion/food chance |
-| Defeat | 5 fixed | 0 | 10 fixed | No drops |
+| Defeat  | 5 fixed              | 0               | 10 fixed             | No drops                      |
 
 ---
 
@@ -342,6 +356,7 @@ Pets and Mounts are cosmetic collectibles hatched from drops:
 ### 5.3 Pet Collection Grid
 
 Accessible from Profile → Pets & Mounts:
+
 ```
 ┌──────────────────────────────────────────────┐
 │  PETS (24/120 collected)                      │
@@ -352,6 +367,7 @@ Accessible from Profile → Pets & Mounts:
 │  [🐺] [🐉] [?] [?] [?] [?] [?] [?]         │
 └──────────────────────────────────────────────┘
 ```
+
 - Collected: full color icon
 - Not collected: grey silhouette with `?`
 - "Gotta catch 'em all" collection drive
@@ -363,6 +379,7 @@ Accessible from Profile → Pets & Mounts:
 ### Damage Screen Shake
 
 On enemy attack in Arena battles, trigger a Framer Motion screen shake:
+
 - Shake intensity scales with damage percentage
 - Duration: 200ms, ease-in-out
 - Implementation: Framer Motion `animate` with `x` offset, NOT CSS `@keyframes`
@@ -370,6 +387,7 @@ On enemy attack in Arena battles, trigger a Framer Motion screen shake:
 ### Quest Boss Damage Animation
 
 When the Cron processes and the boss takes damage / attacks:
+
 1. Boss HP bar depletes with a satisfying animation (500ms)
 2. If boss attacked: red flash on screen edges + HP bar decreases
 3. Damage numbers float up from the boss: "−1,120 HP"

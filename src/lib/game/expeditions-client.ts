@@ -21,17 +21,41 @@ const STAMINA_REGEN_MINUTES = 10;
 const ELITE_CHANCE = 0.05;
 
 export const EXPEDITIONS: Record<ExpeditionType, ExpeditionDefinition> = {
-  iron_pits:     { type: "iron_pits",     name: "Iron Pits",     flavor: "Cracked tunnels echo with the clang of unseen hammers.", element: "str", primaryStone: "Strength Stone" },
-  sage_wood:     { type: "sage_wood",     name: "Sage Wood",     flavor: "Old letters drift on the wind. Pages, not leaves.",       element: "int", primaryStone: "Sage Stone" },
-  stone_heights: { type: "stone_heights", name: "Stone Heights", flavor: "Winds carve the cliffs; only the steady reach the summit.", element: "con", primaryStone: "Hearth Stone" },
-  crossroads:    { type: "crossroads",    name: "The Crossroads", flavor: "Three paths meet here. The sky listens.",                  element: "all", primaryStone: "Wayfarer Stone" },
+  iron_pits: {
+    type: "iron_pits",
+    name: "Iron Pits",
+    flavor: "Cracked tunnels echo with the clang of unseen hammers.",
+    element: "str",
+    primaryStone: "Strength Stone",
+  },
+  sage_wood: {
+    type: "sage_wood",
+    name: "Sage Wood",
+    flavor: "Old letters drift on the wind. Pages, not leaves.",
+    element: "int",
+    primaryStone: "Sage Stone",
+  },
+  stone_heights: {
+    type: "stone_heights",
+    name: "Stone Heights",
+    flavor: "Winds carve the cliffs; only the steady reach the summit.",
+    element: "con",
+    primaryStone: "Hearth Stone",
+  },
+  crossroads: {
+    type: "crossroads",
+    name: "The Crossroads",
+    flavor: "Three paths meet here. The sky listens.",
+    element: "all",
+    primaryStone: "Wayfarer Stone",
+  },
 };
 
 const RARE_MATERIALS: Record<ExpeditionType, string> = {
-  iron_pits:     "Iron Shard",
-  sage_wood:     "Vellum Page",
+  iron_pits: "Iron Shard",
+  sage_wood: "Vellum Page",
   stone_heights: "Granite Core",
-  crossroads:    "Tome Shard",
+  crossroads: "Tome Shard",
 };
 
 // 0=Sun → Crossroads; 1/2 Iron Pits; 3/4 Sage Wood; 5/6 Stone Heights
@@ -68,22 +92,41 @@ export async function runExpedition(runs: 1 | 5): Promise<{
   staminaAfter: number;
   staminaMax: number;
 }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   // Load profile + team
   const [profileRes, teamRes] = await Promise.all([
-    supabase.from("profiles").select("gold, stamina, stamina_max, stamina_last_tick, per_stat").eq("id", user.id).single(),
-    supabase.from("user_monsters").select("id, level, bond_percent, monster:monsters(role, base_atk, base_def, base_hp)").eq("user_id", user.id).eq("is_on_team", true),
+    supabase
+      .from("profiles")
+      .select("gold, stamina, stamina_max, stamina_last_tick, per_stat")
+      .eq("id", user.id)
+      .single(),
+    supabase
+      .from("user_monsters")
+      .select("id, level, bond_percent, monster:monsters(role, base_atk, base_def, base_hp)")
+      .eq("user_id", user.id)
+      .eq("is_on_team", true),
   ]);
   if (profileRes.error) throw profileRes.error;
 
   const profile = profileRes.data;
-  const team = (teamRes.data ?? []) as Array<{ id: string; level: number; bond_percent: number; monster: { role: string; base_atk: number; base_def: number; base_hp: number } | null }>;
+  const team = (teamRes.data ?? []) as Array<{
+    id: string;
+    level: number;
+    bond_percent: number;
+    monster: { role: string; base_atk: number; base_def: number; base_hp: number } | null;
+  }>;
   if (team.length < 1) throw new Error("Build a team on your Island first.");
 
   // Reconcile stamina
-  const current = computeCurrentStamina(profile.stamina, profile.stamina_max, profile.stamina_last_tick);
+  const current = computeCurrentStamina(
+    profile.stamina,
+    profile.stamina_max,
+    profile.stamina_last_tick,
+  );
   const cost = STAMINA_PER_RUN * runs;
   if (current < cost) throw new Error(`Not enough stamina: need ${cost}, have ${current}.`);
 
@@ -154,9 +197,14 @@ export async function runExpedition(runs: 1 | 5): Promise<{
       .eq("item_name", d.name)
       .maybeSingle();
     if (existing) {
-      await supabase.from("inventory").update({ quantity: existing.quantity + d.qty }).eq("id", existing.id);
+      await supabase
+        .from("inventory")
+        .update({ quantity: existing.quantity + d.qty })
+        .eq("id", existing.id);
     } else {
-      await supabase.from("inventory").insert({ user_id: user.id, item_type: d.type, item_name: d.name, quantity: d.qty });
+      await supabase
+        .from("inventory")
+        .insert({ user_id: user.id, item_type: d.type, item_name: d.name, quantity: d.qty });
     }
   }
 
@@ -164,11 +212,14 @@ export async function runExpedition(runs: 1 | 5): Promise<{
   const staminaAfter = current - cost;
   // Anchor stamina_last_tick: snap to a stable epoch so future regen accrues from "now-elapsed-into-cycle"
   // Simpler: set last tick to now() — fresh cycle.
-  await supabase.from("profiles").update({
-    stamina: staminaAfter,
-    stamina_last_tick: new Date().toISOString(),
-    gold: profile.gold + goldDelta,
-  }).eq("id", user.id);
+  await supabase
+    .from("profiles")
+    .update({
+      stamina: staminaAfter,
+      stamina_last_tick: new Date().toISOString(),
+      gold: profile.gold + goldDelta,
+    })
+    .eq("id", user.id);
 
   // Bond ticks for team — running expeditions builds bond like quests do
   for (const um of team) {
@@ -194,7 +245,14 @@ export async function runExpedition(runs: 1 | 5): Promise<{
     console.warn("Awakening evaluation skipped:", e);
   }
 
-  return { totalDrops: finalDrops, runsCompleted, eliteCount, staminaAfter, staminaMax: profile.stamina_max, awakenings };
+  return {
+    totalDrops: finalDrops,
+    runsCompleted,
+    eliteCount,
+    staminaAfter,
+    staminaMax: profile.stamina_max,
+    awakenings,
+  };
 }
 
 function rollDrops(expType: ExpeditionType, isElite: boolean, perStat: number): Drop[] {
@@ -206,12 +264,12 @@ function rollDrops(expType: ExpeditionType, isElite: boolean, perStat: number): 
   drops.push({ type: "gold", name: "Gold", qty: 30 + Math.floor(Math.random() * 40) });
 
   // Primary stone: ~70% chance for 1, +1 more on elite
-  if (Math.random() < 0.70 * perBonus) {
+  if (Math.random() < 0.7 * perBonus) {
     drops.push({ type: "stone", name: def.primaryStone, qty: 1 + (isElite ? 1 : 0) });
   }
 
   // Rare material: 10% normally, guaranteed on elite
-  if (isElite || Math.random() < 0.10 * perBonus) {
+  if (isElite || Math.random() < 0.1 * perBonus) {
     drops.push({ type: "material", name: RARE_MATERIALS[expType], qty: 1 });
   }
 
@@ -225,11 +283,17 @@ function rollDrops(expType: ExpeditionType, isElite: boolean, perStat: number): 
 
 function roleToStat(role: string): "str" | "int" | "con" | "per" {
   switch (role) {
-    case "attacker": return "str";
-    case "tank":     return "con";
-    case "healer":   return "con";
-    case "support":  return "int";
-    case "debuffer": return "per";
-    default:         return "str";
+    case "attacker":
+      return "str";
+    case "tank":
+      return "con";
+    case "healer":
+      return "con";
+    case "support":
+      return "int";
+    case "debuffer":
+      return "per";
+    default:
+      return "str";
   }
 }

@@ -1,14 +1,17 @@
 # Task 9.3 Implementation Summary: Tutorial Directive Seeding Logic
 
 ## Overview
+
 Implemented backend logic to seed a tutorial directive when onboarding completes, as specified in Task 9.3 of the SummonScroll Visual Redesign spec.
 
 ## Files Created
 
 ### `src/lib/game/onboarding-client.ts`
+
 New client module that handles onboarding completion logic:
 
 **Functions:**
+
 1. `completeOnboarding(): Promise<{ taskId: string }>`
    - Creates a tutorial directive ("Drink water (first habit)")
    - Updates profile with `onboarding_completed_at` timestamp
@@ -20,6 +23,7 @@ New client module that handles onboarding completion logic:
    - Returns true if `onboarding_completed_at` is set
 
 **Tutorial Directive Properties:**
+
 - **Type:** habit
 - **Title:** "Drink water (first habit)"
 - **Notes:** "Tap the [+] to score this habit. Watch what happens — this is the game loop."
@@ -32,7 +36,9 @@ New client module that handles onboarding completion logic:
 ## Files Modified
 
 ### `src/lib/game/supabase-api.ts`
+
 Added exports for the new onboarding functions:
+
 ```typescript
 export { completeOnboarding, hasCompletedOnboarding } from "./onboarding-client";
 ```
@@ -61,6 +67,7 @@ This implementation is designed to integrate with:
 ## Database Schema
 
 The migration was already created in Task 9.1:
+
 - **File:** `supabase/migrations/20260621000000_onboarding.sql`
 - **Columns added to profiles table:**
   - `onboarding_completed_at: timestamptz` - timestamp when onboarding completes
@@ -94,8 +101,8 @@ When testing this feature end-to-end:
 3. Verify the tutorial task appears in the task list
 4. Verify database columns are updated:
    ```sql
-   SELECT onboarding_completed_at, tutorial_directive_id 
-   FROM profiles 
+   SELECT onboarding_completed_at, tutorial_directive_id
+   FROM profiles
    WHERE id = '<user_id>';
    ```
 5. Score the tutorial task and verify cascade fires

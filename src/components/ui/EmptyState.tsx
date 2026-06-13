@@ -14,10 +14,10 @@ interface EmptyStateProps {
 
 /**
  * EmptyState - Evocative empty state component
- * 
+ *
  * Displays a diegetic, inviting empty state with Proposal D voice.
  * Includes icon, title, optional body text, and optional CTA button.
- * 
+ *
  * Uses dashed border and motion entrance for polish.
  */
 export function EmptyState({ icon, title, body, cta }: EmptyStateProps) {

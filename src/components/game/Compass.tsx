@@ -36,7 +36,7 @@ export function Compass({
   onOpenEvening: () => void;
 }) {
   const nav = useNavigate();
-  
+
   const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
   const logQ = useQuery({ queryKey: ["today-log"], queryFn: getTodayLog });
   const goalsQ = useQuery({ queryKey: ["goals-active"], queryFn: () => listGoals("active") });
@@ -46,7 +46,7 @@ export function Compass({
 
   const suggestion = useMemo<Suggestion | null>(() => {
     if (!profileQ.data || !logQ.data) return null;
-    
+
     const profile = profileQ.data.profile;
     const log = logQ.data;
     const goals = goalsQ.data?.goals ?? [];
@@ -102,7 +102,7 @@ export function Compass({
 
     // Candidate 4: Quarterly Boss almost slain
     const finishingGoal = goals.find(
-      (g) => g.type === "quarterly" && g.hp_remaining / g.hp_total < 0.15
+      (g) => g.type === "quarterly" && g.hp_remaining / g.hp_total < 0.15,
     );
     if (finishingGoal) {
       candidates.push({
@@ -119,7 +119,7 @@ export function Compass({
 
     // Candidate 5: Promotion possible (heuristic check)
     const promotable = monsters.find(
-      (m) => m.bond_percent >= 60 && m.star_level < 5 && m.level >= 15
+      (m) => m.bond_percent >= 60 && m.star_level < 5 && m.level >= 15,
     );
     if (promotable) {
       candidates.push({
@@ -136,7 +136,11 @@ export function Compass({
 
     // Candidate 6: Stamina full
     if (profile.stamina_max && profile.stamina != null && profile.stamina_last_tick) {
-      const current = computeCurrentStamina(profile.stamina, profile.stamina_max, profile.stamina_last_tick);
+      const current = computeCurrentStamina(
+        profile.stamina,
+        profile.stamina_max,
+        profile.stamina_last_tick,
+      );
       if (current >= profile.stamina_max) {
         candidates.push({
           id: "stamina",
@@ -154,9 +158,9 @@ export function Compass({
     // Candidate 7: Wailing Wall at floor 49
     if (tower && tower.highest_floor === 49) {
       // Check if we have the full tower progress object with wailing_wall_cleared_at
-      const hasWailingWallField = 'wailing_wall_cleared_at' in tower;
+      const hasWailingWallField = "wailing_wall_cleared_at" in tower;
       const wailingWallCleared = hasWailingWallField ? tower.wailing_wall_cleared_at : false;
-      
+
       if (!wailingWallCleared) {
         candidates.push({
           id: "wailing",
@@ -174,17 +178,17 @@ export function Compass({
     // Candidate 8: Sacred Directives almost done (2 of 3 starred tasks completed today)
     if (log.am_intent_task_ids && log.am_intent_task_ids.length >= 2) {
       const starredTaskIds = log.am_intent_task_ids;
-      const starredTasks = tasks.filter(t => starredTaskIds.includes(t.id));
-      
+      const starredTasks = tasks.filter((t) => starredTaskIds.includes(t.id));
+
       if (starredTasks.length >= 2) {
-        const today = new Date().toISOString().split('T')[0];
-        const completedCount = starredTasks.filter(t => {
+        const today = new Date().toISOString().split("T")[0];
+        const completedCount = starredTasks.filter((t) => {
           // For habits: check if last_completed_date is today
-          if (t.type === 'habit') return t.last_completed_date === today;
+          if (t.type === "habit") return t.last_completed_date === today;
           // For dailies/todos: check if completed is true
           return Boolean(t.completed);
         }).length;
-        
+
         // If we have 2+ starred tasks and 2+ are completed, suggest finishing the set
         if (starredTasks.length >= 3 && completedCount === 2) {
           candidates.push({
@@ -217,7 +221,16 @@ export function Compass({
 
     candidates.sort((a, b) => b.score - a.score);
     return candidates[0];
-  }, [profileQ.data, logQ.data, goalsQ.data, monstersQ.data, towerQ.data, tasksQ.data, onOpenMorning, onOpenEvening]);
+  }, [
+    profileQ.data,
+    logQ.data,
+    goalsQ.data,
+    monstersQ.data,
+    towerQ.data,
+    tasksQ.data,
+    onOpenMorning,
+    onOpenEvening,
+  ]);
 
   if (!suggestion) return null;
 

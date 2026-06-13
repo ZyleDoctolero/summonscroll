@@ -312,21 +312,21 @@ TODO.md why we're skipping and what acceptance criteria are unmet.
 
 ## Time estimates
 
-| Step | What | Time |
-|---|---|---|
-| 0 | Setup | 5 min |
-| 1 | Pick visual identity | 30 min (human) |
-| 2 | Surface system | 2-4 hours (Kiro) |
-| 3 | Icons | 1-2 hours |
-| 4 | Typography | 1 hour |
-| 5 | Atmosphere | 2-3 hours (mostly generation) |
-| 6 | Compass | 1-2 hours |
-| 7 | First-time experience | 2-3 hours |
-| 8 | Nav hierarchy | 1 hour |
-| 9 | Empty states | 1-2 hours |
-| 10 | Monster art (parallel) | 30 min setup + ongoing |
-| 11 | Mobile-first | 2-3 hours |
-| 12 | Verification | 30 min |
+| Step | What                   | Time                          |
+| ---- | ---------------------- | ----------------------------- |
+| 0    | Setup                  | 5 min                         |
+| 1    | Pick visual identity   | 30 min (human)                |
+| 2    | Surface system         | 2-4 hours (Kiro)              |
+| 3    | Icons                  | 1-2 hours                     |
+| 4    | Typography             | 1 hour                        |
+| 5    | Atmosphere             | 2-3 hours (mostly generation) |
+| 6    | Compass                | 1-2 hours                     |
+| 7    | First-time experience  | 2-3 hours                     |
+| 8    | Nav hierarchy          | 1 hour                        |
+| 9    | Empty states           | 1-2 hours                     |
+| 10   | Monster art (parallel) | 30 min setup + ongoing        |
+| 11   | Mobile-first           | 2-3 hours                     |
+| 12   | Verification           | 30 min                        |
 
 **Total Kiro time:** ~15-25 hours of execution time. Spread across however
 many sessions you want.

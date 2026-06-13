@@ -4,7 +4,17 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { getMyProfile, getMyGuild, listGuilds, createGuild, joinGuild, leaveGuild, listQuestTemplates, startQuest, getAvailableScrolls } from "@/lib/game/supabase-api";
+import {
+  getMyProfile,
+  getMyGuild,
+  listGuilds,
+  createGuild,
+  joinGuild,
+  leaveGuild,
+  listQuestTemplates,
+  startQuest,
+  getAvailableScrolls,
+} from "@/lib/game/supabase-api";
 
 const SCROLL_MAPPING: Record<string, string> = {
   "Shadow Drake Hunt": "Shadow Drake Scroll",
@@ -33,29 +43,54 @@ function GuildPage() {
 
   const createMut = useMutation({
     mutationFn: () => createGuild(guildName, guildDesc),
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); qc.invalidateQueries({ queryKey: ["profile"] }); toast.success("Guild created!"); setTab("guild"); },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["my-guild"] });
+      qc.invalidateQueries({ queryKey: ["profile"] });
+      toast.success("Guild created!");
+      setTab("guild");
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const joinMut = useMutation({
     mutationFn: (guildId: string) => joinGuild(guildId),
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); toast.success("Joined!"); setTab("guild"); },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["my-guild"] });
+      toast.success("Joined!");
+      setTab("guild");
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const leaveMut = useMutation({
     mutationFn: () => leaveGuild(),
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); toast("Left guild."); },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["my-guild"] });
+      toast("Left guild.");
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
   const questMut = useMutation({
-    mutationFn: (v: { templateId: string; scrollName: string }) => startQuest(v.templateId, v.scrollName),
-    onSuccess: () => { qc.invalidateQueries({ queryKey: ["my-guild"] }); qc.invalidateQueries({ queryKey: ["my-scrolls"] }); toast.success("Quest started!"); },
+    mutationFn: (v: { templateId: string; scrollName: string }) =>
+      startQuest(v.templateId, v.scrollName),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["my-guild"] });
+      qc.invalidateQueries({ queryKey: ["my-scrolls"] });
+      toast.success("Quest started!");
+    },
     onError: (e: Error) => toast.error(e.message),
   });
 
-  if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Loading…</div>;
+  if (profileQ.isLoading)
+    return (
+      <div
+        className="min-h-screen grid place-items-center"
+        style={{ color: "var(--ink-secondary)" }}
+      >
+        Loading…
+      </div>
+    );
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -66,15 +101,29 @@ function GuildPage() {
   return (
     <AppShell profile={profile}>
       <div className="p-6 md:p-10 max-w-4xl mx-auto">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Guild</h1>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+          Guild
+        </h1>
         <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
           {myGuild ? `Member of ${myGuild.name}` : "Join a guild to fight bosses cooperatively!"}
         </p>
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-          {([["guild", "My Guild"], ["browse", "Browse"], ["create", "Create"]] as const).map(([k, l]) => (
-            <button key={k} onClick={() => setTab(k)} className={`ss-tab-d pb-2 text-sm font-semibold ${tab === k ? "active" : ""}`}>{l}</button>
+          {(
+            [
+              ["guild", "My Guild"],
+              ["browse", "Browse"],
+              ["create", "Create"],
+            ] as const
+          ).map(([k, l]) => (
+            <button
+              key={k}
+              onClick={() => setTab(k)}
+              className={`ss-tab-d pb-2 text-sm font-semibold ${tab === k ? "active" : ""}`}
+            >
+              {l}
+            </button>
           ))}
         </div>
 
@@ -86,7 +135,7 @@ function GuildPage() {
             body="Browse a guild or forge your own (500 Crystals)."
             cta={{
               label: "Browse Guilds",
-              onClick: () => setTab("browse")
+              onClick: () => setTab("browse"),
             }}
           />
         )}
@@ -95,8 +144,12 @@ function GuildPage() {
           <div className="space-y-6">
             {/* Guild info */}
             <div className="ss-card">
-              <h2 className="t-h2 text-xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>{myGuild.name}</h2>
-              <p className="text-sm mb-3" style={{ color: "var(--ink-secondary)" }}>{myGuild.description || "No description."}</p>
+              <h2 className="t-h2 text-xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+                {myGuild.name}
+              </h2>
+              <p className="text-sm mb-3" style={{ color: "var(--ink-secondary)" }}>
+                {myGuild.description || "No description."}
+              </p>
               <div className="flex gap-4 text-xs" style={{ color: "var(--ink-tertiary)" }}>
                 <span>Level {myGuild.level}</span>
                 <span>{members.length} members</span>
@@ -112,44 +165,108 @@ function GuildPage() {
                 </h3>
                 {activeQuest.boss_hp_remaining != null && (
                   <div className="mb-3">
-                    <div className="flex justify-between text-xs mb-1" style={{ color: "var(--ink-secondary)" }}>
+                    <div
+                      className="flex justify-between text-xs mb-1"
+                      style={{ color: "var(--ink-secondary)" }}
+                    >
                       <span>Boss HP</span>
-                      <span className="t-mono">{activeQuest.boss_hp_remaining.toLocaleString()} / {activeQuest.quest_template?.boss_hp?.toLocaleString()}</span>
+                      <span className="t-mono">
+                        {activeQuest.boss_hp_remaining.toLocaleString()} /{" "}
+                        {activeQuest.quest_template?.boss_hp?.toLocaleString()}
+                      </span>
                     </div>
-                    <div className="h-3 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
-                      <div className="h-full" style={{ width: `${(activeQuest.boss_hp_remaining / (activeQuest.quest_template?.boss_hp ?? 1)) * 100}%`, background: "var(--danger)" }} />
+                    <div
+                      className="h-3 rounded-full overflow-hidden"
+                      style={{ background: "rgba(255,255,255,0.06)" }}
+                    >
+                      <div
+                        className="h-full"
+                        style={{
+                          width: `${(activeQuest.boss_hp_remaining / (activeQuest.quest_template?.boss_hp ?? 1)) * 100}%`,
+                          background: "var(--danger)",
+                        }}
+                      />
                     </div>
                   </div>
                 )}
-                <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>Complete your tasks to deal damage to the boss! Missing dailies lets the boss attack your party.</p>
+                <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                  Complete your tasks to deal damage to the boss! Missing dailies lets the boss
+                  attack your party.
+                </p>
               </div>
             ) : (
               <div className="ss-card">
-                <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>Start a Quest</h3>
+                <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
+                  Start a Quest
+                </h3>
                 <div className="space-y-2">
-                  {(templatesQ.data?.templates ?? []).map((t: { id: string; name: string; quest_type: string; boss_hp: number | null; difficulty: string; description: string }) => {
-                    const requiredScroll = SCROLL_MAPPING[t.name] ?? t.name + " Scroll";
-                    const hasScroll = (scrollsQ.data?.scrolls ?? []).some((s: { item_name: string }) => s.item_name === requiredScroll);
-                    return (
-                    <div key={t.id} className="ss-pane flex items-center justify-between p-3 rounded-md">
-                      <div>
-                        <p className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>{t.name}</p>
-                        <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>{t.quest_type === "boss" ? `Boss · HP ${t.boss_hp?.toLocaleString()}` : "Collection"} · {t.difficulty}</p>
-                        <p className="text-[10px] mt-1 font-semibold" style={{ color: hasScroll ? "var(--success)" : "var(--danger)" }}>
-                          {hasScroll ? `✓ You have a ${requiredScroll}` : `Requires ${requiredScroll} (Buy in Shop)`}
-                        </p>
-                      </div>
-                      <button onClick={() => questMut.mutate({ templateId: t.id, scrollName: requiredScroll })} disabled={!hasScroll || questMut.isPending}
-                        className={`ss-btn disabled:opacity-40 ${hasScroll ? "ss-btn-d-primary" : "ss-btn-secondary"}`}>Start</button>
-                    </div>
-                  )})}
+                  {(templatesQ.data?.templates ?? []).map(
+                    (t: {
+                      id: string;
+                      name: string;
+                      quest_type: string;
+                      boss_hp: number | null;
+                      difficulty: string;
+                      description: string;
+                    }) => {
+                      const requiredScroll = SCROLL_MAPPING[t.name] ?? t.name + " Scroll";
+                      const hasScroll = (scrollsQ.data?.scrolls ?? []).some(
+                        (s: { item_name: string }) => s.item_name === requiredScroll,
+                      );
+                      return (
+                        <div
+                          key={t.id}
+                          className="ss-pane flex items-center justify-between p-3 rounded-md"
+                        >
+                          <div>
+                            <p
+                              className="text-sm font-bold"
+                              style={{ color: "var(--ink-primary)" }}
+                            >
+                              {t.name}
+                            </p>
+                            <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                              {t.quest_type === "boss"
+                                ? `Boss · HP ${t.boss_hp?.toLocaleString()}`
+                                : "Collection"}{" "}
+                              · {t.difficulty}
+                            </p>
+                            <p
+                              className="text-[10px] mt-1 font-semibold flex items-center gap-1"
+                              style={{ color: hasScroll ? "var(--success)" : "var(--danger)" }}
+                            >
+                              {hasScroll ? (
+                                <>
+                                  <Icon name="check" size={12} color="var(--success)" />
+                                  <span>You have a {requiredScroll}</span>
+                                </>
+                              ) : (
+                                `Requires ${requiredScroll} (Buy in Shop)`
+                              )}
+                            </p>
+                          </div>
+                          <button
+                            onClick={() =>
+                              questMut.mutate({ templateId: t.id, scrollName: requiredScroll })
+                            }
+                            disabled={!hasScroll || questMut.isPending}
+                            className={`ss-btn disabled:opacity-40 ${hasScroll ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
+                          >
+                            Start
+                          </button>
+                        </div>
+                      );
+                    },
+                  )}
                 </div>
               </div>
             )}
 
             {/* Members */}
             <div className="ss-card">
-              <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>Members</h3>
+              <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
+                Members
+              </h3>
               <div className="space-y-2">
                 {members.map((m: any) => (
                   <div key={m.id} className="flex items-center gap-3 p-2 rounded ss-pane">
@@ -157,18 +274,42 @@ function GuildPage() {
                       {m.profile.display_name[0].toUpperCase()}
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-semibold" style={{ color: "var(--ink-primary)" }}>
-                        {m.role === "leader" && "♛ "}{m.profile.display_name}
+                      <p
+                        className="text-sm font-semibold flex items-center gap-1.5"
+                        style={{ color: "var(--ink-primary)" }}
+                      >
+                        {m.role === "leader" && (
+                          <Icon
+                            name="crown"
+                            size={13}
+                            color="var(--gold-bright)"
+                            className="lucide-glow"
+                          />
+                        )}
+                        <span>{m.profile.display_name}</span>
                       </p>
-                      <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>Lvl {m.profile.level} · {m.profile.class || "No class"}</p>
+                      <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                        Lvl {m.profile.level} · {m.profile.class || "No class"}
+                      </p>
                     </div>
-                    <span className="ss-chip" style={{ background: m.role === "leader" ? "rgba(255,213,79,0.2)" : "rgba(255,255,255,0.05)", color: m.role === "leader" ? "var(--gold-bright)" : "var(--ink-tertiary)" }}>
+                    <span
+                      className="ss-chip"
+                      style={{
+                        background:
+                          m.role === "leader" ? "rgba(255,213,79,0.2)" : "rgba(255,255,255,0.05)",
+                        color: m.role === "leader" ? "var(--gold-bright)" : "var(--ink-tertiary)",
+                      }}
+                    >
                       {m.role}
                     </span>
                   </div>
                 ))}
               </div>
-              <button onClick={() => leaveMut.mutate()} className="ss-btn ss-btn-ghost mt-4 text-xs" style={{ color: "var(--danger)" }}>
+              <button
+                onClick={() => leaveMut.mutate()}
+                className="ss-btn ss-btn-ghost mt-4 text-xs"
+                style={{ color: "var(--danger)" }}
+              >
                 Leave Guild
               </button>
             </div>
@@ -181,11 +322,18 @@ function GuildPage() {
             {(guildsQ.data?.guilds ?? []).map((g: any) => (
               <div key={g.id} className="ss-card flex items-center justify-between">
                 <div>
-                  <p className="t-h3 font-bold text-sm" style={{ color: "var(--ink-primary)" }}>{g.name}</p>
-                  <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>Lvl {g.level} · {g.guild_members?.[0]?.count ?? "?"} members · {g.privacy}</p>
+                  <p className="t-h3 font-bold text-sm" style={{ color: "var(--ink-primary)" }}>
+                    {g.name}
+                  </p>
+                  <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                    Lvl {g.level} · {g.guild_members?.[0]?.count ?? "?"} members · {g.privacy}
+                  </p>
                 </div>
-                <button onClick={() => joinMut.mutate(g.id)} disabled={!!myGuild || joinMut.isPending}
-                  className="ss-btn ss-btn-d-primary disabled:opacity-30">
+                <button
+                  onClick={() => joinMut.mutate(g.id)}
+                  disabled={!!myGuild || joinMut.isPending}
+                  className="ss-btn ss-btn-d-primary disabled:opacity-30"
+                >
                   {myGuild ? "Already in guild" : "Join"}
                 </button>
               </div>
@@ -203,21 +351,37 @@ function GuildPage() {
         {/* Create */}
         {tab === "create" && (
           <div className="ss-card max-w-md">
-            <h2 className="t-h2 text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>Create Guild</h2>
-            <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>Costs 500 Crystals</p>
+            <h2 className="t-h2 text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
+              Create Guild
+            </h2>
+            <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>
+              Costs 500 Crystals
+            </p>
             <div className="space-y-3">
               <label className="block">
                 <span className="t-label">Guild Name</span>
-                <input value={guildName} onChange={(e) => setGuildName(e.target.value)} maxLength={30}
-                  className="ss-input mt-1" />
+                <input
+                  value={guildName}
+                  onChange={(e) => setGuildName(e.target.value)}
+                  maxLength={30}
+                  className="ss-input mt-1"
+                />
               </label>
               <label className="block">
                 <span className="t-label">Description</span>
-                <textarea value={guildDesc} onChange={(e) => setGuildDesc(e.target.value)} maxLength={200} rows={3}
-                  className="ss-input mt-1" />
+                <textarea
+                  value={guildDesc}
+                  onChange={(e) => setGuildDesc(e.target.value)}
+                  maxLength={200}
+                  rows={3}
+                  className="ss-input mt-1"
+                />
               </label>
-              <button onClick={() => createMut.mutate()} disabled={!guildName.trim() || createMut.isPending}
-                className="ss-btn ss-btn-d-primary w-full disabled:opacity-40">
+              <button
+                onClick={() => createMut.mutate()}
+                disabled={!guildName.trim() || createMut.isPending}
+                className="ss-btn ss-btn-d-primary w-full disabled:opacity-40"
+              >
                 {createMut.isPending ? "Creating…" : "Create Guild — 500 Crystals"}
               </button>
             </div>

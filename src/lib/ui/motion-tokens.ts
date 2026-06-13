@@ -11,11 +11,11 @@ import type { Transition } from "motion/react";
 // Most app motion lives in the 120-300ms range.
 
 export const dur = {
-  instant: 0.08,    // status flicks, hover state changes
-  fast:    0.16,    // button presses, micro feedback
-  normal:  0.24,    // most modals, panel reveals, item appears
-  measured: 0.36,   // ritual moments, hero transitions
-  weighty: 0.48,    // page-level transitions, big reveals
+  instant: 0.08, // status flicks, hover state changes
+  fast: 0.16, // button presses, micro feedback
+  normal: 0.24, // most modals, panel reveals, item appears
+  measured: 0.36, // ritual moments, hero transitions
+  weighty: 0.48, // page-level transitions, big reveals
   // Anything longer than this is animation-for-its-own-sake. Avoid.
 } as const;
 
@@ -27,11 +27,11 @@ export const dur = {
 
 export const ease = {
   // Standard out — items appearing
-  out:     [0.2, 0.65, 0.3, 1] as [number, number, number, number],
+  out: [0.2, 0.65, 0.3, 1] as [number, number, number, number],
   // Standard in — items leaving
-  in:      [0.4, 0, 0.65, 0.35] as [number, number, number, number],
+  in: [0.4, 0, 0.65, 0.35] as [number, number, number, number],
   // Both — symmetric movement
-  inOut:   [0.5, 0, 0.5, 1] as [number, number, number, number],
+  inOut: [0.5, 0, 0.5, 1] as [number, number, number, number],
   // Slight overshoot at end — adds "weight" to things landing
   weighty: [0.32, 0.72, 0, 1] as [number, number, number, number],
 } as const;
@@ -40,12 +40,12 @@ export const ease = {
 
 export const trans: Record<string, Transition> = {
   // Modal/panel reveal
-  modalIn:  { duration: dur.normal, ease: ease.out },
-  modalOut: { duration: dur.fast,   ease: ease.in },
+  modalIn: { duration: dur.normal, ease: ease.out },
+  modalOut: { duration: dur.fast, ease: ease.in },
 
   // Cascade card slide-up
-  cascadeIn:  { duration: dur.measured, ease: ease.weighty },
-  cascadeOut: { duration: dur.normal,  ease: ease.in },
+  cascadeIn: { duration: dur.measured, ease: ease.weighty },
+  cascadeOut: { duration: dur.normal, ease: ease.in },
 
   // Number tick — should feel snappy, not floating
   numberTick: { duration: dur.normal, ease: ease.out },

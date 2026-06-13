@@ -49,8 +49,8 @@ export function MobilePlayerHeader({ profile }: { profile: Profile }) {
                   profile.hp / profile.max_hp > 0.5
                     ? "var(--success)"
                     : profile.hp / profile.max_hp > 0.25
-                    ? "var(--ss-warning, #FFB74D)"
-                    : "var(--danger)",
+                      ? "var(--ss-warning, #FFB74D)"
+                      : "var(--danger)",
               }}
             />
           </div>
@@ -58,11 +58,11 @@ export function MobilePlayerHeader({ profile }: { profile: Profile }) {
       </div>
       <div className="flex items-center gap-3 t-mono text-xs">
         <span className="flex items-center gap-1" style={{ color: "var(--gold-bright)" }}>
-          <Icon name="Coins" size={14} />
+          <Icon name="gold" size={14} />
           {profile.gold?.toLocaleString() ?? 0}
         </span>
         <span className="flex items-center gap-1" style={{ color: "var(--cyan)" }}>
-          <Icon name="Gem" size={14} />
+          <Icon name="crystal" size={14} />
           {profile.crystals?.toLocaleString() ?? 0}
         </span>
       </div>

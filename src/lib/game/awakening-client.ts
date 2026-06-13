@@ -4,14 +4,21 @@ import { supabase } from "@/integrations/supabase/client";
 // Each monster's role determines 2 dormant skills. They unlock when the
 // player satisfies a real-world condition.
 
-type TriggerType = "streak" | "level" | "bond" | "ritual_streak" | "deaths_recovered" | "expedition_count" | "tower_floor";
+type TriggerType =
+  | "streak"
+  | "level"
+  | "bond"
+  | "ritual_streak"
+  | "deaths_recovered"
+  | "expedition_count"
+  | "tower_floor";
 
 export type AwakeningDef = {
   name: string;
   flavor: string;
   triggerType: TriggerType;
   threshold: number;
-  triggerText: string;  // human-readable
+  triggerText: string; // human-readable
 };
 
 const AWAKENINGS_BY_ROLE: Record<string, AwakeningDef[]> = {
@@ -118,31 +125,50 @@ export function awakeningsForRole(role: string): AwakeningDef[] {
 
 function evalTrigger(def: AwakeningDef, ctx: AwakeningContext, bondPercent: number): boolean {
   switch (def.triggerType) {
-    case "streak":           return ctx.profile.streak >= def.threshold;
-    case "level":            return ctx.profile.level >= def.threshold;
-    case "bond":             return bondPercent >= def.threshold;
-    case "ritual_streak":    return ctx.profile.ritual_streak >= def.threshold;
-    case "deaths_recovered": return ctx.profile.deaths >= def.threshold && ctx.profile.streak >= 7;
-    case "expedition_count": return ctx.expeditionsRun >= def.threshold;
-    case "tower_floor":      return ctx.towerFloor >= def.threshold;
-    default:                 return false;
+    case "streak":
+      return ctx.profile.streak >= def.threshold;
+    case "level":
+      return ctx.profile.level >= def.threshold;
+    case "bond":
+      return bondPercent >= def.threshold;
+    case "ritual_streak":
+      return ctx.profile.ritual_streak >= def.threshold;
+    case "deaths_recovered":
+      return ctx.profile.deaths >= def.threshold && ctx.profile.streak >= 7;
+    case "expedition_count":
+      return ctx.expeditionsRun >= def.threshold;
+    case "tower_floor":
+      return ctx.towerFloor >= def.threshold;
+    default:
+      return false;
   }
 }
 
 // ─── Evaluate (writes events + updates awakened_skills) ─────────────────────
 
-export async function evaluateAwakenings(): Promise<Array<{
-  monsterName: string;
-  skillName: string;
-  flavor: string;
-}>> {
-  const { data: { user } } = await supabase.auth.getUser();
+export async function evaluateAwakenings(): Promise<
+  Array<{
+    monsterName: string;
+    skillName: string;
+    flavor: string;
+  }>
+> {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return [];
 
   // Load context
   const [profileRes, expCountRes, towerRes, rosterRes] = await Promise.all([
-    supabase.from("profiles").select("level, streak, ritual_streak, deaths").eq("id", user.id).single(),
-    supabase.from("expeditions").select("id", { count: "exact", head: true }).eq("user_id", user.id),
+    supabase
+      .from("profiles")
+      .select("level, streak, ritual_streak, deaths")
+      .eq("id", user.id)
+      .single(),
+    supabase
+      .from("expeditions")
+      .select("id", { count: "exact", head: true })
+      .eq("user_id", user.id),
     supabase.from("tower_progress").select("highest_floor").eq("user_id", user.id).maybeSingle(),
     supabase
       .from("user_monsters")
@@ -189,10 +215,7 @@ export async function evaluateAwakenings(): Promise<Array<{
 
     if (newlyUnlocked.length > 0) {
       const next = [...already, ...newlyUnlocked];
-      await supabase
-        .from("user_monsters")
-        .update({ awakened_skills: next })
-        .eq("id", um.id);
+      await supabase.from("user_monsters").update({ awakened_skills: next }).eq("id", um.id);
     }
   }
 
@@ -202,7 +225,9 @@ export async function evaluateAwakenings(): Promise<Array<{
 // ─── Awakening Log feed (for Codex) ─────────────────────────────────────────
 
 export async function listAwakeningEvents(limit = 50) {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return { events: [] };
 
   const { data, error } = await supabase

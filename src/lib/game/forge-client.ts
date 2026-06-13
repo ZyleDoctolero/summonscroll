@@ -10,8 +10,13 @@ export type Recipe = {
   base_gold_cost: number;
   sort_order: number;
   equipment?: {
-    name: string; slot: string; str_bonus: number; int_bonus: number;
-    con_bonus: number; per_bonus: number; rarity: string;
+    name: string;
+    slot: string;
+    str_bonus: number;
+    int_bonus: number;
+    con_bonus: number;
+    per_bonus: number;
+    rarity: string;
   };
 };
 export type CraftQuality = "standard" | "refined" | "masterwork";
@@ -38,13 +43,18 @@ export async function listRecipes(): Promise<{ recipes: Recipe[] }> {
   return { recipes: (data ?? []) as Recipe[] };
 }
 
-export async function craft(recipeId: string, quality: CraftQuality): Promise<{
+export async function craft(
+  recipeId: string,
+  quality: CraftQuality,
+): Promise<{
   newEquipmentId: string;
   quality: CraftQuality;
   affix: { key: string; text: string } | null;
   itemName: string;
 }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const { data: recipe } = await supabase
@@ -55,7 +65,11 @@ export async function craft(recipeId: string, quality: CraftQuality): Promise<{
   if (!recipe) throw new Error("Recipe not found.");
 
   // Profile gold check
-  const { data: profile } = await supabase.from("profiles").select("gold, level").eq("id", user.id).single();
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("gold, level")
+    .eq("id", user.id)
+    .single();
   if (!profile) throw new Error("Profile missing.");
   const condLevel = (recipe.unlock_condition as { level?: number }).level ?? 0;
   if (profile.level < condLevel) throw new Error(`Recipe unlocks at Level ${condLevel}.`);
@@ -90,12 +104,16 @@ export async function craft(recipeId: string, quality: CraftQuality): Promise<{
     else await supabase.from("inventory").update({ quantity: remaining }).eq("id", inv.id);
   }
   // Pay gold
-  await supabase.from("profiles").update({ gold: profile.gold - goldCost }).eq("id", user.id);
+  await supabase
+    .from("profiles")
+    .update({ gold: profile.gold - goldCost })
+    .eq("id", user.id);
 
   // Masterwork affix roll
-  const affix = quality === "masterwork"
-    ? MASTERWORK_AFFIXES[Math.floor(Math.random() * MASTERWORK_AFFIXES.length)]
-    : null;
+  const affix =
+    quality === "masterwork"
+      ? MASTERWORK_AFFIXES[Math.floor(Math.random() * MASTERWORK_AFFIXES.length)]
+      : null;
 
   // Create user_equipment row
   const { data: ue, error: ueErr } = await supabase

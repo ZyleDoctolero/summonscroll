@@ -41,13 +41,13 @@ export function setMuted(value: boolean) {
 // ─── Primitive: play a single note with an envelope ─────────────────────────
 
 function note(opts: {
-  freq: number;            // Hz
-  duration: number;        // seconds
-  type?: OscillatorType;   // sine / triangle / square / sawtooth
-  gain?: number;           // 0..1
-  attack?: number;         // seconds
-  release?: number;        // seconds
-  delay?: number;          // seconds (offset from now)
+  freq: number; // Hz
+  duration: number; // seconds
+  type?: OscillatorType; // sine / triangle / square / sawtooth
+  gain?: number; // 0..1
+  attack?: number; // seconds
+  release?: number; // seconds
+  delay?: number; // seconds (offset from now)
 }) {
   if (isMuted()) return;
   const ac = getCtx();
@@ -79,7 +79,7 @@ function note(opts: {
 export const sounds = {
   // Soft chime when the Cascade Card appears or a small reward lands
   chime() {
-    note({ freq: 659.25, duration: 0.12, type: "sine", gain: 0.08, release: 0.18 });        // E5
+    note({ freq: 659.25, duration: 0.12, type: "sine", gain: 0.08, release: 0.18 }); // E5
     note({ freq: 987.77, duration: 0.16, type: "sine", gain: 0.05, release: 0.22, delay: 0.05 }); // B5
   },
 
@@ -97,7 +97,15 @@ export const sounds = {
   // Bright bell for awakenings or Reflection Pull granted
   bell() {
     note({ freq: 783.99, duration: 0.4, type: "sine", gain: 0.12, attack: 0.005, release: 0.7 });
-    note({ freq: 1567.98, duration: 0.4, type: "sine", gain: 0.04, attack: 0.005, release: 0.6, delay: 0.02 });
+    note({
+      freq: 1567.98,
+      duration: 0.4,
+      type: "sine",
+      gain: 0.04,
+      attack: 0.005,
+      release: 0.6,
+      delay: 0.02,
+    });
   },
 
   // Ascending chime for level-up / promotion completion

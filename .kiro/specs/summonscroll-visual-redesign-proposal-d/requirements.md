@@ -102,7 +102,7 @@ The redesign encompasses 11 implementation files covering visual identity, surfa
 9. WHERE Proposal D is active, THE Display role SHALL use 56-80px font sizes for hero numbers
 10. WHERE Proposal D is active, THE Heading role SHALL use letter-spacing ≥ 0.08em
 11. THE System SHALL remove inline fontFamily declarations from components
-12. WHEN migration completes, THE System SHALL have 40+ instances of .t-* classes in use
+12. WHEN migration completes, THE System SHALL have 40+ instances of .t-\* classes in use
 
 ### Requirement 5: Atmosphere Background Generation
 
@@ -138,7 +138,7 @@ The redesign encompasses 11 implementation files covering visual identity, surfa
 3. WHEN Evening window is active AND morning_done is true AND evening_done is false, THE Compass SHALL suggest "Reflect on the day" with base score 90 + hours past wind_down_hour
 4. WHEN reflection_pull_granted is true AND reflection_pull_used is false, THE Compass SHALL suggest "A Reflection Pull is waiting" with score 95
 5. WHEN active quarterly goal exists AND hp_remaining / hp_total < 0.15, THE Compass SHALL suggest boss completion with score 95
-6. WHEN any monster meets promotion requirements (bond ≥ 60%, star_level < 5, level ≥ 15), THE Compass SHALL suggest promotion with score 88 + (newStar * 2)
+6. WHEN any monster meets promotion requirements (bond ≥ 60%, star_level < 5, level ≥ 15), THE Compass SHALL suggest promotion with score 88 + (newStar \* 2)
 7. WHEN current stamina ≥ stamina_max, THE Compass SHALL suggest expeditions with score 70
 8. WHEN tower highest_floor = 49 AND wailing_wall_cleared_at is null, THE Compass SHALL suggest Wailing Wall challenge with score 92
 9. THE Compass SHALL pick the candidate with highest score
@@ -333,4 +333,3 @@ The redesign encompasses 11 implementation files covering visual identity, surfa
 13. WHEN atmosphere PNGs compress, THE combined size SHALL be < 3MB total
 14. WHEN Typography fonts load, THE System SHALL use font-display: swap to prevent FOIT
 15. WHEN build completes, THE System SHALL have total bundle size increase < 400KB compared to baseline
-

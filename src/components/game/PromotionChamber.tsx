@@ -54,7 +54,12 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
     mutationFn: () => promoteMonster(userMonsterId),
     onSuccess: (res) => {
       sounds.ascend();
-      confetti({ particleCount: 220, spread: 90, origin: { y: 0.45 }, colors: ["#C89A3E", "#FFD54F", "#F0EDE6"] });
+      confetti({
+        particleCount: 220,
+        spread: 90,
+        origin: { y: 0.45 },
+        colors: ["#C89A3E", "#FFD54F", "#F0EDE6"],
+      });
       toast.success(`Promoted to ${res.to}★`);
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
       qc.invalidateQueries({ queryKey: ["profile"] });
@@ -86,13 +91,15 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
   }, [stage, rm]);
 
   return (
-    <ResponsiveDialog 
-      open={true} 
+    <ResponsiveDialog
+      open={true}
       onOpenChange={(open) => !open && stage !== "ritual" && onClose()}
       title="The Promotion Chamber"
     >
       {checkQ.isLoading ? (
-        <p className="text-center text-sm py-12" style={{ color: "#A09D96" }}>Reading the soul…</p>
+        <p className="text-center text-sm py-12" style={{ color: "#A09D96" }}>
+          Reading the soul…
+        </p>
       ) : !checkQ.data ? null : (
         <Body
           monsterName={monsterName}
@@ -113,7 +120,13 @@ export function PromotionChamber({ userMonsterId, monsterName, onClose }: Props)
 type CheckData = Awaited<ReturnType<typeof checkPromotionEligibility>>;
 
 function Body({
-  monsterName, c, stage, ritualPct, onBegin, onClose, closeBtnRef,
+  monsterName,
+  c,
+  stage,
+  ritualPct,
+  onBegin,
+  onClose,
+  closeBtnRef,
 }: {
   monsterName: string;
   c: CheckData;
@@ -133,7 +146,12 @@ function Body({
     <>
       <p className="text-xs text-center mb-6" style={{ color: "var(--ink-secondary)" }}>
         Bring <span style={{ color: "var(--ink-primary)", fontWeight: 600 }}>{monsterName}</span> to{" "}
-        <NumberFlow value={req.newStarLevel} suffix="★" className="font-bold" style={{ color: "var(--gold-bright)" }} />
+        <NumberFlow
+          value={req.newStarLevel}
+          suffix="★"
+          className="font-bold"
+          style={{ color: "var(--gold-bright)" }}
+        />
       </p>
 
       {/* Ritual circle */}
@@ -141,10 +159,21 @@ function Body({
         <motion.div
           animate={
             stage === "ritual"
-              ? { scale: [1, 1.04, 1], boxShadow: ["0 0 24px rgba(255,213,79,0.25)", "0 0 56px rgba(255,213,79,0.55)", "0 0 24px rgba(255,213,79,0.25)"] }
+              ? {
+                  scale: [1, 1.04, 1],
+                  boxShadow: [
+                    "0 0 24px rgba(255,213,79,0.25)",
+                    "0 0 56px rgba(255,213,79,0.55)",
+                    "0 0 24px rgba(255,213,79,0.25)",
+                  ],
+                }
               : { scale: 1, boxShadow: "0 0 24px rgba(255,213,79,0.18)" }
           }
-          transition={{ duration: 1.5, repeat: stage === "ritual" ? Infinity : 0, ease: ease.inOut }}
+          transition={{
+            duration: 1.5,
+            repeat: stage === "ritual" ? Infinity : 0,
+            ease: ease.inOut,
+          }}
           className="w-32 h-32 rounded-full border-2 relative grid place-items-center"
           style={{
             borderColor: stage === "ritual" ? "var(--gold-bright)" : "rgba(255,213,79,0.3)",
@@ -164,7 +193,10 @@ function Body({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.1 }}
               className="absolute -bottom-2 px-2 py-0.5 rounded-full text-[10px] font-bold"
-              style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
+              style={{
+                background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
+                color: "var(--bg-deep)",
+              }}
             >
               {req.newStarLevel}★
             </motion.div>
@@ -176,28 +208,59 @@ function Body({
         <>
           {/* Requirements grid */}
           <div className="rounded-xl p-3 mb-4 space-y-1" style={{ background: "rgba(0,0,0,0.32)" }}>
-            <p className="text-[10px] uppercase tracking-[0.18em] mb-1.5" style={{ color: "var(--ink-tertiary)" }}>Requirements</p>
+            <p
+              className="text-[10px] uppercase tracking-[0.18em] mb-1.5"
+              style={{ color: "var(--ink-tertiary)" }}
+            >
+              Requirements
+            </p>
             <ReqRow ok={stoneOk}>
-              <span><span className="mr-1">🪨</span>{reqStone}</span>
-              <span className="font-mono"><NumberFlow value={c.have.stones} /> <span style={{ color: "#6B6864" }}>/ {req.stones.qty}</span></span>
+              <span>
+                <span className="mr-1">🪨</span>
+                {reqStone}
+              </span>
+              <span className="font-mono">
+                <NumberFlow value={c.have.stones} />{" "}
+                <span style={{ color: "#6B6864" }}>/ {req.stones.qty}</span>
+              </span>
             </ReqRow>
             {req.materials.map((mat) => {
               const have = c.have.materials[mat.name] ?? 0;
               const ok = have >= mat.qty;
               return (
                 <ReqRow key={mat.name} ok={ok}>
-                  <span><span className="mr-1">✨</span>{mat.name}</span>
-                  <span className="font-mono"><NumberFlow value={have} /> <span style={{ color: "#6B6864" }}>/ {mat.qty}</span></span>
+                  <span>
+                    <span className="mr-1">✨</span>
+                    {mat.name}
+                  </span>
+                  <span className="font-mono">
+                    <NumberFlow value={have} />{" "}
+                    <span style={{ color: "#6B6864" }}>/ {mat.qty}</span>
+                  </span>
                 </ReqRow>
               );
             })}
             <ReqRow ok={bondOk}>
-              <span><span className="mr-1">💖</span>Bond</span>
-              <span className="font-mono"><NumberFlow value={Math.round(c.have.bond)} format={{ maximumFractionDigits: 0 }} suffix="%" /> <span style={{ color: "#6B6864" }}>/ {req.bondRequired}%</span></span>
+              <span>
+                <span className="mr-1">💖</span>Bond
+              </span>
+              <span className="font-mono">
+                <NumberFlow
+                  value={Math.round(c.have.bond)}
+                  format={{ maximumFractionDigits: 0 }}
+                  suffix="%"
+                />{" "}
+                <span style={{ color: "#6B6864" }}>/ {req.bondRequired}%</span>
+              </span>
             </ReqRow>
             <ReqRow ok={levelOk}>
-              <span><span className="mr-1">⚜</span>Level</span>
-              <span className="font-mono"><NumberFlow value={c.have.level} /> <span style={{ color: "#6B6864" }}>/ {req.levelRequired}</span></span>
+              <span>
+                <span className="mr-1">⚜</span>Level
+              </span>
+              <span className="font-mono">
+                <NumberFlow value={c.have.level} />{" "}
+                <span style={{ color: "#6B6864" }}>/ {req.levelRequired}</span>
+              </span>
             </ReqRow>
           </div>
 
@@ -208,7 +271,9 @@ function Body({
           )}
 
           {!c.canPromote && (
-            <p className="text-xs text-center mb-4" style={{ color: "var(--danger)" }}>{c.reason}</p>
+            <p className="text-xs text-center mb-4" style={{ color: "var(--danger)" }}>
+              {c.reason}
+            </p>
           )}
 
           <div className="flex gap-2">
@@ -216,7 +281,11 @@ function Body({
               ref={closeBtnRef}
               onClick={onClose}
               className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-              style={{ background: "rgba(255,255,255,0.04)", color: "var(--ink-secondary)", border: "1px solid rgba(255,255,255,0.06)" }}
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                color: "var(--ink-secondary)",
+                border: "1px solid rgba(255,255,255,0.06)",
+              }}
             >
               Cancel
             </SpringyButton>
@@ -225,7 +294,9 @@ function Body({
               disabled={!c.canPromote}
               className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
               style={{
-                background: c.canPromote ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))" : "rgba(255,255,255,0.05)",
+                background: c.canPromote
+                  ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
+                  : "rgba(255,255,255,0.05)",
                 color: c.canPromote ? "var(--bg-deep)" : "var(--ink-tertiary)",
                 boxShadow: c.canPromote ? "0 4px 20px rgba(255,213,79,0.28)" : "none",
               }}
@@ -238,13 +309,22 @@ function Body({
 
       {stage === "ritual" && (
         <>
-          <p className="t-label text-center text-sm mb-4" style={{ color: "var(--gold-bright)", letterSpacing: "0.06em" }}>
+          <p
+            className="t-label text-center text-sm mb-4"
+            style={{ color: "var(--gold-bright)", letterSpacing: "0.06em" }}
+          >
             The Chamber sings.
           </p>
-          <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
+          <div
+            className="h-1.5 rounded-full overflow-hidden"
+            style={{ background: "rgba(255,255,255,0.06)" }}
+          >
             <motion.div
               className="h-full"
-              style={{ background: "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))", width: `${ritualPct}%` }}
+              style={{
+                background: "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))",
+                width: `${ritualPct}%`,
+              }}
               transition={{ duration: 0.05 }}
             />
           </div>
@@ -263,15 +343,26 @@ function Body({
             ★ Promoted
           </motion.p>
           <p className="text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
-            {monsterName} now stands at <NumberFlow value={req.newStarLevel} suffix="★" className="font-bold" style={{ color: "var(--gold-bright)" }} />
+            {monsterName} now stands at{" "}
+            <NumberFlow
+              value={req.newStarLevel}
+              suffix="★"
+              className="font-bold"
+              style={{ color: "var(--gold-bright)" }}
+            />
           </p>
           {req.unlocks && (
-            <p className="text-xs italic mb-4" style={{ color: "var(--gold-bright)" }}>{req.unlocks}</p>
+            <p className="text-xs italic mb-4" style={{ color: "var(--gold-bright)" }}>
+              {req.unlocks}
+            </p>
           )}
           <SpringyButton
             onClick={onClose}
             className="w-full py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
-            style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
+            style={{
+              background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
+              color: "var(--bg-deep)",
+            }}
           >
             Continue
           </SpringyButton>
@@ -296,22 +387,26 @@ function ReqRow({ ok, children }: { ok: boolean; children: React.ReactNode }) {
       }}
     >
       {children}
-      <span className="ml-2 text-[11px]" style={{ color: ok ? "var(--success)" : "var(--danger)" }}>{ok ? "✓" : "—"}</span>
+      <span className="ml-2 text-[11px]" style={{ color: ok ? "var(--success)" : "var(--danger)" }}>
+        {ok ? "✓" : "—"}
+      </span>
     </motion.div>
   );
 }
 
 type SpringyButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const SpringyButton = forwardRef<HTMLButtonElement, SpringyButtonProps>(function SpringyButton(props, ref) {
-  const rm = reducedMotion();
-  return (
-    <motion.button
-      ref={ref}
-      whileTap={rm ? undefined : { scale: 0.97 }}
-      whileHover={rm ? undefined : { y: -1 }}
-      transition={trans.springy}
-      {...(props as React.ComponentProps<typeof motion.button>)}
-    />
-  );
-});
+const SpringyButton = forwardRef<HTMLButtonElement, SpringyButtonProps>(
+  function SpringyButton(props, ref) {
+    const rm = reducedMotion();
+    return (
+      <motion.button
+        ref={ref}
+        whileTap={rm ? undefined : { scale: 0.97 }}
+        whileHover={rm ? undefined : { y: -1 }}
+        transition={trans.springy}
+        {...(props as React.ComponentProps<typeof motion.button>)}
+      />
+    );
+  },
+);

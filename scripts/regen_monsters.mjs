@@ -6,19 +6,19 @@ import path from "node:path";
 
 /**
  * Batch Monster Art Generation Script
- * 
- * This script regenerates monster portraits using the Gemini API based on the 
+ *
+ * This script regenerates monster portraits using the Gemini API based on the
  * triage report findings. All existing monster images need regeneration due to
  * missing alpha channels.
- * 
+ *
  * Prerequisites:
  * 1. Set GEMINI_API_KEY in your .env file (get from Google AI Studio)
  * 2. Ensure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are configured
  * 3. Set CURRENT_RELEASED_MAX to control batch size (default: 150)
- * 
+ *
  * Usage:
  *   node scripts/regen_monsters.mjs
- * 
+ *
  * Cost Estimate:
  *   Gemini image generation: ~$0.04 per image
  *   150 monsters = ~$6.00 USD
@@ -33,21 +33,21 @@ const CURRENT_RELEASED_MAX = parseInt(process.env.CURRENT_RELEASED_MAX || "150")
 // Validate required environment variables
 function validateEnvironment() {
   const missing = [];
-  
+
   if (!SUPABASE_URL) missing.push("SUPABASE_URL");
   if (!SUPABASE_SERVICE_KEY) missing.push("SUPABASE_SERVICE_ROLE_KEY");
   if (!GEMINI_API_KEY || GEMINI_API_KEY === "your-gemini-api-key-here") {
     missing.push("GEMINI_API_KEY");
   }
-  
+
   if (missing.length > 0) {
     console.error("❌ Missing required environment variables:");
-    missing.forEach(key => console.error(`   - ${key}`));
+    missing.forEach((key) => console.error(`   - ${key}`));
     console.error("\nPlease update your .env file with the required API keys.");
     console.error("For GEMINI_API_KEY, visit: https://aistudio.google.com/app/apikey");
     return false;
   }
-  
+
   return true;
 }
 
@@ -75,8 +75,10 @@ async function loadPromptTemplate() {
 }
 
 async function batchGeneration() {
-  console.log(`🚀 Starting batch generation for monsters up to bestiary_id ${CURRENT_RELEASED_MAX}`);
-  
+  console.log(
+    `🚀 Starting batch generation for monsters up to bestiary_id ${CURRENT_RELEASED_MAX}`,
+  );
+
   // Fetch monsters from database
   console.log("📡 Fetching monsters from database...");
   const { data: monsters, error } = await supa
@@ -84,7 +86,7 @@ async function batchGeneration() {
     .select("id, name, rarity, role, element, bestiary_id")
     .lte("bestiary_id", CURRENT_RELEASED_MAX)
     .order("bestiary_id");
-  
+
   if (error) {
     console.error("❌ Error fetching monsters:", error.message);
     console.error("Please check your Supabase configuration and network connection.");
@@ -119,8 +121,7 @@ async function batchGeneration() {
     }
 
     // Build the prompt with monster data
-    const prompt = PROMPT_TEMPLATE
-      .replace(/\{name\}/g, monster.name)
+    const prompt = PROMPT_TEMPLATE.replace(/\{name\}/g, monster.name)
       .replace(/\{rarity\}/g, monster.rarity)
       .replace(/\{role\}/g, monster.role)
       .replace(/\{element\}/g, monster.element)
@@ -128,45 +129,49 @@ async function batchGeneration() {
 
     try {
       console.log(`[${processed}/${monsters.length}] 🎨 Generating ${filename}...`);
-      
+
       const result = await model.generateContent({
-        contents: [{
-          role: "user",
-          parts: [{ text: prompt }]
-        }]
+        contents: [
+          {
+            role: "user",
+            parts: [{ text: prompt }],
+          },
+        ],
       });
-      
+
       const response = result.response;
-      
+
       // Look for image data in the response
       const candidates = response.candidates || [];
       let imageData = null;
-      
+
       for (const candidate of candidates) {
         const parts = candidate.content?.parts || [];
         for (const part of parts) {
-          if (part.inlineData && part.inlineData.mimeType?.startsWith('image/')) {
+          if (part.inlineData && part.inlineData.mimeType?.startsWith("image/")) {
             imageData = part.inlineData.data;
             break;
           }
         }
         if (imageData) break;
       }
-      
+
       if (imageData) {
         // Write the image file
         await fs.writeFile(outpath, Buffer.from(imageData, "base64"));
         console.log(`[${processed}/${monsters.length}] ✅ WROTE ${filename}`);
         generated++;
       } else {
-        console.log(`[${processed}/${monsters.length}] ❌ MISS  ${filename} (no image data in response)`);
+        console.log(
+          `[${processed}/${monsters.length}] ❌ MISS  ${filename} (no image data in response)`,
+        );
         console.log("Response structure:", JSON.stringify(response, null, 2));
         errors++;
       }
     } catch (e) {
       console.log(`[${processed}/${monsters.length}] ❌ ERROR ${filename}: ${e.message}`);
       errors++;
-      
+
       // If it's a quota/rate limit error, suggest waiting
       if (e.message.includes("quota") || e.message.includes("rate")) {
         console.log("💡 Consider waiting longer between requests or reducing batch size");
@@ -176,7 +181,7 @@ async function batchGeneration() {
     // Rate limiting to avoid API limits (2 seconds between requests)
     if (processed < monsters.length) {
       console.log("⏱️  Waiting 2s for rate limiting...");
-      await new Promise(r => setTimeout(r, 2000));
+      await new Promise((r) => setTimeout(r, 2000));
     }
   }
 
@@ -185,11 +190,11 @@ async function batchGeneration() {
   console.log(`✅ Generated: ${generated}`);
   console.log(`⏭️  Skipped: ${skipped}`);
   console.log(`❌ Errors: ${errors}`);
-  
+
   if (generated > 0) {
     console.log(`💰 Estimated cost: ~$${(generated * 0.04).toFixed(2)} USD`);
   }
-  
+
   if (errors > 0) {
     console.log(`\n⚠️  ${errors} errors occurred. Check the logs above for details.`);
     console.log("Common issues:");
@@ -212,18 +217,18 @@ async function fileExists(filepath) {
 async function main() {
   console.log("🎮 SummonScroll Monster Art Batch Generator");
   console.log("==========================================\n");
-  
+
   // Validate environment
   if (!validateEnvironment()) {
     process.exit(1);
   }
-  
+
   // Initialize clients
   initializeClients();
-  
+
   // Load prompt template
   await loadPromptTemplate();
-  
+
   // Run batch generation
   await batchGeneration();
 }

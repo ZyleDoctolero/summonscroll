@@ -5,6 +5,7 @@
 ## The problem
 
 The app uses 3 fonts:
+
 - DM Sans (everything UI)
 - Cinzel (headers + display)
 - JetBrains Mono (numbers)
@@ -23,13 +24,13 @@ use the role classes, not raw font-family declarations.
 
 ## The five roles
 
-| Role | Used for | Sample sizes |
-|---|---|---|
-| **Display** | Hero numbers, ceremony titles, big reveals. Used sparingly — fewer than 5 instances per screen. | 36–64px |
-| **Heading** | Screen titles, section labels, card titles. | 18–28px |
-| **Body** | All running UI text — buttons, descriptions, instructions, errors. | 13–16px |
-| **Mono** | Counts, percentages, stats, currency amounts. | 12–18px |
-| **Lore** | Italic / atmospheric text — whisper lines, journal entries, empty states, monster flavor. | 12–14px |
+| Role        | Used for                                                                                        | Sample sizes |
+| ----------- | ----------------------------------------------------------------------------------------------- | ------------ |
+| **Display** | Hero numbers, ceremony titles, big reveals. Used sparingly — fewer than 5 instances per screen. | 36–64px      |
+| **Heading** | Screen titles, section labels, card titles.                                                     | 18–28px      |
+| **Body**    | All running UI text — buttons, descriptions, instructions, errors.                              | 13–16px      |
+| **Mono**    | Counts, percentages, stats, currency amounts.                                                   | 12–18px      |
+| **Lore**    | Italic / atmospheric text — whisper lines, journal entries, empty states, monster flavor.       | 12–14px      |
 
 ---
 
@@ -41,60 +42,73 @@ use the role classes, not raw font-family declarations.
 <!-- in src/index.html, replace the existing fonts <link>: -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Cormorant+Garamond:wght@400;600;700&family=EB+Garamond:wght@400;500;600&family=Caudex:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Cormorant+Garamond:wght@400;600;700&family=EB+Garamond:wght@400;500;600&family=Caudex:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap"
+/>
 ```
 
-| Role | Font | Family stack |
-|---|---|---|
-| Display | IM Fell English SC | `'IM Fell English SC', serif` |
-| Heading | Cormorant Garamond 600 | `'Cormorant Garamond', serif` |
-| Body | EB Garamond 500 | `'EB Garamond', Georgia, serif` |
-| Mono | JetBrains Mono 600 | `'JetBrains Mono', monospace` |
-| Lore | Caudex italic | `'Caudex', serif` |
+| Role    | Font                   | Family stack                    |
+| ------- | ---------------------- | ------------------------------- |
+| Display | IM Fell English SC     | `'IM Fell English SC', serif`   |
+| Heading | Cormorant Garamond 600 | `'Cormorant Garamond', serif`   |
+| Body    | EB Garamond 500        | `'EB Garamond', Georgia, serif` |
+| Mono    | JetBrains Mono 600     | `'JetBrains Mono', monospace`   |
+| Lore    | Caudex italic          | `'Caudex', serif`               |
 
 ### Proposal B — The Lantern Garden (pixel JRPG)
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital@0;1&family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&display=swap" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital@0;1&family=Press+Start+2P&family=JetBrains+Mono:wght@400;600&display=swap"
+/>
 ```
 
-| Role | Font | Family stack |
-|---|---|---|
-| Display | Press Start 2P | `'Press Start 2P', monospace` |
-| Heading | Pixelify Sans 700 | `'Pixelify Sans', monospace` |
-| Body | Inter 500 | `'Inter', system-ui, sans-serif` |
-| Mono | JetBrains Mono 600 | `'JetBrains Mono', monospace` |
-| Lore | Crimson Text italic | `'Crimson Text', serif` |
+| Role    | Font                | Family stack                     |
+| ------- | ------------------- | -------------------------------- |
+| Display | Press Start 2P      | `'Press Start 2P', monospace`    |
+| Heading | Pixelify Sans 700   | `'Pixelify Sans', monospace`     |
+| Body    | Inter 500           | `'Inter', system-ui, sans-serif` |
+| Mono    | JetBrains Mono 600  | `'JetBrains Mono', monospace`    |
+| Lore    | Crimson Text italic | `'Crimson Text', serif`          |
 
 ### Proposal C — The Iron Court (gothic terminal)
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Cormorant+Unicase&family=JetBrains+Mono:wght@400;600&display=swap" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Cormorant+Unicase&family=JetBrains+Mono:wght@400;600&display=swap"
+/>
 ```
 
-| Role | Font | Family stack |
-|---|---|---|
-| Display | Cinzel 700 (you already have this) | `'Cinzel', serif` |
-| Heading | Cormorant Unicase | `'Cormorant Unicase', serif` |
-| Body | Inter 500 | `'Inter', system-ui, sans-serif` |
-| Mono | JetBrains Mono 600 | `'JetBrains Mono', monospace` |
-| Lore | Cormorant Garamond italic | `'Cormorant Garamond', serif` |
+| Role    | Font                               | Family stack                     |
+| ------- | ---------------------------------- | -------------------------------- |
+| Display | Cinzel 700 (you already have this) | `'Cinzel', serif`                |
+| Heading | Cormorant Unicase                  | `'Cormorant Unicase', serif`     |
+| Body    | Inter 500                          | `'Inter', system-ui, sans-serif` |
+| Mono    | JetBrains Mono 600                 | `'JetBrains Mono', monospace`    |
+| Lore    | Cormorant Garamond italic          | `'Cormorant Garamond', serif`    |
 
 ### Proposal D — The Summoner's Console (modern mobile gacha)
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Saira+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Spectral:ital,wght@1,400;1,500&family=JetBrains+Mono:wght@400;600&display=swap" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Saira+Condensed:wght@400;600;700&family=Inter:wght@400;500;600;700&family=Spectral:ital,wght@1,400;1,500&family=JetBrains+Mono:wght@400;600&display=swap"
+/>
 ```
 
-| Role | Font | Family stack |
-|---|---|---|
-| Display | Orbitron 700/900 (futuristic) | `'Orbitron', sans-serif` |
-| Heading | Saira Condensed 700 (wide condensed) | `'Saira Condensed', sans-serif` |
-| Body | Inter 500 | `'Inter', system-ui, sans-serif` |
-| Mono | JetBrains Mono 600 | `'JetBrains Mono', monospace` |
-| Lore | Spectral 500 italic | `'Spectral', serif` |
+| Role    | Font                                 | Family stack                     |
+| ------- | ------------------------------------ | -------------------------------- |
+| Display | Orbitron 700/900 (futuristic)        | `'Orbitron', sans-serif`         |
+| Heading | Saira Condensed 700 (wide condensed) | `'Saira Condensed', sans-serif`  |
+| Body    | Inter 500                            | `'Inter', system-ui, sans-serif` |
+| Mono    | JetBrains Mono 600                   | `'JetBrains Mono', monospace`    |
+| Lore    | Spectral 500 italic                  | `'Spectral', serif`              |
 
 **Proposal D type rules:**
+
 - Display sizes are **larger** than the other proposals — 56-80px for hero
   numbers, 40-48px for screen titles. This is the Genshin/Star Rail
   signature.
@@ -116,28 +130,28 @@ Add to `src/styles.css` (under your existing tokens):
 /* Swap font-family stack lines per chosen identity proposal */
 
 :root {
-  --ss-font-display: 'Pixelify Sans', monospace;
-  --ss-font-heading: 'Pixelify Sans', monospace;
-  --ss-font-body:    'Inter', system-ui, sans-serif;
-  --ss-font-mono:    'JetBrains Mono', monospace;
-  --ss-font-lore:    'Crimson Text', serif;
+  --ss-font-display: "Pixelify Sans", monospace;
+  --ss-font-heading: "Pixelify Sans", monospace;
+  --ss-font-body: "Inter", system-ui, sans-serif;
+  --ss-font-mono: "JetBrains Mono", monospace;
+  --ss-font-lore: "Crimson Text", serif;
 
   /* Type scale */
-  --ss-text-xs:   12px;
-  --ss-text-sm:   13px;
+  --ss-text-xs: 12px;
+  --ss-text-sm: 13px;
   --ss-text-base: 15px;
-  --ss-text-lg:   18px;
-  --ss-text-xl:   22px;
-  --ss-text-2xl:  28px;
-  --ss-text-3xl:  36px;
-  --ss-text-4xl:  48px;
-  --ss-text-5xl:  64px;
+  --ss-text-lg: 18px;
+  --ss-text-xl: 22px;
+  --ss-text-2xl: 28px;
+  --ss-text-3xl: 36px;
+  --ss-text-4xl: 48px;
+  --ss-text-5xl: 64px;
 
   /* Tracking presets */
-  --ss-track-tight:  -0.01em;
+  --ss-track-tight: -0.01em;
   --ss-track-normal: 0;
-  --ss-track-wide:   0.04em;
-  --ss-track-wider:  0.08em;
+  --ss-track-wide: 0.04em;
+  --ss-track-wider: 0.08em;
   --ss-track-widest: 0.18em;
 }
 
@@ -246,7 +260,9 @@ body {
 
 /* Special — old-style figures (Proposal A only) */
 .t-onum {
-  font-feature-settings: "onum" 1, "lnum" 0;
+  font-feature-settings:
+    "onum" 1,
+    "lnum" 0;
 }
 ```
 
@@ -293,25 +309,25 @@ typography class.
 
 For implementation reference — every screen mapped to roles:
 
-| Screen / Component | Display | Heading | Body | Mono | Lore |
-|---|---|---|---|---|---|
-| PlayerHeader | — | level number | currency labels | currency values, HP/XP counts | — |
-| Hub title | — | "Hub Directives" | — | — | empty state |
-| Hub Whisper banner | — | monster name | — | — | the line |
-| TaskCard | — | task title | category, notes | streak number | — |
-| Altar banner | — | banner name | description | cost values | — |
-| Altar pull reveal | monster name | rarity label | role/element | — | "New!" |
-| CascadeCard | — | "Cascade" label | event descriptions | numbers (gold/xp/etc) | awakening flavor |
-| PromotionChamber | — | "Promotion Chamber" | requirements | counts | unlock blurb |
-| Battle result hero | "VICTORY" / "DEFEAT" | enemy name | log entries | HP/damage | ceremony lines |
-| Compendium grid | — | monster name on card | rarity chip | base stats | — |
-| Compendium detail hero | monster name (Display) | role/element | skills list | stats | dormant flavor |
-| Quests cards | — | goal title | type label | HP remaining | — |
-| Codex Heatmap | — | "Codex" page title | section labels | activity counts | journal entries |
-| Codex Journal | — | date headers | — | mood numerics | journal text |
-| Trial confirmation | — | "The Trial is Final" | warning body | — | — |
-| Trial fallen list | — | monster names | meta (floor, star) | bond % | "I will remember." |
-| Empty states (all) | — | — | "No X yet" line | — | the flavor sentence |
+| Screen / Component     | Display                | Heading              | Body               | Mono                          | Lore                |
+| ---------------------- | ---------------------- | -------------------- | ------------------ | ----------------------------- | ------------------- |
+| PlayerHeader           | —                      | level number         | currency labels    | currency values, HP/XP counts | —                   |
+| Hub title              | —                      | "Hub Directives"     | —                  | —                             | empty state         |
+| Hub Whisper banner     | —                      | monster name         | —                  | —                             | the line            |
+| TaskCard               | —                      | task title           | category, notes    | streak number                 | —                   |
+| Altar banner           | —                      | banner name          | description        | cost values                   | —                   |
+| Altar pull reveal      | monster name           | rarity label         | role/element       | —                             | "New!"              |
+| CascadeCard            | —                      | "Cascade" label      | event descriptions | numbers (gold/xp/etc)         | awakening flavor    |
+| PromotionChamber       | —                      | "Promotion Chamber"  | requirements       | counts                        | unlock blurb        |
+| Battle result hero     | "VICTORY" / "DEFEAT"   | enemy name           | log entries        | HP/damage                     | ceremony lines      |
+| Compendium grid        | —                      | monster name on card | rarity chip        | base stats                    | —                   |
+| Compendium detail hero | monster name (Display) | role/element         | skills list        | stats                         | dormant flavor      |
+| Quests cards           | —                      | goal title           | type label         | HP remaining                  | —                   |
+| Codex Heatmap          | —                      | "Codex" page title   | section labels     | activity counts               | journal entries     |
+| Codex Journal          | —                      | date headers         | —                  | mood numerics                 | journal text        |
+| Trial confirmation     | —                      | "The Trial is Final" | warning body       | —                             | —                   |
+| Trial fallen list      | —                      | monster names        | meta (floor, star) | bond %                        | "I will remember."  |
+| Empty states (all)     | —                      | —                    | "No X yet" line    | —                             | the flavor sentence |
 
 ---
 

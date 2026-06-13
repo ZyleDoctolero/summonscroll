@@ -23,7 +23,9 @@ export type DailyLog = {
 // ─── Get today's log (creating empty one if missing) ────────────────────────
 
 export async function getTodayLog(): Promise<DailyLog> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const today = todayISO();
@@ -51,14 +53,20 @@ export async function setMorningIntents(taskIds: string[]): Promise<DailyLog> {
   if (taskIds.length === 0 || taskIds.length > 3) {
     throw new Error("Pick 1–3 Sacred Directives.");
   }
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const today = todayISO();
   const now = new Date().toISOString();
 
   // Clear any prior starred marks today, then star the selected
-  await supabase.from("tasks").update({ is_starred: false }).eq("user_id", user.id).eq("is_starred", true);
+  await supabase
+    .from("tasks")
+    .update({ is_starred: false })
+    .eq("user_id", user.id)
+    .eq("is_starred", true);
   await supabase.from("tasks").update({ is_starred: true }).in("id", taskIds);
 
   // Upsert daily log
@@ -81,7 +89,12 @@ export async function setMorningIntents(taskIds: string[]): Promise<DailyLog> {
   } else {
     const { data, error } = await supabase
       .from("daily_logs")
-      .insert({ user_id: user.id, log_date: today, am_intent_task_ids: taskIds, am_completed_at: now })
+      .insert({
+        user_id: user.id,
+        log_date: today,
+        am_intent_task_ids: taskIds,
+        am_completed_at: now,
+      })
       .select()
       .single();
     if (error) throw error;
@@ -94,8 +107,8 @@ export async function setMorningIntents(taskIds: string[]): Promise<DailyLog> {
 export type EveningReflection = {
   went_well: string;
   didnt_go: string;
-  mood: number;     // 1..5
-  energy: number;   // 1..5
+  mood: number; // 1..5
+  energy: number; // 1..5
   tomorrow_anchor_task_id?: string | null;
 };
 
@@ -103,7 +116,9 @@ export async function submitEveningReflection(r: EveningReflection): Promise<{
   log: DailyLog;
   rewards: { tomeShard: boolean; reflectionPull: boolean; ritualStreak: number };
 }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const today = todayISO();
@@ -167,9 +182,19 @@ export async function submitEveningReflection(r: EveningReflection): Promise<{
       .eq("item_name", "Tome Shard")
       .maybeSingle();
     if (existing) {
-      await supabase.from("inventory").update({ quantity: existing.quantity + 1 }).eq("id", existing.id);
+      await supabase
+        .from("inventory")
+        .update({ quantity: existing.quantity + 1 })
+        .eq("id", existing.id);
     } else {
-      await supabase.from("inventory").insert({ user_id: user.id, item_type: "tome_shard", item_name: "Tome Shard", quantity: 1 });
+      await supabase
+        .from("inventory")
+        .insert({
+          user_id: user.id,
+          item_type: "tome_shard",
+          item_name: "Tome Shard",
+          quantity: 1,
+        });
     }
   }
 
@@ -212,7 +237,9 @@ export function isEveningWindow(windDownHour: number): boolean {
 // ─── Consume Reflection Pull (called from the Altar) ────────────────────────
 
 export async function consumeReflectionPull(): Promise<{ ok: boolean }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const today = todayISO();
@@ -226,9 +253,6 @@ export async function consumeReflectionPull(): Promise<{ ok: boolean }> {
     throw new Error("No Reflection Pull available.");
   }
 
-  await supabase
-    .from("daily_logs")
-    .update({ reflection_pull_used: true })
-    .eq("id", log.id);
+  await supabase.from("daily_logs").update({ reflection_pull_used: true }).eq("id", log.id);
   return { ok: true };
 }

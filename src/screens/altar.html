@@ -1,219 +1,353 @@
-
 <!-- TopNavBar -->
-<nav class="fixed top-0 right-0 w-full md:w-[calc(100%-280px)] z-40 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-lg flex justify-between items-center px-lg h-16 transition-all duration-300">
-<!-- Mobile Logo (Hidden on Desktop) -->
-<div class="md:hidden font-headline-md text-headline-md text-primary font-bold">SummonScroll</div>
-<!-- Desktop Breadcrumb/Title Area -->
-<div class="hidden md:flex items-center gap-sm">
-<span class="material-symbols-outlined text-text-secondary">auto_awesome</span>
-<span class="font-headline-sm text-headline-sm text-text-primary tracking-wide">The Altar</span>
-</div>
-<!-- Currencies & Actions -->
-<div class="flex items-center gap-md">
-<!-- Currency 1 -->
-<div class="flex items-center gap-xs bg-bg-card border border-white/10 rounded-full px-3 py-1">
-<span class="material-symbols-outlined text-rarity-rare" style="font-variation-settings: 'FILL' 1;">diamond</span>
-<span class="font-stats-md text-stats-md text-text-primary">2,450</span>
-</div>
-<!-- Currency 2 (Pact Seals) -->
-<div class="hidden sm:flex items-center gap-xs bg-bg-card border border-white/10 rounded-full px-3 py-1">
-<span class="material-symbols-outlined text-rarity-epic" style="font-variation-settings: 'FILL' 1;">token</span>
-<span class="font-stats-md text-stats-md text-text-primary">12</span>
-</div>
-<!-- Trailing Actions -->
-<div class="flex items-center gap-sm ml-2 border-l border-white/10 pl-sm">
-<button class="p-2 text-text-secondary hover:text-primary transition-colors hover:brightness-125 rounded-full">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="p-2 text-text-secondary hover:text-primary transition-colors hover:brightness-125 rounded-full">
-<span class="material-symbols-outlined">settings</span>
-</button>
-</div>
-</div>
+<nav
+  class="fixed top-0 right-0 w-full md:w-[calc(100%-280px)] z-40 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/5 shadow-lg flex justify-between items-center px-lg h-16 transition-all duration-300"
+>
+  <!-- Mobile Logo (Hidden on Desktop) -->
+  <div class="md:hidden font-headline-md text-headline-md text-primary font-bold">SummonScroll</div>
+  <!-- Desktop Breadcrumb/Title Area -->
+  <div class="hidden md:flex items-center gap-sm">
+    <span class="material-symbols-outlined text-text-secondary">auto_awesome</span>
+    <span class="font-headline-sm text-headline-sm text-text-primary tracking-wide">The Altar</span>
+  </div>
+  <!-- Currencies & Actions -->
+  <div class="flex items-center gap-md">
+    <!-- Currency 1 -->
+    <div class="flex items-center gap-xs bg-bg-card border border-white/10 rounded-full px-3 py-1">
+      <span
+        class="material-symbols-outlined text-rarity-rare"
+        style="font-variation-settings: &quot;FILL&quot; 1"
+        >diamond</span
+      >
+      <span class="font-stats-md text-stats-md text-text-primary">2,450</span>
+    </div>
+    <!-- Currency 2 (Pact Seals) -->
+    <div
+      class="hidden sm:flex items-center gap-xs bg-bg-card border border-white/10 rounded-full px-3 py-1"
+    >
+      <span
+        class="material-symbols-outlined text-rarity-epic"
+        style="font-variation-settings: &quot;FILL&quot; 1"
+        >token</span
+      >
+      <span class="font-stats-md text-stats-md text-text-primary">12</span>
+    </div>
+    <!-- Trailing Actions -->
+    <div class="flex items-center gap-sm ml-2 border-l border-white/10 pl-sm">
+      <button
+        class="p-2 text-text-secondary hover:text-primary transition-colors hover:brightness-125 rounded-full"
+      >
+        <span class="material-symbols-outlined">notifications</span>
+      </button>
+      <button
+        class="p-2 text-text-secondary hover:text-primary transition-colors hover:brightness-125 rounded-full"
+      >
+        <span class="material-symbols-outlined">settings</span>
+      </button>
+    </div>
+  </div>
 </nav>
 <!-- SideNavBar (Desktop) -->
-<aside class="hidden md:flex flex-col h-full py-lg px-md w-[280px] fixed left-0 top-0 border-r border-white/10 bg-surface-container-low shadow-2xl z-50">
-<!-- Brand -->
-<div class="px-4 mb-xl">
-<h1 class="font-headline-lg text-headline-lg font-bold text-primary tracking-widest">SummonScroll</h1>
-</div>
-<!-- User Profile Area -->
-<div class="px-4 mb-xl flex items-center gap-sm cursor-pointer group hover:bg-bg-hover transition-all duration-300 rounded-lg p-2">
-<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-rarity-epic glow-uncommon">
-<img alt="Avatar" class="w-full h-full object-cover" data-alt="A striking portrait of a dark fantasy archmage with glowing purple eyes and dark robes. The lighting is moody with violet magical reflections. Premium game UI aesthetic, highly detailed rendering." src="https://lh3.googleusercontent.com/aida/AP1WRLsLit0Xwg73bPH7LtOBUJAh3K0u46rUtyWXPMi4r8TG7wehfEKl_TPQn1TQtdefMJuWDijTFAacl3SGhl5ueDyKTaNUl4DwvofxRB5Zv3XetMWmCHIoWbupuOo7RKyVEkab_-7mvse4y9JoGSNcFVAwtXm_iEz9ar8R8rSFrHq8qwfgV8JchxMCrakWveBsoAtefcUh56D-cND5RLfbb63H5vZW5G6fxb2uJm01m9xOznGA416Z6zzmXvY"/>
-</div>
-<div>
-<div class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors">Level 42 Archmage</div>
-<div class="font-stats-sm text-stats-sm text-text-secondary">850/1200 XP</div>
-</div>
-</div>
-<!-- Navigation Links -->
-<nav class="flex-1 space-y-2">
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95" href="/">
-<span class="material-symbols-outlined">castle</span>
-<span class="font-label-caps text-label-caps">Hub</span>
-</a>
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95" href="/island">
-<span class="material-symbols-outlined">explore</span>
-<span class="font-label-caps text-label-caps">Island</span>
-</a>
-<!-- Active Tab -->
-<a class="flex items-center gap-sm border-l-4 border-primary bg-surface-container-high text-primary font-bold px-4 py-3 transition-all duration-300 rounded-r-lg scale-95 shadow-lg" href="/altar">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-<span class="font-label-caps text-label-caps tracking-wider">Altar</span>
-</a>
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95" href="/battle">
-<span class="material-symbols-outlined">swords</span>
-<span class="font-label-caps text-label-caps">Battle</span>
-</a>
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95" href="/compendium">
-<span class="material-symbols-outlined">menu_book</span>
-<span class="font-label-caps text-label-caps">Compendium</span>
-</a>
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95" href="/guild">
-<span class="material-symbols-outlined">groups</span>
-<span class="font-label-caps text-label-caps">Guild</span>
-</a>
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95" href="/fusion">
-<span class="material-symbols-outlined">cyclone</span>
-<span class="font-label-caps text-label-caps">Fusion</span>
-</a>
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95" href="/bazaar">
-<span class="material-symbols-outlined">storefront</span>
-<span class="font-label-caps text-label-caps">Shop</span>
-</a>
-</nav>
-<!-- CTA -->
-<div class="mt-auto mb-lg px-4">
-<button class="w-full py-3 rounded summon-btn font-label-caps text-label-caps font-bold tracking-widest flex items-center justify-center gap-2">
-<span class="material-symbols-outlined text-on-primary">flare</span>
-                Summon Now
-            </button>
-</div>
-<!-- Footer Links -->
-<div class="border-t border-white/10 pt-4 space-y-2">
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-2 transition-all duration-300 rounded-r-lg" href="#">
-<span class="material-symbols-outlined text-sm">settings</span>
-<span class="font-label-caps text-label-caps">Settings</span>
-</a>
-<a class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-2 transition-all duration-300 rounded-r-lg" href="#">
-<span class="material-symbols-outlined text-sm">help</span>
-<span class="font-label-caps text-label-caps">Support</span>
-</a>
-</div>
+<aside
+  class="hidden md:flex flex-col h-full py-lg px-md w-[280px] fixed left-0 top-0 border-r border-white/10 bg-surface-container-low shadow-2xl z-50"
+>
+  <!-- Brand -->
+  <div class="px-4 mb-xl">
+    <h1 class="font-headline-lg text-headline-lg font-bold text-primary tracking-widest">
+      SummonScroll
+    </h1>
+  </div>
+  <!-- User Profile Area -->
+  <div
+    class="px-4 mb-xl flex items-center gap-sm cursor-pointer group hover:bg-bg-hover transition-all duration-300 rounded-lg p-2"
+  >
+    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-rarity-epic glow-uncommon">
+      <img
+        alt="Avatar"
+        class="w-full h-full object-cover"
+        data-alt="A striking portrait of a dark fantasy archmage with glowing purple eyes and dark robes. The lighting is moody with violet magical reflections. Premium game UI aesthetic, highly detailed rendering."
+        src="https://lh3.googleusercontent.com/aida/AP1WRLsLit0Xwg73bPH7LtOBUJAh3K0u46rUtyWXPMi4r8TG7wehfEKl_TPQn1TQtdefMJuWDijTFAacl3SGhl5ueDyKTaNUl4DwvofxRB5Zv3XetMWmCHIoWbupuOo7RKyVEkab_-7mvse4y9JoGSNcFVAwtXm_iEz9ar8R8rSFrHq8qwfgV8JchxMCrakWveBsoAtefcUh56D-cND5RLfbb63H5vZW5G6fxb2uJm01m9xOznGA416Z6zzmXvY"
+      />
+    </div>
+    <div>
+      <div
+        class="font-headline-sm text-headline-sm text-text-primary group-hover:text-primary transition-colors"
+      >
+        Level 42 Archmage
+      </div>
+      <div class="font-stats-sm text-stats-sm text-text-secondary">850/1200 XP</div>
+    </div>
+  </div>
+  <!-- Navigation Links -->
+  <nav class="flex-1 space-y-2">
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95"
+      href="/"
+    >
+      <span class="material-symbols-outlined">castle</span>
+      <span class="font-label-caps text-label-caps">Hub</span>
+    </a>
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95"
+      href="/island"
+    >
+      <span class="material-symbols-outlined">explore</span>
+      <span class="font-label-caps text-label-caps">Island</span>
+    </a>
+    <!-- Active Tab -->
+    <a
+      class="flex items-center gap-sm border-l-4 border-primary bg-surface-container-high text-primary font-bold px-4 py-3 transition-all duration-300 rounded-r-lg scale-95 shadow-lg"
+      href="/altar"
+    >
+      <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1"
+        >auto_awesome</span
+      >
+      <span class="font-label-caps text-label-caps tracking-wider">Altar</span>
+    </a>
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95"
+      href="/battle"
+    >
+      <span class="material-symbols-outlined">swords</span>
+      <span class="font-label-caps text-label-caps">Battle</span>
+    </a>
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95"
+      href="/compendium"
+    >
+      <span class="material-symbols-outlined">menu_book</span>
+      <span class="font-label-caps text-label-caps">Compendium</span>
+    </a>
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95"
+      href="/guild"
+    >
+      <span class="material-symbols-outlined">groups</span>
+      <span class="font-label-caps text-label-caps">Guild</span>
+    </a>
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95"
+      href="/fusion"
+    >
+      <span class="material-symbols-outlined">cyclone</span>
+      <span class="font-label-caps text-label-caps">Fusion</span>
+    </a>
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-3 transition-all duration-300 rounded-r-lg hover:scale-95"
+      href="/bazaar"
+    >
+      <span class="material-symbols-outlined">storefront</span>
+      <span class="font-label-caps text-label-caps">Shop</span>
+    </a>
+  </nav>
+  <!-- CTA -->
+  <div class="mt-auto mb-lg px-4">
+    <button
+      class="w-full py-3 rounded summon-btn font-label-caps text-label-caps font-bold tracking-widest flex items-center justify-center gap-2"
+    >
+      <span class="material-symbols-outlined text-on-primary">flare</span>
+      Summon Now
+    </button>
+  </div>
+  <!-- Footer Links -->
+  <div class="border-t border-white/10 pt-4 space-y-2">
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-2 transition-all duration-300 rounded-r-lg"
+      href="#"
+    >
+      <span class="material-symbols-outlined text-sm">settings</span>
+      <span class="font-label-caps text-label-caps">Settings</span>
+    </a>
+    <a
+      class="flex items-center gap-sm text-text-secondary hover:text-text-primary hover:bg-bg-hover px-4 py-2 transition-all duration-300 rounded-r-lg"
+      href="#"
+    >
+      <span class="material-symbols-outlined text-sm">help</span>
+      <span class="font-label-caps text-label-caps">Support</span>
+    </a>
+  </div>
 </aside>
 <!-- BottomNavBar (Mobile) -->
-<nav class="md:hidden fixed bottom-0 w-full bg-surface-container-low border-t border-white/5 z-50 px-2 py-2 flex justify-between items-center shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
-<a class="flex flex-col items-center p-2 text-text-secondary" href="/">
-<span class="material-symbols-outlined mb-1">castle</span>
-<span class="font-label-caps text-[10px]">Hub</span>
-</a>
-<a class="flex flex-col items-center p-2 text-primary" href="/altar">
-<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-<span class="font-label-caps text-[10px] font-bold">Altar</span>
-</a>
-<a class="flex flex-col items-center p-2 text-text-secondary" href="/battle">
-<span class="material-symbols-outlined mb-1">swords</span>
-<span class="font-label-caps text-[10px]">Battle</span>
-</a>
-<a class="flex flex-col items-center p-2 text-text-secondary" href="/compendium">
-<span class="material-symbols-outlined mb-1">menu_book</span>
-<span class="font-label-caps text-[10px]">Compendium</span>
-</a>
+<nav
+  class="md:hidden fixed bottom-0 w-full bg-surface-container-low border-t border-white/5 z-50 px-2 py-2 flex justify-between items-center shadow-[0_-4px_20px_rgba(0,0,0,0.5)]"
+>
+  <a class="flex flex-col items-center p-2 text-text-secondary" href="/">
+    <span class="material-symbols-outlined mb-1">castle</span>
+    <span class="font-label-caps text-[10px]">Hub</span>
+  </a>
+  <a class="flex flex-col items-center p-2 text-primary" href="/altar">
+    <span class="material-symbols-outlined mb-1" style="font-variation-settings: &quot;FILL&quot; 1"
+      >auto_awesome</span
+    >
+    <span class="font-label-caps text-[10px] font-bold">Altar</span>
+  </a>
+  <a class="flex flex-col items-center p-2 text-text-secondary" href="/battle">
+    <span class="material-symbols-outlined mb-1">swords</span>
+    <span class="font-label-caps text-[10px]">Battle</span>
+  </a>
+  <a class="flex flex-col items-center p-2 text-text-secondary" href="/compendium">
+    <span class="material-symbols-outlined mb-1">menu_book</span>
+    <span class="font-label-caps text-[10px]">Compendium</span>
+  </a>
 </nav>
 <!-- Main Content Canvas -->
 <main class="md:ml-[280px] pt-16 pb-20 md:pb-8 min-h-screen relative">
-<!-- Atmospheric Background -->
-<div class="absolute inset-0 z-0 pointer-events-none opacity-40">
-<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-rarity-epic/10 rounded-full blur-[120px] mix-blend-screen"></div>
-<div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] mix-blend-screen"></div>
-</div>
-<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-lg relative z-10 flex flex-col gap-lg">
-<!-- Banner Tabs -->
-<div class="flex space-x-2 overflow-x-auto pb-2 scrollbar-hide border-b border-white/10 w-full lg:w-max">
-<button class="px-4 py-3 border-b-2 border-primary text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap bg-surface-container-high rounded-t">
-                    Featured
-                </button>
-<button class="px-4 py-3 border-b-2 border-transparent text-text-secondary hover:text-text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap transition-colors">
-                    Standard
-                </button>
-<button class="px-4 py-3 border-b-2 border-transparent text-text-secondary hover:text-text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap transition-colors flex items-center gap-2">
-                    Streak
-                    <span class="w-2 h-2 rounded-full bg-success glow-uncommon"></span>
-</button>
-<button class="px-4 py-3 border-b-2 border-transparent text-text-secondary hover:text-text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap transition-colors">
-                    Pact Seal
-                </button>
-</div>
-<!-- Featured Banner Layout (Asymmetric Glassmorphism) -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg min-h-[600px]">
-<!-- Main Banner Image Area (Left - 8 cols) -->
-<div class="lg:col-span-8 relative rounded-xl overflow-hidden border border-white/10 bg-bg-card banner-particles group">
-<!-- Image -->
-<img alt="Featured Monster Banner" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:scale-105 transition-all duration-700 ease-in-out" data-alt="A colossal, terrifying shadowy dragon wreathed in ethereal purple flames emerging from a dark abyss. Premium dark fantasy RPG artwork, high fidelity, dramatic cinematic lighting, deep shadows contrasting with luminous magical energy." src="https://lh3.googleusercontent.com/aida/AP1WRLsIJ5t3ex9J7QNc4y5-GaACDQd2ZsjAPI-FKq89EwoNQfpW1JpkSq7Li74OVk_uC69SnSMR94Zq4gmQ3wKAuxbSZdh05nUEY3ii-gY2xunSmIu-pfV9AQvD4v6-_giWoDm9PMhRgk2DpSkQ1qh8PmY_TvtxVzkEko4jSAJVrSD7x3Chx1Ni86aai085DmSAgW64I8alTIoMaOBqcevyjHBwywSXjJPd5qHIjI1HkR3spWg9hKpNGSJTnfE"/>
-<!-- Gradient Overlay -->
-<div class="absolute inset-0 bg-gradient-to-t from-bg-card via-bg-card/40 to-transparent"></div>
-<div class="absolute inset-0 bg-gradient-to-r from-bg-card/80 to-transparent"></div>
-<!-- Banner Content -->
-<div class="absolute bottom-0 left-0 p-lg w-full">
-<!-- Habit Charged Badge -->
-<div class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full border border-success/30 bg-success/10 backdrop-blur-md">
-<span class="material-symbols-outlined text-success text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
-<span class="font-label-caps text-[10px] text-success tracking-widest">Habit Charged: Rates +15%</span>
-</div>
-<h2 class="font-display-lg text-display-lg text-text-primary mb-2 text-shadow-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                            Void Walker
-                        </h2>
-<div class="flex items-center gap-4 mb-6">
-<span class="px-2 py-1 rounded bg-surface/80 border border-rarity-epic text-rarity-epic font-label-caps text-[10px] tracking-widest drop-shadow-[0_0_5px_rgba(206,147,216,0.5)]">Epic Rate Up</span>
-<p class="font-body-md text-body-md text-text-secondary max-w-md line-clamp-2">
-                                Creatures born from neglected habits, now tamed by consistency. High physical damage and dark affinity.
-                            </p>
-</div>
-</div>
-</div>
-<!-- Summoning Actions (Right - 4 cols) -->
-<div class="lg:col-span-4 flex flex-col gap-md">
-<!-- Ritual Display Area -->
-<div class="flex-1 rounded-xl bg-surface-container border border-white/5 relative overflow-hidden flex flex-col items-center justify-center min-h-[300px]">
-<!-- Arcane Circle Background -->
-<div class="absolute inset-0 opacity-20 ritual-circle pointer-events-none flex items-center justify-center">
-<div class="w-64 h-64 border border-rarity-epic/50 rounded-full flex items-center justify-center">
-<div class="w-48 h-48 border border-primary/30 rounded-full rotate-45 flex items-center justify-center">
-<div class="w-32 h-32 border border-rarity-mythic/20 rounded-full"></div>
-</div>
-</div>
-</div>
-</div>
-<!-- Pull Buttons Layout -->
-<div class="bg-surface-container rounded-xl border border-white/5 p-4 flex flex-col gap-4">
-<div class="flex gap-4">
-<!-- Pull x1 -->
-<button class="flex-1 bg-transparent border border-outline-variant hover:border-primary text-text-primary py-4 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:bg-bg-hover group">
-<span class="font-headline-sm text-headline-sm mb-1 group-hover:text-primary transition-colors">PULL x1</span>
-<div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px] text-rarity-rare" style="font-variation-settings: 'FILL' 1;">diamond</span>
-<span class="font-stats-sm text-stats-sm">160</span>
-</div>
-</button>
-<!-- Pull x10 (Primary) -->
-<button class="flex-[2] summon-btn py-4 rounded-lg flex flex-col items-center justify-center relative overflow-hidden group">
-<!-- Shine effect -->
-<div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-[shine_1.5s_ease-in-out]"></div>
-<span class="font-headline-sm text-headline-sm text-on-primary mb-1">PULL x10</span>
-<div class="flex items-center gap-1 opacity-90">
-<span class="material-symbols-outlined text-[14px] text-on-primary" style="font-variation-settings: 'FILL' 1;">diamond</span>
-<span class="font-stats-sm text-stats-sm text-on-primary">1600</span>
-</div>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <!-- Atmospheric Background -->
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-40">
+    <div
+      class="absolute top-0 right-0 w-[800px] h-[800px] bg-rarity-epic/10 rounded-full blur-[120px] mix-blend-screen"
+    ></div>
+    <div
+      class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] mix-blend-screen"
+    ></div>
+  </div>
+  <div
+    class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-lg relative z-10 flex flex-col gap-lg"
+  >
+    <!-- Banner Tabs -->
+    <div
+      class="flex space-x-2 overflow-x-auto pb-2 scrollbar-hide border-b border-white/10 w-full lg:w-max"
+    >
+      <button
+        class="px-4 py-3 border-b-2 border-primary text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap bg-surface-container-high rounded-t"
+      >
+        Featured
+      </button>
+      <button
+        class="px-4 py-3 border-b-2 border-transparent text-text-secondary hover:text-text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap transition-colors"
+      >
+        Standard
+      </button>
+      <button
+        class="px-4 py-3 border-b-2 border-transparent text-text-secondary hover:text-text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap transition-colors flex items-center gap-2"
+      >
+        Streak
+        <span class="w-2 h-2 rounded-full bg-success glow-uncommon"></span>
+      </button>
+      <button
+        class="px-4 py-3 border-b-2 border-transparent text-text-secondary hover:text-text-primary font-label-caps text-label-caps tracking-widest whitespace-nowrap transition-colors"
+      >
+        Pact Seal
+      </button>
+    </div>
+    <!-- Featured Banner Layout (Asymmetric Glassmorphism) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg min-h-[600px]">
+      <!-- Main Banner Image Area (Left - 8 cols) -->
+      <div
+        class="lg:col-span-8 relative rounded-xl overflow-hidden border border-white/10 bg-bg-card banner-particles group"
+      >
+        <!-- Image -->
+        <img
+          alt="Featured Monster Banner"
+          class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:scale-105 transition-all duration-700 ease-in-out"
+          data-alt="A colossal, terrifying shadowy dragon wreathed in ethereal purple flames emerging from a dark abyss. Premium dark fantasy RPG artwork, high fidelity, dramatic cinematic lighting, deep shadows contrasting with luminous magical energy."
+          src="https://lh3.googleusercontent.com/aida/AP1WRLsIJ5t3ex9J7QNc4y5-GaACDQd2ZsjAPI-FKq89EwoNQfpW1JpkSq7Li74OVk_uC69SnSMR94Zq4gmQ3wKAuxbSZdh05nUEY3ii-gY2xunSmIu-pfV9AQvD4v6-_giWoDm9PMhRgk2DpSkQ1qh8PmY_TvtxVzkEko4jSAJVrSD7x3Chx1Ni86aai085DmSAgW64I8alTIoMaOBqcevyjHBwywSXjJPd5qHIjI1HkR3spWg9hKpNGSJTnfE"
+        />
+        <!-- Gradient Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-bg-card via-bg-card/40 to-transparent"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-bg-card/80 to-transparent"></div>
+        <!-- Banner Content -->
+        <div class="absolute bottom-0 left-0 p-lg w-full">
+          <!-- Habit Charged Badge -->
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full border border-success/30 bg-success/10 backdrop-blur-md"
+          >
+            <span
+              class="material-symbols-outlined text-success text-sm"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >bolt</span
+            >
+            <span class="font-label-caps text-[10px] text-success tracking-widest"
+              >Habit Charged: Rates +15%</span
+            >
+          </div>
+          <h2
+            class="font-display-lg text-display-lg text-text-primary mb-2 text-shadow-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+          >
+            Void Walker
+          </h2>
+          <div class="flex items-center gap-4 mb-6">
+            <span
+              class="px-2 py-1 rounded bg-surface/80 border border-rarity-epic text-rarity-epic font-label-caps text-[10px] tracking-widest drop-shadow-[0_0_5px_rgba(206,147,216,0.5)]"
+              >Epic Rate Up</span
+            >
+            <p class="font-body-md text-body-md text-text-secondary max-w-md line-clamp-2">
+              Creatures born from neglected habits, now tamed by consistency. High physical damage
+              and dark affinity.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Summoning Actions (Right - 4 cols) -->
+      <div class="lg:col-span-4 flex flex-col gap-md">
+        <!-- Ritual Display Area -->
+        <div
+          class="flex-1 rounded-xl bg-surface-container border border-white/5 relative overflow-hidden flex flex-col items-center justify-center min-h-[300px]"
+        >
+          <!-- Arcane Circle Background -->
+          <div
+            class="absolute inset-0 opacity-20 ritual-circle pointer-events-none flex items-center justify-center"
+          >
+            <div
+              class="w-64 h-64 border border-rarity-epic/50 rounded-full flex items-center justify-center"
+            >
+              <div
+                class="w-48 h-48 border border-primary/30 rounded-full rotate-45 flex items-center justify-center"
+              >
+                <div class="w-32 h-32 border border-rarity-mythic/20 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pull Buttons Layout -->
+        <div class="bg-surface-container rounded-xl border border-white/5 p-4 flex flex-col gap-4">
+          <div class="flex gap-4">
+            <!-- Pull x1 -->
+            <button
+              class="flex-1 bg-transparent border border-outline-variant hover:border-primary text-text-primary py-4 rounded-lg flex flex-col items-center justify-center transition-all duration-300 hover:bg-bg-hover group"
+            >
+              <span
+                class="font-headline-sm text-headline-sm mb-1 group-hover:text-primary transition-colors"
+                >PULL x1</span
+              >
+              <div class="flex items-center gap-1">
+                <span
+                  class="material-symbols-outlined text-[14px] text-rarity-rare"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >diamond</span
+                >
+                <span class="font-stats-sm text-stats-sm">160</span>
+              </div>
+            </button>
+            <!-- Pull x10 (Primary) -->
+            <button
+              class="flex-[2] summon-btn py-4 rounded-lg flex flex-col items-center justify-center relative overflow-hidden group"
+            >
+              <!-- Shine effect -->
+              <div
+                class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-[shine_1.5s_ease-in-out]"
+              ></div>
+              <span class="font-headline-sm text-headline-sm text-on-primary mb-1">PULL x10</span>
+              <div class="flex items-center gap-1 opacity-90">
+                <span
+                  class="material-symbols-outlined text-[14px] text-on-primary"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >diamond</span
+                >
+                <span class="font-stats-sm text-stats-sm text-on-primary">1600</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 <style>
-        @keyframes shine {
-            100% { left: 125%; }
-        }
-    </style>
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+</style>

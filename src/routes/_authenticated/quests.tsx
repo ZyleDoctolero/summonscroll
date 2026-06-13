@@ -5,16 +5,24 @@ import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { getMyProfile, listGoals, createGoal, deleteGoal, type GoalType, type Goal } from "@/lib/game/supabase-api";
+import {
+  getMyProfile,
+  listGoals,
+  createGoal,
+  deleteGoal,
+  type GoalType,
+  type Goal,
+} from "@/lib/game/supabase-api";
+import { Icon } from "@/components/ui/Icon";
 
 export const Route = createFileRoute("/_authenticated/quests")({
   component: QuestsPage,
 });
 
 const TYPE_LABELS: Record<GoalType, { label: string; days: number; hp: number; color: string }> = {
-  quarterly: { label: "Quarterly Boss", days: 90, hp: 10000, color: "#E05252" },
-  monthly:   { label: "Monthly Quest", days: 30, hp: 3500, color: "#FFD54F" },
-  weekly:    { label: "Weekly Trial", days: 7, hp: 800, color: "#7FD4FF" },
+  quarterly: { label: "Quarterly Boss", days: 90, hp: 10000, color: "var(--danger)" },
+  monthly: { label: "Monthly Quest", days: 30, hp: 3500, color: "var(--gold-glow)" },
+  weekly: { label: "Weekly Trial", days: 7, hp: 800, color: "var(--cyan)" },
 };
 
 function QuestsPage() {
@@ -33,7 +41,8 @@ function QuestsPage() {
     onSuccess: () => {
       confetti({ particleCount: 100, spread: 60 });
       toast.success(`${TYPE_LABELS[type].label} forged.`);
-      setTitle(""); setIdentity("");
+      setTitle("");
+      setIdentity("");
       qc.invalidateQueries({ queryKey: ["goals-active"] });
       setTab("active");
     },
@@ -49,16 +58,26 @@ function QuestsPage() {
   });
 
   if (profileQ.isLoading) {
-    return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Loading the war room…</div>;
+    return (
+      <div
+        className="min-h-screen grid place-items-center"
+        style={{ color: "var(--ink-secondary)" }}
+      >
+        Loading the war room…
+      </div>
+    );
   }
   if (!profileQ.data) return null;
 
   return (
     <AppShell profile={profileQ.data.profile}>
       <div className="p-6 md:p-10 max-w-4xl mx-auto">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Quests</h1>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+          Quests
+        </h1>
         <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
-          A goal is a boss. Each task you finish drains its HP. Slay one → mint a Tome of Reverse Heaven.
+          A goal is a boss. Each task you finish drains its HP. Slay one → mint a Tome of Reverse
+          Heaven.
         </p>
 
         {/* Tabs */}
@@ -88,11 +107,13 @@ function QuestsPage() {
                 body="Choose one. Three months from now, what will you have slain?"
                 cta={{
                   label: "Name the Boss",
-                  onClick: () => setTab("forge")
+                  onClick: () => setTab("forge"),
                 }}
               />
             ) : (
-              (activeQ.data?.goals ?? []).map((g) => <GoalCard key={g.id} goal={g} onDelete={() => delMut.mutate(g.id)} />)
+              (activeQ.data?.goals ?? []).map((g) => (
+                <GoalCard key={g.id} goal={g} onDelete={() => delMut.mutate(g.id)} />
+              ))
             )}
           </div>
         )}
@@ -108,15 +129,29 @@ function QuestsPage() {
               />
             ) : (
               (slainQ.data?.goals ?? []).map((g) => (
-                <div key={g.id} className="ss-card" style={{ borderColor: "rgba(255,213,79,0.3)" }}>
+                <div
+                  key={g.id}
+                  className="ss-card"
+                  style={{ borderColor: "var(--ss-hairline-active)" }}
+                >
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-bold" style={{ color: "var(--gold-bright)" }}>👑 {g.title}</p>
+                      <p
+                        className="font-bold flex items-center gap-1.5"
+                        style={{ color: "var(--gold-bright)" }}
+                      >
+                        <Icon name="crown" size={14} color="var(--gold-bright)" />
+                        <span>{g.title}</span>
+                      </p>
                       <p className="text-xs mt-1" style={{ color: "var(--ink-tertiary)" }}>
-                        {TYPE_LABELS[g.type].label} · slain {g.slain_at ? new Date(g.slain_at).toLocaleDateString() : "—"}
+                        {TYPE_LABELS[g.type].label} · slain{" "}
+                        {g.slain_at ? new Date(g.slain_at).toLocaleDateString() : "—"}
                       </p>
                     </div>
-                    <span className="ss-chip ss-chip-gold">📕 +1 Tome</span>
+                    <span className="ss-chip ss-chip-gold flex items-center gap-1">
+                      <Icon name="tome" size={11} color="var(--gold-bright)" />
+                      <span>+1 Tome</span>
+                    </span>
                   </div>
                 </div>
               ))
@@ -152,7 +187,12 @@ function QuestsPage() {
               </Field>
 
               <div>
-                <p className="text-[10px] uppercase tracking-widest mb-2 font-semibold" style={{ color: "var(--ink-secondary)" }}>Cadence</p>
+                <p
+                  className="text-[10px] uppercase tracking-widest mb-2 font-semibold"
+                  style={{ color: "var(--ink-secondary)" }}
+                >
+                  Cadence
+                </p>
                 <div className="grid grid-cols-3 gap-2">
                   {(["quarterly", "monthly", "weekly"] as GoalType[]).map((k) => {
                     const def = TYPE_LABELS[k];
@@ -166,7 +206,10 @@ function QuestsPage() {
                           borderColor: type === k ? def.color : undefined,
                         }}
                       >
-                        <p className="text-xs font-bold" style={{ color: type === k ? def.color : "var(--ink-primary)" }}>
+                        <p
+                          className="text-xs font-bold"
+                          style={{ color: type === k ? def.color : "var(--ink-primary)" }}
+                        >
                           {def.label}
                         </p>
                         <p className="text-[10px] mt-0.5" style={{ color: "var(--ink-tertiary)" }}>
@@ -207,12 +250,17 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
               {def.label}
             </span>
             {goal.identity && (
-              <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--ink-secondary)" }}>
+              <span
+                className="text-[10px] uppercase tracking-widest"
+                style={{ color: "var(--ink-secondary)" }}
+              >
                 · {goal.identity}
               </span>
             )}
           </div>
-          <h3 className="text-base font-bold" style={{ color: "var(--ink-primary)" }}>{goal.title}</h3>
+          <h3 className="text-base font-bold" style={{ color: "var(--ink-primary)" }}>
+            {goal.title}
+          </h3>
         </div>
         <button onClick={onDelete} className="ss-btn ss-btn-ghost text-[10px] min-h-[32px] px-3">
           Abandon
@@ -225,7 +273,10 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
           {goal.hp_remaining.toLocaleString()} / {goal.hp_total.toLocaleString()}
         </span>
       </div>
-      <div className="h-3 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
+      <div
+        className="h-3 rounded-full overflow-hidden"
+        style={{ background: "rgba(255,255,255,0.06)" }}
+      >
         <div
           className="h-full transition-all"
           style={{
@@ -236,7 +287,8 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
         />
       </div>
       <p className="text-[10px] mt-2" style={{ color: "var(--ink-tertiary)" }}>
-        {daysLeft} day{daysLeft === 1 ? "" : "s"} left · Link tasks via Task Edit dialog to drain HP.
+        {daysLeft} day{daysLeft === 1 ? "" : "s"} left · Link tasks via Task Edit dialog to drain
+        HP.
       </p>
     </div>
   );
@@ -245,7 +297,10 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <div className="text-[10px] uppercase tracking-widest mb-1 font-semibold" style={{ color: "var(--ink-secondary)" }}>
+      <div
+        className="text-[10px] uppercase tracking-widest mb-1 font-semibold"
+        style={{ color: "var(--ink-secondary)" }}
+      >
         {label}
       </div>
       {children}

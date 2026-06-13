@@ -18,12 +18,7 @@ export function xpToNextLevel(level: number): number {
   return Math.round(25 + (level - 1) * 12);
 }
 
-export function valueColor(value: number):
-  | "blue"
-  | "green"
-  | "yellow"
-  | "orange"
-  | "red" {
+export function valueColor(value: number): "blue" | "green" | "yellow" | "orange" | "red" {
   if (value >= 5) return "blue";
   if (value >= 1) return "green";
   if (value >= -1) return "yellow";
@@ -54,11 +49,7 @@ export function rewardGems(value: number, diff: Difficulty): number {
   return Math.max(0, base);
 }
 
-export function damageFromMiss(
-  value: number,
-  diff: Difficulty,
-  con: number,
-): number {
+export function damageFromMiss(value: number, diff: Difficulty, con: number): number {
   const m = DIFFICULTY_MULT[diff];
   const conRed = Math.min(0.4, con * 0.01);
   return Math.max(1, Math.round((1 - value / 20) * m * 2 * (1 - conRed)));
@@ -94,4 +85,3 @@ export function dowFromISO(iso: string): number {
 }
 
 export const CURRENT_RELEASED_MAX = 150;
-

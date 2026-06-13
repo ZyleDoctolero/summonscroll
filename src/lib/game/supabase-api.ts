@@ -24,9 +24,15 @@ import {
 // ─── Profile ────────────────────────────────────────────────────────────────
 
 export async function changeClass(newClass: "warrior" | "mage" | "rogue" | "healer") {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
-  const { data: p } = await supabase.from("profiles").select("level, class, crystals, last_class_change").eq("id", user.id).single();
+  const { data: p } = await supabase
+    .from("profiles")
+    .select("level, class, crystals, last_class_change")
+    .eq("id", user.id)
+    .single();
   if (p!.level < 10) throw new Error("Must be Level 10 to choose a class.");
   if (p!.class === newClass) throw new Error("Already that class.");
 
@@ -48,17 +54,22 @@ export async function changeClass(newClass: "warrior" | "mage" | "rogue" | "heal
     throw new Error(`Changing class costs ${cost} Crystals.`);
   }
 
-  await supabase.from("profiles").update({
-    class: newClass,
-    crystals: p!.crystals - cost,
-    last_class_change: now.toISOString()
-  }).eq("id", user.id);
-  
+  await supabase
+    .from("profiles")
+    .update({
+      class: newClass,
+      crystals: p!.crystals - cost,
+      last_class_change: now.toISOString(),
+    })
+    .eq("id", user.id);
+
   return { ok: true };
 }
 
 export async function getMyProfile() {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const { data: profile, error } = await supabase
@@ -74,7 +85,11 @@ export async function getMyProfile() {
 
   // Re-fetch profile after cron
   if (cron.ran) {
-    const { data: updated } = await supabase.from("profiles").select("*").eq("id", user.id).single();
+    const { data: updated } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("id", user.id)
+      .single();
     return { profile: updated!, cron };
   }
 
@@ -109,8 +124,12 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
 
   if (days.length > 0) {
     // Archive old side quests
-    await supabase.from("tasks").update({ archived: true })
-      .eq("user_id", userId).eq("category", "side_quest").eq("archived", false);
+    await supabase
+      .from("tasks")
+      .update({ archived: true })
+      .eq("user_id", userId)
+      .eq("category", "side_quest")
+      .eq("archived", false);
 
     const { data: tasks } = await supabase
       .from("tasks")
@@ -129,7 +148,11 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
         if (t.last_completed_date === day) continue;
 
         dayMissedCount += 1;
-        dayDmg += damageFromMiss(Number(t.value), t.difficulty as Difficulty, (profile.con_stat as number) ?? 0);
+        dayDmg += damageFromMiss(
+          Number(t.value),
+          t.difficulty as Difficulty,
+          (profile.con_stat as number) ?? 0,
+        );
         tasksToDrift.push(t);
       }
 
@@ -169,8 +192,12 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
   }
 
   // Generate daily side-quests if none exist
-  const { data: activeSQ } = await supabase.from("tasks")
-    .select("id").eq("user_id", userId).eq("category", "side_quest").eq("archived", false);
+  const { data: activeSQ } = await supabase
+    .from("tasks")
+    .select("id")
+    .eq("user_id", userId)
+    .eq("category", "side_quest")
+    .eq("archived", false);
 
   if (!activeSQ || activeSQ.length === 0) {
     const sqTemplates = [
@@ -178,13 +205,18 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
       { title: "Win 2 Arena Battles", difficulty: "medium" },
       { title: "Score 3 Dailies", difficulty: "easy" },
       { title: "Level up a monster's bond", difficulty: "medium" },
-      { title: "Pull from the Altar", difficulty: "easy" }
+      { title: "Pull from the Altar", difficulty: "easy" },
     ];
     const shuffled = sqTemplates.sort(() => 0.5 - Math.random()).slice(0, 3);
     for (let i = 0; i < shuffled.length; i++) {
       await supabase.from("tasks").insert({
-        user_id: userId, type: "todo", category: "side_quest",
-        title: shuffled[i].title, difficulty: shuffled[i].difficulty as Difficulty, value: 0, sort_order: i
+        user_id: userId,
+        type: "todo",
+        category: "side_quest",
+        title: shuffled[i].title,
+        difficulty: shuffled[i].difficulty as Difficulty,
+        value: 0,
+        sort_order: i,
       });
     }
   }
@@ -205,12 +237,20 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
     deaths += 1;
   }
 
-  await supabase.from("profiles").update({
-    hp, level, xp, gold, deaths, streak,
-    streak_freeze_charges: freezes,
-    last_cron_date: today,
-    last_login_date: today,
-  }).eq("id", userId);
+  await supabase
+    .from("profiles")
+    .update({
+      hp,
+      level,
+      xp,
+      gold,
+      deaths,
+      streak,
+      streak_freeze_charges: freezes,
+      last_cron_date: today,
+      last_login_date: today,
+    })
+    .eq("id", userId);
 
   return { ran: true, died, missedDailies: missedCount, hpLost, freezesUsed: freezeUsedCount };
 }
@@ -230,11 +270,18 @@ export async function listTasks() {
 }
 
 export async function createTask(input: {
-  type: TaskType; title: string; notes?: string; category?: string;
-  difficulty?: Difficulty; positive_enabled?: boolean; negative_enabled?: boolean;
+  type: TaskType;
+  title: string;
+  notes?: string;
+  category?: string;
+  difficulty?: Difficulty;
+  positive_enabled?: boolean;
+  negative_enabled?: boolean;
   schedule_days?: number[];
 }) {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const { data, error } = await supabase
@@ -258,8 +305,13 @@ export async function deleteTask(id: string) {
   return { ok: true };
 }
 
-export async function scoreTask(id: string, direction: "plus" | "minus" | "complete" | "uncomplete") {
-  const { data: { user } } = await supabase.auth.getUser();
+export async function scoreTask(
+  id: string,
+  direction: "plus" | "minus" | "complete" | "uncomplete",
+) {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const [taskRes, profileRes] = await Promise.all([
@@ -274,15 +326,18 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
   const diff = task.difficulty as Difficulty;
   const today = todayISO();
   let newVal = Number(task.value);
-  let goldGain = 0, xpGain = 0, gemGain = 0, hpChange = 0;
+  let goldGain = 0,
+    xpGain = 0,
+    gemGain = 0,
+    hpChange = 0;
   let newStreak = task.streak as number;
   let completed = task.completed as boolean;
   let lastCompletedDate = task.last_completed_date as string | null;
   const isPositive = direction === "plus" || direction === "complete";
-  const talents = profile.talents as Record<string, number> ?? {};
+  const talents = (profile.talents as Record<string, number>) ?? {};
   const greedMult = 1 + (talents.greed ?? 0) * 0.05;
   const scholarMult = 1 + (talents.scholar ?? 0) * 0.05;
-  const resilienceMult = 1 - (talents.resilience ?? 0) * 0.10;
+  const resilienceMult = 1 - (talents.resilience ?? 0) * 0.1;
   const collectorMult = 1 + (talents.collector ?? 0) * 0.05;
 
   if (direction === "plus") {
@@ -295,7 +350,9 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
   } else if (direction === "minus") {
     if (!task.negative_enabled) throw new Error("Negative disabled");
     newVal = nextValueMinus(newVal);
-    hpChange = -Math.round(damageFromMiss(Number(task.value), diff, profile.con_stat ?? 0) * resilienceMult);
+    hpChange = -Math.round(
+      damageFromMiss(Number(task.value), diff, profile.con_stat ?? 0) * resilienceMult,
+    );
     newStreak = 0;
   } else if (direction === "complete") {
     if (completed) return { ok: true, noop: true, reward: null, isPositive: true, died: false };
@@ -324,7 +381,7 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
     const now = new Date();
     if (newLastTaskTime) {
       const lastTime = new Date(newLastTaskTime);
-      if ((now.getTime() - lastTime.getTime()) < 60 * 60 * 1000) {
+      if (now.getTime() - lastTime.getTime() < 60 * 60 * 1000) {
         newComboCount += 1;
       } else {
         newComboCount = 1;
@@ -346,11 +403,16 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
   }
 
   // Update task
-  await supabase.from("tasks").update({
-    value: newVal, streak: newStreak, completed,
-    last_completed_date: lastCompletedDate,
-    last_completed_at: isPositive ? new Date().toISOString() : task.last_completed_at,
-  }).eq("id", id);
+  await supabase
+    .from("tasks")
+    .update({
+      value: newVal,
+      streak: newStreak,
+      completed,
+      last_completed_date: lastCompletedDate,
+      last_completed_at: isPositive ? new Date().toISOString() : task.last_completed_at,
+    })
+    .eq("id", id);
 
   // Update profile
   let newGold = Math.max(0, profile.gold + goldGain);
@@ -380,36 +442,59 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
     deaths += 1;
   }
 
-  await supabase.from("profiles").update({
-    gold: newGold, crystals: newCrystals, hp: newHp,
-    xp: newXp, level: newLevel, deaths,
-    combo_count: newComboCount, last_task_time: newLastTaskTime,
-  }).eq("id", user.id);
+  await supabase
+    .from("profiles")
+    .update({
+      gold: newGold,
+      crystals: newCrystals,
+      hp: newHp,
+      xp: newXp,
+      level: newLevel,
+      deaths,
+      combo_count: newComboCount,
+      last_task_time: newLastTaskTime,
+    })
+    .eq("id", user.id);
 
   // Random drop
   let drop: { type: string; name: string } | null = null;
   if (isPositive) {
-    const perBonus = 1 + ((profile.per_stat ?? 0) * 0.005);
+    const perBonus = 1 + (profile.per_stat ?? 0) * 0.005;
     const dropRoll = Math.random() / (perBonus * collectorMult);
     if (dropRoll < 0.03) {
       const eggs = ["Wolf", "Dragon", "Phoenix", "Serpent", "Griffin", "Owl", "Bear", "Fox"];
       drop = { type: "egg", name: `${eggs[Math.floor(Math.random() * eggs.length)]} Egg` };
     } else if (dropRoll < 0.06) {
       const realms = ["Arcane", "Chaos", "Void", "Death", "Nature", "Divine", "Dread", "Digital"];
-      drop = { type: "realm_potion", name: `${realms[Math.floor(Math.random() * realms.length)]} Potion` };
-    } else if (dropRoll < 0.10) {
-      drop = { type: "food", name: ["Meat", "Fish", "Fruit", "Cheese", "Honey"][Math.floor(Math.random() * 5)] };
+      drop = {
+        type: "realm_potion",
+        name: `${realms[Math.floor(Math.random() * realms.length)]} Potion`,
+      };
+    } else if (dropRoll < 0.1) {
+      drop = {
+        type: "food",
+        name: ["Meat", "Fish", "Fruit", "Cheese", "Honey"][Math.floor(Math.random() * 5)],
+      };
     } else if (dropRoll < 0.15) {
       const mats = ["Iron Ore", "Shadow Essence", "Void Core", "Light Crystal"];
       drop = { type: "material", name: mats[Math.floor(Math.random() * mats.length)] };
     }
     if (drop) {
-      const { data: existing } = await supabase.from("inventory")
-        .select("id, quantity").eq("item_type", drop.type).eq("item_name", drop.name).maybeSingle();
+      const { data: existing } = await supabase
+        .from("inventory")
+        .select("id, quantity")
+        .eq("item_type", drop.type)
+        .eq("item_name", drop.name)
+        .maybeSingle();
       if (existing) {
-        await supabase.from("inventory").update({ quantity: existing.quantity + 1 }).eq("id", existing.id);
+        await supabase
+          .from("inventory")
+          .update({ quantity: existing.quantity + 1 })
+          .eq("id", existing.id);
       } else {
-        await supabase.from("inventory").insert({ user_id: user.id, item_type: drop.type, item_name: drop.name, quantity: 1 });
+        await supabase
+          .from("inventory")
+          .insert({ user_id: user.id, item_type: drop.type, item_name: drop.name, quantity: 1 });
       }
     }
   }
@@ -420,7 +505,9 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
   // +0.5 bond. This is the channel that habits build monster affinity.
   const taskTags = (task.tags as string[] | null) ?? [];
   const statTags = ["str", "int", "con", "per"] as const;
-  const targetStats = taskTags.filter((t) => (statTags as readonly string[]).includes(t.toLowerCase())).map((t) => t.toLowerCase());
+  const targetStats = taskTags
+    .filter((t) => (statTags as readonly string[]).includes(t.toLowerCase()))
+    .map((t) => t.toLowerCase());
 
   const growthTicks: Array<{ user_monster_id: string; monster_name: string; stat: string }> = [];
 
@@ -459,7 +546,8 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
   }
 
   // ─── Goal HP drain (quest engine) ───────────────────────────────────
-  let goalDamage: Awaited<ReturnType<typeof import("./quests-client").damageGoalsForTask>> | null = null;
+  let goalDamage: Awaited<ReturnType<typeof import("./quests-client").damageGoalsForTask>> | null =
+    null;
   if (isPositive && xpGain > 0) {
     try {
       const { damageGoalsForTask } = await import("./quests-client");
@@ -472,7 +560,10 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
   return {
     ok: true,
     reward: { gold: goldGain, xp: xpGain, crystals: gemGain, hp: hpChange },
-    isPositive, died, drop, leveledUp,
+    isPositive,
+    died,
+    drop,
+    leveledUp,
     growthTicks,
     awakenings,
     goalDamage,
@@ -482,23 +573,40 @@ export async function scoreTask(id: string, direction: "plus" | "minus" | "compl
 // Pure helper that mirrors the DB role_to_stat() function.
 function roleToStat(role: string): "str" | "int" | "con" | "per" {
   switch (role) {
-    case "attacker": return "str";
-    case "tank":     return "con";
-    case "healer":   return "con";
-    case "support":  return "int";
-    case "debuffer": return "per";
-    default:         return "str";
+    case "attacker":
+      return "str";
+    case "tank":
+      return "con";
+    case "healer":
+      return "con";
+    case "support":
+      return "int";
+    case "debuffer":
+      return "per";
+    default:
+      return "str";
   }
 }
 
 // ─── Expeditions ────────────────────────────────────────────────────────────
 
-export { runExpedition, expeditionForDay, EXPEDITIONS, computeCurrentStamina, nextRegenIn } from "./expeditions-client";
+export {
+  runExpedition,
+  expeditionForDay,
+  EXPEDITIONS,
+  computeCurrentStamina,
+  nextRegenIn,
+} from "./expeditions-client";
 export type { Drop as ExpeditionDrop, ExpeditionType } from "./expeditions-client";
 
 // ─── Promotion Chamber ──────────────────────────────────────────────────────
 
-export { checkPromotionEligibility, promoteMonster, requirementForPromotion, stoneForRole } from "./promotion-client";
+export {
+  checkPromotionEligibility,
+  promoteMonster,
+  requirementForPromotion,
+  stoneForRole,
+} from "./promotion-client";
 export type { PromotionRequirement, PromotionCheck } from "./promotion-client";
 
 // ─── Daily Ritual ───────────────────────────────────────────────────────────
@@ -560,29 +668,47 @@ export async function listRealms() {
 }
 
 export async function listAllMonsters() {
-  const { data, error } = await supabase.from("monsters").select("*, realms(name, icon)").lte("bestiary_id", CURRENT_RELEASED_MAX).order("realm_id").order("rarity");
+  const { data, error } = await supabase
+    .from("monsters")
+    .select("*, realms(name, icon)")
+    .lte("bestiary_id", CURRENT_RELEASED_MAX)
+    .order("realm_id")
+    .order("rarity");
   if (error) throw error;
   return { monsters: data ?? [] };
 }
 
 export async function listMyMonsters() {
-  const { data, error } = await supabase.from("user_monsters").select("*, monster:monsters(*, realms(name, icon))").order("obtained_at", { ascending: false });
+  const { data, error } = await supabase
+    .from("user_monsters")
+    .select("*, monster:monsters(*, realms(name, icon))")
+    .order("obtained_at", { ascending: false });
   if (error) throw error;
   return { userMonsters: data ?? [] };
 }
 
 export async function updateTeamSlot(userMonsterId: string, slot: number | null) {
   if (slot !== null) {
-    await supabase.from("user_monsters").update({ is_on_team: false, team_slot: null }).eq("team_slot", slot);
+    await supabase
+      .from("user_monsters")
+      .update({ is_on_team: false, team_slot: null })
+      .eq("team_slot", slot);
   }
-  await supabase.from("user_monsters").update({ is_on_team: slot !== null, team_slot: slot }).eq("id", userMonsterId);
+  await supabase
+    .from("user_monsters")
+    .update({ is_on_team: slot !== null, team_slot: slot })
+    .eq("id", userMonsterId);
   return { ok: true };
 }
 
 // ─── Battle ─────────────────────────────────────────────────────────────────
 
 export async function getTeam() {
-  const { data, error } = await supabase.from("user_monsters").select("*, monster:monsters(*)").eq("is_on_team", true).order("team_slot");
+  const { data, error } = await supabase
+    .from("user_monsters")
+    .select("*, monster:monsters(*)")
+    .eq("is_on_team", true)
+    .order("team_slot");
   if (error) throw error;
   return { team: data ?? [] };
 }
@@ -593,7 +719,11 @@ export async function getTowerProgress() {
 }
 
 export async function getBattleHistory() {
-  const { data, error } = await supabase.from("arena_battles").select("*").order("created_at", { ascending: false }).limit(20);
+  const { data, error } = await supabase
+    .from("arena_battles")
+    .select("*")
+    .order("created_at", { ascending: false })
+    .limit(20);
   if (error) throw error;
   return { battles: data ?? [] };
 }
@@ -604,7 +734,11 @@ export type { FloorType } from "./battle-client";
 // ─── Shop ───────────────────────────────────────────────────────────────────
 
 export async function listShopItems() {
-  const { data, error } = await supabase.from("shop_items").select("*, equipment(*)").eq("is_active", true).order("sort_order");
+  const { data, error } = await supabase
+    .from("shop_items")
+    .select("*, equipment(*)")
+    .eq("is_active", true)
+    .order("sort_order");
   if (error) throw error;
   return { items: data ?? [] };
 }
@@ -613,12 +747,23 @@ export { purchaseItem, equipItem } from "./shop-client";
 
 // ─── Guild ──────────────────────────────────────────────────────────────────
 
-export { getMyGuild, listGuilds, createGuild, joinGuild, leaveGuild, listQuestTemplates, startQuest, getAvailableScrolls } from "./guild-client";
+export {
+  getMyGuild,
+  listGuilds,
+  createGuild,
+  joinGuild,
+  leaveGuild,
+  listQuestTemplates,
+  startQuest,
+  getAvailableScrolls,
+} from "./guild-client";
 
 // ─── Profile Extended ───────────────────────────────────────────────────────
 
 export async function getFullProfile() {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   const [profileRes, monstersRes, equipRes, inventoryRes, petsRes, battlesRes] = await Promise.all([
@@ -632,7 +777,11 @@ export async function getFullProfile() {
 
   return {
     profile: profileRes.data,
-    stats: { monstersCollected: monstersRes.data?.length ?? 0, battlesWon: battlesRes.data?.length ?? 0, petsOwned: petsRes.data?.length ?? 0 },
+    stats: {
+      monstersCollected: monstersRes.data?.length ?? 0,
+      battlesWon: battlesRes.data?.length ?? 0,
+      petsOwned: petsRes.data?.length ?? 0,
+    },
     equippedGear: equipRes.data ?? [],
     inventory: inventoryRes.data ?? [],
     pets: petsRes.data ?? [],
@@ -640,20 +789,25 @@ export async function getFullProfile() {
 }
 
 export async function getAllAchievements() {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
   const [allRes, unlockedRes] = await Promise.all([
     supabase.from("achievements").select("*").order("condition_value"),
     supabase.from("user_achievements").select("achievement_id"),
   ]);
   const unlockedIds = new Set((unlockedRes.data ?? []).map((u) => u.achievement_id));
-  return { achievements: (allRes.data ?? []).map((a) => ({ ...a, unlocked: unlockedIds.has(a.id) })) };
+  return {
+    achievements: (allRes.data ?? []).map((a) => ({ ...a, unlocked: unlockedIds.has(a.id) })),
+  };
 }
 
 export async function listEquipment() {
-  const { data, error } = await supabase.from("user_equipment").select("*, equipment(*)").order("obtained_at", { ascending: false });
+  const { data, error } = await supabase
+    .from("user_equipment")
+    .select("*, equipment(*)")
+    .order("obtained_at", { ascending: false });
   if (error) throw error;
   return { equipment: data ?? [] };
 }
-
-

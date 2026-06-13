@@ -8,7 +8,15 @@ import { Icon } from "@/components/ui/Icon";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
 import { PromotionChamber } from "@/components/game/PromotionChamber";
-import { getMyProfile, listRealms, listAllMonsters, listMyMonsters, awakeningsForRole, moodForBond, MOOD_META } from "@/lib/game/supabase-api";
+import {
+  getMyProfile,
+  listRealms,
+  listAllMonsters,
+  listMyMonsters,
+  awakeningsForRole,
+  moodForBond,
+  MOOD_META,
+} from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens";
 
@@ -54,39 +62,69 @@ function CompendiumPage() {
     return stats;
   }, [monstersQ.data, ownedIds]);
 
-  if (profileQ.isLoading) return <div className="min-h-screen grid place-items-center" style={{ color: "var(--ink-secondary)" }}>Loading…</div>;
+  if (profileQ.isLoading)
+    return (
+      <div
+        className="min-h-screen grid place-items-center"
+        style={{ color: "var(--ink-secondary)" }}
+      >
+        Loading…
+      </div>
+    );
   if (!profileQ.data) return null;
 
-  const sel = selectedId ? (monstersQ.data?.monsters ?? []).find((m: any) => m.id === selectedId) : null;
+  const sel = selectedId
+    ? (monstersQ.data?.monsters ?? []).find((m: any) => m.id === selectedId)
+    : null;
   const selOwned = selectedId ? ownedIds.has(selectedId) : false;
-  const selUm = selectedId ? (myMonstersQ.data?.userMonsters ?? []).find((um: any) => um.monster_id === selectedId) : null;
+  const selUm = selectedId
+    ? (myMonstersQ.data?.userMonsters ?? []).find((um: any) => um.monster_id === selectedId)
+    : null;
 
   return (
     <AppShell profile={profileQ.data.profile}>
       <div className="bg-atmos bg-atmos-compendium p-6 md:p-10 max-w-6xl mx-auto min-h-screen">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>Compendium</h1>
-        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>{ownedIds.size} / {monstersQ.data?.monsters?.length ?? 0} discovered</p>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+          Compendium
+        </h1>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
+          {ownedIds.size} / {monstersQ.data?.monsters?.length ?? 0} discovered
+        </p>
 
         {/* Realm tabs */}
         <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
-          <PillBtn active={realmFilter === null} onClick={() => setRealmFilter(null)}>All</PillBtn>
+          <PillBtn active={realmFilter === null} onClick={() => setRealmFilter(null)}>
+            All
+          </PillBtn>
           {(realmsQ.data?.realms ?? []).map((r: any) => (
             <PillBtn key={r.id} active={realmFilter === r.id} onClick={() => setRealmFilter(r.id)}>
-              {r.icon} {r.name} {realmStats[r.id] ? `${realmStats[r.id].owned}/${realmStats[r.id].total}` : ""}
+              {r.icon} {r.name}{" "}
+              {realmStats[r.id] ? `${realmStats[r.id].owned}/${realmStats[r.id].total}` : ""}
             </PillBtn>
           ))}
         </div>
 
         {/* Filters */}
         <div className="flex gap-3 mb-6 flex-wrap">
-          <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search…"
-            className="ss-input flex-1 min-w-[180px]" />
-          <select value={rarityFilter} onChange={(e) => setRarityFilter(e.target.value)}
-            className="ss-input w-auto">
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search…"
+            className="ss-input flex-1 min-w-[180px]"
+          />
+          <select
+            value={rarityFilter}
+            onChange={(e) => setRarityFilter(e.target.value)}
+            className="ss-input w-auto"
+          >
             <option value="">All Rarities</option>
-            {["common","uncommon","rare","elite","epic","legendary","mythic","ex"].map((r) => (
-              <option key={r} value={r}>{r[0].toUpperCase() + r.slice(1)}</option>
-            ))}
+            {["common", "uncommon", "rare", "elite", "epic", "legendary", "mythic", "ex"].map(
+              (r) => (
+                <option key={r} value={r}>
+                  {r[0].toUpperCase() + r.slice(1)}
+                </option>
+              ),
+            )}
           </select>
         </div>
 
@@ -96,32 +134,57 @@ function CompendiumPage() {
             const owned = ownedIds.has(m.id);
             const r = m.rarity as Rarity;
             return (
-              <button key={m.id} onClick={() => setSelectedId(m.id)}
+              <button
+                key={m.id}
+                onClick={() => setSelectedId(m.id)}
                 className="ss-card rounded-lg p-3 text-center transition-all hover:scale-[1.03]"
                 style={{
                   opacity: owned ? 1 : 0.5,
                   borderColor: owned ? RARITY_COLOR[r] : undefined,
                   boxShadow: owned && r !== "common" ? RARITY_GLOW[r] : undefined,
-                }}>
-                <div className="w-full aspect-square rounded mb-2 flex items-center justify-center text-3xl overflow-hidden ss-pane"
-                     style={{ 
-                       border: owned ? `2px solid ${RARITY_COLOR[r]}` : "2px dashed rgba(255,255,255,0.1)",
-                       boxShadow: owned && r !== "common" ? `0 0 10px ${RARITY_COLOR[r]}40 inset` : undefined
-                     }}>
+                }}
+              >
+                <div
+                  className="w-full aspect-square rounded mb-2 flex items-center justify-center text-3xl overflow-hidden ss-pane"
+                  style={{
+                    border: owned
+                      ? `2px solid ${RARITY_COLOR[r]}`
+                      : "2px dashed rgba(255,255,255,0.1)",
+                    boxShadow:
+                      owned && r !== "common" ? `0 0 10px ${RARITY_COLOR[r]}40 inset` : undefined,
+                  }}
+                >
                   {owned ? (
-                    <img src={m.art_url ? m.art_url : `/sprites/monsters/${m.name.toLowerCase().replace(/[^a-z0-9]+/g, '_')}.png`} 
-                         className="w-full h-full object-cover" 
-                         alt={m.name}
-                         loading="lazy"
-                         decoding="async"
-                         onError={(e) => { e.currentTarget.src = "/monsters/placeholder.png" }} />
-                  ) : "?"}
+                    <img
+                      src={
+                        m.art_url
+                          ? m.art_url
+                          : `/sprites/monsters/${m.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                      }
+                      className="w-full h-full object-cover"
+                      alt={m.name}
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        e.currentTarget.src = "/monsters/placeholder.png";
+                      }}
+                    />
+                  ) : (
+                    "?"
+                  )}
                 </div>
-                <p className="text-xs font-bold truncate" style={{ color: owned ? "var(--ink-primary)" : "var(--ink-tertiary)" }}>
+                <p
+                  className="text-xs font-bold truncate"
+                  style={{ color: owned ? "var(--ink-primary)" : "var(--ink-tertiary)" }}
+                >
                   {owned ? m.name : "???"}
                 </p>
-                <span className="ss-chip mt-1"
-                  style={{ background: `${RARITY_COLOR[r]}20`, color: RARITY_COLOR[r] }}>{r}</span>
+                <span
+                  className="ss-chip mt-1"
+                  style={{ background: `${RARITY_COLOR[r]}20`, color: RARITY_COLOR[r] }}
+                >
+                  {r}
+                </span>
               </button>
             );
           })}
@@ -136,8 +199,8 @@ function CompendiumPage() {
       </div>
 
       {/* Detail modal */}
-      <ResponsiveDialog 
-        open={!!sel} 
+      <ResponsiveDialog
+        open={!!sel}
         onOpenChange={(open) => !open && setSelectedId(null)}
         title={sel?.name || ""}
       >
@@ -165,14 +228,23 @@ function CompendiumPage() {
 // ─── Detail Modal Content ──────────────────────────────────────────────────
 
 function DetailModalContent({
-  sel, selOwned, selUm, onPromote,
+  sel,
+  selOwned,
+  selUm,
+  onPromote,
 }: {
   sel: any;
   selOwned: boolean;
   selUm: any;
   onPromote: (userMonsterId: string, name: string) => void;
 }) {
-  const roleToStat: Record<string, string> = { attacker: "str", tank: "con", healer: "con", support: "int", debuffer: "per" };
+  const roleToStat: Record<string, string> = {
+    attacker: "str",
+    tank: "con",
+    healer: "con",
+    support: "int",
+    debuffer: "per",
+  };
   const stat = roleToStat[sel.role] ?? "str";
 
   const skills = [sel.skill_1, sel.skill_2, sel.skill_3].filter(Boolean);
@@ -191,153 +263,244 @@ function DetailModalContent({
             className="flex gap-2 mt-1 items-center flex-wrap"
           >
             <RarityBadge rarity={sel.rarity as Rarity} />
-            <span className="ss-stat-chip" data-stat={stat}>{sel.role}</span>
-            <span className="text-xs" style={{ color: "var(--ink-secondary)" }}>{sel.element}</span>
+            <span className="ss-stat-chip" data-stat={stat}>
+              {sel.role}
+            </span>
+            <span className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+              {sel.element}
+            </span>
           </motion.div>
         </div>
       </div>
-        <motion.div
-          initial={{ opacity: 0, y: 6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...trans.itemIn, delay: 0.06 }}
-          className="grid grid-cols-4 gap-2 mb-4 text-center"
-        >
-          {([["HP", sel.base_hp], ["ATK", sel.base_atk], ["DEF", sel.base_def], ["SPD", sel.base_spd]] as const).map(([l, v]) => (
-            <div key={l} className="ss-pane rounded-md p-2">
-              <div className="text-[10px] uppercase tracking-[0.18em]" style={{ color: "var(--ink-tertiary)" }}>{l}</div>
-              <div className="t-mono-lg font-bold mt-0.5" style={{ color: "var(--gold-bright)" }}>
-                <NumberFlow value={v} />
-              </div>
+      <motion.div
+        initial={{ opacity: 0, y: 6 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...trans.itemIn, delay: 0.06 }}
+        className="grid grid-cols-4 gap-2 mb-4 text-center"
+      >
+        {(
+          [
+            ["HP", sel.base_hp],
+            ["ATK", sel.base_atk],
+            ["DEF", sel.base_def],
+            ["SPD", sel.base_spd],
+          ] as const
+        ).map(([l, v]) => (
+          <div key={l} className="ss-pane rounded-md p-2">
+            <div
+              className="text-[10px] uppercase tracking-[0.18em]"
+              style={{ color: "var(--ink-tertiary)" }}
+            >
+              {l}
             </div>
-          ))}
-        </motion.div>
+            <div className="t-mono-lg font-bold mt-0.5" style={{ color: "var(--gold-bright)" }}>
+              <NumberFlow value={v} />
+            </div>
+          </div>
+        ))}
+      </motion.div>
 
-        <div className="space-y-1 mb-4">
-          <div className="text-[10px] uppercase tracking-[0.18em] font-semibold" style={{ color: "var(--ink-secondary)" }}>Skills</div>
-          {skills.map((s: any, i: number) => (
+      <div className="space-y-1 mb-4">
+        <div
+          className="text-[10px] uppercase tracking-[0.18em] font-semibold"
+          style={{ color: "var(--ink-secondary)" }}
+        >
+          Skills
+        </div>
+        {skills.map((s: any, i: number) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, x: -6 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: dur.fast, ease: ease.out, delay: skillDelays[i] }}
+            className="text-sm"
+            style={{ color: selOwned ? "var(--ink-primary)" : "var(--ink-tertiary)" }}
+          >
+            <span style={{ color: selOwned ? "var(--success)" : "var(--ink-tertiary)" }}>●</span>{" "}
+            {selOwned ? s : "???"}
+          </motion.div>
+        ))}
+        {sel.realm_skill && (
+          <motion.div
+            initial={{ opacity: 0, x: -6 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: dur.fast,
+              ease: ease.out,
+              delay: skillDelays[skills.length] ?? 0.2,
+            }}
+            className="text-sm flex items-center gap-1"
+            style={{ color: "var(--violet)" }}
+          >
+            <Icon name="star" size={12} color="var(--violet)" className="fill-current" />
+            <span>{selOwned ? sel.realm_skill : "???"}</span>
+          </motion.div>
+        )}
+      </div>
+
+      {selUm && (
+        <div>
+          <div
+            className="flex justify-between items-center text-[10px] uppercase tracking-[0.18em] mb-1"
+            style={{ color: "var(--ink-secondary)" }}
+          >
+            <span>Bond</span>
+            <span className="flex items-center gap-2">
+              {(() => {
+                const m = MOOD_META[moodForBond(selUm.bond_percent)];
+                return (
+                  <span style={{ color: m.color }} title={m.effect}>
+                    {m.icon} {m.label}
+                  </span>
+                );
+              })()}
+              <NumberFlow
+                value={Math.round(selUm.bond_percent)}
+                suffix="%"
+                className="font-mono"
+                style={{ color: "var(--gold-bright)" }}
+              />
+            </span>
+          </div>
+          <div
+            className="h-2 rounded-full overflow-hidden"
+            style={{ background: "rgba(255,255,255,0.06)" }}
+          >
             <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -6 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: dur.fast, ease: ease.out, delay: skillDelays[i] }}
-              className="text-sm"
-              style={{ color: selOwned ? "var(--ink-primary)" : "var(--ink-tertiary)" }}
+              initial={{ width: 0 }}
+              animate={{ width: `${selUm.bond_percent}%` }}
+              transition={{ duration: dur.weighty, ease: ease.weighty, delay: 0.18 }}
+              className="h-full"
+              style={{ background: "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))" }}
+            />
+          </div>
+          <div className="flex justify-between mt-1">
+            {[25, 50, 100].map((m) => (
+              <span
+                key={m}
+                className="text-[9px]"
+                style={{
+                  color: selUm.bond_percent >= m ? "var(--gold-bright)" : "var(--ink-tertiary)",
+                }}
+              >
+                {m}%
+              </span>
+            ))}
+          </div>
+          <div
+            className="mt-3 flex flex-wrap gap-2 text-xs"
+            style={{ color: "var(--ink-secondary)" }}
+          >
+            <span>
+              Lvl <NumberFlow value={selUm.level} />
+            </span>
+            <span className="flex items-center gap-0.5">
+              <Icon name="star" size={10} color="var(--gold-bright)" className="fill-current" />{" "}
+              <NumberFlow value={selUm.star_level} />
+              /7
+            </span>
+            {selUm.is_on_team && <span style={{ color: "var(--success)" }}>On Team</span>}
+          </div>
+          <div className="mt-2 text-[11px]" style={{ color: "var(--ink-tertiary)" }}>
+            Grew from{" "}
+            <NumberFlow
+              value={selUm.growth_xp ?? 0}
+              className="font-mono"
+              style={{ color: "var(--gold-bright)" }}
+            />{" "}
+            matching deeds.
+          </div>
+
+          {/* Dormant Powers */}
+          <div className="mt-4">
+            <p
+              className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-2"
+              style={{ color: "var(--ink-secondary)" }}
             >
-              <span style={{ color: selOwned ? "var(--success)" : "var(--ink-tertiary)" }}>●</span> {selOwned ? s : "???"}
-            </motion.div>
-          ))}
-          {sel.realm_skill && (
-            <motion.div
-              initial={{ opacity: 0, x: -6 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: dur.fast, ease: ease.out, delay: skillDelays[skills.length] ?? 0.2 }}
-              className="text-sm"
-              style={{ color: "var(--violet)" }}
+              Dormant Powers
+            </p>
+            <div className="space-y-1">
+              {dormant.map((def, i) => {
+                const unlocked = (selUm.awakened_skills as string[] | undefined)?.includes(
+                  def.name,
+                );
+                return (
+                  <motion.div
+                    key={def.name}
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: dur.fast, ease: ease.out, delay: dormantDelays[i] }}
+                    className="rounded-md p-2 text-[11px]"
+                    style={{
+                      background: unlocked ? "rgba(255,213,79,0.08)" : "rgba(0,0,0,0.3)",
+                      border: `1px solid ${unlocked ? "rgba(255,213,79,0.45)" : "rgba(255,255,255,0.06)"}`,
+                      boxShadow: unlocked ? "0 0 12px rgba(255,213,79,0.08) inset" : "none",
+                    }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span
+                        style={{
+                          color: unlocked ? "var(--gold-bright)" : "var(--ink-tertiary)",
+                          fontWeight: 600,
+                        }}
+                      >
+                        <span className="inline-flex items-center gap-1">
+                          <Icon
+                            name={unlocked ? "stamina" : "close"}
+                            size={12}
+                            color={unlocked ? "var(--gold-bright)" : "var(--ink-tertiary)"}
+                          />{" "}
+                          {def.name}
+                        </span>
+                      </span>
+                    </div>
+                    <p
+                      className="mt-0.5 italic"
+                      style={{ color: unlocked ? "var(--ink-primary)" : "var(--ink-tertiary)" }}
+                    >
+                      {unlocked ? def.flavor : `Awakens when: ${def.triggerText}`}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+          {selUm.star_level < 7 && (
+            <motion.button
+              onClick={() => onPromote(selUm.id, sel.name)}
+              whileTap={{ scale: 0.97 }}
+              whileHover={{ y: -1 }}
+              transition={trans.springy}
+              className="ss-btn ss-btn-d-primary mt-4 w-full"
             >
-              ★ {selOwned ? sel.realm_skill : "???"}
-            </motion.div>
+              Promote at the Chamber
+            </motion.button>
           )}
         </div>
-
-        {selUm && (
-          <div>
-            <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.18em] mb-1" style={{ color: "var(--ink-secondary)" }}>
-              <span>Bond</span>
-              <span className="flex items-center gap-2">
-                {(() => {
-                  const m = MOOD_META[moodForBond(selUm.bond_percent)];
-                  return (
-                    <span style={{ color: m.color }} title={m.effect}>
-                      {m.icon} {m.label}
-                    </span>
-                  );
-                })()}
-                <NumberFlow
-                  value={Math.round(selUm.bond_percent)}
-                  suffix="%"
-                  className="font-mono"
-                  style={{ color: "var(--gold-bright)" }}
-                />
-              </span>
-            </div>
-            <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: `${selUm.bond_percent}%` }}
-                transition={{ duration: dur.weighty, ease: ease.weighty, delay: 0.18 }}
-                className="h-full"
-                style={{ background: "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))" }}
-              />
-            </div>
-            <div className="flex justify-between mt-1">
-              {[25, 50, 100].map((m) => (
-                <span key={m} className="text-[9px]" style={{ color: selUm.bond_percent >= m ? "var(--gold-bright)" : "var(--ink-tertiary)" }}>{m}%</span>
-              ))}
-            </div>
-            <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: "var(--ink-secondary)" }}>
-              <span>Lvl <NumberFlow value={selUm.level} /></span>
-              <span>★ <NumberFlow value={selUm.star_level} />/7</span>
-              {selUm.is_on_team && <span style={{ color: "var(--success)" }}>On Team</span>}
-            </div>
-            <div className="mt-2 text-[11px]" style={{ color: "var(--ink-tertiary)" }}>
-              Grew from <NumberFlow value={selUm.growth_xp ?? 0} className="font-mono" style={{ color: "var(--gold-bright)" }} /> matching deeds.
-            </div>
-
-            {/* Dormant Powers */}
-            <div className="mt-4">
-              <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-2" style={{ color: "var(--ink-secondary)" }}>
-                Dormant Powers
-              </p>
-              <div className="space-y-1">
-                {dormant.map((def, i) => {
-                  const unlocked = (selUm.awakened_skills as string[] | undefined)?.includes(def.name);
-                  return (
-                    <motion.div
-                      key={def.name}
-                      initial={{ opacity: 0, y: 4 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: dur.fast, ease: ease.out, delay: dormantDelays[i] }}
-                      className="rounded-md p-2 text-[11px]"
-                      style={{
-                        background: unlocked ? "rgba(255,213,79,0.08)" : "rgba(0,0,0,0.3)",
-                        border: `1px solid ${unlocked ? "rgba(255,213,79,0.45)" : "rgba(255,255,255,0.06)"}`,
-                        boxShadow: unlocked ? "0 0 12px rgba(255,213,79,0.08) inset" : "none",
-                      }}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span style={{ color: unlocked ? "var(--gold-bright)" : "var(--ink-tertiary)", fontWeight: 600 }}>
-                          <span className="inline-flex items-center gap-1"><Icon name={unlocked ? "stamina" : "close"} size={12} color={unlocked ? "var(--gold-bright)" : "var(--ink-tertiary)"} /> {def.name}</span>
-                        </span>
-                      </div>
-                      <p className="mt-0.5 italic" style={{ color: unlocked ? "var(--ink-primary)" : "var(--ink-tertiary)" }}>
-                        {unlocked ? def.flavor : `Awakens when: ${def.triggerText}`}
-                      </p>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-            {selUm.star_level < 7 && (
-              <motion.button
-                onClick={() => onPromote(selUm.id, sel.name)}
-                whileTap={{ scale: 0.97 }}
-                whileHover={{ y: -1 }}
-                transition={trans.springy}
-                className="ss-btn ss-btn-d-primary mt-4 w-full"
-              >
-                Promote at the Chamber
-              </motion.button>
-            )}
-          </div>
-        )}
-        {!selOwned && <p className="text-sm mt-4" style={{ color: "var(--ink-tertiary)" }}>Not yet discovered. Summon from the Altar!</p>}
+      )}
+      {!selOwned && (
+        <p className="text-sm mt-4" style={{ color: "var(--ink-tertiary)" }}>
+          Not yet discovered. Summon from the Altar!
+        </p>
+      )}
     </div>
   );
 }
 
-function PillBtn({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
+function PillBtn({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
   return (
-    <button onClick={onClick} className={`ss-btn whitespace-nowrap ${active ? "ss-btn-d-primary" : "ss-btn-secondary"}`}>
+    <button
+      onClick={onClick}
+      className={`ss-btn whitespace-nowrap ${active ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
+    >
       {children}
     </button>
   );
@@ -345,7 +508,15 @@ function PillBtn({ active, onClick, children }: { active: boolean; onClick: () =
 
 function RarityBadge({ rarity }: { rarity: Rarity }) {
   return (
-    <span className="ss-chip"
-      style={{ background: `${RARITY_COLOR[rarity]}20`, color: RARITY_COLOR[rarity], borderColor: `${RARITY_COLOR[rarity]}40` }}>{rarity}</span>
+    <span
+      className="ss-chip"
+      style={{
+        background: `${RARITY_COLOR[rarity]}20`,
+        color: RARITY_COLOR[rarity],
+        borderColor: `${RARITY_COLOR[rarity]}40`,
+      }}
+    >
+      {rarity}
+    </span>
   );
 }

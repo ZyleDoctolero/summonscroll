@@ -8,11 +8,12 @@
 A brand new user signs up, lands on the Hub, sees this:
 
 > Hub Directives  
-> *No habits yet*  
-> *Forge your first directive to start earning Gold and XP.*
+> _No habits yet_  
+> _Forge your first directive to start earning Gold and XP._
 
 That's it. Behind that one sentence are 12 mechanical systems they have no
 idea about. They:
+
 - Don't know the Altar exists
 - Don't know what a monster is or how to get one
 - Don't know about Expeditions, Quests, Promotions
@@ -156,15 +157,14 @@ const showOnboarding = profileQ.data?.profile.onboarding_completed_at == null;
 
 return (
   <AppShell profile={profile}>
-    {showOnboarding && (
-      <Onboarding onComplete={() => completeOnboarding.mutate()} />
-    )}
+    {showOnboarding && <Onboarding onComplete={() => completeOnboarding.mutate()} />}
     {/* rest of Hub */}
   </AppShell>
 );
 ```
 
 The `completeOnboarding` mutation:
+
 1. Inserts a tutorial directive into the user's tasks (see Step 2).
 2. Updates `profile.onboarding_completed_at`.
 3. Records the directive id in `profile.tutorial_directive_id` so the
@@ -178,7 +178,9 @@ The `completeOnboarding` mutation:
 
 ```ts
 export async function completeOnboarding() {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
   // 1. Create the tutorial directive
@@ -193,7 +195,7 @@ export async function completeOnboarding() {
       difficulty: "easy",
       positive_enabled: true,
       negative_enabled: false,
-      tags: ["con"],  // CON-tagged so it ticks a monster bond when scored
+      tags: ["con"], // CON-tagged so it ticks a monster bond when scored
     })
     .select()
     .single();
@@ -233,8 +235,13 @@ CSS for the pulse:
 
 ```css
 @keyframes tutorial-pulse {
-  0%, 100% { box-shadow: 0 0 18px rgba(255,213,79,0.35); }
-  50%      { box-shadow: 0 0 28px rgba(255,213,79,0.55); }
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(255, 213, 79, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(255, 213, 79, 0.55);
+  }
 }
 ```
 
@@ -272,7 +279,7 @@ const { count } = await supabase
   .eq("user_id", user.id);
 
 const isFirstPull = (count ?? 0) === 0;
-const totalCost = isFirstPull ? 0 : (count === 1 ? cost1 : cost10);
+const totalCost = isFirstPull ? 0 : count === 1 ? cost1 : cost10;
 ```
 
 For the rarity roll on first pull, override the result of `rollRarity()` to
@@ -290,6 +297,7 @@ monster — feels generous, hooks them.
 ## Step 4: Compass takes over
 
 After all of the above completes, the user lands back on the Hub with:
+
 - 1 tutorial directive (still in their list, no longer pulsing)
 - 1+ monsters in their collection
 - Profile flag set

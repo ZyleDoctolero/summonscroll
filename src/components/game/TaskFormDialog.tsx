@@ -66,7 +66,10 @@ export function TaskFormDialog({
     if (!v.title.trim()) return;
     setSaving(true);
     try {
-      const finalTags = tagsInput.split(",").map(t => t.trim()).filter(Boolean);
+      const finalTags = tagsInput
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
       await onSubmit({ ...v, tags: finalTags });
     } finally {
       setSaving(false);
@@ -79,11 +82,7 @@ export function TaskFormDialog({
       style={{ background: "rgba(0,0,0,0.7)", backdropFilter: "blur(6px)" }}
       onClick={onClose}
     >
-      <form
-        onClick={(e) => e.stopPropagation()}
-        onSubmit={submit}
-        className="ss-modal"
-      >
+      <form onClick={(e) => e.stopPropagation()} onSubmit={submit} className="ss-modal">
         <h2 className="t-h2 text-xl font-bold" style={{ color: "var(--gold-bright)" }}>
           {initial ? "Edit Directive" : "New Directive"}
         </h2>
@@ -97,7 +96,10 @@ export function TaskFormDialog({
                 onClick={() => setV((s) => ({ ...s, type: t }))}
                 className="flex-1 py-2 rounded text-xs uppercase tracking-widest font-bold"
                 style={{
-                  background: v.type === t ? "linear-gradient(135deg,#C89A3E,#FFD54F)" : "rgba(255,255,255,0.05)",
+                  background:
+                    v.type === t
+                      ? "linear-gradient(135deg,#C89A3E,#FFD54F)"
+                      : "rgba(255,255,255,0.05)",
                   color: v.type === t ? "#0C0E14" : "#A09D96",
                 }}
               >
@@ -156,7 +158,8 @@ export function TaskFormDialog({
                 onClick={() => setV({ ...v, difficulty: d })}
                 className="flex-1 py-2 rounded text-xs uppercase font-semibold"
                 style={{
-                  background: v.difficulty === d ? "rgba(255,213,79,0.18)" : "rgba(255,255,255,0.04)",
+                  background:
+                    v.difficulty === d ? "rgba(255,213,79,0.18)" : "rgba(255,255,255,0.04)",
                   color: v.difficulty === d ? "#FFD54F" : "#A09D96",
                   border: `1px solid ${v.difficulty === d ? "rgba(255,213,79,0.4)" : "transparent"}`,
                 }}
@@ -209,7 +212,9 @@ export function TaskFormDialog({
                     }
                     className="flex-1 py-2 text-xs font-bold rounded"
                     style={{
-                      background: on ? "linear-gradient(135deg,#C89A3E,#FFD54F)" : "rgba(255,255,255,0.05)",
+                      background: on
+                        ? "linear-gradient(135deg,#C89A3E,#FFD54F)"
+                        : "rgba(255,255,255,0.05)",
                       color: on ? "#0C0E14" : "#A09D96",
                     }}
                   >
@@ -248,7 +253,10 @@ export function TaskFormDialog({
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <div className="text-[11px] uppercase tracking-widest mb-1 font-semibold" style={{ color: "#A09D96" }}>
+      <div
+        className="text-[11px] uppercase tracking-widest mb-1 font-semibold"
+        style={{ color: "#A09D96" }}
+      >
         {label}
       </div>
       {children}

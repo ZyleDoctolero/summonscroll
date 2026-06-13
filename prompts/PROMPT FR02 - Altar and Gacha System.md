@@ -7,6 +7,7 @@ Build the SummonScroll Altar (Gacha Summoning) module. This is the core dopamine
 **Crucial Design Constraint:** SummonScroll is a dark-fantasy productivity RPG. Every screen uses a deep dark background (`#0C0E14`), gold accent colors (`#C89A3E` / `#FFD54F`), and the Cinzel font for headings. Cards use `#13161F` surfaces with subtle `rgba(255,255,255,0.07)` borders. The Altar is the most visually dramatic screen in the entire app — banner art fills edge-to-edge, animations are layered and rarity-dependent, and every pull must feel like an event.
 
 **Core Design Tokens:**
+
 ```
 Backgrounds:   #0C0E14 (page) · #13161F (cards) · #1A1E2A (modals)
 Accents:        #C89A3E (gold) · #FFD54F (gold-bright) · #7F77DD (void)
@@ -22,14 +23,17 @@ Fonts:          Cinzel (headings) · DM Sans (body) · JetBrains Mono (stats)
 ### Altar Page (`/altar`)
 
 **Banner Tab Navigation:** Pill-style tabs at the top of the screen:
+
 ```
 [ Standard ] [ Featured ] [ Streak ] [ Pact Seal ] [ Event ]
 ```
+
 Active tab: gold background + dark text. Inactive: elevated background + secondary text. Each tab filters to show only banners of that type.
 
 ### Banner Card Component
 
 Each banner displays as a full-width card with dramatic art:
+
 ```
 ┌─[Banner Art — full bleed edge-to-edge]───────────────────┐
 │  [Banner Name]  Cinzel 600                                │
@@ -51,6 +55,7 @@ Each banner displays as a full-width card with dramatic art:
 ```
 
 **Key Behaviors:**
+
 - Banner art fills full width — no white padding, art bleeds edge to edge
 - Banner timer shows as a depleting arc around the banner art (not just plain text countdown)
 - "PULL ×10" button is visually LARGER than "Pull ×1" — multi-pull is the primary action
@@ -59,6 +64,7 @@ Each banner displays as a full-width card with dramatic art:
 ### Pity Tracker
 
 Both pity progress bars displayed simultaneously:
+
 - Legendary pity: gold progress bar, `63/100 pulls` in JetBrains Mono
 - Epic pity: purple progress bar, `40/50 pulls`
 - When within 10 pulls of guarantee: amber pulse animation on the bar
@@ -74,16 +80,16 @@ Show the user's current Spirit Crystal (💎) balance prominently above the pull
 
 ### Pull Probability by Banner Type
 
-| Rarity | Standard | Featured | Streak | Pact Seal |
-|---|---|---|---|---|
-| Common | 45% | 35% | 25% | 10% |
-| Uncommon | 25% | 22% | 20% | 15% |
-| Rare | 17% | 25% | 30% | 25% |
-| Elite | 8% | 12% | 16% | 22% |
-| Epic | 4% | 5% | 7% | 15% |
-| Legendary | 0.8% | 0.9% | 1.5% | 8% |
-| Mythic | 0.15% | 0.08% | 0.4% | 4% |
-| EX | 0.05% | — | 0.1% | 1% |
+| Rarity    | Standard | Featured | Streak | Pact Seal |
+| --------- | -------- | -------- | ------ | --------- |
+| Common    | 45%      | 35%      | 25%    | 10%       |
+| Uncommon  | 25%      | 22%      | 20%    | 15%       |
+| Rare      | 17%      | 25%      | 30%    | 25%       |
+| Elite     | 8%       | 12%      | 16%    | 22%       |
+| Epic      | 4%       | 5%       | 7%     | 15%       |
+| Legendary | 0.8%     | 0.9%     | 1.5%   | 8%        |
+| Mythic    | 0.15%    | 0.08%    | 0.4%   | 4%        |
+| EX        | 0.05%    | —        | 0.1%   | 1%        |
 
 ### Pity Guarantees
 
@@ -108,6 +114,7 @@ Show the user's current Spirit Crystal (💎) balance prominently above the pull
 Each rarity tier has a progressively more dramatic reveal animation. The rarity of the pull determines which animation plays BEFORE the user sees what they got — building anticipation.
 
 ### Common / Uncommon (1100ms total)
+
 ```
 0ms    → Dark overlay fades in 0→70% (150ms)
 150ms  → Small portal appears center-screen, spins up (300ms)
@@ -117,6 +124,7 @@ Each rarity tier has a progressively more dramatic reveal animation. The rarity 
 ```
 
 ### Rare / Elite (1500ms total)
+
 ```
 0ms    → Overlay darkens more dramatically (200ms)
 200ms  → Element-colored beam shoots from bottom of screen (400ms)
@@ -126,6 +134,7 @@ Each rarity tier has a progressively more dramatic reveal animation. The rarity 
 ```
 
 ### Epic (2000ms total)
+
 ```
 0ms    → Full dark overlay (250ms)
 250ms  → Purple vortex portal opens center-screen, spiraling (600ms)
@@ -135,6 +144,7 @@ Each rarity tier has a progressively more dramatic reveal animation. The rarity 
 ```
 
 ### Legendary (2600ms total — includes tension pause)
+
 ```
 0ms    → Screen dims to near-black (300ms)
 300ms  → Golden portal TEARS open — dramatic crack VFX (700ms)
@@ -145,6 +155,7 @@ Each rarity tier has a progressively more dramatic reveal animation. The rarity 
 ```
 
 ### Mythic (2200ms total)
+
 ```
 Phase 1: Full blackout + ember rain falling from above (600ms)
 Phase 2: Prismatic aurora border sweeps in from edges (500ms)
@@ -153,6 +164,7 @@ Phase 4: Name + "MYTHIC" badge descend from top of screen (300ms)
 ```
 
 ### EX (2400ms total — sacred, do not rush)
+
 ```
 Phase 1: Full blackout — 400ms hold in pure darkness
 Phase 2: Single white point appears at exact center of screen (200ms, 0→full opacity)
@@ -172,6 +184,7 @@ A "Skip ▶" text button appears in the bottom-right corner after 500ms of any r
 ### Multi-Pull Result Grid (×10)
 
 After all 10 individual reveals play (or are skipped), show a summary grid:
+
 ```
 ┌──────────────────────────────────────────────────────┐
 │  "Summon Results"  Cinzel 700 24px                    │
@@ -193,9 +206,11 @@ After all 10 individual reveals play (or are skipped), show a summary grid:
 ### Progress Dots (Multi-Pull)
 
 During sequential reveals in a ×10 pull, show progress dots at the bottom center:
+
 ```
 ● ● ● ○ ○ ○ ○ ○ ○ ○
 ```
+
 Current reveal = gold dot. Completed = gold dot. Upcoming = elevated background dot.
 
 ---
@@ -204,24 +219,25 @@ Current reveal = gold dot. Completed = gold dot. Upcoming = elevated background 
 
 ### Three Currencies
 
-| Currency | Icon | Earn Method | Spend On |
-|---|---|---|---|
+| Currency           | Icon         | Earn Method                                   | Spend On                                          |
+| ------------------ | ------------ | --------------------------------------------- | ------------------------------------------------- |
 | Spirit Crystals 💎 | Crystal icon | Habit completion, battle rewards, daily login | Standard/Featured/Streak banner pulls, Shop items |
-| Void Shards 🔷 | Shard icon | 7-day streak milestone, battle floor rewards | Featured banner pulls, premium shop items |
-| Pact Seals 🔑 | Seal icon | 30-day streak milestone, Day 7 login reward | Pact Seal banner pulls (EX monsters) |
+| Void Shards 🔷     | Shard icon   | 7-day streak milestone, battle floor rewards  | Featured banner pulls, premium shop items         |
+| Pact Seals 🔑      | Seal icon    | 30-day streak milestone, Day 7 login reward   | Pact Seal banner pulls (EX monsters)              |
 
 ### Pull Costs
 
 | Banner Type | ×1 Cost | ×10 Cost |
-|---|---|---|
-| Standard | 160 💎 | 1,600 💎 |
-| Featured | 200 💎 | 2,000 💎 |
-| Streak | 180 💎 | 1,800 💎 |
-| Pact Seal | 1 🔑 | 10 🔑 |
+| ----------- | ------- | -------- |
+| Standard    | 160 💎  | 1,600 💎 |
+| Featured    | 200 💎  | 2,000 💎 |
+| Streak      | 180 💎  | 1,800 💎 |
+| Pact Seal   | 1 🔑    | 10 🔑    |
 
 ### Earning Crystals (Habitica-Aligned Economy)
 
 Spirit Crystals (💎) are earned from ALL task completions — the amount varies based on:
+
 - **Task difficulty multiplier:** Trivial (×0.1), Easy (×1.0), Medium (×1.5), Hard (×2.0)
 - **Task value color:** Red (neglected) tasks give MORE crystals than blue (mastered) tasks — this self-balancing mechanic (from Habitica) means players who tackle their hardest, most-neglected tasks get rewarded with more pull currency
 - **Perception stat:** Higher PER increases gold/crystal rewards from all tasks (Rogue class bonus)

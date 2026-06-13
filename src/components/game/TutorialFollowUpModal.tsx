@@ -9,7 +9,7 @@ interface TutorialFollowUpModalProps {
 
 /**
  * Follow-up modal that appears after the user scores their first tutorial directive.
- * 
+ *
  * According to Requirement 7.10: "WHEN user scores tutorial directive, THE System SHALL display 'A summon awaits' follow-up modal"
  * According to Requirement 7.11: "WHEN follow-up modal CTA is clicked, THE System SHALL navigate to /altar"
  */
@@ -22,18 +22,17 @@ export function TutorialFollowUpModal({ open, onClose }: TutorialFollowUpModalPr
   };
 
   return (
-    <ResponsiveDialog open={open} onOpenChange={(open) => !open && onClose()} title="A Summon Awaits">
+    <ResponsiveDialog
+      open={open}
+      onOpenChange={(open) => !open && onClose()}
+      title="A Summon Awaits"
+    >
       <div className="text-center space-y-6">
         {/* Mystic orb icon with glow effect */}
         <div className="flex justify-center">
           <div className="relative">
-            <Icon 
-              name="sparkle" 
-              size={64} 
-              color="var(--violet)" 
-              className="lucide-glow" 
-            />
-            <div 
+            <Icon name="sparkle" size={64} color="var(--violet)" className="lucide-glow" />
+            <div
               className="absolute inset-0 ss-burst opacity-50"
               style={{ background: "radial-gradient(circle, var(--violet)20, transparent 70%)" }}
             />
@@ -46,7 +45,8 @@ export function TutorialFollowUpModal({ open, onClose }: TutorialFollowUpModalPr
             A Summon Awaits
           </h2>
           <p className="t-body text-sm" style={{ color: "var(--ink-secondary)" }}>
-            You have proven your worth. The Altar recognizes your dedication and offers you a <strong style={{ color: "var(--gold-bright)" }}>free summoning</strong>.
+            You have proven your worth. The Altar recognizes your dedication and offers you a{" "}
+            <strong style={{ color: "var(--gold-bright)" }}>free summoning</strong>.
           </p>
           <p className="t-body-sm text-xs" style={{ color: "var(--ink-tertiary)" }}>
             Your first pull costs nothing, and fate smiles upon beginners.
@@ -58,16 +58,16 @@ export function TutorialFollowUpModal({ open, onClose }: TutorialFollowUpModalPr
           <button
             onClick={handleOpenAltar}
             className="ss-btn ss-btn-d-primary w-full"
-            style={{ 
+            style={{
               background: "linear-gradient(135deg, var(--violet), var(--violet-dark))",
               border: "1px solid var(--violet)",
-              boxShadow: "0 0 20px rgba(163, 116, 255, 0.3)"
+              boxShadow: "0 0 20px rgba(163, 116, 255, 0.3)",
             }}
           >
             <Icon name="sparkle" size={16} />
             Open the Altar
           </button>
-          
+
           <button
             onClick={onClose}
             className="ss-btn ss-btn-ghost text-xs"

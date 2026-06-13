@@ -6,7 +6,11 @@ export function Screen({ html, title }: { html: string; title?: string }) {
     // Re-run Tailwind CDN to pick up newly mounted classes.
     const tw = (window as unknown as { tailwind?: { _refresh?: () => void } }).tailwind;
     if (tw && typeof tw._refresh === "function") {
-      try { tw._refresh(); } catch { /* noop */ }
+      try {
+        tw._refresh();
+      } catch {
+        /* noop */
+      }
     }
   }, [html, title]);
 

@@ -18,8 +18,15 @@ export function AppShell({
   withHeader?: boolean;
 }) {
   return (
-    <div className="min-h-screen" style={{ background: "var(--bg-deep)", color: "var(--ink-primary)" }}>
-      <GameSidebar displayName={profile.display_name} level={profile.level} playerClass={profile.class} />
+    <div
+      className="min-h-screen"
+      style={{ background: "var(--bg-deep)", color: "var(--ink-primary)" }}
+    >
+      <GameSidebar
+        displayName={profile.display_name}
+        level={profile.level}
+        playerClass={profile.class}
+      />
       {withHeader && <MobilePlayerHeader profile={profile as any} />}
       {withHeader && <PlayerHeader profile={profile} />}
       <main className={`md:ml-[260px] ${withHeader ? "md:pt-14" : ""} min-h-screen pb-20 md:pb-0`}>
@@ -30,9 +37,9 @@ export function AppShell({
         theme="dark"
         toastOptions={{
           style: {
-            background: "#13161F",
-            border: "1px solid rgba(255,213,79,0.3)",
-            color: "#F0EDE6",
+            background: "var(--bg-panel)",
+            border: "var(--ss-hairline-active)",
+            color: "var(--ink-primary)",
           },
         }}
       />

@@ -10,7 +10,7 @@ The sidebar currently has 14 routes treated identically:
 > Codex / Trial of Echoes / Guild / Fusion / Shop / Profile
 
 Equal visual weight = no cognitive hierarchy. The player has no signal about
-which destinations are *daily*, which are *weekly*, which are *rare*.
+which destinations are _daily_, which are _weekly_, which are _rare_.
 
 Mobile is worse — the bottom-nav can only show 5 icons, so 9 routes are
 invisible until you remember they exist.
@@ -37,25 +37,25 @@ old equally-weighted nav was failing at.
 
 ```tsx
 const NAV_DAILY = [
-  { to: "/",            label: "Hub",         icon: "morning",  weight: "primary" },
-  { to: "/quests",      label: "Quests",      icon: "crown",    weight: "primary" },
-  { to: "/altar",       label: "Altar",       icon: "summon",   weight: "primary" },
-  { to: "/expeditions", label: "Expeditions", icon: "stamina",  weight: "primary" },
+  { to: "/", label: "Hub", icon: "morning", weight: "primary" },
+  { to: "/quests", label: "Quests", icon: "crown", weight: "primary" },
+  { to: "/altar", label: "Altar", icon: "summon", weight: "primary" },
+  { to: "/expeditions", label: "Expeditions", icon: "stamina", weight: "primary" },
 ] as const;
 
 const NAV_WEEKLY = [
-  { to: "/battle",     label: "Battle",     icon: "battle",   weight: "secondary" },
-  { to: "/compendium", label: "Compendium", icon: "tome",     weight: "secondary" },
-  { to: "/codex",      label: "Codex",      icon: "memorial", weight: "secondary" },
-  { to: "/island",     label: "Island",     icon: "sparkle",  weight: "secondary" },
+  { to: "/battle", label: "Battle", icon: "battle", weight: "secondary" },
+  { to: "/compendium", label: "Compendium", icon: "tome", weight: "secondary" },
+  { to: "/codex", label: "Codex", icon: "memorial", weight: "secondary" },
+  { to: "/island", label: "Island", icon: "sparkle", weight: "secondary" },
 ] as const;
 
 const NAV_RARE = [
-  { to: "/forge",  label: "Forge",  icon: "stone" },
-  { to: "/trial",  label: "Trial",  icon: "death" },
-  { to: "/guild",  label: "Guild",  icon: "crown" },
+  { to: "/forge", label: "Forge", icon: "stone" },
+  { to: "/trial", label: "Trial", icon: "death" },
+  { to: "/guild", label: "Guild", icon: "crown" },
   { to: "/fusion", label: "Fusion", icon: "sparkle" },
-  { to: "/bazaar", label: "Shop",   icon: "gold" },
+  { to: "/bazaar", label: "Shop", icon: "gold" },
 ] as const;
 ```
 
@@ -99,7 +99,7 @@ CSS:
 }
 .ss-nav-primary.active {
   color: var(--gold-leaf);
-  background: rgba(255,213,79,0.08);
+  background: rgba(255, 213, 79, 0.08);
   border-left-color: var(--gold-leaf);
 }
 
@@ -118,7 +118,7 @@ CSS:
 }
 .ss-nav-secondary.active {
   color: var(--ss-ink-primary);
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border-left-color: var(--ss-ink-secondary);
 }
 
@@ -137,7 +137,7 @@ CSS:
 }
 .ss-nav-more:hover {
   color: var(--ss-ink-secondary);
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
 }
 ```
 
@@ -156,10 +156,16 @@ listing the 5 rare destinations. Open via the "More" button.
 ### File: `src/components/game/MoreSheet.tsx`
 
 ```tsx
-import { Drawer } from "vaul";  // mobile
+import { Drawer } from "vaul"; // mobile
 // OR for desktop, a Radix popover
 
-export function MoreSheet({ open, onOpenChange }: { open: boolean; onOpenChange: (b: boolean) => void }) {
+export function MoreSheet({
+  open,
+  onOpenChange,
+}: {
+  open: boolean;
+  onOpenChange: (b: boolean) => void;
+}) {
   return (
     <Drawer.Root open={open} onOpenChange={onOpenChange}>
       <Drawer.Portal>
@@ -169,7 +175,12 @@ export function MoreSheet({ open, onOpenChange }: { open: boolean; onOpenChange:
           <h3 className="t-h2 mb-3">More</h3>
           <div className="space-y-1">
             {NAV_RARE.map((item) => (
-              <Link key={item.to} to={item.to} onClick={() => onOpenChange(false)} className="ss-nav-primary">
+              <Link
+                key={item.to}
+                to={item.to}
+                onClick={() => onOpenChange(false)}
+                className="ss-nav-primary"
+              >
                 <Icon name={item.icon as any} size={20} />
                 {item.label}
               </Link>
@@ -200,18 +211,14 @@ destinations + a More button:
   {NAV_DAILY.map((item) => (
     <MobileNavItem key={item.to} {...item} active={path === item.to} />
   ))}
-  <MobileNavItem
-    icon="next"
-    label="More"
-    onClick={() => setMoreOpen(true)}
-    active={false}
-  />
+  <MobileNavItem icon="next" label="More" onClick={() => setMoreOpen(true)} active={false} />
 </nav>
 ```
 
 The mobile bottom-nav now consistently shows Hub / Quests / Altar / Expeditions
-+ More. The 4 daily destinations match the 4 desktop primary destinations —
-brain memorizes the layout.
+
+- More. The 4 daily destinations match the 4 desktop primary destinations —
+  brain memorizes the layout.
 
 ---
 

@@ -22,6 +22,7 @@ against the chosen visual identity.
 ## The fix
 
 Three parts:
+
 1. **A locked Gemini prompt** that generates consistent monster portraits.
 2. **A triage script** that scans the existing 202 and flags which ones to
    keep vs. regenerate.
@@ -39,6 +40,7 @@ You are generating a single monster portrait for a dark-fantasy gacha collection
 game called SummonScroll. Every output must obey these rules without exception.
 
 ## Format
+
 - Output PNG with TRANSPARENT background. No backgrounds, no scenes, no
   environment props, no frames, no signature, no watermark.
 - Square 1:1 aspect ratio. Render at 1024×1024.
@@ -47,6 +49,7 @@ game called SummonScroll. Every output must obey these rules without exception.
 ## Style (PICK ONE BASED ON VISUAL IDENTITY)
 
 ### Identity A — Burning Page (illuminated)
+
 - Hand-painted illuminated manuscript style
 - Burnt umber + ochre + gold leaf palette
 - Subtle paper grain texture overlay
@@ -54,6 +57,7 @@ game called SummonScroll. Every output must obey these rules without exception.
 - No anime, no chibi, no pixel art
 
 ### Identity B — Lantern Garden (pixel)
+
 - Pixel art, 16-bit JRPG style
 - Reference: Octopath Traveler / Triangle Strategy character sprites
 - Crisp pixel clusters, no anti-aliased blur
@@ -61,12 +65,14 @@ game called SummonScroll. Every output must obey these rules without exception.
 - Bold contrast, strong silhouette readable at 80px
 
 ### Identity C — Iron Court (gothic)
+
 - Heraldic illustration, near-monochrome
 - Black ink on candlewax background or single accent color
 - Stencil-edged, formal posture, three-quarter view
 - Reference: medieval blazoning, Pentiment art
 
 ### Identity D — Summoner's Console (modern anime mobile gacha)
+
 - Anime gacha portrait illustration — dramatic three-quarter pose
 - Reference: Genshin Impact character splash art, Honkai Star Rail key art,
   Arknights operator portraits, Wuthering Waves Resonators
@@ -80,11 +86,13 @@ game called SummonScroll. Every output must obey these rules without exception.
 - NO chibi proportions, NO sd-style, NO western cartoon
 
 ## Framing
+
 - Three-quarter or full-body view, facing slightly off-camera
 - Confident static "card pose", no mid-action motion blur
 - No floor, no shadow disc, no platform
 
 ## Forbidden
+
 - NO text of any kind on armor/banners/scrolls/weapons/background
 - NO dialogue bubbles, no UI, no borders, no watermarks, no signatures
 - NO scenes, no environment
@@ -92,12 +100,13 @@ game called SummonScroll. Every output must obey these rules without exception.
 - NO photo-real, no oil painting, no chibi
 
 ## Per-monster variables
+
 - Name: {name}
-- Rarity: {rarity}      (common / uncommon / rare / elite / epic / legendary / mythic / ex)
-- Role: {role}          (attacker / tank / healer / support / debuffer)
-- Element: {element}    (Arcane / Chaos / Death / Divine / Dread / Digital / Nature / Stellar / Primal)
+- Rarity: {rarity} (common / uncommon / rare / elite / epic / legendary / mythic / ex)
+- Role: {role} (attacker / tank / healer / support / debuffer)
+- Element: {element} (Arcane / Chaos / Death / Divine / Dread / Digital / Nature / Stellar / Primal)
 - Origin: {origin}
-- Realm: {realm_name}   — pulled from realms table via realm_id
+- Realm: {realm_name} — pulled from realms table via realm_id
 
 ## Realm context (auto-injected — see file 13)
 
@@ -121,6 +130,7 @@ the monster's `realm_id`, fetching the realm fragment from file 13's content
 (or a JSON map of it), and querying 3 sibling monsters from the same realm.
 
 ## Rarity visual budget
+
 - common/uncommon: simple silhouette, 1–2 distinguishing features, muted color
 - rare/elite: more detail, glowing eyes or single accent gem
 - epic: layered armor or distinct weapon, secondary accent color
@@ -129,6 +139,7 @@ the monster's `realm_id`, fetching the realm fragment from file 13's content
 - ex: white-gold or void-black palette, ambient warping, 10-15 particle motes
 
 ## Element palette hints (accent only, not whole-figure tint)
+
 - Arcane: violet + gold
 - Chaos: blood red + obsidian
 - Death: bone white + sickly green
@@ -140,6 +151,7 @@ the monster's `realm_id`, fetching the realm fragment from file 13's content
 - Primal: clay red + ash gray
 
 ## Role hints (subtle, do not override the main concept)
+
 - attacker: weapon prominent
 - tank: shield or heavy armor focus
 - healer: glow at hands or staff/orb
@@ -147,6 +159,7 @@ the monster's `realm_id`, fetching the realm fragment from file 13's content
 - debuffer: chains, masks, or hex marks
 
 ## Self-check before returning
+
 1. Background fully transparent? ✓
 2. Subject fills 70-85%? ✓
 3. No text or letters anywhere on the figure? ✓
@@ -280,8 +293,7 @@ async function batchGen() {
       continue;
     }
 
-    const prompt = PROMPT_TEMPLATE
-      .replace("{name}", m.name)
+    const prompt = PROMPT_TEMPLATE.replace("{name}", m.name)
       .replace("{rarity}", m.rarity)
       .replace("{role}", m.role)
       .replace("{element}", m.element)
@@ -289,7 +301,7 @@ async function batchGen() {
 
     try {
       const result = await model.generateContent(prompt);
-      const part = result.response.candidates?.[0]?.content?.parts?.find(p => p.inlineData);
+      const part = result.response.candidates?.[0]?.content?.parts?.find((p) => p.inlineData);
       if (part?.inlineData?.data) {
         await fs.writeFile(outpath, Buffer.from(part.inlineData.data, "base64"));
         console.log(`WROTE ${filename}`);
@@ -301,12 +313,17 @@ async function batchGen() {
     }
 
     // Rate limit
-    await new Promise(r => setTimeout(r, 1500));
+    await new Promise((r) => setTimeout(r, 1500));
   }
 }
 
 async function exists(p) {
-  try { await fs.stat(p); return true; } catch { return false; }
+  try {
+    await fs.stat(p);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 batchGen().catch(console.error);

@@ -11,11 +11,24 @@ export function moodForBond(bondPercent: number): Mood {
   return "devoted";
 }
 
-export const MOOD_META: Record<Mood, { label: string; color: string; icon: string; effect: string }> = {
-  devoted:    { label: "Devoted",    color: "#FFD54F", icon: "💖", effect: "+5% battle effectiveness" },
-  loyal:      { label: "Loyal",      color: "#5FAD41", icon: "💚", effect: "Steady performance" },
-  despondent: { label: "Despondent", color: "#FFB74D", icon: "🥀", effect: "−15% battle effectiveness" },
-  fading:     { label: "Fading",     color: "#E05252", icon: "💔", effect: "Refuses all activity until bond ≥ 25%" },
+export const MOOD_META: Record<
+  Mood,
+  { label: string; color: string; icon: string; effect: string }
+> = {
+  devoted: { label: "Devoted", color: "#FFD54F", icon: "💖", effect: "+5% battle effectiveness" },
+  loyal: { label: "Loyal", color: "#5FAD41", icon: "💚", effect: "Steady performance" },
+  despondent: {
+    label: "Despondent",
+    color: "#FFB74D",
+    icon: "🥀",
+    effect: "−15% battle effectiveness",
+  },
+  fading: {
+    label: "Fading",
+    color: "#E05252",
+    icon: "💔",
+    effect: "Refuses all activity until bond ≥ 25%",
+  },
 };
 
 // ─── Hub commentary ────────────────────────────────────────────────────────
@@ -55,7 +68,9 @@ export async function getDevotedCommentary(): Promise<null | {
   monsterRole: string;
   line: string;
 }> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return null;
 
   const { data: roster } = await supabase

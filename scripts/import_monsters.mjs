@@ -1,13 +1,16 @@
-import fs from 'fs';
-import readline from 'readline';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import readline from "readline";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CSV_FILE = 'c:\\Users\\Zyle\\Downloads\\summonscroll_10000_monsters.csv';
-const OUTPUT_FILE = path.join(__dirname, '../supabase/migrations/20260608130000_massive_bestiary.sql');
+const CSV_FILE = "c:\\Users\\Zyle\\Downloads\\summonscroll_10000_monsters.csv";
+const OUTPUT_FILE = path.join(
+  __dirname,
+  "../supabase/migrations/20260608130000_massive_bestiary.sql",
+);
 
 const rarityBase = {
   common: { hp: 100, atk: 30, def: 20, spd: 10 },
@@ -32,7 +35,7 @@ async function processCSV() {
   const fileStream = fs.createReadStream(CSV_FILE);
   const rl = readline.createInterface({
     input: fileStream,
-    crlfDelay: Infinity
+    crlfDelay: Infinity,
   });
 
   const writeStream = fs.createWriteStream(OUTPUT_FILE);
@@ -48,12 +51,12 @@ async function processCSV() {
       isFirstLine = false;
       continue;
     }
-    
+
     // Parse CSV line handling potential quotes. Simple split since no complex commas expected.
     // id,name,rarity,role,realm,element
-    const parts = line.split(',');
+    const parts = line.split(",");
     if (parts.length < 6) continue;
-    
+
     const idStr = parts[0].trim();
     let name = parts[1].trim().replace(/'/g, "''");
     let rarity = parts[2].trim().toLowerCase();
@@ -61,8 +64,8 @@ async function processCSV() {
     let realmName = parts[4].trim().replace(/'/g, "''");
     let element = parts[5].trim().replace(/'/g, "''");
 
-    if (!rarityBase[rarity]) rarity = 'common';
-    if (!roleMods[role]) role = 'Attacker';
+    if (!rarityBase[rarity]) rarity = "common";
+    if (!roleMods[role]) role = "Attacker";
 
     const base = rarityBase[rarity];
     const mod = roleMods[role];
@@ -73,27 +76,31 @@ async function processCSV() {
 
     const bestiaryId = count + 1;
     const releaseSet = Math.floor(count / 100) + 1;
-    
+
     // Every 500th monster is forced to EX tier
     if (bestiaryId % 500 === 0) {
-      rarity = 'ex';
+      rarity = "ex";
     }
-    const isEx = (rarity === 'ex') ? 'true' : 'false';
+    const isEx = rarity === "ex" ? "true" : "false";
 
     const sqlVal = `(${bestiaryId}, ${releaseSet}, (SELECT id FROM public.realms WHERE name = '${realmName}' LIMIT 1), '${name}', '${rarity}'::public.monster_rarity, '${role.toLowerCase()}'::public.monster_role, '${element}', ${hp}, ${atk}, ${def}, ${spd}, '${isEx}')`;
     batch.push(sqlVal);
     count++;
 
     if (batch.length >= BATCH_SIZE) {
-      writeStream.write(`INSERT INTO public.monsters (bestiary_id, release_set, realm_id, name, rarity, role, element, base_hp, base_atk, base_def, base_spd, is_ex) VALUES\n`);
-      writeStream.write(batch.join(',\n') + ';\n\n');
+      writeStream.write(
+        `INSERT INTO public.monsters (bestiary_id, release_set, realm_id, name, rarity, role, element, base_hp, base_atk, base_def, base_spd, is_ex) VALUES\n`,
+      );
+      writeStream.write(batch.join(",\n") + ";\n\n");
       batch = [];
     }
   }
 
   if (batch.length > 0) {
-    writeStream.write(`INSERT INTO public.monsters (bestiary_id, release_set, realm_id, name, rarity, role, element, base_hp, base_atk, base_def, base_spd, is_ex) VALUES\n`);
-    writeStream.write(batch.join(',\n') + ';\n\n');
+    writeStream.write(
+      `INSERT INTO public.monsters (bestiary_id, release_set, realm_id, name, rarity, role, element, base_hp, base_atk, base_def, base_spd, is_ex) VALUES\n`,
+    );
+    writeStream.write(batch.join(",\n") + ";\n\n");
   }
 
   writeStream.end();
