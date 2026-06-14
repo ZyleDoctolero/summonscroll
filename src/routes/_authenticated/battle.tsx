@@ -426,7 +426,7 @@ function ModeCard({
   onClick: () => void;
 }) {
   return (
-    <div className="ss-card rounded-xl p-6">
+    <div className="game-panel p-6">
       <div className="mb-3">{icon}</div>
       <h3 className="text-lg font-bold mb-1" style={{ color: "var(--ink-primary)" }}>
         {title}

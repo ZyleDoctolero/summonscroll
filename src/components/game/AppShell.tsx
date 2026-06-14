@@ -19,8 +19,8 @@ export function AppShell({
 }) {
   return (
     <div
-      className="min-h-screen"
-      style={{ background: "var(--bg-deep)", color: "var(--ink-primary)" }}
+      className="min-h-screen relative"
+      style={{ background: "transparent", color: "var(--ink-primary)", zIndex: 1 }}
     >
       <GameSidebar
         displayName={profile.display_name}

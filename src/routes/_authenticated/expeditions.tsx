@@ -149,11 +149,11 @@ function ExpeditionsPage() {
 
         {/* Today's Expedition */}
         <div
-          className="ss-card-hero"
+          className="game-panel p-5"
           style={{
-            background: "linear-gradient(160deg, rgba(255,213,79,0.06), var(--bg-pane))",
+            background: `linear-gradient(160deg, ${ELEMENT_COLORS[def.element]}14, var(--bg-panel) 60%)`,
             borderColor: ELEMENT_COLORS[def.element],
-            boxShadow: `var(--ss-shadow-mid), 0 0 24px ${ELEMENT_COLORS[def.element]}25`,
+            boxShadow: `0 12px 40px rgba(0,0,0,0.5), 0 0 28px ${ELEMENT_COLORS[def.element]}22`,
           }}
         >
           <div className="flex justify-between items-start mb-3">
