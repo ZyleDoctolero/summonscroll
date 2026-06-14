@@ -19,8 +19,8 @@ export type Task = {
   realm_id?: number | null;
 };
 
-// Category → realm affinity mapping per FR01 §2.8
-// Category → realm affinity mapping per FR01 §2.8
+// Category  realm affinity mapping per FR01 2.8
+// Category  realm affinity mapping per FR01 2.8
 const CATEGORY_ICONS: Record<string, string> = {
   study: "tome",
   reading: "tome",
@@ -79,7 +79,7 @@ export function TaskCard({
     ? (CATEGORY_ICONS[task.category.toLowerCase()] ?? "target")
     : "target";
 
-  // Streak health calculation per FR01 §2.2
+  // Streak health calculation per FR01 2.2
   const streakHealth =
     task.streak > 0
       ? Math.min(100, task.streak * 15) // rough approximation
@@ -88,11 +88,11 @@ export function TaskCard({
         : 0;
   const streakColor =
     streakHealth >= 75
-      ? "#5FAD41"
+      ? "var(--success)"
       : streakHealth >= 40
-        ? "#FFB74D"
+        ? "var(--warning)"
         : streakHealth > 0
-          ? "#E05252"
+          ? "var(--danger)"
           : "var(--ink-tertiary)";
 
   return (
@@ -120,7 +120,7 @@ export function TaskCard({
           Sacred
         </div>
       )}
-      {/* Action buttons — FR01 §2.3: [+] and [−] for habits */}
+      {/* Action buttons - FR01 2.3: [+] and [-] for habits */}
       {task.type === "habit" ? (
         <div className="flex flex-col gap-1.5">
           {task.positive_enabled && (
@@ -150,7 +150,7 @@ export function TaskCard({
               }}
               aria-label="Score negative"
             >
-              −
+              -
             </button>
           )}
         </div>
@@ -200,7 +200,7 @@ export function TaskCard({
               style={{ color: "var(--ink-secondary)" }}
               aria-label="More options"
             >
-              ⋮
+              
             </button>
             {open && (
               <div
@@ -257,15 +257,15 @@ export function TaskCard({
           </span>
           {task.streak > 0 && (
             <span className="flex items-center gap-1">
-              <Icon name="streak" size={12} color="#FF8A65" />
-              <span className="t-mono" style={{ color: "#FF8A65" }}>
+              <Icon name="streak" size={12} color="var(--warning)" />
+              <span className="t-mono" style={{ color: "var(--warning)" }}>
                 {task.streak}
               </span>
             </span>
           )}
         </div>
 
-        {/* Streak health bar — FR01 §2.2 */}
+        {/* Streak health bar - FR01 2.2 */}
         {task.type !== "todo" && task.streak > 0 && (
           <div className="mt-2">
             <div

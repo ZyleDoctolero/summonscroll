@@ -7,6 +7,7 @@ import { AppShell } from "@/components/game/AppShell";
 import { Icon } from "@/components/ui/Icon";
 import { getMyProfile, listBanners, pullBanner } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, RARITY_ORDER, type Rarity } from "@/lib/game/gacha.constants";
+import { SummonReveal, SummonResults, type PullResultData } from "@/components/game/SummonReveal";
 
 export const Route = createFileRoute("/_authenticated/altar")({
   head: () => ({ meta: [{ title: "Altar — SummonScroll" }] }),
@@ -38,7 +39,7 @@ function AltarPage() {
   const pullMut = useMutation({
     mutationFn: async (v: { bannerId: string; count: 1 | 10 }) => pullBanner(v.bannerId, v.count),
     onSuccess: (res) => {
-      setPullResults(res.results as PullResult[]);
+      setPullResults(res.results as PullResultData[]);
       setRevealIndex(0);
       qc.invalidateQueries({ queryKey: ["profile"] });
     },
@@ -60,147 +61,23 @@ function AltarPage() {
   if (pullResults) {
     const allRevealed = revealIndex >= pullResults.length - 1;
     if (!allRevealed) {
-      const current = pullResults[revealIndex];
-      const r = current.monster.rarity;
       return (
         <AppShell profile={profile}>
-          <div
-            className="pull-stage cursor-pointer flex-col"
-            onClick={() => setRevealIndex((i) => Math.min(i + 1, pullResults.length - 1))}
-          >
-            {/* rotating light rays + a fresh rarity-colored burst each reveal */}
-            <div className="pull-rays" />
-            <div
-              key={`burst-${revealIndex}`}
-              className="pull-burst"
-              style={{ background: `radial-gradient(circle, ${RARITY_COLOR[r]}cc, transparent 65%)` }}
-            />
-            <motion.div
-              key={`card-${revealIndex}`}
-              initial={{ opacity: 0, scale: 0.6, rotateY: -25 }}
-              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-              transition={{ type: "spring", stiffness: 200, damping: 18 }}
-              className="ss-modal text-center max-w-xs relative z-10"
-              style={{ border: `2px solid ${RARITY_COLOR[r]}`, boxShadow: RARITY_GLOW[r] }}
-            >
-              <div className="w-40 h-40 mx-auto rounded-lg mb-4 flex items-center justify-center overflow-hidden ss-pane">
-                <img
-                  src={
-                    current.monster.artUrl
-                      ? current.monster.artUrl
-                      : `/sprites/monsters/${current.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
-                  }
-                  className="w-full h-full object-cover"
-                  alt={current.monster.name}
-                  onError={(e) => {
-                    e.currentTarget.src = "/monsters/placeholder.png";
-                  }}
-                />
-              </div>
-              <h2
-                className="text-2xl font-bold mb-2 text-gold-bright"
-                style={{ color: RARITY_COLOR[r] }}
-              >
-                {current.monster.name}
-              </h2>
-              <span
-                className="ss-chip"
-                style={{
-                  background: `${RARITY_COLOR[r]}20`,
-                  color: RARITY_COLOR[r],
-                  border: `1px solid ${RARITY_COLOR[r]}60`,
-                }}
-              >
-                {r}
-              </span>
-              <p className="text-xs mt-2 text-muted-foreground">
-                {current.monster.element} · {current.monster.role}
-              </p>
-              {current.isNew && (
-                <p className="text-sm mt-2 font-medium text-success flex items-center gap-1 justify-center">
-                  <Icon name="sparkle" size={14} color="var(--success)" /> New!
-                </p>
-              )}
-              {current.transcendenceStone && (
-                <p
-                  className="text-sm mt-1 flex items-center gap-1 justify-center"
-                  style={{ color: "var(--gold-bright)" }}
-                >
-                  <Icon name="summon" size={14} /> Transcendence Stone
-                </p>
-              )}
-            </motion.div>
-            {pullResults.length > 1 && (
-              <div className="flex gap-1.5 mt-6 relative z-10">
-                {pullResults.map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-2 h-2 rounded-full"
-                    style={{
-                      background: i <= revealIndex ? "var(--gold-bright)" : "rgba(255,255,255,0.1)",
-                    }}
-                  />
-                ))}
-              </div>
-            )}
-            <p className="mt-4 text-xs text-muted-foreground">Tap to continue</p>
-          </div>
+          <SummonReveal
+            current={pullResults[revealIndex]}
+            currentIndex={revealIndex}
+            total={pullResults.length}
+            onNext={() => setRevealIndex((i) => Math.min(i + 1, pullResults.length - 1))}
+          />
         </AppShell>
       );
     }
-    const sorted = [...pullResults].sort(
-      (a, b) => RARITY_ORDER[b.monster.rarity] - RARITY_ORDER[a.monster.rarity],
-    );
     return (
       <AppShell profile={profile}>
-        <div className="fixed inset-0 z-50 flex flex-col ss-modal-backdrop">
-          <div className="flex-1 overflow-y-auto p-6">
-            <h2 className="text-2xl font-bold text-center mb-6 text-gold-bright">Summon Results</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 max-w-2xl mx-auto">
-              {sorted.map((res, i) => {
-                const r = res.monster.rarity;
-                return (
-                  <div
-                    key={i}
-                    className="ss-card text-center"
-                    style={{
-                      border: `1px solid ${RARITY_COLOR[r]}`,
-                      boxShadow: r !== "common" ? RARITY_GLOW[r] : undefined,
-                    }}
-                  >
-                    <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center overflow-hidden ss-pane">
-                      <img
-                        src={
-                          res.monster.artUrl
-                            ? res.monster.artUrl
-                            : `/sprites/monsters/${res.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
-                        }
-                        className="w-full h-full object-cover"
-                        alt={res.monster.name}
-                        onError={(e) => {
-                          e.currentTarget.src = "/monsters/placeholder.png";
-                        }}
-                      />
-                    </div>
-                    <p className="text-xs font-bold truncate text-foreground">{res.monster.name}</p>
-                    <span
-                      className="ss-chip mt-1"
-                      style={{ background: `${RARITY_COLOR[r]}20`, color: RARITY_COLOR[r] }}
-                    >
-                      {r}
-                    </span>
-                    {res.isNew && <p className="text-[10px] mt-0.5 text-success">New!</p>}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className="p-4 border-t border-border">
-            <button onClick={() => setPullResults(null)} className="ss-btn ss-btn-primary w-full">
-              Continue
-            </button>
-          </div>
-        </div>
+        <SummonResults
+          results={pullResults}
+          onFinish={() => setPullResults(null)}
+        />
       </AppShell>
     );
   }

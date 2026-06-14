@@ -112,7 +112,7 @@ export function GameSidebar({
                   Level {level}
                   {playerClass &&
                     playerClass !== "none" &&
-                    ` · ${playerClass[0].toUpperCase() + playerClass.slice(1)}`}
+                    ` . ${playerClass[0].toUpperCase() + playerClass.slice(1)}`}
                 </span>
               </div>
             </div>

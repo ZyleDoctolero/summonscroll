@@ -27,11 +27,11 @@ export function valueColor(value: number): "blue" | "green" | "yellow" | "orange
 }
 
 export const VALUE_COLOR_HEX: Record<ReturnType<typeof valueColor>, string> = {
-  blue: "#4FC3F7",
-  green: "#5FAD41",
-  yellow: "#FFB74D",
-  orange: "#FF8A65",
-  red: "#E05252",
+  blue: "var(--cyan)",
+  green: "var(--success)",
+  yellow: "var(--warning)",
+  orange: "var(--warning)",
+  red: "var(--danger)",
 };
 
 export function rewardGold(value: number, diff: Difficulty): number {

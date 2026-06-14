@@ -15,7 +15,9 @@ import {
   getTowerProgress,
   startArenaBattle,
   getBattleHistory,
+  resolveBattleTurn,
 } from "@/lib/game/supabase-api";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 
 export const Route = createFileRoute("/_authenticated/battle")({
   component: BattlePage,
@@ -31,8 +33,9 @@ function BattlePage() {
   const towerQ = useQuery({ queryKey: ["tower"], queryFn: getTowerProgress });
   const historyQ = useQuery({ queryKey: ["battle-history"], queryFn: getBattleHistory });
 
-  const [result, setResult] = useState<BattleResult | null>(null);
+  const [result, setResult] = useState<any | null>(null);
   const [logIndex, setLogIndex] = useState(0);
+  const [modeSelection, setModeSelection] = useState<"auto" | "manual">("auto");
 
   const battleMut = useMutation({
     mutationFn: async (v: { mode: "chaos_tower" | "event" | "boss_rush"; floor: number }) =>
@@ -66,15 +69,30 @@ function BattlePage() {
     onError: (e: Error) => toast.error(e.message),
   });
 
+  const turnMut = useMutation({
+    mutationFn: async (choice: string) => resolveBattleTurn(result!.battleId, choice),
+    onSuccess: (state) => {
+      setResult((prev: any) => {
+        if (!prev) return prev;
+        return {
+          ...prev,
+          playerHp: state.playerHp,
+          enemyHp: state.enemyHp,
+          initialState: state,
+          log: state.log,
+          won: state.won,
+          rounds: state.turn,
+          rewards: state.complete ? { crystals: 0, xp: 0, shards: 0, gold: state.goldEarned } : prev.rewards
+        };
+      });
+      // Always show newest logs on new turns
+      setLogIndex(Math.max(0, state.log.length - 5));
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
   if (profileQ.isLoading)
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ background: "var(--bg-deep)", color: "var(--ink-secondary)" }}
-      >
-        Loading…
-      </div>
-    );
+    return <LoadingScreen realmSlug="chaos-wastes" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -132,7 +150,9 @@ function BattlePage() {
                 )}
               </motion.p>
               <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
-                vs {result.enemyName} — <NumberFlow value={result.rounds} /> rounds
+                vs {result.enemyName} {result.mode !== "manual" && `— `} 
+                {result.mode !== "manual" && <NumberFlow value={result.rounds} />} 
+                {result.mode !== "manual" && ` rounds`}
               </p>
             </motion.div>
 
@@ -179,17 +199,45 @@ function BattlePage() {
               ))}
             </div>
 
-            {!allShown ? (
+            {/* Manual Controls */}
+            {result.mode === "manual" && !result.initialState.complete && (
+              <div className="grid grid-cols-3 gap-2 mt-4">
+                <button
+                  onClick={() => turnMut.mutate("attack")}
+                  disabled={turnMut.isPending}
+                  className="ss-btn ss-btn-primary"
+                >
+                  Attack
+                </button>
+                <button
+                  onClick={() => turnMut.mutate("defend")}
+                  disabled={turnMut.isPending}
+                  className="ss-btn ss-btn-secondary"
+                >
+                  Defend
+                </button>
+                <button
+                  onClick={() => turnMut.mutate("special")}
+                  disabled={turnMut.isPending || result.initialState.specialCooldown > 0}
+                  className="ss-btn ss-btn-danger"
+                  style={{ opacity: result.initialState.specialCooldown > 0 ? 0.4 : 1 }}
+                >
+                  {result.initialState.specialCooldown > 0 ? `CD: ${result.initialState.specialCooldown}` : "Special"}
+                </button>
+              </div>
+            )}
+
+            {!allShown && (!result.mode || result.mode === "auto") ? (
               <motion.button
                 onClick={() => setLogIndex((i) => i + 5)}
                 whileTap={{ scale: 0.97 }}
                 whileHover={{ y: -1 }}
                 transition={trans.springy}
-                className="ss-btn ss-btn-secondary w-full"
+                className="ss-btn ss-btn-secondary w-full mt-4"
               >
                 Next →
               </motion.button>
-            ) : (
+            ) : (!result.mode || result.mode === "auto" || result.initialState.complete) && (
               <>
                 {result.won && (
                   <motion.div
@@ -224,15 +272,27 @@ function BattlePage() {
                           </span>
                         </RewardChip>
                       )}
-                      <RewardChip>
-                        <span
-                          style={{ color: "var(--ink-secondary)" }}
-                          className="flex items-center gap-1"
-                        >
-                          <Icon name="xp" size={12} color="var(--gold-bright)" /> +
-                          <NumberFlow value={result.rewards.xp} /> XP
-                        </span>
-                      </RewardChip>
+                      {result.rewards?.gold > 0 && (
+                        <RewardChip>
+                          <span
+                            style={{ color: "var(--gold-bright)" }}
+                            className="flex items-center gap-1"
+                          >
+                            +<NumberFlow value={result.rewards.gold} /> Gold
+                          </span>
+                        </RewardChip>
+                      )}
+                      {result.rewards?.xp > 0 && (
+                        <RewardChip>
+                          <span
+                            style={{ color: "var(--ink-secondary)" }}
+                            className="flex items-center gap-1"
+                          >
+                            <Icon name="xp" size={12} color="var(--gold-bright)" /> +
+                            <NumberFlow value={result.rewards.xp} /> XP
+                          </span>
+                        </RewardChip>
+                      )}
                       {milestoneDrops.map((d, i) => (
                         <RewardChip key={i} delay={0.06 + i * 0.05}>
                           <span style={{ color: "var(--gold-bright)" }}>
@@ -316,6 +376,21 @@ function BattlePage() {
           </div>
         )}
 
+        <div className="flex gap-4 mb-6">
+          <button 
+            onClick={() => setModeSelection("auto")}
+            className={`ss-tab-d pb-2 text-sm font-semibold ${modeSelection === "auto" ? "active" : ""}`}
+          >
+            Auto Mode
+          </button>
+          <button 
+            onClick={() => setModeSelection("manual")}
+            className={`ss-tab-d pb-2 text-sm font-semibold ${modeSelection === "manual" ? "active" : ""}`}
+          >
+            Manual Mode (+15% Gold)
+          </button>
+        </div>
+
         {/* Battle modes */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <ModeCard
@@ -328,7 +403,7 @@ function BattlePage() {
             progress={Math.min(100, highestFloor)}
             disabled={!canBattle || battleMut.isPending}
             loading={battleMut.isPending}
-            onClick={() => battleMut.mutate({ mode: "chaos_tower", floor: nextFloor })}
+            onClick={() => battleMut.mutate({ mode: "chaos_tower", floor: nextFloor, isManual: modeSelection === "manual" } as any)}
           />
           <ModeCard
             title="Boss Rush"

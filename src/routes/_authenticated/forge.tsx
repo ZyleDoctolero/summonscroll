@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile } from "@/lib/game/supabase-api";
 import { listRecipes, craft, type Recipe, type CraftQuality } from "@/lib/game/forge-client";
@@ -84,6 +85,7 @@ function ForgePage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
+      <AtmosphereBackdrop realm="chaos" />
       <div className="p-6 md:p-10 max-w-6xl">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           The Forge

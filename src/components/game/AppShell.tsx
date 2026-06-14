@@ -6,6 +6,7 @@ import { PlayerHeader } from "./PlayerHeader";
 import { MobilePlayerHeader } from "./MobilePlayerHeader";
 import { Toaster } from "sonner";
 import { ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
+import { MobileNav } from "./MobileNav";
 
 type Profile = Parameters<typeof PlayerHeader>[0]["profile"] & {
   class?: string;
@@ -46,11 +47,12 @@ export function AppShell({
           },
         }}
       />
+      <MobileNav />
     </div>
   );
 }
 
-// Fades + lifts each screen as the route changes — the "switching menus"
+// Fades + lifts each screen as the route changes - the "switching menus"
 // feel of a game rather than instant page swaps.
 function RouteTransition({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });

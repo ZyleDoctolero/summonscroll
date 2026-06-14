@@ -24,14 +24,14 @@ export const RARITY_ORDER: Record<Rarity, number> = {
 };
 
 export const RARITY_COLOR: Record<Rarity, string> = {
-  common: "#9E9E9E",
-  uncommon: "#81C784",
-  rare: "#4FC3F7",
-  elite: "#FFB74D",
-  epic: "#CE93D8",
-  legendary: "#FFD54F",
-  mythic: "#FF8A65",
-  ex: "#FFFFFF",
+  common: "var(--ink-tertiary)",
+  uncommon: "var(--success)",
+  rare: "var(--cyan)",
+  elite: "var(--warning)",
+  epic: "var(--violet)",
+  legendary: "var(--gold-bright)",
+  mythic: "var(--warning)",
+  ex: "var(--ink-primary)",
 };
 
 export const RARITY_GLOW: Record<Rarity, string> = {

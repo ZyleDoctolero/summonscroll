@@ -381,6 +381,29 @@ export async function getBattleHistory() {
 export { startArenaBattle, classifyFloor } from "./battle-client";
 export type { FloorType } from "./battle-client";
 
+export async function harvestIsland(): Promise<{ harvested: number, whisperName: string | null }> {
+  const { data, error } = await supabase.rpc("harvest_island");
+  if (error) throw error;
+  return data as any;
+}
+
+export async function startManualBattle(mode: string, floor: number, playerHp: number, enemyHp: number, enemyName: string, enemyAtk: number, enemyDef: number, enemyElement: string, teamPower: number, teamIds: string[]): Promise<{ battleId: string }> {
+  const { data, error } = await supabase.rpc("start_manual_battle", {
+    p_mode: mode, p_floor: floor, p_player_hp: playerHp, p_enemy_hp: enemyHp, p_enemy_name: enemyName, p_enemy_atk: enemyAtk, p_enemy_def: enemyDef, p_enemy_element: enemyElement, p_team_power: teamPower, p_team_ids: teamIds
+  });
+  if (error) throw error;
+  return data as any;
+}
+
+export async function resolveBattleTurn(battleId: string, choice: string) {
+  const { data, error } = await supabase.rpc("resolve_battle_turn", {
+    p_battle_id: battleId,
+    p_choice: choice,
+  });
+  if (error) throw error;
+  return data as any;
+}
+
 // ─── Shop ───────────────────────────────────────────────────────────────────
 
 export async function listShopItems() {

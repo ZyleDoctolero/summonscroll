@@ -4,10 +4,13 @@ import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { getMyProfile, listMyMonsters, updateTeamSlot, listTasks } from "@/lib/game/supabase-api";
+import { getMyProfile, listMyMonsters, updateTeamSlot, listTasks, harvestIsland } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 import { supabase } from "@/integrations/supabase/client";
 import { Icon } from "@/components/ui/Icon";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
+import { MonsterCard } from "@/components/game/MonsterCard";
+import { IslandZones } from "@/components/game/IslandZones";
 
 export const Route = createFileRoute("/_authenticated/island")({
   component: IslandPage,
@@ -29,6 +32,18 @@ function IslandPage() {
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
       setAssignSlot(null);
       toast.success("Team updated!");
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+  const harvestMut = useMutation({
+    mutationFn: async () => harvestIsland(),
+    onSuccess: (res) => {
+      qc.invalidateQueries({ queryKey: ["profile"] });
+      toast.success(`Harvested ${res.harvested} Gold!`);
+      if (res.whisperName) {
+        toast.info(`${res.whisperName} looks pleased with the harvest.`);
+      }
     },
     onError: (e: Error) => toast.error(e.message),
   });
@@ -157,15 +172,28 @@ function IslandPage() {
 
   const teamPower = Math.round(basePower * synergyMult);
 
+  const pendingHarvest = useMemo(() => {
+    const profile = profileQ.data?.profile;
+    if (!profile || team.length === 0) return 0;
+    const lastHarvest = new Date(profile.island_last_harvest_at || Date.now());
+    const hours = (Date.now() - lastHarvest.getTime()) / 3600000;
+    
+    let gold = 0;
+    for (const um of team) {
+      const r = um.monster.rarity;
+      let mult = 1;
+      if (r === 'Uncommon') mult = 1.2;
+      if (r === 'Rare') mult = 1.5;
+      if (r === 'Epic') mult = 2.0;
+      if (r === 'Legendary') mult = 3.0;
+      if (r === 'EX') mult = 5.0;
+      gold += (um.bond_percent / 100.0) * mult * 0.5 * hours;
+    }
+    return Math.floor(gold) + (profile.island_pending_gold || 0);
+  }, [profileQ.data?.profile, team]);
+
   if (profileQ.isLoading)
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Loading…
-      </div>
-    );
+    return <LoadingScreen realmSlug="divine-threshold" />;
   if (!profileQ.data) return null;
 
   return (
@@ -225,90 +253,26 @@ function IslandPage() {
               <h2 className="t-h3 text-lg font-bold" style={{ color: "var(--ink-primary)" }}>
                 Your Team
               </h2>
-              <span className="text-sm font-mono" style={{ color: "var(--gold-bright)" }}>
-                Power: {teamPower.toLocaleString()}
-              </span>
-            </div>
-            <div className="grid grid-cols-5 gap-3">
-              {[1, 2, 3, 4, 5].map((slot) => {
-                const um = team.find((t: any) => t.team_slot === slot);
-                if (um) {
-                  const r = um.monster.rarity as Rarity;
-                  const fatigued = um.bond_percent < 10;
-                  const ascensionLevel = um.ascension_level ?? 0;
-                  return (
-                    <div
-                      key={slot}
-                      className="ss-card text-center relative"
-                      style={{
-                        borderColor: RARITY_COLOR[r],
-                        boxShadow: r !== "common" ? RARITY_GLOW[r] : undefined,
-                        opacity: fatigued ? 0.5 : 1,
-                      }}
-                    >
-                      {ascensionLevel > 0 && (
-                        <div
-                          className="absolute -top-2 -right-2 text-[9px] font-bold px-1.5 py-0.5 rounded-full"
-                          style={{
-                            background: "linear-gradient(135deg,#8A2387,#E94057,#F27121)",
-                            color: "#fff",
-                          }}
-                        >
-                          +{ascensionLevel}
-                        </div>
-                      )}
-                      <div className="w-full aspect-square rounded mb-2 flex items-center justify-center overflow-hidden ss-pane">
-                        <img
-                          src={
-                            um.monster.art_url
-                              ? um.monster.art_url
-                              : `/sprites/monsters/${um.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
-                          }
-                          className="w-full h-full object-cover"
-                          alt={um.monster.name}
-                          onError={(e) => {
-                            e.currentTarget.src = "/monsters/placeholder.png";
-                          }}
-                        />
-                      </div>
-                      <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>
-                        {um.monster.name}
-                      </p>
-                      <p className="text-[9px]" style={{ color: "var(--ink-secondary)" }}>
-                        Lvl {um.level} · Bond {Math.round(um.bond_percent)}%
-                      </p>
-                      {fatigued && (
-                        <div
-                          className="absolute top-1 right-1 text-[10px] px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5"
-                          style={{ background: "var(--danger)", color: "#fff" }}
-                        >
-                          <Icon name="stamina" size={10} color="#fff" />
-                          <span>FATIGUE</span>
-                        </div>
-                      )}
-                      <button
-                        onClick={() => slotMut.mutate({ userMonsterId: um.id, slot: null })}
-                        className="mt-1 text-[9px] px-2 py-0.5 rounded font-semibold"
-                        style={{ color: "var(--danger)", background: "rgba(255,94,94,0.1)" }}
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  );
-                }
-                return (
+              <div className="flex items-center gap-4">
+                {pendingHarvest > 0 && (
                   <button
-                    key={slot}
-                    onClick={() => setAssignSlot(slot)}
-                    className="rounded-lg p-3 border-2 border-dashed flex flex-col items-center justify-center min-h-[120px] transition-colors hover:border-white/20"
-                    style={{ borderColor: "var(--ss-border)", color: "var(--ink-tertiary)" }}
+                    onClick={() => harvestMut.mutate()}
+                    disabled={harvestMut.isPending}
+                    className="ss-btn ss-btn-d-primary animate-pulse"
+                    style={{ background: "linear-gradient(135deg, var(--success), var(--realm-wild))" }}
                   >
-                    <span className="text-2xl mb-1">+</span>
-                    <span className="text-[10px]">Slot {slot}</span>
+                    Harvest {pendingHarvest} Gold
                   </button>
-                );
-              })}
+                )}
+                <span className="text-sm font-mono" style={{ color: "var(--gold-bright)" }}>
+                  Power: {teamPower.toLocaleString()}
+                </span>
+              </div>
             </div>
+            <IslandZones 
+              monsters={team} 
+              onEmptyClick={(slot) => setAssignSlot(slot)} 
+            />
           </div>
 
           {/* Monster roster */}
@@ -318,8 +282,8 @@ function IslandPage() {
           {roster.length === 0 ? (
             <EmptyState
               icon="sparkle"
-              title="The island feels empty."
-              body="Visit the Altar to summon your first companion."
+              title="The Realm Awaits Its First Inhabitant"
+              body="Summon from the Altar. Place them here. Watch them grow."
             />
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
@@ -335,54 +299,23 @@ function IslandPage() {
                   const r = um.monster.rarity as Rarity;
                   const isMaxBond = um.bond_percent >= 100;
                   return (
-                    <div
-                      key={um.id}
-                      className="ss-card text-center p-2"
-                      style={{
-                        borderColor: `${RARITY_COLOR[r]}40`,
-                        outline: assignSlot !== null ? "2px solid var(--gold-bright)" : undefined,
-                      }}
-                    >
-                      <button
-                        onClick={() =>
-                          assignSlot !== null
-                            ? slotMut.mutate({ userMonsterId: um.id, slot: assignSlot })
-                            : undefined
-                        }
-                        className="w-full"
-                      >
-                        <div className="w-full aspect-square rounded mb-1 flex items-center justify-center overflow-hidden ss-pane">
-                          <img
-                            src={
-                              (um.monster as any).art_url
-                                ? (um.monster as any).art_url
-                                : `/sprites/monsters/${um.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
-                            }
-                            className="w-full h-full object-cover"
-                            alt={um.monster.name}
-                            onError={(e) => {
-                              e.currentTarget.src = "/monsters/placeholder.png";
-                            }}
-                          />
-                        </div>
-                        <p
-                          className="text-[10px] font-bold truncate"
-                          style={{ color: "var(--ink-primary)" }}
-                        >
-                          {um.monster.name}
-                        </p>
-                        <p className="text-[9px]" style={{ color: RARITY_COLOR[r] }}>
-                          {um.monster.rarity}
-                        </p>
-                      </button>
+                    <div key={um.id} className="relative w-full">
+                      <MonsterCard 
+                        monster={um} 
+                        compact={true} 
+                        onClick={() => assignSlot !== null ? slotMut.mutate({ userMonsterId: um.id, slot: assignSlot }) : undefined}
+                      />
+                      {assignSlot !== null && (
+                        <div className="absolute inset-0 border-2 rounded-lg pointer-events-none" style={{ borderColor: "var(--gold-bright)" }} />
+                      )}
                       {isMaxBond && (
                         <button
                           onClick={() => ascendMut.mutate(um.id)}
                           disabled={ascendMut.isPending}
                           className="w-full mt-2 py-1 rounded text-[10px] font-bold text-white transition-all hover:opacity-80 disabled:opacity-50"
-                          style={{ background: "linear-gradient(135deg,#8A2387,#E94057)" }}
+                          style={{ background: "linear-gradient(135deg,var(--realm-void),var(--realm-chaos))" }}
                         >
-                          {ascendMut.isPending ? "..." : `Ascend (1000g, 5 Potions)`}
+                          {ascendMut.isPending ? "..." : `Ascend`}
                         </button>
                       )}
                     </div>

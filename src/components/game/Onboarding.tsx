@@ -11,7 +11,7 @@ const STEPS = [
   },
   {
     title: "Three rhythms, one game.",
-    body: "Daily — tick tasks, earn rewards. Weekly — run expeditions, climb the Tower. Quarterly — slay a Boss, mint a Tome. The deeper rhythms reward consistency.",
+    body: "Daily - tick tasks, earn rewards. Weekly - run expeditions, climb the Tower. Quarterly - slay a Boss, mint a Tome. The deeper rhythms reward consistency.",
     icon: "battle" as const,
   },
   {
@@ -32,9 +32,9 @@ interface OnboardingProps {
  * Implements Proposal D visual identity with gradient accents and dramatic typography.
  *
  * Flow:
- * 1. "Your habits forge a fantasy world" — context setting
- * 2. "Three rhythms, one game" — game loop explanation
- * 3. "Start with one directive" — tutorial prompt
+ * 1. "Your habits forge a fantasy world" - context setting
+ * 2. "Three rhythms, one game" - game loop explanation
+ * 3. "Start with one directive" - tutorial prompt
  *
  * After completion, a tutorial directive is seeded and the free first pull is enabled.
  */

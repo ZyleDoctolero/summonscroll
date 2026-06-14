@@ -156,7 +156,7 @@ function AuthPage() {
               style={{
                 background: "rgba(224,82,82,0.1)",
                 borderColor: "rgba(224,82,82,0.3)",
-                color: "#FCA5A5",
+                color: "var(--danger)",
               }}
             >
               {error}

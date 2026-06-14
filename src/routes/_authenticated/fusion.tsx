@@ -2,10 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listMyMonsters } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
 import { Icon } from "@/components/ui/Icon";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 
 export const Route = createFileRoute("/_authenticated/fusion")({
   component: FusionPage,
@@ -22,20 +24,14 @@ function FusionPage() {
   const usedIds = new Set(slots.filter(Boolean));
 
   if (profileQ.isLoading)
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Loading…
-      </div>
-    );
+    return <LoadingScreen realmSlug="void-frontier" />;
   if (!profileQ.data) return null;
 
   const filledSlots = slots.filter(Boolean).length;
 
   return (
     <AppShell profile={profileQ.data.profile}>
+      <AtmosphereBackdrop realm="void" />
       <div className="p-6 md:p-10 max-w-6xl">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Fusion Matrix

@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { Icon } from "@/components/ui/Icon";
 import {
   getMyProfile,
@@ -107,6 +108,7 @@ function ExpeditionsPage() {
 
   return (
     <AppShell profile={profile}>
+      <AtmosphereBackdrop realm="blight" />
       <div className="bg-atmos bg-atmos-expedition p-6 md:p-10 max-w-5xl min-h-screen">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Expeditions

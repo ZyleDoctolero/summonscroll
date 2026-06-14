@@ -1,7 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { xpToNextLevel } from "./constants";
 
-export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rush", floor: number) {
+export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rush", floor: number, isManual: boolean = false) {
   const WEAKNESSES: Record<string, string> = {
     Fire: "Water",
     Water: "Nature",
@@ -247,6 +247,45 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
     });
   }
 
+  if (isManual) {
+    const { data, error } = await supabase.rpc("start_manual_battle", {
+      p_mode: mode, p_floor: floor, p_player_hp: teamHp, p_enemy_hp: enemy.hp,
+      p_enemy_name: enemy.name, p_enemy_atk: enemy.atk, p_enemy_def: enemy.def,
+      p_enemy_element: enemy.element, p_team_power: effectiveTeamPower, p_team_ids: team.map(t => t.id)
+    });
+    if (error) throw error;
+    
+    return {
+      battleId: (data as any).battleId,
+      mode: "manual",
+      playerHp: teamHp,
+      playerMaxHp: teamHp,
+      enemyHp: enemy.hp,
+      enemyMaxHp: enemy.hp,
+      enemyName: enemy.name,
+      initialState: {
+        playerHp: teamHp,
+        enemyHp: enemy.hp,
+        turn: 0,
+        log: log,
+        complete: false,
+        won: null,
+        goldEarned: 0,
+        specialCooldown: 0
+      }
+    };
+  }
+
+  log.push({ round: 0, actor: "system", action: `Enemy element: ${enemy.element}`, damage: 0 });
+  if (teamElementalAdvantage !== 0) {
+    log.push({
+      round: 0,
+      actor: "system",
+      action: `Elemental advantage: ${teamElementalAdvantage > 0 ? "+" : ""}${teamElementalAdvantage * 10}% Power`,
+      damage: 0,
+    });
+  }
+
   while (playerHp > 0 && enemyHp > 0 && round < 50) {
     round++;
     const pDmg = Math.max(
@@ -394,6 +433,7 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
     log,
     rewards: { crystals: rewardCrystals, xp: rewardXp, shards: rewardShards },
     floorType: classifyFloor(floor),
+    milestoneDrops,
     milestoneDrops,
     badges,
   };

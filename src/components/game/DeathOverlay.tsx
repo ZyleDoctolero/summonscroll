@@ -37,7 +37,7 @@ export function DeathOverlay({ trigger }: { trigger: number }) {
           Lost 1 level and all Gold.
         </div>
         <div className="t-h3 text-lg" style={{ color: "var(--gold-bright)" }}>
-          Revived — fight harder.
+          Revived - fight harder.
         </div>
       </div>
     </div>

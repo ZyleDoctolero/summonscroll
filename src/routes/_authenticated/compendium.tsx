@@ -18,6 +18,7 @@ import {
   MOOD_META,
 } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens";
 
 export const Route = createFileRoute("/_authenticated/compendium")({
@@ -81,14 +82,7 @@ function CompendiumPage() {
   }, [monstersQ.data, ownedIds]);
 
   if (profileQ.isLoading)
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Loading…
-      </div>
-    );
+    return <LoadingScreen realmSlug="blighted-expanse" />;
   if (!profileQ.data) return null;
 
   const sel = selectedId
@@ -233,9 +227,9 @@ function CompendiumPage() {
         </div>
         {filtered.length === 0 && (
           <EmptyState
-            icon="tome"
-            title="The bestiary is silent on this query."
-            body="Loosen your filters, or summon a kind of monster you haven't met."
+            icon="sparkle"
+            title="The Page Holds Space for 515 Disciplines"
+            body="None have answered your call yet. Begin at the Altar."
           />
         )}
       </div>

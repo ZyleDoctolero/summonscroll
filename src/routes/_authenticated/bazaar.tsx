@@ -3,9 +3,11 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { Icon } from "@/components/ui/Icon";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listShopItems, purchaseItem } from "@/lib/game/supabase-api";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 
 export const Route = createFileRoute("/_authenticated/bazaar")({
   component: ShopPage,
@@ -36,14 +38,7 @@ function ShopPage() {
   });
 
   if (profileQ.isLoading)
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Loading…
-      </div>
-    );
+    return <LoadingScreen realmSlug="ancient-vaults" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -51,6 +46,7 @@ function ShopPage() {
 
   return (
     <AppShell profile={profile}>
+      <AtmosphereBackdrop realm="myth" />
       <div className="p-6 md:p-10 max-w-6xl">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           The Bazaar
@@ -205,8 +201,8 @@ function ShopPage() {
         {tab !== "armoire" && items.length === 0 && (
           <EmptyState
             icon="gold"
-            title="The merchant has nothing of that kind today."
-            body="Try the other tabs. Or check back tomorrow."
+            title="The Market Rests Between Cycles"
+            body="Offerings appear when the Page turns. Come back tomorrow."
           />
         )}
       </div>

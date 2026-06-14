@@ -138,7 +138,7 @@ export function TaskFormDialog({
             value={v.category}
             onChange={(e) => setV({ ...v, category: e.target.value })}
             maxLength={40}
-            placeholder="Mind · Body · Vaults…"
+            placeholder="Mind . Body . Vaults"
           />
         </Field>
 
@@ -219,7 +219,7 @@ export function TaskFormDialog({
                   checked={v.negative_enabled}
                   onChange={(e) => setV({ ...v, negative_enabled: e.target.checked })}
                 />
-                Negative (−)
+                Negative (-)
               </label>
             </div>
           </Field>
@@ -273,7 +273,7 @@ export function TaskFormDialog({
             className="flex-1 py-2 rounded text-sm uppercase tracking-widest font-bold disabled:opacity-50"
             style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
           >
-            {saving ? "Saving…" : initial ? "Save" : "Create"}
+            {saving ? "Saving" : initial ? "Save" : "Create"}
           </button>
         </div>
         {/* .ss-input styles defined globally in styles.css */}

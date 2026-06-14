@@ -16,7 +16,7 @@ import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens
 import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
 import type { Task } from "./TaskCard";
 
-// ─── Morning Ritual ─────────────────────────────────────────────────────────
+//  Morning Ritual 
 
 export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () => void }) {
   const qc = useQueryClient();
@@ -29,7 +29,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
         particleCount: 90,
         spread: 60,
         origin: { y: 0.5 },
-        colors: ["#C89A3E", "var(--gold-bright)"],
+        colors: ["#C89A3E", "#FFD54F"],
       });
       qc.invalidateQueries({ queryKey: ["tasks"] });
       qc.invalidateQueries({ queryKey: ["today-log"] });
@@ -56,10 +56,10 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
       onOpenChange={(open) => !open && onClose()}
       title="Morning Ritual"
     >
-      <Glyph emoji="☀" />
+      <Glyph emoji="<Icon name="morning" size={14} />" />
       <Sub>
         Pick today's <strong style={{ color: "var(--gold-bright)" }}>3 Sacred Directives</strong>. They earn
-        1.5× rewards and unlock a Reflection Pull tonight if all three are completed.
+        1.5x rewards and unlock a Reflection Pull tonight if all three are completed.
       </Sub>
 
       <div
@@ -93,7 +93,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
                   color: "var(--ink-primary)",
                 }}
               >
-                <span className="mr-2">{isPicked ? "⭐" : "○"}</span>
+                <span className="mr-2">{isPicked ? "*" : "o"}</span>
                 <span>{t.title}</span>
                 <span
                   className="text-[10px] ml-2 uppercase tracking-wider"
@@ -133,7 +133,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           }}
         >
           {saveMut.isPending ? (
-            "Setting…"
+            "Setting"
           ) : (
             <>
               Set <NumberFlow value={picked.length} />
@@ -146,7 +146,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
   );
 }
 
-// ─── Evening Reflection ─────────────────────────────────────────────────────
+//  Evening Reflection 
 
 export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () => void }) {
   const qc = useQueryClient();
@@ -171,7 +171,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           particleCount: 180,
           spread: 90,
           origin: { y: 0.5 },
-          colors: ["#C89A3E", "var(--gold-bright)", "#7F77DD"],
+          colors: ["#C89A3E", "#FFD54F", "#7F77DD"],
         });
         whisper({
           monsterName: "Reflection Spirit",
@@ -186,7 +186,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           tone: "grave",
         });
       }
-      toast(`🌙 Ritual streak: ${res.rewards.ritualStreak}`);
+      toast(`<Icon name="evening" size={14} /> Ritual streak: ${res.rewards.ritualStreak}`);
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["today-log"] });
       onClose();
@@ -200,7 +200,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
       onOpenChange={(open) => !open && onClose()}
       title="Evening Reflection"
     >
-      <Glyph emoji="🌙" />
+      <Glyph emoji="<Icon name="evening" size={14} />" />
       <Sub>Two lines, two sliders, one anchor. Ninety seconds.</Sub>
 
       <div className="space-y-3 mt-4">
@@ -228,20 +228,20 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
 
         <Slider
           label="Mood"
-          emoji={["😞", "😐", "🙂", "😄", "🤩"]}
+          emoji={["1", "2", "3", "4", "5"]}
           value={mood}
           onChange={setMood}
         />
         <Slider
           label="Energy"
-          emoji={["🔋", "🔋", "🔋", "⚡", "⚡"]}
+          emoji={["o", "o", "o", "!", "!"]}
           value={energy}
           onChange={setEnergy}
         />
 
         <Field label="Tomorrow's anchor (optional)">
           <select value={anchor} onChange={(e) => setAnchor(e.target.value)} className="ss-input">
-            <option value="">— none —</option>
+            <option value="">- none -</option>
             {tasks
               .filter((t) => !t.completed || t.type === "habit")
               .map((t) => (
@@ -270,19 +270,19 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           disabled={submitMut.isPending}
           className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
           style={{
-            background: "linear-gradient(135deg,var(--violet),#A99DFF)",
+            background: "linear-gradient(135deg,var(--violet),var(--violet-light))",
             color: "var(--bg-deep)",
             boxShadow: "0 4px 20px rgba(127,119,221,0.32)",
           }}
         >
-          {submitMut.isPending ? "Reflecting…" : "Sleep Well"}
+          {submitMut.isPending ? "Reflecting" : "Sleep Well"}
         </SpringyButton>
       </Actions>
     </ResponsiveDialog>
   );
 }
 
-// ─── Shared atoms ───────────────────────────────────────────────────────────
+//  Shared atoms 
 
 function Glyph({ emoji }: { emoji: string }) {
   return (
@@ -360,7 +360,7 @@ function Slider({
             style={{
               background:
                 v <= value
-                  ? "linear-gradient(135deg,var(--violet),#A99DFF)"
+                  ? "linear-gradient(135deg,var(--violet),var(--violet-light))"
                   : "rgba(255,255,255,0.05)",
               color: v <= value ? "var(--bg-deep)" : "var(--ink-tertiary)",
             }}

@@ -5,7 +5,7 @@ import { trans, stagger, reducedMotion } from "@/lib/ui/motion-tokens";
 import { sounds } from "@/lib/ui/sounds";
 import { Icon } from "@/components/ui/Icon";
 
-// ─── Types ──────────────────────────────────────────────────────────────────
+//  Types 
 // The CascadeCard receives the *full* result envelope from a system action
 // (scoreTask, runExpedition, runTrial) and surfaces the chain of consequences
 // in a single rhythmic reveal. The reason: every action in this game touches
@@ -22,10 +22,10 @@ export type CascadeEvent =
   | { kind: "tomeMint" }
   | { kind: "died" };
 
-// ─── Public hook ────────────────────────────────────────────────────────────
+//  Public hook 
 // Imperative API: call `show(events)` from anywhere. The card stacks (if a
 // new envelope arrives before the previous one dismissed, the previous one
-// fades and the new one takes over — no overlap).
+// fades and the new one takes over - no overlap).
 
 let publish: null | ((events: CascadeEvent[]) => void) = null;
 
@@ -34,7 +34,7 @@ export function showCascade(events: CascadeEvent[]) {
   if (publish) publish(events);
 }
 
-// ─── Provider ───────────────────────────────────────────────────────────────
+//  Provider 
 // Mount once near the app root. Lives above the content so it doesn't
 // re-render with route changes.
 
@@ -89,7 +89,7 @@ export function CascadeProvider() {
   );
 }
 
-// ─── Visual body ────────────────────────────────────────────────────────────
+//  Visual body 
 
 function CascadeBody({ events }: { events: CascadeEvent[] }) {
   const delays = stagger(events.length, 0.05, 0.04);
@@ -126,7 +126,7 @@ function CascadeBody({ events }: { events: CascadeEvent[] }) {
   );
 }
 
-// ─── Event renderer (one row per consequence) ───────────────────────────────
+//  Event renderer (one row per consequence) 
 
 function EventRow({ event }: { event: CascadeEvent }) {
   switch (event.kind) {
@@ -177,7 +177,7 @@ function EventRow({ event }: { event: CascadeEvent }) {
         <div className="text-sm inline-flex items-center gap-1 flex-wrap">
           <Icon name="crown" size={14} color="var(--danger)" />{" "}
           <span style={{ color: "var(--ink-primary)" }}>{event.title}</span>{" "}
-          <span style={{ color: "var(--ink-secondary)" }}>−</span>
+          <span style={{ color: "var(--ink-secondary)" }}>-</span>
           <NumberFlow value={event.damage} style={{ color: "var(--danger)" }} />
           <span style={{ color: "var(--ink-tertiary)" }} className="text-xs ml-2">
             ({event.hpRemaining.toLocaleString()} / {event.hpTotal.toLocaleString()})
@@ -230,7 +230,7 @@ function EventRow({ event }: { event: CascadeEvent }) {
             color="var(--ink-secondary)"
           />{" "}
           <span style={{ color: "var(--ink-primary)" }}>{event.itemName}</span>{" "}
-          <span style={{ color: "var(--ink-secondary)" }}>×{event.quantity}</span>
+          <span style={{ color: "var(--ink-secondary)" }}>x{event.quantity}</span>
         </div>
       );
 
@@ -268,7 +268,7 @@ function EventRow({ event }: { event: CascadeEvent }) {
           style={{ background: "rgba(224,82,82,0.1)", border: "1px solid rgba(224,82,82,0.3)" }}
         >
           <span className="inline-flex items-center gap-1" style={{ color: "var(--danger)", fontWeight: 700 }}>
-            <Icon name="death" size={14} color="var(--danger)" /> You fell — Gold lost, level −1
+            <Icon name="death" size={14} color="var(--danger)" /> You fell - Gold lost, level -1
           </span>
         </div>
       );

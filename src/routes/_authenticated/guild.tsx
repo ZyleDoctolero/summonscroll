@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
 import {
   getMyProfile,
@@ -15,6 +16,7 @@ import {
   startQuest,
   getAvailableScrolls,
 } from "@/lib/game/supabase-api";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 
 const SCROLL_MAPPING: Record<string, string> = {
   "Shadow Drake Hunt": "Shadow Drake Scroll",
@@ -83,14 +85,7 @@ function GuildPage() {
   });
 
   if (profileQ.isLoading)
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Loading…
-      </div>
-    );
+    return <LoadingScreen realmSlug="iron-dominion" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -100,6 +95,7 @@ function GuildPage() {
 
   return (
     <AppShell profile={profile}>
+      <AtmosphereBackdrop realm="iron" />
       <div className="p-6 md:p-10 max-w-6xl">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Guild
@@ -131,8 +127,8 @@ function GuildPage() {
         {tab === "guild" && !myGuild && (
           <EmptyState
             icon="crown"
-            title="You walk alone."
-            body="Browse a guild or forge your own (500 Crystals)."
+            title="No Pact Has Been Formed"
+            body="The Vanguard hall is silent. Seek others who write the Page."
             cta={{
               label: "Browse Guilds",
               onClick: () => setTab("browse"),

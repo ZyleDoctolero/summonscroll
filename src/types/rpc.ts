@@ -41,3 +41,25 @@ export interface CronResult {
   died: boolean;
   streak_broken: boolean;
 }
+
+export type BattleStartResult = {
+  battleId: string;
+  mode: 'auto' | 'manual';
+  initialState: BattleState;
+};
+
+export type BattleState = {
+  playerHp: number;
+  enemyHp: number;
+  turn: number;
+  log: any[];
+  complete: boolean;
+  won: boolean | null;
+  goldEarned: number;
+  specialCooldown?: number;
+};
+
+export type HarvestResult = {
+  harvested: number;
+  whisperName: string | null;
+};

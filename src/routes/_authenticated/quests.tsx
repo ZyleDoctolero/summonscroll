@@ -4,6 +4,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
 import {
   getMyProfile,
@@ -14,6 +15,7 @@ import {
   type Goal,
 } from "@/lib/game/supabase-api";
 import { Icon } from "@/components/ui/Icon";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 
 export const Route = createFileRoute("/_authenticated/quests")({
   component: QuestsPage,
@@ -58,19 +60,13 @@ function QuestsPage() {
   });
 
   if (profileQ.isLoading) {
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Loading the war room…
-      </div>
-    );
+    return <LoadingScreen realmSlug="whispering-woods" />;
   }
   if (!profileQ.data) return null;
 
   return (
     <AppShell profile={profileQ.data.profile}>
+      <AtmosphereBackdrop realm="wild" />
       <div className="p-6 md:p-10 max-w-6xl">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Quests
@@ -103,8 +99,8 @@ function QuestsPage() {
             {(activeQ.data?.goals ?? []).length === 0 ? (
               <EmptyState
                 icon="crown"
-                title="No boss has been named."
-                body="Choose one. Three months from now, what will you have slain?"
+                title="The Page Has Been Written Today"
+                body="Return when the dawn resets. The creatures rest with you."
                 cta={{
                   label: "Name the Boss",
                   onClick: () => setTab("forge"),

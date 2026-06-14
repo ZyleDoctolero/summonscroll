@@ -1,14 +1,14 @@
 import { useMemo } from "react";
 import { reducedMotion } from "@/lib/ui/motion-tokens";
 
-// ─── Ambient Background ─────────────────────────────────────────────────────
+//  Ambient Background 
 // A fixed, full-viewport, pointer-events-none layer that sits BEHIND all
 // content. It gives the whole app a "living world" feel instead of a flat page:
-//   • slow-drifting glowing motes (the summoning dust)
-//   • a faint arcane grid
-//   • a vignette that focuses the eye toward center
+//   * slow-drifting glowing motes (the summoning dust)
+//   * a faint arcane grid
+//   * a vignette that focuses the eye toward center
 //
-// Pure CSS animation — no canvas, cheap. Respects prefers-reduced-motion.
+// Pure CSS animation - no canvas, cheap. Respects prefers-reduced-motion.
 
 const MOTE_COUNT = 26;
 

@@ -6,6 +6,7 @@ import NumberFlow from "@number-flow/react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { Icon } from "@/components/ui/Icon";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
@@ -19,6 +20,7 @@ import {
   getTrialCooldown,
   listMemorial,
 } from "@/lib/game/supabase-api";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 
 export const Route = createFileRoute("/_authenticated/trial")({
   component: TrialPage,
@@ -41,7 +43,7 @@ function TrialPage() {
     onSuccess: (res) => {
       if (res.fullClear) {
         sounds.ascend();
-        confetti({ particleCount: 300, spread: 100, colors: ["#ffd95c", "#a374ff", "#5ae0ff"] });
+        confetti({ particleCount: 300, spread: 100, colors: ["#FFD54F", "#7F77DD", "#4FC3F7"] });
         whisper({
           monsterName: "Trial Keeper",
           line: "All five returned. The Echo is touched.",
@@ -70,14 +72,7 @@ function TrialPage() {
   });
 
   if (profileQ.isLoading || monstersQ.isLoading) {
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Echoes gather…
-      </div>
-    );
+    return <LoadingScreen realmSlug="void-frontier" />;
   }
   if (!profileQ.data) return null;
 
@@ -91,6 +86,7 @@ function TrialPage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
+      <AtmosphereBackdrop realm="elder" />
       <div className="bg-atmos bg-atmos-trial p-6 md:p-10 max-w-6xl min-h-screen">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--danger)" }}>
           Trial of Echoes
@@ -198,7 +194,7 @@ function TrialPage() {
               disabled={picked.length !== 5 || !cooldownQ.data?.canStart || runMut.isPending}
               className="ss-btn w-full disabled:opacity-40"
               style={{
-                background: "linear-gradient(135deg,#5a1818,var(--danger))",
+                background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
                 color: "var(--ink-primary)",
                 boxShadow: "0 0 24px rgba(255,94,94,0.4)",
               }}
@@ -291,7 +287,7 @@ function TrialPage() {
               disabled={runMut.isPending}
               className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
               style={{
-                background: "linear-gradient(135deg,#5a1818,var(--danger))",
+                background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
                 color: "var(--ink-primary)",
                 boxShadow: "0 4px 20px rgba(255,94,94,0.35)",
               }}

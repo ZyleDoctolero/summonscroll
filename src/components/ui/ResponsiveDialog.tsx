@@ -32,7 +32,7 @@ export function ResponsiveDialog({
     );
   }
 
-  // Desktop modal — existing pattern
+  // Desktop modal - existing pattern
   return (
     <AnimatePresence>
       {open && (

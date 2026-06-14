@@ -18,12 +18,12 @@ type Props = {
   onClose: () => void;
 };
 
-// ─── PromotionChamber — Emil's polish principles applied ────────────────────
-// • Motion budget: nothing exceeds 480ms (trans.weighty).
-// • Focus management: focus traps inside modal; escape closes; restores prior focus.
-// • Animated numbers (Number Flow) for bond + star level — change feels earned.
-// • Springy buttons via motion's whileTap; respects prefers-reduced-motion.
-// • Cancel always visible. Confirmation is two-step (Begin Ritual → consume).
+//  PromotionChamber - Emil's polish principles applied 
+// * Motion budget: nothing exceeds 480ms (trans.weighty).
+// * Focus management: focus traps inside modal; escape closes; restores prior focus.
+// * Animated numbers (Number Flow) for bond + star level - change feels earned.
+// * Springy buttons via motion's whileTap; respects prefers-reduced-motion.
+// * Cancel always visible. Confirmation is two-step (Begin Ritual  consume).
 
 export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }: Props) {
   const qc = useQueryClient();
@@ -62,7 +62,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
         origin: { y: 0.45 },
         colors: ["#C89A3E", "#FFD54F", "#F0EDE6"],
       });
-      toast.success(`Promoted to ${res.to}★`);
+      toast.success(`Promoted to ${res.to}`);
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["promotion-check", userMonsterId] });
@@ -74,7 +74,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
     },
   });
 
-  // Ritual progress — measured + deliberate (480ms budget x 6 frames ≈ 3s feel)
+  // Ritual progress - measured + deliberate (480ms budget x 6 frames  3s feel)
   useEffect(() => {
     if (stage !== "ritual") return;
     sounds.drum();
@@ -100,7 +100,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
     >
       {checkQ.isLoading ? (
         <p className="text-center text-sm py-12" style={{ color: "var(--ink-secondary)" }}>
-          Reading the soul…
+          Reading the soul
         </p>
       ) : !checkQ.data ? null : (
         <Body
@@ -118,7 +118,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
   );
 }
 
-// ─── Body ───────────────────────────────────────────────────────────────────
+//  Body 
 
 type CheckData = Awaited<ReturnType<typeof checkPromotionEligibility>>;
 
@@ -153,7 +153,7 @@ function Body({
         Bring <span style={{ color: "var(--ink-primary)", fontWeight: 600 }}>{monsterName}</span> to{" "}
         <NumberFlow
           value={req.newStarLevel}
-          suffix="★"
+          suffix=""
           className="font-bold"
           style={{ color: "var(--gold-bright)" }}
         />
@@ -210,7 +210,7 @@ function Body({
                 color: "var(--bg-deep)",
               }}
             >
-              {req.newStarLevel}★
+              {req.newStarLevel}
             </motion.div>
           )}
         </motion.div>
@@ -280,7 +280,7 @@ function Body({
 
           {req.unlocks && (
             <p className="text-xs text-center mb-4 italic" style={{ color: "var(--gold-bright)" }}>
-              ↳ Unlocks: {req.unlocks}
+               Unlocks: {req.unlocks}
             </p>
           )}
 
@@ -354,13 +354,13 @@ function Body({
             className="t-h2 text-2xl mb-2"
             style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
           >
-            ★ Promoted
+             Promoted
           </motion.p>
           <p className="text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
             {monsterName} now stands at{" "}
             <NumberFlow
               value={req.newStarLevel}
-              suffix="★"
+              suffix=""
               className="font-bold"
               style={{ color: "var(--gold-bright)" }}
             />
@@ -386,7 +386,7 @@ function Body({
   );
 }
 
-// ─── Atoms ──────────────────────────────────────────────────────────────────
+//  Atoms 
 
 function ReqRow({ ok, children }: { ok: boolean; children: React.ReactNode }) {
   return (
@@ -402,7 +402,7 @@ function ReqRow({ ok, children }: { ok: boolean; children: React.ReactNode }) {
     >
       {children}
       <span className="ml-2 text-[11px]" style={{ color: ok ? "var(--success)" : "var(--danger)" }}>
-        {ok ? "✓" : "—"}
+        {ok ? "v" : "-"}
       </span>
     </motion.div>
   );

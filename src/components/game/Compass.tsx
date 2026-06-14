@@ -63,7 +63,7 @@ export function Compass({
         id: "morning",
         score: 100 + hoursPast4am,
         title: "Set today's Sacred Directives.",
-        reason: "Mornings shape the day. Three tasks earn 1.5× rewards.",
+        reason: "Mornings shape the day. Three tasks earn 1.5x rewards.",
         cta: "Begin Ritual",
         action: onOpenMorning,
         icon: "morning",

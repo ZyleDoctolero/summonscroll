@@ -49,7 +49,7 @@ export function MobilePlayerHeader({ profile }: { profile: Profile }) {
                   profile.hp / profile.max_hp > 0.5
                     ? "var(--success)"
                     : profile.hp / profile.max_hp > 0.25
-                      ? "var(--ss-warning, #FFB74D)"
+                      ? "var(--ss-warning, var(--warning))"
                       : "var(--danger)",
               }}
             />

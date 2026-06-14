@@ -27,11 +27,11 @@ type Profile = {
 };
 
 const CLASS_ICONS: Record<string, string> = {
-  warrior: "⚔",
-  mage: "🔮",
-  healer: "💚",
-  rogue: "🗡",
-  none: "👤",
+  warrior: "",
+  mage: "Mage",
+  healer: "",
+  rogue: "",
+  none: "",
 };
 
 export function PlayerHeader({ profile }: { profile: Profile }) {
@@ -41,7 +41,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
   const mpPct = Math.min(100, ((profile.mp ?? 30) / (profile.max_mp ?? 30)) * 100);
   const hpColor =
     profile.hp <= 10 ? "var(--danger)" : profile.hp <= 25 ? "var(--gold-glow)" : "var(--success)";
-  const classIcon = CLASS_ICONS[profile.class ?? "none"] ?? "👤";
+  const classIcon = CLASS_ICONS[profile.class ?? "none"] ?? "";
   const comboCount = profile.combo_count ?? 0;
   const lastTaskTime = profile.last_task_time ? new Date(profile.last_task_time).getTime() : 0;
   const isComboActive = comboCount > 1 && Date.now() - lastTaskTime < 60 * 60 * 1000;
@@ -165,7 +165,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
           >
             <Icon name="cold" size={14} color="var(--cyan)" />
             <span className="t-mono font-bold" style={{ color: "var(--cyan)" }}>
-              ×{profile.streak_freeze_charges}
+              x{profile.streak_freeze_charges}
             </span>
           </div>
         )}

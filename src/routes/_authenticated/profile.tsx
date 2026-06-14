@@ -4,6 +4,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { Icon } from "@/components/ui/Icon";
 import { EmptyState } from "@/components/ui/EmptyState";
 import {
@@ -15,6 +16,7 @@ import {
   equipItem,
 } from "@/lib/game/supabase-api";
 import { xpToNextLevel } from "@/lib/game/constants";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 
 export const Route = createFileRoute("/_authenticated/profile")({
   component: ProfilePage,
@@ -119,14 +121,7 @@ function ProfilePage() {
   });
 
   if (profileQ.isLoading)
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ background: "var(--bg-deep)", color: "var(--ink-secondary)" }}
-      >
-        Loading…
-      </div>
-    );
+    return <LoadingScreen realmSlug="ancient-vaults" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -150,6 +145,7 @@ function ProfilePage() {
 
   return (
     <AppShell profile={profile}>
+      <AtmosphereBackdrop realm="dark" />
       <div className="bg-atmos bg-atmos-hub relative min-h-screen">
         <div className="p-6 md:p-10 max-w-6xl">
           {/* Hero section */}
@@ -262,6 +258,8 @@ function ProfilePage() {
                 <Icon name="death" size={12} color="var(--danger)" /> {profile.deaths} deaths
               </span>
             </div>
+
+            <VoidFrontierSeal streak={profile.streak} />
           </div>
 
           {/* Tabs */}
@@ -705,6 +703,30 @@ function Bar({
               : color,
           }}
         />
+      </div>
+    </div>
+  );
+}
+
+function VoidFrontierSeal({ streak }: { streak: number }) {
+  const goal = 30;
+  const pct = Math.min(100, (streak / goal) * 100);
+  let message = "The Void watches. Begin your journey.";
+  if (streak > 0) message = "A single step into the dark.";
+  if (streak >= 7) message = "You have survived the first week.";
+  if (streak >= 14) message = "The shadows part before you.";
+  if (streak >= 21) message = "Almost at the edge of the world.";
+  if (streak >= 30) message = "You bear the Void Frontier Seal.";
+
+  return (
+    <div className="ss-card mt-4" style={{ borderColor: streak >= 30 ? "var(--violet)" : undefined, boxShadow: streak >= 30 ? "0 0 16px rgba(163, 116, 255, 0.2)" : undefined }}>
+      <h3 className="font-bold text-sm mb-1 flex justify-between" style={{ color: "var(--violet)" }}>
+        <span>Void Frontier Seal</span>
+        <span className="t-mono">{streak}/{goal} Days</span>
+      </h3>
+      <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>{message}</p>
+      <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
+        <div className="h-full rounded-full" style={{ width: `${pct}%`, background: "var(--violet)" }} />
       </div>
     </div>
   );

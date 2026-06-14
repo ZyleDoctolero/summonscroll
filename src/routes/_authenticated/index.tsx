@@ -15,6 +15,7 @@ import { TutorialFollowUpModal } from "@/components/game/TutorialFollowUpModal";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { showCascade, type CascadeEvent } from "@/components/game/CascadeCard";
 import { whisper } from "@/components/game/WhisperFeed";
+import { RealmPulse } from "@/components/game/RealmPulse";
 import {
   getMyProfile,
   listTasks,
@@ -26,13 +27,14 @@ import {
   completeOnboarding,
 } from "@/lib/game/supabase-api";
 import type { TaskType } from "@/lib/game/constants";
+import { useWhisperFeed } from "@/hooks/useWhisperFeed";
 
 function shootConfetti() {
   confetti({
     particleCount: 150,
     spread: 70,
     origin: { y: 0.6 },
-    colors: ["#ffb83d", "#ffd95c", "#5ae0ff", "#a374ff"],
+    colors: ["#ffb83d", "#FFD54F", "#4FC3F7", "#7F77DD"],
   });
 }
 
@@ -105,6 +107,7 @@ export const Route = createFileRoute("/_authenticated/")({
 
 function HubPage() {
   const qc = useQueryClient();
+  const { triggerWhisper } = useWhisperFeed();
 
   const profileQ = useQuery({
     queryKey: ["profile"],
@@ -127,6 +130,7 @@ function HubPage() {
   const [showMorning, setShowMorning] = useState(false);
   const [showEvening, setShowEvening] = useState(false);
   const [showTutorialFollowUp, setShowTutorialFollowUp] = useState(false);
+  const [activeRealmPulse, setActiveRealmPulse] = useState<number | null>(null);
 
   useEffect(() => {
     if (profileQ.data?.cron?.died) {
@@ -231,23 +235,23 @@ function HubPage() {
         (res as { growthTicks?: Array<{ monster_name: string; realm_name: string | null }> } | undefined)?.growthTicks ?? [];
       // Bond rows: show first 2 monsters (third+ collapse into a count via reward-style label)
       if (ticks.length > 0) {
-        // We don't have new bond percent in result; show generic +0.5% rise per matching monster
+        // Show +0.5% bond tick rows
         for (const t of ticks.slice(0, 2)) {
           events.push({ kind: "bond", monsterName: t.monster_name, from: 0, to: 0.5 });
         }
-
-        // 30% chance to play a realm whisper on habit/directive completion
-        if (Math.random() < 0.3) {
-          const validTicks = ticks.filter((t) => t.realm_name && REALM_VOICES[t.realm_name]);
-          if (validTicks.length > 0) {
-            const chosen = validTicks[Math.floor(Math.random() * validTicks.length)];
-            whisper({
-              monsterName: chosen.monster_name,
-              line: REALM_VOICES[chosen.realm_name!],
-              tone: "calm",
-            });
-          }
-        }
+        
+        const taskRealmId = (res as any)?.realmPulse ?? null;
+        triggerWhisper(
+          ticks.map((t) => ({ monsterName: t.monster_name, realmName: t.realm_name })),
+          taskRealmId
+        );
+      } else if ((res as any)?.realmPulse) {
+        triggerWhisper([], (res as any).realmPulse);
+      }
+      
+      // Trigger Realm Pulse if backend responded with it
+      if ((res as any)?.realmPulse) {
+        setActiveRealmPulse((res as any).realmPulse);
       }
 
       const awakened =
@@ -396,6 +400,7 @@ function HubPage() {
 
   return (
     <AppShell profile={profile}>
+      <RealmPulse realmId={activeRealmPulse} onComplete={() => setActiveRealmPulse(null)} />
       {showOnboarding && <Onboarding onComplete={() => onboardingMut.mutate()} />}
       <DeathOverlay trigger={deathTick} />
       <div className="bg-atmos bg-atmos-hub relative min-h-screen">

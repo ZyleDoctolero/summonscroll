@@ -1580,3 +1580,9 @@ body {
   0% { transform: translateX(-120%); }
   60%, 100% { transform: translateX(220%); }
 }
+
+@keyframes realmPulse {
+  0%   { opacity: 0; }
+  30%  { opacity: 0.18; }
+  100% { opacity: 0; }
+}

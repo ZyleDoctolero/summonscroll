@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { Icon } from "@/components/ui/Icon";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listAwakeningEvents } from "@/lib/game/supabase-api";
@@ -43,6 +44,7 @@ function CodexPage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
+      <AtmosphereBackdrop realm="vaults" />
       <div className="bg-atmos bg-atmos-codex p-6 md:p-10 max-w-6xl min-h-screen">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Codex
