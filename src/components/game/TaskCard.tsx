@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { valueColor, VALUE_COLOR_HEX, type Difficulty, type TaskType } from "@/lib/game/constants";
+import { FloatingTextContainer, type FloatingTextItem } from "./FloatingText";
 
 export type Task = {
   id: string;
@@ -75,9 +76,29 @@ export function TaskCard({
 }) {
   const color = VALUE_COLOR_HEX[valueColor(Number(task.value))];
   const [open, setOpen] = useState(false);
+  const [floatingTexts, setFloatingTexts] = useState<FloatingTextItem[]>([]);
+  
   const categoryIcon = task.category
     ? (CATEGORY_ICONS[task.category.toLowerCase()] ?? "target")
     : "target";
+
+  const handleScore = useCallback((dir: "plus" | "minus" | "complete" | "uncomplete") => {
+    if (dir === "plus" || dir === "complete") {
+      setFloatingTexts(prev => [
+        ...prev,
+        {
+          id: Math.random().toString(36).slice(2),
+          text: `+${Math.max(10, Math.floor(Number(task.value) * 1.5))} XP`,
+          color: "var(--cyan)"
+        }
+      ]);
+    }
+    onScore(dir);
+  }, [task.value, onScore]);
+
+  const removeFloatingText = useCallback((id: string) => {
+    setFloatingTexts(prev => prev.filter(t => t.id !== id));
+  }, []);
 
   // Streak health calculation per FR01 2.2
   const streakHealth =
@@ -108,6 +129,8 @@ export function TaskCard({
         animation: isTutorial ? "tutorial-pulse 2s ease-in-out infinite" : undefined,
       }}
     >
+      <FloatingTextContainer items={floatingTexts} onComplete={removeFloatingText} />
+      
       {task.is_starred && (
         <div
           className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
@@ -126,8 +149,8 @@ export function TaskCard({
           {task.positive_enabled && (
             <button
               disabled={busy}
-              onClick={() => onScore("plus")}
-              className="w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
+              onClick={() => handleScore("plus")}
+              className="relative w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
               style={{
                 background: "rgba(95,173,65,0.15)",
                 color: "var(--success)",
@@ -141,8 +164,8 @@ export function TaskCard({
           {task.negative_enabled && (
             <button
               disabled={busy}
-              onClick={() => onScore("minus")}
-              className="w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
+              onClick={() => handleScore("minus")}
+              className="relative w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
               style={{
                 background: "rgba(224,82,82,0.15)",
                 color: "var(--danger)",
@@ -157,8 +180,8 @@ export function TaskCard({
       ) : (
         <button
           disabled={busy}
-          onClick={() => onScore(task.completed ? "uncomplete" : "complete")}
-          className="w-11 h-11 rounded-md grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
+          onClick={() => handleScore(task.completed ? "uncomplete" : "complete")}
+          className="relative w-11 h-11 rounded-md grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
           style={{
             background: task.completed ? color : "transparent",
             border: `2px solid ${color}`,

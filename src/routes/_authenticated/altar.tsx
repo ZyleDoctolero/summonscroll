@@ -35,12 +35,17 @@ function AltarPage() {
   const [selectedBannerId, setSelectedBannerId] = useState<string | null>(null);
   const [pullResults, setPullResults] = useState<PullResult[] | null>(null);
   const [revealIndex, setRevealIndex] = useState(0);
+  const [isSynthesizing, setIsSynthesizing] = useState(false);
 
   const pullMut = useMutation({
     mutationFn: async (v: { bannerId: string; count: 1 | 10 }) => pullBanner(v.bannerId, v.count),
     onSuccess: (res) => {
-      setPullResults(res.results as PullResultData[]);
-      setRevealIndex(0);
+      setIsSynthesizing(true);
+      setTimeout(() => {
+        setIsSynthesizing(false);
+        setPullResults(res.results as PullResultData[]);
+        setRevealIndex(0);
+      }, 3000);
       qc.invalidateQueries({ queryKey: ["profile"] });
     },
     onError: (e: Error) => toast.error(e.message),
@@ -57,6 +62,39 @@ function AltarPage() {
   const profile = profileQ.data.profile;
   const banners = bannersQ.data.banners;
   const selectedBanner = banners.find((b: any) => b.id === selectedBannerId) ?? banners[0];
+
+  if (isSynthesizing) {
+    return (
+      <AppShell profile={profile}>
+        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050a14]">
+          {/* Holographic Rift Animation */}
+          <motion.div 
+            initial={{ scale: 0, opacity: 0, rotate: -90 }}
+            animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 1], rotate: [0, 180, 360] }}
+            transition={{ duration: 2.8, ease: "easeInOut" }}
+            className="w-40 h-40 rounded-full border-t-[6px] border-b-[6px] border-cyan-400 border-l-[2px] border-r-[2px] border-l-fuchsia-500 border-r-fuchsia-500 shadow-[0_0_60px_rgba(0,229,255,0.6),inset_0_0_40px_rgba(213,0,249,0.4)]"
+          />
+          <motion.div
+             initial={{ height: 0, opacity: 0 }}
+             animate={{ height: "100vh", opacity: [0, 0.5, 0] }}
+             transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
+             className="absolute w-[2px] bg-cyan-300 shadow-[0_0_20px_#00e5ff]"
+          />
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0, 1, 0, 1, 1] }}
+            transition={{ duration: 3, times: [0, 0.2, 0.4, 0.6, 1] }}
+            className="absolute mt-64 text-4xl font-['VT323'] text-cyan-400 tracking-[0.5em] uppercase"
+            style={{ textShadow: "0 0 15px #00e5ff" }}
+          >
+            Synthesizing
+          </motion.h2>
+          {/* CRT Overlay just for the cutscene */}
+          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(0,229,255,0)_50%,rgba(0,229,255,0.05)_50%)] bg-[length:100%_4px]" />
+        </div>
+      </AppShell>
+    );
+  }
 
   if (pullResults) {
     const allRevealed = revealIndex >= pullResults.length - 1;

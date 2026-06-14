@@ -164,29 +164,29 @@
 
 /* ─── SummonScroll Game Design Tokens ─── */
 :root {
-  /* ─── Proposal D Color Palette ─── */
+  /* ─── Manhwa System UI Palette (Pick Me Up / Solo Leveling) ─── */
   /* Backgrounds */
-  --bg-deep: #08080d; /* void black */
-  --bg-stage: #11111c; /* deep slate */
-  --bg-panel: #1a1a2a; /* console panel */
-  --bg-pane: #232336; /* elevated panel */
+  --bg-deep: #050a14; /* very dark, almost black blue */
+  --bg-stage: #0a1122; /* slightly lighter dark blue */
+  --bg-panel: rgba(16, 26, 46, 0.85); /* sleek translucent panel */
+  --bg-pane: rgba(22, 35, 60, 0.6); /* inner pane */
 
   /* Text/Ink */
-  --ink-primary: #f5f0e6; /* paper white */
-  --ink-secondary: #9089a8; /* muted lilac */
-  --ink-tertiary: #5a566b; /* dim */
+  --ink-primary: #e0f7fa; /* crisp icy white */
+  --ink-secondary: #80deea; /* muted neon cyan */
+  --ink-tertiary: #4dd0e1; /* vivid cyan */
 
   /* Signature Colors */
-  --gold-bright: #ffd95c; /* signature gold */
-  --gold-glow: #ffb83d; /* gold particle */
-  --violet: #a374ff; /* sigil purple */
-  --cyan: #5ae0ff; /* arcane cyan */
-  --rose: #ff5e85; /* mythic accent */
-  --ember: #ff7843; /* fire/damage */
+  --gold-bright: #ffea00;
+  --gold-glow: #ffc400;
+  --violet: #d500f9;
+  --cyan: #00e5ff; /* pure system neon */
+  --rose: #ff1744; /* danger/mythic */
+  --ember: #d50000;
 
   /* Utility */
-  --success: #5dd39e;
-  --danger: #ff5e5e;
+  --success: #00e676;
+  --danger: #ff1744;
 
   /* ─── Legacy Token Aliases (backward compatibility) ─── */
   --ss-bg-deep: var(--bg-deep);
@@ -488,6 +488,21 @@ body {
   font-family: var(--ss-font-body, "Inter", system-ui, sans-serif);
 }
 
+/* CRT Scanlines overlay to simulate the Manhwa 'System Window' */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.15) 50%
+  );
+  background-size: 100% 4px;
+  opacity: 0.8;
+}
+
 /* ─── Surface System Primitives ─── */
 
 /* ─── Cards ─── */
@@ -666,109 +681,86 @@ body {
   margin-left: var(--ss-space-3);
 }
 
-/* ─── Proposal D Chrome — Gradient borders, glows, and signature effects ─── */
+/* ─── Proposal E Chrome — Classic Fantasy Gacha ─── */
 
-/* Gradient border card (the signature chrome) */
+/* Elemental gradient border card */
 .ss-card-d-glow {
   position: relative;
   background: var(--bg-panel);
   border-radius: var(--ss-radius-lg);
   padding: var(--ss-space-4);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.55),
-    var(--ss-inset-edge);
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.02);
 }
-/* The gradient border trick: a pseudo-element behind the card with a
-   linear-gradient masked to look like a 1px outline. */
 .ss-card-d-glow::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    var(--ss-glow-start, var(--gold-glow)),
-    var(--ss-glow-end, var(--violet)) 60%,
-    transparent
-  );
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-/* Radial burst (used behind modal headers + hero reveals) */
-.ss-burst {
-  position: relative;
-}
-.ss-burst::after {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 213, 79, 0.18) 0%,
-    rgba(163, 116, 255, 0.1) 30%,
-    transparent 65%
-  );
-  pointer-events: none;
+  inset: -1px;
+  border-radius: calc(var(--ss-radius-lg) + 1px);
+  background: linear-gradient(135deg, var(--gold-bright), var(--violet) 80%);
   z-index: -1;
-  animation: ss-burst-pulse 4s ease-in-out infinite;
-}
-@keyframes ss-burst-pulse {
-  0%,
-  100% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.06);
-  }
+  opacity: 0.6;
 }
 
-/* Tab under-bar (signature gacha-game nav) */
+/* Tab under-bar */
 .ss-tab-d {
   position: relative;
   padding: 12px 18px;
   color: var(--ink-secondary);
+  font-weight: 600;
   transition: color 160ms ease-out;
 }
 .ss-tab-d.active {
-  color: var(--ink-primary);
+  color: var(--gold-bright);
 }
 .ss-tab-d.active::after {
   content: "";
   position: absolute;
-  left: 18px;
-  right: 18px;
+  left: 10px;
+  right: 10px;
   bottom: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
-  box-shadow: 0 0 8px var(--gold-glow);
+  height: 3px;
+  background: var(--gold-bright);
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 -2px 8px rgba(255, 213, 79, 0.5);
 }
 
-/* Buttons with metallic plate feel */
+/* Sleek Holographic System Button */
 .ss-btn-d-primary {
-  background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold-glow) 100%);
-  color: var(--bg-deep);
-  border: none;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    /* top highlight */ 0 4px 12px rgba(255, 213, 79, 0.35),
-    /* glow */ 0 2px 0 rgba(120, 90, 0, 0.6); /* hard bottom edge */
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2), inset 0 0 10px rgba(0, 229, 255, 0.1);
+  text-shadow: 0 0 5px var(--cyan);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.ss-btn-d-primary::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: 0.5s;
 }
 .ss-btn-d-primary:hover {
-  filter: brightness(1.08);
-  transform: translateY(-1px);
+  background: rgba(0, 229, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4), inset 0 0 15px rgba(0, 229, 255, 0.2);
+}
+.ss-btn-d-primary:hover::before {
+  left: 150%;
 }
 .ss-btn-d-primary:active {
-  transform: translateY(0);
-  filter: brightness(0.95);
+  transform: scale(0.98);
 }
 
 /* Rarity star (with particle glow) */
@@ -830,7 +822,7 @@ body {
   margin-bottom: 4px;
 }
 .ss-stat-d-value {
-  font-family: "Orbitron", monospace;
+  font-family: var(--ss-font-display);
   font-size: 28px;
   font-weight: 700;
   color: var(--gold-bright);
@@ -848,14 +840,14 @@ body {
   filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 16px currentColor);
 }
 
-/* ─── Typography System — Proposal D ─── */
-/* Five roles: Display (Orbitron), Heading (Saira Condensed), Body (Inter),
+/* ─── Typography System — Proposal E ─── */
+/* Five roles: Display (Cinzel), Heading (Cinzel), Body (Inter),
    Mono (JetBrains Mono), Lore (Spectral italic)                            */
 
 :root {
   /* Font family variables */
-  --ss-font-display: "Orbitron", sans-serif;
-  --ss-font-heading: "Saira Condensed", sans-serif;
+  --ss-font-display: "Cinzel", serif;
+  --ss-font-heading: "Cinzel", serif;
   --ss-font-body: "Inter", system-ui, sans-serif;
   --ss-font-mono: "JetBrains Mono", monospace;
   --ss-font-lore: "Spectral", serif;
@@ -887,7 +879,7 @@ body {
   line-height: 1.5;
 }
 
-/* ─── Display role — Orbitron, hero numbers, big reveals ─── */
+/* ─── Display role — Cinzel, hero numbers, big reveals ─── */
 .t-display {
   font-family: var(--ss-font-display);
   font-size: var(--ss-text-4xl);
