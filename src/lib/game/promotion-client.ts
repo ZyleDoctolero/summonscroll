@@ -7,6 +7,8 @@ export type PromotionRequirement = {
   materials: Array<{ name: string; qty: number }>;
   bondRequired: number;
   levelRequired: number;
+  goldRequired: number;
+  dupesRequired: number;
   newStarLevel: number;
   unlocks?: string;
   locked?: { reason: string };
@@ -16,7 +18,7 @@ export type PromotionCheck = {
   canPromote: boolean;
   reason?: string;
   requirement: PromotionRequirement;
-  have: { stones: number; materials: Record<string, number>; bond: number; level: number };
+  have: { stones: number; materials: Record<string, number>; bond: number; level: number; gold: number; dupes: number };
 };
 
 // ─── Mapping ────────────────────────────────────────────────────────────────
@@ -69,6 +71,8 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       materials: [],
       bondRequired: 0,
       levelRequired: 1,
+      goldRequired: 500,
+      dupesRequired: 0,
       newStarLevel: 2,
       unlocks: "Star multiplier 1.15×",
     };
@@ -79,6 +83,8 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       materials: [],
       bondRequired: 20,
       levelRequired: 5,
+      goldRequired: 1500,
+      dupesRequired: 1,
       newStarLevel: 3,
       unlocks: "Star multiplier 1.35×",
     };
@@ -89,6 +95,8 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       materials: [{ name: matName, qty: 1 }],
       bondRequired: 40,
       levelRequired: 15,
+      goldRequired: 3000,
+      dupesRequired: 1,
       newStarLevel: 4,
       unlocks: "Second active skill slot",
     };
@@ -99,6 +107,8 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       materials: [{ name: matName, qty: 2 }],
       bondRequired: 60,
       levelRequired: 30,
+      goldRequired: 5000,
+      dupesRequired: 2,
       newStarLevel: 5,
       unlocks: "Awakening passive (deeds)",
     };
@@ -109,9 +119,10 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       materials: [{ name: matName, qty: 5 }],
       bondRequired: 80,
       levelRequired: 50,
+      goldRequired: 10000,
+      dupesRequired: 3,
       newStarLevel: 6,
       unlocks: "Realm Skill activates",
-      locked: { reason: "Needs Epic Material — unlocked in Tower restructure (Step 9)." },
     };
   }
   if (currentStar === 6) {
@@ -120,11 +131,10 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       materials: [{ name: matName, qty: 5 }],
       bondRequired: 100,
       levelRequired: 70,
+      goldRequired: 25000,
+      dupesRequired: 5,
       newStarLevel: 7,
       unlocks: "Transcendent Title + portrait variant",
-      locked: {
-        reason: "Needs Tome of Reverse Heaven — only obtainable from Quarterly Goals (Step 7).",
-      },
     };
   }
   return {
@@ -132,6 +142,8 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
     materials: [],
     bondRequired: 100,
     levelRequired: 0,
+    goldRequired: 0,
+    dupesRequired: 0,
     newStarLevel: currentStar,
     locked: { reason: "Already at maximum Star Level." },
   };
@@ -147,7 +159,7 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
 
   const { data: um } = await supabase
     .from("user_monsters")
-    .select("id, star_level, bond_percent, level, monster:monsters(role, name)")
+    .select("id, star_level, bond_percent, level, monster_id, monster:monsters(role, name)")
     .eq("id", userMonsterId)
     .single();
   if (!um) throw new Error("Monster not found");
@@ -171,18 +183,24 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
     have[row.item_name] = (have[row.item_name] ?? 0) + row.quantity;
   }
 
+  const { count: dupesCount } = await supabase
+    .from("user_monsters")
+    .select("id", { count: "exact" })
+    .eq("user_id", user.id)
+    .eq("monster_id", um.monster_id)
+    .neq("id", userMonsterId);
+
+  const { data: profile } = await supabase.from("profiles").select("gold").eq("id", user.id).single();
+  const gold = profile?.gold ?? 0;
+  const dupes = dupesCount ?? 0;
+
   // Reasons for refusal, in order
   if (req.locked)
     return {
       canPromote: false,
       reason: req.locked.reason,
       requirement: req,
-      have: {
-        stones: have[stoneName] ?? 0,
-        materials: have,
-        bond: um.bond_percent,
-        level: um.level,
-      },
+      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
     };
 
   if (um.bond_percent < req.bondRequired) {
@@ -190,12 +208,7 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Bond too low (${Math.round(um.bond_percent)}% / ${req.bondRequired}%).`,
       requirement: req,
-      have: {
-        stones: have[stoneName] ?? 0,
-        materials: have,
-        bond: um.bond_percent,
-        level: um.level,
-      },
+      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
     };
   }
   if (um.level < req.levelRequired) {
@@ -203,12 +216,23 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Level too low (${um.level} / ${req.levelRequired}).`,
       requirement: req,
-      have: {
-        stones: have[stoneName] ?? 0,
-        materials: have,
-        bond: um.bond_percent,
-        level: um.level,
-      },
+      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+    };
+  }
+  if (gold < req.goldRequired) {
+    return {
+      canPromote: false,
+      reason: `Need ${req.goldRequired} Gold — have ${gold}.`,
+      requirement: req,
+      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+    };
+  }
+  if (dupes < req.dupesRequired) {
+    return {
+      canPromote: false,
+      reason: `Need ${req.dupesRequired} duplicate copies — have ${dupes}.`,
+      requirement: req,
+      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
     };
   }
 
@@ -217,12 +241,7 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Need ${req.stones.qty} ${stoneName} — have ${have[stoneName] ?? 0}.`,
       requirement: req,
-      have: {
-        stones: have[stoneName] ?? 0,
-        materials: have,
-        bond: um.bond_percent,
-        level: um.level,
-      },
+      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
     };
   }
   for (const mat of req.materials) {
@@ -231,12 +250,7 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
         canPromote: false,
         reason: `Need ${mat.qty} ${mat.name} — have ${have[mat.name] ?? 0}.`,
         requirement: req,
-        have: {
-          stones: have[stoneName] ?? 0,
-          materials: have,
-          bond: um.bond_percent,
-          level: um.level,
-        },
+        have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
       };
     }
   }
@@ -244,54 +258,26 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
   return {
     canPromote: true,
     requirement: req,
-    have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level },
+    have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
   };
 }
 
 export async function promoteMonster(
   userMonsterId: string,
 ): Promise<{ from: number; to: number; unlocks?: string }> {
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
-
-  // Re-check eligibility server-side-of-sorts (re-query to avoid TOCTOU)
   const check = await checkPromotionEligibility(userMonsterId);
   if (!check.canPromote) throw new Error(check.reason ?? "Cannot promote.");
 
-  const req = check.requirement;
-  const stoneName = req.stones.name;
-
-  // Decrement stones from inventory (across rows if needed)
-  await consumeInventory(user.id, stoneName, req.stones.qty);
-  for (const mat of req.materials) {
-    await consumeInventory(user.id, mat.name, mat.qty);
-  }
-
-  // Bump the star_level
-  const { data: um } = await supabase
-    .from("user_monsters")
-    .select("star_level")
-    .eq("id", userMonsterId)
-    .single();
-  if (!um) throw new Error("Monster vanished mid-ritual.");
-
-  const fromStar = um.star_level;
-  const toStar = req.newStarLevel;
-  await supabase.from("user_monsters").update({ star_level: toStar }).eq("id", userMonsterId);
-
-  // Log the attempt
-  await supabase.from("promotion_attempts").insert({
-    user_id: user.id,
-    user_monster_id: userMonsterId,
-    from_star: fromStar,
-    to_star: toStar,
-    stones_spent: [{ name: stoneName, qty: req.stones.qty }],
-    materials_spent: req.materials,
+  const { data, error } = await supabase.rpc("ascend_monster", {
+    p_user_monster_id: userMonsterId
   });
 
-  return { from: fromStar, to: toStar, unlocks: req.unlocks };
+  if (error) throw error;
+  
+  const res = data as any;
+  if (!res.success) throw new Error("Ascension failed on server.");
+
+  return { from: res.from, to: res.to, unlocks: check.requirement.unlocks };
 }
 
 async function consumeInventory(userId: string, itemName: string, qty: number) {

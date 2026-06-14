@@ -1,0 +1,17 @@
+/* src/styles/tokens.css */
+@import "tailwindcss" source(none);
+
+:root {
+  --realm-vaults: var(--realm-vaults-accent, #d4af3f);
+  --realm-chaos: var(--realm-chaos-accent, #c44e2a);
+  --realm-dark: var(--realm-dark-accent, #6f4d8c);
+  --realm-blight: var(--realm-blight-accent, #5a7b3a);
+  --realm-wild: var(--realm-wild-accent, #6ec07a);
+  --realm-divine: var(--realm-divine-accent, #ffd95c);
+  --realm-veil: var(--realm-veil-accent, #c44e2a);
+  --realm-digital: var(--realm-digital-accent, #5ae0ff);
+  --realm-elder: var(--realm-elder-accent, #4fb0ff);
+  --realm-void: var(--realm-void-accent, #a374ff);
+  --realm-myth: var(--realm-myth-accent, #ffd95c);
+  --realm-iron: var(--realm-iron-accent, #b8973c);
+}

@@ -175,6 +175,24 @@ function HubPage() {
         });
       }
     },
+    onMutate: async (v) => {
+      await qc.cancelQueries({ queryKey: ["tasks"] });
+      const previousTasks = qc.getQueryData(["tasks"]);
+      qc.setQueryData(["tasks"], (old: any) => {
+        if (!old) return old;
+        return {
+          ...old,
+          tasks: old.tasks.map((t: any) => {
+            if (t.id === v.id) {
+              if (v.direction === "complete") return { ...t, completed: true };
+              if (v.direction === "uncomplete") return { ...t, completed: false };
+            }
+            return t;
+          }),
+        };
+      });
+      return { previousTasks };
+    },
     onSuccess: (res, variables) => {
       // Check if this was the tutorial directive being scored for the first time
       const wasTutorialDirective = profile?.tutorial_directive_id === variables.id;
@@ -315,12 +333,18 @@ function HubPage() {
       }
 
       showCascade(events);
-
+    },
+    onError: (err: Error, _variables, context) => {
+      if (context?.previousTasks) {
+        qc.setQueryData(["tasks"], context.previousTasks);
+      }
+      toast.error(err.message);
+    },
+    onSettled: () => {
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["tasks"] });
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
     },
-    onError: (err: Error) => toast.error(err.message),
   });
 
   const createMut = useMutation({

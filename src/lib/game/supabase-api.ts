@@ -104,155 +104,13 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
     return { ran: false, died: false, missedDailies: 0, hpLost: 0 };
   }
 
-  // Build days to process
-  const days: string[] = [];
-  if (profile.last_cron_date) {
-    const diff = Math.min(14, dayDiff(profile.last_cron_date as string, today));
-    for (let i = 1; i < diff; i++) {
-      const d = new Date((profile.last_cron_date as string) + "T00:00:00Z");
-      d.setUTCDate(d.getUTCDate() + i);
-      days.push(d.toISOString().slice(0, 10));
-    }
+  const { data, error } = await supabase.functions.invoke('daily-cron');
+  if (error) {
+    console.error("Cron Error:", error);
+    return { ran: false, died: false, missedDailies: 0, hpLost: 0 };
   }
-
-  let hpLost = 0;
-  let missedCount = 0;
-  let hp = profile.hp as number;
-  let streak = profile.streak as number;
-  let freezes = (profile.streak_freeze_charges as number) ?? 0;
-  let freezeUsedCount = 0;
-
-  if (days.length > 0) {
-    // Archive old side quests
-    await supabase
-      .from("tasks")
-      .update({ archived: true })
-      .eq("user_id", userId)
-      .eq("category", "side_quest")
-      .eq("archived", false);
-
-    const { data: tasks } = await supabase
-      .from("tasks")
-      .select("id,type,difficulty,value,streak,schedule_days,last_completed_date,completed")
-      .eq("archived", false);
-
-    for (const day of days) {
-      const dow = dowFromISO(day);
-      let dayMissedCount = 0;
-      let dayDmg = 0;
-      const tasksToDrift = [];
-
-      for (const t of tasks ?? []) {
-        if (t.type !== "daily") continue;
-        if (!(t.schedule_days as number[]).includes(dow)) continue;
-        if (t.last_completed_date === day) continue;
-
-        dayMissedCount += 1;
-        dayDmg += damageFromMiss(
-          Number(t.value),
-          t.difficulty as Difficulty,
-          (profile.con_stat as number) ?? 0,
-        );
-        tasksToDrift.push(t);
-      }
-
-      if (dayMissedCount > 0) {
-        if (freezes > 0) {
-          freezes -= 1;
-          freezeUsedCount += 1;
-          for (const t of tasksToDrift) {
-            const newVal = driftValue(Number(t.value), t.difficulty as Difficulty);
-            await supabase.from("tasks").update({ value: newVal }).eq("id", t.id); // Streak intact
-          }
-        } else {
-          hp = Math.max(0, hp - dayDmg);
-          hpLost += dayDmg;
-          missedCount += dayMissedCount;
-          for (const t of tasksToDrift) {
-            const newVal = driftValue(Number(t.value), t.difficulty as Difficulty);
-            await supabase.from("tasks").update({ value: newVal, streak: 0 }).eq("id", t.id); // Break streak
-          }
-        }
-      }
-    }
-  }
-
-  // Reset today's dailies
-  const todayDow = dowFromISO(today);
-  await supabase
-    .from("tasks")
-    .update({ completed: false })
-    .eq("type", "daily")
-    .eq("archived", false)
-    .contains("schedule_days", [todayDow]);
-
-  // Update streak
-  if (days.length > 0) {
-    streak = missedCount === 0 ? streak + days.length : 0;
-  }
-
-  // Generate daily side-quests if none exist
-  const { data: activeSQ } = await supabase
-    .from("tasks")
-    .select("id")
-    .eq("user_id", userId)
-    .eq("category", "side_quest")
-    .eq("archived", false);
-
-  if (!activeSQ || activeSQ.length === 0) {
-    const sqTemplates = [
-      { title: "Complete 5 habits today", difficulty: "medium" },
-      { title: "Win 2 Arena Battles", difficulty: "medium" },
-      { title: "Score 3 Dailies", difficulty: "easy" },
-      { title: "Level up a monster's bond", difficulty: "medium" },
-      { title: "Pull from the Altar", difficulty: "easy" },
-    ];
-    const shuffled = sqTemplates.sort(() => 0.5 - Math.random()).slice(0, 3);
-    for (let i = 0; i < shuffled.length; i++) {
-      await supabase.from("tasks").insert({
-        user_id: userId,
-        type: "todo",
-        category: "side_quest",
-        title: shuffled[i].title,
-        difficulty: shuffled[i].difficulty as Difficulty,
-        value: 0,
-        sort_order: i,
-      });
-    }
-  }
-
-  // Death check
-  let died = false;
-  let level = profile.level as number;
-  let xp = profile.xp as number;
-  let gold = profile.gold as number;
-  let deaths = profile.deaths as number;
-
-  if (hp <= 0) {
-    died = true;
-    level = Math.max(1, level - 1);
-    xp = 0;
-    gold = 0;
-    hp = profile.max_hp as number;
-    deaths += 1;
-  }
-
-  await supabase
-    .from("profiles")
-    .update({
-      hp,
-      level,
-      xp,
-      gold,
-      deaths,
-      streak,
-      streak_freeze_charges: freezes,
-      last_cron_date: today,
-      last_login_date: today,
-    })
-    .eq("id", userId);
-
-  return { ran: true, died, missedDailies: missedCount, hpLost, freezesUsed: freezeUsedCount };
+  
+  return data;
 }
 
 // ─── Tasks ──────────────────────────────────────────────────────────────────
@@ -309,239 +167,20 @@ export async function scoreTask(
   id: string,
   direction: "plus" | "minus" | "complete" | "uncomplete",
 ) {
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { data, error } = await supabase.rpc("score_task", {
+    p_task_id: id,
+    p_direction: direction,
+  });
+  if (error) throw error;
+  
+  // The RPC returns a JSON object matching ScoreTaskResult
+  const res = data as any;
+  if (!res.success) throw new Error(res.message);
 
-  const [taskRes, profileRes] = await Promise.all([
-    supabase.from("tasks").select("*").eq("id", id).single(),
-    supabase.from("profiles").select("*").eq("id", user.id).single(),
-  ]);
-  if (taskRes.error) throw taskRes.error;
-  if (profileRes.error) throw profileRes.error;
-  const task = taskRes.data;
-  const profile = profileRes.data;
-
-  const diff = task.difficulty as Difficulty;
-  const today = todayISO();
-  let newVal = Number(task.value);
-  let goldGain = 0,
-    xpGain = 0,
-    gemGain = 0,
-    hpChange = 0;
-  let newStreak = task.streak as number;
-  let completed = task.completed as boolean;
-  let lastCompletedDate = task.last_completed_date as string | null;
-  const isPositive = direction === "plus" || direction === "complete";
-  const talents = (profile.talents as Record<string, number>) ?? {};
-  const greedMult = 1 + (talents.greed ?? 0) * 0.05;
-  const scholarMult = 1 + (talents.scholar ?? 0) * 0.05;
-  const resilienceMult = 1 - (talents.resilience ?? 0) * 0.1;
-  const collectorMult = 1 + (talents.collector ?? 0) * 0.05;
-
-  if (direction === "plus") {
-    if (!task.positive_enabled) throw new Error("Positive disabled");
-    newVal = nextValuePlus(newVal);
-    goldGain = Math.round(rewardGold(Number(task.value), diff) * greedMult);
-    xpGain = Math.round(rewardXp(Number(task.value), diff) * scholarMult);
-    gemGain = Math.random() < 0.25 ? rewardGems(Number(task.value), diff) : 0;
-    newStreak += 1;
-  } else if (direction === "minus") {
-    if (!task.negative_enabled) throw new Error("Negative disabled");
-    newVal = nextValueMinus(newVal);
-    hpChange = -Math.round(
-      damageFromMiss(Number(task.value), diff, profile.con_stat ?? 0) * resilienceMult,
-    );
-    newStreak = 0;
-  } else if (direction === "complete") {
-    if (completed) return { ok: true, noop: true, reward: null, isPositive: true, died: false };
-    newVal = nextValuePlus(newVal);
-    goldGain = Math.round(rewardGold(Number(task.value), diff) * greedMult);
-    xpGain = Math.round(rewardXp(Number(task.value), diff) * scholarMult);
-    gemGain = Math.random() < 0.3 ? rewardGems(Number(task.value), diff) : 0;
-    completed = true;
-    lastCompletedDate = today;
-    newStreak = task.type === "daily" ? newStreak + 1 : newStreak;
-  } else if (direction === "uncomplete") {
-    if (!completed) return { ok: true, noop: true, reward: null, isPositive: false, died: false };
-    newVal = nextValueMinus(newVal);
-    goldGain = -rewardGold(Number(task.value), diff);
-    xpGain = -Math.min(profile.xp, rewardXp(Number(task.value), diff));
-    completed = false;
-    lastCompletedDate = null;
-    newStreak = Math.max(0, newStreak - 1);
-  }
-
-  // Combo logic
-  let newComboCount = (profile.combo_count as number) ?? 0;
-  let newLastTaskTime = profile.last_task_time as string | null;
-
-  if (isPositive) {
-    const now = new Date();
-    if (newLastTaskTime) {
-      const lastTime = new Date(newLastTaskTime);
-      if (now.getTime() - lastTime.getTime() < 60 * 60 * 1000) {
-        newComboCount += 1;
-      } else {
-        newComboCount = 1;
-      }
-    } else {
-      newComboCount = 1;
-    }
-    newLastTaskTime = now.toISOString();
-
-    const comboMult = 1 + Math.min(0.5, newComboCount * 0.05);
-    goldGain = Math.round(goldGain * comboMult);
-    xpGain = Math.round(xpGain * comboMult);
-
-    // ⭐ Sacred Directive multiplier: 1.5× when this task is one of today's morning intents.
-    if (task.is_starred) {
-      goldGain = Math.round(goldGain * 1.5);
-      xpGain = Math.round(xpGain * 1.5);
-    }
-  }
-
-  // Update task
-  await supabase
-    .from("tasks")
-    .update({
-      value: newVal,
-      streak: newStreak,
-      completed,
-      last_completed_date: lastCompletedDate,
-      last_completed_at: isPositive ? new Date().toISOString() : task.last_completed_at,
-    })
-    .eq("id", id);
-
-  // Update profile
-  let newGold = Math.max(0, profile.gold + goldGain);
-  let newCrystals = Math.max(0, profile.crystals + gemGain);
-  let newHp = Math.max(0, Math.min(profile.max_hp, profile.hp + hpChange));
-  let newLevel = profile.level;
-  let newXp = Math.max(0, profile.xp + xpGain);
-  let deaths = profile.deaths;
-
-  // Level up
-  let leveledUp = false;
-  while (newXp >= xpToNextLevel(newLevel)) {
-    newXp -= xpToNextLevel(newLevel);
-    newLevel += 1;
-    newHp = profile.max_hp; // full heal on level up
-    leveledUp = true;
-  }
-
-  // Death
-  let died = false;
-  if (newHp <= 0) {
-    died = true;
-    newLevel = Math.max(1, newLevel - 1);
-    newXp = 0;
-    newGold = 0;
-    newHp = profile.max_hp;
-    deaths += 1;
-  }
-
-  await supabase
-    .from("profiles")
-    .update({
-      gold: newGold,
-      crystals: newCrystals,
-      hp: newHp,
-      xp: newXp,
-      level: newLevel,
-      deaths,
-      combo_count: newComboCount,
-      last_task_time: newLastTaskTime,
-    })
-    .eq("id", user.id);
-
-  // Random drop
-  let drop: { type: string; name: string } | null = null;
-  if (isPositive) {
-    const perBonus = 1 + (profile.per_stat ?? 0) * 0.005;
-    const dropRoll = Math.random() / (perBonus * collectorMult);
-    if (dropRoll < 0.03) {
-      const eggs = ["Wolf", "Dragon", "Phoenix", "Serpent", "Griffin", "Owl", "Bear", "Fox"];
-      drop = { type: "egg", name: `${eggs[Math.floor(Math.random() * eggs.length)]} Egg` };
-    } else if (dropRoll < 0.06) {
-      const realms = ["Arcane", "Chaos", "Void", "Death", "Nature", "Divine", "Dread", "Digital"];
-      drop = {
-        type: "realm_potion",
-        name: `${realms[Math.floor(Math.random() * realms.length)]} Potion`,
-      };
-    } else if (dropRoll < 0.1) {
-      drop = {
-        type: "food",
-        name: ["Meat", "Fish", "Fruit", "Cheese", "Honey"][Math.floor(Math.random() * 5)],
-      };
-    } else if (dropRoll < 0.15) {
-      const mats = ["Iron Ore", "Shadow Essence", "Void Core", "Light Crystal"];
-      drop = { type: "material", name: mats[Math.floor(Math.random() * mats.length)] };
-    }
-    if (drop) {
-      const { data: existing } = await supabase
-        .from("inventory")
-        .select("id, quantity")
-        .eq("item_type", drop.type)
-        .eq("item_name", drop.name)
-        .maybeSingle();
-      if (existing) {
-        await supabase
-          .from("inventory")
-          .update({ quantity: existing.quantity + 1 })
-          .eq("id", existing.id);
-      } else {
-        await supabase
-          .from("inventory")
-          .insert({ user_id: user.id, item_type: drop.type, item_name: drop.name, quantity: 1 });
-      }
-    }
-  }
-
-  // ─── Monster bond ticks (Step 2 — Pillar 3 input) ─────────────────────
-  // If this task carries a stat tag (str/int/con/per) AND was scored positive,
-  // every user_monster whose role maps to that stat gains +1 growth_xp and
-  // +0.5 bond. This is the channel that habits build monster affinity.
-  const taskTags = (task.tags as string[] | null) ?? [];
-  const statTags = ["str", "int", "con", "per"] as const;
-  const targetStats = taskTags
-    .filter((t) => (statTags as readonly string[]).includes(t.toLowerCase()))
-    .map((t) => t.toLowerCase());
-
-  const growthTicks: Array<{ user_monster_id: string; monster_name: string; stat: string; realm_name: string | null }> = [];
-
-  if (isPositive && targetStats.length > 0) {
-    const { data: roster } = await supabase
-      .from("user_monsters")
-      .select("id, bond_percent, growth_xp, monster:monsters(name, role, realms(name))")
-      .eq("user_id", user.id);
-
-    for (const um of roster ?? []) {
-      const m = um.monster as unknown as { name: string; role: string; realms: { name: string } | null } | null;
-      if (!m) continue;
-      const stat = roleToStat(m.role);
-      if (!targetStats.includes(stat)) continue;
-
-      const newBond = Math.min(100, Number(um.bond_percent) + 0.5);
-      const newGrowthXp = Number(um.growth_xp) + 1;
-      await supabase
-        .from("user_monsters")
-        .update({ bond_percent: newBond, growth_xp: newGrowthXp })
-        .eq("id", um.id);
-
-      growthTicks.push({
-        user_monster_id: um.id,
-        monster_name: m.name,
-        stat,
-        realm_name: m.realms?.name ?? null,
-      });
-    }
-  }
-
-  // ─── Skill Awakening evaluation ──────────────────────────────────────
+  // Re-run client side effects (awakenings, goals) if needed, 
+  // but strictly keep the math server-side.
   let awakenings: Array<{ monsterName: string; skillName: string; flavor: string }> = [];
-  if (isPositive) {
+  if (res.isPositive) {
     try {
       const { evaluateAwakenings } = await import("./awakening-client");
       awakenings = await evaluateAwakenings();
@@ -550,13 +189,14 @@ export async function scoreTask(
     }
   }
 
-  // ─── Goal HP drain (quest engine) ───────────────────────────────────
-  let goalDamage: Awaited<ReturnType<typeof import("./quests-client").damageGoalsForTask>> | null =
-    null;
-  if (isPositive && xpGain > 0) {
+  let goalDamage: any = null;
+  if (res.isPositive && res.xp_gained > 0) {
     try {
       const { damageGoalsForTask } = await import("./quests-client");
-      goalDamage = await damageGoalsForTask(user.id, id, xpGain);
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        goalDamage = await damageGoalsForTask(user.id, id, res.xp_gained);
+      }
     } catch (e) {
       console.warn("Goal damage skipped:", e);
     }
@@ -564,12 +204,17 @@ export async function scoreTask(
 
   return {
     ok: true,
-    reward: { gold: goldGain, xp: xpGain, crystals: gemGain, hp: hpChange },
-    isPositive,
-    died,
-    drop,
-    leveledUp,
-    growthTicks,
+    reward: { 
+      gold: res.gold_gained, 
+      xp: res.xp_gained, 
+      crystals: res.crystal_gained ? 1 : 0, 
+      hp: -res.hp_lost 
+    },
+    isPositive: direction === "plus" || direction === "complete",
+    died: res.died,
+    drop: res.drops?.[0] ?? null,
+    leveledUp: false, // Server handles level up, we can just let UI refresh
+    growthTicks: res.bond_ticks ?? [],
     awakenings,
     goalDamage,
   };

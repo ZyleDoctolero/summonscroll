@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import type { Task } from "./TaskCard";
 import type { Difficulty, TaskType } from "@/lib/game/constants";
+import { listRealms } from "@/lib/game/supabase-api";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const DOW = ["S", "M", "T", "W", "T", "F", "S"];
 
@@ -14,6 +17,7 @@ export type TaskFormValue = {
   negative_enabled: boolean;
   schedule_days: number[];
   tags: string[];
+  realm_id: number | null;
 };
 
 export function TaskFormDialog({
@@ -25,7 +29,7 @@ export function TaskFormDialog({
 }: {
   open: boolean;
   defaultType: TaskType;
-  initial?: Task & { schedule_days?: number[]; tags?: string[] };
+  initial?: Task & { schedule_days?: number[]; tags?: string[]; realm_id?: number | null };
   onSubmit: (v: TaskFormValue) => void | Promise<void>;
   onClose: () => void;
 }) {
@@ -39,9 +43,16 @@ export function TaskFormDialog({
     negative_enabled: false,
     schedule_days: [0, 1, 2, 3, 4, 5, 6],
     tags: [],
+    realm_id: null,
   });
   const [tagsInput, setTagsInput] = useState("");
   const [saving, setSaving] = useState(false);
+
+  const realmsQ = useQuery({
+    queryKey: ["realms"],
+    queryFn: listRealms,
+    staleTime: Infinity,
+  });
 
   useEffect(() => {
     if (!open) return;
@@ -55,6 +66,7 @@ export function TaskFormDialog({
       negative_enabled: initial?.negative_enabled ?? false,
       schedule_days: initial?.schedule_days ?? [0, 1, 2, 3, 4, 5, 6],
       tags: initial?.tags ?? [],
+      realm_id: initial?.realm_id ?? null,
     });
     setTagsInput((initial?.tags ?? []).join(", "));
   }, [open, initial, defaultType]);
@@ -129,6 +141,26 @@ export function TaskFormDialog({
             placeholder="Mind · Body · Vaults…"
           />
         </Field>
+
+        <Field label="Realm Affinity (optional)">
+          <Select
+            value={v.realm_id ? String(v.realm_id) : "none"}
+            onValueChange={(val) => setV({ ...v, realm_id: val === "none" ? null : Number(val) })}
+          >
+            <SelectTrigger className="ss-input flex h-auto min-h-[42px] w-full items-center justify-between outline-none focus:border-[var(--ss-gold)] transition-colors">
+              <SelectValue placeholder="No Realm Affinity" />
+            </SelectTrigger>
+            <SelectContent className="bg-[var(--bg-pane)] border-[var(--ss-hairline)] text-[var(--ink-primary)]">
+              <SelectItem value="none">No Realm Affinity</SelectItem>
+              {realmsQ.data?.realms.map((r) => (
+                <SelectItem key={r.id} value={String(r.id)}>
+                  {r.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </Field>
+
 
         <Field label="Tags (comma separated)">
           <input

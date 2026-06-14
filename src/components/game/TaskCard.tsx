@@ -16,6 +16,7 @@ export type Task = {
   completed: boolean;
   is_starred?: boolean;
   tags?: string[];
+  realm_id?: number | null;
 };
 
 // Category → realm affinity mapping per FR01 §2.8
