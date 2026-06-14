@@ -153,7 +153,7 @@ function ProfilePage() {
       <div className="bg-atmos bg-atmos-hub relative min-h-screen">
         <div className="p-6 md:p-10 max-w-6xl">
           {/* Hero section */}
-          <div className="ss-card mb-6">
+          <div className="game-panel p-5 mb-6">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-16 h-16 rounded-full grid place-items-center text-2xl font-bold ss-btn-d-primary">
                 {profile.display_name[0].toUpperCase()}

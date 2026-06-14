@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { motion } from "motion/react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
 import { Icon } from "@/components/ui/Icon";
@@ -64,11 +65,22 @@ function AltarPage() {
       return (
         <AppShell profile={profile}>
           <div
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center cursor-pointer ss-modal-backdrop"
+            className="pull-stage cursor-pointer flex-col"
             onClick={() => setRevealIndex((i) => Math.min(i + 1, pullResults.length - 1))}
           >
+            {/* rotating light rays + a fresh rarity-colored burst each reveal */}
+            <div className="pull-rays" />
             <div
-              className="ss-modal text-center max-w-xs"
+              key={`burst-${revealIndex}`}
+              className="pull-burst"
+              style={{ background: `radial-gradient(circle, ${RARITY_COLOR[r]}cc, transparent 65%)` }}
+            />
+            <motion.div
+              key={`card-${revealIndex}`}
+              initial={{ opacity: 0, scale: 0.6, rotateY: -25 }}
+              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 18 }}
+              className="ss-modal text-center max-w-xs relative z-10"
               style={{ border: `2px solid ${RARITY_COLOR[r]}`, boxShadow: RARITY_GLOW[r] }}
             >
               <div className="w-40 h-40 mx-auto rounded-lg mb-4 flex items-center justify-center overflow-hidden ss-pane">
@@ -117,9 +129,9 @@ function AltarPage() {
                   <Icon name="summon" size={14} /> Transcendence Stone
                 </p>
               )}
-            </div>
+            </motion.div>
             {pullResults.length > 1 && (
-              <div className="flex gap-1.5 mt-6">
+              <div className="flex gap-1.5 mt-6 relative z-10">
                 {pullResults.map((_, i) => (
                   <div
                     key={i}

@@ -131,7 +131,7 @@ function QuestsPage() {
               (slainQ.data?.goals ?? []).map((g) => (
                 <div
                   key={g.id}
-                  className="ss-card"
+                  className="game-panel p-5"
                   style={{ borderColor: "var(--ss-hairline-active)" }}
                 >
                   <div className="flex items-center justify-between">
@@ -161,7 +161,7 @@ function QuestsPage() {
 
         {/* Forge */}
         {tab === "forge" && (
-          <div className="ss-card max-w-lg">
+          <div className="game-panel p-5 max-w-lg">
             <h2 className="text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
               Forge a Quest
             </h2>

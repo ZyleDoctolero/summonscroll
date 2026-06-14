@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+import NumberFlow from "@number-flow/react";
 import { xpToNextLevel } from "@/lib/game/constants";
 import { Icon } from "@/components/ui/Icon";
 
@@ -197,23 +199,35 @@ function MiniBar({
       >
         <span>{label}</span>
         <span style={{ color }} className="t-mono">
-          {current}/{max}
+          <NumberFlow value={current} />/{max}
         </span>
       </div>
       <div
-        className="h-2 rounded-full overflow-hidden"
+        className="h-2 rounded-full overflow-hidden relative"
         style={{ background: "rgba(255,255,255,0.06)" }}
       >
-        <div
-          className="h-full rounded-full transition-all"
+        <motion.div
+          className="h-full rounded-full relative overflow-hidden"
+          initial={false}
+          animate={{ width: `${pct}%` }}
+          transition={{ type: "spring", stiffness: 120, damping: 20 }}
           style={{
-            width: `${pct}%`,
             background: gradient
               ? "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))"
               : color,
             boxShadow: glow ? `0 0 12px ${color}` : undefined,
           }}
-        />
+        >
+          {/* shimmer sweep */}
+          <span
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
+              animation: "hud-shimmer 3s ease-in-out infinite",
+            }}
+          />
+        </motion.div>
       </div>
     </div>
   );

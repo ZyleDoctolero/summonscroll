@@ -179,7 +179,7 @@ function CompendiumPage() {
               <button
                 key={m.id}
                 onClick={() => setSelectedId(m.id)}
-                className="ss-card rounded-lg p-3 text-center transition-all hover:scale-[1.03]"
+                className="ss-card card-interactive rounded-lg p-3 text-center"
                 style={{
                   opacity: owned ? 1 : 0.5,
                   borderColor: m.realms?.name ? `var(--realm-${getRealmClass(m.realms.name)}-accent)` : undefined,

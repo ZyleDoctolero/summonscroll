@@ -10,6 +10,7 @@ import { DeathOverlay } from "@/components/game/DeathOverlay";
 import { MorningRitual, EveningRitual } from "@/components/game/DailyRitual";
 import { Compass } from "@/components/game/Compass";
 import { Onboarding } from "@/components/game/Onboarding";
+import { LoadingScreen } from "@/components/game/LoadingScreen";
 import { TutorialFollowUpModal } from "@/components/game/TutorialFollowUpModal";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { showCascade, type CascadeEvent } from "@/components/game/CascadeCard";
@@ -358,14 +359,7 @@ function HubPage() {
   });
 
   if (profileQ.isLoading || tasksQ.isLoading) {
-    return (
-      <div
-        className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
-      >
-        Loading the realm…
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   const profile = profileQ.data?.profile;
