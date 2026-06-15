@@ -33,19 +33,23 @@ export function MonsterCard({
 
   return (
     <div
-      className={`relative w-full overflow-hidden transition-all duration-300 ${compact ? 'p-1.5' : 'p-3'} group`}
+      className={`relative w-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] ${compact ? 'p-1.5' : 'p-3'} group aura-${r.toLowerCase()}`}
       style={{
         background: `linear-gradient(145deg, rgba(10, 15, 30, 0.9), rgba(5, 10, 20, 0.95))`,
         border: `1px solid ${RARITY_COLOR[r]}80`,
         boxShadow: r !== "common" ? `0 0 10px ${RARITY_COLOR[r]}30, inset 0 0 20px ${RARITY_COLOR[r]}10` : undefined,
         opacity: fatigued ? 0.6 : 1,
         cursor: onClick ? 'pointer' : 'default',
-        borderRadius: '6px'
+        borderRadius: '8px'
       }}
       onClick={onClick}
     >
-      {/* Hover glow effect */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" style={{ boxShadow: `inset 0 0 30px ${RARITY_COLOR[r]}40` }}></div>
+      {/* Hover glow effect with shine */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none z-20" 
+           style={{ 
+             boxShadow: `inset 0 0 40px ${RARITY_COLOR[r]}50`,
+             background: `linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.1) 25%, transparent 30%)`
+           }}></div>
 
       {/* Rarity Stars & Element Header */}
       <div className="absolute top-1.5 left-2 right-2 flex justify-between items-start z-10 pointer-events-none">
@@ -101,8 +105,14 @@ export function MonsterCard({
         <p className={`${compact ? 'text-[10px]' : 'text-xs'} truncate font-bold tracking-wider`} style={{ color: "var(--ink-primary)", textShadow: "0 0 3px var(--cyan)" }}>
           {monster.monster.name}
         </p>
-        <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden mt-0.5 border border-white/10">
-          <div className="h-full bg-cyan-400 shadow-[0_0_5px_#00e5ff] transition-all" style={{ width: `${Math.min(100, monster.bond_percent)}%` }}></div>
+        <div className="w-full bg-black/40 h-1.5 rounded-full overflow-hidden mt-0.5 border border-white/10 shadow-[inset_0_0_4px_rgba(0,0,0,0.8)]">
+          <div className="h-full transition-all duration-500 ease-out relative" style={{ 
+            width: `${Math.min(100, monster.bond_percent)}%`,
+            background: `linear-gradient(90deg, rgba(0, 191, 255, 0.5), #00e5ff)`,
+            boxShadow: `0 0 8px #00e5ff, inset 0 0 4px rgba(255,255,255,0.8)`
+          }}>
+             <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent)] -translate-x-full animate-[shimmer_2s_infinite]"></div>
+          </div>
         </div>
         <div className="flex justify-between items-center mt-0.5">
           <p className="text-[8px] uppercase tracking-widest" style={{ color: "var(--ink-secondary)" }}>

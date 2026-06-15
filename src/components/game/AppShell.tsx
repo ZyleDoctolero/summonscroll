@@ -41,9 +41,14 @@ export function AppShell({
         theme="dark"
         toastOptions={{
           style: {
-            background: "var(--bg-panel)",
-            border: "var(--ss-hairline-active)",
-            color: "var(--ink-primary)",
+            background: "linear-gradient(145deg, rgba(16, 20, 26, 0.9), rgba(10, 10, 14, 0.95))",
+            border: "1px solid rgba(0, 242, 255, 0.3)",
+            color: "var(--cyan)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            boxShadow: "0 4px 24px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(0, 242, 255, 0.1)",
+            fontFamily: "var(--ss-font-body)",
+            letterSpacing: "0.02em",
           },
         }}
       />
@@ -60,9 +65,13 @@ function RouteTransition({ children }: { children: ReactNode }) {
   return (
     <motion.div
       key={pathname}
-      initial={rm ? { opacity: 0 } : { opacity: 0, y: 10 }}
-      animate={rm ? { opacity: 1 } : { opacity: 1, y: 0 }}
-      transition={{ duration: dur.normal, ease: ease.out }}
+      initial={rm ? { opacity: 0 } : { opacity: 0, scale: 0.97, y: 15, filter: "blur(4px)" }}
+      animate={rm ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+      transition={{ 
+        duration: 0.4, 
+        ease: [0.16, 1, 0.3, 1], // Custom snappy ease-out
+      }}
+      className="h-full w-full"
     >
       {children}
     </motion.div>

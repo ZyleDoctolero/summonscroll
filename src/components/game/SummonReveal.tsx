@@ -106,11 +106,11 @@ export function SummonReveal({
       <AnimatePresence mode="wait">
         <motion.div
           key={`card-${currentIndex}`}
-          initial={rm ? { opacity: 0 } : { opacity: 0, scale: 0.6, rotateY: -25, y: 50 }}
-          animate={rm ? { opacity: 1 } : { opacity: 1, scale: 1, rotateY: 0, y: 0 }}
-          exit={rm ? { opacity: 0 } : { opacity: 0, scale: 1.1, filter: "blur(10px)" }}
-          transition={{ type: "spring", stiffness: 200, damping: 18 }}
-          className="ss-modal text-center max-w-xs relative z-10"
+          initial={rm ? { opacity: 0 } : { opacity: 0, scale: 0.3, rotateY: -60, rotateX: 20, y: 100 }}
+          animate={rm ? { opacity: 1 } : { opacity: 1, scale: 1, rotateY: 0, rotateX: 0, y: 0 }}
+          exit={rm ? { opacity: 0 } : { opacity: 0, scale: 1.15, filter: "blur(12px)", y: -20 }}
+          transition={{ type: "spring", stiffness: 250, damping: 20, mass: 1.2 }}
+          className={`ss-modal text-center max-w-xs relative z-10 aura-${r.toLowerCase()}`}
           style={{ border: `2px solid ${RARITY_COLOR[r]}`, boxShadow: RARITY_GLOW[r] }}
         >
           <div className="w-40 h-40 mx-auto rounded-lg mb-4 flex items-center justify-center overflow-hidden ss-pane relative">
@@ -225,7 +225,7 @@ export function SummonResults({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05, duration: dur.normal, ease: ease.out }}
-                className="ss-card text-center"
+                className={`ss-card text-center aura-${r.toLowerCase()}`}
                 style={{
                   border: `1px solid ${RARITY_COLOR[r]}40`,
                   boxShadow: r !== "Common" && r !== "Uncommon" ? `0 0 12px ${RARITY_COLOR[r]}20` : undefined,

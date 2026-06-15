@@ -22,8 +22,8 @@
   --manhwa-legendary-gold: #ffd700;
   
   /* Holographic Shadows */
-  --glow-cyan: 0 0 10px rgba(0, 240, 255, 0.4), 0 0 20px rgba(0, 240, 255, 0.2);
-  --glow-red: 0 0 15px rgba(255, 0, 60, 0.6);
+  --glow-cyan: 0 0 15px rgba(0, 240, 255, 0.5), inset 0 0 25px rgba(0, 240, 255, 0.2);
+  --glow-red: 0 0 20px rgba(255, 0, 60, 0.7), inset 0 0 30px rgba(255, 0, 60, 0.3);
   
   /* Animations */
   --glitch-speed: 2.5s;
@@ -44,13 +44,20 @@
 
 /* The System Window Panel */
 .system-panel {
-  background: rgba(10, 15, 30, 0.85);
-  border: 1px solid var(--manhwa-system-blue);
+  background: rgba(8, 12, 24, 0.85);
+  border: 1px solid rgba(0, 240, 255, 0.4);
   box-shadow: var(--glow-cyan);
-  backdrop-filter: blur(12px);
-  border-radius: 4px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 8px;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.system-panel:hover {
+  border-color: rgba(0, 240, 255, 0.8);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6), inset 0 0 30px rgba(0, 240, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 /* CRT Scanline Overlay applied globally or to penalty zone */
@@ -63,4 +70,75 @@
   z-index: 50;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
+}
+
+/* ─── Manhwa System Rarity Auras ─── */
+.aura-common {
+  filter: grayscale(60%);
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.aura-uncommon {
+  box-shadow: 0 0 12px rgba(0, 255, 102, 0.3), inset 0 0 10px rgba(0, 255, 102, 0.1);
+  border-color: rgba(0, 255, 102, 0.4) !important;
+}
+
+.aura-rare {
+  animation: holo-pulse 3s infinite ease-in-out;
+  border-color: rgba(0, 191, 255, 0.5) !important;
+}
+@keyframes holo-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 191, 255, 0.3), inset 0 0 12px rgba(0, 191, 255, 0.15); }
+  50% { box-shadow: 0 0 20px rgba(0, 191, 255, 0.6), inset 0 0 25px rgba(0, 191, 255, 0.35); border-color: rgba(0, 191, 255, 0.8) !important; }
+}
+
+.aura-elite {
+  animation: neon-glitch 2s infinite;
+  border: 1px solid rgba(213, 0, 249, 0.6) !important;
+}
+@keyframes neon-glitch {
+  0% { box-shadow: -2px 0 0 rgba(213, 0, 249, 0.5), 2px 0 0 rgba(213, 0, 249, 0.5), inset 0 0 15px rgba(213, 0, 249, 0.2); }
+  2% { box-shadow: 2px 0 0 rgba(213, 0, 249, 0.5), -2px 0 0 rgba(213, 0, 249, 0.5), inset 0 0 15px rgba(213, 0, 249, 0.2); }
+  4% { box-shadow: -2px 0 0 rgba(213, 0, 249, 0.5), 2px 0 0 rgba(213, 0, 249, 0.5), inset 0 0 15px rgba(213, 0, 249, 0.2); }
+  6% { box-shadow: 0 0 15px rgba(213, 0, 249, 0.7), inset 0 0 20px rgba(213, 0, 249, 0.3); }
+  100% { box-shadow: 0 0 15px rgba(213, 0, 249, 0.7), inset 0 0 20px rgba(213, 0, 249, 0.3); }
+}
+
+.aura-epic {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), inset 0 0 20px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.7) !important;
+  animation: radiant-particle 4s infinite alternate;
+}
+@keyframes radiant-particle {
+  0% { filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5)); box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.2); }
+  100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9)); box-shadow: 0 0 35px rgba(255, 215, 0, 0.8), inset 0 0 25px rgba(255, 215, 0, 0.4); border-color: rgba(255, 215, 0, 1) !important; }
+}
+
+.aura-legendary {
+  box-shadow: inset 0 0 40px rgba(255, 0, 60, 0.5), 0 0 30px rgba(255, 0, 60, 0.7);
+  border: 1px solid rgba(255, 0, 60, 0.9) !important;
+  animation: absolute-zero 3s infinite ease-in-out reverse;
+}
+
+.aura-mythic {
+  animation: absolute-zero 2s infinite ease-in-out;
+  border-color: rgba(0, 240, 255, 0.8) !important;
+}
+@keyframes absolute-zero {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.6), inset 0 0 20px rgba(0, 240, 255, 0.4); border-color: rgba(0, 240, 255, 0.6) !important; }
+  50% { box-shadow: 0 0 40px rgba(0, 240, 255, 0.9), inset 0 0 40px rgba(0, 240, 255, 0.7); border-color: rgba(0, 240, 255, 1) !important; }
+}
+
+.aura-ex {
+  animation: reality-break 0.5s infinite;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.9), inset 0 0 30px rgba(255, 255, 255, 0.8);
+  border: 2px solid #ffffff !important;
+}
+@keyframes reality-break {
+  0% { transform: translate(0, 0); filter: hue-rotate(0deg); }
+  25% { transform: translate(1px, -1px); filter: hue-rotate(90deg); }
+  50% { transform: translate(-1px, 1px); filter: hue-rotate(180deg); }
+  75% { transform: translate(1px, 1px); filter: hue-rotate(270deg); }
+  100% { transform: translate(0, 0); filter: hue-rotate(360deg); }
 }

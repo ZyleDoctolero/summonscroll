@@ -77,18 +77,20 @@ export function GameSidebar({
     <>
       {/* Desktop Sidebar */}
       <aside
-        className="hidden md:flex flex-col h-full py-6 px-3 w-[260px] fixed left-0 top-0 border-r z-50"
-        style={{ background: "var(--bg-stage)", borderColor: "var(--ss-border)" }}
+        className="hidden md:flex flex-col h-full py-6 px-3 w-[260px] fixed left-0 top-0 border-r z-50 backdrop-blur-md"
+        style={{ background: "rgba(5, 10, 18, 0.75)", borderColor: "rgba(0, 242, 255, 0.15)", boxShadow: "2px 0 20px rgba(0, 242, 255, 0.05)" }}
       >
         <div className="mb-6 px-3">
           <div
-            className="font-bold mb-4 whitespace-nowrap"
+            className="font-bold mb-4 whitespace-nowrap relative"
             style={{
-              color: "var(--gold-bright)",
+              color: "var(--cyan)",
               fontFamily: "var(--ss-font-display)",
-              fontSize: "17px",
-              letterSpacing: "-0.01em",
+              fontSize: "20px",
+              letterSpacing: "0.05em",
               lineHeight: 1.1,
+              textShadow: "0 0 10px rgba(0, 242, 255, 0.6), 0 0 20px rgba(0, 242, 255, 0.3)",
+              textTransform: "uppercase"
             }}
           >
             SummonScroll

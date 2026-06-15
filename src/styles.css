@@ -166,10 +166,10 @@
 :root {
   /* ─── Manhwa System UI Palette (Pick Me Up / Solo Leveling) ─── */
   /* Backgrounds */
-  --bg-deep: #050a14; /* very dark, almost black blue */
-  --bg-stage: #0a1122; /* slightly lighter dark blue */
-  --bg-panel: rgba(16, 26, 46, 0.85); /* sleek translucent panel */
-  --bg-pane: rgba(22, 35, 60, 0.6); /* inner pane */
+  --bg-deep: #02040a; /* absolute void black */
+  --bg-stage: #050a12; /* deeper space */
+  --bg-panel: rgba(10, 10, 14, 0.65); /* sleek frosted glass panel */
+  --bg-pane: rgba(16, 20, 26, 0.4); /* inner pane */
 
   /* Text/Ink */
   --ink-primary: #e0f7fa; /* crisp icy white */
@@ -177,12 +177,12 @@
   --ink-tertiary: #4dd0e1; /* vivid cyan */
 
   /* Signature Colors */
-  --gold-bright: #ffea00;
-  --gold-glow: #ffc400;
-  --violet: #d500f9;
-  --cyan: #00e5ff; /* pure system neon */
-  --rose: #ff1744; /* danger/mythic */
-  --ember: #d50000;
+  --gold-bright: #00f2ff; /* Swapped to pure System Cyan */
+  --gold-glow: #00a8ff;
+  --violet: #8a2be2; /* Shadow Purple */
+  --cyan: #00f2ff; /* pure system neon */
+  --rose: #ff003c; /* blood red / warning */
+  --ember: #e50000;
 
   /* Utility */
   --success: #00e676;
@@ -485,7 +485,7 @@ html {
 body {
   background: var(--ss-bg-deep) !important;
   color: var(--ss-text-primary) !important;
-  font-family: var(--ss-font-body, "Inter", system-ui, sans-serif);
+  font-family: var(--ss-font-body, "Rajdhani", "Orbitron", sans-serif);
 }
 
 /* CRT Scanlines overlay to simulate the Manhwa 'System Window' */
@@ -497,27 +497,36 @@ body::after {
   z-index: 9998;
   background: linear-gradient(
     rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.15) 50%
+    rgba(0, 0, 0, 0.25) 50%
   );
   background-size: 100% 4px;
-  opacity: 0.8;
+  opacity: 0.6;
+  animation: crt-flicker 0.15s infinite;
+}
+
+@keyframes crt-flicker {
+  0% { opacity: 0.55; background-position: 0 0; }
+  50% { opacity: 0.65; background-position: 0 2px; }
+  100% { opacity: 0.55; background-position: 0 4px; }
 }
 
 /* ─── Surface System Primitives ─── */
 
 /* ─── Cards ─── */
 .ss-card {
-  background: var(--bg-pane);
-  border: var(--ss-hairline);
-  border-radius: var(--ss-radius-lg);
+  background: linear-gradient(145deg, rgba(16, 20, 26, 0.4), rgba(10, 10, 14, 0.6));
+  border: 1px solid rgba(0, 242, 255, 0.15);
+  border-radius: 8px;
   padding: var(--ss-space-4);
-  box-shadow: var(--ss-shadow-low), var(--ss-inset-edge);
-  transition:
-    border-color 160ms ease-out,
-    transform 160ms ease-out;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 0 20px rgba(0, 242, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .ss-card:hover {
-  border-color: var(--ss-hairline-active);
+  border-color: rgba(0, 242, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 255, 0.2), inset 0 0 30px rgba(0, 242, 255, 0.1);
+  transform: translateY(-4px);
 }
 
 /* Bigger, more important surface — hero card on a screen */
@@ -531,11 +540,12 @@ body::after {
 
 /* ─── Modals ─── */
 .ss-modal {
-  background: linear-gradient(180deg, var(--bg-pane) 0%, var(--bg-deep) 100%);
-  border: var(--ss-hairline-active);
+  background: linear-gradient(180deg, rgba(16, 20, 26, 0.8) 0%, rgba(2, 4, 10, 0.95) 100%);
+  border: 1px solid rgba(255, 213, 79, 0.32);
   border-radius: var(--ss-radius-xl);
   padding: var(--ss-space-5);
-  box-shadow: var(--ss-shadow-high), var(--ss-inset-edge);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(0, 242, 255, 0.1);
+  backdrop-filter: blur(24px);
   max-width: 28rem;
   width: 100%;
 }
@@ -611,10 +621,21 @@ body::after {
 }
 
 .ss-btn-danger {
-  background: linear-gradient(135deg, #5a1818, #781d1d);
-  color: var(--ink-primary);
-  border: none;
-  box-shadow: 0 4px 20px rgba(120, 29, 29, 0.35);
+  background: rgba(255, 23, 68, 0.15);
+  color: var(--danger);
+  border: 1px solid rgba(255, 23, 68, 0.4);
+  box-shadow: 0 4px 20px rgba(255, 23, 68, 0.25), inset 0 0 10px rgba(255, 23, 68, 0.1);
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.ss-btn-danger:hover {
+  background: rgba(255, 23, 68, 0.25);
+  border-color: rgba(255, 23, 68, 0.8);
+  box-shadow: 0 4px 25px rgba(255, 23, 68, 0.4), inset 0 0 15px rgba(255, 23, 68, 0.2);
+  transform: translateY(-1px);
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
 }
 
 .ss-btn-ghost {
@@ -729,18 +750,18 @@ body::after {
 
 /* Sleek Holographic System Button */
 .ss-btn-d-primary {
-  background: rgba(0, 229, 255, 0.1);
+  background: rgba(0, 229, 255, 0.15);
   color: var(--cyan);
   border: 1px solid var(--cyan);
-  border-radius: 4px;
+  border-radius: 6px;
   font-family: 'VT323', monospace;
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2), inset 0 0 10px rgba(0, 229, 255, 0.1);
-  text-shadow: 0 0 5px var(--cyan);
-  transition: all 0.2s ease;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3), inset 0 0 15px rgba(0, 229, 255, 0.2);
+  text-shadow: 0 0 8px var(--cyan);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
 }
@@ -748,19 +769,21 @@ body::after {
   content: "";
   position: absolute;
   top: 0; left: -100%; width: 50%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
   transform: skewX(-20deg);
-  transition: 0.5s;
+  transition: 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .ss-btn-d-primary:hover {
-  background: rgba(0, 229, 255, 0.2);
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4), inset 0 0 15px rgba(0, 229, 255, 0.2);
+  background: rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.6), inset 0 0 20px rgba(0, 229, 255, 0.4);
+  transform: translateY(-2px) scale(1.02);
 }
 .ss-btn-d-primary:hover::before {
   left: 150%;
 }
 .ss-btn-d-primary:active {
-  transform: scale(0.98);
+  transform: scale(0.96);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.4), inset 0 0 10px rgba(0, 229, 255, 0.3);
 }
 
 /* Rarity star (with particle glow) */
@@ -1042,7 +1065,7 @@ body {
     radial-gradient(circle at 80% 20%, rgba(163, 116, 255, 0.12) 0%, transparent 45%),
     radial-gradient(circle at 15% 75%, rgba(90, 224, 255, 0.08) 0%, transparent 45%),
     radial-gradient(circle at 50% 50%, rgba(255, 217, 92, 0.03) 0%, transparent 70%),
-    url(/atmos/hub.png);
+    ;
 }
 .bg-atmos-hub::before {
   content: "";
@@ -1078,7 +1101,7 @@ body {
     ),
     radial-gradient(circle at 10% 20%, rgba(255, 217, 92, 0.05) 0%, transparent 35%),
     radial-gradient(circle at 90% 80%, rgba(90, 224, 255, 0.05) 0%, transparent 35%),
-    url(/atmos/altar.png);
+    ;
 }
 .bg-atmos-altar::before {
   content: "";
@@ -1110,7 +1133,7 @@ body {
       transparent 70%
     ),
     radial-gradient(circle at 80% 80%, rgba(163, 116, 255, 0.06) 0%, transparent 40%),
-    url(/atmos/expedition.png);
+    ;
 }
 .bg-atmos-expedition::before {
   content: "";
@@ -1142,7 +1165,7 @@ body {
       transparent 70%
     ),
     radial-gradient(circle at 20% 20%, rgba(255, 217, 92, 0.04) 0%, transparent 40%),
-    url(/atmos/battle.png);
+    ;
 }
 .bg-atmos-battle::before {
   content: "";
@@ -1177,7 +1200,7 @@ body {
       rgba(163, 116, 255, 0.04) 40%,
       transparent 70%
     ),
-    url(/atmos/codex.png);
+    ;
 }
 .bg-atmos-codex::before {
   content: "";
@@ -1202,7 +1225,7 @@ body {
       transparent 95%
     ),
     radial-gradient(circle at 15% 15%, rgba(255, 94, 94, 0.05) 0%, transparent 40%),
-    url(/atmos/trial.png);
+    ;
 }
 .bg-atmos-trial::before {
   content: "";
@@ -1241,7 +1264,7 @@ body {
       rgba(163, 116, 255, 0.03) 45%,
       transparent 75%
     ),
-    url(/atmos/compendium.png);
+    ;
 }
 .bg-atmos-compendium::before {
   content: "";
