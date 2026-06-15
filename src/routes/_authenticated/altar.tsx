@@ -122,122 +122,140 @@ function AltarPage() {
 
   return (
     <AppShell profile={profile}>
-      <div className="bg-atmos bg-atmos-altar p-6 md:p-10 max-w-6xl min-h-screen">
-        <h1 className="t-h1 text-3xl mb-2 text-gold-bright">The Altar</h1>
-        <p className="text-sm mb-8" style={{ color: "var(--ink-secondary)" }}>
-          Spend Crystals to summon monsters.
-        </p>
-        <div className="flex gap-2 mb-6 overflow-x-auto pb-2" role="tablist">
-          {banners.map((b: { id: string; name: string }) => (
-            <button
-              key={b.id}
-              role="tab"
-              onClick={() => setSelectedBannerId(b.id)}
-              className={`ss-btn whitespace-nowrap ${selectedBanner?.id === b.id ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
-            >
-              {b.name}
-            </button>
-          ))}
+      <div className="relative w-full h-screen overflow-hidden flex flex-col md:flex-row text-white">
+        
+        {/* Full Screen Banner Background (Placeholder) */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.15)_0%,rgba(5,10,20,0.9)_100%)]" />
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-color-dodge" />
+          {/* A massive magical summoning circle suggestion in the background */}
+          <motion.div 
+            animate={{ rotate: 360 }} 
+            transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-cyan-500/10 shadow-[inset_0_0_100px_rgba(0,240,255,0.05)] pointer-events-none"
+          />
         </div>
-        {selectedBanner &&
-          (() => {
-            const isPactSeal = selectedBanner.banner_type === "pact_seal";
-            const cost1 = isPactSeal
-              ? (selectedBanner.pull_cost_seals ?? 1)
-              : selectedBanner.pull_cost_crystals;
-            const cost10 = isPactSeal
-              ? (selectedBanner.pull_cost_seals ?? 1) * 10
-              : selectedBanner.pull_cost_10_crystals;
-            const balance = isPactSeal ? profile.pact_seals : profile.crystals;
-            const icon = isPactSeal ? "seal" : "crystal";
-            const iconColor = isPactSeal ? "var(--violet)" : "var(--cyan)";
-            return (
-              <div className="ss-card-hero overflow-hidden">
-                <div
-                  className="relative h-48 flex items-end p-6 overflow-hidden"
-                  style={{
-                    background:
-                      `radial-gradient(120% 90% at 80% 10%, ${iconColor}22 0%, transparent 55%), linear-gradient(180deg, rgba(255,213,79,0.10) 0%, var(--bg-stage) 70%, var(--bg-pane) 100%)`,
-                  }}
+
+        {/* Left Side: Banner Selection (Vertical Tabs) */}
+        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-cyan-500/20 bg-black/40 backdrop-blur-md">
+          <h1 className="text-4xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-br from-white to-cyan-400 tracking-widest drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">
+            THE ALTAR
+          </h1>
+          <div className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
+            {banners.map((b: { id: string; name: string }) => {
+              const isActive = selectedBanner?.id === b.id;
+              return (
+                <button
+                  key={b.id}
+                  onClick={() => setSelectedBannerId(b.id)}
+                  className={`relative flex items-center justify-start px-6 py-4 rounded-xl transition-all duration-300 overflow-hidden group min-w-[200px] ${
+                    isActive 
+                      ? "bg-cyan-950/60 border border-cyan-400 shadow-[0_0_20px_rgba(0,240,255,0.3)] scale-105" 
+                      : "bg-black/40 border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-950/20"
+                  }`}
                 >
-                  {/* large faded realm glyph watermark */}
-                  <div
-                    className="absolute -right-4 -top-6 select-none pointer-events-none"
-                    style={{ fontSize: "9rem", opacity: 0.08, lineHeight: 1 }}
-                    aria-hidden
-                  >
+                  {isActive && (
+                    <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-cyan-400 shadow-[0_0_15px_#00f0ff]" />
+                  )}
+                  <span className={`font-black tracking-widest uppercase text-sm ${isActive ? "text-white" : "text-slate-400 group-hover:text-cyan-100"}`}>
+                    {b.name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Right Side: The Featured Banner & Summoning Buttons */}
+        {selectedBanner && (() => {
+          const isPactSeal = selectedBanner.banner_type === "pact_seal";
+          const cost1 = isPactSeal ? (selectedBanner.pull_cost_seals ?? 1) : selectedBanner.pull_cost_crystals;
+          const cost10 = isPactSeal ? (selectedBanner.pull_cost_seals ?? 1) * 10 : selectedBanner.pull_cost_10_crystals;
+          const balance = isPactSeal ? profile.pact_seals : profile.crystals;
+          const icon = isPactSeal ? "seal" : "crystal";
+          const iconColor = isPactSeal ? "#d946ef" : "#00f0ff"; // fuchsia or cyan
+          const canPull1 = balance >= cost1;
+          const canPull10 = balance >= cost10;
+
+          return (
+            <div className="relative flex-1 flex flex-col justify-end p-8 md:p-16 z-10">
+              
+              {/* Featured Character / Title Floating in the void */}
+              <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-8 pointer-events-none">
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  key={selectedBanner.id}
+                >
+                  <div className="text-[8rem] leading-none opacity-5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 font-black text-white mix-blend-overlay blur-sm">
                     {selectedBanner.realms?.icon ?? "✦"}
                   </div>
-                  {/* concentric summon-ring suggestion */}
-                  <div
-                    className="absolute pointer-events-none"
-                    style={{
-                      right: "1.5rem", top: "50%", transform: "translateY(-50%)",
-                      width: 140, height: 140, borderRadius: "9999px",
-                      border: `1px solid ${iconColor}33`,
-                      boxShadow: `inset 0 0 40px ${iconColor}18, 0 0 24px ${iconColor}14`,
-                    }}
-                  />
-                  <div
-                    className="absolute pointer-events-none"
-                    style={{
-                      right: "2.6rem", top: "50%", transform: "translateY(-50%)",
-                      width: 92, height: 92, borderRadius: "9999px",
-                      border: `1px solid ${iconColor}22`,
-                    }}
-                  />
-                  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--gold-glow)] to-transparent opacity-60" />
-                  <div className="relative">
-                    <h2 className="t-h2 mb-1" style={{ color: "var(--gold-bright)" }}>
-                      {selectedBanner.name}
-                    </h2>
-                    <p className="text-sm flex items-center gap-1.5" style={{ color: "var(--ink-secondary)" }}>
-                      <span style={{ fontSize: "1rem" }}>{selectedBanner.realms?.icon}</span>
-                      {selectedBanner.realms?.name ?? "All Realms"}
-                    </p>
+                  <h2 className="text-5xl md:text-7xl font-black italic tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                    {selectedBanner.name}
+                  </h2>
+                  <p className="text-xl md:text-2xl mt-4 text-cyan-400 tracking-[0.2em] font-mono">
+                    {selectedBanner.realms?.name ?? "ALL REALMS ALLOWED"}
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* The Tactile Gacha Control Panel at the bottom */}
+              <div className="relative w-full max-w-4xl mx-auto flex flex-col items-end gap-6 mt-auto">
+                
+                {/* Currency Display */}
+                <div className="bg-black/60 backdrop-blur-md border border-white/10 px-6 py-3 rounded-xl flex items-center gap-3">
+                  <span className="text-xs text-slate-400 uppercase tracking-widest font-bold">Resonance Balance</span>
+                  <div className={`flex items-center gap-2 text-xl font-black ${canPull1 ? 'text-white' : 'text-red-500'}`}>
+                    <Icon name={icon as any} size={20} color={iconColor} />
+                    {balance.toLocaleString()}
                   </div>
                 </div>
-                <div className="p-6 space-y-4">
-                  <div className="text-sm" style={{ color: "var(--ink-secondary)" }}>
-                    Balance:{" "}
-                    <span
-                      className="font-bold text-base flex items-center gap-1 inline-flex"
-                      style={{ color: balance >= cost1 ? "var(--gold-bright)" : "var(--danger)" }}
-                    >
-                      <Icon name={icon as any} size={14} color={iconColor} />{" "}
-                      {balance.toLocaleString()}
-                    </span>
-                  </div>
-                  <div className="flex gap-3">
-                    <button
-                      onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
-                      disabled={balance < cost1 || pullMut.isPending}
-                      className="ss-btn ss-btn-secondary flex-1"
-                    >
-                      Pull ×1 — {cost1} <Icon name={icon as any} size={12} color={iconColor} />
-                    </button>
-                    <button
-                      onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
-                      disabled={balance < cost10 || pullMut.isPending}
-                      className="ss-btn ss-btn-d-primary flex-[2] disabled:opacity-40"
-                      style={{
-                        boxShadow: balance >= cost10 ? "0 0 24px rgba(255,213,79,0.3)" : "none",
-                      }}
-                    >
-                      {pullMut.isPending ? (
-                        "Summoning…"
-                      ) : (
-                        <span className="flex items-center gap-1">
-                          ★ Pull ×10 — {cost10}{" "}
-                          <Icon name={icon as any} size={12} color={iconColor} /> ★
-                        </span>
-                      )}
-                    </button>
-                  </div>
+
+                {/* Skewed Action Buttons */}
+                <div className="flex gap-4 w-full md:w-auto">
+                  
+                  {/* Pull x1 */}
+                  <button
+                    onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
+                    disabled={!canPull1 || pullMut.isPending}
+                    className="relative flex-1 md:w-[220px] h-[80px] group disabled:opacity-50 transition-all active:scale-95"
+                  >
+                    {/* Skewed background layer */}
+                    <div className="absolute inset-0 bg-slate-900 border-2 border-slate-700 group-hover:border-slate-500 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]" style={{ clipPath: "polygon(15% 0, 100% 0, 85% 100%, 0% 100%)" }} />
+                    <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
+                      <span className="text-slate-300 text-lg">PULL ×1</span>
+                      <div className="flex items-center gap-1.5 text-slate-400 text-sm mt-1">
+                        <Icon name={icon as any} size={14} color={iconColor} /> {cost1}
+                      </div>
+                    </div>
+                  </button>
+
+                  {/* Pull x10 - Premium Button */}
+                  <button
+                    onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
+                    disabled={!canPull10 || pullMut.isPending}
+                    className="relative flex-[1.5] md:w-[320px] h-[80px] group disabled:opacity-50 transition-all active:scale-95"
+                  >
+                    {/* Glowing Skewed background layer */}
+                    <div className="absolute inset-0 bg-cyan-950 border-2 border-cyan-400 group-hover:bg-cyan-900 transition-colors shadow-[0_0_30px_rgba(0,240,255,0.4)]" style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0% 100%)" }} />
+                    
+                    {/* Shine sweep */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0% 100%)" }} />
+
+                    <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
+                      <span className="text-white text-2xl drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">★ PULL ×10 ★</span>
+                      <div className="flex items-center gap-2 text-cyan-100 text-base mt-1">
+                        <Icon name={icon as any} size={16} color={iconColor} /> {cost10}
+                      </div>
+                    </div>
+                  </button>
+
                 </div>
               </div>
-            );
-          })()}
+
+            </div>
+          );
+        })()}
       </div>
     </AppShell>
   );

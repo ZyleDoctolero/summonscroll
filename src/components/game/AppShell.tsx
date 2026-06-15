@@ -33,7 +33,12 @@ export function AppShell({
       />
       {withHeader && <MobilePlayerHeader profile={profile as any} />}
       {withHeader && <PlayerHeader profile={profile} />}
-      <main className={`md:ml-[260px] ${withHeader ? "md:pt-14" : ""} min-h-screen pb-20 md:pb-0`}>
+      {/* Ambient background for the entire shell (can be overridden by specific routes) */}
+      <div className="fixed inset-0 pointer-events-none bg-[#02040a]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,180,255,0.05)_0%,transparent_100%)]" />
+      </div>
+
+      <main className="w-full h-screen overflow-hidden relative pb-20 md:pb-0 z-10">
         <RouteTransition>{children}</RouteTransition>
       </main>
       <Toaster

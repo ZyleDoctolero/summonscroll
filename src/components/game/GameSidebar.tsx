@@ -75,46 +75,47 @@ export function GameSidebar({
 
   return (
     <>
-      {/* Desktop Sidebar */}
+      {/* Desktop Sidebar - Converted to Gamified Floating Panel */}
       <aside
-        className="hidden md:flex flex-col h-full py-6 px-3 w-[260px] fixed left-0 top-0 border-r z-50 backdrop-blur-md"
-        style={{ background: "rgba(5, 10, 18, 0.75)", borderColor: "rgba(0, 242, 255, 0.15)", boxShadow: "2px 0 20px rgba(0, 242, 255, 0.05)" }}
+        className="hidden md:flex flex-col h-[calc(100vh-2rem)] py-6 px-3 w-[280px] fixed left-4 top-4 rounded-2xl z-50 backdrop-blur-xl border border-cyan-500/20 overflow-hidden"
+        style={{ 
+          background: "linear-gradient(145deg, rgba(10, 15, 25, 0.6) 0%, rgba(2, 4, 10, 0.9) 100%)", 
+          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 242, 255, 0.05)" 
+        }}
       >
-        <div className="mb-6 px-3">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-color-dodge pointer-events-none" />
+        <div className="mb-8 px-2">
           <div
-            className="font-bold mb-4 whitespace-nowrap relative"
+            className="font-black mb-6 whitespace-nowrap text-center relative"
             style={{
-              color: "var(--cyan)",
+              color: "#fff",
               fontFamily: "var(--ss-font-display)",
-              fontSize: "20px",
-              letterSpacing: "0.05em",
+              fontSize: "24px",
+              letterSpacing: "0.15em",
               lineHeight: 1.1,
-              textShadow: "0 0 10px rgba(0, 242, 255, 0.6), 0 0 20px rgba(0, 242, 255, 0.3)",
+              textShadow: "0 0 10px rgba(0, 242, 255, 0.8), 0 0 20px rgba(0, 150, 255, 0.6), 0 0 30px rgba(0, 50, 255, 0.4)",
               textTransform: "uppercase"
             }}
           >
             SummonScroll
           </div>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full grid place-items-center font-bold ss-btn-d-primary">
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5 shadow-inner">
+            <div className="w-12 h-12 rounded-xl grid place-items-center font-black text-lg bg-gradient-to-br from-cyan-400 to-blue-600 text-white shadow-[0_0_15px_rgba(0,240,255,0.4)] border border-cyan-300/50">
               {displayName.slice(0, 1).toUpperCase()}
             </div>
             <div>
-              <div className="text-sm font-semibold" style={{ color: "var(--ink-primary)" }}>
+              <div className="text-sm font-bold text-white tracking-wide">
                 {displayName}
               </div>
-              <div
-                className="text-xs flex items-center gap-1 mt-0.5"
-                style={{ color: "var(--ink-secondary)" }}
-              >
+              <div className="text-[10px] flex items-center gap-1.5 mt-1 font-mono uppercase tracking-widest text-cyan-200/70">
                 {classIcon && (
-                  <Icon name={classIcon as any} size={12} color="var(--ink-secondary)" />
+                  <Icon name={classIcon as any} size={10} />
                 )}
                 <span>
-                  Level {level}
+                  Lv. {level}
                   {playerClass &&
                     playerClass !== "none" &&
-                    ` . ${playerClass[0].toUpperCase() + playerClass.slice(1)}`}
+                    ` • ${playerClass}`}
                 </span>
               </div>
             </div>
@@ -219,13 +220,27 @@ function NavLink({
   return (
     <Link
       to={item.to}
-      className={`flex items-center gap-3 px-3 rounded-md transition-all ${
-        isPrimary ? "ss-nav-primary" : "ss-nav-secondary"
-      } ${active ? "active" : ""}`}
+      className={`relative flex items-center gap-3 px-4 py-3 mb-1 rounded-xl transition-all duration-300 group overflow-hidden ${
+        active 
+          ? "bg-cyan-950/40 border border-cyan-500/50 shadow-[0_0_15px_rgba(0,240,255,0.2)]" 
+          : "border border-transparent hover:bg-white/5 hover:border-white/10"
+      }`}
       aria-current={active ? "page" : undefined}
     >
-      <Icon name={item.icon as any} size={isPrimary ? 22 : 18} />
-      <span className="uppercase tracking-wider font-semibold">{item.label}</span>
+      {/* Active Indicator Glow */}
+      {active && (
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-400 shadow-[0_0_10px_#00f0ff]" />
+      )}
+      
+      {/* Hover Light Sweep */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+
+      <div className={`relative z-10 ${active ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" : "text-slate-400 group-hover:text-slate-200"}`}>
+        <Icon name={item.icon as any} size={isPrimary ? 22 : 18} />
+      </div>
+      <span className={`relative z-10 uppercase tracking-widest font-bold text-sm ${active ? "text-white" : "text-slate-400 group-hover:text-slate-200"}`}>
+        {item.label}
+      </span>
     </Link>
   );
 }

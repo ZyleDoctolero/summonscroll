@@ -1601,3 +1601,10 @@ body {
   30%  { opacity: 0.18; }
   100% { opacity: 0; }
 }
+@keyframes shimmer {
+  0% { transform: translateX(-100%) }
+  100% { transform: translateX(100%) }
+}
+.group:hover .group-hover\:animate-shimmer {
+  animation: shimmer 1s ease-in-out infinite;
+}
