@@ -98,6 +98,8 @@ interface IconProps {
   color?: string;
   className?: string;
   strokeWidth?: number;
+  style?: React.CSSProperties;
+  title?: string;
 }
 
 //  Icon Component
@@ -110,16 +112,20 @@ export function Icon({
   color = "currentColor",
   className,
   strokeWidth = 2,
+  style,
+  title,
 }: IconProps) {
-  const LucideComponent = ICONS[name];
-  if (!LucideComponent) return null;
+  // Fall back to a neutral glyph rather than vanishing when a name is unknown.
+  const LucideComponent = ICONS[name] ?? ICONS.sparkle;
   return (
     <LucideComponent
       size={size}
       color={color}
       strokeWidth={strokeWidth}
       className={className}
-      aria-hidden="true"
+      style={style}
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
     />
   );
 }
