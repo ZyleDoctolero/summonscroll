@@ -359,8 +359,8 @@ function HubPage() {
       <RealmPulse realmId={activeRealmPulse} onComplete={() => setActiveRealmPulse(null)} />
       {showOnboarding && <Onboarding onComplete={() => onboardingMut.mutate()} />}
       <DeathOverlay trigger={deathTick} />
-      <div className="bg-atmos bg-atmos-hub relative min-h-screen">
-        <div className="p-6 md:p-10 max-w-6xl">
+      <div className="bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] bg-[#0a0512] relative min-h-screen border-2 border-[#d4af3f]/20 shadow-[inset_0_0_80px_rgba(26,11,46,1)] rounded-lg m-2 md:m-4 overflow-hidden">
+        <div className="p-6 md:p-10 max-w-6xl relative z-10">
           <Compass
             onOpenMorning={() => setShowMorning(true)}
             onOpenEvening={() => setShowEvening(true)}
@@ -380,7 +380,7 @@ function HubPage() {
             <div>
               <h1
                 className="t-h1 text-3xl md:text-4xl mb-1"
-                style={{ color: "var(--gold-bright)" }}
+                style={{ color: "#fcd34d", textShadow: "0 2px 10px rgba(212,175,63,0.5)" }}
               >
                 Hub Directives
               </h1>
@@ -390,21 +390,21 @@ function HubPage() {
                 setEditing(null);
                 setDialogOpen(true);
               }}
-              className="ss-btn ss-btn-d-primary"
+              className="ss-btn ss-btn-d-primary shadow-[0_0_15px_rgba(212,175,63,0.4)]"
             >
               + New Directive
             </button>
           </header>
 
           <div
-            className="flex gap-6 mb-6 border-b"
-            style={{ borderColor: "rgba(255,255,255,0.08)" }}
+            className="flex gap-6 mb-6 border-b-2"
+            style={{ borderColor: "rgba(212,175,63,0.3)" }}
           >
             {(["habit", "daily", "todo"] as const).map((t) => (
               <button
                 key={t}
                 onClick={() => setTab(t)}
-                className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active" : ""}`}
+                className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active text-[#fcd34d]" : "text-[#b09e80] hover:text-[#d4af3f]"}`}
               >
                 {t === "habit" ? "Habits" : t === "daily" ? "Dailies" : "To-Dos"}
               </button>

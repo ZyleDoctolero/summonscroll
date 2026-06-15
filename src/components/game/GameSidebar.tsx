@@ -77,30 +77,30 @@ export function GameSidebar({
     <>
       {/* Desktop Sidebar - Converted to Gamified Floating Panel */}
       <aside
-        className="hidden md:flex flex-col h-[calc(100vh-2rem)] py-6 px-3 w-[280px] fixed left-4 top-4 rounded-2xl z-50 backdrop-blur-xl border border-cyan-500/20 overflow-hidden"
+        className="hidden md:flex flex-col h-[calc(100vh-2rem)] py-6 px-3 w-[280px] fixed left-4 top-4 rounded-[16px] z-50 backdrop-blur-xl border-2 border-[#d4af3f]/40 overflow-hidden"
         style={{ 
-          background: "linear-gradient(145deg, rgba(10, 15, 25, 0.6) 0%, rgba(2, 4, 10, 0.9) 100%)", 
-          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 242, 255, 0.05)" 
+          background: "linear-gradient(145deg, rgba(26, 11, 46, 0.8) 0%, rgba(10, 5, 18, 0.95) 100%)", 
+          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(212, 175, 63, 0.15)" 
         }}
       >
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-color-dodge pointer-events-none" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-color-dodge pointer-events-none" />
         <div className="mb-8 px-2">
           <div
             className="font-black mb-6 whitespace-nowrap text-center relative"
             style={{
-              color: "#fff",
+              color: "#fcd34d",
               fontFamily: "var(--ss-font-display)",
               fontSize: "24px",
               letterSpacing: "0.15em",
               lineHeight: 1.1,
-              textShadow: "0 0 10px rgba(0, 242, 255, 0.8), 0 0 20px rgba(0, 150, 255, 0.6), 0 0 30px rgba(0, 50, 255, 0.4)",
+              textShadow: "0 0 10px rgba(212, 175, 63, 0.8), 0 0 20px rgba(212, 175, 63, 0.6), 0 0 30px rgba(139, 0, 0, 0.4)",
               textTransform: "uppercase"
             }}
           >
             SummonScroll
           </div>
-          <div className="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/5 shadow-inner">
-            <div className="w-12 h-12 rounded-xl grid place-items-center font-black text-lg bg-gradient-to-br from-cyan-400 to-blue-600 text-white shadow-[0_0_15px_rgba(0,240,255,0.4)] border border-cyan-300/50">
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-[#d4af3f]/20 shadow-inner">
+            <div className="w-12 h-12 rounded-full grid place-items-center font-black text-lg bg-gradient-to-br from-yellow-500 to-amber-700 text-white shadow-[0_0_15px_rgba(212,175,63,0.4)] border border-yellow-300/50">
               {displayName.slice(0, 1).toUpperCase()}
             </div>
             <div>
@@ -165,8 +165,8 @@ export function GameSidebar({
 
       {/* Mobile Bottom Nav */}
       <nav
-        className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t backdrop-blur-md"
-        style={{ background: "rgba(8,8,13,0.95)", borderColor: "var(--ss-border)" }}
+        className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t-2 backdrop-blur-md"
+        style={{ background: "url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(to top, rgba(10,5,18,0.98), rgba(26,11,46,0.95))", borderColor: "rgba(212,175,63,0.4)", boxShadow: "0 -4px 20px rgba(0,0,0,0.8), inset 0 2px 10px rgba(212,175,63,0.15)" }}
       >
         {NAV_DAILY.map((item) => {
           const active = path === item.to;
@@ -222,23 +222,23 @@ function NavLink({
       to={item.to}
       className={`relative flex items-center gap-3 px-4 py-3 mb-1 rounded-xl transition-all duration-300 group overflow-hidden ${
         active 
-          ? "bg-cyan-950/40 border border-cyan-500/50 shadow-[0_0_15px_rgba(0,240,255,0.2)]" 
-          : "border border-transparent hover:bg-white/5 hover:border-white/10"
+          ? "bg-[#3a205a]/60 border border-[#d4af3f]/50 shadow-[0_0_15px_rgba(212,175,63,0.3)]" 
+          : "border border-transparent hover:bg-white/5 hover:border-[#d4af3f]/20"
       }`}
       aria-current={active ? "page" : undefined}
     >
       {/* Active Indicator Glow */}
       {active && (
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-400 shadow-[0_0_10px_#00f0ff]" />
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#d4af3f] shadow-[0_0_10px_#d4af3f]" />
       )}
       
       {/* Hover Light Sweep */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4af3f]/10 to-transparent -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700" />
 
-      <div className={`relative z-10 ${active ? "text-cyan-400 drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" : "text-slate-400 group-hover:text-slate-200"}`}>
+      <div className={`relative z-10 ${active ? "text-[#d4af3f] drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]" : "text-[#b09e80] group-hover:text-[#d4af3f]"}`}>
         <Icon name={item.icon as any} size={isPrimary ? 22 : 18} />
       </div>
-      <span className={`relative z-10 uppercase tracking-widest font-bold text-sm ${active ? "text-white" : "text-slate-400 group-hover:text-slate-200"}`}>
+      <span className={`relative z-10 uppercase tracking-widest font-bold text-sm ${active ? "text-[#fcd34d]" : "text-[#b09e80] group-hover:text-[#d4af3f]"}`}>
         {item.label}
       </span>
     </Link>

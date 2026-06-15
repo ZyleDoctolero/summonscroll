@@ -514,18 +514,19 @@ body::after {
 
 /* ─── Cards ─── */
 .ss-card {
-  background: linear-gradient(145deg, rgba(16, 20, 26, 0.4), rgba(10, 10, 14, 0.6));
-  border: 1px solid rgba(0, 242, 255, 0.15);
-  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(26, 11, 46, 0.6), rgba(10, 5, 18, 0.8));
+  border: 2px solid rgba(212, 175, 63, 0.3);
+  border-radius: 12px;
   padding: var(--ss-space-4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 0 20px rgba(0, 242, 255, 0.05);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(212, 175, 63, 0.15), inset 0 0 20px rgba(212, 175, 63, 0.1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 .ss-card:hover {
-  border-color: rgba(0, 242, 255, 0.5);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 255, 0.2), inset 0 0 30px rgba(0, 242, 255, 0.1);
+  border-color: rgba(212, 175, 63, 0.7);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 63, 0.3), inset 0 0 30px rgba(212, 175, 63, 0.2);
   transform: translateY(-4px);
 }
 
@@ -748,34 +749,35 @@ body::after {
   box-shadow: 0 -2px 8px rgba(255, 213, 79, 0.5);
 }
 
-/* Sleek Holographic System Button */
+/* Ancient Runic Button */
 .ss-btn-d-primary {
-  background: rgba(0, 229, 255, 0.15);
-  color: var(--cyan);
-  border: 1px solid var(--cyan);
-  border-radius: 6px;
-  font-family: 'VT323', monospace;
-  font-size: 18px;
-  font-weight: 400;
+  background: rgba(212, 175, 63, 0.15);
+  color: #fcd34d;
+  border: 2px solid rgba(212, 175, 63, 0.6);
+  border-radius: 8px;
+  font-family: var(--ss-font-display);
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3), inset 0 0 15px rgba(0, 229, 255, 0.2);
-  text-shadow: 0 0 8px var(--cyan);
+  box-shadow: 0 0 15px rgba(212, 175, 63, 0.3), inset 0 0 15px rgba(212, 175, 63, 0.2);
+  text-shadow: 0 0 8px rgba(212, 175, 63, 0.8);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 .ss-btn-d-primary::before {
   content: "";
   position: absolute;
   top: 0; left: -100%; width: 50%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 63, 0.5), transparent);
   transform: skewX(-20deg);
   transition: 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .ss-btn-d-primary:hover {
-  background: rgba(0, 229, 255, 0.3);
-  box-shadow: 0 0 25px rgba(0, 229, 255, 0.6), inset 0 0 20px rgba(0, 229, 255, 0.4);
+  background: rgba(212, 175, 63, 0.3);
+  box-shadow: 0 0 25px rgba(212, 175, 63, 0.6), inset 0 0 20px rgba(212, 175, 63, 0.4);
   transform: translateY(-2px) scale(1.02);
 }
 .ss-btn-d-primary:hover::before {

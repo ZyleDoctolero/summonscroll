@@ -110,9 +110,9 @@ export function TaskFormDialog({
                 style={{
                   background:
                     v.type === t
-                      ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
+                      ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
                       : "rgba(255,255,255,0.05)",
-                  color: v.type === t ? "var(--bg-deep)" : "var(--ink-secondary)",
+                  color: v.type === t ? "#1a0b2e" : "var(--ink-secondary)",
                 }}
               >
                 {t}
@@ -245,9 +245,9 @@ export function TaskFormDialog({
                     className="flex-1 py-2 text-xs font-bold rounded"
                     style={{
                       background: on
-                        ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
+                        ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
                         : "rgba(255,255,255,0.05)",
-                      color: on ? "var(--bg-deep)" : "var(--ink-secondary)",
+                      color: on ? "#1a0b2e" : "var(--ink-secondary)",
                     }}
                   >
                     {d}
@@ -271,7 +271,7 @@ export function TaskFormDialog({
             type="submit"
             disabled={saving}
             className="flex-1 py-2 rounded text-sm uppercase tracking-widest font-bold disabled:opacity-50"
-            style={{ background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))", color: "var(--bg-deep)" }}
+            style={{ background: "linear-gradient(135deg,#d4af3f,#fcd34d)", color: "#1a0b2e" }}
           >
             {saving ? "Saving" : initial ? "Save" : "Create"}
           </button>

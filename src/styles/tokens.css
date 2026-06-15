@@ -15,15 +15,15 @@
   --realm-myth: var(--realm-myth-accent, #ffd95c);
   --realm-iron: var(--realm-iron-accent, #b8973c);
   
-  /* Manhwa System Colors */
-  --manhwa-system-blue: #00f0ff;
-  --manhwa-system-dark: #0a0f1e;
-  --manhwa-penalty-red: #ff003c;
-  --manhwa-legendary-gold: #ffd700;
+  /* Ancient Fantasy System Colors */
+  --manhwa-system-blue: #4a90e2; /* Mystic Blue */
+  --manhwa-system-dark: #1a0b2e; /* Void Purple */
+  --manhwa-penalty-red: #8b0000; /* Blood Red */
+  --manhwa-legendary-gold: #d4af3f; /* Ancient Gold */
   
-  /* Holographic Shadows */
-  --glow-cyan: 0 0 15px rgba(0, 240, 255, 0.5), inset 0 0 25px rgba(0, 240, 255, 0.2);
-  --glow-red: 0 0 20px rgba(255, 0, 60, 0.7), inset 0 0 30px rgba(255, 0, 60, 0.3);
+  /* Magical Shadows */
+  --glow-cyan: 0 0 15px rgba(74, 144, 226, 0.5), inset 0 0 25px rgba(74, 144, 226, 0.2);
+  --glow-red: 0 0 20px rgba(139, 0, 0, 0.7), inset 0 0 30px rgba(139, 0, 0, 0.3);
   
   /* Animations */
   --glitch-speed: 2.5s;
@@ -42,21 +42,22 @@
   gap: var(--space-2);
 }
 
-/* The System Window Panel */
+/* The Ancient Panel */
 .system-panel {
-  background: rgba(8, 12, 24, 0.85);
-  border: 1px solid rgba(0, 240, 255, 0.4);
-  box-shadow: var(--glow-cyan);
+  background: rgba(26, 11, 46, 0.85);
+  border: 2px solid rgba(212, 175, 63, 0.4);
+  box-shadow: 0 0 15px rgba(212, 175, 63, 0.2), inset 0 0 25px rgba(212, 175, 63, 0.1);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-radius: 8px;
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 .system-panel:hover {
-  border-color: rgba(0, 240, 255, 0.8);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6), inset 0 0 30px rgba(0, 240, 255, 0.3);
+  border-color: rgba(212, 175, 63, 0.8);
+  box-shadow: 0 0 20px rgba(212, 175, 63, 0.5), inset 0 0 30px rgba(212, 175, 63, 0.3);
   transform: translateY(-2px);
 }
 

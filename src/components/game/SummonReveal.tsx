@@ -111,7 +111,7 @@ export function SummonReveal({
           exit={rm ? { opacity: 0 } : { opacity: 0, scale: 1.15, filter: "blur(12px)", y: -20 }}
           transition={{ type: "spring", stiffness: 250, damping: 20, mass: 1.2 }}
           className={`ss-modal text-center max-w-xs relative z-10 aura-${r.toLowerCase()}`}
-          style={{ border: `2px solid ${RARITY_COLOR[r]}`, boxShadow: RARITY_GLOW[r] }}
+          style={{ border: `3px solid ${RARITY_COLOR[r]}`, borderRadius: '16px', boxShadow: RARITY_GLOW[r], backgroundImage: "url('https://www.transparenttextures.com/patterns/stardust.png')" }}
         >
           <div className="w-40 h-40 mx-auto rounded-lg mb-4 flex items-center justify-center overflow-hidden ss-pane relative">
             <img
@@ -213,7 +213,7 @@ export function SummonResults({
   return (
     <div className="fixed inset-0 z-50 flex flex-col ss-modal-backdrop">
       <div className="flex-1 overflow-y-auto p-6 flex flex-col justify-center">
-        <h2 className="text-3xl font-display text-center mb-8" style={{ color: "var(--gold-bright)" }}>
+        <h2 className="text-3xl font-display text-center mb-8" style={{ color: "#fcd34d", textShadow: "0 2px 10px rgba(212,175,63,0.5)" }}>
           Summon Results
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
@@ -227,7 +227,9 @@ export function SummonResults({
                 transition={{ delay: i * 0.05, duration: dur.normal, ease: ease.out }}
                 className={`ss-card text-center aura-${r.toLowerCase()}`}
                 style={{
-                  border: `1px solid ${RARITY_COLOR[r]}40`,
+                  border: `2px solid ${RARITY_COLOR[r]}60`,
+                  borderRadius: '12px',
+                  backgroundImage: "url('https://www.transparenttextures.com/patterns/stardust.png')",
                   boxShadow: r !== "Common" && r !== "Uncommon" ? `0 0 12px ${RARITY_COLOR[r]}20` : undefined,
                 }}
               >

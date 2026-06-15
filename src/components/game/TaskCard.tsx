@@ -118,14 +118,15 @@ export function TaskCard({
 
   return (
     <article
-      className="ss-card flex gap-3 group relative transition-all"
+      className="ss-card flex gap-3 group relative transition-all overflow-hidden"
       style={{
-        background: `linear-gradient(90deg, ${color}14, var(--bg-deep) 30%)`,
-        borderLeft: `4px solid ${task.is_starred ? "var(--gold-bright)" : color}`,
+        background: `url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(90deg, ${color}30, #1a0b2e 80%)`,
+        borderLeft: `4px solid ${task.is_starred ? "#fcd34d" : color}`,
         borderLeftWidth: task.is_starred ? 6 : 4,
-        borderLeftColor: task.is_starred ? "var(--gold-bright)" : color,
+        borderLeftColor: task.is_starred ? "#fcd34d" : color,
+        borderRadius: "12px",
         opacity: task.completed && task.type !== "habit" ? 0.55 : 1,
-        boxShadow: task.is_starred ? "0 0 18px rgba(255,213,79,0.25)" : undefined,
+        boxShadow: task.is_starred ? "0 0 18px rgba(212,175,63,0.4)" : undefined,
         animation: isTutorial ? "tutorial-pulse 2s ease-in-out infinite" : undefined,
       }}
     >
@@ -135,8 +136,10 @@ export function TaskCard({
         <div
           className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
           style={{
-            background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
-            color: "var(--bg-deep)",
+            background: "linear-gradient(135deg,#d4af3f,#fcd34d)",
+            color: "#1a0b2e",
+            border: "1px solid #fef08a",
+            boxShadow: "0 0 10px rgba(212,175,63,0.5)",
           }}
         >
           <Icon name="star" size={10} color="var(--bg-deep)" className="fill-current" />
@@ -181,11 +184,12 @@ export function TaskCard({
         <button
           disabled={busy}
           onClick={() => handleScore(task.completed ? "uncomplete" : "complete")}
-          className="relative w-11 h-11 rounded-md grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
+          className="relative w-11 h-11 rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
           style={{
-            background: task.completed ? color : "transparent",
-            border: `2px solid ${color}`,
-            color: task.completed ? "var(--bg-deep)" : color,
+            background: task.completed ? color : "rgba(26,11,46,0.6)",
+            border: `3px solid ${color}`,
+            color: task.completed ? "#1a0b2e" : color,
+            boxShadow: `inset 0 0 8px ${color}40`,
           }}
           aria-label="Toggle complete"
         >

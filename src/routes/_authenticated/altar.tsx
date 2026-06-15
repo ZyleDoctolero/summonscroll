@@ -137,8 +137,8 @@ function AltarPage() {
         </div>
 
         {/* Left Side: Banner Selection (Vertical Tabs) */}
-        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-cyan-500/20 bg-black/40 backdrop-blur-md">
-          <h1 className="text-4xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-br from-white to-cyan-400 tracking-widest drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">
+        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[#d4af3f]/30 bg-black/50 backdrop-blur-md">
+          <h1 className="text-4xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-100 to-yellow-600 tracking-widest drop-shadow-[0_0_10px_rgba(212,175,63,0.8)]">
             THE ALTAR
           </h1>
           <div className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
@@ -148,16 +148,16 @@ function AltarPage() {
                 <button
                   key={b.id}
                   onClick={() => setSelectedBannerId(b.id)}
-                  className={`relative flex items-center justify-start px-6 py-4 rounded-xl transition-all duration-300 overflow-hidden group min-w-[200px] ${
+                  className={`relative flex items-center justify-start px-6 py-4 rounded-[16px] border-2 transition-all duration-300 overflow-hidden group min-w-[200px] ${
                     isActive 
-                      ? "bg-cyan-950/60 border border-cyan-400 shadow-[0_0_20px_rgba(0,240,255,0.3)] scale-105" 
-                      : "bg-black/40 border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-950/20"
+                      ? "bg-[#3a205a]/60 border-[#d4af3f] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105" 
+                      : "bg-black/40 border-white/10 hover:border-[#d4af3f]/50 hover:bg-[#3a205a]/20"
                   }`}
                 >
                   {isActive && (
-                    <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-cyan-400 shadow-[0_0_15px_#00f0ff]" />
+                    <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#d4af3f] shadow-[0_0_15px_#d4af3f]" />
                   )}
-                  <span className={`font-black tracking-widest uppercase text-sm ${isActive ? "text-white" : "text-slate-400 group-hover:text-cyan-100"}`}>
+                  <span className={`font-black tracking-widest uppercase text-sm ${isActive ? "text-[#fcd34d]" : "text-slate-400 group-hover:text-yellow-100"}`}>
                     {b.name}
                   </span>
                 </button>
@@ -211,19 +211,18 @@ function AltarPage() {
                   </div>
                 </div>
 
-                {/* Skewed Action Buttons */}
+                {/* Runic Rounded Action Buttons */}
                 <div className="flex gap-4 w-full md:w-auto">
                   
                   {/* Pull x1 */}
                   <button
                     onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
                     disabled={!canPull1 || pullMut.isPending}
-                    className="relative flex-1 md:w-[220px] h-[80px] group disabled:opacity-50 transition-all active:scale-95"
+                    className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[#d4af3f]/60 bg-slate-900"
                   >
-                    {/* Skewed background layer */}
-                    <div className="absolute inset-0 bg-slate-900 border-2 border-slate-700 group-hover:border-slate-500 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]" style={{ clipPath: "polygon(15% 0, 100% 0, 85% 100%, 0% 100%)" }} />
+                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
                     <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
-                      <span className="text-slate-300 text-lg">PULL ×1</span>
+                      <span className="text-slate-300 group-hover:text-yellow-100 text-lg transition-colors">PULL ×1</span>
                       <div className="flex items-center gap-1.5 text-slate-400 text-sm mt-1">
                         <Icon name={icon as any} size={14} color={iconColor} /> {cost1}
                       </div>
@@ -234,17 +233,16 @@ function AltarPage() {
                   <button
                     onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
                     disabled={!canPull10 || pullMut.isPending}
-                    className="relative flex-[1.5] md:w-[320px] h-[80px] group disabled:opacity-50 transition-all active:scale-95"
+                    className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[#d4af3f] bg-[#3a205a] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
                   >
-                    {/* Glowing Skewed background layer */}
-                    <div className="absolute inset-0 bg-cyan-950 border-2 border-cyan-400 group-hover:bg-cyan-900 transition-colors shadow-[0_0_30px_rgba(0,240,255,0.4)]" style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0% 100%)" }} />
+                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
                     
                     {/* Shine sweep */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0% 100%)" }} />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
 
                     <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
-                      <span className="text-white text-2xl drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">★ PULL ×10 ★</span>
-                      <div className="flex items-center gap-2 text-cyan-100 text-base mt-1">
+                      <span className="text-[#fcd34d] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">★ PULL ×10 ★</span>
+                      <div className="flex items-center gap-2 text-yellow-100 text-base mt-1">
                         <Icon name={icon as any} size={16} color={iconColor} /> {cost10}
                       </div>
                     </div>
