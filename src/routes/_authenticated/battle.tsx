@@ -512,12 +512,12 @@ function ModeCard({
   onClick: () => void;
 }) {
   return (
-    <div className="game-panel p-6">
+    <div className="ss-card p-6">
       <div className="mb-3">{icon}</div>
-      <h3 className="text-lg font-bold mb-1" style={{ color: "var(--ink-primary)" }}>
+      <h3 className="text-lg font-bold mb-1" style={{ color: "#fcd34d" }}>
         {title}
       </h3>
-      <p className="text-sm mb-1" style={{ color: "var(--ink-secondary)" }}>
+      <p className="text-sm mb-1" style={{ color: "#b09e80" }}>
         {desc}
       </p>
       {sub && (
@@ -542,7 +542,7 @@ function ModeCard({
       <button
         onClick={onClick}
         disabled={disabled}
-        className="ss-btn ss-btn-primary w-full py-2.5 rounded-md font-bold text-xs uppercase tracking-widest disabled:opacity-30"
+        className="ss-btn ss-btn-d-primary w-full py-2.5 shadow-[0_0_15px_rgba(212,175,63,0.3)] disabled:opacity-30"
       >
         {loading ? "Fighting…" : "Enter →"}
       </button>

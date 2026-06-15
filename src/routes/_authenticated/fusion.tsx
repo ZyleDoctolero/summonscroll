@@ -31,8 +31,8 @@ function FusionPage() {
   return (
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="void" />
-      <div className="p-6 md:p-10 max-w-6xl">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+      <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen">
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "#fcd34d", textShadow: "0 2px 10px rgba(212,175,63,0.5)" }}>
           Fusion Matrix
         </h1>
         <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
