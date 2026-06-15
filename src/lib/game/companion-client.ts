@@ -15,7 +15,12 @@ export const MOOD_META: Record<
   Mood,
   { label: string; color: string; icon: string; effect: string }
 > = {
-  devoted: { label: "Devoted", color: "var(--gold-bright)", icon: "💖", effect: "+5% battle effectiveness" },
+  devoted: {
+    label: "Devoted",
+    color: "var(--gold-bright)",
+    icon: "💖",
+    effect: "+5% battle effectiveness",
+  },
   loyal: { label: "Loyal", color: "var(--success)", icon: "💚", effect: "Steady performance" },
   despondent: {
     label: "Despondent",

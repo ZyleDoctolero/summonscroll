@@ -77,27 +77,30 @@ export function TaskCard({
   const color = VALUE_COLOR_HEX[valueColor(Number(task.value))];
   const [open, setOpen] = useState(false);
   const [floatingTexts, setFloatingTexts] = useState<FloatingTextItem[]>([]);
-  
+
   const categoryIcon = task.category
     ? (CATEGORY_ICONS[task.category.toLowerCase()] ?? "target")
     : "target";
 
-  const handleScore = useCallback((dir: "plus" | "minus" | "complete" | "uncomplete") => {
-    if (dir === "plus" || dir === "complete") {
-      setFloatingTexts(prev => [
-        ...prev,
-        {
-          id: Math.random().toString(36).slice(2),
-          text: `+${Math.max(10, Math.floor(Number(task.value) * 1.5))} XP`,
-          color: "var(--cyan)"
-        }
-      ]);
-    }
-    onScore(dir);
-  }, [task.value, onScore]);
+  const handleScore = useCallback(
+    (dir: "plus" | "minus" | "complete" | "uncomplete") => {
+      if (dir === "plus" || dir === "complete") {
+        setFloatingTexts((prev) => [
+          ...prev,
+          {
+            id: Math.random().toString(36).slice(2),
+            text: `+${Math.max(10, Math.floor(Number(task.value) * 1.5))} XP`,
+            color: "var(--cyan)",
+          },
+        ]);
+      }
+      onScore(dir);
+    },
+    [task.value, onScore],
+  );
 
   const removeFloatingText = useCallback((id: string) => {
-    setFloatingTexts(prev => prev.filter(t => t.id !== id));
+    setFloatingTexts((prev) => prev.filter((t) => t.id !== id));
   }, []);
 
   // Streak health calculation per FR01 2.2
@@ -131,7 +134,7 @@ export function TaskCard({
       }}
     >
       <FloatingTextContainer items={floatingTexts} onComplete={removeFloatingText} />
-      
+
       {task.is_starred && (
         <div
           className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
@@ -226,9 +229,7 @@ export function TaskCard({
               className="w-11 h-11 grid place-items-center rounded hover:bg-white/5"
               style={{ color: "var(--ink-secondary)" }}
               aria-label="More options"
-            >
-              
-            </button>
+            ></button>
             {open && (
               <div
                 className="absolute right-0 top-8 z-10 min-w-[120px] rounded border shadow-xl ss-card"

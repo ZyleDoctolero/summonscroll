@@ -107,7 +107,8 @@ function HubPage() {
     }
   }, [commentaryQ.data]);
 
-  const tasks = (tasksQ.data?.tasks ?? []) as unknown as Task[];
+  const rawTasks = tasksQ.data?.tasks ?? [];
+  const tasks = useMemo(() => rawTasks as unknown as Task[], [rawTasks]);
   const sideQuests = useMemo(() => tasks.filter((t) => t.category === "side_quest"), [tasks]);
   const filtered = useMemo(
     () =>
@@ -188,23 +189,27 @@ function HubPage() {
       }
 
       const ticks =
-        (res as { growthTicks?: Array<{ monster_name: string; realm_name: string | null }> } | undefined)?.growthTicks ?? [];
+        (
+          res as
+            | { growthTicks?: Array<{ monster_name: string; realm_name: string | null }> }
+            | undefined
+        )?.growthTicks ?? [];
       // Bond rows: show first 2 monsters (third+ collapse into a count via reward-style label)
       if (ticks.length > 0) {
         // Show +0.5% bond tick rows
         for (const t of ticks.slice(0, 2)) {
           events.push({ kind: "bond", monsterName: t.monster_name, from: 0, to: 0.5 });
         }
-        
+
         const taskRealmId = (res as any)?.realmPulse ?? null;
         triggerWhisper(
           ticks.map((t) => ({ monsterName: t.monster_name, realmName: t.realm_name })),
-          taskRealmId
+          taskRealmId,
         );
       } else if ((res as any)?.realmPulse) {
         triggerWhisper([], (res as any).realmPulse);
       }
-      
+
       // Trigger Realm Pulse if backend responded with it
       if ((res as any)?.realmPulse) {
         setActiveRealmPulse((res as any).realmPulse);
@@ -367,7 +372,7 @@ function HubPage() {
           />
           <div className="mb-6">
             <SoulResonanceTimer
-              monsterId={profile?.soul_tether_id || 'unlinked'}
+              monsterId={profile?.soul_tether_id || "unlinked"}
               monsterName="Tethered Soul"
               onComplete={() => {
                 confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });

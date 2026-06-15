@@ -3,7 +3,13 @@ import { useQuery } from "@tanstack/react-query";
 import type { Task } from "./TaskCard";
 import type { Difficulty, TaskType } from "@/lib/game/constants";
 import { listRealms } from "@/lib/game/supabase-api";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const DOW = ["S", "M", "T", "W", "T", "F", "S"];
 
@@ -161,7 +167,6 @@ export function TaskFormDialog({
           </Select>
         </Field>
 
-
         <Field label="Tags (comma separated)">
           <input
             className="ss-input"
@@ -205,7 +210,10 @@ export function TaskFormDialog({
         {v.type === "habit" && (
           <Field label="Buttons">
             <div className="flex gap-3">
-              <label className="flex items-center gap-2 text-sm" style={{ color: "var(--ink-primary)" }}>
+              <label
+                className="flex items-center gap-2 text-sm"
+                style={{ color: "var(--ink-primary)" }}
+              >
                 <input
                   type="checkbox"
                   checked={v.positive_enabled}
@@ -213,7 +221,10 @@ export function TaskFormDialog({
                 />
                 Positive (+)
               </label>
-              <label className="flex items-center gap-2 text-sm" style={{ color: "var(--ink-primary)" }}>
+              <label
+                className="flex items-center gap-2 text-sm"
+                style={{ color: "var(--ink-primary)" }}
+              >
                 <input
                   type="checkbox"
                   checked={v.negative_enabled}

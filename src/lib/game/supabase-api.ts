@@ -104,12 +104,12 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
     return { ran: false, died: false, missedDailies: 0, hpLost: 0 };
   }
 
-  const { data, error } = await supabase.functions.invoke('daily-cron');
+  const { data, error } = await supabase.functions.invoke("daily-cron");
   if (error) {
     console.error("Cron Error:", error);
     return { ran: false, died: false, missedDailies: 0, hpLost: 0 };
   }
-  
+
   return data;
 }
 
@@ -172,12 +172,12 @@ export async function scoreTask(
     p_direction: direction,
   });
   if (error) throw error;
-  
+
   // The RPC returns a JSON object matching ScoreTaskResult
   const res = data as any;
   if (!res.success) throw new Error(res.message);
 
-  // Re-run client side effects (awakenings, goals) if needed, 
+  // Re-run client side effects (awakenings, goals) if needed,
   // but strictly keep the math server-side.
   let awakenings: Array<{ monsterName: string; skillName: string; flavor: string }> = [];
   if (res.isPositive) {
@@ -193,7 +193,9 @@ export async function scoreTask(
   if (res.isPositive && res.xp_gained > 0) {
     try {
       const { damageGoalsForTask } = await import("./quests-client");
-      const { data: { user } } = await supabase.auth.getUser();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
       if (user) {
         goalDamage = await damageGoalsForTask(user.id, id, res.xp_gained);
       }
@@ -204,11 +206,11 @@ export async function scoreTask(
 
   return {
     ok: true,
-    reward: { 
-      gold: res.gold_gained, 
-      xp: res.xp_gained, 
-      crystals: res.crystal_gained ? 1 : 0, 
-      hp: -res.hp_lost 
+    reward: {
+      gold: res.gold_gained,
+      xp: res.xp_gained,
+      crystals: res.crystal_gained ? 1 : 0,
+      hp: -res.hp_lost,
     },
     isPositive: direction === "plus" || direction === "complete",
     died: res.died,
@@ -381,15 +383,35 @@ export async function getBattleHistory() {
 export { startArenaBattle, classifyFloor } from "./battle-client";
 export type { FloorType } from "./battle-client";
 
-export async function harvestIsland(): Promise<{ harvested: number, whisperName: string | null }> {
+export async function harvestIsland(): Promise<{ harvested: number; whisperName: string | null }> {
   const { data, error } = await supabase.rpc("harvest_island");
   if (error) throw error;
   return data as any;
 }
 
-export async function startManualBattle(mode: string, floor: number, playerHp: number, enemyHp: number, enemyName: string, enemyAtk: number, enemyDef: number, enemyElement: string, teamPower: number, teamIds: string[]): Promise<{ battleId: string }> {
+export async function startManualBattle(
+  mode: string,
+  floor: number,
+  playerHp: number,
+  enemyHp: number,
+  enemyName: string,
+  enemyAtk: number,
+  enemyDef: number,
+  enemyElement: string,
+  teamPower: number,
+  teamIds: string[],
+): Promise<{ battleId: string }> {
   const { data, error } = await supabase.rpc("start_manual_battle", {
-    p_mode: mode, p_floor: floor, p_player_hp: playerHp, p_enemy_hp: enemyHp, p_enemy_name: enemyName, p_enemy_atk: enemyAtk, p_enemy_def: enemyDef, p_enemy_element: enemyElement, p_team_power: teamPower, p_team_ids: teamIds
+    p_mode: mode,
+    p_floor: floor,
+    p_player_hp: playerHp,
+    p_enemy_hp: enemyHp,
+    p_enemy_name: enemyName,
+    p_enemy_atk: enemyAtk,
+    p_enemy_def: enemyDef,
+    p_enemy_element: enemyElement,
+    p_team_power: teamPower,
+    p_team_ids: teamIds,
   });
   if (error) throw error;
   return data as any;

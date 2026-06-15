@@ -187,14 +187,12 @@ export async function submitEveningReflection(r: EveningReflection): Promise<{
         .update({ quantity: existing.quantity + 1 })
         .eq("id", existing.id);
     } else {
-      await supabase
-        .from("inventory")
-        .insert({
-          user_id: user.id,
-          item_type: "tome_shard",
-          item_name: "Tome Shard",
-          quantity: 1,
-        });
+      await supabase.from("inventory").insert({
+        user_id: user.id,
+        item_type: "tome_shard",
+        item_name: "Tome Shard",
+        quantity: 1,
+      });
     }
   }
 

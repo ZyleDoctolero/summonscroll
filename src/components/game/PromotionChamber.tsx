@@ -18,7 +18,7 @@ type Props = {
   onClose: () => void;
 };
 
-//  PromotionChamber - Emil's polish principles applied 
+//  PromotionChamber - Emil's polish principles applied
 // * Motion budget: nothing exceeds 480ms (trans.weighty).
 // * Focus management: focus traps inside modal; escape closes; restores prior focus.
 // * Animated numbers (Number Flow) for bond + star level - change feels earned.
@@ -118,7 +118,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
   );
 }
 
-//  Body 
+//  Body
 
 type CheckData = Awaited<ReturnType<typeof checkPromotionEligibility>>;
 
@@ -242,7 +242,11 @@ function Body({
               return (
                 <ReqRow key={mat.name} ok={ok}>
                   <span className="flex items-center gap-1.5">
-                    <Icon name="sparkle" size={13} color={ok ? "var(--success)" : "var(--danger)"} />
+                    <Icon
+                      name="sparkle"
+                      size={13}
+                      color={ok ? "var(--success)" : "var(--danger)"}
+                    />
                     <span>{mat.name}</span>
                   </span>
                   <span className="font-mono">
@@ -280,7 +284,7 @@ function Body({
 
           {req.unlocks && (
             <p className="text-xs text-center mb-4 italic" style={{ color: "var(--gold-bright)" }}>
-               Unlocks: {req.unlocks}
+              Unlocks: {req.unlocks}
             </p>
           )}
 
@@ -354,7 +358,7 @@ function Body({
             className="t-h2 text-2xl mb-2"
             style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
           >
-             Promoted
+            Promoted
           </motion.p>
           <p className="text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
             {monsterName} now stands at{" "}
@@ -386,7 +390,7 @@ function Body({
   );
 }
 
-//  Atoms 
+//  Atoms
 
 function ReqRow({ ok, children }: { ok: boolean; children: React.ReactNode }) {
   return (

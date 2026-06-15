@@ -1,7 +1,11 @@
 import { supabase } from "@/integrations/supabase/client";
 import { xpToNextLevel } from "./constants";
 
-export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rush", floor: number, isManual: boolean = false) {
+export async function startArenaBattle(
+  mode: "chaos_tower" | "event" | "boss_rush",
+  floor: number,
+  isManual: boolean = false,
+) {
   const WEAKNESSES: Record<string, string> = {
     Fire: "Water",
     Water: "Nature",
@@ -168,7 +172,7 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
       reward_shards: rewardShards,
     });
 
-    let newCrystals = profile.crystals + rewardCrystals,
+    const newCrystals = profile.crystals + rewardCrystals,
       newSeals = profile.pact_seals + rewardShards;
     let newLevel = profile.level,
       newXp = profile.xp + rewardXp,
@@ -249,12 +253,19 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
 
   if (isManual) {
     const { data, error } = await supabase.rpc("start_manual_battle", {
-      p_mode: mode, p_floor: floor, p_player_hp: teamHp, p_enemy_hp: enemy.hp,
-      p_enemy_name: enemy.name, p_enemy_atk: enemy.atk, p_enemy_def: enemy.def,
-      p_enemy_element: enemy.element, p_team_power: effectiveTeamPower, p_team_ids: team.map(t => t.id)
+      p_mode: mode,
+      p_floor: floor,
+      p_player_hp: teamHp,
+      p_enemy_hp: enemy.hp,
+      p_enemy_name: enemy.name,
+      p_enemy_atk: enemy.atk,
+      p_enemy_def: enemy.def,
+      p_enemy_element: enemy.element,
+      p_team_power: effectiveTeamPower,
+      p_team_ids: team.map((t) => t.id),
     });
     if (error) throw error;
-    
+
     return {
       battleId: (data as any).battleId,
       mode: "manual",
@@ -271,8 +282,8 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
         complete: false,
         won: null,
         goldEarned: 0,
-        specialCooldown: 0
-      }
+        specialCooldown: 0,
+      },
     };
   }
 
@@ -325,7 +336,7 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
     reward_shards: rewardShards,
   });
 
-  let newCrystals = profile.crystals + rewardCrystals,
+  const newCrystals = profile.crystals + rewardCrystals,
     newSeals = profile.pact_seals + rewardShards;
   let newLevel = profile.level,
     newXp = profile.xp + rewardXp,
@@ -343,7 +354,7 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
 
   // ─── Tower milestone drops (Pick Me Up restructure) ─────────────────
   const milestoneDrops: Array<{ type: string; name: string; qty: number }> = [];
-  let badges: { wailingWall?: boolean; apex?: boolean } = {};
+  const badges: { wailingWall?: boolean; apex?: boolean } = {};
 
   if (won && mode === "chaos_tower") {
     // Build a tower_progress snapshot first

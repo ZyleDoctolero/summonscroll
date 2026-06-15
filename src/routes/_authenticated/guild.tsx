@@ -84,8 +84,7 @@ function GuildPage() {
     onError: (e: Error) => toast.error(e.message),
   });
 
-  if (profileQ.isLoading)
-    return <LoadingScreen realmSlug="iron-dominion" />;
+  if (profileQ.isLoading) return <LoadingScreen realmSlug="iron-dominion" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;

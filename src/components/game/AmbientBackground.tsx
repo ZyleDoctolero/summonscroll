@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { reducedMotion } from "@/lib/ui/motion-tokens";
 
-//  Ambient Background 
+//  Ambient Background
 // A fixed, full-viewport, pointer-events-none layer that sits BEHIND all
 // content. It gives the whole app a "living world" feel instead of a flat page:
 //   * slow-drifting glowing motes (the summoning dust)
@@ -24,16 +24,11 @@ export function AmbientBackground() {
         const delay = -Math.random() * duration;
         const drift = (Math.random() - 0.5) * 60;
         // tint: mostly gold, some violet/cyan
-        const tints = [
-          "var(--gold-glow)",
-          "var(--gold-glow)",
-          "var(--violet)",
-          "var(--cyan)",
-        ];
+        const tints = ["var(--gold-glow)", "var(--gold-glow)", "var(--violet)", "var(--cyan)"];
         const color = tints[i % tints.length];
         return { left, size, duration, delay, drift, color, key: i };
       }),
-    []
+    [],
   );
 
   return (

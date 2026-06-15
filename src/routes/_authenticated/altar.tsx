@@ -68,19 +68,19 @@ function AltarPage() {
       <AppShell profile={profile}>
         <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050a14]">
           {/* Holographic Rift Animation */}
-          <motion.div 
+          <motion.div
             initial={{ scale: 0, opacity: 0, rotate: -90 }}
             animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 1], rotate: [0, 180, 360] }}
             transition={{ duration: 2.8, ease: "easeInOut" }}
             className="w-40 h-40 rounded-full border-t-[6px] border-b-[6px] border-cyan-400 border-l-[2px] border-r-[2px] border-l-fuchsia-500 border-r-fuchsia-500 shadow-[0_0_60px_rgba(0,229,255,0.6),inset_0_0_40px_rgba(213,0,249,0.4)]"
           />
           <motion.div
-             initial={{ height: 0, opacity: 0 }}
-             animate={{ height: "100vh", opacity: [0, 0.5, 0] }}
-             transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-             className="absolute w-[2px] bg-cyan-300 shadow-[0_0_20px_#00e5ff]"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "100vh", opacity: [0, 0.5, 0] }}
+            transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
+            className="absolute w-[2px] bg-cyan-300 shadow-[0_0_20px_#00e5ff]"
           />
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0, 1, 1] }}
             transition={{ duration: 3, times: [0, 0.2, 0.4, 0.6, 1] }}
@@ -112,10 +112,7 @@ function AltarPage() {
     }
     return (
       <AppShell profile={profile}>
-        <SummonResults
-          results={pullResults}
-          onFinish={() => setPullResults(null)}
-        />
+        <SummonResults results={pullResults} onFinish={() => setPullResults(null)} />
       </AppShell>
     );
   }
@@ -123,14 +120,13 @@ function AltarPage() {
   return (
     <AppShell profile={profile}>
       <div className="relative w-full h-screen overflow-hidden flex flex-col md:flex-row text-white">
-        
         {/* Full Screen Banner Background (Placeholder) */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.15)_0%,rgba(5,10,20,0.9)_100%)]" />
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-color-dodge" />
           {/* A massive magical summoning circle suggestion in the background */}
-          <motion.div 
-            animate={{ rotate: 360 }} 
+          <motion.div
+            animate={{ rotate: 360 }}
             transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-cyan-500/10 shadow-[inset_0_0_100px_rgba(0,240,255,0.05)] pointer-events-none"
           />
@@ -149,15 +145,17 @@ function AltarPage() {
                   key={b.id}
                   onClick={() => setSelectedBannerId(b.id)}
                   className={`relative flex items-center justify-start px-6 py-4 rounded-[16px] border-2 transition-all duration-300 overflow-hidden group min-w-[200px] ${
-                    isActive 
-                      ? "bg-[#3a205a]/60 border-[#d4af3f] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105" 
+                    isActive
+                      ? "bg-[#3a205a]/60 border-[#d4af3f] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
                       : "bg-black/40 border-white/10 hover:border-[#d4af3f]/50 hover:bg-[#3a205a]/20"
                   }`}
                 >
                   {isActive && (
                     <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#d4af3f] shadow-[0_0_15px_#d4af3f]" />
                   )}
-                  <span className={`font-black tracking-widest uppercase text-sm ${isActive ? "text-[#fcd34d]" : "text-slate-400 group-hover:text-yellow-100"}`}>
+                  <span
+                    className={`font-black tracking-widest uppercase text-sm ${isActive ? "text-[#fcd34d]" : "text-slate-400 group-hover:text-yellow-100"}`}
+                  >
                     {b.name}
                   </span>
                 </button>
@@ -167,93 +165,101 @@ function AltarPage() {
         </div>
 
         {/* Right Side: The Featured Banner & Summoning Buttons */}
-        {selectedBanner && (() => {
-          const isPactSeal = selectedBanner.banner_type === "pact_seal";
-          const cost1 = isPactSeal ? (selectedBanner.pull_cost_seals ?? 1) : selectedBanner.pull_cost_crystals;
-          const cost10 = isPactSeal ? (selectedBanner.pull_cost_seals ?? 1) * 10 : selectedBanner.pull_cost_10_crystals;
-          const balance = isPactSeal ? profile.pact_seals : profile.crystals;
-          const icon = isPactSeal ? "seal" : "crystal";
-          const iconColor = isPactSeal ? "#d946ef" : "#00f0ff"; // fuchsia or cyan
-          const canPull1 = balance >= cost1;
-          const canPull10 = balance >= cost10;
+        {selectedBanner &&
+          (() => {
+            const isPactSeal = selectedBanner.banner_type === "pact_seal";
+            const cost1 = isPactSeal
+              ? (selectedBanner.pull_cost_seals ?? 1)
+              : selectedBanner.pull_cost_crystals;
+            const cost10 = isPactSeal
+              ? (selectedBanner.pull_cost_seals ?? 1) * 10
+              : selectedBanner.pull_cost_10_crystals;
+            const balance = isPactSeal ? profile.pact_seals : profile.crystals;
+            const icon = isPactSeal ? "seal" : "crystal";
+            const iconColor = isPactSeal ? "#d946ef" : "#00f0ff"; // fuchsia or cyan
+            const canPull1 = balance >= cost1;
+            const canPull10 = balance >= cost10;
 
-          return (
-            <div className="relative flex-1 flex flex-col justify-end p-8 md:p-16 z-10">
-              
-              {/* Featured Character / Title Floating in the void */}
-              <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-8 pointer-events-none">
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  key={selectedBanner.id}
-                >
-                  <div className="text-[8rem] leading-none opacity-5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 font-black text-white mix-blend-overlay blur-sm">
-                    {selectedBanner.realms?.icon ?? "✦"}
-                  </div>
-                  <h2 className="text-5xl md:text-7xl font-black italic tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-                    {selectedBanner.name}
-                  </h2>
-                  <p className="text-xl md:text-2xl mt-4 text-cyan-400 tracking-[0.2em] font-mono">
-                    {selectedBanner.realms?.name ?? "ALL REALMS ALLOWED"}
-                  </p>
-                </motion.div>
-              </div>
-
-              {/* The Tactile Gacha Control Panel at the bottom */}
-              <div className="relative w-full max-w-4xl mx-auto flex flex-col items-end gap-6 mt-auto">
-                
-                {/* Currency Display */}
-                <div className="bg-black/60 backdrop-blur-md border border-white/10 px-6 py-3 rounded-xl flex items-center gap-3">
-                  <span className="text-xs text-slate-400 uppercase tracking-widest font-bold">Resonance Balance</span>
-                  <div className={`flex items-center gap-2 text-xl font-black ${canPull1 ? 'text-white' : 'text-red-500'}`}>
-                    <Icon name={icon as any} size={20} color={iconColor} />
-                    {balance.toLocaleString()}
-                  </div>
+            return (
+              <div className="relative flex-1 flex flex-col justify-end p-8 md:p-16 z-10">
+                {/* Featured Character / Title Floating in the void */}
+                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center w-full px-8 pointer-events-none">
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    key={selectedBanner.id}
+                  >
+                    <div className="text-[8rem] leading-none opacity-5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 font-black text-white mix-blend-overlay blur-sm">
+                      {selectedBanner.realms?.icon ?? "✦"}
+                    </div>
+                    <h2 className="text-5xl md:text-7xl font-black italic tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                      {selectedBanner.name}
+                    </h2>
+                    <p className="text-xl md:text-2xl mt-4 text-cyan-400 tracking-[0.2em] font-mono">
+                      {selectedBanner.realms?.name ?? "ALL REALMS ALLOWED"}
+                    </p>
+                  </motion.div>
                 </div>
 
-                {/* Runic Rounded Action Buttons */}
-                <div className="flex gap-4 w-full md:w-auto">
-                  
-                  {/* Pull x1 */}
-                  <button
-                    onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
-                    disabled={!canPull1 || pullMut.isPending}
-                    className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[#d4af3f]/60 bg-slate-900"
-                  >
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
-                    <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
-                      <span className="text-slate-300 group-hover:text-yellow-100 text-lg transition-colors">PULL ×1</span>
-                      <div className="flex items-center gap-1.5 text-slate-400 text-sm mt-1">
-                        <Icon name={icon as any} size={14} color={iconColor} /> {cost1}
-                      </div>
+                {/* The Tactile Gacha Control Panel at the bottom */}
+                <div className="relative w-full max-w-4xl mx-auto flex flex-col items-end gap-6 mt-auto">
+                  {/* Currency Display */}
+                  <div className="bg-black/60 backdrop-blur-md border border-white/10 px-6 py-3 rounded-xl flex items-center gap-3">
+                    <span className="text-xs text-slate-400 uppercase tracking-widest font-bold">
+                      Resonance Balance
+                    </span>
+                    <div
+                      className={`flex items-center gap-2 text-xl font-black ${canPull1 ? "text-white" : "text-red-500"}`}
+                    >
+                      <Icon name={icon as any} size={20} color={iconColor} />
+                      {balance.toLocaleString()}
                     </div>
-                  </button>
+                  </div>
 
-                  {/* Pull x10 - Premium Button */}
-                  <button
-                    onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
-                    disabled={!canPull10 || pullMut.isPending}
-                    className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[#d4af3f] bg-[#3a205a] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
-                  >
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
-                    
-                    {/* Shine sweep */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
-
-                    <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
-                      <span className="text-[#fcd34d] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">★ PULL ×10 ★</span>
-                      <div className="flex items-center gap-2 text-yellow-100 text-base mt-1">
-                        <Icon name={icon as any} size={16} color={iconColor} /> {cost10}
+                  {/* Runic Rounded Action Buttons */}
+                  <div className="flex gap-4 w-full md:w-auto">
+                    {/* Pull x1 */}
+                    <button
+                      onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
+                      disabled={!canPull1 || pullMut.isPending}
+                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[#d4af3f]/60 bg-slate-900"
+                    >
+                      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
+                      <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
+                        <span className="text-slate-300 group-hover:text-yellow-100 text-lg transition-colors">
+                          PULL ×1
+                        </span>
+                        <div className="flex items-center gap-1.5 text-slate-400 text-sm mt-1">
+                          <Icon name={icon as any} size={14} color={iconColor} /> {cost1}
+                        </div>
                       </div>
-                    </div>
-                  </button>
+                    </button>
 
+                    {/* Pull x10 - Premium Button */}
+                    <button
+                      onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
+                      disabled={!canPull10 || pullMut.isPending}
+                      className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[#d4af3f] bg-[#3a205a] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
+                    >
+                      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
+
+                      {/* Shine sweep */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
+
+                      <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
+                        <span className="text-[#fcd34d] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">
+                          ★ PULL ×10 ★
+                        </span>
+                        <div className="flex items-center gap-2 text-yellow-100 text-base mt-1">
+                          <Icon name={icon as any} size={16} color={iconColor} /> {cost10}
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
-
-            </div>
-          );
-        })()}
+            );
+          })()}
       </div>
     </AppShell>
   );

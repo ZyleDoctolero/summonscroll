@@ -5,7 +5,7 @@ import { trans, stagger, reducedMotion } from "@/lib/ui/motion-tokens";
 import { sounds } from "@/lib/ui/sounds";
 import { Icon } from "@/components/ui/Icon";
 
-//  Types 
+//  Types
 // The CascadeCard receives the *full* result envelope from a system action
 // (scoreTask, runExpedition, runTrial) and surfaces the chain of consequences
 // in a single rhythmic reveal. The reason: every action in this game touches
@@ -22,7 +22,7 @@ export type CascadeEvent =
   | { kind: "tomeMint" }
   | { kind: "died" };
 
-//  Public hook 
+//  Public hook
 // Imperative API: call `show(events)` from anywhere. The card stacks (if a
 // new envelope arrives before the previous one dismissed, the previous one
 // fades and the new one takes over - no overlap).
@@ -34,7 +34,7 @@ export function showCascade(events: CascadeEvent[]) {
   if (publish) publish(events);
 }
 
-//  Provider 
+//  Provider
 // Mount once near the app root. Lives above the content so it doesn't
 // re-render with route changes.
 
@@ -89,7 +89,7 @@ export function CascadeProvider() {
   );
 }
 
-//  Visual body 
+//  Visual body
 
 function CascadeBody({ events }: { events: CascadeEvent[] }) {
   const delays = stagger(events.length, 0.05, 0.04);
@@ -126,7 +126,7 @@ function CascadeBody({ events }: { events: CascadeEvent[] }) {
   );
 }
 
-//  Event renderer (one row per consequence) 
+//  Event renderer (one row per consequence)
 
 function EventRow({ event }: { event: CascadeEvent }) {
   switch (event.kind) {
@@ -134,23 +134,36 @@ function EventRow({ event }: { event: CascadeEvent }) {
       return (
         <div className="flex items-center gap-3 text-sm">
           {event.gold && event.gold > 0 ? (
-            <span className="inline-flex items-center gap-1" style={{ color: "var(--gold-bright)" }}>
-              <Icon name="gold" size={14} color="var(--gold-bright)" /> <NumberFlow value={event.gold} prefix="+" />
+            <span
+              className="inline-flex items-center gap-1"
+              style={{ color: "var(--gold-bright)" }}
+            >
+              <Icon name="gold" size={14} color="var(--gold-bright)" />{" "}
+              <NumberFlow value={event.gold} prefix="+" />
             </span>
           ) : null}
           {event.xp && event.xp > 0 ? (
-            <span className="inline-flex items-center gap-1" style={{ color: "var(--ink-secondary)" }}>
-              <Icon name="xp" size={14} color="var(--ink-secondary)" /> <NumberFlow value={event.xp} prefix="+" /> XP
+            <span
+              className="inline-flex items-center gap-1"
+              style={{ color: "var(--ink-secondary)" }}
+            >
+              <Icon name="xp" size={14} color="var(--ink-secondary)" />{" "}
+              <NumberFlow value={event.xp} prefix="+" /> XP
             </span>
           ) : null}
           {event.crystals && event.crystals > 0 ? (
             <span className="inline-flex items-center gap-1" style={{ color: "var(--cyan)" }}>
-              <Icon name="crystal" size={14} color="var(--cyan)" /> <NumberFlow value={event.crystals} prefix="+" />
+              <Icon name="crystal" size={14} color="var(--cyan)" />{" "}
+              <NumberFlow value={event.crystals} prefix="+" />
             </span>
           ) : null}
           {event.hp && event.hp !== 0 ? (
-            <span className="inline-flex items-center gap-1" style={{ color: event.hp < 0 ? "var(--danger)" : "var(--success)" }}>
-              <Icon name="hp" size={14} color={event.hp < 0 ? "var(--danger)" : "var(--success)"} /> <NumberFlow value={event.hp} prefix={event.hp > 0 ? "+" : ""} />
+            <span
+              className="inline-flex items-center gap-1"
+              style={{ color: event.hp < 0 ? "var(--danger)" : "var(--success)" }}
+            >
+              <Icon name="hp" size={14} color={event.hp < 0 ? "var(--danger)" : "var(--success)"} />{" "}
+              <NumberFlow value={event.hp} prefix={event.hp > 0 ? "+" : ""} />
             </span>
           ) : null}
         </div>
@@ -240,8 +253,12 @@ function EventRow({ event }: { event: CascadeEvent }) {
           className="text-sm rounded-md p-2"
           style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.2)" }}
         >
-          <span className="inline-flex items-center gap-1" style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
-            <Icon name="xp" size={14} color="var(--gold-bright)" /> Level <NumberFlow value={event.level} />
+          <span
+            className="inline-flex items-center gap-1"
+            style={{ color: "var(--gold-bright)", fontWeight: 700 }}
+          >
+            <Icon name="xp" size={14} color="var(--gold-bright)" /> Level{" "}
+            <NumberFlow value={event.level} />
           </span>
           <span style={{ color: "var(--ink-secondary)" }} className="ml-2 text-xs">
             HP restored
@@ -255,7 +272,10 @@ function EventRow({ event }: { event: CascadeEvent }) {
           className="text-sm rounded-md p-2"
           style={{ background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.3)" }}
         >
-          <span className="inline-flex items-center gap-1" style={{ color: "var(--gold-bright)", fontWeight: 700 }}>
+          <span
+            className="inline-flex items-center gap-1"
+            style={{ color: "var(--gold-bright)", fontWeight: 700 }}
+          >
             <Icon name="tome" size={14} color="var(--gold-bright)" /> Tome of Reverse Heaven minted
           </span>
         </div>
@@ -267,7 +287,10 @@ function EventRow({ event }: { event: CascadeEvent }) {
           className="text-sm rounded-md p-2"
           style={{ background: "rgba(224,82,82,0.1)", border: "1px solid rgba(224,82,82,0.3)" }}
         >
-          <span className="inline-flex items-center gap-1" style={{ color: "var(--danger)", fontWeight: 700 }}>
+          <span
+            className="inline-flex items-center gap-1"
+            style={{ color: "var(--danger)", fontWeight: 700 }}
+          >
             <Icon name="death" size={14} color="var(--danger)" /> You fell - Gold lost, level -1
           </span>
         </div>

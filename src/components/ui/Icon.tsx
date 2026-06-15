@@ -37,7 +37,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-//  Icon Name Map 
+//  Icon Name Map
 // Maps semantic game icon names to Lucide components.
 // Proposal D: clean geometric line set, tinted per accent color.
 
@@ -100,7 +100,7 @@ interface IconProps {
   strokeWidth?: number;
 }
 
-//  Icon Component 
+//  Icon Component
 // Renders a Lucide icon by semantic name with Proposal D tinting support.
 // Apply .lucide-glow class for hero moment glow effects.
 

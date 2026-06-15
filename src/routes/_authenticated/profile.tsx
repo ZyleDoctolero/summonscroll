@@ -120,8 +120,7 @@ function ProfilePage() {
     },
   });
 
-  if (profileQ.isLoading)
-    return <LoadingScreen realmSlug="ancient-vaults" />;
+  if (profileQ.isLoading) return <LoadingScreen realmSlug="ancient-vaults" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -719,14 +718,33 @@ function VoidFrontierSeal({ streak }: { streak: number }) {
   if (streak >= 30) message = "You bear the Void Frontier Seal.";
 
   return (
-    <div className="ss-card mt-4" style={{ borderColor: streak >= 30 ? "var(--violet)" : undefined, boxShadow: streak >= 30 ? "0 0 16px rgba(163, 116, 255, 0.2)" : undefined }}>
-      <h3 className="font-bold text-sm mb-1 flex justify-between" style={{ color: "var(--violet)" }}>
+    <div
+      className="ss-card mt-4"
+      style={{
+        borderColor: streak >= 30 ? "var(--violet)" : undefined,
+        boxShadow: streak >= 30 ? "0 0 16px rgba(163, 116, 255, 0.2)" : undefined,
+      }}
+    >
+      <h3
+        className="font-bold text-sm mb-1 flex justify-between"
+        style={{ color: "var(--violet)" }}
+      >
         <span>Void Frontier Seal</span>
-        <span className="t-mono">{streak}/{goal} Days</span>
+        <span className="t-mono">
+          {streak}/{goal} Days
+        </span>
       </h3>
-      <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>{message}</p>
-      <div className="h-2 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.06)" }}>
-        <div className="h-full rounded-full" style={{ width: `${pct}%`, background: "var(--violet)" }} />
+      <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
+        {message}
+      </p>
+      <div
+        className="h-2 rounded-full overflow-hidden"
+        style={{ background: "rgba(255,255,255,0.06)" }}
+      >
+        <div
+          className="h-full rounded-full"
+          style={{ width: `${pct}%`, background: "var(--violet)" }}
+        />
       </div>
     </div>
   );

@@ -10,12 +10,9 @@ const META_VOICE_LINES = [
 ];
 
 export function useWhisperFeed() {
-  const triggerWhisper = useCallback(async (
-    growthTicks: any[],
-    taskRealmId: number | null
-  ) => {
+  const triggerWhisper = useCallback(async (growthTicks: any[], taskRealmId: number | null) => {
     // 30% chance minimum on all positive completions
-    if (Math.random() > 0.30) return;
+    if (Math.random() > 0.3) return;
 
     let line: string;
     let monsterName: string = "The Page";
@@ -28,12 +25,15 @@ export function useWhisperFeed() {
     } else if (taskRealmId) {
       // Fetch from DB lore_lines
       const { data } = await supabase
-        .from('realms')
-        .select('lore_lines')
-        .eq('id', taskRealmId)
+        .from("realms")
+        .select("lore_lines")
+        .eq("id", taskRealmId)
         .single();
       const lines = data?.lore_lines ?? [];
-      line = lines.length > 0 ? lines[Math.floor(Math.random() * lines.length)] : META_VOICE_LINES[Math.floor(Math.random() * META_VOICE_LINES.length)];
+      line =
+        lines.length > 0
+          ? lines[Math.floor(Math.random() * lines.length)]
+          : META_VOICE_LINES[Math.floor(Math.random() * META_VOICE_LINES.length)];
     } else {
       // Metacosmology fallback - the Page itself speaks
       line = META_VOICE_LINES[Math.floor(Math.random() * META_VOICE_LINES.length)];
@@ -42,7 +42,7 @@ export function useWhisperFeed() {
     whisper({
       monsterName,
       line,
-      tone: "calm"
+      tone: "calm",
     });
   }, []);
 

@@ -37,8 +37,7 @@ function ShopPage() {
     onError: (e: Error) => toast.error(e.message),
   });
 
-  if (profileQ.isLoading)
-    return <LoadingScreen realmSlug="ancient-vaults" />;
+  if (profileQ.isLoading) return <LoadingScreen realmSlug="ancient-vaults" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;

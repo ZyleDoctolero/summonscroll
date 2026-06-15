@@ -4,7 +4,13 @@ import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { getMyProfile, listMyMonsters, updateTeamSlot, listTasks, harvestIsland } from "@/lib/game/supabase-api";
+import {
+  getMyProfile,
+  listMyMonsters,
+  updateTeamSlot,
+  listTasks,
+  harvestIsland,
+} from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 import { supabase } from "@/integrations/supabase/client";
 import { Icon } from "@/components/ui/Icon";
@@ -98,7 +104,8 @@ function IslandPage() {
     onError: (e: Error) => toast.error(e.message),
   });
 
-  const userMonsters = monstersQ.data?.userMonsters ?? [];
+  const rawUserMonsters = monstersQ.data?.userMonsters ?? [];
+  const userMonsters = useMemo(() => rawUserMonsters, [rawUserMonsters]);
   const team = useMemo(
     () =>
       userMonsters
@@ -123,7 +130,7 @@ function IslandPage() {
         ? "rgba(255,183,77,0.08)"
         : "rgba(224,82,82,0.08)";
 
-  let basePower = team.reduce(
+  const basePower = team.reduce(
     (
       sum: number,
       um: {
@@ -177,23 +184,22 @@ function IslandPage() {
     if (!profile || team.length === 0) return 0;
     const lastHarvest = new Date(profile.island_last_harvest_at || Date.now());
     const hours = (Date.now() - lastHarvest.getTime()) / 3600000;
-    
+
     let gold = 0;
     for (const um of team) {
       const r = um.monster.rarity;
       let mult = 1;
-      if (r === 'Uncommon') mult = 1.2;
-      if (r === 'Rare') mult = 1.5;
-      if (r === 'Epic') mult = 2.0;
-      if (r === 'Legendary') mult = 3.0;
-      if (r === 'EX') mult = 5.0;
+      if (r === "Uncommon") mult = 1.2;
+      if (r === "Rare") mult = 1.5;
+      if (r === "Epic") mult = 2.0;
+      if (r === "Legendary") mult = 3.0;
+      if (r === "EX") mult = 5.0;
       gold += (um.bond_percent / 100.0) * mult * 0.5 * hours;
     }
     return Math.floor(gold) + (profile.island_pending_gold || 0);
   }, [profileQ.data?.profile, team]);
 
-  if (profileQ.isLoading)
-    return <LoadingScreen realmSlug="divine-threshold" />;
+  if (profileQ.isLoading) return <LoadingScreen realmSlug="divine-threshold" />;
   if (!profileQ.data) return null;
 
   return (
@@ -259,7 +265,9 @@ function IslandPage() {
                     onClick={() => harvestMut.mutate()}
                     disabled={harvestMut.isPending}
                     className="ss-btn ss-btn-d-primary animate-pulse"
-                    style={{ background: "linear-gradient(135deg, var(--success), var(--realm-wild))" }}
+                    style={{
+                      background: "linear-gradient(135deg, var(--success), var(--realm-wild))",
+                    }}
                   >
                     Harvest {pendingHarvest} Gold
                   </button>
@@ -269,10 +277,7 @@ function IslandPage() {
                 </span>
               </div>
             </div>
-            <IslandZones 
-              monsters={team} 
-              onEmptyClick={(slot) => setAssignSlot(slot)} 
-            />
+            <IslandZones monsters={team} onEmptyClick={(slot) => setAssignSlot(slot)} />
           </div>
 
           {/* Monster roster */}
@@ -300,20 +305,30 @@ function IslandPage() {
                   const isMaxBond = um.bond_percent >= 100;
                   return (
                     <div key={um.id} className="relative w-full">
-                      <MonsterCard 
-                        monster={um} 
-                        compact={true} 
-                        onClick={() => assignSlot !== null ? slotMut.mutate({ userMonsterId: um.id, slot: assignSlot }) : undefined}
+                      <MonsterCard
+                        monster={um}
+                        compact={true}
+                        onClick={() =>
+                          assignSlot !== null
+                            ? slotMut.mutate({ userMonsterId: um.id, slot: assignSlot })
+                            : undefined
+                        }
                       />
                       {assignSlot !== null && (
-                        <div className="absolute inset-0 border-2 rounded-lg pointer-events-none" style={{ borderColor: "var(--gold-bright)" }} />
+                        <div
+                          className="absolute inset-0 border-2 rounded-lg pointer-events-none"
+                          style={{ borderColor: "var(--gold-bright)" }}
+                        />
                       )}
                       {isMaxBond && (
                         <button
                           onClick={() => ascendMut.mutate(um.id)}
                           disabled={ascendMut.isPending}
                           className="w-full mt-2 py-1 rounded text-[10px] font-bold text-white transition-all hover:opacity-80 disabled:opacity-50"
-                          style={{ background: "linear-gradient(135deg,var(--realm-void),var(--realm-chaos))" }}
+                          style={{
+                            background:
+                              "linear-gradient(135deg,var(--realm-void),var(--realm-chaos))",
+                          }}
                         >
                           {ascendMut.isPending ? "..." : `Ascend`}
                         </button>

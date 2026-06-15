@@ -82,7 +82,9 @@ function BattlePage() {
           log: state.log,
           won: state.won,
           rounds: state.turn,
-          rewards: state.complete ? { crystals: 0, xp: 0, shards: 0, gold: state.goldEarned } : prev.rewards
+          rewards: state.complete
+            ? { crystals: 0, xp: 0, shards: 0, gold: state.goldEarned }
+            : prev.rewards,
         };
       });
       // Always show newest logs on new turns
@@ -91,8 +93,7 @@ function BattlePage() {
     onError: (e: Error) => toast.error(e.message),
   });
 
-  if (profileQ.isLoading)
-    return <LoadingScreen realmSlug="chaos-wastes" />;
+  if (profileQ.isLoading) return <LoadingScreen realmSlug="chaos-wastes" />;
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -150,8 +151,8 @@ function BattlePage() {
                 )}
               </motion.p>
               <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
-                vs {result.enemyName} {result.mode !== "manual" && `— `} 
-                {result.mode !== "manual" && <NumberFlow value={result.rounds} />} 
+                vs {result.enemyName} {result.mode !== "manual" && `— `}
+                {result.mode !== "manual" && <NumberFlow value={result.rounds} />}
                 {result.mode !== "manual" && ` rounds`}
               </p>
             </motion.div>
@@ -222,7 +223,9 @@ function BattlePage() {
                   className="ss-btn ss-btn-danger"
                   style={{ opacity: result.initialState.specialCooldown > 0 ? 0.4 : 1 }}
                 >
-                  {result.initialState.specialCooldown > 0 ? `CD: ${result.initialState.specialCooldown}` : "Special"}
+                  {result.initialState.specialCooldown > 0
+                    ? `CD: ${result.initialState.specialCooldown}`
+                    : "Special"}
                 </button>
               </div>
             )}
@@ -237,113 +240,115 @@ function BattlePage() {
               >
                 Next →
               </motion.button>
-            ) : (!result.mode || result.mode === "auto" || result.initialState.complete) && (
-              <>
-                {result.won && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: dur.measured, ease: ease.weighty }}
-                    className="ss-card ss-burst mb-4"
-                  >
-                    <p
-                      className="text-xs uppercase tracking-[0.18em] font-semibold mb-2"
-                      style={{ color: "var(--ink-secondary)" }}
+            ) : (
+              (!result.mode || result.mode === "auto" || result.initialState.complete) && (
+                <>
+                  {result.won && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: dur.measured, ease: ease.weighty }}
+                      className="ss-card ss-burst mb-4"
                     >
-                      Rewards
-                    </p>
-                    <div className="flex flex-wrap gap-3 text-sm font-bold t-mono">
-                      {result.rewards.crystals > 0 && (
-                        <RewardChip>
-                          <span style={{ color: "var(--cyan)" }}>
-                            <Icon name="crystal" size={12} color="var(--cyan)" /> +
-                            <NumberFlow value={result.rewards.crystals} />
-                          </span>
-                        </RewardChip>
-                      )}
-                      {result.rewards.shards > 0 && (
-                        <RewardChip>
-                          <span
-                            style={{ color: "var(--cyan)" }}
-                            className="flex items-center gap-1"
-                          >
-                            <Icon name="crystal" size={12} color="var(--cyan)" /> +
-                            <NumberFlow value={result.rewards.shards} />
-                          </span>
-                        </RewardChip>
-                      )}
-                      {result.rewards?.gold > 0 && (
-                        <RewardChip>
-                          <span
-                            style={{ color: "var(--gold-bright)" }}
-                            className="flex items-center gap-1"
-                          >
-                            +<NumberFlow value={result.rewards.gold} /> Gold
-                          </span>
-                        </RewardChip>
-                      )}
-                      {result.rewards?.xp > 0 && (
-                        <RewardChip>
-                          <span
-                            style={{ color: "var(--ink-secondary)" }}
-                            className="flex items-center gap-1"
-                          >
-                            <Icon name="xp" size={12} color="var(--gold-bright)" /> +
-                            <NumberFlow value={result.rewards.xp} /> XP
-                          </span>
-                        </RewardChip>
-                      )}
-                      {milestoneDrops.map((d, i) => (
-                        <RewardChip key={i} delay={0.06 + i * 0.05}>
-                          <span style={{ color: "var(--gold-bright)" }}>
-                            +<NumberFlow value={d.qty} /> {d.name}
-                          </span>
-                        </RewardChip>
-                      ))}
-                    </div>
-                    {badges.wailingWall && (
-                      <motion.p
-                        initial={{ opacity: 0, scale: 0.92 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.25 }}
-                        className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
-                        style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
+                      <p
+                        className="text-xs uppercase tracking-[0.18em] font-semibold mb-2"
+                        style={{ color: "var(--ink-secondary)" }}
                       >
-                        <Icon name="tower" size={14} color="var(--gold-bright)" />
-                        <span>The Wailing Wall crumbles before you. </span>
-                        <span style={{ color: "var(--ink-primary)" }}>Badge earned.</span>
-                      </motion.p>
-                    )}
-                    {badges.apex && (
-                      <motion.p
-                        initial={{ opacity: 0, scale: 0.92 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.3 }}
-                        className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
-                        style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
-                      >
-                        <Icon
-                          name="crown"
-                          size={18}
-                          color="var(--gold-bright)"
-                          className="lucide-glow"
-                        />
-                        <span>You are the Apex. </span>
-                        <span style={{ color: "var(--ink-primary)" }}>Crown bestowed.</span>
-                      </motion.p>
-                    )}
-                  </motion.div>
-                )}
-                <motion.button
-                  onClick={() => setResult(null)}
-                  whileTap={{ scale: 0.97 }}
-                  whileHover={{ y: -1 }}
-                  transition={trans.springy}
-                  className="w-full py-3 rounded-lg font-bold text-sm uppercase tracking-[0.18em] ss-btn ss-btn-primary"
-                >
-                  Continue
-                </motion.button>
-              </>
+                        Rewards
+                      </p>
+                      <div className="flex flex-wrap gap-3 text-sm font-bold t-mono">
+                        {result.rewards.crystals > 0 && (
+                          <RewardChip>
+                            <span style={{ color: "var(--cyan)" }}>
+                              <Icon name="crystal" size={12} color="var(--cyan)" /> +
+                              <NumberFlow value={result.rewards.crystals} />
+                            </span>
+                          </RewardChip>
+                        )}
+                        {result.rewards.shards > 0 && (
+                          <RewardChip>
+                            <span
+                              style={{ color: "var(--cyan)" }}
+                              className="flex items-center gap-1"
+                            >
+                              <Icon name="crystal" size={12} color="var(--cyan)" /> +
+                              <NumberFlow value={result.rewards.shards} />
+                            </span>
+                          </RewardChip>
+                        )}
+                        {result.rewards?.gold > 0 && (
+                          <RewardChip>
+                            <span
+                              style={{ color: "var(--gold-bright)" }}
+                              className="flex items-center gap-1"
+                            >
+                              +<NumberFlow value={result.rewards.gold} /> Gold
+                            </span>
+                          </RewardChip>
+                        )}
+                        {result.rewards?.xp > 0 && (
+                          <RewardChip>
+                            <span
+                              style={{ color: "var(--ink-secondary)" }}
+                              className="flex items-center gap-1"
+                            >
+                              <Icon name="xp" size={12} color="var(--gold-bright)" /> +
+                              <NumberFlow value={result.rewards.xp} /> XP
+                            </span>
+                          </RewardChip>
+                        )}
+                        {milestoneDrops.map((d, i) => (
+                          <RewardChip key={i} delay={0.06 + i * 0.05}>
+                            <span style={{ color: "var(--gold-bright)" }}>
+                              +<NumberFlow value={d.qty} /> {d.name}
+                            </span>
+                          </RewardChip>
+                        ))}
+                      </div>
+                      {badges.wailingWall && (
+                        <motion.p
+                          initial={{ opacity: 0, scale: 0.92 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.25 }}
+                          className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
+                          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
+                        >
+                          <Icon name="tower" size={14} color="var(--gold-bright)" />
+                          <span>The Wailing Wall crumbles before you. </span>
+                          <span style={{ color: "var(--ink-primary)" }}>Badge earned.</span>
+                        </motion.p>
+                      )}
+                      {badges.apex && (
+                        <motion.p
+                          initial={{ opacity: 0, scale: 0.92 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.3 }}
+                          className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
+                          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
+                        >
+                          <Icon
+                            name="crown"
+                            size={18}
+                            color="var(--gold-bright)"
+                            className="lucide-glow"
+                          />
+                          <span>You are the Apex. </span>
+                          <span style={{ color: "var(--ink-primary)" }}>Crown bestowed.</span>
+                        </motion.p>
+                      )}
+                    </motion.div>
+                  )}
+                  <motion.button
+                    onClick={() => setResult(null)}
+                    whileTap={{ scale: 0.97 }}
+                    whileHover={{ y: -1 }}
+                    transition={trans.springy}
+                    className="w-full py-3 rounded-lg font-bold text-sm uppercase tracking-[0.18em] ss-btn ss-btn-primary"
+                  >
+                    Continue
+                  </motion.button>
+                </>
+              )
             )}
           </motion.div>
         </div>
@@ -377,13 +382,13 @@ function BattlePage() {
         )}
 
         <div className="flex gap-4 mb-6">
-          <button 
+          <button
             onClick={() => setModeSelection("auto")}
             className={`ss-tab-d pb-2 text-sm font-semibold ${modeSelection === "auto" ? "active" : ""}`}
           >
             Auto Mode
           </button>
-          <button 
+          <button
             onClick={() => setModeSelection("manual")}
             className={`ss-tab-d pb-2 text-sm font-semibold ${modeSelection === "manual" ? "active" : ""}`}
           >
@@ -403,7 +408,13 @@ function BattlePage() {
             progress={Math.min(100, highestFloor)}
             disabled={!canBattle || battleMut.isPending}
             loading={battleMut.isPending}
-            onClick={() => battleMut.mutate({ mode: "chaos_tower", floor: nextFloor, isManual: modeSelection === "manual" } as any)}
+            onClick={() =>
+              battleMut.mutate({
+                mode: "chaos_tower",
+                floor: nextFloor,
+                isManual: modeSelection === "manual",
+              } as any)
+            }
           />
           <ModeCard
             title="Boss Rush"

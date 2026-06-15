@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { trans, ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
 import { Icon } from "@/components/ui/Icon";
 
-//  Whisper Feed 
+//  Whisper Feed
 // Bottom-right scroll of recent diegetic monster commentary. Each whisper:
 //   * Fades in from the right at 240ms
 //   * Sits for 12 seconds (8s if the user is active)
@@ -25,7 +25,7 @@ export type Whisper = {
   createdAt: number;
 };
 
-//  Imperative API 
+//  Imperative API
 
 let publish: null | ((w: Omit<Whisper, "id" | "createdAt">) => void) = null;
 
@@ -33,7 +33,7 @@ export function whisper(input: Omit<Whisper, "id" | "createdAt">) {
   if (publish) publish(input);
 }
 
-//  Provider 
+//  Provider
 
 export function WhisperProvider() {
   const [items, setItems] = useState<Whisper[]>([]);
@@ -89,7 +89,9 @@ export function WhisperProvider() {
                 <p className="t-label truncate" style={{ color: "var(--gold-bright)" }}>
                   {w.monsterName}
                 </p>
-                <p className="t-lore mt-0.5">"<Typewriter text={w.line} />"</p>
+                <p className="t-lore mt-0.5">
+                  "<Typewriter text={w.line} />"
+                </p>
               </div>
             </div>
           </motion.div>
@@ -99,7 +101,7 @@ export function WhisperProvider() {
   );
 }
 
-//  Style per tone 
+//  Style per tone
 
 function whisperStyle(tone?: Whisper["tone"]): React.CSSProperties {
   switch (tone) {

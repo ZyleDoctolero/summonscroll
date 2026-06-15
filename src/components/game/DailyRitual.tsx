@@ -16,7 +16,7 @@ import { trans, ease, dur, reducedMotion, stagger } from "@/lib/ui/motion-tokens
 import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
 import type { Task } from "./TaskCard";
 
-//  Morning Ritual 
+//  Morning Ritual
 
 export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () => void }) {
   const qc = useQueryClient();
@@ -58,8 +58,8 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
     >
       <Glyph emoji="🌅" />
       <Sub>
-        Pick today's <strong style={{ color: "var(--gold-bright)" }}>3 Sacred Directives</strong>. They earn
-        1.5x rewards and unlock a Reflection Pull tonight if all three are completed.
+        Pick today's <strong style={{ color: "var(--gold-bright)" }}>3 Sacred Directives</strong>.
+        They earn 1.5x rewards and unlock a Reflection Pull tonight if all three are completed.
       </Sub>
 
       <div
@@ -146,7 +146,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
   );
 }
 
-//  Evening Reflection 
+//  Evening Reflection
 
 export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () => void }) {
   const qc = useQueryClient();
@@ -226,12 +226,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           />
         </Field>
 
-        <Slider
-          label="Mood"
-          emoji={["1", "2", "3", "4", "5"]}
-          value={mood}
-          onChange={setMood}
-        />
+        <Slider label="Mood" emoji={["1", "2", "3", "4", "5"]} value={mood} onChange={setMood} />
         <Slider
           label="Energy"
           emoji={["o", "o", "o", "!", "!"]}
@@ -282,7 +277,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
   );
 }
 
-//  Shared atoms 
+//  Shared atoms
 
 function Glyph({ emoji }: { emoji: string }) {
   return (

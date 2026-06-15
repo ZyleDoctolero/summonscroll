@@ -16,11 +16,11 @@ export function EmptyState({ icon, title, body, cta }: EmptyStateProps) {
       <div className="text-muted-foreground opacity-60">
         <Icon name={icon as any} size={40} />
       </div>
-      <h3 className="font-heading text-lg" style={{ color: 'var(--text-primary)' }}>
+      <h3 className="font-heading text-lg" style={{ color: "var(--text-primary)" }}>
         {title}
       </h3>
       {body && (
-        <p className="font-lore text-sm max-w-xs" style={{ color: 'var(--text-secondary)' }}>
+        <p className="font-lore text-sm max-w-xs" style={{ color: "var(--text-secondary)" }}>
           {body}
         </p>
       )}

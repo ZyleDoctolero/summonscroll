@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Play, Square, AlertTriangle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { Play, Square, AlertTriangle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 interface SoulResonanceTimerProps {
   monsterId: string | null;
@@ -14,10 +14,10 @@ interface SoulResonanceTimerProps {
 
 export function SoulResonanceTimer({
   monsterId,
-  monsterName = 'Unknown Entity',
+  monsterName = "Unknown Entity",
   durationMinutes = 25,
   onComplete,
-  onFail
+  onFail,
 }: SoulResonanceTimerProps) {
   const [isActive, setIsActive] = useState(false);
   const [timeLeft, setTimeLeft] = useState(durationMinutes * 60);
@@ -31,9 +31,9 @@ export function SoulResonanceTimer({
         setIsFailed(true);
         setIsActive(false);
         if (timerRef.current) clearInterval(timerRef.current);
-        
+
         toast.error("RESONANCE SHATTERED: Your focus wavered. The soul connection has broken.");
-        
+
         onFail();
       }
     };
@@ -53,9 +53,11 @@ export function SoulResonanceTimer({
     } else if (isActive && timeLeft === 0) {
       setIsActive(false);
       if (timerRef.current) clearInterval(timerRef.current);
-      
-      toast.success(`RESONANCE COMPLETE: You have perfectly synchronized with ${monsterName}. Buff activated.`);
-      
+
+      toast.success(
+        `RESONANCE COMPLETE: You have perfectly synchronized with ${monsterName}. Buff activated.`,
+      );
+
       onComplete();
     }
 
@@ -82,55 +84,71 @@ export function SoulResonanceTimer({
   const formatTime = (seconds: number) => {
     const m = Math.floor(seconds / 60);
     const s = seconds % 60;
-    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
   };
 
-  const progress = 1 - (timeLeft / (durationMinutes * 60));
+  const progress = 1 - timeLeft / (durationMinutes * 60);
 
   return (
-    <div className={`p-6 rounded-lg system-panel relative overflow-hidden transition-colors ${
-      isFailed ? 'border-red-500 shadow-[0_0_20px_rgba(255,0,60,0.3)]' : 
-      isActive ? 'border-cyan-400 shadow-[0_0_20px_rgba(0,240,255,0.3)]' : 
-      'border-slate-800'
-    }`}>
+    <div
+      className={`p-6 rounded-lg system-panel relative overflow-hidden transition-colors ${
+        isFailed
+          ? "border-red-500 shadow-[0_0_20px_rgba(255,0,60,0.3)]"
+          : isActive
+            ? "border-cyan-400 shadow-[0_0_20px_rgba(0,240,255,0.3)]"
+            : "border-slate-800"
+      }`}
+    >
       {/* Background Progress Bar */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-600 to-cyan-400"
-        initial={{ width: '0%' }}
+        initial={{ width: "0%" }}
         animate={{ width: `${progress * 100}%` }}
-        transition={{ duration: 1, ease: 'linear' }}
+        transition={{ duration: 1, ease: "linear" }}
       />
 
       <div className="flex flex-col items-center justify-center space-y-4">
         <h3 className="text-sm font-mono tracking-widest text-slate-400 uppercase">
           Soul Resonance
         </h3>
-        
-        <div className={`text-5xl font-black font-mono tracking-wider ${
-          isFailed ? 'text-red-500' : 
-          isActive ? 'text-cyan-400 drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]' : 
-          'text-slate-300'
-        }`}>
+
+        <div
+          className={`text-5xl font-black font-mono tracking-wider ${
+            isFailed
+              ? "text-red-500"
+              : isActive
+                ? "text-cyan-400 drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]"
+                : "text-slate-300"
+          }`}
+        >
           {formatTime(timeLeft)}
         </div>
 
         <div className="text-xs font-mono text-slate-500 h-4">
-          {monsterId ? `Tethered: [${monsterName}]` : 'Awaiting Soul Tether...'}
+          {monsterId ? `Tethered: [${monsterName}]` : "Awaiting Soul Tether..."}
         </div>
 
         <Button
           onClick={toggleTimer}
           variant={isActive ? "destructive" : "default"}
           className={`w-full font-mono tracking-widest ${
-            !isActive && !isFailed ? 'bg-cyan-950 text-cyan-400 hover:bg-cyan-900 border border-cyan-800' : ''
+            !isActive && !isFailed
+              ? "bg-cyan-950 text-cyan-400 hover:bg-cyan-900 border border-cyan-800"
+              : ""
           }`}
         >
           {isActive ? (
-            <><Square className="w-4 h-4 mr-2" /> SEVER CONNECTION</>
+            <>
+              <Square className="w-4 h-4 mr-2" /> SEVER CONNECTION
+            </>
           ) : isFailed ? (
-            <><AlertTriangle className="w-4 h-4 mr-2" /> PURGE CORRUPTION (RESET)</>
+            <>
+              <AlertTriangle className="w-4 h-4 mr-2" /> PURGE CORRUPTION (RESET)
+            </>
           ) : (
-            <><Play className="w-4 h-4 mr-2" /> INITIATE RESONANCE</>
+            <>
+              <Play className="w-4 h-4 mr-2" /> INITIATE RESONANCE
+            </>
           )}
         </Button>
       </div>

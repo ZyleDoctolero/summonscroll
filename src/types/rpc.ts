@@ -44,7 +44,7 @@ export interface CronResult {
 
 export type BattleStartResult = {
   battleId: string;
-  mode: 'auto' | 'manual';
+  mode: "auto" | "manual";
   initialState: BattleState;
 };
 

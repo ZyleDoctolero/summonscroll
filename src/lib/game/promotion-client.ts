@@ -18,7 +18,14 @@ export type PromotionCheck = {
   canPromote: boolean;
   reason?: string;
   requirement: PromotionRequirement;
-  have: { stones: number; materials: Record<string, number>; bond: number; level: number; gold: number; dupes: number };
+  have: {
+    stones: number;
+    materials: Record<string, number>;
+    bond: number;
+    level: number;
+    gold: number;
+    dupes: number;
+  };
 };
 
 // ─── Mapping ────────────────────────────────────────────────────────────────
@@ -190,7 +197,11 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
     .eq("monster_id", um.monster_id)
     .neq("id", userMonsterId);
 
-  const { data: profile } = await supabase.from("profiles").select("gold").eq("id", user.id).single();
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("gold")
+    .eq("id", user.id)
+    .single();
   const gold = profile?.gold ?? 0;
   const dupes = dupesCount ?? 0;
 
@@ -200,7 +211,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: req.locked.reason,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+        gold,
+        dupes,
+      },
     };
 
   if (um.bond_percent < req.bondRequired) {
@@ -208,7 +226,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Bond too low (${Math.round(um.bond_percent)}% / ${req.bondRequired}%).`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+        gold,
+        dupes,
+      },
     };
   }
   if (um.level < req.levelRequired) {
@@ -216,7 +241,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Level too low (${um.level} / ${req.levelRequired}).`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+        gold,
+        dupes,
+      },
     };
   }
   if (gold < req.goldRequired) {
@@ -224,7 +256,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Need ${req.goldRequired} Gold — have ${gold}.`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+        gold,
+        dupes,
+      },
     };
   }
   if (dupes < req.dupesRequired) {
@@ -232,7 +271,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Need ${req.dupesRequired} duplicate copies — have ${dupes}.`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+        gold,
+        dupes,
+      },
     };
   }
 
@@ -241,7 +287,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       canPromote: false,
       reason: `Need ${req.stones.qty} ${stoneName} — have ${have[stoneName] ?? 0}.`,
       requirement: req,
-      have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+      have: {
+        stones: have[stoneName] ?? 0,
+        materials: have,
+        bond: um.bond_percent,
+        level: um.level,
+        gold,
+        dupes,
+      },
     };
   }
   for (const mat of req.materials) {
@@ -250,7 +303,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
         canPromote: false,
         reason: `Need ${mat.qty} ${mat.name} — have ${have[mat.name] ?? 0}.`,
         requirement: req,
-        have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+        have: {
+          stones: have[stoneName] ?? 0,
+          materials: have,
+          bond: um.bond_percent,
+          level: um.level,
+          gold,
+          dupes,
+        },
       };
     }
   }
@@ -258,7 +318,14 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
   return {
     canPromote: true,
     requirement: req,
-    have: { stones: have[stoneName] ?? 0, materials: have, bond: um.bond_percent, level: um.level, gold, dupes },
+    have: {
+      stones: have[stoneName] ?? 0,
+      materials: have,
+      bond: um.bond_percent,
+      level: um.level,
+      gold,
+      dupes,
+    },
   };
 }
 
@@ -269,11 +336,11 @@ export async function promoteMonster(
   if (!check.canPromote) throw new Error(check.reason ?? "Cannot promote.");
 
   const { data, error } = await supabase.rpc("ascend_monster", {
-    p_user_monster_id: userMonsterId
+    p_user_monster_id: userMonsterId,
   });
 
   if (error) throw error;
-  
+
   const res = data as any;
   if (!res.success) throw new Error("Ascension failed on server.");
 

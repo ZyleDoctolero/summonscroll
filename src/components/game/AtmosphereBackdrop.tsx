@@ -1,9 +1,9 @@
 export interface AtmosphereBackdropProps {
   realm: string;
-  intensity?: 'subtle' | 'full';
+  intensity?: "subtle" | "full";
 }
 
-export function AtmosphereBackdrop({ realm, intensity = 'subtle' }: AtmosphereBackdropProps) {
+export function AtmosphereBackdrop({ realm, intensity = "subtle" }: AtmosphereBackdropProps) {
   return (
     <>
       {/* Top gradient band - 4px realm color stripe */}
@@ -16,7 +16,7 @@ export function AtmosphereBackdrop({ realm, intensity = 'subtle' }: AtmosphereBa
         className="fixed inset-0 pointer-events-none z-0"
         style={{
           background: `radial-gradient(ellipse at top, var(--realm-${realm}, transparent) 0%, transparent 60%)`,
-          opacity: intensity === 'subtle' ? 0.08 : 0.15,
+          opacity: intensity === "subtle" ? 0.08 : 0.15,
         }}
       />
     </>

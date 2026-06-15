@@ -71,7 +71,7 @@ export async function craft(
   // Find the matching affix text
   let affixData = null;
   if (result.affix) {
-    const found = MASTERWORK_AFFIXES.find(a => a.key === result.affix);
+    const found = MASTERWORK_AFFIXES.find((a) => a.key === result.affix);
     if (found) {
       affixData = found;
     } else {
@@ -80,7 +80,7 @@ export async function craft(
   }
 
   // The RPC should have already inserted into crafts and user_equipment, and decremented resources.
-  
+
   return {
     newEquipmentId: result.id,
     quality: result.quality as CraftQuality,

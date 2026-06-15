@@ -135,19 +135,19 @@ export async function runExpedition(runs: 1 | 5): Promise<{
   for (let i = 0; i < runs; i++) {
     const { data: runData, error } = await supabase.rpc("run_expedition", { p_exp_type: expType });
     if (error) {
-       // Stop running if there's an error (like insufficient stamina)
-       if (i === 0) throw error;
-       break;
+      // Stop running if there's an error (like insufficient stamina)
+      if (i === 0) throw error;
+      break;
     }
     runsCompleted += 1;
     currentStamina = runData.newStamina;
 
     const drops = runData.drops as Drop[];
     for (const d of drops) {
-       totalDrops.push(d);
-       if (d.type === "material" || d.name === def.primaryStone) {
-          eliteCount += 0.5; // Roughly estimate elites based on drops
-       }
+      totalDrops.push(d);
+      if (d.type === "material" || d.name === def.primaryStone) {
+        eliteCount += 0.5; // Roughly estimate elites based on drops
+      }
     }
   }
 

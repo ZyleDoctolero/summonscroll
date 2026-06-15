@@ -87,7 +87,14 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
       />
 
       {/* XP bar */}
-      <MiniBar label="XP" current={profile.xp} max={xpReq} pct={xpPct} color="var(--gold-bright)" gradient />
+      <MiniBar
+        label="XP"
+        current={profile.xp}
+        max={xpReq}
+        pct={xpPct}
+        color="var(--gold-bright)"
+        gradient
+      />
 
       {/* MP bar */}
       <MiniBar

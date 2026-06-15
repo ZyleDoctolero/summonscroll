@@ -76,8 +76,8 @@ function RouteTransition({ children }: { children: ReactNode }) {
       key={pathname}
       initial={rm ? { opacity: 0 } : { opacity: 0, scale: 0.97, y: 15, filter: "blur(4px)" }}
       animate={rm ? { opacity: 1 } : { opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ 
-        duration: 0.4, 
+      transition={{
+        duration: 0.4,
         ease: [0.16, 1, 0.3, 1], // Custom snappy ease-out
       }}
       className="h-full w-full"

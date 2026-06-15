@@ -23,8 +23,7 @@ function FusionPage() {
   const userMonsters = monstersQ.data?.userMonsters ?? [];
   const usedIds = new Set(slots.filter(Boolean));
 
-  if (profileQ.isLoading)
-    return <LoadingScreen realmSlug="void-frontier" />;
+  if (profileQ.isLoading) return <LoadingScreen realmSlug="void-frontier" />;
   if (!profileQ.data) return null;
 
   const filledSlots = slots.filter(Boolean).length;
