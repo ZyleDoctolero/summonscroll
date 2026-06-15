@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 import { Lock, Unlock, Zap } from 'lucide-react';
 
 interface FodderNode {
@@ -30,7 +30,6 @@ export function AkashicRecords({
   onSynthesize,
   isLocked
 }: AkashicRecordsProps) {
-  const { toast } = useToast();
   const [isSynthesizing, setIsSynthesizing] = useState(false);
 
   const canSynthesize = requiredFodder.every(f => f.isAvailable) && !isLocked && targetStar < maxStarLevel;
@@ -42,16 +41,9 @@ export function AkashicRecords({
     try {
       const fodderIds = requiredFodder.map(f => f.id);
       await onSynthesize(fodderIds);
-      toast({
-        title: "SYNTHESIS SUCCESSFUL",
-        description: `${targetName} has ascended to ${targetStar + 1}★!`,
-      });
+      toast.success(`SYNTHESIS SUCCESSFUL: ${targetName} has ascended to ${targetStar + 1}★!`);
     } catch (error: any) {
-      toast({
-        title: "SYNTHESIS FAILED",
-        description: error.message || "The Void rejected your offering.",
-        variant: "destructive"
-      });
+      toast.error(`SYNTHESIS FAILED: ${error.message || "The Void rejected your offering."}`);
     } finally {
       setIsSynthesizing(false);
     }

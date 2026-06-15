@@ -434,7 +434,6 @@ export async function startArenaBattle(mode: "chaos_tower" | "event" | "boss_rus
     rewards: { crystals: rewardCrystals, xp: rewardXp, shards: rewardShards },
     floorType: classifyFloor(floor),
     milestoneDrops,
-    milestoneDrops,
     badges,
   };
 }

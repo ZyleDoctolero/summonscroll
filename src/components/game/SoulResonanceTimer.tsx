@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Square, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 interface SoulResonanceTimerProps {
   monsterId: string | null;
@@ -23,7 +23,6 @@ export function SoulResonanceTimer({
   const [timeLeft, setTimeLeft] = useState(durationMinutes * 60);
   const [isFailed, setIsFailed] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const { toast } = useToast();
 
   useEffect(() => {
     const handleVisibilityChange = () => {
@@ -33,11 +32,7 @@ export function SoulResonanceTimer({
         setIsActive(false);
         if (timerRef.current) clearInterval(timerRef.current);
         
-        toast({
-          title: "RESONANCE SHATTERED",
-          description: "Your focus wavered. The soul connection has broken.",
-          variant: "destructive",
-        });
+        toast.error("RESONANCE SHATTERED: Your focus wavered. The soul connection has broken.");
         
         onFail();
       }
@@ -48,7 +43,7 @@ export function SoulResonanceTimer({
       document.removeEventListener("visibilitychange", handleVisibilityChange);
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isActive, onFail, toast]);
+  }, [isActive, onFail]);
 
   useEffect(() => {
     if (isActive && timeLeft > 0) {
@@ -59,10 +54,7 @@ export function SoulResonanceTimer({
       setIsActive(false);
       if (timerRef.current) clearInterval(timerRef.current);
       
-      toast({
-        title: "RESONANCE COMPLETE",
-        description: `You have perfectly synchronized with ${monsterName}. Buff activated.`,
-      });
+      toast.success(`RESONANCE COMPLETE: You have perfectly synchronized with ${monsterName}. Buff activated.`);
       
       onComplete();
     }
@@ -70,15 +62,11 @@ export function SoulResonanceTimer({
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isActive, timeLeft, monsterName, onComplete, toast]);
+  }, [isActive, timeLeft, monsterName, onComplete]);
 
   const toggleTimer = () => {
     if (!monsterId) {
-      toast({
-        title: "No Soul Selected",
-        description: "You must tether a soul before initiating Resonance.",
-        variant: "destructive",
-      });
+      toast.error("No Soul Selected: You must tether a soul before initiating Resonance.");
       return;
     }
 

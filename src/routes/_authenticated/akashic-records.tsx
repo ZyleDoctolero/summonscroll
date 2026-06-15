@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '@/integrations/supabase/client';
 import { AppShell } from '@/components/game/AppShell';
 import { AkashicRecords } from '@/components/game/AkashicRecords';
 import { LoadingScreen } from '@/components/game/LoadingScreen';

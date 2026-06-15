@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { ShieldAlert, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { supabase } from '@/lib/supabase';
-import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
 
 export const Route = createFileRoute('/_authenticated/penalty-zone')({
   component: PenaltyZone,
@@ -14,7 +14,6 @@ export const Route = createFileRoute('/_authenticated/penalty-zone')({
 function PenaltyZone() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const { toast } = useToast();
   const [isChecked, setIsChecked] = useState(false);
 
   // Fetch the penalty task
@@ -73,21 +72,14 @@ function PenaltyZone() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['profile'] });
-      toast({
-        title: "SYSTEM OVERRIDE",
-        description: "You have survived the Penalty Zone.",
-      });
+      toast.success("SYSTEM OVERRIDE: You have survived the Penalty Zone.");
       navigate({ to: '/' });
     }
   });
 
   const handleEscape = () => {
     if (!isChecked) {
-      toast({
-        title: "ACCESS DENIED",
-        description: "You must complete the survival task first.",
-        variant: "destructive",
-      });
+      toast.error("ACCESS DENIED: You must complete the survival task first.");
       return;
     }
     escapeMutation.mutate();

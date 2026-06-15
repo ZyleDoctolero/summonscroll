@@ -56,7 +56,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
       onOpenChange={(open) => !open && onClose()}
       title="Morning Ritual"
     >
-      <Glyph emoji="<Icon name="morning" size={14} />" />
+      <Glyph emoji="🌅" />
       <Sub>
         Pick today's <strong style={{ color: "var(--gold-bright)" }}>3 Sacred Directives</strong>. They earn
         1.5x rewards and unlock a Reflection Pull tonight if all three are completed.
@@ -200,7 +200,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
       onOpenChange={(open) => !open && onClose()}
       title="Evening Reflection"
     >
-      <Glyph emoji="<Icon name="evening" size={14} />" />
+      <Glyph emoji="🌙" />
       <Sub>Two lines, two sliders, one anchor. Ninety seconds.</Sub>
 
       <div className="space-y-3 mt-4">
