@@ -14,6 +14,19 @@
   --realm-void: var(--realm-void-accent, #a374ff);
   --realm-myth: var(--realm-myth-accent, #ffd95c);
   --realm-iron: var(--realm-iron-accent, #b8973c);
+  
+  /* Manhwa System Colors */
+  --manhwa-system-blue: #00f0ff;
+  --manhwa-system-dark: #0a0f1e;
+  --manhwa-penalty-red: #ff003c;
+  --manhwa-legendary-gold: #ffd700;
+  
+  /* Holographic Shadows */
+  --glow-cyan: 0 0 10px rgba(0, 240, 255, 0.4), 0 0 20px rgba(0, 240, 255, 0.2);
+  --glow-red: 0 0 15px rgba(255, 0, 60, 0.6);
+  
+  /* Animations */
+  --glitch-speed: 2.5s;
 }
 
 .island-grid {
@@ -27,4 +40,27 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-2);
+}
+
+/* The System Window Panel */
+.system-panel {
+  background: rgba(10, 15, 30, 0.85);
+  border: 1px solid var(--manhwa-system-blue);
+  box-shadow: var(--glow-cyan);
+  backdrop-filter: blur(12px);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CRT Scanline Overlay applied globally or to penalty zone */
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 50;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
 }

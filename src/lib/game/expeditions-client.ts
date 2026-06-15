@@ -121,54 +121,34 @@ export async function runExpedition(runs: 1 | 5): Promise<{
   }>;
   if (team.length < 1) throw new Error("Build a team on your Island first.");
 
-  // Reconcile stamina
-  const current = computeCurrentStamina(
-    profile.stamina,
-    profile.stamina_max,
-    profile.stamina_last_tick,
-  );
-  const cost = STAMINA_PER_RUN * runs;
-  if (current < cost) throw new Error(`Not enough stamina: need ${cost}, have ${current}.`);
-
   // Determine expedition
   const day = new Date().getDay();
   const expType = expeditionForDay(day);
   const def = EXPEDITIONS[expType];
 
-  // Team power proxy (same shape used in battle-client)
-  const teamPower = team.reduce((sum, um) => {
-    const m = um.monster;
-    if (!m) return sum;
-    const pwr = (m.base_atk + m.base_def + m.base_hp / 10) * (1 + um.level * 0.05);
-    const fatigue = um.bond_percent < 10 ? 0.7 : 1;
-    return sum + Math.round(pwr * fatigue);
-  }, 0);
-
-  // Resolve each run
+  // Resolve each run via Server RPC
   const totalDrops: Drop[] = [];
   let eliteCount = 0;
   let runsCompleted = 0;
+  let currentStamina = profile.stamina;
 
   for (let i = 0; i < runs; i++) {
-    const isElite = Math.random() < ELITE_CHANCE;
-    if (isElite) eliteCount += 1;
-    const enemiesDefeated = 3 + Math.floor(Math.random() * 4); // 3..6
-    const drops = rollDrops(expType, isElite, profile.per_stat ?? 0);
+    const { data: runData, error } = await supabase.rpc("run_expedition", { p_exp_type: expType });
+    if (error) {
+       // Stop running if there's an error (like insufficient stamina)
+       if (i === 0) throw error;
+       break;
+    }
     runsCompleted += 1;
+    currentStamina = runData.newStamina;
 
-    await supabase.from("expeditions").insert({
-      user_id: user.id,
-      expedition_type: expType,
-      day_of_week: day,
-      team_size: team.length,
-      team_power: teamPower,
-      enemies_defeated: enemiesDefeated,
-      elite_encounter: isElite,
-      drops,
-      stamina_spent: STAMINA_PER_RUN,
-    });
-
-    for (const d of drops) totalDrops.push(d);
+    const drops = runData.drops as Drop[];
+    for (const d of drops) {
+       totalDrops.push(d);
+       if (d.type === "material" || d.name === def.primaryStone) {
+          eliteCount += 0.5; // Roughly estimate elites based on drops
+       }
+    }
   }
 
   // Merge totalDrops by name
@@ -181,58 +161,19 @@ export async function runExpedition(runs: 1 | 5): Promise<{
   }
   const finalDrops = [...merged.values()];
 
-  // Apply drops to inventory + gold to profile
-  let goldDelta = 0;
-  for (const d of finalDrops) {
-    if (d.type === "gold") {
-      goldDelta += d.qty;
-      continue;
-    }
-    // upsert inventory
-    const { data: existing } = await supabase
-      .from("inventory")
-      .select("id, quantity")
-      .eq("user_id", user.id)
-      .eq("item_type", d.type)
-      .eq("item_name", d.name)
-      .maybeSingle();
-    if (existing) {
-      await supabase
-        .from("inventory")
-        .update({ quantity: existing.quantity + d.qty })
-        .eq("id", existing.id);
-    } else {
-      await supabase
-        .from("inventory")
-        .insert({ user_id: user.id, item_type: d.type, item_name: d.name, quantity: d.qty });
-    }
-  }
-
-  // Update stamina + gold
-  const staminaAfter = current - cost;
-  // Anchor stamina_last_tick: snap to a stable epoch so future regen accrues from "now-elapsed-into-cycle"
-  // Simpler: set last tick to now() — fresh cycle.
-  await supabase
-    .from("profiles")
-    .update({
-      stamina: staminaAfter,
-      stamina_last_tick: new Date().toISOString(),
-      gold: profile.gold + goldDelta,
-    })
-    .eq("id", user.id);
-
   // Bond ticks for team — running expeditions builds bond like quests do
-  for (const um of team) {
-    const m = um.monster;
-    if (!m) continue;
-    // Match expedition element to monster's role-stat
-    const expElement = def.element;
-    if (expElement === "all" || roleToStat(m.role) === expElement) {
-      const bondGain = 0.5 * runs;
-      await supabase
-        .from("user_monsters")
-        .update({ bond_percent: Math.min(100, Number(um.bond_percent) + bondGain) })
-        .eq("id", um.id);
+  if (runsCompleted > 0) {
+    for (const um of team) {
+      const m = um.monster;
+      if (!m) continue;
+      const expElement = def.element;
+      if (expElement === "all" || roleToStat(m.role) === expElement) {
+        const bondGain = 0.5 * runsCompleted;
+        await supabase
+          .from("user_monsters")
+          .update({ bond_percent: Math.min(100, Number(um.bond_percent) + bondGain) })
+          .eq("id", um.id);
+      }
     }
   }
 
@@ -248,8 +189,8 @@ export async function runExpedition(runs: 1 | 5): Promise<{
   return {
     totalDrops: finalDrops,
     runsCompleted,
-    eliteCount,
-    staminaAfter,
+    eliteCount: Math.floor(eliteCount),
+    staminaAfter: currentStamina,
     staminaMax: profile.stamina_max,
     awakenings,
   };

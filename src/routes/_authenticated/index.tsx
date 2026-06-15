@@ -16,6 +16,7 @@ import { EmptyState } from "@/components/ui/EmptyState";
 import { showCascade, type CascadeEvent } from "@/components/game/CascadeCard";
 import { whisper } from "@/components/game/WhisperFeed";
 import { RealmPulse } from "@/components/game/RealmPulse";
+import { SoulResonanceTimer } from "@/components/game/SoulResonanceTimer";
 import {
   getMyProfile,
   listTasks,
@@ -53,52 +54,7 @@ const REALM_VOICES: Record<string, string> = {
   "Iron Dominion": "This task. I will finish it. With you.",
 };
 
-function FocusRitual() {
-  const [active, setActive] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(25 * 60);
-
-  useEffect(() => {
-    let int: ReturnType<typeof setInterval>;
-    if (active && timeLeft > 0) {
-      int = setInterval(() => setTimeLeft((l) => l - 1), 1000);
-    } else if (active && timeLeft <= 0) {
-      setActive(false);
-      setTimeLeft(25 * 60);
-      confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
-      toast.success("Focus Ritual Complete!");
-    }
-    return () => clearInterval(int);
-  }, [active, timeLeft]);
-
-  const mins = Math.floor(timeLeft / 60)
-    .toString()
-    .padStart(2, "0");
-  const secs = (timeLeft % 60).toString().padStart(2, "0");
-
-  return (
-    <div className="ss-card mb-6 flex items-center justify-between">
-      <div>
-        <h3 className="font-bold flex items-center gap-2" style={{ color: "var(--ink-primary)" }}>
-          Focus Ritual
-        </h3>
-        <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
-          25 minutes of deep focus.
-        </p>
-      </div>
-      <div className="flex items-center gap-4">
-        <div className="text-2xl font-mono font-bold" style={{ color: "var(--gold-bright)" }}>
-          {mins}:{secs}
-        </div>
-        <button
-          onClick={() => setActive(!active)}
-          className={`ss-btn ${active ? "ss-btn-danger" : "ss-btn-d-primary"}`}
-        >
-          {active ? "Stop" : "Start"}
-        </button>
-      </div>
-    </div>
-  );
-}
+// Replaced standard Focus Ritual with Manhwa System Soul Resonance Timer
 
 export const Route = createFileRoute("/_authenticated/")({
   head: () => ({ meta: [{ title: "Hub Directives — SummonScroll" }] }),
@@ -409,7 +365,17 @@ function HubPage() {
             onOpenMorning={() => setShowMorning(true)}
             onOpenEvening={() => setShowEvening(true)}
           />
-          <FocusRitual />
+          <div className="mb-6">
+            <SoulResonanceTimer
+              monsterId={profile?.soul_tether_id || 'unlinked'}
+              monsterName="Tethered Soul"
+              onComplete={() => {
+                confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+                toast.success("Resonance Complete! Buff applied.");
+              }}
+              onFail={() => {}}
+            />
+          </div>
           <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div>
               <h1

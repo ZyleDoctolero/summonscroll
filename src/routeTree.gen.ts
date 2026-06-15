@@ -15,6 +15,7 @@ import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/
 import { Route as AuthenticatedTrialRouteImport } from './routes/_authenticated/trial'
 import { Route as AuthenticatedQuestsRouteImport } from './routes/_authenticated/quests'
 import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
+import { Route as AuthenticatedPenaltyZoneRouteImport } from './routes/_authenticated/penalty-zone'
 import { Route as AuthenticatedIslandRouteImport } from './routes/_authenticated/island'
 import { Route as AuthenticatedGuildRouteImport } from './routes/_authenticated/guild'
 import { Route as AuthenticatedFusionRouteImport } from './routes/_authenticated/fusion'
@@ -25,6 +26,7 @@ import { Route as AuthenticatedCodexRouteImport } from './routes/_authenticated/
 import { Route as AuthenticatedBazaarRouteImport } from './routes/_authenticated/bazaar'
 import { Route as AuthenticatedBattleRouteImport } from './routes/_authenticated/battle'
 import { Route as AuthenticatedAltarRouteImport } from './routes/_authenticated/altar'
+import { Route as AuthenticatedAkashicRecordsRouteImport } from './routes/_authenticated/akashic-records'
 
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
@@ -55,6 +57,12 @@ const AuthenticatedProfileRoute = AuthenticatedProfileRouteImport.update({
   path: '/profile',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedPenaltyZoneRoute =
+  AuthenticatedPenaltyZoneRouteImport.update({
+    id: '/penalty-zone',
+    path: '/penalty-zone',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedIslandRoute = AuthenticatedIslandRouteImport.update({
   id: '/island',
   path: '/island',
@@ -106,10 +114,17 @@ const AuthenticatedAltarRoute = AuthenticatedAltarRouteImport.update({
   path: '/altar',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedAkashicRecordsRoute =
+  AuthenticatedAkashicRecordsRouteImport.update({
+    id: '/akashic-records',
+    path: '/akashic-records',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof AuthenticatedIndexRoute
   '/auth': typeof AuthRoute
+  '/akashic-records': typeof AuthenticatedAkashicRecordsRoute
   '/altar': typeof AuthenticatedAltarRoute
   '/battle': typeof AuthenticatedBattleRoute
   '/bazaar': typeof AuthenticatedBazaarRoute
@@ -120,12 +135,14 @@ export interface FileRoutesByFullPath {
   '/fusion': typeof AuthenticatedFusionRoute
   '/guild': typeof AuthenticatedGuildRoute
   '/island': typeof AuthenticatedIslandRoute
+  '/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
   '/profile': typeof AuthenticatedProfileRoute
   '/quests': typeof AuthenticatedQuestsRoute
   '/trial': typeof AuthenticatedTrialRoute
 }
 export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
+  '/akashic-records': typeof AuthenticatedAkashicRecordsRoute
   '/altar': typeof AuthenticatedAltarRoute
   '/battle': typeof AuthenticatedBattleRoute
   '/bazaar': typeof AuthenticatedBazaarRoute
@@ -136,6 +153,7 @@ export interface FileRoutesByTo {
   '/fusion': typeof AuthenticatedFusionRoute
   '/guild': typeof AuthenticatedGuildRoute
   '/island': typeof AuthenticatedIslandRoute
+  '/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
   '/profile': typeof AuthenticatedProfileRoute
   '/quests': typeof AuthenticatedQuestsRoute
   '/trial': typeof AuthenticatedTrialRoute
@@ -145,6 +163,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
+  '/_authenticated/akashic-records': typeof AuthenticatedAkashicRecordsRoute
   '/_authenticated/altar': typeof AuthenticatedAltarRoute
   '/_authenticated/battle': typeof AuthenticatedBattleRoute
   '/_authenticated/bazaar': typeof AuthenticatedBazaarRoute
@@ -155,6 +174,7 @@ export interface FileRoutesById {
   '/_authenticated/fusion': typeof AuthenticatedFusionRoute
   '/_authenticated/guild': typeof AuthenticatedGuildRoute
   '/_authenticated/island': typeof AuthenticatedIslandRoute
+  '/_authenticated/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
   '/_authenticated/profile': typeof AuthenticatedProfileRoute
   '/_authenticated/quests': typeof AuthenticatedQuestsRoute
   '/_authenticated/trial': typeof AuthenticatedTrialRoute
@@ -165,6 +185,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/auth'
+    | '/akashic-records'
     | '/altar'
     | '/battle'
     | '/bazaar'
@@ -175,12 +196,14 @@ export interface FileRouteTypes {
     | '/fusion'
     | '/guild'
     | '/island'
+    | '/penalty-zone'
     | '/profile'
     | '/quests'
     | '/trial'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/auth'
+    | '/akashic-records'
     | '/altar'
     | '/battle'
     | '/bazaar'
@@ -191,6 +214,7 @@ export interface FileRouteTypes {
     | '/fusion'
     | '/guild'
     | '/island'
+    | '/penalty-zone'
     | '/profile'
     | '/quests'
     | '/trial'
@@ -199,6 +223,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/_authenticated'
     | '/auth'
+    | '/_authenticated/akashic-records'
     | '/_authenticated/altar'
     | '/_authenticated/battle'
     | '/_authenticated/bazaar'
@@ -209,6 +234,7 @@ export interface FileRouteTypes {
     | '/_authenticated/fusion'
     | '/_authenticated/guild'
     | '/_authenticated/island'
+    | '/_authenticated/penalty-zone'
     | '/_authenticated/profile'
     | '/_authenticated/quests'
     | '/_authenticated/trial'
@@ -262,6 +288,13 @@ declare module '@tanstack/react-router' {
       path: '/profile'
       fullPath: '/profile'
       preLoaderRoute: typeof AuthenticatedProfileRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/penalty-zone': {
+      id: '/_authenticated/penalty-zone'
+      path: '/penalty-zone'
+      fullPath: '/penalty-zone'
+      preLoaderRoute: typeof AuthenticatedPenaltyZoneRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/island': {
@@ -334,10 +367,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAltarRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/akashic-records': {
+      id: '/_authenticated/akashic-records'
+      path: '/akashic-records'
+      fullPath: '/akashic-records'
+      preLoaderRoute: typeof AuthenticatedAkashicRecordsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAkashicRecordsRoute: typeof AuthenticatedAkashicRecordsRoute
   AuthenticatedAltarRoute: typeof AuthenticatedAltarRoute
   AuthenticatedBattleRoute: typeof AuthenticatedBattleRoute
   AuthenticatedBazaarRoute: typeof AuthenticatedBazaarRoute
@@ -348,6 +389,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedFusionRoute: typeof AuthenticatedFusionRoute
   AuthenticatedGuildRoute: typeof AuthenticatedGuildRoute
   AuthenticatedIslandRoute: typeof AuthenticatedIslandRoute
+  AuthenticatedPenaltyZoneRoute: typeof AuthenticatedPenaltyZoneRoute
   AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
   AuthenticatedQuestsRoute: typeof AuthenticatedQuestsRoute
   AuthenticatedTrialRoute: typeof AuthenticatedTrialRoute
@@ -355,6 +397,7 @@ interface AuthenticatedRouteRouteChildren {
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAkashicRecordsRoute: AuthenticatedAkashicRecordsRoute,
   AuthenticatedAltarRoute: AuthenticatedAltarRoute,
   AuthenticatedBattleRoute: AuthenticatedBattleRoute,
   AuthenticatedBazaarRoute: AuthenticatedBazaarRoute,
@@ -365,6 +408,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedFusionRoute: AuthenticatedFusionRoute,
   AuthenticatedGuildRoute: AuthenticatedGuildRoute,
   AuthenticatedIslandRoute: AuthenticatedIslandRoute,
+  AuthenticatedPenaltyZoneRoute: AuthenticatedPenaltyZoneRoute,
   AuthenticatedProfileRoute: AuthenticatedProfileRoute,
   AuthenticatedQuestsRoute: AuthenticatedQuestsRoute,
   AuthenticatedTrialRoute: AuthenticatedTrialRoute,

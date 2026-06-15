@@ -4,6 +4,7 @@ import confetti from "canvas-confetti";
 import { Icon } from "@/components/ui/Icon";
 import { RARITY_COLOR, RARITY_GLOW, RARITY_ORDER, type Rarity } from "@/lib/game/gacha.constants";
 import { dur, ease, reducedMotion } from "@/lib/ui/motion-tokens";
+import { ExtractionModal } from "./ExtractionModal";
 
 const CEREMONY_CONFIG = {
   Common:    { duration: dur.reveal,   particles: false, fullscreen: false },
@@ -44,6 +45,15 @@ export function SummonReveal({
   const r = current.monster.rarity;
   const config = CEREMONY_CONFIG[r];
   const rm = reducedMotion();
+  const [showExtraction, setShowExtraction] = useState(false);
+
+  const handleNextClick = () => {
+    if (['Epic', 'Legendary', 'Mythic', 'EX'].includes(r)) {
+      setShowExtraction(true);
+    } else {
+      onNext();
+    }
+  };
 
   useEffect(() => {
     if (config.goldRain && !rm) {
@@ -80,7 +90,7 @@ export function SummonReveal({
   return (
     <div
       className="pull-stage cursor-pointer flex-col"
-      onClick={onNext}
+      onClick={handleNextClick}
     >
       <div className="pull-rays" />
       <div
@@ -174,6 +184,17 @@ export function SummonReveal({
         </div>
       )}
       <p className="mt-4 text-xs" style={{ color: "var(--ink-tertiary)" }}>Tap to continue</p>
+      
+      <ExtractionModal
+        isOpen={showExtraction}
+        onClose={() => setShowExtraction(false)}
+        monsterName={current.monster.name}
+        monsterRarity={r.toLowerCase() as any}
+        onExtractSuccess={() => {
+          setShowExtraction(false);
+          onNext();
+        }}
+      />
     </div>
   );
 }

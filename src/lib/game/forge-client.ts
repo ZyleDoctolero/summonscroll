@@ -64,83 +64,27 @@ export async function craft(
     .single();
   if (!recipe) throw new Error("Recipe not found.");
 
-  // Profile gold check
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("gold, level")
-    .eq("id", user.id)
-    .single();
-  if (!profile) throw new Error("Profile missing.");
-  const condLevel = (recipe.unlock_condition as { level?: number }).level ?? 0;
-  if (profile.level < condLevel) throw new Error(`Recipe unlocks at Level ${condLevel}.`);
+  // Call the server authoritative RPC to perform the craft and get results
+  const { data: result, error } = await supabase.rpc("craft_recipe", { p_recipe_id: recipeId });
+  if (error) throw error;
 
-  const goldCost = recipe.base_gold_cost * QUALITY_GOLD_MULT[quality];
-  if (profile.gold < goldCost) throw new Error(`Need ${goldCost} Gold, have ${profile.gold}.`);
-
-  // Inventory check + consume
-  const ingredients = recipe.ingredients as RecipeIngredient[];
-  for (const ing of ingredients) {
-    const { data: inv } = await supabase
-      .from("inventory")
-      .select("id, quantity")
-      .eq("user_id", user.id)
-      .eq("item_name", ing.name)
-      .maybeSingle();
-    if (!inv || inv.quantity < ing.qty) {
-      throw new Error(`Need ${ing.qty} ${ing.name} — have ${inv?.quantity ?? 0}.`);
+  // Find the matching affix text
+  let affixData = null;
+  if (result.affix) {
+    const found = MASTERWORK_AFFIXES.find(a => a.key === result.affix);
+    if (found) {
+      affixData = found;
+    } else {
+      affixData = { key: result.affix, text: `Enhancement: ${result.affix}` };
     }
   }
-  // All good: consume
-  for (const ing of ingredients) {
-    const { data: inv } = await supabase
-      .from("inventory")
-      .select("id, quantity")
-      .eq("user_id", user.id)
-      .eq("item_name", ing.name)
-      .maybeSingle();
-    if (!inv) continue;
-    const remaining = inv.quantity - ing.qty;
-    if (remaining <= 0) await supabase.from("inventory").delete().eq("id", inv.id);
-    else await supabase.from("inventory").update({ quantity: remaining }).eq("id", inv.id);
-  }
-  // Pay gold
-  await supabase
-    .from("profiles")
-    .update({ gold: profile.gold - goldCost })
-    .eq("id", user.id);
 
-  // Masterwork affix roll
-  const affix =
-    quality === "masterwork"
-      ? MASTERWORK_AFFIXES[Math.floor(Math.random() * MASTERWORK_AFFIXES.length)]
-      : null;
-
-  // Create user_equipment row
-  const { data: ue, error: ueErr } = await supabase
-    .from("user_equipment")
-    .insert({
-      user_id: user.id,
-      equipment_id: recipe.equipment_id,
-      quality,
-      affix: affix ? affix : null,
-    })
-    .select()
-    .single();
-  if (ueErr) throw ueErr;
-
-  // Log craft
-  await supabase.from("crafts").insert({
-    user_id: user.id,
-    recipe_id: recipeId,
-    quality,
-    affix,
-    user_equipment_id: ue.id,
-  });
-
+  // The RPC should have already inserted into crafts and user_equipment, and decremented resources.
+  
   return {
-    newEquipmentId: ue.id,
-    quality,
-    affix,
+    newEquipmentId: result.id,
+    quality: result.quality as CraftQuality,
+    affix: affixData,
     itemName: (recipe.equipment as { name: string } | null)?.name ?? "Mystery Gear",
   };
 }
