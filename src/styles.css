@@ -162,31 +162,31 @@
   }
 }
 
-/* ─── SummonScroll Game Design Tokens (Manhwa Overhaul) ─── */
+/* ─── SummonScroll Game Design Tokens ─── */
 :root {
-  /* ─── Manhwa System UI Palette (Solo Leveling / Pick Me Up) ─── */
+  /* ─── Manhwa System UI Palette (Pick Me Up / Solo Leveling) ─── */
   /* Backgrounds */
-  --bg-deep: #02040a; /* Pure Void Black */
-  --bg-stage: rgba(6, 10, 20, 0.6); /* Translucent dark */
-  --bg-panel: rgba(10, 15, 30, 0.4); /* Glassmorphism Panel */
-  --bg-pane: rgba(5, 8, 15, 0.5); /* Inner Glass Pane */
+  --bg-deep: #050a14; /* very dark, almost black blue */
+  --bg-stage: #0a1122; /* slightly lighter dark blue */
+  --bg-panel: rgba(16, 26, 46, 0.85); /* sleek translucent panel */
+  --bg-pane: rgba(22, 35, 60, 0.6); /* inner pane */
 
   /* Text/Ink */
-  --ink-primary: #ffffff; /* pure white */
-  --ink-secondary: #00f0ff; /* pure system cyan */
-  --ink-tertiary: #00a8cc; /* deep cyan */
+  --ink-primary: #e0f7fa; /* crisp icy white */
+  --ink-secondary: #80deea; /* muted neon cyan */
+  --ink-tertiary: #4dd0e1; /* vivid cyan */
 
-  /* Signature Colors (Cyberpunk/Manhwa shift) */
-  --gold-bright: #00f0ff; /* Replaced Gold with Pure Cyan */
-  --gold-glow: #00bfff;
+  /* Signature Colors */
+  --gold-bright: #ffea00;
+  --gold-glow: #ffc400;
   --violet: #d500f9;
-  --cyan: #00f0ff;
-  --rose: #ff003c; /* Pure System Red */
+  --cyan: #00e5ff; /* pure system neon */
+  --rose: #ff1744; /* danger/mythic */
   --ember: #d50000;
 
   /* Utility */
-  --success: #00ff66;
-  --danger: #ff003c;
+  --success: #00e676;
+  --danger: #ff1744;
 
   /* ─── Legacy Token Aliases (backward compatibility) ─── */
   --ss-bg-deep: var(--bg-deep);
@@ -207,28 +207,29 @@
   --ss-warning: #ffb74d;
 
   /* Rarity */
-  --ss-rarity-common: #6e7a85;
-  --ss-rarity-uncommon: #00ff66;
-  --ss-rarity-rare: #00bfff;
-  --ss-rarity-elite: #a374ff;
-  --ss-rarity-epic: #d500f9;
-  --ss-rarity-legendary: #ffd700;
-  --ss-rarity-mythic: #ff003c;
+  --ss-rarity-common: #9e9e9e;
+  --ss-rarity-uncommon: #81c784;
+  --ss-rarity-rare: #4fc3f7;
+  --ss-rarity-elite: #ffb74d;
+  --ss-rarity-epic: #ce93d8;
+  --ss-rarity-legendary: #ffd54f;
+  --ss-rarity-mythic: #ff8a65;
   --ss-rarity-ex: #ffffff;
 
-  /* Stat colors */
-  --ss-stat-str: #ff003c;
-  --ss-stat-str-rgb: 255, 0, 60;
-  --ss-stat-int: #00f0ff;
-  --ss-stat-int-rgb: 0, 240, 255;
-  --ss-stat-con: #00ff66;
-  --ss-stat-con-rgb: 0, 255, 102;
-  --ss-stat-per: #d500f9;
-  --ss-stat-per-rgb: 213, 0, 249;
+  /* Stat colors — the cross-cutting visual language. STR/INT/CON/PER are used
+     consistently across tasks, expeditions, monster roles, stones, stat readouts. */
+  --ss-stat-str: #e05252;
+  --ss-stat-str-rgb: 224, 82, 82;
+  --ss-stat-int: #7fd4ff;
+  --ss-stat-int-rgb: 127, 212, 255;
+  --ss-stat-con: #5fad41;
+  --ss-stat-con-rgb: 95, 173, 65;
+  --ss-stat-per: #ce93d8;
+  --ss-stat-per-rgb: 206, 147, 216;
 
   /* Borders */
-  --ss-border: rgba(0, 240, 255, 0.15);
-  --ss-border-active: rgba(0, 240, 255, 0.5);
+  --ss-border: rgba(255, 255, 255, 0.07);
+  --ss-border-active: rgba(255, 255, 255, 0.18);
 
   /* ─── Spacing scale ─── */
   --ss-space-1: 4px;
@@ -483,9 +484,8 @@ html {
 }
 body {
   background: var(--ss-bg-deep) !important;
-  background-image: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.05), transparent 50%), radial-gradient(circle at 50% 100%, rgba(213, 0, 249, 0.05), transparent 50%);
   color: var(--ss-text-primary) !important;
-  font-family: var(--ss-font-body, "Outfit", system-ui, sans-serif);
+  font-family: var(--ss-font-body, "Inter", system-ui, sans-serif);
 }
 
 /* CRT Scanlines overlay to simulate the Manhwa 'System Window' */
@@ -507,18 +507,17 @@ body::after {
 
 /* ─── Cards ─── */
 .ss-card {
-  background: var(--bg-panel);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--ss-border);
+  background: var(--bg-pane);
+  border: var(--ss-hairline);
   border-radius: var(--ss-radius-lg);
   padding: var(--ss-space-4);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5), inset 0 0 10px rgba(0, 240, 255, 0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--ss-shadow-low), var(--ss-inset-edge);
+  transition:
+    border-color 160ms ease-out,
+    transform 160ms ease-out;
 }
 .ss-card:hover {
-  border-color: var(--ss-border-active);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.1);
+  border-color: var(--ss-hairline-active);
 }
 
 /* Bigger, more important surface — hero card on a screen */
@@ -548,11 +547,9 @@ body::after {
 
 /* ─── Panes (sub-sections within a card) ─── */
 .ss-pane {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.32);
   border-radius: var(--ss-radius-md);
   padding: var(--ss-space-3);
-  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(0, 240, 255, 0.05);
 }
 
 /* ─── Buttons ─── */
@@ -575,19 +572,16 @@ body::after {
 }
 
 .ss-btn-primary {
-  background: rgba(0, 240, 255, 0.1);
-  color: var(--cyan);
-  border: 1px solid var(--cyan);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3), inset 0 0 10px rgba(0, 240, 255, 0.1);
-  text-shadow: 0 0 5px var(--cyan);
+  background: linear-gradient(135deg, var(--gold-glow), var(--gold-bright));
+  color: var(--bg-deep);
+  border: none;
+  box-shadow: 0 4px 20px rgba(255, 213, 79, 0.28);
 }
 .ss-btn-primary:hover {
-  background: rgba(0, 240, 255, 0.2);
   transform: translateY(-1px);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5), inset 0 0 15px rgba(0, 240, 255, 0.2);
 }
 .ss-btn-primary:active {
-  transform: scale(0.98);
+  transform: translateY(0);
 }
 /* Clean disabled state — flat muted slate, NOT a faded gold gradient.
    A 40%-opacity gold reads as "broken/muddy"; flat grey reads as "locked". */
