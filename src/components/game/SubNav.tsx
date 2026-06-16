@@ -33,11 +33,11 @@ export const ALTAR_TABS: SubNavItem[] = [
   { path: "/bazaar", label: "Bazaar" },
 ];
 
-export function SubNav({ items, color = "var(--cyan)" }: { items: SubNavItem[]; color?: string }) {
+export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; color?: string }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
-    <div className="w-full flex gap-1 p-1 bg-[#0a0514]/80 border border-cyan-900/30 rounded-lg mb-6 overflow-x-auto no-scrollbar relative z-20 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.5),inset_0_0_15px_rgba(0,240,255,0.05)]">
+    <div className="w-full flex gap-1 p-1 bg-[#2a1e12] border border-[#b89947]/30 rounded-lg mb-6 overflow-x-auto no-scrollbar relative z-20 backdrop-blur-xl shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
       {items.map((item) => {
         const isActive = pathname === item.path;
         return (
@@ -53,7 +53,7 @@ export function SubNav({ items, color = "var(--cyan)" }: { items: SubNavItem[]; 
               <motion.div
                 layoutId="subNavActive"
                 className="absolute inset-0 rounded bg-white/5 border-b-2 -z-10"
-                style={{ borderColor: color, boxShadow: `inset 0 -10px 20px -10px ${color}50` }}
+                style={{ borderColor: color, boxShadow: `0 2px 8px rgba(0,0,0,0.5)` }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
             )}

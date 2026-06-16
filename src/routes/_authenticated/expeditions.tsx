@@ -51,7 +51,7 @@ const REALMS = [
     id: "astral",
     name: "Astral Peaks",
     duration: 720,
-    color: "var(--cyan)",
+    color: "#b89047",
     desc: "A 12-hour deep dive. High chance of rare evolution materials.",
   },
 ];
@@ -107,7 +107,7 @@ function ExpeditionsPage() {
     return (
       <div
         className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
+        style={{ color: "#3d2e1f" }}
       >
         Loading expeditions…
       </div>
@@ -140,11 +140,11 @@ function ExpeditionsPage() {
         <header className="mb-8 text-center">
           <h1
             className="t-h1 text-4xl mb-2"
-            style={{ color: "var(--cyan)", textShadow: "0 0 20px var(--cyan)" }}
+            style={{ color: "#b89047", textShadow: "0 0 20px #b89047" }}
           >
             Astral Expeditions
           </h1>
-          <p style={{ color: "var(--ink-secondary)" }}>
+          <p style={{ color: "#3d2e1f" }}>
             Dispatch your inactive companions to cultivate and gather resources.
           </p>
         </header>
@@ -152,7 +152,7 @@ function ExpeditionsPage() {
         {/* Active Expeditions Strip */}
         {activeExpeditions.length > 0 && (
           <div className="mb-10">
-            <h2 className="t-h3 mb-4" style={{ color: "var(--ink-primary)" }}>
+            <h2 className="t-h3 mb-4" style={{ color: "#2a1e12" }}>
               Active Dispatches
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -183,23 +183,23 @@ function ExpeditionsPage() {
                         />
                       )}
                       <div>
-                        <h3 className="font-bold text-lg" style={{ color: "var(--ink-primary)" }}>
+                        <h3 className="font-bold text-lg" style={{ color: "#2a1e12" }}>
                           {monster?.name}
                         </h3>
-                        <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                        <p className="text-xs" style={{ color: "#3d2e1f" }}>
                           Cultivating in {exp.realm_name}
                         </p>
                       </div>
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="w-full h-2 rounded-full overflow-hidden bg-black/50 mb-4 border border-[rgba(255,255,255,0.1)]">
+                    <div className="w-full h-2 rounded-full overflow-hidden bg-[#f4ecd8]/50 mb-4 border border-[rgba(61,46,31,0.1)]">
                       <div
                         className="h-full transition-all duration-1000"
                         style={{
                           width: `${progress}%`,
-                          background: isDone ? "var(--success)" : "var(--cyan)",
-                          boxShadow: isDone ? "0 0 10px var(--success)" : "0 0 10px var(--cyan)",
+                          background: isDone ? "var(--success)" : "#b89047",
+                          boxShadow: isDone ? "0 0 10px var(--success)" : "0 0 10px #b89047",
                         }}
                       />
                     </div>
@@ -215,7 +215,7 @@ function ExpeditionsPage() {
                     ) : (
                       <button
                         disabled
-                        className="ss-btn opacity-50 cursor-not-allowed border border-white/10 text-white/50"
+                        className="ss-btn opacity-50 cursor-not-allowed border border-[#3d2e1f]/10 text-[#3d2e1f]/50"
                       >
                         {Math.floor(progress)}% Complete
                       </button>
@@ -230,7 +230,7 @@ function ExpeditionsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Realm Selection */}
           <div className="lg:col-span-1 flex flex-col gap-4">
-            <h2 className="t-h3" style={{ color: "var(--ink-primary)" }}>
+            <h2 className="t-h3" style={{ color: "#2a1e12" }}>
               Select Realm
             </h2>
             {REALMS.map((r) => (
@@ -246,7 +246,7 @@ function ExpeditionsPage() {
                 <h3 className="text-lg font-bold" style={{ color: r.color }}>
                   {r.name}
                 </h3>
-                <p className="text-xs mt-1" style={{ color: "var(--ink-secondary)" }}>
+                <p className="text-xs mt-1" style={{ color: "#3d2e1f" }}>
                   {r.desc}
                 </p>
               </button>
@@ -255,10 +255,10 @@ function ExpeditionsPage() {
 
           {/* Dispatch Panel */}
           <div className="lg:col-span-2">
-            <h2 className="t-h3 mb-4" style={{ color: "var(--ink-primary)" }}>
+            <h2 className="t-h3 mb-4" style={{ color: "#2a1e12" }}>
               Dispatch Companion
             </h2>
-            <div className="ss-card p-6 bg-black/40 backdrop-blur-md border border-[rgba(255,255,255,0.1)] h-full flex flex-col">
+            <div className="ss-card p-6 bg-[#f4ecd8]/40 backdrop-blur-md border border-[rgba(61,46,31,0.1)] h-full flex flex-col">
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 mb-6 flex-1 overflow-y-auto max-h-[400px] custom-scrollbar pr-2">
                 {monstersQ.data?.userMonsters
                   .filter((m: { id: string }) => m.id !== profileQ.data?.profile.soul_tether_id)
@@ -270,7 +270,7 @@ function ExpeditionsPage() {
                         key={um.id}
                         disabled={isBusy}
                         onClick={() => setSelectedMonster(um.id)}
-                        className={`relative rounded-lg p-2 transition-all flex flex-col items-center ${isBusy ? "opacity-30 grayscale cursor-not-allowed" : "hover:scale-105 hover:bg-white/10"} ${isSelected ? "bg-white/10 border border-white/30 shadow-[0_0_15px_rgba(255,255,255,0.2)]" : "border border-transparent"}`}
+                        className={`relative rounded-lg p-2 transition-all flex flex-col items-center ${isBusy ? "opacity-30 grayscale cursor-not-allowed" : "hover:scale-105 hover:bg-[#3d2e1f]/10"} ${isSelected ? "bg-[#3d2e1f]/10 border border-[#3d2e1f]/30 shadow-[0_0_15px_rgba(255,255,255,0.2)]" : "border border-transparent"}`}
                       >
                         <img
                           src={
@@ -286,12 +286,12 @@ function ExpeditionsPage() {
                         />
                         <span
                           className="text-[10px] font-bold mt-2 truncate w-full text-center"
-                          style={{ color: "var(--ink-primary)" }}
+                          style={{ color: "#2a1e12" }}
                         >
                           {um.monster.name}
                         </span>
                         {isBusy && (
-                          <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-[10px] font-bold text-white uppercase tracking-widest">
+                          <div className="absolute inset-0 bg-[#f4ecd8]/50 flex items-center justify-center text-[10px] font-bold text-[#3d2e1f] uppercase tracking-widest">
                             Busy
                           </div>
                         )}
@@ -300,13 +300,13 @@ function ExpeditionsPage() {
                   })}
               </div>
 
-              <div className="pt-6 border-t border-[rgba(255,255,255,0.1)] flex justify-between items-center">
+              <div className="pt-6 border-t border-[rgba(61,46,31,0.1)] flex justify-between items-center">
                 <div>
-                  <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+                  <p className="text-sm" style={{ color: "#3d2e1f" }}>
                     Realm:{" "}
                     <strong style={{ color: selectedRealm.color }}>{selectedRealm.name}</strong>
                   </p>
-                  <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+                  <p className="text-sm" style={{ color: "#3d2e1f" }}>
                     Duration: <strong>{selectedRealm.duration / 60} Hours</strong>
                   </p>
                 </div>

@@ -15,18 +15,23 @@
   --realm-myth: var(--realm-myth-accent, #ffd95c);
   --realm-iron: var(--realm-iron-accent, #b8973c);
   
-  /* Ancient Fantasy System Colors */
-  --manhwa-system-blue: #4a90e2; /* Mystic Blue */
-  --manhwa-system-dark: #1a0b2e; /* Void Purple */
-  --manhwa-penalty-red: #8b0000; /* Blood Red */
-  --manhwa-legendary-gold: #d4af3f; /* Ancient Gold */
+  /* Ancient Beastmaster Tome Colors */
+  --manhwa-system-blue: #3d2e1f; /* Faded Ink */
+  --manhwa-system-dark: #2a1e12; /* Dark Leather */
+  --manhwa-penalty-red: #8b0000; /* Blood Ink */
+  --manhwa-legendary-gold: #b8973c; /* Tarnished Brass */
   
-  /* Magical Shadows */
-  --glow-cyan: 0 0 15px rgba(74, 144, 226, 0.5), inset 0 0 25px rgba(74, 144, 226, 0.2);
-  --glow-red: 0 0 20px rgba(139, 0, 0, 0.7), inset 0 0 30px rgba(139, 0, 0, 0.3);
+  --bg-parchment: #f4ecd8;
+  --bg-leather: #2a1e12;
+  --ink-primary: #1a1a1a;
+  --ink-secondary: #3d2e1f;
+  
+  /* Natural Shadows */
+  --glow-cyan: 0 0 15px rgba(184, 151, 60, 0.3), inset 0 0 25px rgba(184, 151, 60, 0.1);
+  --glow-red: 0 0 20px rgba(139, 0, 0, 0.5), inset 0 0 30px rgba(139, 0, 0, 0.2);
   
   /* Animations */
-  --glitch-speed: 2.5s;
+  --glitch-speed: 4s;
 }
 
 .island-grid {
@@ -42,128 +47,74 @@
   gap: var(--space-2);
 }
 
-/* The Ancient Panel */
+/* The Ancient Panel (Replaced System Panel) */
 .system-panel {
-  background: rgba(26, 11, 46, 0.85);
-  border: 2px solid rgba(212, 175, 63, 0.4);
-  box-shadow: 0 0 15px rgba(212, 175, 63, 0.2), inset 0 0 25px rgba(212, 175, 63, 0.1);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 12px;
+  background: rgba(42, 30, 18, 0.95);
+  border: 2px solid rgba(184, 151, 60, 0.6);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  transition: all 0.3s ease;
+  background-image: url('https://www.transparenttextures.com/patterns/old-wall.png');
 }
 .system-panel:hover {
-  border-color: rgba(212, 175, 63, 0.8);
-  box-shadow: 0 0 20px rgba(212, 175, 63, 0.5), inset 0 0 30px rgba(212, 175, 63, 0.3);
+  border-color: rgba(184, 151, 60, 0.9);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.6);
   transform: translateY(-2px);
 }
 
-/* CRT Scanline Overlay applied globally or to penalty zone */
-.scanlines::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 50;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
-}
-
-/* ─── Manhwa System Rarity Auras ─── */
+/* ─── Beastmaster Rarity Auras ─── */
 .aura-common {
-  filter: grayscale(60%);
+  filter: sepia(0.8) contrast(1.2);
   position: relative;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .aura-uncommon {
-  box-shadow: 0 0 12px rgba(0, 255, 102, 0.3), inset 0 0 10px rgba(0, 255, 102, 0.1);
-  border-color: rgba(0, 255, 102, 0.4) !important;
+  box-shadow: inset 0 0 15px rgba(110, 192, 122, 0.2);
+  border-color: rgba(110, 192, 122, 0.4) !important;
 }
 
 .aura-rare {
-  animation: holo-pulse 3s infinite ease-in-out;
-  border-color: rgba(0, 191, 255, 0.5) !important;
-}
-@keyframes holo-pulse {
-  0%, 100% { box-shadow: 0 0 8px rgba(0, 191, 255, 0.3), inset 0 0 12px rgba(0, 191, 255, 0.15); }
-  50% { box-shadow: 0 0 20px rgba(0, 191, 255, 0.6), inset 0 0 25px rgba(0, 191, 255, 0.35); border-color: rgba(0, 191, 255, 0.8) !important; }
+  box-shadow: inset 0 0 20px rgba(79, 176, 255, 0.2);
+  border-color: rgba(79, 176, 255, 0.5) !important;
 }
 
 .aura-elite {
-  animation: neon-glitch 2s infinite;
-  border: 1px solid rgba(213, 0, 249, 0.6) !important;
-}
-@keyframes neon-glitch {
-  0% { box-shadow: -2px 0 0 rgba(213, 0, 249, 0.5), 2px 0 0 rgba(213, 0, 249, 0.5), inset 0 0 15px rgba(213, 0, 249, 0.2); }
-  2% { box-shadow: 2px 0 0 rgba(213, 0, 249, 0.5), -2px 0 0 rgba(213, 0, 249, 0.5), inset 0 0 15px rgba(213, 0, 249, 0.2); }
-  4% { box-shadow: -2px 0 0 rgba(213, 0, 249, 0.5), 2px 0 0 rgba(213, 0, 249, 0.5), inset 0 0 15px rgba(213, 0, 249, 0.2); }
-  6% { box-shadow: 0 0 15px rgba(213, 0, 249, 0.7), inset 0 0 20px rgba(213, 0, 249, 0.3); }
-  100% { box-shadow: 0 0 15px rgba(213, 0, 249, 0.7), inset 0 0 20px rgba(213, 0, 249, 0.3); }
+  box-shadow: inset 0 0 20px rgba(111, 77, 140, 0.3);
+  border-color: rgba(111, 77, 140, 0.6) !important;
 }
 
 .aura-epic {
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6), inset 0 0 20px rgba(255, 215, 0, 0.2);
-  border-color: rgba(255, 215, 0, 0.7) !important;
-  animation: radiant-particle 4s infinite alternate;
-}
-@keyframes radiant-particle {
-  0% { filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5)); box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.2); }
-  100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9)); box-shadow: 0 0 35px rgba(255, 215, 0, 0.8), inset 0 0 25px rgba(255, 215, 0, 0.4); border-color: rgba(255, 215, 0, 1) !important; }
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5), inset 0 0 25px rgba(212, 175, 63, 0.2);
+  border-color: rgba(212, 175, 63, 0.7) !important;
 }
 
 .aura-legendary {
-  box-shadow: inset 0 0 40px rgba(255, 0, 60, 0.5), 0 0 30px rgba(255, 0, 60, 0.7);
-  border: 1px solid rgba(255, 0, 60, 0.9) !important;
-  animation: absolute-zero 3s infinite ease-in-out reverse;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3), inset 0 0 30px rgba(139, 0, 0, 0.2);
+  border-color: rgba(139, 0, 0, 0.9) !important;
 }
 
 .aura-mythic {
-  animation: absolute-zero 2s infinite ease-in-out;
-  border-color: rgba(0, 240, 255, 0.8) !important;
-}
-@keyframes absolute-zero {
-  0%, 100% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.6), inset 0 0 20px rgba(0, 240, 255, 0.4); border-color: rgba(0, 240, 255, 0.6) !important; }
-  50% { box-shadow: 0 0 40px rgba(0, 240, 255, 0.9), inset 0 0 40px rgba(0, 240, 255, 0.7); border-color: rgba(0, 240, 255, 1) !important; }
+  box-shadow: 0 4px 15px rgba(184, 151, 60, 0.4), inset 0 0 30px rgba(184, 151, 60, 0.3);
+  border-color: rgba(184, 151, 60, 0.8) !important;
 }
 
 .aura-ex {
-  animation: reality-break 0.5s infinite;
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.9), inset 0 0 30px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2), inset 0 0 40px rgba(255, 255, 255, 0.1);
   border: 2px solid #ffffff !important;
-}
-@keyframes reality-break {
-  0% { transform: translate(0, 0); filter: hue-rotate(0deg); }
-  25% { transform: translate(1px, -1px); filter: hue-rotate(90deg); }
-  50% { transform: translate(-1px, 1px); filter: hue-rotate(180deg); }
-  75% { transform: translate(1px, 1px); filter: hue-rotate(270deg); }
-  100% { transform: translate(0, 0); filter: hue-rotate(360deg); }
 }
 
 @layer components {
   .ss-btn-quest-board {
-    @apply relative flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#1a0f2e] border-2 border-[#d4af3f]/50 shadow-[0_0_20px_rgba(212,175,63,0.3)] hover:scale-105 transition-all duration-300;
+    @apply relative flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#2a1e12] border-2 border-[#b8973c]/80 shadow-[0_4px_10px_rgba(0,0,0,0.5)] hover:scale-105 transition-all duration-300;
   }
   .ss-badge-notification {
-    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[#ff5e5e] border border-[#1a0f2e] flex items-center justify-center text-[10px] font-bold text-white shadow-[0_0_10px_#ff5e5e];
+    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[#8b0000] border border-[#2a1e12] flex items-center justify-center text-[10px] font-bold text-white shadow-[0_2px_4px_rgba(0,0,0,0.5)];
   }
   .ss-panel-holographic {
-    @apply relative overflow-hidden border border-[rgba(255,255,255,0.1)] shadow-[0_0_15px_rgba(0,0,0,0.5)];
-    background: linear-gradient(135deg, rgba(20,10,30,0.8), rgba(10,5,18,0.9));
-  }
-  .ss-panel-holographic::before {
-    content: '';
-    @apply absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 240, 255, 0.1) 2px,
-      rgba(0, 240, 255, 0.1) 4px
-    );
+    @apply relative overflow-hidden border border-[#b8973c]/30 shadow-[0_4px_10px_rgba(0,0,0,0.4)];
+    background: #2a1e12 url('https://www.transparenttextures.com/patterns/old-wall.png');
   }
 }

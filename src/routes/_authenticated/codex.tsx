@@ -30,7 +30,7 @@ function CodexPage() {
     return (
       <div
         className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
+        style={{ color: "#3d2e1f" }}
       >
         Opening the Codex…
       </div>
@@ -45,15 +45,15 @@ function CodexPage() {
   return (
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="vaults" />
-      <div className="bg-atmos bg-atmos-codex p-6 md:p-10 max-w-6xl min-h-screen">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+      <div className="bg-[#f4ecd8] bg-[#f4ecd8]-codex p-6 md:p-10 max-w-6xl min-h-screen">
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "#b89047" }}>
           Codex
         </h1>
-        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
+        <p className="text-sm mb-6" style={{ color: "#3d2e1f" }}>
           What you did, what you felt, what you forged. The mirror.
         </p>
 
-        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
           {[
             { key: "heatmap" as const, label: "Heatmap" },
             { key: "journal" as const, label: "Journal" },
@@ -81,7 +81,7 @@ function CodexPage() {
           onClick={() => setSelectedDate(null)}
         >
           <div onClick={(e) => e.stopPropagation()} className="ss-modal">
-            <h2 className="text-lg font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="text-lg font-bold mb-1" style={{ color: "#b89047" }}>
               {new Date(selectedDate).toLocaleDateString(undefined, {
                 weekday: "long",
                 month: "long",
@@ -108,14 +108,14 @@ function CodexPage() {
                   <Block label="What didn't" body={selectedLog.pm_didnt_go} />
                 )}
                 {(selectedLog.am_intent_task_ids ?? []).length > 0 && (
-                  <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                  <p className="text-xs" style={{ color: "#3d2e1f" }}>
                     ⭐ {selectedLog.am_intent_task_ids.length} Sacred Directive
                     {selectedLog.am_intent_task_ids.length === 1 ? "" : "s"} set
                   </p>
                 )}
               </div>
             ) : (
-              <p className="text-sm mt-4 italic" style={{ color: "var(--ink-tertiary)" }}>
+              <p className="text-sm mt-4 italic" style={{ color: "#3d2e1f" }}>
                 The page is blank that day.
               </p>
             )}
@@ -156,22 +156,22 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
 
   return (
     <div>
-      <div className="flex flex-wrap gap-4 mb-4 text-xs" style={{ color: "var(--ink-secondary)" }}>
+      <div className="flex flex-wrap gap-4 mb-4 text-xs" style={{ color: "#3d2e1f" }}>
         <span>
-          <b className="t-mono" style={{ color: "var(--gold-bright)" }}>
+          <b className="font-serif" style={{ color: "#b89047" }}>
             {activeDays}
           </b>{" "}
           active days
         </span>
         <span>
-          <b className="t-mono" style={{ color: "var(--gold-bright)" }}>
+          <b className="font-serif" style={{ color: "#b89047" }}>
             {totalDays}
           </b>{" "}
           days tracked
         </span>
         <span>
-          <Icon name="stamina" size={12} color="var(--gold-bright)" />{" "}
-          <b className="t-mono" style={{ color: "var(--gold-bright)" }}>
+          <Icon name="stamina" size={12} color="#b89047" />{" "}
+          <b className="font-serif" style={{ color: "#b89047" }}>
             {totalAwakenings}
           </b>{" "}
           awakening days
@@ -190,8 +190,8 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
                   className="w-3 h-3 rounded-sm transition-all hover:scale-150 disabled:cursor-default"
                   style={{
                     background: cell ? cellColor(cell) : "transparent",
-                    boxShadow: cell?.hasAwakening ? "0 0 6px var(--gold-bright)" : undefined,
-                    border: cell?.hasAwakening ? "1px solid var(--gold-bright)" : "none",
+                    boxShadow: cell?.hasAwakening ? "0 0 6px #b89047" : undefined,
+                    border: cell?.hasAwakening ? "1px solid #b89047" : "none",
                   }}
                   title={
                     cell
@@ -206,7 +206,7 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
 
         <div
           className="flex items-center gap-2 mt-4 text-[10px]"
-          style={{ color: "var(--ink-tertiary)" }}
+          style={{ color: "#3d2e1f" }}
         >
           <span>Less</span>
           {[0, 0.5, 1].map((a) => (
@@ -235,9 +235,9 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
 }
 
 function cellColor(c: HeatmapCell): string {
-  if (c.ritualScore === 0) return "rgba(255,255,255,0.06)";
+  if (c.ritualScore === 0) return "rgba(61,46,31,0.06)";
   if (c.ritualScore === 1) return "rgba(255,217,92,0.35)";
-  return "linear-gradient(135deg, var(--gold-glow), var(--gold-bright))";
+  return "linear-gradient(135deg, #b89047, #b89047)";
 }
 
 // ─── Journal ────────────────────────────────────────────────────────────────
@@ -270,7 +270,7 @@ function Journal({
           <div className="flex items-center justify-between mb-2">
             <p
               className="text-xs uppercase tracking-widest"
-              style={{ color: "var(--ink-secondary)" }}
+              style={{ color: "#3d2e1f" }}
             >
               {new Date(l.log_date).toLocaleDateString(undefined, {
                 weekday: "long",
@@ -281,7 +281,7 @@ function Journal({
             {l.pm_mood && (
               <span className="text-xs">
                 {MOOD_EMOJI[l.pm_mood - 1]}{" "}
-                <span style={{ color: "var(--gold-bright)" }}>{l.pm_mood}/5</span>
+                <span style={{ color: "#b89047" }}>{l.pm_mood}/5</span>
               </span>
             )}
           </div>
@@ -337,19 +337,19 @@ function AwakeningLog({
           style={{ borderColor: "var(--ss-hairline-active)" }}
         >
           <div className="mt-0.5">
-            <Icon name="stamina" size={18} color="var(--gold-bright)" className="lucide-glow" />
+            <Icon name="stamina" size={18} color="#b89047" className="lucide-glow" />
           </div>
           <div className="flex-1">
-            <p className="text-sm font-bold" style={{ color: "var(--gold-bright)" }}>
+            <p className="text-sm font-bold" style={{ color: "#b89047" }}>
               {e.skill_name}
             </p>
-            <p className="text-xs" style={{ color: "var(--ink-primary)" }}>
+            <p className="text-xs" style={{ color: "#2a1e12" }}>
               {e.user_monster?.monster?.name ?? "Unknown"}
             </p>
-            <p className="text-[10px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
+            <p className="text-[10px] italic mt-1" style={{ color: "#3d2e1f" }}>
               {e.trigger_text}
             </p>
-            <p className="text-[10px] mt-1" style={{ color: "var(--ink-tertiary)" }}>
+            <p className="text-[10px] mt-1" style={{ color: "#3d2e1f" }}>
               {new Date(e.created_at).toLocaleString()}
             </p>
           </div>
@@ -362,10 +362,10 @@ function AwakeningLog({
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="ss-pane flex-1">
-      <div className="text-[10px] uppercase" style={{ color: "var(--ink-tertiary)" }}>
+      <div className="text-[10px] uppercase" style={{ color: "#3d2e1f" }}>
         {label}
       </div>
-      <div className="text-sm font-bold mt-0.5" style={{ color: "var(--gold-bright)" }}>
+      <div className="text-sm font-bold mt-0.5" style={{ color: "#b89047" }}>
         {value}
       </div>
     </div>
@@ -377,11 +377,11 @@ function Block({ label, body }: { label: string; body: string }) {
     <div className="ss-pane">
       <div
         className="text-[10px] uppercase tracking-wider mb-1"
-        style={{ color: "var(--ink-secondary)" }}
+        style={{ color: "#3d2e1f" }}
       >
         {label}
       </div>
-      <p className="text-sm" style={{ color: "var(--ink-primary)" }}>
+      <p className="text-sm" style={{ color: "#2a1e12" }}>
         {body}
       </p>
     </div>

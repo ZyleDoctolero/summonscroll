@@ -105,7 +105,7 @@ function PenaltyZone() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-black overflow-hidden flex flex-col items-center justify-center p-4"
+      className="fixed inset-0 z-[100] bg-[#f4ecd8] overflow-hidden flex flex-col items-center justify-center p-4"
       onClick={!audioActive ? startAudio : undefined}
     >
       {/* Ambient red pulse */}
@@ -153,13 +153,13 @@ function PenaltyZone() {
             {/* Title */}
             <div className="space-y-2">
               <h1
-                className="text-3xl font-black tracking-widest uppercase font-display"
+                className="text-3xl font-serif font-bold tracking-widest uppercase font-display"
                 style={{ color: "var(--manhwa-penalty-red)" }}
               >
                 Demonic Backlash
               </h1>
               <p
-                className="font-mono text-sm tracking-widest"
+                className="font-serif text-sm tracking-widest"
                 style={{ color: "rgba(139,0,0,0.7)" }}
               >
                 CULTIVATION FAILED — DEMONIC QI INVADING
@@ -175,7 +175,7 @@ function PenaltyZone() {
               }}
             >
               <div
-                className="flex items-center gap-2 font-mono text-sm"
+                className="flex items-center gap-2 font-serif text-sm"
                 style={{ color: "var(--manhwa-penalty-red)" }}
               >
                 <Terminal className="w-4 h-4" />
@@ -185,17 +185,17 @@ function PenaltyZone() {
               {hasTask ? (
                 <div
                   className="text-lg font-bold font-heading"
-                  style={{ color: "var(--ink-primary)" }}
+                  style={{ color: "#2a1e12" }}
                 >
                   {profile.penalty_zone_task}
                 </div>
               ) : (
                 <div
                   className="flex items-center gap-2 text-sm"
-                  style={{ color: "var(--ink-tertiary)" }}
+                  style={{ color: "#3d2e1f" }}
                 >
                   <AlertTriangle className="w-4 h-4" />
-                  <span className="font-mono">
+                  <span className="font-serif">
                     No task assigned. Check back or contact support.
                   </span>
                 </div>
@@ -210,11 +210,11 @@ function PenaltyZone() {
                   id="task-complete"
                   checked={isChecked}
                   onChange={(e) => setIsChecked(e.target.checked)}
-                  className="w-5 h-5 mt-0.5 accent-red-600 bg-black border-red-500 rounded-none cursor-pointer flex-shrink-0"
+                  className="w-5 h-5 mt-0.5 accent-red-600 bg-[#f4ecd8] border-red-500 rounded-none cursor-pointer flex-shrink-0"
                 />
                 <label
                   htmlFor="task-complete"
-                  className="font-mono text-sm cursor-pointer select-none leading-tight"
+                  className="font-serif text-sm cursor-pointer select-none leading-tight"
                   style={{ color: "rgba(200,100,100,0.8)" }}
                 >
                   I have completed this task in real life.
@@ -226,17 +226,17 @@ function PenaltyZone() {
             <Button
               onClick={handleEscape}
               disabled={!isChecked || escapeMutation.isPending}
-              className={`w-full font-mono font-bold tracking-widest uppercase transition-all duration-300 ${
+              className={`w-full font-serif font-bold tracking-widest uppercase transition-all duration-300 ${
                 isChecked
-                  ? "bg-red-700 hover:bg-red-600 text-white shadow-[0_0_25px_rgba(139,0,0,0.5)]"
-                  : "bg-black/50 border border-red-900/30 text-red-900/50 cursor-not-allowed"
+                  ? "bg-red-700 hover:bg-red-600 text-[#3d2e1f] shadow-[0_0_25px_rgba(139,0,0,0.5)]"
+                  : "bg-[#f4ecd8]/50 border border-red-900/30 text-red-900/50 cursor-not-allowed"
               }`}
             >
               {escapeMutation.isPending ? "PROCESSING..." : "SUPPRESS DEMONIC QI"}
             </Button>
 
             {!audioActive && (
-              <p className="text-[10px] font-mono" style={{ color: "var(--ink-tertiary)" }}>
+              <p className="text-[10px] font-serif" style={{ color: "#3d2e1f" }}>
                 Tap anywhere to enable ambient audio
               </p>
             )}

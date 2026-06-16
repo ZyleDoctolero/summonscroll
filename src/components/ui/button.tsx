@@ -5,21 +5,21 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold uppercase tracking-wider cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-cyan-500 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold uppercase tracking-wider cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#b8973c] disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-black text-cyan-400 border border-cyan-500/50 shadow-[0_0_10px_rgba(0,255,255,0.2)] hover:shadow-[0_0_20px_rgba(0,255,255,0.6)] hover:bg-cyan-950/30",
+          "bg-[#2a1e12] text-[#f4ecd8] border border-[#b8973c]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[#3d2e1f]",
         destructive:
-          "bg-black text-red-500 border border-red-500/50 shadow-[0_0_10px_rgba(255,0,0,0.2)] hover:shadow-[0_0_20px_rgba(255,0,0,0.6)] hover:bg-red-950/30",
+          "bg-[#2a1e12] text-[#8b0000] border border-[#8b0000]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[#3d2e1f]",
         outline:
-          "bg-black text-cyan-400 border border-cyan-500/30 hover:bg-cyan-950/50 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.3)]",
+          "bg-transparent text-[#1a1a1a] border border-[#b8973c]/50 hover:bg-[#2a1e12] hover:text-[#f4ecd8] hover:shadow-lg",
         secondary:
-          "bg-black text-amber-400 border border-amber-500/50 shadow-[0_0_10px_rgba(255,191,0,0.2)] hover:shadow-[0_0_20px_rgba(255,191,0,0.6)] hover:bg-amber-950/30",
+          "bg-[#f4ecd8] text-[#1a1a1a] border border-[#b8973c]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[#e0d4b8]",
         ghost:
-          "text-cyan-500 hover:bg-cyan-950/30 hover:text-cyan-300 hover:shadow-[inset_0_0_10px_rgba(0,255,255,0.1)]",
-        link: "text-cyan-400 underline-offset-4 hover:underline hover:text-cyan-300 drop-shadow-[0_0_5px_rgba(0,255,255,0.4)]",
+          "text-[#1a1a1a] hover:bg-[#e0d4b8] hover:text-[#8b0000] hover:shadow-inner",
+        link: "text-[#1a1a1a] underline-offset-4 hover:underline hover:text-[#8b0000] drop-shadow-sm",
       },
       size: {
         default: "h-9 px-4 py-2",

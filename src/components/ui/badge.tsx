@@ -4,17 +4,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2",
+  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider transition-all focus:outline-none focus:ring-2 focus:ring-[#b8973c] focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          "border-cyan-500/50 bg-black text-cyan-400 shadow-[0_0_8px_rgba(0,255,255,0.3)] hover:shadow-[0_0_15px_rgba(0,255,255,0.6)]",
+          "border-[#b8973c]/50 bg-[#2a1e12] text-[#f4ecd8] shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[#3d2e1f]",
         secondary:
-          "border-amber-500/50 bg-black text-amber-400 shadow-[0_0_8px_rgba(255,191,0,0.3)] hover:shadow-[0_0_15px_rgba(255,191,0,0.6)]",
+          "border-amber-500/50 bg-[#2a1e12] text-amber-400 shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[#3d2e1f]",
         destructive:
-          "border-red-500/50 bg-black text-red-500 shadow-[0_0_8px_rgba(255,0,0,0.3)] hover:shadow-[0_0_15px_rgba(255,0,0,0.6)]",
-        outline: "text-cyan-300 border-cyan-800/50 hover:bg-cyan-950/30 hover:border-cyan-500/30",
+          "border-red-500/50 bg-[#2a1e12] text-[#8b0000] shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[#3d2e1f]",
+        outline: "text-[#1a1a1a] border-[#b8973c]/50 hover:bg-[#2a1e12] hover:text-[#f4ecd8] hover:border-[#b8973c]/80",
       },
     },
     defaultVariants: {

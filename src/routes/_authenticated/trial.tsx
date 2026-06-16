@@ -94,16 +94,16 @@ function TrialPage() {
   return (
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="elder" />
-      <div className="bg-atmos bg-atmos-trial p-6 md:p-10 max-w-6xl min-h-screen">
+      <div className="bg-[#f4ecd8] bg-[#f4ecd8]-trial p-6 md:p-10 max-w-6xl min-h-screen">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--danger)" }}>
           Trial of Echoes
         </h1>
-        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
+        <p className="text-sm mb-6" style={{ color: "#3d2e1f" }}>
           20 procedural floors. <b style={{ color: "var(--danger)" }}>Permadeath</b>. Pick 5 souls.
           Bring them home or honor them in the Memorial.
         </p>
 
-        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
           {[
             { key: "trial" as const, label: "Enter Trial" },
             { key: "memorial" as const, label: "Memorial" },
@@ -162,7 +162,7 @@ function TrialPage() {
                       </div>
                       <p
                         className="text-[10px] font-bold truncate"
-                        style={{ color: "var(--ink-primary)" }}
+                        style={{ color: "#2a1e12" }}
                       >
                         {um.monster.name}
                       </p>
@@ -184,11 +184,11 @@ function TrialPage() {
                   >
                     <div
                       className="aspect-square grid place-items-center"
-                      style={{ color: "var(--ink-tertiary)" }}
+                      style={{ color: "#3d2e1f" }}
                     >
                       ?
                     </div>
-                    <p className="text-[9px] mt-1" style={{ color: "var(--ink-tertiary)" }}>
+                    <p className="text-[9px] mt-1" style={{ color: "#3d2e1f" }}>
                       Slot {i + 1}
                     </p>
                   </div>
@@ -202,7 +202,7 @@ function TrialPage() {
               className="ss-btn w-full disabled:opacity-40"
               style={{
                 background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
-                color: "var(--ink-primary)",
+                color: "#2a1e12",
                 boxShadow: "0 0 24px rgba(255,94,94,0.4)",
               }}
             >
@@ -212,7 +212,7 @@ function TrialPage() {
             </button>
 
             {/* Roster */}
-            <h2 className="text-sm font-bold mt-8 mb-3" style={{ color: "var(--ink-secondary)" }}>
+            <h2 className="text-sm font-bold mt-8 mb-3" style={{ color: "#3d2e1f" }}>
               Choose your 5
             </h2>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
@@ -247,13 +247,13 @@ function TrialPage() {
                     </div>
                     <p
                       className="text-[10px] font-bold truncate"
-                      style={{ color: "var(--ink-primary)" }}
+                      style={{ color: "#2a1e12" }}
                     >
                       {um.monster.name}
                     </p>
                     <p
                       className="text-[9px] flex items-center justify-center gap-1"
-                      style={{ color: "var(--ink-secondary)" }}
+                      style={{ color: "#3d2e1f" }}
                     >
                       <span className="flex items-center gap-0.5">
                         {um.star_level}
@@ -277,7 +277,7 @@ function TrialPage() {
           onOpenChange={(open) => !open && setConfirming(false)}
           title="The Trial is Final"
         >
-          <p className="text-sm text-center mb-5" style={{ color: "var(--ink-secondary)" }}>
+          <p className="text-sm text-center mb-5" style={{ color: "#3d2e1f" }}>
             Once you enter, any monster that falls is{" "}
             <b style={{ color: "var(--danger)" }}>gone forever</b>. They will be honored in the
             Memorial. Continue?
@@ -295,7 +295,7 @@ function TrialPage() {
               className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
               style={{
                 background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
-                color: "var(--ink-primary)",
+                color: "#2a1e12",
                 boxShadow: "0 4px 20px rgba(255,94,94,0.35)",
               }}
             >
@@ -315,7 +315,7 @@ function TrialPage() {
                 className="text-2xl font-bold mb-1 text-center"
                 style={{
                   color: results.fullClear
-                    ? "var(--gold-bright)"
+                    ? "#b89047"
                     : results.fallen.length === 0
                       ? "var(--success)"
                       : "var(--danger)",
@@ -324,7 +324,7 @@ function TrialPage() {
               >
                 {results.fullClear ? (
                   <span className="flex items-center justify-center gap-2">
-                    <Icon name="crown" size={24} color="var(--gold-bright)" /> Full Clear
+                    <Icon name="crown" size={24} color="#b89047" /> Full Clear
                   </span>
                 ) : results.fallen.length === 0 ? (
                   <span className="flex items-center justify-center gap-2">
@@ -344,10 +344,10 @@ function TrialPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ ...trans.cascadeIn, delay: 0.2 }}
                   className="text-center text-xs mb-4"
-                  style={{ color: "var(--gold-bright)" }}
+                  style={{ color: "#b89047" }}
                 >
                   <span className="flex items-center justify-center gap-1">
-                    <Icon name="sparkle" size={12} color="var(--gold-bright)" /> Echo-Touched
+                    <Icon name="sparkle" size={12} color="#b89047" /> Echo-Touched
                     bestowed.
                   </span>
                 </motion.p>
@@ -357,7 +357,7 @@ function TrialPage() {
                 <div className="ss-pane my-4" style={{ borderColor: "rgba(255,94,94,0.32)" }}>
                   <p
                     className="text-[10px] uppercase tracking-[0.18em] mb-2"
-                    style={{ color: "var(--ink-secondary)" }}
+                    style={{ color: "#3d2e1f" }}
                   >
                     Fallen
                   </p>
@@ -372,7 +372,7 @@ function TrialPage() {
                         delay: stagger(results.fallen.length, 0.12, 0.1)[i],
                       }}
                       className="text-sm flex items-center gap-1.5"
-                      style={{ color: "var(--ink-primary)" }}
+                      style={{ color: "#2a1e12" }}
                     >
                       <Icon name="death" size={13} color="var(--danger)" />
                       <span>
@@ -395,7 +395,7 @@ function TrialPage() {
                 >
                   <p
                     className="text-[10px] uppercase tracking-[0.18em] mb-2"
-                    style={{ color: "var(--gold-bright)" }}
+                    style={{ color: "#b89047" }}
                   >
                     Rewards
                   </p>
@@ -406,7 +406,7 @@ function TrialPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: dur.fast, ease: ease.out, delay: 0.25 + i * 0.08 }}
                       className="text-sm"
-                      style={{ color: "var(--gold-bright)" }}
+                      style={{ color: "#b89047" }}
                     >
                       +<NumberFlow value={r.qty} /> {r.name}
                     </motion.p>
@@ -451,7 +451,7 @@ function Memorial({
   }
   return (
     <div>
-      <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>
+      <p className="text-xs mb-4" style={{ color: "#3d2e1f" }}>
         {allFallen.length} souls honored across {memorials.length} trial
         {memorials.length === 1 ? "" : "s"}.
       </p>
@@ -471,7 +471,7 @@ function Memorial({
               </p>
               <p
                 className="text-[10px] flex items-center gap-1.5"
-                style={{ color: "var(--ink-secondary)" }}
+                style={{ color: "#3d2e1f" }}
               >
                 <span>Fell on floor {f.floor + 1}</span>
                 <span>·</span>
@@ -482,7 +482,7 @@ function Memorial({
                 <span>·</span>
                 <span>bond {Math.round(f.bond_percent)}%</span>
               </p>
-              <p className="text-[10px] mt-1" style={{ color: "var(--ink-tertiary)" }}>
+              <p className="text-[10px] mt-1" style={{ color: "#3d2e1f" }}>
                 {new Date(f.when).toLocaleString()}
               </p>
             </div>

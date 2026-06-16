@@ -56,14 +56,14 @@ function AkashicRecordsPage() {
       <div className="relative z-10 p-4 md:p-8 max-w-6xl mx-auto pt-20 space-y-8 min-h-screen">
         <header className="text-center space-y-2">
           <h1
-            className="text-4xl font-black tracking-widest font-display uppercase"
-            style={{ color: "var(--cyan)", textShadow: "0 0 30px rgba(0,240,255,0.4)" }}
+            className="text-4xl font-serif font-bold tracking-widest font-display uppercase"
+            style={{ color: "#b89047", textShadow: "0 0 30px rgba(0,240,255,0.4)" }}
           >
             Akashic Records
           </h1>
           <p
-            style={{ color: "var(--ink-secondary)" }}
-            className="text-sm tracking-widest font-mono"
+            style={{ color: "#3d2e1f" }}
+            className="text-sm tracking-widest font-serif"
           >
             VIEW THE ASCENSION LINEAGE OF YOUR SOULS
           </p>
@@ -73,23 +73,23 @@ function AkashicRecordsPage() {
           <>
             <p
               className="text-center text-xs tracking-widest uppercase font-bold"
-              style={{ color: "var(--cyan)", textShadow: "0 0 10px rgba(0, 240, 255, 0.5)" }}
+              style={{ color: "#b89047", textShadow: "0 0 10px rgba(0, 240, 255, 0.5)" }}
             >
               Select a soul to view its evolution milestones and future paths.
             </p>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-8">
               {monsters.map((m) => {
                 const rarity = (m.monster?.rarity || "common") as Rarity;
-                const rarityColor = RARITY_COLOR[rarity] || "var(--ink-tertiary)";
+                const rarityColor = RARITY_COLOR[rarity] || "#3d2e1f";
                 const currentStar = m.current_star ?? m.star_level ?? 1;
 
                 return (
                   <button
                     key={m.id}
                     onClick={() => setSelectedTarget(m.id)}
-                    className={`system-panel p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity} bg-black/80 border border-cyan-900/30 hover:border-cyan-400/80 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]`}
+                    className={`system-panel p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity} bg-[#f4ecd8]/80 border border-cyan-900/30 hover:border-cyan-400/80 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]`}
                   >
-                    <div className="w-14 h-14 mx-auto mb-2 rounded-lg overflow-hidden ss-pane flex items-center justify-center border border-white/5 group-hover:border-cyan-400/50 transition-colors">
+                    <div className="w-14 h-14 mx-auto mb-2 rounded-lg overflow-hidden ss-pane flex items-center justify-center border border-[#3d2e1f]/5 group-hover:border-cyan-400/50 transition-colors">
                       <img
                         src={
                           m.monster?.art_url
@@ -103,13 +103,13 @@ function AkashicRecordsPage() {
                         }}
                       />
                     </div>
-                    <div className="font-mono font-bold text-sm" style={{ color: rarityColor }}>
+                    <div className="font-serif font-bold text-sm" style={{ color: rarityColor }}>
                       {currentStar}★
                     </div>
                     <div
                       className="text-xs truncate mt-1"
                       title={m.monster?.name}
-                      style={{ color: "var(--ink-primary)" }}
+                      style={{ color: "#2a1e12" }}
                     >
                       {m.monster?.name}
                     </div>
@@ -128,8 +128,8 @@ function AkashicRecordsPage() {
           <div className="flex flex-col items-center">
             <button
               onClick={() => setSelectedTarget(null)}
-              className="mb-6 flex items-center gap-1 hover:gap-2 transition-all text-sm font-mono uppercase tracking-widest"
-              style={{ color: "var(--ink-secondary)" }}
+              className="mb-6 flex items-center gap-1 hover:gap-2 transition-all text-sm font-serif uppercase tracking-widest"
+              style={{ color: "#3d2e1f" }}
             >
               <ChevronLeft className="w-4 h-4" />
               Return to Archives

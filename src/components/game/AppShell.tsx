@@ -24,19 +24,19 @@ export function AppShell({
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   let activeTabs = null;
-  let activeColor = "var(--cyan)";
+  let activeColor = "#b89947";
   if (HUB_TABS.some((t) => t.path === pathname)) {
     activeTabs = HUB_TABS;
-    activeColor = "var(--gold-bright)";
+    activeColor = "#b89947";
   } else if (ROSTER_TABS.some((t) => t.path === pathname)) {
     activeTabs = ROSTER_TABS;
-    activeColor = "var(--cyan)";
+    activeColor = "#b89947";
   } else if (VOID_TABS.some((t) => t.path === pathname)) {
     activeTabs = VOID_TABS;
-    activeColor = "var(--ember)";
+    activeColor = "#b89947";
   } else if (ALTAR_TABS.some((t) => t.path === pathname)) {
     activeTabs = ALTAR_TABS;
-    activeColor = "var(--accent-void)";
+    activeColor = "#b89947";
   }
 
   return (
@@ -47,11 +47,17 @@ export function AppShell({
       {withHeader && <MobilePlayerHeader profile={profile} />}
       {withHeader && <PlayerHeader profile={profile} />}
       {/* Ambient background for the entire shell (can be overridden by specific routes) */}
-      <div className="fixed inset-0 pointer-events-none bg-[#050505] z-0">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.05)_0%,#050505_100%)]" />
-        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#0a0f1e]/90 to-transparent" />
-        <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div 
+          className="absolute inset-0 opacity-100"
+          style={{ 
+            backgroundImage: "url('/ancient-tome-bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }} 
+        />
+        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#2a1e12]/90 to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#2a1e12] via-[#2a1e12]/95 to-transparent" />
       </div>
 
       <main className="w-full flex-1 overflow-hidden relative z-10 flex flex-col pt-16 md:pt-20">

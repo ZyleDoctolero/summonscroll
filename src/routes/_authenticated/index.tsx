@@ -205,7 +205,7 @@ function HubPage() {
 
       {/* Lobby Environment */}
       <div className="absolute inset-0 overflow-hidden flex items-center justify-center pointer-events-none z-0">
-        <div className="absolute inset-0 bg-atmos bg-atmos-divine opacity-40 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[#f4ecd8] bg-[#f4ecd8]-divine opacity-40 mix-blend-overlay" />
         <div
           className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"
           style={{ animation: "hud-shimmer 20s linear infinite" }}
@@ -227,22 +227,22 @@ function HubPage() {
                   e.currentTarget.src = "/monsters/placeholder.png";
                 }}
               />
-              <div className="mt-4 text-center backdrop-blur-md bg-black/40 px-6 py-2 rounded-full border border-[var(--gold-primary)]/30">
-                <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+              <div className="mt-4 text-center backdrop-blur-md bg-[#f4ecd8]/40 px-6 py-2 rounded-full border border-[#b89047]/30">
+                <p className="text-sm" style={{ color: "#3d2e1f" }}>
                   Life-Bound Beast
                 </p>
-                <h2 className="text-xl font-bold" style={{ color: "var(--gold-bright)" }}>
+                <h2 className="text-xl font-bold" style={{ color: "#b89047" }}>
                   {tetheredUm.monster.name}
                 </h2>
               </div>
             </>
           ) : (
-            <div className="text-center backdrop-blur-md bg-black/40 px-8 py-6 rounded-2xl border border-[rgba(255,255,255,0.1)]">
-              <Icon name="scroll" size={48} color="var(--ink-tertiary)" className="mx-auto mb-4" />
-              <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+            <div className="text-center backdrop-blur-md bg-[#f4ecd8]/40 px-8 py-6 rounded-2xl border border-[rgba(61,46,31,0.1)]">
+              <Icon name="scroll" size={48} color="#3d2e1f" className="mx-auto mb-4" />
+              <p className="text-sm" style={{ color: "#3d2e1f" }}>
                 No Life-Bound Beast
               </p>
-              <p className="text-xs mt-2 max-w-xs" style={{ color: "var(--ink-tertiary)" }}>
+              <p className="text-xs mt-2 max-w-xs" style={{ color: "#3d2e1f" }}>
                 Go to the Compendium to tether a monster and manifest it here.
               </p>
             </div>
@@ -275,14 +275,14 @@ function HubPage() {
         {/* Quest Board Icon Button */}
         <div className="absolute right-4 bottom-28 md:right-10 md:bottom-32 pointer-events-auto">
           <button onClick={() => setShowQuestBoard(true)} className="group ss-btn-quest-board">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[var(--gold-primary)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#b89047]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <Icon
               name="checklist"
               size={32}
-              color="var(--gold-bright)"
+              color="#b89047"
               className="group-hover:drop-shadow-[0_0_8px_#fcd34d] transition-all"
             />
-            <span className="text-[10px] font-bold tracking-widest mt-1 text-[var(--gold-primary)] uppercase">
+            <span className="text-[10px] font-bold tracking-widest mt-1 text-[#b89047] uppercase">
               Quests
             </span>
 

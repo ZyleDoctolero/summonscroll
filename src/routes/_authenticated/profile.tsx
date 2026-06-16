@@ -33,7 +33,7 @@ const CLASS_INFO: Record<string, { icon: string; label: string; desc: string; co
     icon: "summon",
     label: "Mage",
     desc: "+INT, +XP, +mana regen, high risk",
-    color: "var(--cyan)",
+    color: "#b89047",
   },
   healer: {
     icon: "hp",
@@ -142,7 +142,7 @@ function ProfilePage() {
     icon: "sparkle",
     label: "None",
     desc: "Choose a class at Level 10",
-    color: "var(--ink-secondary)",
+    color: "#3d2e1f",
   };
 
   const lastClassChange = full?.profile?.last_class_change;
@@ -155,7 +155,7 @@ function ProfilePage() {
   return (
     <AppShell profile={profile}>
       <AtmosphereBackdrop realm="dark" />
-      <div className="bg-atmos bg-atmos-hub relative min-h-screen">
+      <div className="bg-[#f4ecd8] bg-[#f4ecd8]-hub relative min-h-screen">
         <div className="p-6 md:p-10 max-w-6xl">
           {/* Hero section */}
           <div className="game-panel p-5 mb-6">
@@ -164,7 +164,7 @@ function ProfilePage() {
                 {profile.display_name[0].toUpperCase()}
               </div>
               <div>
-                <h1 className="t-h1 text-2xl" style={{ color: "var(--gold-bright)" }}>
+                <h1 className="t-h1 text-2xl" style={{ color: "#b89047" }}>
                   {profile.display_name}
                 </h1>
                 <div className="flex items-center gap-2 mt-1">
@@ -179,7 +179,7 @@ function ProfilePage() {
                     />{" "}
                     {classInfo.label}
                   </span>
-                  <span className="t-label" style={{ color: "var(--ink-tertiary)" }}>
+                  <span className="t-label" style={{ color: "#3d2e1f" }}>
                     Level {profile.level}
                   </span>
                   {profile.level >= 10 && (
@@ -205,7 +205,7 @@ function ProfilePage() {
                   profile.hp <= 10
                     ? "var(--danger)"
                     : profile.hp <= 25
-                      ? "var(--gold-glow)"
+                      ? "#b89047"
                       : "var(--success)"
                 }
               />
@@ -214,7 +214,7 @@ function ProfilePage() {
                 current={profile.xp}
                 max={xpReq}
                 pct={xpPct}
-                color="var(--gold-bright)"
+                color="#b89047"
                 gradient
               />
               <Bar
@@ -249,7 +249,7 @@ function ProfilePage() {
                   >
                     {label}
                   </div>
-                  <div className="t-mono-lg font-bold" style={{ color: `var(--ss-stat-${stat})` }}>
+                  <div className="font-serif-lg font-bold" style={{ color: `var(--ss-stat-${stat})` }}>
                     {v}
                   </div>
                 </div>
@@ -257,7 +257,7 @@ function ProfilePage() {
             </div>
 
             {/* Quick stats */}
-            <div className="flex gap-4 mt-4 text-xs" style={{ color: "var(--ink-secondary)" }}>
+            <div className="flex gap-4 mt-4 text-xs" style={{ color: "#3d2e1f" }}>
               <span className="flex items-center gap-1">
                 <Icon name="sparkle" size={12} /> {full?.stats?.monstersCollected ?? 0} monsters
               </span>
@@ -278,7 +278,7 @@ function ProfilePage() {
           {/* Tabs */}
           <div
             className="flex gap-2 mb-6 border-b"
-            style={{ borderColor: "rgba(255,255,255,0.08)" }}
+            style={{ borderColor: "rgba(61,46,31,0.08)" }}
           >
             {(
               [
@@ -305,7 +305,7 @@ function ProfilePage() {
                 <div className="flex justify-between items-center mb-2">
                   <h2
                     className="t-h2 text-lg font-bold flex items-center gap-2"
-                    style={{ color: "var(--ink-primary)" }}
+                    style={{ color: "#2a1e12" }}
                   >
                     <Icon
                       name="sparkle"
@@ -316,25 +316,25 @@ function ProfilePage() {
                     Soul Load
                   </h2>
                   <div
-                    className="text-xl font-bold font-mono"
+                    className="text-xl font-bold font-serif"
                     style={{
                       color: "var(--accent-void)",
                       textShadow: "0 0 10px var(--accent-void)",
                     }}
                   >
                     {profile.soul_load_current ?? 0}{" "}
-                    <span className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+                    <span className="text-sm" style={{ color: "#3d2e1f" }}>
                       / {profile.soul_load_max ?? 10}
                     </span>
                   </div>
                 </div>
-                <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                <p className="text-xs" style={{ color: "#3d2e1f" }}>
                   Equip companions directly to your soul. Higher star ratings require more Soul Load
                   capacity.
                 </p>
 
                 {/* Progress bar */}
-                <div className="w-full h-2 rounded-full overflow-hidden bg-black/50 mt-4 border border-[rgba(255,255,255,0.1)]">
+                <div className="w-full h-2 rounded-full overflow-hidden bg-[#f4ecd8]/50 mt-4 border border-[rgba(61,46,31,0.1)]">
                   <div
                     className="h-full transition-all duration-1000"
                     style={{
@@ -360,7 +360,7 @@ function ProfilePage() {
                     >
                       <div
                         className="absolute top-2 left-2 text-[10px] uppercase font-bold tracking-widest"
-                        style={{ color: "var(--ink-tertiary)" }}
+                        style={{ color: "#3d2e1f" }}
                       >
                         {slot}
                       </div>
@@ -376,10 +376,10 @@ function ProfilePage() {
                             alt={equippedMonster.monster.name}
                             className="w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] my-2"
                           />
-                          <p className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
+                          <p className="text-sm font-bold" style={{ color: "#2a1e12" }}>
                             {equippedMonster.monster.name}
                           </p>
-                          <p className="text-[10px] mb-3" style={{ color: "var(--ink-secondary)" }}>
+                          <p className="text-[10px] mb-3" style={{ color: "#3d2e1f" }}>
                             Load: {equippedMonster.star_rating ?? 1}
                           </p>
 
@@ -393,18 +393,18 @@ function ProfilePage() {
                         </>
                       ) : (
                         <>
-                          <div className="w-20 h-20 border-2 border-dashed border-white/20 rounded-full flex items-center justify-center my-2 bg-black/40">
+                          <div className="w-20 h-20 border-2 border-dashed border-[#3d2e1f]/20 rounded-full flex items-center justify-center my-2 bg-[#f4ecd8]/40">
                             <Icon
                               name={
                                 slot === "weapon" ? "swords" : slot === "armor" ? "shield" : "paw"
                               }
                               size={24}
-                              color="var(--ink-tertiary)"
+                              color="#3d2e1f"
                             />
                           </div>
                           <p
                             className="text-[10px] text-center max-w-[150px] mb-3"
-                            style={{ color: "var(--ink-tertiary)" }}
+                            style={{ color: "#3d2e1f" }}
                           >
                             No soul bound.
                           </p>
@@ -415,7 +415,7 @@ function ProfilePage() {
                                 equipMut.mutate({ slot, monsterId: e.target.value });
                               }
                             }}
-                            className="ss-btn w-full py-1 text-xs bg-black/80 border-white/20 text-white"
+                            className="ss-btn w-full py-1 text-xs bg-[#f4ecd8]/80 border-[#3d2e1f]/20 text-[#3d2e1f]"
                             value=""
                           >
                             <option value="" disabled>
@@ -465,7 +465,7 @@ function ProfilePage() {
                     key={a.id}
                     className="ss-card rounded-lg p-4 text-center"
                     style={{
-                      borderColor: a.unlocked ? "var(--gold-bright)" : undefined,
+                      borderColor: a.unlocked ? "#b89047" : undefined,
                       opacity: a.unlocked ? 1 : 0.4,
                     }}
                   >
@@ -473,24 +473,24 @@ function ProfilePage() {
                       {a.unlocked ? (
                         a.icon
                       ) : (
-                        <Icon name="close" size={24} color="var(--ink-tertiary)" />
+                        <Icon name="close" size={24} color="#3d2e1f" />
                       )}
                     </div>
                     <p
                       className="text-xs font-bold"
-                      style={{ color: a.unlocked ? "var(--ink-primary)" : "var(--ink-tertiary)" }}
+                      style={{ color: a.unlocked ? "#2a1e12" : "#3d2e1f" }}
                     >
                       {a.name}
                     </p>
-                    <p className="text-[10px] mt-1" style={{ color: "var(--ink-tertiary)" }}>
+                    <p className="text-[10px] mt-1" style={{ color: "#3d2e1f" }}>
                       {a.description}
                     </p>
                     {a.reward_crystals > 0 && (
                       <p
                         className="text-[10px] mt-1 flex items-center justify-center gap-0.5"
-                        style={{ color: "var(--cyan)" }}
+                        style={{ color: "#b89047" }}
                       >
-                        <Icon name="crystal" size={10} color="var(--cyan)" />+{a.reward_crystals}
+                        <Icon name="crystal" size={10} color="#b89047" />+{a.reward_crystals}
                       </p>
                     )}
                   </div>
@@ -532,20 +532,20 @@ function ProfilePage() {
                             size={28}
                             color={
                               inv.item_type === "egg"
-                                ? "var(--gold-bright)"
+                                ? "#b89047"
                                 : inv.item_type === "realm_potion"
                                   ? "var(--violet)"
                                   : inv.item_type === "food"
                                     ? "var(--ember)"
-                                    : "var(--ink-secondary)"
+                                    : "#3d2e1f"
                             }
                             className="lucide-glow"
                           />
                         </div>
-                        <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
+                        <p className="text-xs font-bold" style={{ color: "#2a1e12" }}>
                           {inv.item_name}
                         </p>
-                        <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
+                        <p className="text-[10px]" style={{ color: "#3d2e1f" }}>
                           ×{inv.quantity}
                         </p>
                       </div>
@@ -559,7 +559,7 @@ function ProfilePage() {
                 <div>
                   <h3
                     className="t-h2 text-lg font-bold mt-6 mb-3"
-                    style={{ color: "var(--ink-primary)" }}
+                    style={{ color: "#2a1e12" }}
                   >
                     Pets &amp; Mounts
                   </h3>
@@ -576,14 +576,14 @@ function ProfilePage() {
                             <Icon
                               name={pet.is_mount ? "mount" : "pet"}
                               size={28}
-                              color={pet.is_mount ? "var(--gold-bright)" : "var(--cyan)"}
+                              color={pet.is_mount ? "#b89047" : "#b89047"}
                               className="lucide-glow"
                             />
                           </div>
-                          <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
+                          <p className="text-xs font-bold" style={{ color: "#2a1e12" }}>
                             {pet.pet_name}
                           </p>
-                          <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
+                          <p className="text-[10px]" style={{ color: "#3d2e1f" }}>
                             {pet.is_mount ? "Mount" : `Pet · Fed ${pet.food_fed}/50`}
                           </p>
                         </div>
@@ -602,13 +602,13 @@ function ProfilePage() {
               <div className="ss-card">
                 <h3
                   className="t-h2 font-bold text-lg mb-3 flex items-center gap-2"
-                  style={{ color: "var(--ink-primary)" }}
+                  style={{ color: "#2a1e12" }}
                 >
                   Talents
                 </h3>
-                <div className="text-sm mb-4" style={{ color: "var(--ink-secondary)" }}>
+                <div className="text-sm mb-4" style={{ color: "#3d2e1f" }}>
                   You earn 1 Talent Point every 5 levels. Points available:{" "}
-                  <strong className="text-white">
+                  <strong className="text-[#3d2e1f]">
                     {Math.max(
                       0,
                       Math.floor(profile.level / 5) -
@@ -642,16 +642,16 @@ function ProfilePage() {
                     return (
                       <div
                         key={t.id}
-                        className="flex justify-between items-center p-3 rounded-lg ss-pane border border-white/5"
+                        className="flex justify-between items-center p-3 rounded-lg ss-pane border border-[#3d2e1f]/5"
                       >
                         <div>
-                          <div className="font-bold text-sm text-[var(--ink-primary)]">
+                          <div className="font-bold text-sm text-[#2a1e12]">
                             {t.name}{" "}
-                            <span className="text-xs font-normal text-[var(--ink-secondary)]">
+                            <span className="text-xs font-normal text-[#3d2e1f]">
                               ({currentRank}/{t.max})
                             </span>
                           </div>
-                          <div className="text-xs text-[var(--ink-tertiary)]">{t.desc}</div>
+                          <div className="text-xs text-[#3d2e1f]">{t.desc}</div>
                         </div>
                         <button
                           onClick={() =>
@@ -674,13 +674,13 @@ function ProfilePage() {
               </div>
 
               <div className="ss-card">
-                <h2 className="text-lg font-bold mb-4" style={{ color: "var(--ink-primary)" }}>
+                <h2 className="text-lg font-bold mb-4" style={{ color: "#2a1e12" }}>
                   Class Details
                 </h2>
-                <p className="text-sm mb-2" style={{ color: "var(--ink-secondary)" }}>
+                <p className="text-sm mb-2" style={{ color: "#3d2e1f" }}>
                   {classInfo.desc}
                 </p>
-                <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                <p className="text-xs" style={{ color: "#3d2e1f" }}>
                   {profile.class !== "none"
                     ? "Equipment matching your class gets a 50% stat bonus!"
                     : "Choose a class at Level 10 to unlock class bonuses and skills."}
@@ -689,7 +689,7 @@ function ProfilePage() {
 
               {/* Heatmap */}
               <div className="ss-card">
-                <h3 className="font-bold text-sm mb-4" style={{ color: "var(--ink-secondary)" }}>
+                <h3 className="font-bold text-sm mb-4" style={{ color: "#3d2e1f" }}>
                   30-Day Activity
                 </h3>
                 <div className="flex gap-1 overflow-x-auto pb-2 no-scrollbar">
@@ -700,12 +700,12 @@ function ProfilePage() {
                     const c = heatmapQ.data?.[ds] ?? 0;
                     const color =
                       c === 0
-                        ? "rgba(255,255,255,0.06)"
+                        ? "rgba(61,46,31,0.06)"
                         : c < 3
                           ? "rgba(93,211,158,0.5)"
                           : c < 6
                             ? "var(--success)"
-                            : "var(--gold-bright)";
+                            : "#b89047";
                     return (
                       <div
                         key={i}
@@ -729,7 +729,7 @@ function ProfilePage() {
           onClick={() => setShowClassPicker(false)}
         >
           <div onClick={(e) => e.stopPropagation()} className="ss-modal">
-            <h2 className="text-xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="text-xl font-bold mb-1" style={{ color: "#b89047" }}>
               Choose Your Class
             </h2>
             {profile.class !== "none" ? (
@@ -738,14 +738,14 @@ function ProfilePage() {
                   Class change is on cooldown for {cooldownDays} more day(s).
                 </p>
               ) : (
-                <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>
+                <p className="text-xs mb-4" style={{ color: "#3d2e1f" }}>
                   Changing class costs{" "}
                   <span
                     className="inline-flex items-center gap-0.5"
-                    style={{ color: "var(--gold-bright)" }}
+                    style={{ color: "#b89047" }}
                   >
                     500
-                    <Icon name="crystal" size={11} color="var(--cyan)" />
+                    <Icon name="crystal" size={11} color="#b89047" />
                   </span>{" "}
                   and has a 7-day cooldown.
                 </p>
@@ -776,7 +776,7 @@ function ProfilePage() {
                     <p className="font-bold text-sm" style={{ color: info.color }}>
                       {info.label}
                     </p>
-                    <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>
+                    <p className="text-[10px] mt-1" style={{ color: "#3d2e1f" }}>
                       {info.desc}
                     </p>
                   </button>
@@ -809,23 +809,23 @@ function Bar({
     <div>
       <div
         className="flex justify-between text-[10px] uppercase tracking-wider mb-0.5"
-        style={{ color: "var(--ink-secondary)" }}
+        style={{ color: "#3d2e1f" }}
       >
         <span>{label}</span>
-        <span className="t-mono" style={{ color }}>
+        <span className="font-serif" style={{ color }}>
           {current}/{max}
         </span>
       </div>
       <div
         className="h-2 rounded-full overflow-hidden"
-        style={{ background: "rgba(255,255,255,0.06)" }}
+        style={{ background: "rgba(61,46,31,0.06)" }}
       >
         <div
           className="h-full rounded-full"
           style={{
             width: `${pct}%`,
             background: gradient
-              ? "linear-gradient(90deg,var(--gold-glow),var(--gold-bright))"
+              ? "linear-gradient(90deg,#b89047,#b89047)"
               : color,
           }}
         />
@@ -857,16 +857,16 @@ function VoidFrontierSeal({ streak }: { streak: number }) {
         style={{ color: "var(--violet)" }}
       >
         <span>Void Frontier Seal</span>
-        <span className="t-mono">
+        <span className="font-serif">
           {streak}/{goal} Days
         </span>
       </h3>
-      <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
+      <p className="text-xs mb-3" style={{ color: "#3d2e1f" }}>
         {message}
       </p>
       <div
         className="h-2 rounded-full overflow-hidden"
-        style={{ background: "rgba(255,255,255,0.06)" }}
+        style={{ background: "rgba(61,46,31,0.06)" }}
       >
         <div
           className="h-full rounded-full"

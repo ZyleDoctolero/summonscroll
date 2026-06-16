@@ -57,10 +57,10 @@ function AuthPage() {
         .pixel-font { font-family: 'Press Start 2P', monospace; }
         
         .pixel-panel {
-          background: rgba(10, 5, 18, 0.95);
-          border: 4px solid var(--gold-bright);
+          background: #f4ecd8;
+          border: 4px solid #b89047;
           box-shadow: inset -6px -6px 0px 0px rgba(0,0,0,0.8),
-                      inset 6px 6px 0px 0px rgba(255,255,255,0.1),
+                      inset 6px 6px 0px 0px rgba(61,46,31,0.1),
                       10px 10px 0px 0px rgba(0,0,0,0.8);
           position: relative;
         }
@@ -69,8 +69,8 @@ function AuthPage() {
           content: "";
           position: absolute;
           top: -8px; bottom: -8px; left: 8px; right: 8px;
-          border-left: 4px solid var(--gold-bright);
-          border-right: 4px solid var(--gold-bright);
+          border-left: 4px solid #b89047;
+          border-right: 4px solid #b89047;
           pointer-events: none;
         }
 
@@ -78,13 +78,13 @@ function AuthPage() {
           content: "";
           position: absolute;
           left: -8px; right: -8px; top: 8px; bottom: 8px;
-          border-top: 4px solid var(--gold-bright);
-          border-bottom: 4px solid var(--gold-bright);
+          border-top: 4px solid #b89047;
+          border-bottom: 4px solid #b89047;
           pointer-events: none;
         }
 
         .pixel-btn {
-          background: var(--gold-bright);
+          background: #b89047;
           color: #000;
           border: 4px solid #fff;
           box-shadow: inset -4px -4px 0px 0px rgba(0,0,0,0.3);
@@ -108,32 +108,32 @@ function AuthPage() {
         .pixel-input {
           background: #111;
           color: #fff;
-          border: 4px solid var(--ink-secondary);
+          border: 4px solid #3d2e1f;
           outline: none;
           padding: 12px;
           width: 100%;
         }
 
         .pixel-input:focus {
-          border-color: var(--cyan);
+          border-color: #b89047;
           background: #001a22;
         }
 
         .pixel-tab {
           background: transparent;
-          color: var(--ink-secondary);
+          color: #3d2e1f;
           border: none;
           cursor: pointer;
         }
         
         .pixel-tab.active {
-          color: var(--gold-bright);
+          color: #b89047;
           text-shadow: 2px 2px 0px #000;
         }
 
         .pixel-tab.active::before {
           content: "► ";
-          color: var(--cyan);
+          color: #b89047;
         }
       `}</style>
 
@@ -159,10 +159,10 @@ function AuthPage() {
       />
 
       <div className="relative w-full max-w-md pixel-panel p-8 z-10 mx-4">
-        <h1 className="text-center text-xl md:text-2xl pixel-font leading-relaxed" style={{ color: "var(--gold-bright)", textShadow: "4px 4px 0px #000" }}>
+        <h1 className="text-center text-xl md:text-2xl pixel-font leading-relaxed" style={{ color: "#b89047", textShadow: "4px 4px 0px #000" }}>
           SUMMONSCROLL
         </h1>
-        <p className="text-center text-[10px] mt-4 pixel-font opacity-80" style={{ color: "var(--cyan)", textShadow: "2px 2px 0px #000" }}>
+        <p className="text-center text-[10px] mt-4 pixel-font opacity-80" style={{ color: "#b89047", textShadow: "2px 2px 0px #000" }}>
           INSERT COIN TO START
         </p>
 
@@ -215,7 +215,7 @@ function AuthPage() {
                 type="button"
                 onClick={() => setShow((s) => !s)}
                 className="absolute right-4 top-1/2 -translate-y-1/2"
-                style={{ color: "var(--ink-secondary)" }}
+                style={{ color: "#3d2e1f" }}
               >
                 {show ? "HIDE" : "SHOW"}
               </button>
@@ -248,7 +248,7 @@ function AuthPage() {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <div className="mb-2" style={{ color: "var(--gold-muted)", textShadow: "2px 2px 0px #000" }}>
+      <div className="mb-2" style={{ color: "#8a6d3b", textShadow: "2px 2px 0px #000" }}>
         {label}
       </div>
       {children}

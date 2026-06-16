@@ -56,37 +56,37 @@ function ShopPage() {
     <AppShell profile={profile}>
       <AtmosphereBackdrop realm="myth" />
       <div className="p-6 md:p-10 max-w-6xl">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "#b89047" }}>
           The Bazaar
         </h1>
-        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
+        <p className="text-sm mb-6" style={{ color: "#3d2e1f" }}>
           Spend your hard-earned crystals on equipment, potions, and quest scrolls.
         </p>
 
         {/* Balance */}
-        <div className="flex gap-4 mb-6 text-sm" style={{ color: "var(--ink-secondary)" }}>
+        <div className="flex gap-4 mb-6 text-sm" style={{ color: "#3d2e1f" }}>
           <span>
-            <Icon name="gold" size={13} color="var(--gold-bright)" />{" "}
-            <b className="t-mono" style={{ color: "var(--gold-bright)" }}>
+            <Icon name="gold" size={13} color="#b89047" />{" "}
+            <b className="font-serif" style={{ color: "#b89047" }}>
               {profile.gold.toLocaleString()}
             </b>
           </span>
           <span>
-            <Icon name="crystal" size={13} color="var(--cyan)" />{" "}
-            <b className="t-mono" style={{ color: "var(--cyan)" }}>
+            <Icon name="crystal" size={13} color="#b89047" />{" "}
+            <b className="font-serif" style={{ color: "#b89047" }}>
               {profile.crystals.toLocaleString()}
             </b>
           </span>
           <span>
             <Icon name="seal" size={13} color="var(--violet)" />{" "}
-            <b className="t-mono" style={{ color: "var(--violet)" }}>
+            <b className="font-serif" style={{ color: "var(--violet)" }}>
               {profile.pact_seals}
             </b>
           </span>
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+        <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
           {(
             [
               ["potion", "Potions & Items"],
@@ -109,14 +109,14 @@ function ShopPage() {
         {tab === "armoire" && (
           <div className="ss-card-hero text-center mb-6 p-8 flex flex-col items-center">
             <div className="mb-4">
-              <Icon name="stone" size={48} color="var(--gold-bright)" className="lucide-glow" />
+              <Icon name="stone" size={48} color="#b89047" className="lucide-glow" />
             </div>
-            <h2 className="text-xl font-bold mb-2" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="text-xl font-bold mb-2" style={{ color: "#b89047" }}>
               Enchanted Armoire
             </h2>
-            <p className="text-sm mb-4" style={{ color: "var(--ink-secondary)" }}>
+            <p className="text-sm mb-4" style={{ color: "#3d2e1f" }}>
               Spend 100{" "}
-              <span className="inline-flex items-center gap-0.5" style={{ color: "var(--cyan)" }}>
+              <span className="inline-flex items-center gap-0.5" style={{ color: "#b89047" }}>
                 <Icon name="crystal" size={12} /> Crystals
               </span>{" "}
               for a chance at rare equipment, food for your pets, or bonus XP!
@@ -164,20 +164,20 @@ function ShopPage() {
                 item.currency === "pact_seals"
                   ? "var(--violet)"
                   : item.currency === "gold"
-                    ? "var(--gold-bright)"
-                    : "var(--cyan)";
+                    ? "#b89047"
+                    : "#b89047";
               return (
                 <div key={item.id} className="ss-card">
-                  <h3 className="font-bold text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
+                  <h3 className="font-bold text-sm mb-1" style={{ color: "#2a1e12" }}>
                     {item.name}
                   </h3>
-                  <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
+                  <p className="text-xs mb-3" style={{ color: "#3d2e1f" }}>
                     {item.description}
                   </p>
                   <div className="flex items-center justify-between">
                     <span
-                      className="t-mono font-bold text-sm flex items-center gap-1"
-                      style={{ color: canAfford ? "var(--gold-bright)" : "var(--danger)" }}
+                      className="font-serif font-bold text-sm flex items-center gap-1"
+                      style={{ color: canAfford ? "#b89047" : "var(--danger)" }}
                     >
                       <Icon name={iconName} size={14} color={iconColor} />
                       {item.price}

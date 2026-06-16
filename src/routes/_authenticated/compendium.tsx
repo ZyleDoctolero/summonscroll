@@ -60,10 +60,10 @@ function PillBtn({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all border whitespace-nowrap ${
+      className={`px-3 py-1.5 rounded-full text-xs font-serif font-bold transition-all border whitespace-nowrap ${
         active
-          ? "bg-[var(--gold-primary)]/20 border-[var(--gold-primary)] text-[var(--gold-primary)] shadow-[0_0_10px_rgba(212,175,63,0.3)]"
-          : "bg-black/40 border-white/10 text-white/60 hover:text-white/90 hover:border-white/30"
+          ? "bg-[#b89047]/20 border-[#b89047] text-[#b89047] shadow-[0_0_10px_rgba(212,175,63,0.3)]"
+          : "bg-[#f4ecd8]/40 border-[#3d2e1f]/10 text-[#3d2e1f]/60 hover:text-[#3d2e1f]/90 hover:border-[#3d2e1f]/30"
       }`}
     >
       {children}
@@ -138,7 +138,7 @@ function CompendiumPage() {
     return (
       <div
         className="min-h-screen grid place-items-center"
-        style={{ color: "var(--ink-secondary)" }}
+        style={{ color: "#3d2e1f" }}
       >
         Loading the records…
       </div>
@@ -156,13 +156,13 @@ function CompendiumPage() {
       <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen pt-20">
         <header className="mb-6 relative z-20">
           <h1
-            className="text-4xl font-black tracking-tighter uppercase italic flex items-center gap-3 mb-2"
-            style={{ color: "var(--gold-bright)", textShadow: "0 0 20px var(--gold-bright)" }}
+            className="text-4xl font-serif font-bold tracking-tighter uppercase italic flex items-center gap-3 mb-2"
+            style={{ color: "#b89047", textShadow: "0 0 20px #b89047" }}
           >
             <Icon name="sparkle" size={32} />
             Compendium
           </h1>
-          <p className="text-sm max-w-xl" style={{ color: "var(--ink-secondary)" }}>
+          <p className="text-sm max-w-xl font-serif" style={{ color: "#3d2e1f" }}>
             Explore the Codex of all known entities. Click on your owned monsters to view their
             details and equip Void Artifacts.
           </p>
@@ -171,19 +171,19 @@ function CompendiumPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 relative z-20 items-start">
           {/* Left Sidebar: Filters */}
           <div className="flex flex-col gap-6">
-            <div className="ss-card p-4 border border-[rgba(255,255,255,0.1)]">
-              <h3 className="t-h3 mb-3 text-sm" style={{ color: "var(--ink-primary)" }}>
+            <div className="ss-card p-4 border border-[rgba(61,46,31,0.1)]">
+              <h3 className="font-serif mb-3 text-sm" style={{ color: "#2a1e12" }}>
                 Progress
               </h3>
-              <div className="text-2xl font-bold font-mono" style={{ color: "var(--gold-bright)" }}>
+              <div className="text-2xl font-bold font-serif" style={{ color: "#b89047" }}>
                 {myMonstersMap.size}{" "}
-                <span className="text-sm text-white/50">
+                <span className="text-sm text-[#3d2e1f]/50">
                   / {monstersQ.data?.monsters?.length ?? 0}
                 </span>
               </div>
-              <div className="w-full h-1.5 bg-black/50 mt-2 rounded-full overflow-hidden">
+              <div className="w-full h-1.5 bg-[#f4ecd8]/50 mt-2 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-[var(--gold-primary)]"
+                  className="h-full bg-[#b89047]"
                   style={{
                     width: `${(myMonstersMap.size / (monstersQ.data?.monsters?.length || 1)) * 100}%`,
                   }}
@@ -272,11 +272,11 @@ function CompendiumPage() {
                     className="ss-card relative overflow-hidden group transition-all hover:scale-105 cursor-pointer"
                     style={{
                       aspectRatio: "3/4",
-                      borderColor: owned ? color : "rgba(255,255,255,0.1)",
+                      borderColor: owned ? color : "rgba(61,46,31,0.1)",
                       filter: owned ? "none" : "grayscale(100%) opacity(50%)",
                       background: owned
-                        ? "linear-gradient(180deg, rgba(26,11,46,0.9) 0%, rgba(10,5,18,0.95) 100%)"
-                        : "black",
+                        ? "linear-gradient(180deg, #f4ecd8 0%, #e0d8c4 100%)"
+                        : "#f4ecd8",
                     }}
                   >
                     <div className="absolute inset-0 p-2 flex flex-col items-center justify-center">
@@ -286,28 +286,33 @@ function CompendiumPage() {
                           `/sprites/monsters/${m.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
                         }
                         alt={m.name}
-                        className="w-16 h-16 object-contain mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                        className="w-16 h-16 object-cover mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                        style={{
+                          mixBlendMode: "multiply",
+                          maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 80%)",
+                          WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 80%)"
+                        }}
                         onError={(e) => {
                           e.currentTarget.src = "/monsters/placeholder.png";
                         }}
                       />
                       <span
                         className="text-[10px] font-bold text-center w-full truncate px-1"
-                        style={{ color: owned ? "var(--ink-primary)" : "var(--ink-tertiary)" }}
+                        style={{ color: owned ? "#2a1e12" : "#3d2e1f" }}
                       >
                         {owned ? m.name : "???"}
                       </span>
                     </div>
                     {owned && (
                       <div
-                        className="absolute top-1 left-1 text-[8px] uppercase tracking-widest font-bold px-1 rounded bg-black/80 border"
+                        className="absolute top-1 left-1 text-[8px] uppercase font-serif tracking-widest font-bold px-1 rounded bg-[#f4ecd8]/80 border"
                         style={{ color, borderColor: color }}
                       >
                         {m.rarity}
                       </div>
                     )}
                     {ownsList.length > 1 && (
-                      <div className="absolute top-1 right-1 text-[8px] bg-white/20 px-1 rounded font-bold">
+                      <div className="absolute top-1 right-1 text-[8px] bg-[#3d2e1f]/20 text-[#3d2e1f] px-1 rounded font-bold font-serif">
                         x{ownsList.length}
                       </div>
                     )}
@@ -340,17 +345,17 @@ function CompendiumPage() {
           >
             {/* Left: Monster Portrait */}
             <div className="w-full md:w-1/3 flex flex-col items-center">
-              <h2 className="t-h2 text-xl mb-4 text-center" style={{ color: "var(--gold-bright)" }}>
+              <h2 className="t-h2 text-xl mb-4 text-center" style={{ color: "#b89047" }}>
                 {selectedUM.monster.name}
               </h2>
               <div
                 className="w-48 h-48 rounded-xl border-2 flex flex-col items-center justify-center ss-pane relative overflow-hidden mb-4"
                 style={{ borderColor: RARITY_COLOR[selectedUM.monster.rarity as Rarity] }}
               >
-                <div className="absolute top-2 left-2 text-xs font-mono font-bold bg-black/50 px-1.5 rounded text-white z-10">
+                <div className="absolute top-2 left-2 text-xs font-serif font-bold bg-[#f4ecd8]/50 px-1.5 rounded text-[#3d2e1f] z-10">
                   Lv. {selectedUM.level}
                 </div>
-                <div className="absolute top-2 right-2 text-xs font-mono font-bold bg-black/50 px-1.5 rounded text-[var(--gold-bright)] z-10">
+                <div className="absolute top-2 right-2 text-xs font-serif font-bold bg-[#f4ecd8]/50 px-1.5 rounded text-[#b89047] z-10">
                   {selectedUM.current_star ?? selectedUM.star_level ?? 1}★
                 </div>
                 <img
@@ -359,23 +364,28 @@ function CompendiumPage() {
                     `/sprites/monsters/${selectedUM.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
                   }
                   alt={selectedUM.monster.name}
-                  className="w-full h-full object-contain p-2"
+                  className="w-[120%] h-[120%] object-cover p-2"
+                  style={{
+                    mixBlendMode: "multiply",
+                    maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 70%)",
+                    WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 70%)"
+                  }}
                   onError={(e) => {
                     e.currentTarget.src = "/monsters/placeholder.png";
                   }}
                 />
               </div>
 
-              <div className="flex w-full mt-2 rounded border border-white/10 overflow-hidden text-xs font-bold uppercase tracking-widest">
+              <div className="flex w-full mt-2 rounded border border-[#3d2e1f]/10 overflow-hidden text-xs font-bold uppercase tracking-widest">
                 <button
                   onClick={() => setModalTab("details")}
-                  className={`flex-1 py-2 text-center transition-colors ${modalTab === "details" ? "bg-[var(--gold-bright)] text-black" : "bg-black text-white/50 hover:bg-white/5"}`}
+                  className={`flex-1 py-2 text-center transition-colors ${modalTab === "details" ? "bg-[#b89047] text-black" : "bg-[#f4ecd8] text-[#3d2e1f]/50 hover:bg-[#3d2e1f]/5"}`}
                 >
                   Stats
                 </button>
                 <button
                   onClick={() => setModalTab("equipment")}
-                  className={`flex-1 py-2 text-center transition-colors ${modalTab === "equipment" ? "bg-[var(--cyan)] text-black" : "bg-black text-white/50 hover:bg-white/5"}`}
+                  className={`flex-1 py-2 text-center transition-colors ${modalTab === "equipment" ? "bg-[#b89047] text-black" : "bg-[#f4ecd8] text-[#3d2e1f]/50 hover:bg-[#3d2e1f]/5"}`}
                 >
                   Void Gear
                 </button>
@@ -387,48 +397,48 @@ function CompendiumPage() {
               {modalTab === "details" ? (
                 <div className="space-y-4">
                   <div className="ss-card p-4">
-                    <p className="text-xs uppercase tracking-widest font-bold mb-2 text-white/50">
+                    <p className="text-xs uppercase tracking-widest font-bold mb-2 text-[#3d2e1f]/50">
                       Combat Stats
                     </p>
-                    <div className="grid grid-cols-2 gap-4 font-mono text-sm">
-                      <div className="flex justify-between border-b border-white/10 pb-1">
-                        <span className="text-white/60">HP</span>
+                    <div className="grid grid-cols-2 gap-4 font-serif text-sm">
+                      <div className="flex justify-between border-b border-[#3d2e1f]/10 pb-1">
+                        <span className="text-[#3d2e1f]/60">HP</span>
                         <span className="text-[var(--success)]">
                           {selectedUM.monster.base_hp + selectedUM.level * 10}
                         </span>
                       </div>
-                      <div className="flex justify-between border-b border-white/10 pb-1">
-                        <span className="text-white/60">ATK</span>
+                      <div className="flex justify-between border-b border-[#3d2e1f]/10 pb-1">
+                        <span className="text-[#3d2e1f]/60">ATK</span>
                         <span className="text-[var(--danger)]">
                           {selectedUM.monster.base_atk + selectedUM.level * 2}
                         </span>
                       </div>
-                      <div className="flex justify-between border-b border-white/10 pb-1">
-                        <span className="text-white/60">DEF</span>
-                        <span className="text-[var(--gold-bright)]">
+                      <div className="flex justify-between border-b border-[#3d2e1f]/10 pb-1">
+                        <span className="text-[#3d2e1f]/60">DEF</span>
+                        <span className="text-[#b89047]">
                           {selectedUM.monster.base_def + selectedUM.level * 1}
                         </span>
                       </div>
-                      <div className="flex justify-between border-b border-white/10 pb-1">
-                        <span className="text-white/60">Bond</span>
+                      <div className="flex justify-between border-b border-[#3d2e1f]/10 pb-1">
+                        <span className="text-[#3d2e1f]/60">Bond</span>
                         <span className="text-pink-400">{selectedUM.bond_percent}%</span>
                       </div>
                     </div>
                   </div>
                   <div className="ss-card p-4">
-                    <p className="text-xs uppercase tracking-widest font-bold mb-2 text-white/50">
+                    <p className="text-xs uppercase tracking-widest font-bold mb-2 text-[#3d2e1f]/50">
                       Abyssal Lineage
                     </p>
                     <p className="text-sm">
-                      <strong className="text-[var(--cyan)]">Class:</strong>{" "}
+                      <strong className="text-[#b89047]">Class:</strong>{" "}
                       {selectedUM.current_class || selectedUM.monster.role}
                     </p>
                     <p className="text-sm mt-1">
-                      <strong className="text-[var(--cyan)]">Title:</strong>{" "}
+                      <strong className="text-[#b89047]">Title:</strong>{" "}
                       {selectedUM.title || "None"}
                     </p>
                     <p className="text-sm mt-1">
-                      <strong className="text-[var(--cyan)]">Corruption:</strong>{" "}
+                      <strong className="text-[#b89047]">Corruption:</strong>{" "}
                       {selectedUM.corruption_level ?? 0}%
                     </p>
                   </div>
@@ -436,7 +446,7 @@ function CompendiumPage() {
               ) : (
                 <div className="space-y-4">
                   {/* Equipped Artifacts */}
-                  <h3 className="text-xs uppercase tracking-widest font-bold mb-2 text-[var(--cyan)]">
+                  <h3 className="text-xs uppercase tracking-widest font-bold mb-2 text-[#b89047]">
                     Equipped Artifacts ({equippedArtifacts.length}/4)
                   </h3>
                   <div className="grid grid-cols-2 gap-2">
@@ -446,7 +456,7 @@ function CompendiumPage() {
                         return (
                           <div
                             key={art.id}
-                            className="ss-card p-2 border-[var(--cyan)] relative group"
+                            className="ss-card p-2 border-[#b89047] relative group"
                           >
                             <button
                               onClick={() => unequipMut.mutate(art.id)}
@@ -454,17 +464,17 @@ function CompendiumPage() {
                             >
                               Unequip
                             </button>
-                            <p className="text-[10px] font-bold text-[var(--gold-bright)]">
+                            <p className="text-[10px] font-bold text-[#b89047]">
                               +{art.enhancement_level} {art.set_name}
                             </p>
-                            <p className="text-xs text-white font-mono">{art.main_stat}</p>
+                            <p className="text-xs text-[#3d2e1f] font-serif">{art.main_stat}</p>
                           </div>
                         );
                       }
                       return (
                         <div
                           key={i}
-                          className="ss-card p-2 border-dashed border-white/20 flex items-center justify-center min-h-[60px] opacity-50"
+                          className="ss-card p-2 border-dashed border-[#3d2e1f]/20 flex items-center justify-center min-h-[60px] opacity-50"
                         >
                           <span className="text-[10px] uppercase font-bold tracking-widest">
                             Empty Slot
@@ -474,14 +484,14 @@ function CompendiumPage() {
                     })}
                   </div>
 
-                  <hr className="border-white/10 my-4" />
+                  <hr className="border-[#3d2e1f]/10 my-4" />
 
                   {/* Inventory */}
-                  <h3 className="text-xs uppercase tracking-widest font-bold mb-2 text-white/50">
+                  <h3 className="text-xs uppercase tracking-widest font-bold mb-2 text-[#3d2e1f]/50">
                     Void Artifact Inventory
                   </h3>
                   {availableArtifacts.length === 0 ? (
-                    <div className="text-center p-4 opacity-50 text-xs italic font-mono">
+                    <div className="text-center p-4 opacity-50 text-xs italic font-serif">
                       Your inventory is empty. Conquer the Void to obtain Artifacts.
                     </div>
                   ) : (
@@ -489,20 +499,20 @@ function CompendiumPage() {
                       {availableArtifacts.map((art: VoidArtifact) => (
                         <div
                           key={art.id}
-                          className="ss-card p-2 border-white/20 flex flex-col justify-between"
+                          className="ss-card p-2 border-[#3d2e1f]/20 flex flex-col justify-between"
                         >
                           <div>
-                            <p className="text-[10px] font-bold text-white/70">
+                            <p className="text-[10px] font-bold text-[#3d2e1f]/70">
                               +{art.enhancement_level} {art.set_name}
                             </p>
-                            <p className="text-xs text-white font-mono">{art.main_stat}</p>
+                            <p className="text-xs text-[#3d2e1f] font-serif">{art.main_stat}</p>
                           </div>
                           <button
                             disabled={equippedArtifacts.length >= 4 || equipMut.isPending}
                             onClick={() =>
                               equipMut.mutate({ artifactId: art.id, monsterId: selectedUM.id })
                             }
-                            className="mt-2 text-[10px] bg-white/10 hover:bg-[var(--cyan)] hover:text-black transition-colors rounded py-1 font-bold uppercase tracking-widest"
+                            className="mt-2 text-[10px] bg-[#3d2e1f]/10 hover:bg-[#b89047] hover:text-black transition-colors rounded py-1 font-bold uppercase tracking-widest"
                           >
                             Equip
                           </button>
@@ -515,7 +525,7 @@ function CompendiumPage() {
             </div>
 
             <button
-              className="absolute -top-4 -right-4 w-10 h-10 bg-black border border-white/20 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:border-white hover:bg-red-500 transition-all z-50"
+              className="absolute -top-4 -right-4 w-10 h-10 bg-[#f4ecd8] border border-[#3d2e1f]/20 rounded-full flex items-center justify-center text-[#3d2e1f]/50 hover:text-[#3d2e1f] hover:border-[#3d2e1f] hover:bg-red-500 transition-all z-50"
               onClick={() => setSelectedUM(null)}
             >
               ×

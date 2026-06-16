@@ -4,14 +4,14 @@ import { motion } from "motion/react";
 import { HUB_TABS, ROSTER_TABS, VOID_TABS, ALTAR_TABS } from "./SubNav";
 
 const NAV_ITEMS = [
-  { path: "/", id: "hub", tabs: HUB_TABS, icon: "hub", label: "Hub", color: "var(--gold-bright)" },
+  { path: "/", id: "hub", tabs: HUB_TABS, icon: "hub", label: "Hub", color: "#b89947" },
   {
     path: "/compendium",
     id: "roster",
     tabs: ROSTER_TABS,
     icon: "book",
     label: "Roster",
-    color: "var(--cyan)",
+    color: "#b89947",
   },
   {
     path: "/battle",
@@ -19,7 +19,7 @@ const NAV_ITEMS = [
     tabs: VOID_TABS,
     icon: "swords",
     label: "Void",
-    color: "var(--ember)",
+    color: "#b89947",
   },
   {
     path: "/altar",
@@ -27,7 +27,7 @@ const NAV_ITEMS = [
     tabs: ALTAR_TABS,
     icon: "scroll",
     label: "Altar",
-    color: "var(--accent-void)",
+    color: "#b89947",
   },
 ];
 
@@ -37,9 +37,9 @@ export function BottomHUD() {
   return (
     <div className="fixed bottom-0 inset-x-0 z-50 flex justify-center pb-4 px-4 pointer-events-none">
       <div
-        className="flex items-center gap-2 md:gap-4 p-2 rounded-full pointer-events-auto shadow-[0_10px_30px_rgba(0,0,0,0.8)] border-t border-[rgba(212,175,63,0.3)] backdrop-blur-md"
+        className="flex items-center gap-2 md:gap-4 p-2 rounded-full pointer-events-auto shadow-[0_4px_10px_rgba(0,0,0,0.6)] border-t border-[#b89947]/30 backdrop-blur-md"
         style={{
-          background: "linear-gradient(180deg, rgba(20,10,35,0.8) 0%, rgba(10,5,18,0.95) 100%)",
+          background: "#2a1e12",
         }}
       >
         {NAV_ITEMS.map((item) => {
@@ -55,7 +55,7 @@ export function BottomHUD() {
                   ? `radial-gradient(circle at center, ${item.color}20 0%, transparent 70%)`
                   : "transparent",
                 boxShadow: isActive
-                  ? `inset 0 0 15px ${item.color}30, 0 0 20px ${item.color}20`
+                  ? `0 2px 10px rgba(0,0,0,0.5)`
                   : "none",
                 border: isActive ? `1px solid ${item.color}80` : "1px solid transparent",
               }}
@@ -66,8 +66,8 @@ export function BottomHUD() {
                 color={isActive ? item.color : "var(--ink-secondary)"}
                 className={
                   isActive
-                    ? "lucide-glow drop-shadow-[0_0_8px_currentColor]"
-                    : "opacity-70 group-hover:opacity-100 group-hover:drop-shadow-[0_0_5px_currentColor] transition-all"
+                    ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+                    : "opacity-70 group-hover:opacity-100 group-hover:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] transition-all"
                 }
               />
               {isActive && (
@@ -76,7 +76,7 @@ export function BottomHUD() {
                   className="absolute -bottom-1 w-8 h-1.5 rounded-full"
                   style={{
                     background: item.color,
-                    boxShadow: `0 0 12px ${item.color}, 0 0 20px ${item.color}`,
+                    boxShadow: `0 2px 4px rgba(0,0,0,0.8)`,
                   }}
                 />
               )}

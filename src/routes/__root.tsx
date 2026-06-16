@@ -9,12 +9,12 @@ import { AmbientBackground } from "../components/game/AmbientBackground";
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[var(--bg-deep)] px-4">
-      <div className="max-w-md text-center text-[var(--ink-primary)]">
-        <h1 className="text-7xl font-bold text-[var(--gold-bright)]">404</h1>
+      <div className="max-w-md text-center text-[#2a1e12]">
+        <h1 className="text-7xl font-bold text-[#b89047]">404</h1>
         <h2 className="mt-4 text-xl font-semibold">Page not found</h2>
         <a
           href="/"
-          className="mt-6 inline-flex items-center justify-center rounded-md bg-[var(--gold-bright)] px-4 py-2 text-sm font-medium text-[var(--bg-deep)] transition-colors hover:brightness-110"
+          className="mt-6 inline-flex items-center justify-center rounded-md bg-[#b89047] px-4 py-2 text-sm font-medium text-[var(--bg-deep)] transition-colors hover:brightness-110"
         >
           Return to Hub
         </a>
@@ -29,7 +29,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[var(--bg-deep)] px-4 text-[var(--ink-primary)]">
+    <div className="flex min-h-screen items-center justify-center bg-[var(--bg-deep)] px-4 text-[#2a1e12]">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold">Something went wrong</h1>
         <button
@@ -37,7 +37,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             router.invalidate();
             reset();
           }}
-          className="mt-6 rounded-md bg-[var(--gold-bright)] px-4 py-2 text-sm font-medium text-[var(--bg-deep)]"
+          className="mt-6 rounded-md bg-[#b89047] px-4 py-2 text-sm font-medium text-[var(--bg-deep)]"
         >
           Try again
         </button>
