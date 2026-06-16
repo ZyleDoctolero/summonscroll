@@ -14,9 +14,9 @@ type Profile = {
 export function MobilePlayerHeader({ profile }: { profile: Profile }) {
   return (
     <header
-      className="md:hidden sticky top-0 z-40 flex items-center justify-between px-4 py-3 border-b backdrop-blur-md"
+      className="md:hidden fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 py-3 border-b backdrop-blur-md"
       style={{
-        background: "rgba(15,18,26,0.92)",
+        background: "rgba(42,30,18,0.95)",
         borderColor: "rgba(255,255,255,0.06)",
       }}
     >

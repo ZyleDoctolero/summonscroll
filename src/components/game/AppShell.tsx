@@ -25,18 +25,23 @@ export function AppShell({
 
   let activeTabs = null;
   let activeColor = "#b89947";
+  let bgImage = "url('/ancient-tome-bg.png')";
   if (HUB_TABS.some((t) => t.path === pathname)) {
     activeTabs = HUB_TABS;
     activeColor = "#b89947";
+    bgImage = "url('/bg_hub.png')";
   } else if (ROSTER_TABS.some((t) => t.path === pathname)) {
     activeTabs = ROSTER_TABS;
     activeColor = "#b89947";
+    bgImage = "url('/bg_roster.png')";
   } else if (VOID_TABS.some((t) => t.path === pathname)) {
     activeTabs = VOID_TABS;
     activeColor = "#b89947";
+    bgImage = "url('/bg_void.png')";
   } else if (ALTAR_TABS.some((t) => t.path === pathname)) {
     activeTabs = ALTAR_TABS;
     activeColor = "#b89947";
+    bgImage = "url('/bg_altar.png')";
   }
 
   return (
@@ -49,9 +54,9 @@ export function AppShell({
       {/* Ambient background for the entire shell (can be overridden by specific routes) */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div 
-          className="absolute inset-0 opacity-100"
+          className="absolute inset-0 opacity-100 transition-all duration-1000 ease-in-out"
           style={{ 
-            backgroundImage: "url('/ancient-tome-bg.png')",
+            backgroundImage: bgImage,
             backgroundSize: "cover",
             backgroundPosition: "center"
           }} 
