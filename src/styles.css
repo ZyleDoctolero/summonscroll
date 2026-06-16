@@ -238,6 +238,7 @@
   --ss-space-4: 16px;
   --ss-space-5: 24px;
   --ss-space-6: 32px;
+  --ss-space-7: 40px;
   --ss-space-8: 48px;
 
   /* ─── Radius scale ─── */
@@ -485,7 +486,7 @@ html {
 body {
   background: var(--ss-bg-deep) !important;
   color: var(--ss-text-primary) !important;
-  font-family: var(--ss-font-body, "Rajdhani", "Orbitron", sans-serif);
+  font-family: 'Rajdhani', sans-serif;
 }
 
 /* CRT Scanlines overlay to simulate the Manhwa 'System Window' */
@@ -497,17 +498,10 @@ body::after {
   z-index: 9998;
   background: linear-gradient(
     rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.25) 50%
+    rgba(0, 0, 0, 0.15) 50%
   );
-  background-size: 100% 4px;
-  opacity: 0.6;
-  animation: crt-flicker 0.15s infinite;
-}
-
-@keyframes crt-flicker {
-  0% { opacity: 0.55; background-position: 0 0; }
-  50% { opacity: 0.65; background-position: 0 2px; }
-  100% { opacity: 0.55; background-position: 0 4px; }
+  background-size: 100% 6px;
+  opacity: 0.15;
 }
 
 /* ─── Surface System Primitives ─── */
@@ -516,17 +510,17 @@ body::after {
 .ss-card {
   background: linear-gradient(145deg, rgba(26, 11, 46, 0.6), rgba(10, 5, 18, 0.8));
   border: 2px solid rgba(212, 175, 63, 0.3);
-  border-radius: 12px;
+  border-radius: var(--ss-radius-lg);
   padding: var(--ss-space-4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(212, 175, 63, 0.15), inset 0 0 20px rgba(212, 175, 63, 0.1);
+  box-shadow: var(--ss-shadow-mid), inset 0 1px 1px rgba(212, 175, 63, 0.15), inset 0 0 20px rgba(212, 175, 63, 0.1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 .ss-card:hover {
   border-color: rgba(212, 175, 63, 0.7);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 63, 0.3), inset 0 0 30px rgba(212, 175, 63, 0.2);
+  box-shadow: var(--ss-shadow-high), 0 0 20px rgba(212, 175, 63, 0.3), inset 0 0 30px rgba(212, 175, 63, 0.2);
   transform: translateY(-4px);
 }
 
@@ -545,7 +539,7 @@ body::after {
   border: 1px solid rgba(255, 213, 79, 0.32);
   border-radius: var(--ss-radius-xl);
   padding: var(--ss-space-5);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(0, 242, 255, 0.1);
+  box-shadow: var(--ss-shadow-high), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(0, 242, 255, 0.1);
   backdrop-filter: blur(24px);
   max-width: 28rem;
   width: 100%;
@@ -594,21 +588,19 @@ body::after {
 .ss-btn-primary:active {
   transform: translateY(0);
 }
-/* Clean disabled state — flat muted slate, NOT a faded gold gradient.
-   A 40%-opacity gold reads as "broken/muddy"; flat grey reads as "locked". */
+/* Disabled state — flat muted slate, reads as "locked". */
 .ss-btn-primary:disabled,
-.ss-btn-d-primary:disabled,
-.ss-btn-primary.disabled\:opacity-40:disabled,
-.ss-btn-d-primary.disabled\:opacity-40:disabled {
-  background: rgba(255, 255, 255, 0.05) !important;
-  color: var(--ink-tertiary) !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-  filter: none !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+.ss-btn-d-primary:disabled {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--ink-tertiary);
+  box-shadow: none;
+  text-shadow: none;
+  filter: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   pointer-events: none;
-  transform: none !important;
-  opacity: 1 !important;
+  transform: none;
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .ss-btn-secondary {

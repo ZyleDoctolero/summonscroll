@@ -1,16 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
 import { Icon } from "@/components/ui/Icon";
 import { getMyProfile, listBanners, pullBanner } from "@/lib/game/supabase-api";
-import { RARITY_COLOR, RARITY_GLOW, RARITY_ORDER, type Rarity } from "@/lib/game/gacha.constants";
+import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
 import { SummonReveal, SummonResults, type PullResultData } from "@/components/game/SummonReveal";
 
 export const Route = createFileRoute("/_authenticated/altar")({
-  head: () => ({ meta: [{ title: "Altar — SummonScroll" }] }),
+  head: () => ({ meta: [{ title: "Resonance Array — SummonScroll" }] }),
   component: AltarPage,
 });
 
@@ -26,6 +26,16 @@ type PullResult = {
   };
   isNew: boolean;
   transcendenceStone: boolean;
+};
+
+type Banner = {
+  id: string;
+  name: string;
+  banner_type?: string;
+  pull_cost_crystals: number;
+  pull_cost_seals?: number;
+  pull_cost_10_crystals: number;
+  realms?: { icon: string; name: string };
 };
 
 function AltarPage() {
@@ -51,22 +61,28 @@ function AltarPage() {
     onError: (e: Error) => toast.error(e.message),
   });
 
+  const bannersData = bannersQ.data?.banners as Banner[] | undefined;
+
+  const selectedBanner = React.useMemo(() => {
+    if (!bannersData || bannersData.length === 0) return null;
+    return bannersData.find((b) => b.id === selectedBannerId) ?? bannersData[0];
+  }, [bannersData, selectedBannerId]);
+
   if (profileQ.isLoading || bannersQ.isLoading)
     return (
       <div className="min-h-screen grid place-items-center text-muted-foreground">
-        Loading the Altar…
+        Loading the Soul Resonance Array…
       </div>
     );
   if (!profileQ.data || !bannersQ.data) return null;
 
   const profile = profileQ.data.profile;
-  const banners = bannersQ.data.banners;
-  const selectedBanner = banners.find((b: any) => b.id === selectedBannerId) ?? banners[0];
+  const banners = bannersData as Banner[];
 
   if (isSynthesizing) {
     return (
       <AppShell profile={profile}>
-        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050a14]">
+        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[var(--bg-deep)]">
           {/* Holographic Rift Animation */}
           <motion.div
             initial={{ scale: 0, opacity: 0, rotate: -90 }}
@@ -133,12 +149,12 @@ function AltarPage() {
         </div>
 
         {/* Left Side: Banner Selection (Vertical Tabs) */}
-        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[#d4af3f]/30 bg-black/50 backdrop-blur-md">
+        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[var(--gold-primary)]/30 bg-black/50 backdrop-blur-md">
           <h1 className="text-4xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-100 to-yellow-600 tracking-widest drop-shadow-[0_0_10px_rgba(212,175,63,0.8)]">
-            THE ALTAR
+            SOUL RESONANCE ARRAY
           </h1>
           <div className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
-            {banners.map((b: { id: string; name: string }) => {
+            {banners.map((b) => {
               const isActive = selectedBanner?.id === b.id;
               return (
                 <button
@@ -146,15 +162,15 @@ function AltarPage() {
                   onClick={() => setSelectedBannerId(b.id)}
                   className={`relative flex items-center justify-start px-6 py-4 rounded-[16px] border-2 transition-all duration-300 overflow-hidden group min-w-[200px] ${
                     isActive
-                      ? "bg-[#3a205a]/60 border-[#d4af3f] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
-                      : "bg-black/40 border-white/10 hover:border-[#d4af3f]/50 hover:bg-[#3a205a]/20"
+                      ? "bg-[var(--primary)]/60 border-[var(--gold-primary)] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
+                      : "bg-black/40 border-white/10 hover:border-[var(--gold-primary)]/50 hover:bg-[var(--primary)]/20"
                   }`}
                 >
                   {isActive && (
-                    <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#d4af3f] shadow-[0_0_15px_#d4af3f]" />
+                    <div className="absolute left-0 top-0 bottom-0 w-2 bg-[var(--gold-primary)] shadow-[0_0_15px_#d4af3f]" />
                   )}
                   <span
-                    className={`font-black tracking-widest uppercase text-sm ${isActive ? "text-[#fcd34d]" : "text-slate-400 group-hover:text-yellow-100"}`}
+                    className={`font-black tracking-widest uppercase text-sm ${isActive ? "text-[var(--gold-bright)]" : "text-slate-400 group-hover:text-yellow-100"}`}
                   >
                     {b.name}
                   </span>
@@ -176,7 +192,7 @@ function AltarPage() {
               : selectedBanner.pull_cost_10_crystals;
             const balance = isPactSeal ? profile.pact_seals : profile.crystals;
             const icon = isPactSeal ? "seal" : "crystal";
-            const iconColor = isPactSeal ? "#d946ef" : "#00f0ff"; // fuchsia or cyan
+            const iconColor = isPactSeal ? "var(--fuchsia)" : "var(--cyan)"; // fuchsia or cyan
             const canPull1 = balance >= cost1;
             const canPull10 = balance >= cost10;
 
@@ -211,7 +227,11 @@ function AltarPage() {
                     <div
                       className={`flex items-center gap-2 text-xl font-black ${canPull1 ? "text-white" : "text-red-500"}`}
                     >
-                      <Icon name={icon as any} size={20} color={iconColor} />
+                      <Icon
+                        name={icon as React.ComponentProps<typeof Icon>["name"]}
+                        size={20}
+                        color={iconColor}
+                      />
                       {balance.toLocaleString()}
                     </div>
                   </div>
@@ -222,7 +242,7 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
                       disabled={!canPull1 || pullMut.isPending}
-                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[#d4af3f]/60 bg-slate-900"
+                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[var(--gold-primary)]/60 bg-slate-900"
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
                       <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
@@ -230,7 +250,12 @@ function AltarPage() {
                           PULL ×1
                         </span>
                         <div className="flex items-center gap-1.5 text-slate-400 text-sm mt-1">
-                          <Icon name={icon as any} size={14} color={iconColor} /> {cost1}
+                          <Icon
+                            name={icon as React.ComponentProps<typeof Icon>["name"]}
+                            size={14}
+                            color={iconColor}
+                          />{" "}
+                          {cost1}
                         </div>
                       </div>
                     </button>
@@ -239,7 +264,7 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
                       disabled={!canPull10 || pullMut.isPending}
-                      className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[#d4af3f] bg-[#3a205a] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
+                      className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[var(--gold-primary)] bg-[var(--primary)] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
 
@@ -247,11 +272,16 @@ function AltarPage() {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
 
                       <div className="relative h-full flex flex-col items-center justify-center font-black tracking-widest">
-                        <span className="text-[#fcd34d] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">
+                        <span className="text-[var(--gold-bright)] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">
                           ★ PULL ×10 ★
                         </span>
                         <div className="flex items-center gap-2 text-yellow-100 text-base mt-1">
-                          <Icon name={icon as any} size={16} color={iconColor} /> {cost10}
+                          <Icon
+                            name={icon as React.ComponentProps<typeof Icon>["name"]}
+                            size={16}
+                            color={iconColor}
+                          />{" "}
+                          {cost10}
                         </div>
                       </div>
                     </button>

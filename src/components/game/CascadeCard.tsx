@@ -29,6 +29,7 @@ export type CascadeEvent =
 
 let publish: null | ((events: CascadeEvent[]) => void) = null;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function showCascade(events: CascadeEvent[]) {
   if (!events || events.length === 0) return;
   if (publish) publish(events);
@@ -66,7 +67,7 @@ export function CascadeProvider() {
     if (!events) return;
     const t = setTimeout(() => setEvents(null), 4200);
     return () => clearTimeout(t);
-  }, [seed]);
+  }, [events, seed]);
 
   const rm = reducedMotion();
 

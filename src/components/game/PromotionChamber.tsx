@@ -60,6 +60,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
         particleCount: 220,
         spread: 90,
         origin: { y: 0.45 },
+        // eslint-disable-next-line no-restricted-syntax
         colors: ["#C89A3E", "#FFD54F", "#F0EDE6"],
       });
       toast.success(`Promoted to ${res.to}`);
@@ -90,7 +91,7 @@ export function PromotionChamber({ userMonsterId, monsterName, artUrl, onClose }
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [stage, rm]);
+  }, [stage, rm, promoteMut]);
 
   return (
     <ResponsiveDialog
@@ -139,7 +140,7 @@ function Body({
   ritualPct: number;
   onBegin: () => void;
   onClose: () => void;
-  closeBtnRef: React.RefObject<HTMLButtonElement>;
+  closeBtnRef: React.RefObject<HTMLButtonElement | null>;
 }) {
   const req = c.requirement;
   const reqStone = req.stones.name;

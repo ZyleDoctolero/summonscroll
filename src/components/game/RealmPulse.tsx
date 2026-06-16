@@ -41,7 +41,7 @@ export function RealmPulse({ realmId, onComplete }: RealmPulseProps) {
       style={{
         background: `radial-gradient(ellipse at center, transparent 40%, var(--realm-${slug}-accent) 100%)`,
         opacity: 0.18,
-        animation: `realmPulse ${DURATION.slow}ms ${EASING.decelerate} forwards`,
+        animation: `realmPulse ${DURATION.slow}ms ${EASING.decel} forwards`,
       }}
     />
   );

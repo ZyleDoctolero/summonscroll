@@ -25,6 +25,34 @@ export const Route = createFileRoute("/_authenticated/battle")({
 
 type BattleResult = Awaited<ReturnType<typeof startArenaBattle>>;
 
+type LogEntry = { round: number; actor: string; action: string; damage: number };
+
+type GameResultState = {
+  battleId: string;
+  playerHp: number;
+  enemyHp: number;
+  playerMaxHp: number;
+  enemyMaxHp: number;
+  initialState: {
+    complete: boolean;
+    specialCooldown: number;
+    playerHp: number;
+    enemyHp: number;
+    log: LogEntry[];
+    won: boolean;
+    turn: number;
+    goldEarned: number;
+  };
+  log: LogEntry[];
+  won: boolean;
+  rounds: number;
+  enemyName: string;
+  mode: string;
+  rewards: { crystals: number; xp: number; shards: number; gold: number };
+  badges?: { wailingWall?: boolean; apex?: boolean };
+  milestoneDrops?: Array<{ name: string; qty: number }>;
+};
+
 function BattlePage() {
   const qc = useQueryClient();
 
@@ -33,18 +61,18 @@ function BattlePage() {
   const towerQ = useQuery({ queryKey: ["tower"], queryFn: getTowerProgress });
   const historyQ = useQuery({ queryKey: ["battle-history"], queryFn: getBattleHistory });
 
-  const [result, setResult] = useState<any | null>(null);
+  const [result, setResult] = useState<GameResultState | null>(null);
   const [logIndex, setLogIndex] = useState(0);
   const [modeSelection, setModeSelection] = useState<"auto" | "manual">("auto");
 
   const battleMut = useMutation({
-    mutationFn: async (v: { mode: "chaos_tower" | "event" | "boss_rush"; floor: number }) =>
-      startArenaBattle(v.mode, v.floor),
+    mutationFn: async (v: {
+      mode: "chaos_tower" | "event" | "boss_rush";
+      floor: number;
+      isManual?: boolean;
+    }) => startArenaBattle(v.mode, v.floor),
     onSuccess: (res) => {
-      const r = res as BattleResult & {
-        badges?: { wailingWall?: boolean; apex?: boolean };
-        floorType?: string;
-      };
+      const r = res as unknown as GameResultState;
       setResult(r);
       setLogIndex(0);
       if (r.badges?.wailingWall) {
@@ -72,7 +100,7 @@ function BattlePage() {
   const turnMut = useMutation({
     mutationFn: async (choice: string) => resolveBattleTurn(result!.battleId, choice),
     onSuccess: (state) => {
-      setResult((prev: any) => {
+      setResult((prev) => {
         if (!prev) return prev;
         return {
           ...prev,
@@ -177,7 +205,7 @@ function BattlePage() {
 
             {/* Battle log */}
             <div className="ss-pane mb-4 max-h-48 overflow-y-auto space-y-1">
-              {visibleLog.map((entry, i) => (
+              {visibleLog.map((entry: LogEntry, i: number) => (
                 <motion.div
                   key={`${i}-${entry.round}`}
                   initial={{ opacity: 0, x: -6 }}
@@ -413,7 +441,7 @@ function BattlePage() {
                 mode: "chaos_tower",
                 floor: nextFloor,
                 isManual: modeSelection === "manual",
-              } as any)
+              })
             }
           />
           <ModeCard
@@ -447,7 +475,7 @@ function BattlePage() {
                     id: string;
                     mode: string;
                     floor: number;
-                    player_won: boolean;
+                    player_won: boolean | null;
                     enemy_name: string;
                     rounds: number;
                     reward_crystals: number;
@@ -514,10 +542,10 @@ function ModeCard({
   return (
     <div className="ss-card p-6">
       <div className="mb-3">{icon}</div>
-      <h3 className="text-lg font-bold mb-1" style={{ color: "#fcd34d" }}>
+      <h3 className="text-lg font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
         {title}
       </h3>
-      <p className="text-sm mb-1" style={{ color: "#b09e80" }}>
+      <p className="text-sm mb-1" style={{ color: "var(--gold-muted)" }}>
         {desc}
       </p>
       {sub && (

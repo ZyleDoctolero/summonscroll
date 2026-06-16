@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { ShieldAlert, Terminal } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "motion/react";
+import { ShieldAlert, Terminal, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -15,8 +15,9 @@ function PenaltyZone() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [isChecked, setIsChecked] = useState(false);
+  const audioRef = useRef<{ osc: OscillatorNode; ctx: AudioContext } | null>(null);
+  const [audioActive, setAudioActive] = useState(false);
 
-  // Fetch the penalty task
   const { data: profile } = useQuery({
     queryKey: ["profile-penalty"],
     queryFn: async () => {
@@ -35,36 +36,48 @@ function PenaltyZone() {
     },
   });
 
-  // Redirect out if they aren't actually in the penalty zone
   useEffect(() => {
     if (profile && !profile.in_penalty_zone) {
       navigate({ to: "/" });
     }
   }, [profile, navigate]);
 
-  // Audio hum effect
-  useEffect(() => {
+  const startAudio = () => {
+    if (audioRef.current) return;
     try {
-      const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
-      const ctx = new AudioContext();
+      const AudioCtx =
+        window.AudioContext ||
+        (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      const ctx = new AudioCtx();
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
 
       osc.type = "sine";
-      osc.frequency.setValueAtTime(40, ctx.currentTime); // Low hum
-      gain.gain.setValueAtTime(0.1, ctx.currentTime);
+      osc.frequency.setValueAtTime(40, ctx.currentTime);
+      gain.gain.setValueAtTime(0.08, ctx.currentTime);
 
       osc.connect(gain);
       gain.connect(ctx.destination);
       osc.start();
-
-      return () => {
-        osc.stop();
-        ctx.close();
-      };
-    } catch (e) {
-      console.error("Audio Context failed", e);
+      audioRef.current = { osc, ctx };
+      setAudioActive(true);
+    } catch {
+      // Audio not available — continue without it
     }
+  };
+
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        try {
+          audioRef.current.osc.stop();
+          audioRef.current.ctx.close();
+        } catch (e) {
+          console.warn("Audio cleanup error", e);
+        }
+        audioRef.current = null;
+      }
+    };
   }, []);
 
   const escapeMutation = useMutation({
@@ -74,87 +87,159 @@ function PenaltyZone() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["profile"] });
-      toast.success("SYSTEM OVERRIDE: You have survived the Penalty Zone.");
+      toast.success("Demonic Backlash suppressed. Your cultivation stabilizes.");
       navigate({ to: "/" });
     },
+    onError: (e: Error) => toast.error(e.message),
   });
 
   const handleEscape = () => {
     if (!isChecked) {
-      toast.error("ACCESS DENIED: You must complete the survival task first.");
+      toast.error("You must complete the tribulation task first.");
       return;
     }
     escapeMutation.mutate();
   };
 
+  const hasTask = profile?.penalty_zone_task && profile.penalty_zone_task.trim().length > 0;
+
   return (
-    <div className="fixed inset-0 z-[100] bg-black overflow-hidden flex flex-col items-center justify-center p-4">
-      {/* CRT Scanline and Glitch Overlays */}
-      <div className="absolute inset-0 scanlines opacity-50 mix-blend-overlay pointer-events-none" />
-      <div className="absolute inset-0 bg-red-900/10 pointer-events-none animate-pulse" />
+    <div
+      className="fixed inset-0 z-[100] bg-black overflow-hidden flex flex-col items-center justify-center p-4"
+      onClick={!audioActive ? startAudio : undefined}
+    >
+      {/* Ambient red pulse */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute inset-0 animate-pulse"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(139,0,0,0.15) 0%, transparent 70%)",
+          }}
+        />
+      </div>
+
+      {/* Scanlines — heavier here for the oppressive feel */}
+      <div className="absolute inset-0 scanlines opacity-30 mix-blend-overlay pointer-events-none" />
 
       <motion.div
-        initial={{ scale: 1.1, opacity: 0 }}
+        initial={{ scale: 1.05, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 w-full max-w-lg"
       >
-        <div className="border border-red-500/50 bg-black/80 backdrop-blur-md shadow-[0_0_50px_rgba(255,0,60,0.2)] p-8 rounded-sm">
+        <div
+          className="system-panel p-8"
+          style={{
+            borderColor: "rgba(139,0,0,0.6)",
+            boxShadow: "0 0 60px rgba(139,0,0,0.2), inset 0 0 30px rgba(139,0,0,0.1)",
+          }}
+        >
           <div className="flex flex-col items-center text-center space-y-6">
+            {/* Icon */}
             <motion.div
-              animate={{ rotate: [-2, 2, -2] }}
-              transition={{ repeat: Infinity, duration: 0.1, ease: "linear" }}
+              animate={{ rotate: [-1, 1, -1] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             >
-              <ShieldAlert className="w-20 h-20 text-red-600 drop-shadow-[0_0_15px_rgba(255,0,0,0.8)]" />
+              <ShieldAlert
+                className="w-16 h-16"
+                style={{
+                  color: "var(--manhwa-penalty-red)",
+                  filter: "drop-shadow(0 0 20px rgba(139,0,0,0.8))",
+                }}
+              />
             </motion.div>
 
+            {/* Title */}
             <div className="space-y-2">
-              <h1 className="text-4xl font-black tracking-widest text-red-500 uppercase font-mono">
-                Penalty Zone
+              <h1
+                className="text-3xl font-black tracking-widest uppercase font-display"
+                style={{ color: "var(--manhwa-penalty-red)" }}
+              >
+                Demonic Backlash
               </h1>
-              <p className="text-red-400/80 font-mono text-sm tracking-widest">
-                DAILY QUOTAS FAILED. DATABASE LOCKED.
+              <p
+                className="font-mono text-sm tracking-widest"
+                style={{ color: "rgba(139,0,0,0.7)" }}
+              >
+                CULTIVATION FAILED — DEMONIC QI INVADING
               </p>
             </div>
 
-            <div className="w-full bg-red-950/30 border border-red-900/50 p-6 text-left space-y-4">
-              <div className="flex items-center space-x-2 text-red-500 font-mono text-sm">
+            {/* Task Panel */}
+            <div
+              className="w-full p-5 text-left space-y-4 rounded-lg"
+              style={{
+                background: "rgba(139,0,0,0.08)",
+                border: "1px solid rgba(139,0,0,0.25)",
+              }}
+            >
+              <div
+                className="flex items-center gap-2 font-mono text-sm"
+                style={{ color: "var(--manhwa-penalty-red)" }}
+              >
                 <Terminal className="w-4 h-4" />
-                <span>SURVIVAL_TASK.EXE</span>
+                <span>HEAVENLY_TRIBULATION.EXE</span>
               </div>
 
-              <div className="text-xl font-bold text-white font-mono">
-                {profile?.penalty_zone_task || "AWAITING SYSTEM DIRECTIVE..."}
-              </div>
+              {hasTask ? (
+                <div
+                  className="text-lg font-bold font-heading"
+                  style={{ color: "var(--ink-primary)" }}
+                >
+                  {profile.penalty_zone_task}
+                </div>
+              ) : (
+                <div
+                  className="flex items-center gap-2 text-sm"
+                  style={{ color: "var(--ink-tertiary)" }}
+                >
+                  <AlertTriangle className="w-4 h-4" />
+                  <span className="font-mono">
+                    No task assigned. Check back or contact support.
+                  </span>
+                </div>
+              )}
 
-              <div className="pt-4 flex items-center space-x-3">
+              <div
+                className="pt-3 flex items-start gap-3 border-t"
+                style={{ borderColor: "rgba(139,0,0,0.2)" }}
+              >
                 <input
                   type="checkbox"
                   id="task-complete"
                   checked={isChecked}
                   onChange={(e) => setIsChecked(e.target.checked)}
-                  className="w-5 h-5 accent-red-600 bg-black border-red-500 rounded-none cursor-pointer"
+                  className="w-5 h-5 mt-0.5 accent-red-600 bg-black border-red-500 rounded-none cursor-pointer flex-shrink-0"
                 />
                 <label
                   htmlFor="task-complete"
-                  className="text-red-300 font-mono text-sm cursor-pointer select-none"
+                  className="font-mono text-sm cursor-pointer select-none leading-tight"
+                  style={{ color: "rgba(200,100,100,0.8)" }}
                 >
-                  I SWEAR I HAVE COMPLETED THIS TASK IN REAL LIFE.
+                  I have completed this task in real life.
                 </label>
               </div>
             </div>
 
+            {/* Escape Button */}
             <Button
               onClick={handleEscape}
-              disabled={escapeMutation.isPending}
+              disabled={!isChecked || escapeMutation.isPending}
               className={`w-full font-mono font-bold tracking-widest uppercase transition-all duration-300 ${
                 isChecked
-                  ? "bg-red-600 hover:bg-red-500 text-white shadow-[0_0_20px_rgba(255,0,0,0.5)]"
-                  : "bg-black border border-red-900 text-red-900 cursor-not-allowed"
+                  ? "bg-red-700 hover:bg-red-600 text-white shadow-[0_0_25px_rgba(139,0,0,0.5)]"
+                  : "bg-black/50 border border-red-900/30 text-red-900/50 cursor-not-allowed"
               }`}
             >
-              {escapeMutation.isPending ? "UPLOADING..." : "INITIATE ESCAPE SEQUENCE"}
+              {escapeMutation.isPending ? "PROCESSING..." : "SUPPRESS DEMONIC QI"}
             </Button>
+
+            {!audioActive && (
+              <p className="text-[10px] font-mono" style={{ color: "var(--ink-tertiary)" }}>
+                Tap anywhere to enable ambient audio
+              </p>
+            )}
           </div>
         </div>
       </motion.div>

@@ -6,22 +6,38 @@ import { RARITY_COLOR, RARITY_GLOW, RARITY_ORDER, type Rarity } from "@/lib/game
 import { dur, ease, reducedMotion } from "@/lib/ui/motion-tokens";
 import { ExtractionModal } from "./ExtractionModal";
 
-const CEREMONY_CONFIG = {
-  Common: { duration: dur.reveal, particles: false, fullscreen: false },
-  Uncommon: { duration: dur.reveal, particles: false, fullscreen: false },
-  Rare: { duration: dur.reveal, particles: true, fullscreen: false, color: "--rarity-rare" },
-  Epic: { duration: dur.ceremony, particles: true, fullscreen: true, color: "--rarity-epic" },
-  Elite: { duration: dur.ceremony, particles: true, fullscreen: true, color: "--rarity-epic" },
-  Legendary: {
-    duration: dur.epic,
+const CEREMONY_CONFIG: Record<
+  Rarity,
+  {
+    duration: number;
+    particles: boolean;
+    fullscreen: boolean;
+    color?: string;
+    goldRain?: boolean;
+    voidRift?: boolean;
+  }
+> = {
+  common: { duration: dur.normal, particles: false, fullscreen: false },
+  uncommon: { duration: dur.normal, particles: false, fullscreen: false },
+  rare: { duration: dur.normal, particles: true, fullscreen: false, color: "--rarity-rare" },
+  elite: { duration: dur.measured, particles: true, fullscreen: true, color: "--rarity-elite" },
+  epic: { duration: dur.measured, particles: true, fullscreen: true, color: "--rarity-epic" },
+  legendary: {
+    duration: dur.weighty,
     particles: true,
     fullscreen: true,
     color: "--rarity-legendary",
     goldRain: true,
   },
-  Mythic: { duration: dur.epic, particles: true, fullscreen: true, color: "--rarity-mythic" },
-  EX: { duration: dur.ex, particles: true, fullscreen: true, color: "--rarity-ex", voidRift: true },
-} as const;
+  mythic: { duration: dur.weighty, particles: true, fullscreen: true, color: "--rarity-mythic" },
+  ex: {
+    duration: dur.weighty,
+    particles: true,
+    fullscreen: true,
+    color: "--rarity-ex",
+    voidRift: true,
+  },
+};
 
 export type PullResultData = {
   monster: {
@@ -54,7 +70,7 @@ export function SummonReveal({
   const [showExtraction, setShowExtraction] = useState(false);
 
   const handleNextClick = () => {
-    if (["Epic", "Legendary", "Mythic", "EX"].includes(r)) {
+    if (["epic", "legendary", "mythic", "ex"].includes(r)) {
       setShowExtraction(true);
     } else {
       onNext();
@@ -71,6 +87,7 @@ export function SummonReveal({
           angle: 60,
           spread: 55,
           origin: { x: 0 },
+          // eslint-disable-next-line no-restricted-syntax
           colors: ["#C89A3E", "#F0EDE6"],
         });
         confetti({
@@ -78,6 +95,7 @@ export function SummonReveal({
           angle: 120,
           spread: 55,
           origin: { x: 1 },
+          // eslint-disable-next-line no-restricted-syntax
           colors: ["#C89A3E", "#F0EDE6"],
         });
         if (Date.now() < end) requestAnimationFrame(frame);
@@ -115,7 +133,7 @@ export function SummonReveal({
           animate={rm ? { opacity: 1 } : { opacity: 1, scale: 1, rotateY: 0, rotateX: 0, y: 0 }}
           exit={rm ? { opacity: 0 } : { opacity: 0, scale: 1.15, filter: "blur(12px)", y: -20 }}
           transition={{ type: "spring", stiffness: 250, damping: 20, mass: 1.2 }}
-          className={`ss-modal text-center max-w-xs relative z-10 aura-${r.toLowerCase()}`}
+          className={`ss-modal text-center max-w-xs relative z-10 aura-${r}`}
           style={{
             border: `3px solid ${RARITY_COLOR[r]}`,
             borderRadius: "16px",
@@ -123,6 +141,7 @@ export function SummonReveal({
             backgroundImage: "url('https://www.transparenttextures.com/patterns/stardust.png')",
           }}
         >
+          {/* Monster Art */}
           <div className="w-40 h-40 mx-auto rounded-lg mb-4 flex items-center justify-center overflow-hidden ss-pane relative">
             <img
               src={
@@ -145,9 +164,17 @@ export function SummonReveal({
               />
             )}
           </div>
-          <h2 className="text-2xl font-bold mb-2 font-display" style={{ color: RARITY_COLOR[r] }}>
+
+          {/* Name */}
+          <h2
+            className="text-2xl font-bold mb-1 font-display truncate"
+            title={current.monster.name}
+            style={{ color: RARITY_COLOR[r] }}
+          >
             {current.monster.name}
           </h2>
+
+          {/* Rarity Chip */}
           <span
             className="ss-chip"
             style={{
@@ -158,42 +185,64 @@ export function SummonReveal({
           >
             {r}
           </span>
+
+          {/* Element & Role */}
           <p className="text-xs mt-2" style={{ color: "var(--ink-secondary)" }}>
-            {current.monster.element} . {current.monster.role}
+            {current.monster.element} · {current.monster.role}
           </p>
-          {current.isNew && (
-            <p
-              className="text-sm mt-2 font-medium flex items-center gap-1 justify-center"
-              style={{ color: "var(--success)" }}
-            >
-              <Icon name="sparkle" size={14} color="var(--success)" /> New!
+
+          {/* Realm Skill */}
+          {current.monster.realmSkill && (
+            <p className="text-[10px] mt-1 font-mono" style={{ color: "var(--ink-tertiary)" }}>
+              Skill: {current.monster.realmSkill}
             </p>
           )}
-          {current.transcendenceStone && (
-            <p
-              className="text-sm mt-1 flex items-center gap-1 justify-center"
-              style={{ color: "var(--gold-bright)" }}
-            >
-              <Icon name="summon" size={14} /> Transcendence Stone
-            </p>
-          )}
+
+          {/* Badges */}
+          <div className="flex flex-col items-center gap-1 mt-3">
+            {current.isNew && (
+              <p
+                className="text-sm font-medium flex items-center gap-1 justify-center"
+                style={{ color: "var(--success)" }}
+              >
+                <Icon name="sparkle" size={14} color="var(--success)" /> New!
+              </p>
+            )}
+            {current.transcendenceStone && (
+              <p
+                className="text-sm flex items-center gap-1 justify-center"
+                style={{ color: "var(--cyan)" }}
+              >
+                <Icon name="summon" size={14} /> Transcendence Stone
+              </p>
+            )}
+          </div>
         </motion.div>
       </AnimatePresence>
 
+      {/* Multi-pull progress dots */}
       {total > 1 && (
         <div className="flex gap-1.5 mt-6 relative z-10">
           {Array.from({ length: total }).map((_, i) => (
             <div
               key={i}
-              className="w-2 h-2 rounded-full transition-colors"
+              className="w-2 h-2 rounded-full transition-all duration-300"
               style={{
-                background: i <= currentIndex ? "var(--gold-bright)" : "rgba(255,255,255,0.1)",
+                background:
+                  i < currentIndex
+                    ? RARITY_COLOR[r]
+                    : i === currentIndex
+                      ? "var(--ink-primary)"
+                      : "rgba(255,255,255,0.1)",
+                boxShadow: i === currentIndex ? `0 0 6px ${RARITY_COLOR[r]}` : "none",
+                transform: i === currentIndex ? "scale(1.3)" : "scale(1)",
               }}
             />
           ))}
         </div>
       )}
-      <p className="mt-4 text-xs" style={{ color: "var(--ink-tertiary)" }}>
+
+      <p className="mt-4 text-xs animate-pulse" style={{ color: "var(--ink-tertiary)" }}>
         Tap to continue
       </p>
 
@@ -201,7 +250,7 @@ export function SummonReveal({
         isOpen={showExtraction}
         onClose={() => setShowExtraction(false)}
         monsterName={current.monster.name}
-        monsterRarity={r.toLowerCase() as any}
+        monsterRarity={r as "epic" | "legendary" | "mythic" | "ex"}
         onExtractSuccess={() => {
           setShowExtraction(false);
           onNext();
@@ -222,15 +271,23 @@ export function SummonResults({
     (a, b) => RARITY_ORDER[b.monster.rarity] - RARITY_ORDER[a.monster.rarity],
   );
 
+  const newCount = results.filter((r) => r.isNew).length;
+
   return (
     <div className="fixed inset-0 z-50 flex flex-col ss-modal-backdrop">
       <div className="flex-1 overflow-y-auto p-6 flex flex-col justify-center">
         <h2
-          className="text-3xl font-display text-center mb-8"
+          className="text-3xl font-display text-center mb-2"
+          // eslint-disable-next-line no-restricted-syntax
           style={{ color: "#fcd34d", textShadow: "0 2px 10px rgba(212,175,63,0.5)" }}
         >
           Summon Results
         </h2>
+        {newCount > 0 && (
+          <p className="text-center text-sm mb-6" style={{ color: "var(--success)" }}>
+            {newCount} new monster{newCount > 1 ? "s" : ""} discovered!
+          </p>
+        )}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-3xl mx-auto">
           {sorted.map((res, i) => {
             const r = res.monster.rarity;
@@ -240,14 +297,14 @@ export function SummonResults({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05, duration: dur.normal, ease: ease.out }}
-                className={`ss-card text-center aura-${r.toLowerCase()}`}
+                className={`ss-card text-center aura-${r}`}
                 style={{
                   border: `2px solid ${RARITY_COLOR[r]}60`,
                   borderRadius: "12px",
                   backgroundImage:
                     "url('https://www.transparenttextures.com/patterns/stardust.png')",
                   boxShadow:
-                    r !== "Common" && r !== "Uncommon"
+                    r !== "common" && r !== "uncommon"
                       ? `0 0 12px ${RARITY_COLOR[r]}20`
                       : undefined,
                 }}
@@ -266,7 +323,11 @@ export function SummonResults({
                     }}
                   />
                 </div>
-                <p className="text-xs font-bold truncate" style={{ color: "var(--ink-primary)" }}>
+                <p
+                  className="text-xs font-bold truncate"
+                  title={res.monster.name}
+                  style={{ color: "var(--ink-primary)" }}
+                >
                   {res.monster.name}
                 </p>
                 <span

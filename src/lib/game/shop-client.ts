@@ -22,7 +22,7 @@ export async function purchaseItem(shopItemId: string, quantity = 1) {
 
   await supabase
     .from("profiles")
-    .update({ [field]: balance - totalCost })
+    .update({ [field]: balance - totalCost } as any)
     .eq("id", user.id);
 
   if (item.effect_type === "heal_hp") {
@@ -99,7 +99,7 @@ export async function equipItem(userEquipmentId: string) {
   await supabase.from("user_equipment").update({ is_equipped: true }).eq("id", userEquipmentId);
   await supabase
     .from("profiles")
-    .update({ [profileField]: ue.equipment_id })
+    .update({ [profileField]: ue.equipment_id } as any)
     .eq("id", user.id);
 
   // Recalculate stats

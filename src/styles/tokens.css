@@ -143,3 +143,27 @@
   75% { transform: translate(1px, 1px); filter: hue-rotate(270deg); }
   100% { transform: translate(0, 0); filter: hue-rotate(360deg); }
 }
+
+@layer components {
+  .ss-btn-quest-board {
+    @apply relative flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#1a0f2e] border-2 border-[#d4af3f]/50 shadow-[0_0_20px_rgba(212,175,63,0.3)] hover:scale-105 transition-all duration-300;
+  }
+  .ss-badge-notification {
+    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[#ff5e5e] border border-[#1a0f2e] flex items-center justify-center text-[10px] font-bold text-white shadow-[0_0_10px_#ff5e5e];
+  }
+  .ss-panel-holographic {
+    @apply relative overflow-hidden border border-[rgba(255,255,255,0.1)] shadow-[0_0_15px_rgba(0,0,0,0.5)];
+    background: linear-gradient(135deg, rgba(20,10,30,0.8), rgba(10,5,18,0.9));
+  }
+  .ss-panel-holographic::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 240, 255, 0.1) 2px,
+      rgba(0, 240, 255, 0.1) 4px
+    );
+  }
+}

@@ -266,7 +266,7 @@ export function Compass({
       style={toneStyles[suggestion.tone]}
     >
       <div className="shrink-0">
-        <Icon name={suggestion.icon as any} size={28} />
+        <Icon name={suggestion.icon as React.ComponentProps<typeof Icon>["name"]} size={28} />
       </div>
       <div className="flex-1 min-w-0">
         <p className="t-h3">{suggestion.title}</p>

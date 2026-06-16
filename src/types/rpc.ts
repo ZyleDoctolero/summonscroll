@@ -26,7 +26,7 @@ export interface Drop {
 
 export interface PullResult {
   success: boolean;
-  monsters: any[];
+  monsters: unknown[];
 }
 
 export interface AscendResult {
@@ -52,7 +52,7 @@ export type BattleState = {
   playerHp: number;
   enemyHp: number;
   turn: number;
-  log: any[];
+  log: string[];
   complete: boolean;
   won: boolean | null;
   goldEarned: number;

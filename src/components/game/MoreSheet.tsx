@@ -3,7 +3,7 @@ import { ResponsiveDialog } from "@/components/ui/ResponsiveDialog";
 import { Icon } from "@/components/ui/Icon";
 
 const NAV_RARE = [
-  { to: "/forge", label: "Forge", icon: "stone" },
+  { to: "/forge", label: "Bloodline", icon: "stone" },
   { to: "/trial", label: "Trial of Echoes", icon: "death" },
   { to: "/guild", label: "Guild", icon: "crown" },
   { to: "/fusion", label: "Fusion", icon: "sparkle" },
@@ -39,7 +39,11 @@ export function MoreSheet({ open, onOpenChange }: MoreSheetProps) {
               background: "transparent",
             }}
           >
-            <Icon name={item.icon as any} size={22} color="var(--gold-bright)" />
+            <Icon
+              name={item.icon as React.ComponentProps<typeof Icon>["name"]}
+              size={22}
+              color="var(--gold-bright)"
+            />
             <span className="text-sm font-semibold">{item.label}</span>
           </Link>
         ))}

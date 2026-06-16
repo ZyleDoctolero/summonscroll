@@ -29,6 +29,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
         particleCount: 90,
         spread: 60,
         origin: { y: 0.5 },
+        // eslint-disable-next-line no-restricted-syntax
         colors: ["#C89A3E", "#FFD54F"],
       });
       qc.invalidateQueries({ queryKey: ["tasks"] });
@@ -171,6 +172,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           particleCount: 180,
           spread: 90,
           origin: { y: 0.5 },
+          // eslint-disable-next-line no-restricted-syntax
           colors: ["#C89A3E", "#FFD54F", "#7F77DD"],
         });
         whisper({

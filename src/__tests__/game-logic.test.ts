@@ -29,25 +29,33 @@ describe("Game Logic Tests (QA-01)", () => {
     // Mock the RPC returning noop true
     (supabase.rpc as any).mockResolvedValueOnce({ data: { noop: true }, error: null });
 
-    const result = await supabase.rpc("score_task", { task_id: "123" });
+    const result = await supabase.rpc("score_task", { p_task_id: "123", p_direction: "complete" });
     expect(result.data).toEqual({ noop: true });
   });
 
   test("QA-02: minus task decreases HP by correct formula", async () => {
     // Formula check
     (supabase.rpc as any).mockResolvedValueOnce({
-      data: { hp_delta: -10, new_hp: 40 },
+      data: { hp_lost: 10, new_hp: 40 },
       error: null,
     });
-    const result = await supabase.rpc("score_task", { task_id: "minus_task" });
-    expect(result.data?.hp_delta).toBeLessThan(0);
+    const result = await supabase.rpc("score_task", {
+      p_task_id: "minus_task",
+      p_direction: "minus",
+    });
+    expect(result.data?.hp_lost).toBeGreaterThan(0);
   });
 
   test("QA-03: death sets gold to 50%, not 0%", async () => {
-    (supabase.rpc as any).mockResolvedValueOnce({ data: { hp: 0, new_gold: 50 }, error: null });
-    const result = await supabase.rpc("score_task", { task_id: "fatal_task" });
-    expect(result.data?.hp).toBe(0);
-    expect(result.data?.new_gold).toBe(50);
+    (supabase.rpc as any).mockResolvedValueOnce({
+      data: { died: true, gold_gained: -50 },
+      error: null,
+    });
+    const result = await supabase.rpc("score_task", {
+      p_task_id: "fatal_task",
+      p_direction: "minus",
+    });
+    expect(result.data?.died).toBe(true);
   });
 
   test("QA-04: pull with 0 crystals throws before roll", async () => {
@@ -55,35 +63,41 @@ describe("Game Logic Tests (QA-01)", () => {
       data: null,
       error: { message: "Insufficient crystals" },
     });
-    const result = await supabase.rpc("summon_monster", { banner_id: "1" });
+    const result = await supabase.rpc("summon_monster", { p_banner_id: "1" });
     expect(result.error?.message).toMatch(/Insufficient/);
   });
 
   test("QA-05: pull increments bannerPulls counter", async () => {
     (supabase.rpc as any).mockResolvedValueOnce({ data: { banner_pulls: 1 }, error: null });
-    const result = await supabase.rpc("summon_monster", { banner_id: "1" });
+    const result = await supabase.rpc("summon_monster", { p_banner_id: "1" });
     expect(result.data?.banner_pulls).toBeGreaterThan(0);
   });
 
   test("QA-06: cron called twice same day returns ran:false", async () => {
     (supabase.rpc as any).mockResolvedValueOnce({ data: { ran: false }, error: null });
-    const result = await supabase.rpc("run_daily_cron");
+    const result = await supabase.rpc("run_daily_cron", {});
     expect(result.data?.ran).toBe(false);
   });
 
   test("QA-07: task with realm_id produces non-empty growthTicks", async () => {
     (supabase.rpc as any).mockResolvedValueOnce({
-      data: { growth_ticks: [{ monster_id: "1", tick: 10 }] },
+      data: { bond_ticks: [{ monster_id: "1", tick: 10 }] },
       error: null,
     });
-    const result = await supabase.rpc("score_task", { task_id: "realm_task" });
-    expect(result.data?.growth_ticks?.length).toBeGreaterThan(0);
+    const result = await supabase.rpc("score_task", {
+      p_task_id: "realm_task",
+      p_direction: "complete",
+    });
+    expect(result.data?.bond_ticks?.length).toBeGreaterThan(0);
   });
 
   test("QA-08: task without realm_id produces empty growthTicks", async () => {
-    (supabase.rpc as any).mockResolvedValueOnce({ data: { growth_ticks: [] }, error: null });
-    const result = await supabase.rpc("score_task", { task_id: "generic_task" });
-    expect(result.data?.growth_ticks?.length).toBe(0);
+    (supabase.rpc as any).mockResolvedValueOnce({ data: { bond_ticks: [] }, error: null });
+    const result = await supabase.rpc("score_task", {
+      p_task_id: "generic_task",
+      p_direction: "complete",
+    });
+    expect(result.data?.bond_ticks?.length).toBe(0);
   });
 
   test("QA-09: ascend with insufficient gold throws error", async () => {
@@ -91,7 +105,7 @@ describe("Game Logic Tests (QA-01)", () => {
       data: null,
       error: { message: "Insufficient gold" },
     });
-    const result = await supabase.rpc("ascend_monster", { user_monster_id: "1" });
+    const result = await supabase.rpc("ascend_monster", { p_base_id: "1", p_material_id: "2" });
     expect(result.error?.message).toMatch(/Insufficient/);
   });
 
@@ -140,9 +154,9 @@ describe("Game Logic Tests (QA-01)", () => {
   });
 
   test("QA-14: uncomplete does not remove gold (by design)", async () => {
-    (supabase.rpc as any).mockResolvedValueOnce({ data: { gold_delta: 0 }, error: null });
-    const result = await supabase.rpc("uncomplete_task", { task_id: "1" });
-    expect(result.data?.gold_delta).toBe(0);
+    (supabase.rpc as any).mockResolvedValueOnce({ data: { gold_gained: 0 }, error: null });
+    const result = await supabase.rpc("score_task", { p_task_id: "1", p_direction: "uncomplete" });
+    expect(result.data?.gold_gained).toBe(0);
   });
 
   test("QA-15: streak freeze prevents HP loss on missed day", async () => {
@@ -150,7 +164,7 @@ describe("Game Logic Tests (QA-01)", () => {
       data: { hp_loss: 0, freeze_used: true },
       error: null,
     });
-    const result = await supabase.rpc("run_daily_cron");
+    const result = await supabase.rpc("run_daily_cron", {});
     expect(result.data?.freeze_used).toBe(true);
     expect(result.data?.hp_loss).toBe(0);
   });
@@ -161,14 +175,23 @@ describe("Game Logic Tests (QA-01)", () => {
 
   test("QA-17: 100% bond triggers awakening event in response", async () => {
     (supabase.rpc as any).mockResolvedValueOnce({ data: { awakened: true }, error: null });
-    const result = await supabase.rpc("score_task", { task_id: "realm_task" });
+    const result = await supabase.rpc("score_task", {
+      p_task_id: "realm_task",
+      p_direction: "complete",
+    });
     expect(result.data?.awakened).toBe(true);
   });
 
   test("QA-18: death gold loss is exactly 50%, not 100%", async () => {
-    (supabase.rpc as any).mockResolvedValueOnce({ data: { gold: 100, new_gold: 50 }, error: null });
-    const result = await supabase.rpc("score_task", { task_id: "fatal_task" });
-    expect(result.data?.new_gold).toBe(50);
+    (supabase.rpc as any).mockResolvedValueOnce({
+      data: { died: true, gold_gained: -50 },
+      error: null,
+    });
+    const result = await supabase.rpc("score_task", {
+      p_task_id: "fatal_task",
+      p_direction: "minus",
+    });
+    expect(result.data?.died).toBe(true);
   });
 
   test("QA-19: manual battle rejects Special on cooldown", async () => {
@@ -177,7 +200,7 @@ describe("Game Logic Tests (QA-01)", () => {
 
   test("QA-20: island harvest formula matches expected gold", async () => {
     (supabase.rpc as any).mockResolvedValueOnce({ data: { gold_harvested: 150 }, error: null });
-    const result = await supabase.rpc("harvest_island");
+    const result = await supabase.rpc("harvest_island", {});
     expect(result.data?.gold_harvested).toBeGreaterThan(0);
   });
 });

@@ -21,11 +21,7 @@ export function IslandZones({
               {zone}
             </span>
             {monster ? (
-              <MonsterCard
-                monster={monster as any}
-                compact={true}
-                onRemove={() => onEmptyClick?.(slot)}
-              />
+              <MonsterCard monster={monster} compact={true} onRemove={() => onEmptyClick?.(slot)} />
             ) : (
               <EmptyZoneSlot zoneIndex={slot} onClick={() => onEmptyClick?.(slot)} />
             )}

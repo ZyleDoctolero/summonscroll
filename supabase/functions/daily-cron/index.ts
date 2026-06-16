@@ -2,14 +2,18 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
 // Compute dynamic score for a template
-function scoreTemplate(template: any, profile: any, userMonsters: any[]) {
+function scoreTemplate(
+  template: { base_score: number; requires_crystals_min?: number; realm_id?: string },
+  profile: { crystals: number },
+  userMonsters: { monster: { realm_id?: string } }[],
+) {
   let score = template.base_score;
-  
+
   // Example dynamic checks
   if (template.requires_crystals_min && profile.crystals < template.requires_crystals_min) {
     return -1; // impossible
@@ -17,7 +21,7 @@ function scoreTemplate(template: any, profile: any, userMonsters: any[]) {
 
   // Favor realms where user has a bonded monster
   if (template.realm_id) {
-    const hasRealm = userMonsters.some(m => m.monster.realm_id === template.realm_id);
+    const hasRealm = userMonsters.some((m) => m.monster.realm_id === template.realm_id);
     if (hasRealm) score += 50;
   }
 
@@ -28,45 +32,59 @@ function scoreTemplate(template: any, profile: any, userMonsters: any[]) {
 }
 
 serve(async (req) => {
-  if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders });
+  if (req.method === "OPTIONS") {
+    return new Response("ok", { headers: corsHeaders });
   }
 
   try {
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) {
-      return new Response(JSON.stringify({ error: "Missing Auth Header" }), { status: 401, headers: corsHeaders });
+      return new Response(JSON.stringify({ error: "Missing Auth Header" }), {
+        status: 401,
+        headers: corsHeaders,
+      });
     }
 
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_ANON_KEY") ?? "",
-      { global: { headers: { Authorization: authHeader } } }
+      { global: { headers: { Authorization: authHeader } } },
     );
 
-    const { data: { user } } = await supabase.auth.getUser();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
     if (!user) {
-      return new Response(JSON.stringify({ error: "Unauthorized" }), { status: 401, headers: corsHeaders });
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: corsHeaders,
+      });
     }
 
     const today = new Date().toISOString().slice(0, 10);
-    
+
     // 1. Run core daily reset math
     const { data: resetResult, error: resetError } = await supabase.rpc("run_daily_reset", {
       p_user_id: user.id,
-      p_today: today
+      p_today: today,
     });
 
     if (resetError) {
-      return new Response(JSON.stringify({ error: resetError.message }), { status: 400, headers: corsHeaders });
+      return new Response(JSON.stringify({ error: resetError.message }), {
+        status: 400,
+        headers: corsHeaders,
+      });
     }
 
     // 2. Generate new Dynamic Side Quests if this was a fresh day
     if (resetResult?.ran) {
       const [profileRes, monstersRes, templatesRes] = await Promise.all([
         supabase.from("profiles").select("*").eq("id", user.id).single(),
-        supabase.from("user_monsters").select("*, monster:monsters(realm_id)").eq("user_id", user.id),
-        supabase.from("side_quest_templates").select("*")
+        supabase
+          .from("user_monsters")
+          .select("*, monster:monsters(realm_id)")
+          .eq("user_id", user.id),
+        supabase.from("side_quest_templates").select("*"),
       ]);
 
       if (profileRes.data && templatesRes.data) {
@@ -78,24 +96,26 @@ serve(async (req) => {
         await supabase.from("tasks").delete().eq("user_id", user.id).eq("category", "side_quest");
 
         // Score all templates
-        const scored = templates.map(t => ({
-          template: t,
-          score: scoreTemplate(t, profile, userMonsters)
-        })).filter(t => t.score > 0);
+        const scored = templates
+          .map((t) => ({
+            template: t,
+            score: scoreTemplate(t, profile, userMonsters),
+          }))
+          .filter((t) => t.score > 0);
 
         // Sort desc, pick top 4
         scored.sort((a, b) => b.score - a.score);
         const top = scored.slice(0, 4);
 
         if (top.length > 0) {
-          const newTasks = top.map(t => ({
+          const newTasks = top.map((t) => ({
             user_id: user.id,
             title: t.template.title,
             notes: t.template.description,
             type: "todo",
             category: "side_quest",
             difficulty: "medium",
-            realm_id: t.template.realm_id
+            realm_id: t.template.realm_id,
           }));
           await supabase.from("tasks").insert(newTasks);
         }
@@ -105,10 +125,13 @@ serve(async (req) => {
     return new Response(JSON.stringify(resetResult), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
-  } catch (error: any) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 400,
-    });
+  } catch (error: unknown) {
+    return new Response(
+      JSON.stringify({ error: error instanceof Error ? error.message : String(error) }),
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 400,
+      },
+    );
   }
 });

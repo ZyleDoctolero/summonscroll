@@ -1,289 +1,323 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
 import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
-import { EmptyState } from "@/components/ui/EmptyState";
-import { getMyProfile } from "@/lib/game/supabase-api";
-import { listRecipes, craft, type Recipe, type CraftQuality } from "@/lib/game/forge-client";
+import { getMyProfile, listMyMonsters, evolveMonster } from "@/lib/game/supabase-api";
 import { Icon } from "@/components/ui/Icon";
 
 export const Route = createFileRoute("/_authenticated/forge")({
-  component: ForgePage,
+  component: AlchemyPage,
 });
 
-const QUALITY_LABELS: Record<
-  CraftQuality,
-  { label: string; color: string; goldMult: number; desc: string }
-> = {
-  standard: { label: "Standard", color: "var(--ink-secondary)", goldMult: 1, desc: "Functional." },
-  refined: { label: "Refined", color: "var(--cyan)", goldMult: 3, desc: "+50% stats." },
-  masterwork: {
-    label: "Masterwork",
-    color: "var(--gold-bright)",
-    goldMult: 9,
-    desc: "Random affix.",
+const ALCHEMY_RECIPES = [
+  {
+    id: "rec_1",
+    base: "Wolf",
+    catalyst: "Flame Core",
+    habitRequirement: "Drops from Fitness & Sport tasks.",
+    result: "Hellfire Hound",
+    desc: "Mutates a base Wolf into a high-DPS fire elemental.",
+    color: "var(--danger)",
+    img: "/sprites/monsters/hellfire_hound.png",
   },
-};
+  {
+    id: "rec_2",
+    base: "Wolf",
+    catalyst: "Aqua Core",
+    habitRequirement: "Drops from Chores & Health tasks.",
+    result: "Tidal Hound",
+    desc: "Mutates a base Wolf into a high-defense water elemental.",
+    color: "var(--cyan)",
+    img: "/sprites/monsters/frostfang_lupus.png",
+  },
+  {
+    id: "rec_3",
+    base: "Feline",
+    catalyst: "Mind Core",
+    habitRequirement: "Drops from Study & Work tasks.",
+    result: "Shadowstalker",
+    desc: "A stealth-based evolution that increases critical hit rate.",
+    color: "var(--accent-void)",
+    img: "/sprites/monsters/shadowstalker.png",
+  },
+];
 
-function ForgePage() {
+function AlchemyPage() {
   const qc = useQueryClient();
   const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
-  const recipesQ = useQuery({ queryKey: ["recipes"], queryFn: listRecipes });
-  const invQ = useQuery({
-    queryKey: ["inventory"],
-    queryFn: async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (!user) return [];
-      const { data } = await supabase.from("inventory").select("*").eq("user_id", user.id);
-      return data ?? [];
+  const monstersQ = useQuery({ queryKey: ["my-monsters"], queryFn: listMyMonsters });
+
+  const [selectedRecipe, setSelectedRecipe] = useState(ALCHEMY_RECIPES[0]);
+  const [selectedMonster, setSelectedMonster] = useState<string | null>(null);
+
+  const evolveMut = useMutation({
+    mutationFn: async () => {
+      if (!selectedMonster) throw new Error("No monster selected");
+      await evolveMonster(
+        selectedMonster,
+        selectedRecipe.id,
+        selectedRecipe.catalyst,
+        selectedRecipe.result,
+      );
     },
-  });
-
-  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const [selectedQuality, setSelectedQuality] = useState<CraftQuality>("standard");
-
-  const craftMut = useMutation({
-    mutationFn: ({ recipeId, quality }: { recipeId: string; quality: CraftQuality }) =>
-      craft(recipeId, quality),
-    onSuccess: (res) => {
-      qc.invalidateQueries({ queryKey: ["inventory"] });
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["my-monsters"] });
       qc.invalidateQueries({ queryKey: ["profile"] });
-      qc.invalidateQueries({ queryKey: ["my-equipment"] });
-      confetti({ particleCount: 80, spread: 60 });
-      toast.success(`Forged ${QUALITY_LABELS[res.quality].label} ${res.itemName}`, {
-        description: res.affix ? `Affix: ${res.affix.text}` : undefined,
-      });
-      setSelectedRecipe(null);
+      confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+      toast.success(`Bloodline Awakening Successful! You created a ${selectedRecipe.result}.`);
+      setSelectedMonster(null);
     },
     onError: (e: Error) => toast.error(e.message),
   });
 
-  const invMap = (invQ.data ?? []).reduce(
-    (acc, i) => ({ ...acc, [i.item_name]: i.quantity }),
-    {} as Record<string, number>,
-  );
-  const gold = profileQ.data?.profile.gold ?? 0;
-  const level = profileQ.data?.profile.level ?? 1;
-
-  if (profileQ.isLoading || recipesQ.isLoading) {
+  if (profileQ.isLoading || monstersQ.isLoading) {
     return (
       <div
         className="min-h-screen grid place-items-center"
         style={{ color: "var(--ink-secondary)" }}
       >
-        Stoking the forge…
+        Igniting the Bloodline Crucible…
       </div>
     );
   }
+
   if (!profileQ.data) return null;
+  const profile = profileQ.data.profile;
+
+  // Filter monsters that match the base requirement roughly (for demo, just show all that contain the string, or just all monsters if it's restrictive)
+  const compatibleMonsters =
+    monstersQ.data?.userMonsters.filter((m: { monster: { name: string } }) =>
+      m.monster.name.toLowerCase().includes(selectedRecipe.base.toLowerCase()),
+    ) || [];
 
   return (
-    <AppShell profile={profileQ.data.profile}>
-      <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "#fcd34d", textShadow: "0 2px 10px rgba(212,175,63,0.5)" }}>
-          The Forge
-        </h1>
-        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
-          Combine stones and materials from Expeditions into wearable gear. Burn extra Gold for
-          Refined or Masterwork quality.
-        </p>
+    <AppShell profile={profile}>
+      <AtmosphereBackdrop realm="blight" />
+      <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen pt-20">
+        <header className="mb-10 text-center flex flex-col items-center">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-b from-[var(--gold-primary)]/20 to-transparent border-2 border-[var(--gold-primary)]/50 flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(212,175,63,0.3)]">
+            <Icon
+              name="forge"
+              size={40}
+              color="var(--gold-bright)"
+              className="drop-shadow-[0_0_10px_#fcd34d]"
+            />
+          </div>
+          <h1
+            className="t-h1 text-4xl mb-2"
+            style={{ color: "var(--gold-bright)", textShadow: "0 2px 15px rgba(212,175,63,0.5)" }}
+          >
+            Bloodline Crucible
+          </h1>
+          <p className="max-w-xl text-sm" style={{ color: "var(--ink-secondary)" }}>
+            Refine your Contracted Spirits with Beast Cores to trigger a Bloodline Awakening.
+          </p>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {(recipesQ.data?.recipes ?? []).map((r) => {
-            const locked = r.unlock_condition.level ? level < r.unlock_condition.level : false;
-            const ingsOk = (r.ingredients ?? []).every((i) => (invMap[i.name] ?? 0) >= i.qty);
-            const goldOk = gold >= r.base_gold_cost;
-            const canCraft = !locked && ingsOk && goldOk;
-            return (
-              <div
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Recipe List */}
+          <div className="flex flex-col gap-4">
+            <h2 className="t-h3" style={{ color: "var(--ink-primary)" }}>
+              Branching Paths
+            </h2>
+            {ALCHEMY_RECIPES.map((r) => (
+              <button
                 key={r.id}
-                className="ss-card"
+                onClick={() => {
+                  setSelectedRecipe(r);
+                  setSelectedMonster(null);
+                }}
+                className={`ss-card p-4 text-left border-l-4 transition-all hover:scale-105 ${selectedRecipe.id === r.id ? "shadow-[0_0_20px_rgba(212,175,63,0.3)] bg-white/5" : "opacity-70"}`}
                 style={{
-                  borderColor: locked ? "rgba(255,255,255,0.04)" : "rgba(255,213,79,0.15)",
-                  opacity: locked ? 0.5 : 1,
+                  borderLeftColor: r.color,
+                  borderColor: selectedRecipe.id === r.id ? r.color : "rgba(255,255,255,0.1)",
                 }}
               >
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3
-                      className="font-bold text-sm flex items-center gap-1"
-                      style={{ color: "var(--ink-primary)" }}
-                    >
-                      {locked && <Icon name="lock" size={13} color="var(--ink-tertiary)" />}
-                      <span>{r.name}</span>
-                    </h3>
-                    {r.equipment && (
-                      <p
-                        className="text-[10px] uppercase tracking-wider mt-1"
-                        style={{ color: "var(--ink-tertiary)" }}
-                      >
-                        {r.equipment.slot} ·{" "}
-                        {[
-                          r.equipment.str_bonus && `+${r.equipment.str_bonus} STR`,
-                          r.equipment.int_bonus && `+${r.equipment.int_bonus} INT`,
-                          r.equipment.con_bonus && `+${r.equipment.con_bonus} CON`,
-                          r.equipment.per_bonus && `+${r.equipment.per_bonus} PER`,
-                        ]
-                          .filter(Boolean)
-                          .join(" / ")}
-                      </p>
-                    )}
-                  </div>
+                <div className="flex justify-between items-start mb-1">
+                  <h3 className="font-bold text-lg" style={{ color: "var(--ink-primary)" }}>
+                    {r.result}
+                  </h3>
                   <span
-                    className="text-xs font-mono flex items-center gap-1"
-                    style={{ color: goldOk ? "var(--gold-bright)" : "var(--danger)" }}
+                    className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-black/50"
+                    style={{ color: r.color }}
                   >
-                    <Icon
-                      name="gold"
-                      size={12}
-                      color={goldOk ? "var(--gold-bright)" : "var(--danger)"}
-                    />
-                    <span>{r.base_gold_cost}</span>
+                    {r.base} Base
                   </span>
                 </div>
+                <p className="text-xs mt-2" style={{ color: "var(--ink-secondary)" }}>
+                  Requires: <strong style={{ color: "var(--gold-bright)" }}>{r.catalyst}</strong>
+                </p>
+                <p className="text-[10px] italic mt-1" style={{ color: "var(--ink-tertiary)" }}>
+                  {r.habitRequirement}
+                </p>
+              </button>
+            ))}
+          </div>
 
-                <div className="space-y-1 mb-3">
-                  {(r.ingredients ?? []).map((ing) => {
-                    const have = invMap[ing.name] ?? 0;
-                    const ok = have >= ing.qty;
-                    return (
-                      <div key={ing.name} className="flex justify-between text-xs">
-                        <span
-                          className="flex items-center gap-1"
-                          style={{ color: ok ? "var(--ink-secondary)" : "var(--danger)" }}
-                        >
-                          <Icon
-                            name="sparkle"
-                            size={11}
-                            color={ok ? "var(--ink-secondary)" : "var(--danger)"}
-                          />
-                          <span>{ing.name}</span>
-                        </span>
-                        <span
-                          className="font-mono"
-                          style={{ color: ok ? "var(--success)" : "var(--danger)" }}
-                        >
-                          {have} / {ing.qty}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
+          {/* Bloodline Chamber */}
+          <div className="lg:col-span-2 ss-card p-8 flex flex-col justify-center items-center relative overflow-hidden bg-gradient-to-b from-[#1a0f2e] to-[#0a0512]">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-overlay animate-[hud-shimmer_20s_linear_infinite]" />
 
-                {locked && (
-                  <p
-                    className="text-[10px] text-center mb-2"
-                    style={{ color: "var(--ink-tertiary)" }}
-                  >
-                    Unlocks at Level {r.unlock_condition.level}
-                  </p>
-                )}
-
-                <button
-                  onClick={() => {
-                    setSelectedRecipe(r);
-                    setSelectedQuality("standard");
-                  }}
-                  disabled={!canCraft || craftMut.isPending}
-                  className={`ss-btn w-full disabled:opacity-40 ${canCraft ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
-                >
-                  Strike the Anvil
-                </button>
-              </div>
-            );
-          })}
-        </div>
-
-        {(recipesQ.data?.recipes ?? []).length === 0 && (
-          <EmptyState
-            icon="stone"
-            title="The anvil is cold."
-            body="Reach Level 5 to unlock your first recipe."
-          />
-        )}
-      </div>
-
-      {/* Quality picker modal */}
-      {selectedRecipe && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 ss-modal-backdrop"
-          onClick={() => setSelectedRecipe(null)}
-        >
-          <div onClick={(e) => e.stopPropagation()} className="ss-modal">
             <h2
-              className="text-lg font-bold mb-1 text-center"
-              style={{ color: "var(--gold-bright)" }}
+              className="t-h2 text-2xl mb-8 relative z-10"
+              style={{
+                color: selectedRecipe.color,
+                textShadow: `0 0 15px ${selectedRecipe.color}`,
+              }}
             >
-              Choose Quality
+              Target: {selectedRecipe.result}
             </h2>
-            <p className="text-xs text-center mb-4" style={{ color: "var(--ink-secondary)" }}>
-              Higher quality consumes more Gold. Masterwork rolls an affix.
-            </p>
 
-            <div className="space-y-2 mb-4">
-              {(Object.keys(QUALITY_LABELS) as CraftQuality[]).map((q) => {
-                const def = QUALITY_LABELS[q];
-                const cost = selectedRecipe.base_gold_cost * def.goldMult;
-                const canAfford = gold >= cost;
-                return (
-                  <button
-                    key={q}
-                    onClick={() => setSelectedQuality(q)}
-                    disabled={!canAfford}
-                    className="ss-card w-full text-left p-3 disabled:opacity-30"
-                    style={{
-                      background: selectedQuality === q ? `rgba(255,213,79,0.08)` : undefined,
-                      borderColor: selectedQuality === q ? def.color : undefined,
-                    }}
+            <div className="flex items-center justify-center gap-4 md:gap-10 relative z-10 mb-12 w-full">
+              {/* Catalyst Input */}
+              <div className="flex flex-col items-center">
+                <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-dashed border-[var(--gold-primary)]/50 flex items-center justify-center bg-black/40 relative overflow-hidden shadow-[inset_0_0_20px_rgba(212,175,63,0.2)]">
+                  <Icon
+                    name="sparkle"
+                    size={32}
+                    color="var(--gold-bright)"
+                    className="opacity-50"
+                  />
+                  <div
+                    className="absolute bottom-2 text-[10px] font-bold text-center w-full"
+                    style={{ color: "var(--gold-base)" }}
                   >
-                    <div className="flex justify-between items-center">
-                      <span style={{ color: def.color, fontWeight: 700 }}>{def.label}</span>
+                    0 / 1
+                  </div>
+                </div>
+                <span
+                  className="mt-3 text-xs font-bold uppercase tracking-wider text-center"
+                  style={{ color: "var(--ink-secondary)" }}
+                >
+                  {selectedRecipe.catalyst}
+                </span>
+              </div>
+
+              <Icon
+                name="swords"
+                size={24}
+                color="var(--ink-tertiary)"
+                className="rotate-45 opacity-50"
+              />
+
+              {/* Monster Input */}
+              <div className="flex flex-col items-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-black/60 relative overflow-hidden group">
+                  {selectedMonster ? (
+                    <img
+                      src={`/sprites/monsters/placeholder.png`}
+                      alt="Selected"
+                      className="w-full h-full object-contain p-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                    />
+                  ) : (
+                    <div className="text-center p-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                      <Icon
+                        name="target"
+                        size={32}
+                        color="var(--ink-tertiary)"
+                        className="mx-auto mb-2"
+                      />
                       <span
-                        className="text-xs font-mono flex items-center gap-1"
-                        style={{ color: canAfford ? "var(--gold-bright)" : "var(--danger)" }}
+                        className="text-[10px] font-bold uppercase"
+                        style={{ color: "var(--ink-secondary)" }}
                       >
-                        <Icon
-                          name="gold"
-                          size={12}
-                          color={canAfford ? "var(--gold-bright)" : "var(--danger)"}
-                        />
-                        <span>{cost}</span>
+                        Select Base
                       </span>
                     </div>
-                    <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>
-                      {def.desc}
-                    </p>
-                  </button>
-                );
-              })}
+                  )}
+                </div>
+                <span
+                  className="mt-3 text-xs font-bold uppercase tracking-wider text-center"
+                  style={{ color: "var(--ink-secondary)" }}
+                >
+                  Base: {selectedRecipe.base}
+                </span>
+              </div>
             </div>
 
-            <div className="flex gap-2">
-              <button
-                onClick={() => setSelectedRecipe(null)}
-                className="ss-btn ss-btn-secondary flex-1"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() =>
-                  craftMut.mutate({ recipeId: selectedRecipe.id, quality: selectedQuality })
+            <p
+              className="text-center text-sm max-w-md relative z-10 mb-8"
+              style={{ color: "var(--ink-secondary)" }}
+            >
+              {selectedRecipe.desc}
+            </p>
+
+            <button
+              disabled={evolveMut.isPending}
+              onClick={() => {
+                if (!selectedMonster) {
+                  toast.error("Please select a base monster first.");
+                  return;
                 }
-                disabled={craftMut.isPending}
-                className="ss-btn ss-btn-d-primary flex-[2] disabled:opacity-40"
-              >
-                {craftMut.isPending ? "Striking…" : "Forge"}
-              </button>
-            </div>
+                evolveMut.mutate();
+              }}
+              className="ss-btn w-full md:w-auto px-12 py-4 text-xl font-bold uppercase tracking-widest relative z-10 transition-all hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
+              style={{
+                background: `linear-gradient(135deg, ${selectedRecipe.color}40, transparent)`,
+                border: `2px solid ${selectedRecipe.color}`,
+                color: "var(--ink-primary)",
+                boxShadow: `0 0 20px ${selectedRecipe.color}40`,
+              }}
+            >
+              {evolveMut.isPending ? "Synthesizing..." : "Initiate Evolution"}
+            </button>
           </div>
         </div>
-      )}
+
+        {/* Compatible Monsters Drawer */}
+        <div className="mt-8 ss-card p-6 border-t-4" style={{ borderColor: selectedRecipe.color }}>
+          <h3 className="t-h3 mb-4" style={{ color: "var(--ink-primary)" }}>
+            Available Bases
+          </h3>
+          {compatibleMonsters.length === 0 ? (
+            <div className="p-8 text-center bg-black/40 rounded-lg border border-dashed border-white/10">
+              <p style={{ color: "var(--ink-secondary)" }}>
+                No compatible monsters found in your Compendium.
+              </p>
+              <p className="text-xs mt-2" style={{ color: "var(--ink-tertiary)" }}>
+                Hint: You need a monster with "{selectedRecipe.base}" in its name or type.
+              </p>
+              <button
+                onClick={() => setSelectedMonster("mock_id")}
+                className="mt-4 px-4 py-2 text-xs border border-white/20 rounded hover:bg-white/10"
+              >
+                Use Mock Monster (Dev Mode)
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
+              {compatibleMonsters.map(
+                (um: { id: string; monster: { name: string; art_url?: string | null } }) => (
+                  <button
+                    key={um.id}
+                    onClick={() => setSelectedMonster(um.id)}
+                    className={`flex-shrink-0 w-24 p-2 rounded-lg border flex flex-col items-center gap-2 transition-all hover:scale-105 ${selectedMonster === um.id ? "border-[var(--gold-bright)] bg-white/10 shadow-[0_0_15px_rgba(212,175,63,0.3)]" : "border-white/10 opacity-70"}`}
+                  >
+                    <img
+                      src={
+                        um.monster.art_url
+                          ? um.monster.art_url
+                          : `/sprites/monsters/placeholder.png`
+                      }
+                      alt={um.monster.name}
+                      className="w-16 h-16 object-contain"
+                    />
+                    <span
+                      className="text-[10px] font-bold truncate w-full text-center"
+                      style={{ color: "var(--ink-primary)" }}
+                    >
+                      {um.monster.name}
+                    </span>
+                  </button>
+                ),
+              )}
+            </div>
+          )}
+        </div>
+      </div>
     </AppShell>
   );
 }

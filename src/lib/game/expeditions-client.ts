@@ -91,6 +91,7 @@ export async function runExpedition(runs: 1 | 5): Promise<{
   eliteCount: number;
   staminaAfter: number;
   staminaMax: number;
+  awakenings: Array<{ monsterName: string; skillName: string; flavor: string }>;
 }> {
   const {
     data: { user },
@@ -140,9 +141,10 @@ export async function runExpedition(runs: 1 | 5): Promise<{
       break;
     }
     runsCompleted += 1;
-    currentStamina = runData.newStamina;
+    const result = runData as { newStamina: number; drops: Drop[] };
+    currentStamina = result.newStamina;
 
-    const drops = runData.drops as Drop[];
+    const drops = result.drops;
     for (const d of drops) {
       totalDrops.push(d);
       if (d.type === "material" || d.name === def.primaryStone) {

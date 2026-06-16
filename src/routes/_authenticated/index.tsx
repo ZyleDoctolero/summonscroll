@@ -3,14 +3,18 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
+import { motion, AnimatePresence } from "motion/react";
 import { AppShell } from "@/components/game/AppShell";
 import { TaskCard, type Task } from "@/components/game/TaskCard";
 import { TaskFormDialog, type TaskFormValue } from "@/components/game/TaskFormDialog";
+import { QuestBoardModal } from "@/components/game/QuestBoardModal";
+import { useTaskScoring } from "@/hooks/useTaskScoring";
 import { DeathOverlay } from "@/components/game/DeathOverlay";
 import { MorningRitual, EveningRitual } from "@/components/game/DailyRitual";
 import { Compass } from "@/components/game/Compass";
 import { Onboarding } from "@/components/game/Onboarding";
 import { LoadingScreen } from "@/components/game/LoadingScreen";
+import { Icon } from "@/components/ui/Icon";
 import { TutorialFollowUpModal } from "@/components/game/TutorialFollowUpModal";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { showCascade, type CascadeEvent } from "@/components/game/CascadeCard";
@@ -26,6 +30,7 @@ import {
   scoreTask,
   getDevotedCommentary,
   completeOnboarding,
+  listMyMonsters,
 } from "@/lib/game/supabase-api";
 import type { TaskType } from "@/lib/game/constants";
 import { useWhisperFeed } from "@/hooks/useWhisperFeed";
@@ -35,6 +40,7 @@ function shootConfetti() {
     particleCount: 150,
     spread: 70,
     origin: { y: 0.6 },
+    // eslint-disable-next-line no-restricted-syntax
     colors: ["#ffb83d", "#FFD54F", "#4FC3F7", "#7F77DD"],
   });
 }
@@ -76,8 +82,13 @@ function HubPage() {
     queryFn: getDevotedCommentary,
     refetchOnWindowFocus: false,
   });
+  const myMonstersQ = useQuery({
+    queryKey: ["my-monsters"],
+    queryFn: listMyMonsters,
+    refetchOnWindowFocus: false,
+  });
 
-  const [tab, setTab] = useState<TaskType>("habit");
+  const [tab, setTab] = useState<TaskType | "vice">("habit");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editing, setEditing] = useState<Task | null>(null);
   const [deathTick, setDeathTick] = useState(0);
@@ -87,6 +98,7 @@ function HubPage() {
   const [showEvening, setShowEvening] = useState(false);
   const [showTutorialFollowUp, setShowTutorialFollowUp] = useState(false);
   const [activeRealmPulse, setActiveRealmPulse] = useState<number | null>(null);
+  const [showQuestBoard, setShowQuestBoard] = useState(false);
 
   useEffect(() => {
     if (profileQ.data?.cron?.died) {
@@ -107,209 +119,30 @@ function HubPage() {
     }
   }, [commentaryQ.data]);
 
-  const rawTasks = tasksQ.data?.tasks ?? [];
-  const tasks = useMemo(() => rawTasks as unknown as Task[], [rawTasks]);
+  const tasks = useMemo(
+    () => (tasksQ.data?.tasks ?? []) as unknown as Task[],
+    [tasksQ.data?.tasks],
+  );
   const sideQuests = useMemo(() => tasks.filter((t) => t.category === "side_quest"), [tasks]);
   const filtered = useMemo(
     () =>
       tasks.filter((t) => {
-        if (tab === "vice") return t.type === "habit" && (t as any).negative_enabled;
-        if (tab === "habit") return t.type === "habit" && (t as any).positive_enabled;
+        if (tab === "vice")
+          return t.type === "habit" && (t as { negative_enabled?: boolean }).negative_enabled;
+        if (tab === "habit")
+          return t.type === "habit" && (t as { positive_enabled?: boolean }).positive_enabled;
         return t.type === tab && t.category !== "side_quest";
       }),
     [tasks, tab],
   );
 
-  const scoreMut = useMutation({
-    mutationFn: async (v: {
-      id: string;
-      direction: "plus" | "minus" | "complete" | "uncomplete";
-    }) => {
-      setBusyIds((s) => new Set(s).add(v.id));
-      try {
-        return await scoreTask(v.id, v.direction);
-      } finally {
-        setBusyIds((s) => {
-          const n = new Set(s);
-          n.delete(v.id);
-          return n;
-        });
-      }
-    },
-    onMutate: async (v) => {
-      await qc.cancelQueries({ queryKey: ["tasks"] });
-      const previousTasks = qc.getQueryData(["tasks"]);
-      qc.setQueryData(["tasks"], (old: any) => {
-        if (!old) return old;
-        return {
-          ...old,
-          tasks: old.tasks.map((t: any) => {
-            if (t.id === v.id) {
-              if (v.direction === "complete") return { ...t, completed: true };
-              if (v.direction === "uncomplete") return { ...t, completed: false };
-            }
-            return t;
-          }),
-        };
-      });
-      return { previousTasks };
-    },
-    onSuccess: (res, variables) => {
-      // Check if this was the tutorial directive being scored for the first time
-      const wasTutorialDirective = profile?.tutorial_directive_id === variables.id;
-      const wasPositiveScore = variables.direction === "plus" || variables.direction === "complete";
-
-      if (wasTutorialDirective && wasPositiveScore) {
-        // Show the follow-up modal after a brief delay to let the cascade complete
-        setTimeout(() => setShowTutorialFollowUp(true), 1500);
-      }
-
-      // Build the cascade — one unified card showing every consequence.
-      const events: CascadeEvent[] = [];
-
-      if (
-        res?.reward &&
-        (res.reward.gold || res.reward.xp || res.reward.crystals || res.reward.hp)
-      ) {
-        events.push({
-          kind: "reward",
-          gold: res.reward.gold,
-          xp: res.reward.xp,
-          crystals: res.reward.crystals,
-          hp: res.reward.hp,
-        });
-      }
-
-      if (res?.leveledUp && res.reward) {
-        events.push({
-          kind: "leveledUp",
-          level: profileQ.data?.profile.level ? profileQ.data.profile.level + 1 : 1,
-        });
-        shootConfetti();
-      }
-
-      const ticks =
-        (
-          res as
-            | { growthTicks?: Array<{ monster_name: string; realm_name: string | null }> }
-            | undefined
-        )?.growthTicks ?? [];
-      // Bond rows: show first 2 monsters (third+ collapse into a count via reward-style label)
-      if (ticks.length > 0) {
-        // Show +0.5% bond tick rows
-        for (const t of ticks.slice(0, 2)) {
-          events.push({ kind: "bond", monsterName: t.monster_name, from: 0, to: 0.5 });
-        }
-
-        const taskRealmId = (res as any)?.realmPulse ?? null;
-        triggerWhisper(
-          ticks.map((t) => ({ monsterName: t.monster_name, realmName: t.realm_name })),
-          taskRealmId,
-        );
-      } else if ((res as any)?.realmPulse) {
-        triggerWhisper([], (res as any).realmPulse);
-      }
-
-      // Trigger Realm Pulse if backend responded with it
-      if ((res as any)?.realmPulse) {
-        setActiveRealmPulse((res as any).realmPulse);
-      }
-
-      const awakened =
-        (
-          res as
-            | { awakenings?: Array<{ monsterName: string; skillName: string; flavor: string }> }
-            | undefined
-        )?.awakenings ?? [];
-      for (const a of awakened) {
-        events.push({
-          kind: "awakening",
-          monsterName: a.monsterName,
-          skillName: a.skillName,
-          flavor: a.flavor,
-        });
-        shootConfetti();
-        whisper({
-          monsterName: a.monsterName,
-          line: `Something has awakened in me. ${a.skillName}.`,
-          tone: "grave",
-        });
-      }
-
-      const goal = (
-        res as
-          | {
-              goalDamage?: {
-                slain: Array<{ title: string; hp_total: number }>;
-                damaged: Array<{
-                  goal: { title: string; hp_total: number; hp_remaining: number };
-                  damage: number;
-                }>;
-                tomeMinted: boolean;
-              } | null;
-            }
-          | undefined
-      )?.goalDamage;
-      if (goal) {
-        if (goal.slain.length > 0) {
-          const s = goal.slain[0];
-          events.push({
-            kind: "boss",
-            title: s.title,
-            damage: 0,
-            hpRemaining: 0,
-            hpTotal: s.hp_total ?? 0,
-          });
-        }
-        for (const d of goal.damaged) {
-          events.push({
-            kind: "boss",
-            title: d.goal.title,
-            damage: d.damage,
-            hpRemaining: d.goal.hp_remaining,
-            hpTotal: d.goal.hp_total,
-          });
-        }
-        if (goal.tomeMinted) {
-          events.push({ kind: "tomeMint" });
-          shootConfetti();
-          const slainTitle = goal.slain[0]?.title ?? "the boss";
-          whisper({
-            monsterName: "Vault Keeper",
-            line: `${slainTitle} has fallen. The Tome is yours.`,
-            tone: "grave",
-          });
-        }
-      }
-
-      if (res?.drop) {
-        events.push({
-          kind: "drop",
-          itemType: res.drop.type,
-          itemName: res.drop.name,
-          quantity: 1,
-        });
-        shootConfetti();
-      }
-
-      if (res?.died) {
-        events.push({ kind: "died" });
-        setDeathTick((n) => n + 1);
-      }
-
-      showCascade(events);
-    },
-    onError: (err: Error, _variables, context) => {
-      if (context?.previousTasks) {
-        qc.setQueryData(["tasks"], context.previousTasks);
-      }
-      toast.error(err.message);
-    },
-    onSettled: () => {
-      qc.invalidateQueries({ queryKey: ["profile"] });
-      qc.invalidateQueries({ queryKey: ["tasks"] });
-      qc.invalidateQueries({ queryKey: ["my-monsters"] });
-    },
+  const scoreMut = useTaskScoring({
+    setBusyIds,
+    profile: profileQ.data?.profile,
+    setShowTutorialFollowUp,
+    setDeathTick,
+    triggerWhisper,
+    setActiveRealmPulse,
   });
 
   const createMut = useMutation({
@@ -359,21 +192,77 @@ function HubPage() {
     "onboarding_completed_at" in profile &&
     profile.onboarding_completed_at === null;
 
+  const tetheredId = profile?.soul_tether_id;
+  const tetheredUm = tetheredId
+    ? (myMonstersQ.data?.userMonsters ?? []).find((m: { id: string }) => m.id === tetheredId)
+    : null;
+
   return (
-    <AppShell profile={profile}>
+    <AppShell profile={profile as never}>
       <RealmPulse realmId={activeRealmPulse} onComplete={() => setActiveRealmPulse(null)} />
       {showOnboarding && <Onboarding onComplete={() => onboardingMut.mutate()} />}
       <DeathOverlay trigger={deathTick} />
-      <div className="bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] bg-[#0a0512] relative min-h-screen border-2 border-[#d4af3f]/20 shadow-[inset_0_0_80px_rgba(26,11,46,1)] rounded-lg m-2 md:m-4 overflow-hidden">
-        <div className="p-6 md:p-10 max-w-6xl relative z-10">
-          <Compass
-            onOpenMorning={() => setShowMorning(true)}
-            onOpenEvening={() => setShowEvening(true)}
-          />
-          <div className="mb-6">
+
+      {/* Lobby Environment */}
+      <div className="absolute inset-0 overflow-hidden flex items-center justify-center pointer-events-none z-0">
+        <div className="absolute inset-0 bg-atmos bg-atmos-divine opacity-40 mix-blend-overlay" />
+        <div
+          className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"
+          style={{ animation: "hud-shimmer 20s linear infinite" }}
+        />
+
+        {/* Tethered Monster Display */}
+        <div className="relative z-10 flex flex-col items-center justify-center animate-[float_4s_ease-in-out_infinite] hover:scale-105 transition-transform duration-700">
+          {tetheredUm ? (
+            <>
+              <img
+                src={
+                  tetheredUm.monster.art_url
+                    ? tetheredUm.monster.art_url
+                    : `/sprites/monsters/${tetheredUm.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                }
+                alt={tetheredUm.monster.name}
+                className="w-64 h-64 md:w-96 md:h-96 object-contain drop-shadow-[0_0_30px_rgba(212,175,63,0.5)]"
+                onError={(e) => {
+                  e.currentTarget.src = "/monsters/placeholder.png";
+                }}
+              />
+              <div className="mt-4 text-center backdrop-blur-md bg-black/40 px-6 py-2 rounded-full border border-[var(--gold-primary)]/30">
+                <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+                  Life-Bound Beast
+                </p>
+                <h2 className="text-xl font-bold" style={{ color: "var(--gold-bright)" }}>
+                  {tetheredUm.monster.name}
+                </h2>
+              </div>
+            </>
+          ) : (
+            <div className="text-center backdrop-blur-md bg-black/40 px-8 py-6 rounded-2xl border border-[rgba(255,255,255,0.1)]">
+              <Icon name="scroll" size={48} color="var(--ink-tertiary)" className="mx-auto mb-4" />
+              <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+                No Life-Bound Beast
+              </p>
+              <p className="text-xs mt-2 max-w-xs" style={{ color: "var(--ink-tertiary)" }}>
+                Go to the Compendium to tether a monster and manifest it here.
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Diegetic Lobby HUD */}
+      <div className="absolute inset-0 z-10 pointer-events-none p-4 md:p-8 flex flex-col justify-between">
+        <div className="flex justify-between items-start mt-16 md:mt-0">
+          <div className="pointer-events-auto">
+            <Compass
+              onOpenMorning={() => setShowMorning(true)}
+              onOpenEvening={() => setShowEvening(true)}
+            />
+          </div>
+          <div className="pointer-events-auto">
             <SoulResonanceTimer
               monsterId={profile?.soul_tether_id || "unlinked"}
-              monsterName="Tethered Soul"
+              monsterName="Life-Bound Beast"
               onComplete={() => {
                 confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
                 toast.success("Resonance Complete! Buff applied.");
@@ -381,88 +270,56 @@ function HubPage() {
               onFail={() => {}}
             />
           </div>
-          <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-            <div>
-              <h1
-                className="t-h1 text-3xl md:text-4xl mb-1"
-                style={{ color: "#fcd34d", textShadow: "0 2px 10px rgba(212,175,63,0.5)" }}
-              >
-                Hub Directives
-              </h1>
-            </div>
-            <button
-              onClick={() => {
-                setEditing(null);
-                setDialogOpen(true);
-              }}
-              className="ss-btn ss-btn-d-primary shadow-[0_0_15px_rgba(212,175,63,0.4)]"
-            >
-              + New Directive
-            </button>
-          </header>
+        </div>
 
-          <div
-            className="flex gap-6 mb-6 border-b-2"
-            style={{ borderColor: "rgba(212,175,63,0.3)" }}
-          >
-            {(["habit", "daily", "todo"] as const).map((t) => (
-              <button
-                key={t}
-                onClick={() => setTab(t)}
-                className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active text-[#fcd34d]" : "text-[#b09e80] hover:text-[#d4af3f]"}`}
-              >
-                {t === "habit" ? "Habits" : t === "daily" ? "Dailies" : "To-Dos"}
-              </button>
-            ))}
-          </div>
-
-          {filtered.length === 0 ? (
-            <EmptyState
-              icon={tab === "habit" ? "morning" : tab === "daily" ? "morning" : "checklist"}
-              title={
-                tab === "habit"
-                  ? "The grove is quiet."
-                  : tab === "daily"
-                    ? "The dawn awaits your decree."
-                    : "The list is blank."
-              }
-              body={
-                tab === "habit"
-                  ? "Forge one small directive. Something you'd do anyway."
-                  : "Create your first directive to begin earning Gold and XP."
-              }
-              cta={{
-                label: "Forge a Directive",
-                onClick: () => {
-                  setEditing(null);
-                  setDialogOpen(true);
-                },
-              }}
+        {/* Quest Board Icon Button */}
+        <div className="absolute right-4 bottom-28 md:right-10 md:bottom-32 pointer-events-auto">
+          <button onClick={() => setShowQuestBoard(true)} className="group ss-btn-quest-board">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[var(--gold-primary)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <Icon
+              name="checklist"
+              size={32}
+              color="var(--gold-bright)"
+              className="group-hover:drop-shadow-[0_0_8px_#fcd34d] transition-all"
             />
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-              {filtered.map((task) => (
-                <TaskCard
-                  key={task.id}
-                  task={task}
-                  busy={busyIds.has(task.id)}
-                  isTutorial={profile?.tutorial_directive_id === task.id}
-                  onScore={(dir) => scoreMut.mutate({ id: task.id, direction: dir })}
-                  onEdit={() => {
-                    setEditing(task);
-                    setDialogOpen(true);
-                  }}
-                  onDelete={() => deleteMut.mutate(task.id)}
-                />
-              ))}
-            </div>
-          )}
+            <span className="text-[10px] font-bold tracking-widest mt-1 text-[var(--gold-primary)] uppercase">
+              Quests
+            </span>
+
+            {/* Notification Badge */}
+            {tasks.filter((t) => !t.completed).length > 0 && (
+              <div className="ss-badge-notification">
+                {tasks.filter((t) => !t.completed).length}
+              </div>
+            )}
+          </button>
         </div>
       </div>
 
+      {/* Quest Board Modal Overlay */}
+      <QuestBoardModal
+        open={showQuestBoard}
+        onClose={() => setShowQuestBoard(false)}
+        tab={tab}
+        setTab={setTab}
+        filtered={filtered}
+        busyIds={busyIds}
+        profile={profile}
+        onScore={(id, direction) => scoreMut.mutate({ id, direction })}
+        onEdit={(task) => {
+          setEditing(task);
+          setDialogOpen(true);
+        }}
+        onDelete={(id) => deleteMut.mutate(id)}
+        onIssueQuest={() => {
+          setEditing(null);
+          setDialogOpen(true);
+        }}
+      />
+
       <TaskFormDialog
         open={dialogOpen}
-        defaultType={tab}
+        defaultType={tab === "vice" ? "habit" : tab}
         initial={editing ?? undefined}
         onClose={() => {
           setDialogOpen(false);

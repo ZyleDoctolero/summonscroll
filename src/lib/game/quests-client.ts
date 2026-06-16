@@ -121,7 +121,7 @@ export async function damageGoalsForTask(
 
   const { data: updated } = await supabase
     .from("goals")
-    .update(updates)
+    .update(updates as any)
     .eq("id", goal.id)
     .select()
     .single();

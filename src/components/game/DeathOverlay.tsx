@@ -31,13 +31,13 @@ export function DeathOverlay({ trigger }: { trigger: number }) {
             textShadow: "0 0 32px rgba(224,82,82,0.7), 0 0 64px rgba(224,82,82,0.3)",
           }}
         >
-          YOU HAVE FALLEN
+          SOUL DISSIPATED
         </div>
         <div className="text-sm md:text-base mb-2" style={{ color: "var(--ink-secondary)" }}>
-          Lost 1 level and all Gold.
+          Lost 1 minor realm and all Spirit Stones.
         </div>
         <div className="t-h3 text-lg" style={{ color: "var(--gold-bright)" }}>
-          Revived - fight harder.
+          Reincarnation triggered - cultivate harder.
         </div>
       </div>
     </div>

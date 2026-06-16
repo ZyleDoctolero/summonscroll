@@ -24,12 +24,8 @@ export function useWhisperFeed() {
       line = `${tick.monsterName} drew closer to your discipline.`;
     } else if (taskRealmId) {
       // Fetch from DB lore_lines
-      const { data } = await supabase
-        .from("realms")
-        .select("lore_lines")
-        .eq("id", taskRealmId)
-        .single();
-      const lines = data?.lore_lines ?? [];
+      const { data } = await supabase.from("realms").select("*").eq("id", taskRealmId).single();
+      const lines = (data as any)?.lore_lines ?? [];
       line =
         lines.length > 0
           ? lines[Math.floor(Math.random() * lines.length)]

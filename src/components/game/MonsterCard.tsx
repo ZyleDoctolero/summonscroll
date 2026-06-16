@@ -1,13 +1,15 @@
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 import { Icon } from "@/components/ui/Icon";
 
+import type { UserMonster } from "@/lib/game/supabase-api";
+
 export function MonsterCard({
   monster,
   compact = false,
   onRemove,
   onClick,
 }: {
-  monster: any;
+  monster: UserMonster;
   compact?: boolean;
   onRemove?: () => void;
   onClick?: () => void;
@@ -17,18 +19,24 @@ export function MonsterCard({
   const ascensionLevel = monster.ascension_level ?? 0;
 
   // Element colors for Manhwa UI
+
   const getElementColor = (el: string) => {
     if (!el) return "var(--cyan)";
     switch (el.toLowerCase()) {
       case "fire":
+        // eslint-disable-next-line no-restricted-syntax
         return "#ff5252";
       case "water":
+        // eslint-disable-next-line no-restricted-syntax
         return "#448aff";
       case "nature":
+        // eslint-disable-next-line no-restricted-syntax
         return "#69f0ae";
       case "light":
+        // eslint-disable-next-line no-restricted-syntax
         return "#ffff00";
       case "dark":
+        // eslint-disable-next-line no-restricted-syntax
         return "#aa00ff";
       default:
         return "var(--cyan)";
@@ -69,20 +77,20 @@ export function MonsterCard({
             className="text-[9px] font-bold uppercase tracking-widest"
             style={{ color: elColor, textShadow: `0 0 4px ${elColor}` }}
           >
-            {monster.monster.element || "VOID"}
+            [{r.toUpperCase()}-CLASS] {monster.monster.element || "VOID"}
           </span>
           <div className="flex mt-0.5">
             {Array.from({
               length:
-                r === "EX"
+                r === "ex"
                   ? 6
-                  : r === "Mythic"
+                  : r === "mythic"
                     ? 5
-                    : r === "Legendary"
+                    : r === "legendary"
                       ? 4
-                      : r === "Epic"
+                      : r === "epic"
                         ? 3
-                        : r === "Rare"
+                        : r === "rare"
                           ? 2
                           : 1,
             }).map((_, i) => (
@@ -160,7 +168,9 @@ export function MonsterCard({
             className="h-full transition-all duration-500 ease-out relative"
             style={{
               width: `${Math.min(100, monster.bond_percent)}%`,
+              // eslint-disable-next-line no-restricted-syntax
               background: `linear-gradient(90deg, rgba(0, 191, 255, 0.5), #00e5ff)`,
+              // eslint-disable-next-line no-restricted-syntax
               boxShadow: `0 0 8px #00e5ff, inset 0 0 4px rgba(255,255,255,0.8)`,
             }}
           >
@@ -169,10 +179,11 @@ export function MonsterCard({
         </div>
         <div className="flex justify-between items-center mt-0.5">
           <p
-            className="text-[8px] uppercase tracking-widest"
+            className="text-[8px] uppercase tracking-widest flex items-center gap-1"
             style={{ color: "var(--ink-secondary)" }}
           >
-            BOND
+            {}
+            BOND <span className="text-[6px] text-[#00e5ff] opacity-70">[SOUL CONTRACT]</span>
           </p>
           <p
             className="text-[9px] font-bold font-['VT323'] tracking-widest"
@@ -188,7 +199,9 @@ export function MonsterCard({
           className="absolute bottom-1 left-1 text-[8px] px-1.5 py-0.5 rounded font-bold tracking-widest z-10 border border-red-500/50"
           style={{
             background: "rgba(255,0,0,0.2)",
+            // eslint-disable-next-line no-restricted-syntax
             color: "#ff1744",
+
             textShadow: "0 0 4px #ff1744",
           }}
         >
@@ -203,6 +216,7 @@ export function MonsterCard({
             onRemove();
           }}
           className="mt-2 text-[10px] px-2 py-1.5 rounded font-bold w-full uppercase tracking-widest border border-red-500/30 hover:bg-red-500/20 transition-colors"
+          // eslint-disable-next-line no-restricted-syntax
           style={{ color: "#ff1744", textShadow: "0 0 4px #ff1744" }}
         >
           DISMISS

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { forwardRef, useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState, useMemo } from "react";
 import { motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
 import { toast } from "sonner";
@@ -43,7 +43,11 @@ function TrialPage() {
     onSuccess: (res) => {
       if (res.fullClear) {
         sounds.ascend();
-        confetti({ particleCount: 300, spread: 100, colors: ["#FFD54F", "#7F77DD", "#4FC3F7"] });
+        confetti({
+          particleCount: 300,
+          spread: 100,
+          colors: ["rgb(255, 213, 79)", "rgb(127, 119, 221)", "rgb(79, 195, 247)"],
+        });
         whisper({
           monsterName: "Trial Keeper",
           line: "All five returned. The Echo is touched.",
@@ -71,18 +75,21 @@ function TrialPage() {
     },
   });
 
+  const rosterData = monstersQ.data?.userMonsters;
+  const roster = useMemo(() => {
+    return (rosterData ?? []) as Array<{
+      id: string;
+      monster: { name: string; role: string; rarity: string; art_url?: string | null };
+      level: number;
+      bond_percent: number;
+      star_level: number;
+    }>;
+  }, [rosterData]);
+
   if (profileQ.isLoading || monstersQ.isLoading) {
     return <LoadingScreen realmSlug="void-frontier" />;
   }
   if (!profileQ.data) return null;
-
-  const roster = (monstersQ.data?.userMonsters ?? []) as Array<{
-    id: string;
-    monster: { name: string; role: string; rarity: string; art_url?: string | null };
-    level: number;
-    bond_percent: number;
-    star_level: number;
-  }>;
 
   return (
     <AppShell profile={profileQ.data.profile}>
@@ -432,9 +439,11 @@ function Memorial({
     created_at: string;
   }>;
 }) {
-  const allFallen = memorials.flatMap((m) =>
-    m.fallen.map((f) => ({ ...f, when: m.created_at, floor: m.floors_cleared })),
-  );
+  const allFallen = useMemo(() => {
+    return memorials.flatMap((m) =>
+      m.fallen.map((f) => ({ ...f, when: m.created_at, floor: m.floors_cleared })),
+    );
+  }, [memorials]);
   if (allFallen.length === 0) {
     return (
       <EmptyState icon="memorial" title="No name has been carved." body="May the wall stay bare." />

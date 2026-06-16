@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
 import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { Icon } from "@/components/ui/Icon";
 import {
   getMyProfile,
   getMyGuild,
@@ -200,9 +201,8 @@ function GuildPage() {
                       id: string;
                       name: string;
                       quest_type: string;
-                      boss_hp: number | null;
+                      boss_hp?: number;
                       difficulty: string;
-                      description: string;
                     }) => {
                       const requiredScroll = SCROLL_MAPPING[t.name] ?? t.name + " Scroll";
                       const hasScroll = (scrollsQ.data?.scrolls ?? []).some(
@@ -263,42 +263,48 @@ function GuildPage() {
                 Members
               </h3>
               <div className="space-y-2">
-                {members.map((m: any) => (
-                  <div key={m.id} className="flex items-center gap-3 p-2 rounded ss-pane">
-                    <div className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs ss-btn-d-primary">
-                      {m.profile.display_name[0].toUpperCase()}
-                    </div>
-                    <div className="flex-1">
-                      <p
-                        className="text-sm font-semibold flex items-center gap-1.5"
-                        style={{ color: "var(--ink-primary)" }}
+                {members.map(
+                  (m: {
+                    id: string;
+                    role: string;
+                    profile: { display_name: string; level: number; class: string };
+                  }) => (
+                    <div key={m.id} className="flex items-center gap-3 p-2 rounded ss-pane">
+                      <div className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs ss-btn-d-primary">
+                        {m.profile.display_name[0].toUpperCase()}
+                      </div>
+                      <div className="flex-1">
+                        <p
+                          className="text-sm font-semibold flex items-center gap-1.5"
+                          style={{ color: "var(--ink-primary)" }}
+                        >
+                          {m.role === "leader" && (
+                            <Icon
+                              name="crown"
+                              size={13}
+                              color="var(--gold-bright)"
+                              className="lucide-glow"
+                            />
+                          )}
+                          <span>{m.profile.display_name}</span>
+                        </p>
+                        <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                          Lvl {m.profile.level} · {m.profile.class || "No class"}
+                        </p>
+                      </div>
+                      <span
+                        className="ss-chip"
+                        style={{
+                          background:
+                            m.role === "leader" ? "rgba(255,213,79,0.2)" : "rgba(255,255,255,0.05)",
+                          color: m.role === "leader" ? "var(--gold-bright)" : "var(--ink-tertiary)",
+                        }}
                       >
-                        {m.role === "leader" && (
-                          <Icon
-                            name="crown"
-                            size={13}
-                            color="var(--gold-bright)"
-                            className="lucide-glow"
-                          />
-                        )}
-                        <span>{m.profile.display_name}</span>
-                      </p>
-                      <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
-                        Lvl {m.profile.level} · {m.profile.class || "No class"}
-                      </p>
+                        {m.role}
+                      </span>
                     </div>
-                    <span
-                      className="ss-chip"
-                      style={{
-                        background:
-                          m.role === "leader" ? "rgba(255,213,79,0.2)" : "rgba(255,255,255,0.05)",
-                        color: m.role === "leader" ? "var(--gold-bright)" : "var(--ink-tertiary)",
-                      }}
-                    >
-                      {m.role}
-                    </span>
-                  </div>
-                ))}
+                  ),
+                )}
               </div>
               <button
                 onClick={() => leaveMut.mutate()}
@@ -314,25 +320,33 @@ function GuildPage() {
         {/* Browse */}
         {tab === "browse" && (
           <div className="space-y-2">
-            {(guildsQ.data?.guilds ?? []).map((g: any) => (
-              <div key={g.id} className="ss-card flex items-center justify-between">
-                <div>
-                  <p className="t-h3 font-bold text-sm" style={{ color: "var(--ink-primary)" }}>
-                    {g.name}
-                  </p>
-                  <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
-                    Lvl {g.level} · {g.guild_members?.[0]?.count ?? "?"} members · {g.privacy}
-                  </p>
+            {(guildsQ.data?.guilds ?? []).map(
+              (g: {
+                id: string;
+                name: string;
+                level: number;
+                privacy: string;
+                guild_members?: { count: number }[];
+              }) => (
+                <div key={g.id} className="ss-card flex items-center justify-between">
+                  <div>
+                    <p className="t-h3 font-bold text-sm" style={{ color: "var(--ink-primary)" }}>
+                      {g.name}
+                    </p>
+                    <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                      Lvl {g.level} · {g.guild_members?.[0]?.count ?? "?"} members · {g.privacy}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => joinMut.mutate(g.id)}
+                    disabled={!!myGuild || joinMut.isPending}
+                    className="ss-btn ss-btn-d-primary disabled:opacity-30"
+                  >
+                    {myGuild ? "Already in guild" : "Join"}
+                  </button>
                 </div>
-                <button
-                  onClick={() => joinMut.mutate(g.id)}
-                  disabled={!!myGuild || joinMut.isPending}
-                  className="ss-btn ss-btn-d-primary disabled:opacity-30"
-                >
-                  {myGuild ? "Already in guild" : "Join"}
-                </button>
-              </div>
-            ))}
+              ),
+            )}
             {(guildsQ.data?.guilds ?? []).length === 0 && (
               <EmptyState
                 icon="crown"

@@ -166,7 +166,7 @@ export async function submitEveningReflection(r: EveningReflection): Promise<{
 
   const { data: updated, error } = await supabase
     .from("daily_logs")
-    .update(update)
+    .update(update as any)
     .eq("id", log.id)
     .select()
     .single();

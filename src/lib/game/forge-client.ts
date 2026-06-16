@@ -40,7 +40,7 @@ export async function listRecipes(): Promise<{ recipes: Recipe[] }> {
     .select("*, equipment(name, slot, str_bonus, int_bonus, con_bonus, per_bonus, rarity)")
     .order("sort_order");
   if (error) throw error;
-  return { recipes: (data ?? []) as Recipe[] };
+  return { recipes: (data ?? []) as unknown as Recipe[] };
 }
 
 export async function craft(
@@ -65,10 +65,10 @@ export async function craft(
   if (!recipe) throw new Error("Recipe not found.");
 
   // Call the server authoritative RPC to perform the craft and get results
-  const { data: result, error } = await supabase.rpc("craft_recipe", { p_recipe_id: recipeId });
+  const { data, error } = await supabase.rpc("craft_recipe", { p_recipe_id: recipeId });
   if (error) throw error;
+  const result = data as { id: string; quality: string; affix: string | null };
 
-  // Find the matching affix text
   let affixData = null;
   if (result.affix) {
     const found = MASTERWORK_AFFIXES.find((a) => a.key === result.affix);

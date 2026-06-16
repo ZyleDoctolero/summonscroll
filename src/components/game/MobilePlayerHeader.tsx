@@ -1,4 +1,5 @@
 import { Icon } from "@/components/ui/Icon";
+import { Link } from "@tanstack/react-router";
 
 type Profile = {
   display_name: string;
@@ -19,9 +20,9 @@ export function MobilePlayerHeader({ profile }: { profile: Profile }) {
         borderColor: "rgba(255,255,255,0.06)",
       }}
     >
-      <div className="flex items-center gap-3">
+      <Link to="/profile" className="flex items-center gap-3 active:scale-95 transition-transform">
         <div
-          className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs"
+          className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs shadow-[0_0_10px_rgba(212,175,63,0.3)]"
           style={{
             background: "linear-gradient(135deg, var(--gold-glow), var(--gold-bright))",
             color: "var(--bg-deep)",
@@ -55,7 +56,7 @@ export function MobilePlayerHeader({ profile }: { profile: Profile }) {
             />
           </div>
         </div>
-      </div>
+      </Link>
       <div className="flex items-center gap-3 t-mono text-xs">
         <span className="flex items-center gap-1" style={{ color: "var(--gold-bright)" }}>
           <Icon name="gold" size={14} />

@@ -12,8 +12,8 @@ import {
   getFullProfile,
   getAllAchievements,
   changeClass,
-  listEquipment,
-  equipItem,
+  listMyMonsters,
+  bindCompanion,
 } from "@/lib/game/supabase-api";
 import { xpToNextLevel } from "@/lib/game/constants";
 import { LoadingScreen } from "@/components/game/LoadingScreen";
@@ -56,7 +56,7 @@ function ProfilePage() {
 
   const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
   const fullQ = useQuery({ queryKey: ["full-profile"], queryFn: getFullProfile });
-  const equipQ = useQuery({ queryKey: ["my-equipment"], queryFn: listEquipment });
+  const monstersQ = useQuery({ queryKey: ["my-monsters"], queryFn: listMyMonsters });
   const achieveQ = useQuery({ queryKey: ["achievements"], queryFn: getAllAchievements });
 
   const [tab, setTab] = useState<Tab>("stats");
@@ -74,12 +74,19 @@ function ProfilePage() {
   });
 
   const equipMut = useMutation({
-    mutationFn: (ueId: string) => equipItem(ueId),
+    mutationFn: async ({
+      slot,
+      monsterId,
+    }: {
+      slot: "weapon" | "armor" | "mount";
+      monsterId: string | null;
+    }) => {
+      await bindCompanion(slot, monsterId);
+    },
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["profile"] });
-      qc.invalidateQueries({ queryKey: ["full-profile"] });
-      qc.invalidateQueries({ queryKey: ["my-equipment"] });
-      toast.success("Equipped!");
+      qc.invalidateQueries({ queryKey: ["my-monsters"] });
+      toast.success("Soul bond updated!");
     },
     onError: (e: Error) => toast.error(e.message),
   });
@@ -89,7 +96,10 @@ function ProfilePage() {
       const {
         data: { user },
       } = await supabase.auth.getUser();
-      await supabase.from("profiles").update(patch).eq("id", user!.id);
+      await supabase
+        .from("profiles")
+        .update(patch as never)
+        .eq("id", user!.id);
     },
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["profile"] });
@@ -162,7 +172,11 @@ function ProfilePage() {
                     className="text-sm flex items-center gap-1"
                     style={{ color: classInfo.color }}
                   >
-                    <Icon name={classInfo.icon as any} size={14} color={classInfo.color} />{" "}
+                    <Icon
+                      name={classInfo.icon as React.ComponentProps<typeof Icon>["name"]}
+                      size={14}
+                      color={classInfo.color}
+                    />{" "}
                     {classInfo.label}
                   </span>
                   <span className="t-label" style={{ color: "var(--ink-tertiary)" }}>
@@ -269,14 +283,14 @@ function ProfilePage() {
             {(
               [
                 ["stats", "Stats"],
-                ["equipment", "Equipment"],
+                ["companion-loadout", "Soul Loadout"],
                 ["achievements", "Achievements"],
                 ["inventory", "Inventory"],
               ] as const
             ).map(([k, l]) => (
               <button
                 key={k}
-                onClick={() => setTab(k)}
+                onClick={() => setTab(k as Tab)}
                 className={`ss-tab-d pb-2 text-sm font-semibold capitalize ${tab === k ? "active" : ""}`}
               >
                 {l}
@@ -284,62 +298,154 @@ function ProfilePage() {
             ))}
           </div>
 
-          {/* Equipment tab */}
-          {tab === "equipment" && (
-            <div className="space-y-3">
-              <h2 className="t-h2 text-lg font-bold" style={{ color: "var(--ink-primary)" }}>
-                Your Equipment
-              </h2>
-              {(equipQ.data?.equipment ?? []).length === 0 ? (
-                <EmptyState
-                  icon="stone"
-                  title="You stand unarmored."
-                  body="The Bazaar and the Forge both make gear. The Forge is cheaper."
-                />
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {(equipQ.data?.equipment ?? []).map((ue: any) => (
+          {/* Companion Loadout */}
+          {tab === ("companion-loadout" as Tab) && (
+            <div className="space-y-6">
+              <div className="ss-card p-4 bg-gradient-to-r from-[rgba(138,43,226,0.2)] to-transparent border-l-4 border-[var(--primary)]">
+                <div className="flex justify-between items-center mb-2">
+                  <h2
+                    className="t-h2 text-lg font-bold flex items-center gap-2"
+                    style={{ color: "var(--ink-primary)" }}
+                  >
+                    <Icon
+                      name="sparkle"
+                      size={20}
+                      color="rgb(138,43,226)"
+                      className="drop-shadow-[0_0_10px_rgb(138,43,226)]"
+                    />
+                    Soul Load
+                  </h2>
+                  <div
+                    className="text-xl font-bold font-mono"
+                    style={{
+                      color: "var(--accent-void)",
+                      textShadow: "0 0 10px var(--accent-void)",
+                    }}
+                  >
+                    {profile.soul_load_current ?? 0}{" "}
+                    <span className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+                      / {profile.soul_load_max ?? 10}
+                    </span>
+                  </div>
+                </div>
+                <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                  Equip companions directly to your soul. Higher star ratings require more Soul Load
+                  capacity.
+                </p>
+
+                {/* Progress bar */}
+                <div className="w-full h-2 rounded-full overflow-hidden bg-black/50 mt-4 border border-[rgba(255,255,255,0.1)]">
+                  <div
+                    className="h-full transition-all duration-1000"
+                    style={{
+                      width: `${Math.min(100, ((profile.soul_load_current ?? 0) / (profile.soul_load_max ?? 10)) * 100)}%`,
+                      background: "var(--accent-void)",
+                      boxShadow: "0 0 10px var(--accent-void)",
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {(["weapon", "armor", "mount"] as const).map((slot) => {
+                  const equippedId = profile[`equip_${slot}_id`];
+                  const equippedMonster = monstersQ.data?.userMonsters.find(
+                    (m: { id: string }) => m.id === equippedId,
+                  );
+
+                  return (
                     <div
-                      key={ue.id}
-                      className="flex items-center justify-between p-3 ss-card"
-                      style={{
-                        borderColor: ue.is_equipped ? "var(--gold-bright)" : "var(--ss-border)",
-                      }}
+                      key={slot}
+                      className="ss-card p-4 flex flex-col items-center justify-center relative overflow-hidden group"
                     >
-                      <div>
-                        <p className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
-                          {ue.equipment.name}
-                        </p>
-                        <p className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
-                          {ue.equipment.slot} · {ue.equipment.rarity}
-                          {ue.equipment.str_bonus > 0 && ` · +${ue.equipment.str_bonus} STR`}
-                          {ue.equipment.int_bonus > 0 && ` · +${ue.equipment.int_bonus} INT`}
-                          {ue.equipment.con_bonus > 0 && ` · +${ue.equipment.con_bonus} CON`}
-                          {ue.equipment.per_bonus > 0 && ` · +${ue.equipment.per_bonus} PER`}
-                        </p>
+                      <div
+                        className="absolute top-2 left-2 text-[10px] uppercase font-bold tracking-widest"
+                        style={{ color: "var(--ink-tertiary)" }}
+                      >
+                        {slot}
                       </div>
-                      {ue.is_equipped ? (
-                        <span
-                          className="text-[10px] px-2 py-0.5 rounded-full"
-                          style={{
-                            background: "rgba(255,213,79,0.2)",
-                            color: "var(--gold-bright)",
-                          }}
-                        >
-                          Equipped
-                        </span>
+
+                      {equippedMonster ? (
+                        <>
+                          <img
+                            src={
+                              equippedMonster.monster.art_url
+                                ? equippedMonster.monster.art_url
+                                : `/sprites/monsters/placeholder.png`
+                            }
+                            alt={equippedMonster.monster.name}
+                            className="w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] my-2"
+                          />
+                          <p className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
+                            {equippedMonster.monster.name}
+                          </p>
+                          <p className="text-[10px] mb-3" style={{ color: "var(--ink-secondary)" }}>
+                            Load: {equippedMonster.star_rating ?? 1}
+                          </p>
+
+                          <button
+                            onClick={() => equipMut.mutate({ slot, monsterId: null })}
+                            disabled={equipMut.isPending}
+                            className="ss-btn w-full py-1 text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity bg-red-900/50 border-red-500/50 hover:bg-red-900"
+                          >
+                            Unbind
+                          </button>
+                        </>
                       ) : (
-                        <button
-                          onClick={() => equipMut.mutate(ue.id)}
-                          className="ss-btn ss-btn-secondary text-[10px] px-2 py-1 font-bold"
-                        >
-                          Equip
-                        </button>
+                        <>
+                          <div className="w-20 h-20 border-2 border-dashed border-white/20 rounded-full flex items-center justify-center my-2 bg-black/40">
+                            <Icon
+                              name={
+                                slot === "weapon" ? "swords" : slot === "armor" ? "shield" : "paw"
+                              }
+                              size={24}
+                              color="var(--ink-tertiary)"
+                            />
+                          </div>
+                          <p
+                            className="text-[10px] text-center max-w-[150px] mb-3"
+                            style={{ color: "var(--ink-tertiary)" }}
+                          >
+                            No soul bound.
+                          </p>
+
+                          <select
+                            onChange={(e) => {
+                              if (e.target.value) {
+                                equipMut.mutate({ slot, monsterId: e.target.value });
+                              }
+                            }}
+                            className="ss-btn w-full py-1 text-xs bg-black/80 border-white/20 text-white"
+                            value=""
+                          >
+                            <option value="" disabled>
+                              Bind Companion...
+                            </option>
+                            {monstersQ.data?.userMonsters
+                              .filter(
+                                (m: { id: string }) =>
+                                  m.id !== profile.equip_weapon_id &&
+                                  m.id !== profile.equip_armor_id &&
+                                  m.id !== profile.equip_mount_id,
+                              )
+                              .map(
+                                (m: {
+                                  id: string;
+                                  monster: { name: string };
+                                  star_rating?: number;
+                                }) => (
+                                  <option key={m.id} value={m.id}>
+                                    {m.monster.name} (Load: {m.star_rating ?? 1})
+                                  </option>
+                                ),
+                              )}
+                          </select>
+                        </>
                       )}
                     </div>
-                  ))}
-                </div>
-              )}
+                  );
+                })}
+              </div>
             </div>
           )}
 
@@ -404,40 +510,47 @@ function ProfilePage() {
                 />
               ) : (
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                  {(full?.inventory ?? []).map((inv: any) => (
-                    <div key={inv.id} className="ss-card p-3 text-center">
-                      <div className="mb-2 flex justify-center">
-                        <Icon
-                          name={
-                            inv.item_type === "egg"
-                              ? "egg"
-                              : inv.item_type === "realm_potion"
-                                ? "potion"
-                                : inv.item_type === "food"
-                                  ? "food"
-                                  : "stone"
-                          }
-                          size={28}
-                          color={
-                            inv.item_type === "egg"
-                              ? "var(--gold-bright)"
-                              : inv.item_type === "realm_potion"
-                                ? "var(--violet)"
-                                : inv.item_type === "food"
-                                  ? "var(--ember)"
-                                  : "var(--ink-secondary)"
-                          }
-                          className="lucide-glow"
-                        />
+                  {(full?.inventory ?? []).map(
+                    (inv: {
+                      id: string;
+                      item_type: string;
+                      item_name: string;
+                      quantity: number;
+                    }) => (
+                      <div key={inv.id} className="ss-card p-3 text-center">
+                        <div className="mb-2 flex justify-center">
+                          <Icon
+                            name={
+                              inv.item_type === "egg"
+                                ? "egg"
+                                : inv.item_type === "realm_potion"
+                                  ? "potion"
+                                  : inv.item_type === "food"
+                                    ? "food"
+                                    : "stone"
+                            }
+                            size={28}
+                            color={
+                              inv.item_type === "egg"
+                                ? "var(--gold-bright)"
+                                : inv.item_type === "realm_potion"
+                                  ? "var(--violet)"
+                                  : inv.item_type === "food"
+                                    ? "var(--ember)"
+                                    : "var(--ink-secondary)"
+                            }
+                            className="lucide-glow"
+                          />
+                        </div>
+                        <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
+                          {inv.item_name}
+                        </p>
+                        <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
+                          ×{inv.quantity}
+                        </p>
                       </div>
-                      <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
-                        {inv.item_name}
-                      </p>
-                      <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
-                        ×{inv.quantity}
-                      </p>
-                    </div>
-                  ))}
+                    ),
+                  )}
                 </div>
               )}
 
@@ -451,24 +564,31 @@ function ProfilePage() {
                     Pets &amp; Mounts
                   </h3>
                   <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-                    {(full?.pets ?? []).map((pet: any) => (
-                      <div key={pet.id} className="ss-card p-3 text-center">
-                        <div className="mb-2 flex justify-center">
-                          <Icon
-                            name={pet.is_mount ? "mount" : "pet"}
-                            size={28}
-                            color={pet.is_mount ? "var(--gold-bright)" : "var(--cyan)"}
-                            className="lucide-glow"
-                          />
+                    {(full?.pets ?? []).map(
+                      (pet: {
+                        id: string;
+                        is_mount: boolean;
+                        pet_name: string;
+                        food_fed: number;
+                      }) => (
+                        <div key={pet.id} className="ss-card p-3 text-center">
+                          <div className="mb-2 flex justify-center">
+                            <Icon
+                              name={pet.is_mount ? "mount" : "pet"}
+                              size={28}
+                              color={pet.is_mount ? "var(--gold-bright)" : "var(--cyan)"}
+                              className="lucide-glow"
+                            />
+                          </div>
+                          <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
+                            {pet.pet_name}
+                          </p>
+                          <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
+                            {pet.is_mount ? "Mount" : `Pet · Fed ${pet.food_fed}/50`}
+                          </p>
                         </div>
-                        <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
-                          {pet.pet_name}
-                        </p>
-                        <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
-                          {pet.is_mount ? "Mount" : `Pet · Fed ${pet.food_fed}/50`}
-                        </p>
-                      </div>
-                    ))}
+                      ),
+                    )}
                   </div>
                 </div>
               )}
@@ -536,7 +656,10 @@ function ProfilePage() {
                         <button
                           onClick={() =>
                             updateMut.mutate({
-                              talents: { ...(profile.talents as any), [t.id]: currentRank + 1 },
+                              talents: {
+                                ...(profile.talents as Record<string, number>),
+                                [t.id]: currentRank + 1,
+                              },
                             })
                           }
                           disabled={!canUpgrade || updateMut.isPending}
@@ -644,7 +767,11 @@ function ProfilePage() {
                     style={{ borderColor: profile.class === key ? info.color : undefined }}
                   >
                     <div className="mb-2 flex justify-center">
-                      <Icon name={info.icon as any} size={28} color={info.color} />
+                      <Icon
+                        name={info.icon as React.ComponentProps<typeof Icon>["name"]}
+                        size={28}
+                        color={info.color}
+                      />
                     </div>
                     <p className="font-bold text-sm" style={{ color: info.color }}>
                       {info.label}

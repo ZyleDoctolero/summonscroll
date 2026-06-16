@@ -29,6 +29,7 @@ export type Whisper = {
 
 let publish: null | ((w: Omit<Whisper, "id" | "createdAt">) => void) = null;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function whisper(input: Omit<Whisper, "id" | "createdAt">) {
   if (publish) publish(input);
 }

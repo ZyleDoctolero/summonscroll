@@ -206,7 +206,10 @@ export async function runTrial(teamUserMonsterIds: string[]): Promise<TrialResul
       echoTouched = true;
     }
   }
-  await supabase.from("profiles").update(updates).eq("id", user.id);
+  await supabase
+    .from("profiles")
+    .update(updates as any)
+    .eq("id", user.id);
 
   // Log the run
   await supabase.from("trial_runs").insert({

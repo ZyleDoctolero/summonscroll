@@ -15,6 +15,15 @@ export const Route = createFileRoute("/_authenticated/bazaar")({
 
 type ShopTab = "equipment" | "potion" | "scroll" | "armoire";
 
+type ShopItem = {
+  id: string;
+  category: string;
+  name: string;
+  description: string;
+  price: number;
+  currency: string;
+};
+
 function ShopPage() {
   const qc = useQueryClient();
 
@@ -41,7 +50,7 @@ function ShopPage() {
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
-  const items = (itemsQ.data?.items ?? []).filter((i: any) => i.category === tab);
+  const items = (itemsQ.data?.items ?? []).filter((i: ShopItem) => i.category === tab);
 
   return (
     <AppShell profile={profile}>
@@ -115,7 +124,7 @@ function ShopPage() {
             <button
               onClick={() => {
                 const armoireItem = (itemsQ.data?.items ?? []).find(
-                  (i: any) => i.category === "armoire",
+                  (i: ShopItem) => i.category === "armoire",
                 );
                 if (armoireItem) purchaseMut.mutate(armoireItem.id);
               }}
@@ -138,62 +147,52 @@ function ShopPage() {
         {/* Item grid */}
         {tab !== "armoire" && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {items.map(
-              (item: {
-                id: string;
-                name: string;
-                description: string;
-                price: number;
-                currency: string;
-                effect_type: string;
-                effect_value: number;
-              }) => {
-                const canAfford =
-                  item.currency === "pact_seals"
-                    ? profile.pact_seals >= item.price
-                    : item.currency === "gold"
-                      ? profile.gold >= item.price
-                      : profile.crystals >= item.price;
-                const iconName =
-                  item.currency === "pact_seals"
-                    ? "seal"
-                    : item.currency === "gold"
-                      ? "gold"
-                      : "crystal";
-                const iconColor =
-                  item.currency === "pact_seals"
-                    ? "var(--violet)"
-                    : item.currency === "gold"
-                      ? "var(--gold-bright)"
-                      : "var(--cyan)";
-                return (
-                  <div key={item.id} className="ss-card">
-                    <h3 className="font-bold text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
-                      {item.name}
-                    </h3>
-                    <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
-                      {item.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span
-                        className="t-mono font-bold text-sm flex items-center gap-1"
-                        style={{ color: canAfford ? "var(--gold-bright)" : "var(--danger)" }}
-                      >
-                        <Icon name={iconName} size={14} color={iconColor} />
-                        {item.price}
-                      </span>
-                      <button
-                        onClick={() => purchaseMut.mutate(item.id)}
-                        disabled={!canAfford || purchaseMut.isPending}
-                        className={`ss-btn disabled:opacity-40 ${canAfford ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
-                      >
-                        {purchaseMut.isPending ? "…" : "Buy"}
-                      </button>
-                    </div>
+            {items.map((item: ShopItem) => {
+              const canAfford =
+                item.currency === "pact_seals"
+                  ? profile.pact_seals >= item.price
+                  : item.currency === "gold"
+                    ? profile.gold >= item.price
+                    : profile.crystals >= item.price;
+              const iconName =
+                item.currency === "pact_seals"
+                  ? "seal"
+                  : item.currency === "gold"
+                    ? "gold"
+                    : "crystal";
+              const iconColor =
+                item.currency === "pact_seals"
+                  ? "var(--violet)"
+                  : item.currency === "gold"
+                    ? "var(--gold-bright)"
+                    : "var(--cyan)";
+              return (
+                <div key={item.id} className="ss-card">
+                  <h3 className="font-bold text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
+                    {item.name}
+                  </h3>
+                  <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
+                    {item.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span
+                      className="t-mono font-bold text-sm flex items-center gap-1"
+                      style={{ color: canAfford ? "var(--gold-bright)" : "var(--danger)" }}
+                    >
+                      <Icon name={iconName} size={14} color={iconColor} />
+                      {item.price}
+                    </span>
+                    <button
+                      onClick={() => purchaseMut.mutate(item.id)}
+                      disabled={!canAfford || purchaseMut.isPending}
+                      className={`ss-btn disabled:opacity-40 ${canAfford ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
+                    >
+                      {purchaseMut.isPending ? "…" : "Buy"}
+                    </button>
                   </div>
-                );
-              },
-            )}
+                </div>
+              );
+            })}
           </div>
         )}
 

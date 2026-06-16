@@ -24,12 +24,14 @@ export default tseslint.config(
         "error",
         {
           selector: "Literal[value=/^#[0-9A-Fa-f]{3,8}$/]",
-          message: "Hex colors are restricted outside of tokens.css (RULE 2). Use CSS variables instead.",
+          message:
+            "Hex colors are restricted outside of tokens.css (RULE 2). Use CSS variables instead.",
         },
         {
           selector: "TemplateElement[value.raw=/#[0-9A-Fa-f]{3,8}/]",
-          message: "Hex colors are restricted outside of tokens.css (RULE 2). Use CSS variables instead.",
-        }
+          message:
+            "Hex colors are restricted outside of tokens.css (RULE 2). Use CSS variables instead.",
+        },
       ],
       "no-restricted-imports": [
         "error",

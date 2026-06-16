@@ -10,6 +10,7 @@ import {
   updateTeamSlot,
   listTasks,
   harvestIsland,
+  createTask,
 } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
 import { supabase } from "@/integrations/supabase/client";
@@ -21,6 +22,13 @@ import { IslandZones } from "@/components/game/IslandZones";
 export const Route = createFileRoute("/_authenticated/island")({
   component: IslandPage,
 });
+
+type IslandTeamMember = {
+  monster: {
+    realm_id: number;
+    element: string;
+  };
+};
 
 function IslandPage() {
   const qc = useQueryClient();
@@ -46,7 +54,7 @@ function IslandPage() {
     mutationFn: async () => harvestIsland(),
     onSuccess: (res) => {
       qc.invalidateQueries({ queryKey: ["profile"] });
-      toast.success(`Harvested ${res.harvested} Gold!`);
+      toast.success(`Condensed ${res.harvested} Spirit Stones!`);
       if (res.whisperName) {
         toast.info(`${res.whisperName} looks pleased with the harvest.`);
       }
@@ -73,8 +81,9 @@ function IslandPage() {
       const profile = profileQ.data?.profile;
       const inv = invQ.data ?? [];
       const potions = inv.find((i) => i.item_type === "realm_potion")?.quantity ?? 0;
-      if (!profile || profile.gold < 1000) throw new Error("Not enough gold (1000 required).");
-      if (potions < 5) throw new Error("Not enough Realm Potions (5 required).");
+      if (!profile || profile.gold < 1000)
+        throw new Error("Not enough Spirit Stones (1000 required).");
+      if (potions < 5) throw new Error("Not enough Tribulation Pills (5 required).");
 
       await supabase
         .from("profiles")
@@ -89,31 +98,47 @@ function IslandPage() {
           .eq("id", potionId);
 
       const um = monstersQ.data!.userMonsters.find((m) => m.id === monsterId);
-      await supabase
-        .from("user_monsters")
-        .update({ ascension_level: (um?.ascension_level ?? 0) + 1 })
-        .eq("id", monsterId);
+
+      await createTask({
+        type: "todo",
+        title: `Heavenly Tribulation: ${um?.monster?.name || "Beast"}`,
+        notes: JSON.stringify({ monsterId }),
+        category: "tribulation",
+        difficulty: "hard",
+      });
+
       return um;
     },
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
       qc.invalidateQueries({ queryKey: ["profile"] });
       qc.invalidateQueries({ queryKey: ["inventory"] });
-      toast.success("Monster Ascended! Stats and Power have increased.");
+      qc.invalidateQueries({ queryKey: ["tasks"] });
+      toast.success("Tribulation Task added to your Quest Board! Complete it to ascend.");
     },
     onError: (e: Error) => toast.error(e.message),
   });
 
-  const rawUserMonsters = monstersQ.data?.userMonsters ?? [];
-  const userMonsters = useMemo(() => rawUserMonsters, [rawUserMonsters]);
+  const userMonsters = useMemo(() => monstersQ.data?.userMonsters ?? [], [monstersQ.data]);
   const team = useMemo(
     () =>
       userMonsters
-        .filter((um: any) => um.is_on_team)
-        .sort((a: any, b: any) => (a.team_slot ?? 99) - (b.team_slot ?? 99)),
+        .filter((um: { is_on_team: boolean; team_slot: number | null }) => um.is_on_team)
+        .sort(
+          (
+            a: { is_on_team: boolean; team_slot: number | null },
+            b: { is_on_team: boolean; team_slot: number | null },
+          ) => (a.team_slot ?? 99) - (b.team_slot ?? 99),
+        ),
     [userMonsters],
   );
-  const roster = useMemo(() => userMonsters.filter((um: any) => !um.is_on_team), [userMonsters]);
+  const roster = useMemo(
+    () =>
+      userMonsters.filter(
+        (um: { is_on_team: boolean; team_slot: number | null }) => !um.is_on_team,
+      ),
+    [userMonsters],
+  );
 
   // Weather based on today's task completion
   const tasks = (tasksQ.data?.tasks ?? []) as Array<{ type: string; completed: boolean }>;
@@ -158,13 +183,13 @@ function IslandPage() {
   );
 
   const realmCounts = Object.values(
-    team.reduce((acc: Record<string, number>, t: any) => {
+    team.reduce((acc: Record<string, number>, t: IslandTeamMember) => {
       acc[t.monster.realm_id] = (acc[t.monster.realm_id] || 0) + 1;
       return acc;
     }, {}),
   );
   const elementCounts = Object.values(
-    team.reduce((acc: Record<string, number>, t: any) => {
+    team.reduce((acc: Record<string, number>, t: IslandTeamMember) => {
       acc[t.monster.element] = (acc[t.monster.element] || 0) + 1;
       return acc;
     }, {}),
@@ -189,11 +214,11 @@ function IslandPage() {
     for (const um of team) {
       const r = um.monster.rarity;
       let mult = 1;
-      if (r === "Uncommon") mult = 1.2;
-      if (r === "Rare") mult = 1.5;
-      if (r === "Epic") mult = 2.0;
-      if (r === "Legendary") mult = 3.0;
-      if (r === "EX") mult = 5.0;
+      if (r === "uncommon") mult = 1.2;
+      if (r === "rare") mult = 1.5;
+      if (r === "epic") mult = 2.0;
+      if (r === "legendary") mult = 3.0;
+      if (r === "ex") mult = 5.0;
       gold += (um.bond_percent / 100.0) * mult * 0.5 * hours;
     }
     return Math.floor(gold) + (profile.island_pending_gold || 0);
@@ -208,7 +233,7 @@ function IslandPage() {
         <div className="p-6 md:p-10 max-w-6xl">
           <div className="flex items-center gap-3 mb-6">
             <h1 className="t-h1 text-3xl font-bold" style={{ color: "var(--gold-bright)" }}>
-              Your Island
+              Cultivation Realm
             </h1>
             <Icon
               name={weatherIcon}
@@ -244,11 +269,12 @@ function IslandPage() {
                 }
               />
               <span>
-                {weather === "sunny" && "All dailies complete — your island basks in sunlight!"}
+                {weather === "sunny" &&
+                  "All dailies complete — your realm basks in heaven's light!"}
                 {weather === "overcast" &&
-                  `${completedDailies}/${dailies.length} dailies done — clouds gather over your island.`}
+                  `${completedDailies}/${dailies.length} dailies done — tribulation clouds gather.`}
                 {weather === "stormy" &&
-                  `Only ${completedDailies}/${dailies.length} dailies done — storms rage across your island!`}
+                  `Only ${completedDailies}/${dailies.length} dailies done — demonic qi rages across your realm!`}
               </span>
             </div>
           </div>
@@ -269,11 +295,11 @@ function IslandPage() {
                       background: "linear-gradient(135deg, var(--success), var(--realm-wild))",
                     }}
                   >
-                    Harvest {pendingHarvest} Gold
+                    Condense {pendingHarvest} Spirit Stones
                   </button>
                 )}
                 <span className="text-sm font-mono" style={{ color: "var(--gold-bright)" }}>
-                  Power: {teamPower.toLocaleString()}
+                  CP: {teamPower.toLocaleString()}
                 </span>
               </div>
             </div>
@@ -282,7 +308,7 @@ function IslandPage() {
 
           {/* Monster roster */}
           <h2 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
-            Available Monsters ({roster.length})
+            Contracted Spirits ({roster.length})
           </h2>
           {roster.length === 0 ? (
             <EmptyState

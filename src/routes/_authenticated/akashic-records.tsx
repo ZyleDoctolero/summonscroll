@@ -1,132 +1,150 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { AppShell } from "@/components/game/AppShell";
-import { AkashicRecords } from "@/components/game/AkashicRecords";
+import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { LoadingScreen } from "@/components/game/LoadingScreen";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
+import { ChevronLeft } from "lucide-react";
+import { AscensionTree } from "@/components/game/AscensionTree";
+import { getMyProfile, listMyMonsters } from "@/lib/game/supabase-api";
+
+type MonsterRecord = {
+  id: string;
+  current_star?: number;
+  star_level?: number;
+  current_class?: string;
+  title?: string;
+  secondary_element?: string;
+  corruption_level?: number;
+  monster: {
+    name: string;
+    rarity: string;
+    role: string;
+    art_url?: string;
+  };
+};
 
 export const Route = createFileRoute("/_authenticated/akashic-records")({
   component: AkashicRecordsPage,
 });
 
 function AkashicRecordsPage() {
-  const queryClient = useQueryClient();
   const [selectedTarget, setSelectedTarget] = useState<string | null>(null);
 
-  const { data: profile } = useQuery({
-    queryKey: ["profile"],
-    queryFn: async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (!user) return null;
-      const { data, error } = await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id", user.id)
-        .single();
-      if (error) throw error;
-      return { profile: data, user };
-    },
-  });
+  const profileQ = useQuery({ queryKey: ["profile"], queryFn: getMyProfile });
+  const monstersQ = useQuery({ queryKey: ["my-monsters"], queryFn: listMyMonsters });
 
-  const { data: monsters } = useQuery({
-    queryKey: ["my-monsters"],
-    queryFn: async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-      if (!user) return [];
-      const { data, error } = await supabase
-        .from("user_monsters")
-        .select("*, monster:monster_id(*)")
-        .eq("user_id", user.id);
-      if (error) throw error;
-      return data;
-    },
-  });
+  const monstersData = monstersQ.data?.userMonsters as MonsterRecord[] | undefined;
 
-  const synthesizeMut = useMutation({
-    mutationFn: async ({ targetId, fodderIds }: { targetId: string; fodderIds: string[] }) => {
-      const { data, error } = await supabase.rpc("synthesize_monster_v2", {
-        p_target_id: targetId,
-        p_fodder_ids: fodderIds,
-      });
-      if (error) throw error;
-      return data;
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["my-monsters"] });
-      queryClient.invalidateQueries({ queryKey: ["profile"] });
-      setSelectedTarget(null);
-    },
-  });
+  const targetMonster = useMemo(() => {
+    if (!monstersData) return null;
+    return selectedTarget ? monstersData.find((m) => m.id === selectedTarget) : null;
+  }, [selectedTarget, monstersData]);
 
-  if (!profile || !monsters) return <LoadingScreen realmSlug="void" />;
+  if (profileQ.isLoading || monstersQ.isLoading) return <LoadingScreen realmSlug="void" />;
+  if (!profileQ.data || !monstersQ.data) return null;
 
-  const targetMonster = monsters.find((m) => m.id === selectedTarget);
-
-  // Dummy fodder logic for the UI demonstration
-  const requiredFodderCount = targetMonster?.current_star || 1;
-  const availableFodder = monsters.filter(
-    (m) => m.id !== selectedTarget && m.current_star === requiredFodderCount,
-  );
-
-  const requiredFodderNodes = Array.from({ length: requiredFodderCount }).map((_, i) => ({
-    id: availableFodder[i]?.id || `empty-${i}`,
-    name: availableFodder[i]?.monster?.name || "Empty",
-    isAvailable: !!availableFodder[i],
-    element: availableFodder[i]?.monster?.element || "none",
-  }));
+  const profile = profileQ.data.profile;
+  const monsters = monstersData as MonsterRecord[];
 
   return (
-    <AppShell profile={profile.profile}>
-      <div className="p-6 md:p-10 max-w-6xl mx-auto space-y-8">
-        <div className="text-center space-y-2">
-          <h1 className="text-4xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 font-mono">
-            AKASHIC RECORDS
+    <AppShell profile={profile}>
+      <AtmosphereBackdrop realm="void" />
+
+      <div className="relative z-10 p-4 md:p-8 max-w-6xl mx-auto pt-20 space-y-8 min-h-screen">
+        <header className="text-center space-y-2">
+          <h1
+            className="text-4xl font-black tracking-widest font-display uppercase"
+            style={{ color: "var(--cyan)", textShadow: "0 0 30px rgba(0,240,255,0.4)" }}
+          >
+            Akashic Records
           </h1>
-          <p className="text-cyan-200/50 font-mono text-sm tracking-widest">
-            SYNTHESIZE SOULS TO BREAK MORTAL LIMITS
+          <p
+            style={{ color: "var(--ink-secondary)" }}
+            className="text-sm tracking-widest font-mono"
+          >
+            VIEW THE ASCENSION LINEAGE OF YOUR SOULS
           </p>
-        </div>
+        </header>
 
         {!selectedTarget ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {monsters.map((m: any) => (
-              <div
-                key={m.id}
-                onClick={() => setSelectedTarget(m.id)}
-                className="system-panel p-4 text-center cursor-pointer hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all group"
-              >
-                <div className="text-cyan-400 font-mono font-bold">{m.current_star}★</div>
-                <div className="text-xs text-white truncate">{m.monster?.name}</div>
-              </div>
-            ))}
-          </div>
-        ) : (
+          <>
+            <p
+              className="text-center text-xs tracking-widest uppercase font-bold"
+              style={{ color: "var(--cyan)", textShadow: "0 0 10px rgba(0, 240, 255, 0.5)" }}
+            >
+              Select a soul to view its evolution milestones and future paths.
+            </p>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-8">
+              {monsters.map((m) => {
+                const rarity = (m.monster?.rarity || "common") as Rarity;
+                const rarityColor = RARITY_COLOR[rarity] || "var(--ink-tertiary)";
+                const currentStar = m.current_star ?? m.star_level ?? 1;
+
+                return (
+                  <button
+                    key={m.id}
+                    onClick={() => setSelectedTarget(m.id)}
+                    className={`system-panel p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity} bg-black/80 border border-cyan-900/30 hover:border-cyan-400/80 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]`}
+                  >
+                    <div className="w-14 h-14 mx-auto mb-2 rounded-lg overflow-hidden ss-pane flex items-center justify-center border border-white/5 group-hover:border-cyan-400/50 transition-colors">
+                      <img
+                        src={
+                          m.monster?.art_url
+                            ? m.monster.art_url
+                            : `/sprites/monsters/${(m.monster?.name || "unknown").toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                        }
+                        alt={m.monster?.name || "Monster"}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = "/monsters/placeholder.png";
+                        }}
+                      />
+                    </div>
+                    <div className="font-mono font-bold text-sm" style={{ color: rarityColor }}>
+                      {currentStar}★
+                    </div>
+                    <div
+                      className="text-xs truncate mt-1"
+                      title={m.monster?.name}
+                      style={{ color: "var(--ink-primary)" }}
+                    >
+                      {m.monster?.name}
+                    </div>
+                    <div
+                      className="text-[9px] uppercase tracking-wider mt-0.5"
+                      style={{ color: rarityColor }}
+                    >
+                      {rarity}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </>
+        ) : targetMonster ? (
           <div className="flex flex-col items-center">
             <button
               onClick={() => setSelectedTarget(null)}
-              className="mb-8 text-cyan-500/50 hover:text-cyan-400 font-mono text-xs uppercase tracking-widest"
+              className="mb-6 flex items-center gap-1 hover:gap-2 transition-all text-sm font-mono uppercase tracking-widest"
+              style={{ color: "var(--ink-secondary)" }}
             >
-              ← Return to Roster
+              <ChevronLeft className="w-4 h-4" />
+              Return to Archives
             </button>
 
-            <AkashicRecords
-              targetId={targetMonster.id}
-              targetName={targetMonster.monster?.name}
-              targetStar={targetMonster.current_star}
-              maxStarLevel={7}
-              requiredFodder={requiredFodderNodes}
-              isLocked={targetMonster.is_locked}
-              onSynthesize={async (fodderIds) => {
-                await synthesizeMut.mutateAsync({ targetId: targetMonster.id, fodderIds });
-              }}
+            <AscensionTree
+              currentStar={targetMonster.current_star ?? targetMonster.star_level ?? 1}
+              currentClass={targetMonster.current_class || targetMonster.monster.role}
+              title={targetMonster.title}
+              secondaryElement={targetMonster.secondary_element}
+              corruptionLevel={targetMonster.corruption_level ?? 0}
+              rarity={targetMonster.monster.rarity as Rarity}
             />
           </div>
-        )}
+        ) : null}
       </div>
     </AppShell>
   );

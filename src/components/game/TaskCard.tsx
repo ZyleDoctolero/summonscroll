@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { Icon } from "@/components/ui/Icon";
 import { valueColor, VALUE_COLOR_HEX, type Difficulty, type TaskType } from "@/lib/game/constants";
 import { FloatingTextContainer, type FloatingTextItem } from "./FloatingText";
@@ -59,7 +59,7 @@ const DIFFICULTY_STARS: Record<string, number> = {
   hard: 3,
 };
 
-export function TaskCard({
+export const TaskCard = React.memo(function TaskCard({
   task,
   onScore,
   onEdit,
@@ -68,8 +68,8 @@ export function TaskCard({
   isTutorial = false,
 }: {
   task: Task;
-  onScore: (dir: "plus" | "minus" | "complete" | "uncomplete") => void;
-  onEdit: () => void;
+  onScore: (id: string, direction: "plus" | "minus" | "complete" | "uncomplete") => void;
+  onEdit: (task: Task) => void;
   onDelete: () => void;
   busy: boolean;
   isTutorial?: boolean;
@@ -94,9 +94,9 @@ export function TaskCard({
           },
         ]);
       }
-      onScore(dir);
+      onScore(task.id, dir);
     },
-    [task.value, onScore],
+    [task.id, task.value, onScore],
   );
 
   const removeFloatingText = useCallback((id: string) => {
@@ -121,9 +121,9 @@ export function TaskCard({
 
   return (
     <article
-      className="ss-card flex gap-3 group relative transition-all overflow-hidden"
+      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-hidden duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(0,240,255,0.3)] z-10 hover:z-20"
+      /* eslint-disable no-restricted-syntax */
       style={{
-        background: `url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(90deg, ${color}30, #1a0b2e 80%)`,
         borderLeft: `4px solid ${task.is_starred ? "#fcd34d" : color}`,
         borderLeftWidth: task.is_starred ? 6 : 4,
         borderLeftColor: task.is_starred ? "#fcd34d" : color,
@@ -132,18 +132,21 @@ export function TaskCard({
         boxShadow: task.is_starred ? "0 0 18px rgba(212,175,63,0.4)" : undefined,
         animation: isTutorial ? "tutorial-pulse 2s ease-in-out infinite" : undefined,
       }}
+      /* eslint-enable no-restricted-syntax */
     >
       <FloatingTextContainer items={floatingTexts} onComplete={removeFloatingText} />
 
       {task.is_starred && (
         <div
           className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
+          /* eslint-disable no-restricted-syntax */
           style={{
             background: "linear-gradient(135deg,#d4af3f,#fcd34d)",
             color: "#1a0b2e",
             border: "1px solid #fef08a",
             boxShadow: "0 0 10px rgba(212,175,63,0.5)",
           }}
+          /* eslint-enable no-restricted-syntax */
         >
           <Icon name="star" size={10} color="var(--bg-deep)" className="fill-current" />
           Sacred
@@ -188,12 +191,14 @@ export function TaskCard({
           disabled={busy}
           onClick={() => handleScore(task.completed ? "uncomplete" : "complete")}
           className="relative w-11 h-11 rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
+          /* eslint-disable no-restricted-syntax */
           style={{
             background: task.completed ? color : "rgba(26,11,46,0.6)",
             border: `3px solid ${color}`,
             color: task.completed ? "#1a0b2e" : color,
             boxShadow: `inset 0 0 8px ${color}40`,
           }}
+          /* eslint-enable no-restricted-syntax */
           aria-label="Toggle complete"
         >
           {task.completed && <Icon name="check" size={18} strokeWidth={3} />}
@@ -208,7 +213,11 @@ export function TaskCard({
                 className="text-[10px] uppercase tracking-widest mb-0.5 flex items-center gap-1"
                 style={{ color }}
               >
-                <Icon name={categoryIcon as any} size={10} color={color} />
+                <Icon
+                  name={categoryIcon as React.ComponentProps<typeof Icon>["name"]}
+                  size={10}
+                  color={color}
+                />
                 <span>{task.category}</span>
               </div>
             )}
@@ -229,7 +238,9 @@ export function TaskCard({
               className="w-11 h-11 grid place-items-center rounded hover:bg-white/5"
               style={{ color: "var(--ink-secondary)" }}
               aria-label="More options"
-            ></button>
+            >
+              <Icon name="more" size={16} />
+            </button>
             {open && (
               <div
                 className="absolute right-0 top-8 z-10 min-w-[120px] rounded border shadow-xl ss-card"
@@ -239,7 +250,7 @@ export function TaskCard({
                 <button
                   onClick={() => {
                     setOpen(false);
-                    onEdit();
+                    onEdit(task);
                   }}
                   className="w-full text-left px-3 py-2 text-sm hover:bg-white/5 flex items-center gap-1.5"
                   style={{ color: "var(--ink-primary)" }}
@@ -312,4 +323,4 @@ export function TaskCard({
       </div>
     </article>
   );
-}
+});

@@ -13,7 +13,7 @@ const supa = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
 
 const ORIGIN_TO_REALM = {
   "D&D": "Ancient Vaults",
-  "Cthulhu": "The Outer Dark",
+  Cthulhu: "The Outer Dark",
   "Slavic folklore": "Blighted Expanse",
   "Celtic folklore": "Wild Frontier",
   "Greek mythology": "Myth Eternal",
@@ -24,13 +24,13 @@ const ORIGIN_TO_REALM = {
   "Arthurian legend": "Myth Eternal",
   "Christian mythology": "Divine Threshold",
   "Jewish mythology": "Divine Threshold",
-  "Hinduism": "Divine Threshold",
+  Hinduism: "Divine Threshold",
   "Mesopotamian mythology": "Myth Eternal",
   "Persian mythology": "Myth Eternal",
   "Aztec mythology": "Myth Eternal",
   "Mayan mythology": "Myth Eternal",
   "Hawaiian mythology": "Wild Frontier",
-  "Voodoo": "Haunted Veil",
+  Voodoo: "Haunted Veil",
   "Inuit folklore": "Wild Frontier",
   "Australian Aboriginal mythology": "Wild Frontier",
   "Korean mythology": "Myth Eternal",
@@ -108,8 +108,8 @@ const ORIGIN_TO_REALM = {
   "Melanesian mythology": "Wild Frontier",
   "Modern fiction": "Digital Nexus",
   "Science fiction": "Void Frontier",
-  "Steampunk": "Iron Dominion",
-  "Cyberpunk": "Digital Nexus",
+  Steampunk: "Iron Dominion",
+  Cyberpunk: "Digital Nexus",
   "Space opera": "Void Frontier",
   "Dark fantasy": "Haunted Veil",
   "Gothic horror": "Haunted Veil",
@@ -118,26 +118,26 @@ const ORIGIN_TO_REALM = {
   "Ghost story": "Haunted Veil",
   "Vampire literature": "Haunted Veil",
   "Werewolf fiction": "Wild Frontier",
-  "Witchcraft": "Haunted Veil",
-  "Alchemy": "Ancient Vaults",
-  "Demons": "Chaos Wastes",
-  "Angels": "Divine Threshold",
-  "Arthurian": "Myth Eternal",
+  Witchcraft: "Haunted Veil",
+  Alchemy: "Ancient Vaults",
+  Demons: "Chaos Wastes",
+  Angels: "Divine Threshold",
+  Arthurian: "Myth Eternal",
   "Robin Hood": "Wild Frontier",
   "Nursery rhyme": "Myth Eternal",
   "Fairy tale": "Myth Eternal",
-  "Fable": "Myth Eternal",
+  Fable: "Myth Eternal",
   "Tall tale": "Wild Frontier",
   "Urban legend": "Digital Nexus",
   "Conspiracy theory": "Digital Nexus",
   "Internet culture": "Digital Nexus",
   "Gaming culture": "Digital Nexus",
-  "Cryptid": "Wild Frontier",
-  "Extraterrestrial": "Void Frontier",
+  Cryptid: "Wild Frontier",
+  Extraterrestrial: "Void Frontier",
   "Time travel": "Void Frontier",
   "Alternate history": "Void Frontier",
   "Post-apocalyptic": "Chaos Wastes",
-  "Dystopian": "Digital Nexus"
+  Dystopian: "Digital Nexus",
 };
 
 async function audit() {
@@ -146,13 +146,13 @@ async function audit() {
     console.error("❌ Error fetching realms:", realmsErr);
     process.exit(1);
   }
-  
+
   const realmsMap = realms.reduce((acc, r) => ({ ...acc, [r.name]: r.id }), {});
 
   const { data: monsters, error: monstersErr } = await supa
     .from("monsters")
     .select("id, name, origin, element, realm_id, realms(name)");
-    
+
   if (monstersErr) {
     console.error("❌ Error fetching monsters:", monstersErr);
     process.exit(1);
@@ -168,7 +168,7 @@ async function audit() {
 
     // Determine expected realm
     let expectedRealmName = null;
-    
+
     // 1. Map via origin keyword mapping
     if (origin) {
       for (const [key, val] of Object.entries(ORIGIN_TO_REALM)) {
@@ -204,7 +204,7 @@ async function audit() {
         element,
         current: currentRealmName,
         expected: expectedRealmName,
-        expectedId
+        expectedId,
       });
     }
   }
@@ -212,15 +212,19 @@ async function audit() {
   console.log(`Found ${mismatches.length} mismatches.`);
   if (mismatches.length > 0) {
     console.log("Sample mismatches:");
-    mismatches.slice(0, 10).forEach(m => {
-      console.log(`- ${m.name}: Origin '${m.origin}', Element '${m.element}'. Current realm: '${m.current}', Expected: '${m.expected}'`);
+    mismatches.slice(0, 10).forEach((m) => {
+      console.log(
+        `- ${m.name}: Origin '${m.origin}', Element '${m.element}'. Current realm: '${m.current}', Expected: '${m.expected}'`,
+      );
     });
-    
+
     // Write out SQL update statements to a file
-    const sql = mismatches.map(m => {
-      return `UPDATE public.monsters SET realm_id = '${m.expectedId}' WHERE id = '${m.id}'; -- ${m.name} (${m.origin} / ${m.element})`;
-    }).join("\n");
-    
+    const sql = mismatches
+      .map((m) => {
+        return `UPDATE public.monsters SET realm_id = '${m.expectedId}' WHERE id = '${m.id}'; -- ${m.name} (${m.origin} / ${m.element})`;
+      })
+      .join("\n");
+
     console.log("\nSQL updates generated.");
     return { mismatches, sql };
   }

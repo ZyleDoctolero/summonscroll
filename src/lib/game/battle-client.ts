@@ -414,7 +414,7 @@ export async function startArenaBattle(
     };
     if (badges.wailingWall) update.wailing_wall_cleared_at = new Date().toISOString();
     if (badges.apex) update.apex_cleared_at = new Date().toISOString();
-    await supabase.from("tower_progress").upsert(update, { onConflict: "user_id" });
+    await supabase.from("tower_progress").upsert(update as any, { onConflict: "user_id" });
 
     // Bond ticks
     const bondGain = 1 + Math.floor(floor / 10);

@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
 import { xpToNextLevel } from "@/lib/game/constants";
 import { Icon } from "@/components/ui/Icon";
+import { Link } from "@tanstack/react-router";
 
 type Profile = {
   display_name: string;
@@ -24,6 +25,8 @@ type Profile = {
   stamina?: number;
   stamina_max?: number;
   stamina_last_tick?: string;
+  combo_count?: number;
+  last_task_time?: string | null;
 };
 
 const CLASS_ICONS: Record<string, string> = {
@@ -48,134 +51,152 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
 
   return (
     <header
-      className="hidden md:flex items-center gap-4 fixed top-0 right-0 z-40 h-14 px-6 border-b backdrop-blur-md"
+      className="hidden md:flex items-center justify-between fixed top-0 inset-x-0 z-40 h-14 px-6 border-b backdrop-blur-md"
       style={{
-        left: 260,
         background: "var(--bg-stage)",
         borderColor: "var(--ss-hairline)",
       }}
     >
-      {/* Level + Class */}
-      <div className="flex items-center gap-1.5 relative">
-        <span className="text-sm" title={profile.class ?? "none"}>
-          {classIcon}
-        </span>
-        <span
-          className="text-[10px] uppercase tracking-wider"
-          style={{ color: "var(--ink-tertiary)" }}
+      <div className="flex items-center gap-4">
+        {/* Level + Class + Link to Profile */}
+        <Link
+          to="/profile"
+          className="flex items-center gap-1.5 relative group hover:scale-105 transition-all"
         >
-          LVL
-        </span>
-        <span className="t-mono font-bold" style={{ color: "var(--gold-bright)" }}>
-          {profile.level}
-        </span>
-        {isComboActive && (
-          <div className="absolute -bottom-6 -left-1 bg-[var(--danger)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg border border-[var(--bg-deep)] animate-pulse whitespace-nowrap">
-            {comboCount}x COMBO
-          </div>
+          <span
+            className="text-sm group-hover:drop-shadow-[0_0_8px_var(--gold-bright)] transition-all"
+            title={profile.class ?? "none"}
+          >
+            {classIcon}
+          </span>
+          <span
+            className="text-[10px] uppercase tracking-wider group-hover:text-white transition-colors"
+            style={{ color: "var(--ink-tertiary)" }}
+          >
+            LVL
+          </span>
+          <span
+            className="t-mono font-bold group-hover:drop-shadow-[0_0_8px_var(--gold-bright)] transition-all"
+            style={{ color: "var(--gold-bright)" }}
+          >
+            {profile.level}
+          </span>
+          {isComboActive && (
+            <div className="absolute -bottom-6 -left-1 bg-[var(--danger)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg border border-[var(--bg-deep)] animate-pulse whitespace-nowrap">
+              {comboCount}x COMBO
+            </div>
+          )}
+        </Link>
+
+        {/* HP bar */}
+        <MiniBar
+          label="HP"
+          current={profile.hp}
+          max={profile.max_hp}
+          pct={hpPct}
+          color={hpColor}
+          glow={profile.hp <= 10}
+        />
+
+        {/* XP bar */}
+        <MiniBar
+          label="XP"
+          current={profile.xp}
+          max={xpReq}
+          pct={xpPct}
+          color="var(--gold-bright)"
+          gradient
+        />
+
+        {/* MP bar */}
+        <MiniBar
+          label="MP"
+          current={profile.mp ?? 30}
+          max={profile.max_mp ?? 30}
+          pct={mpPct}
+          color="var(--violet)"
+        />
+
+        {/* divider: vitals | resources */}
+        <div
+          className="w-px h-6 self-center shrink-0"
+          style={{ background: "var(--ss-hairline)" }}
+        />
+
+        {/* Stamina */}
+        {profile.stamina_max !== undefined && (
+          <Currency
+            icon="stamina"
+            label={<Icon name="stamina" size={14} color="var(--gold-glow)" />}
+            value={profile.stamina ?? 0}
+            color="var(--ember)"
+          />
         )}
       </div>
 
-      {/* HP bar */}
-      <MiniBar
-        label="HP"
-        current={profile.hp}
-        max={profile.max_hp}
-        pct={hpPct}
-        color={hpColor}
-        glow={profile.hp <= 10}
-      />
-
-      {/* XP bar */}
-      <MiniBar
-        label="XP"
-        current={profile.xp}
-        max={xpReq}
-        pct={xpPct}
-        color="var(--gold-bright)"
-        gradient
-      />
-
-      {/* MP bar */}
-      <MiniBar
-        label="MP"
-        current={profile.mp ?? 30}
-        max={profile.max_mp ?? 30}
-        pct={mpPct}
-        color="var(--violet)"
-      />
-
-      {/* divider: vitals | resources */}
-      <div className="w-px h-6 self-center shrink-0" style={{ background: "var(--ss-hairline)" }} />
-
-      {/* Stamina */}
-      {profile.stamina_max !== undefined && (
+      <div className="flex items-center gap-4">
+        {/* Currencies */}
         <Currency
-          icon="stamina"
-          label={<Icon name="stamina" size={14} color="var(--gold-glow)" />}
-          value={profile.stamina ?? 0}
-          color="var(--ember)"
+          icon="gold"
+          label={<Icon name="gold" size={14} color="var(--gold-bright)" />}
+          value={profile.gold}
+          color="var(--gold-bright)"
         />
-      )}
+        <Currency
+          icon="crystal"
+          label={<Icon name="crystal" size={14} color="var(--cyan)" />}
+          value={profile.crystals}
+          color="var(--cyan)"
+        />
+        <Currency
+          icon="seal"
+          label={<Icon name="seal" size={14} color="var(--violet)" />}
+          value={profile.pact_seals}
+          color="var(--violet)"
+        />
 
-      {/* Currencies */}
-      <Currency
-        icon="gold"
-        label={<Icon name="gold" size={14} color="var(--gold-bright)" />}
-        value={profile.gold}
-        color="var(--gold-bright)"
-      />
-      <Currency
-        icon="crystal"
-        label={<Icon name="crystal" size={14} color="var(--cyan)" />}
-        value={profile.crystals}
-        color="var(--cyan)"
-      />
-      <Currency
-        icon="seal"
-        label={<Icon name="seal" size={14} color="var(--violet)" />}
-        value={profile.pact_seals}
-        color="var(--violet)"
-      />
-
-      {/* divider: resources | streak */}
-      <div className="w-px h-6 self-center shrink-0" style={{ background: "var(--ss-hairline)" }} />
-
-      {/* Streak */}
-      <div className="flex gap-2">
+        {/* divider: resources | streak */}
         <div
-          className="ss-chip ss-chip-muted"
-          style={{
-            borderColor: profile.streak > 0 ? "rgba(255,138,101,0.3)" : "var(--ss-hairline)",
-            animation: profile.streak > 0 ? "pulse 2s ease-in-out infinite" : undefined,
-          }}
-        >
-          <Icon
-            name={profile.streak > 0 ? "streak" : "cold"}
-            size={14}
-            color={profile.streak > 0 ? "var(--ember)" : "var(--ink-tertiary)"}
-          />
-          <span
-            className="t-mono font-bold"
-            style={{
-              color: profile.streak > 0 ? "var(--ember)" : "var(--ink-tertiary)",
-            }}
-          >
-            {profile.streak}
-          </span>
-        </div>
-        {(profile.streak_freeze_charges ?? 0) > 0 && (
+          className="w-px h-6 self-center shrink-0"
+          style={{ background: "var(--ss-hairline)" }}
+        />
+
+        {/* Streak */}
+        <div className="flex gap-2">
           <div
             className="ss-chip ss-chip-muted"
-            style={{ borderColor: "rgba(79,195,247,0.3)" }}
-            title="Freeze Charms (Protects streak)"
+            style={{
+              borderColor: profile.streak > 0 ? "rgba(255,138,101,0.3)" : "var(--ss-hairline)",
+              animation: profile.streak > 0 ? "pulse 2s ease-in-out infinite" : undefined,
+            }}
           >
-            <Icon name="cold" size={14} color="var(--cyan)" />
-            <span className="t-mono font-bold" style={{ color: "var(--cyan)" }}>
-              x{profile.streak_freeze_charges}
+            <Icon
+              name={profile.streak > 0 ? "streak" : "cold"}
+              size={14}
+              color={profile.streak > 0 ? "var(--ember)" : "var(--ink-tertiary)"}
+            />
+            <span
+              className="t-mono font-bold"
+              style={{
+                color: profile.streak > 0 ? "var(--ember)" : "var(--ink-tertiary)",
+              }}
+            >
+              {profile.streak}
             </span>
           </div>
-        )}
+          {(profile.streak_freeze_charges ?? 0) > 0 && (
+            <div
+              className="ss-chip ss-chip-muted"
+              style={{ borderColor: "rgba(79,195,247,0.3)" }}
+              title="Freeze Charms (Protects streak)"
+            >
+              <Icon name="cold" size={14} color="var(--cyan)" />
+              <span className="t-mono font-bold" style={{ color: "var(--cyan)" }}>
+                x{profile.streak_freeze_charges}
+              </span>
+            </div>
+          )}
+        </div>
       </div>
     </header>
   );
