@@ -1,14 +1,34 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Icon } from "@/components/ui/Icon";
 import { motion } from "motion/react";
+import { HUB_TABS, ROSTER_TABS, VOID_TABS, ALTAR_TABS } from "./SubNav";
 
 const NAV_ITEMS = [
-  { path: "/", icon: "hub", label: "Hub", color: "var(--gold-bright)" },
-  { path: "/expeditions", icon: "compass", label: "Expeditions", color: "var(--success)" },
-  { path: "/compendium", icon: "book", label: "Compendium", color: "var(--cyan)" },
-  { path: "/altar", icon: "scroll", label: "Summon", color: "var(--accent-void)" },
-  { path: "/forge", icon: "forge", label: "Bloodline", color: "var(--danger)" },
-  { path: "/battle", icon: "swords", label: "Battle", color: "var(--ember)" },
+  { path: "/", id: "hub", tabs: HUB_TABS, icon: "hub", label: "Hub", color: "var(--gold-bright)" },
+  {
+    path: "/compendium",
+    id: "roster",
+    tabs: ROSTER_TABS,
+    icon: "book",
+    label: "Roster",
+    color: "var(--cyan)",
+  },
+  {
+    path: "/battle",
+    id: "void",
+    tabs: VOID_TABS,
+    icon: "swords",
+    label: "Void",
+    color: "var(--ember)",
+  },
+  {
+    path: "/altar",
+    id: "altar",
+    tabs: ALTAR_TABS,
+    icon: "scroll",
+    label: "Altar",
+    color: "var(--accent-void)",
+  },
 ];
 
 export function BottomHUD() {
@@ -23,12 +43,13 @@ export function BottomHUD() {
         }}
       >
         {NAV_ITEMS.map((item) => {
-          const isActive = pathname === item.path;
+          // It's active if the current pathname matches the pillar's path OR any of its sub-tabs
+          const isActive = item.tabs.some((t) => t.path === pathname) || pathname === item.path;
           return (
             <Link
-              key={item.path}
+              key={item.id}
               to={item.path}
-              className="relative group flex flex-col items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 z-10"
+              className="relative group flex flex-col items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 z-10"
               style={{
                 background: isActive
                   ? `radial-gradient(circle at center, ${item.color}20 0%, transparent 70%)`
@@ -52,7 +73,7 @@ export function BottomHUD() {
               {isActive && (
                 <motion.div
                   layoutId="bottomHudActive"
-                  className="absolute -bottom-1.5 w-8 h-1.5 rounded-full"
+                  className="absolute -bottom-1 w-8 h-1.5 rounded-full"
                   style={{
                     background: item.color,
                     boxShadow: `0 0 12px ${item.color}, 0 0 20px ${item.color}`,

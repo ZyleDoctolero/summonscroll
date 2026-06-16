@@ -6,6 +6,7 @@ import { MobilePlayerHeader } from "./MobilePlayerHeader";
 import { Toaster } from "sonner";
 import { ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
 import { BottomHUD } from "./BottomHUD";
+import { SubNav, HUB_TABS, ROSTER_TABS, VOID_TABS, ALTAR_TABS } from "./SubNav";
 
 type Profile = Parameters<typeof PlayerHeader>[0]["profile"] & {
   class?: string;
@@ -20,24 +21,50 @@ export function AppShell({
   children: ReactNode;
   withHeader?: boolean;
 }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  let activeTabs = null;
+  let activeColor = "var(--cyan)";
+  if (HUB_TABS.some((t) => t.path === pathname)) {
+    activeTabs = HUB_TABS;
+    activeColor = "var(--gold-bright)";
+  } else if (ROSTER_TABS.some((t) => t.path === pathname)) {
+    activeTabs = ROSTER_TABS;
+    activeColor = "var(--cyan)";
+  } else if (VOID_TABS.some((t) => t.path === pathname)) {
+    activeTabs = VOID_TABS;
+    activeColor = "var(--ember)";
+  } else if (ALTAR_TABS.some((t) => t.path === pathname)) {
+    activeTabs = ALTAR_TABS;
+    activeColor = "var(--accent-void)";
+  }
+
   return (
     <div
-      className="min-h-screen relative w-full overflow-hidden"
+      className="min-h-screen relative w-full overflow-hidden flex flex-col"
       style={{ background: "transparent", color: "var(--ink-primary)", zIndex: 1 }}
     >
       {withHeader && <MobilePlayerHeader profile={profile} />}
       {withHeader && <PlayerHeader profile={profile} />}
       {/* Ambient background for the entire shell (can be overridden by specific routes) */}
-      <div className="fixed inset-0 pointer-events-none bg-[var(--manhwa-system-dark)]">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(74,144,226,0.1)_0%,var(--manhwa-system-dark)_100%)]" />
-        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#1a0b2e]/60 to-transparent" />
-        <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[var(--manhwa-system-dark)] to-transparent" />
+      <div className="fixed inset-0 pointer-events-none bg-[#050505] z-0">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.05)_0%,#050505_100%)]" />
+        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#0a0f1e]/90 to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-transparent" />
       </div>
 
-      <main className="w-full h-screen overflow-hidden relative pb-20 md:pb-0 z-10">
-        <RouteTransition>{children}</RouteTransition>
+      <main className="w-full flex-1 overflow-hidden relative z-10 flex flex-col pt-16 md:pt-20">
+        {activeTabs && (
+          <div className="px-4 shrink-0 max-w-6xl mx-auto w-full pt-4">
+            <SubNav items={activeTabs} color={activeColor} />
+          </div>
+        )}
+        <div className="flex-1 overflow-y-auto no-scrollbar pb-32">
+          <RouteTransition>{children}</RouteTransition>
+        </div>
       </main>
+
       <Toaster
         position="top-right"
         theme="dark"

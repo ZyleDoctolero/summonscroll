@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState, useCallback } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion } from "motion/react";
 import NumberFlow from "@number-flow/react";
@@ -44,9 +44,9 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
     onError: (e: Error) => toast.error(e.message),
   });
 
-  const toggle = (id: string) => {
+  const toggle = useCallback((id: string) => {
     setPicked((p) => (p.includes(id) ? p.filter((x) => x !== id) : p.length >= 3 ? p : [...p, id]));
-  };
+  }, []);
 
   const candidates = tasks.filter((t) => !t.completed || t.type === "habit");
   const delays = stagger(Math.min(8, candidates.length), 0.04);

@@ -50,85 +50,157 @@ function AuthPage() {
   }
 
   return (
-    <div
-      className="min-h-screen flex items-center justify-center px-4 py-12 relative"
-      style={{
-        backgroundImage:
-          "radial-gradient(ellipse at top, rgba(255,217,92,0.18), transparent 60%), linear-gradient(180deg,var(--bg-deep) 0%,var(--bg-stage) 100%)",
-      }}
-    >
+    <div className="min-h-screen flex items-center justify-center px-4 py-12 relative overflow-hidden">
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        .pixel-font { font-family: 'Press Start 2P', monospace; }
+        
+        .pixel-panel {
+          background: rgba(10, 5, 18, 0.95);
+          border: 4px solid var(--gold-bright);
+          box-shadow: inset -6px -6px 0px 0px rgba(0,0,0,0.8),
+                      inset 6px 6px 0px 0px rgba(255,255,255,0.1),
+                      10px 10px 0px 0px rgba(0,0,0,0.8);
+          position: relative;
+        }
+
+        .pixel-panel::before {
+          content: "";
+          position: absolute;
+          top: -8px; bottom: -8px; left: 8px; right: 8px;
+          border-left: 4px solid var(--gold-bright);
+          border-right: 4px solid var(--gold-bright);
+          pointer-events: none;
+        }
+
+        .pixel-panel::after {
+          content: "";
+          position: absolute;
+          left: -8px; right: -8px; top: 8px; bottom: 8px;
+          border-top: 4px solid var(--gold-bright);
+          border-bottom: 4px solid var(--gold-bright);
+          pointer-events: none;
+        }
+
+        .pixel-btn {
+          background: var(--gold-bright);
+          color: #000;
+          border: 4px solid #fff;
+          box-shadow: inset -4px -4px 0px 0px rgba(0,0,0,0.3);
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+
+        .pixel-btn:active:not(:disabled) {
+          box-shadow: inset 4px 4px 0px 0px rgba(0,0,0,0.3);
+          padding-top: 14px !important;
+          padding-bottom: 10px !important;
+        }
+
+        .pixel-btn:disabled {
+          background: #555;
+          border-color: #888;
+          color: #222;
+          cursor: not-allowed;
+        }
+
+        .pixel-input {
+          background: #111;
+          color: #fff;
+          border: 4px solid var(--ink-secondary);
+          outline: none;
+          padding: 12px;
+          width: 100%;
+        }
+
+        .pixel-input:focus {
+          border-color: var(--cyan);
+          background: #001a22;
+        }
+
+        .pixel-tab {
+          background: transparent;
+          color: var(--ink-secondary);
+          border: none;
+          cursor: pointer;
+        }
+        
+        .pixel-tab.active {
+          color: var(--gold-bright);
+          text-shadow: 2px 2px 0px #000;
+        }
+
+        .pixel-tab.active::before {
+          content: "► ";
+          color: var(--cyan);
+        }
+      `}</style>
+
+      {/* PIXEL ART BACKGROUND */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage:
-            'url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=70")',
+          backgroundImage: 'url("/pixel-auth-bg.png")',
           backgroundSize: "cover",
-          opacity: 0.12,
-          mixBlendMode: "screen",
+          backgroundPosition: "center",
+          imageRendering: "pixelated",
+          filter: "brightness(0.7) contrast(1.2)",
         }}
       />
-      <div
-        className="relative w-full max-w-md rounded-2xl border border-white/10 backdrop-blur-xl p-8 shadow-2xl"
-        style={{ background: "rgba(26,26,42,0.82)" }}
-      >
-        <div
-          className="absolute top-0 left-6 right-6 h-px"
-          style={{
-            background: "linear-gradient(90deg,transparent, var(--gold-bright), transparent)",
-          }}
-        />
-        <h1
-          className="t-h1 text-center text-3xl font-bold"
-          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
-        >
-          SummonScroll
+
+      {/* SCANLINES OVERLAY */}
+      <div 
+        className="absolute inset-0 pointer-events-none opacity-20"
+        style={{
+          background: "linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))",
+          backgroundSize: "100% 4px, 3px 100%"
+        }}
+      />
+
+      <div className="relative w-full max-w-md pixel-panel p-8 z-10 mx-4">
+        <h1 className="text-center text-xl md:text-2xl pixel-font leading-relaxed" style={{ color: "var(--gold-bright)", textShadow: "4px 4px 0px #000" }}>
+          SUMMONSCROLL
         </h1>
-        <p className="text-center text-sm mt-2" style={{ color: "var(--ink-secondary)" }}>
-          Your habits. Your monsters. Your legend.
+        <p className="text-center text-[10px] mt-4 pixel-font opacity-80" style={{ color: "var(--cyan)", textShadow: "2px 2px 0px #000" }}>
+          INSERT COIN TO START
         </p>
 
-        <div className="mt-6 flex gap-2 p-1 rounded-lg bg-black/40 border border-white/5">
+        <div className="mt-8 flex justify-center gap-6 pixel-font text-[10px] uppercase mb-6">
           {(["signin", "signup"] as const).map((m) => (
             <button
               key={m}
               onClick={() => setMode(m)}
-              className="flex-1 py-2 text-xs uppercase tracking-widest font-bold rounded-md transition-all"
-              style={{
-                background:
-                  mode === m
-                    ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
-                    : "transparent",
-                color: mode === m ? "var(--bg-deep)" : "var(--ink-secondary)",
-              }}
+              className={`pixel-tab ${mode === m ? "active" : ""} transition-colors`}
             >
-              {m === "signin" ? "Sign in" : "Create account"}
+              {m === "signin" ? "Load Game" : "New Game"}
             </button>
           ))}
         </div>
 
-        <form className="mt-6 space-y-4" onSubmit={onSubmit}>
+        <form className="space-y-6 pixel-font text-[10px]" onSubmit={onSubmit}>
           {mode === "signup" && (
-            <Field label="Summoner Name">
+            <Field label="PLAYER NAME">
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="CrimsonBlade"
+                placeholder="HERO..."
                 maxLength={40}
-                className="ss-input"
+                className="pixel-input"
               />
             </Field>
           )}
-          <Field label="Email">
+          <Field label="EMAIL">
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
-              className="ss-input"
+              placeholder="PLAYER@REALM.COM"
+              className="pixel-input"
             />
           </Field>
-          <Field label="Password">
+          <Field label="SECRET KEY">
             <div className="relative">
               <input
                 type={show ? "text" : "password"}
@@ -136,54 +208,39 @@ function AuthPage() {
                 minLength={6}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                className="ss-input pr-10"
+                placeholder="********"
+                className="pixel-input pr-16"
               />
               <button
                 type="button"
                 onClick={() => setShow((s) => !s)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-xs"
+                className="absolute right-4 top-1/2 -translate-y-1/2"
                 style={{ color: "var(--ink-secondary)" }}
               >
-                {show ? "Hide" : "Show"}
+                {show ? "HIDE" : "SHOW"}
               </button>
             </div>
           </Field>
 
           {error && (
-            <div
-              className="text-sm p-3 rounded-md border"
-              style={{
-                background: "rgba(224,82,82,0.1)",
-                borderColor: "rgba(224,82,82,0.3)",
-                color: "var(--danger)",
-              }}
-            >
-              {error}
+            <div className="p-3 border-4 border-[var(--danger)] bg-red-900/50 text-[var(--danger)] leading-relaxed text-center shadow-[inset_0_0_10px_rgba(255,0,0,0.5)]">
+              ERR: {error}
             </div>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-md font-bold uppercase tracking-widest text-sm disabled:opacity-50"
-            style={{
-              background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
-              color: "var(--bg-deep)",
-              boxShadow: "0 0 24px rgba(255,217,92,0.25)",
-            }}
+            className="w-full py-4 pixel-btn mt-4 text-[12px]"
           >
             {loading
-              ? mode === "signin"
-                ? "Summoning…"
-                : "Forging Contract…"
+              ? "CONNECTING..."
               : mode === "signin"
-                ? "Enter the Realm"
-                : "Begin Your Journey"}
+                ? "START"
+                : "INITIALIZE"}
           </button>
         </form>
       </div>
-      {/* .ss-input styles are defined globally in styles.css */}
     </div>
   );
 }
@@ -191,10 +248,7 @@ function AuthPage() {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <div
-        className="text-[11px] uppercase tracking-widest mb-1 font-semibold"
-        style={{ color: "var(--ink-secondary)" }}
-      >
+      <div className="mb-2" style={{ color: "var(--gold-muted)", textShadow: "2px 2px 0px #000" }}>
         {label}
       </div>
       {children}
