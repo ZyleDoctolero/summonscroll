@@ -177,15 +177,15 @@
   --ink-tertiary: #4dd0e1; /* vivid cyan */
 
   /* Signature Colors */
-  --gold-bright: #00f2ff; /* Swapped to pure System Cyan */
-  --gold-glow: #00a8ff;
+  --gold-bright: #b8973c; /* Swapped to pure System Cyan */
+  --gold-glow: #8b0000;
   --violet: #8a2be2; /* Shadow Purple */
-  --cyan: #00f2ff; /* pure system neon */
+  --cyan: #b8973c; /* pure system neon */
   --rose: #ff003c; /* blood red / warning */
   --ember: #e50000;
 
   /* Utility */
-  --success: #00e676;
+  --success: #5a7b3a;
   --danger: #ff1744;
 
   /* ─── Legacy Token Aliases (backward compatibility) ─── */
@@ -539,7 +539,7 @@ body::after {
   border: 1px solid rgba(255, 213, 79, 0.32);
   border-radius: var(--ss-radius-xl);
   padding: var(--ss-space-5);
-  box-shadow: var(--ss-shadow-high), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(0, 242, 255, 0.1);
+  box-shadow: var(--ss-shadow-high), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(184, 151, 60, 0.1);
   backdrop-filter: blur(24px);
   max-width: 28rem;
   width: 100%;
@@ -777,7 +777,7 @@ body::after {
 }
 .ss-btn-d-primary:active {
   transform: scale(0.96);
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.4), inset 0 0 10px rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 10px rgba(184, 151, 60, 0.4), inset 0 0 10px rgba(184, 151, 60, 0.3);
 }
 
 /* Rarity star (with particle glow) */
