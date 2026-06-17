@@ -496,20 +496,7 @@ body {
   font-family: 'Rajdhani', sans-serif;
 }
 
-/* CRT Scanlines overlay to simulate the Manhwa 'System Window' */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9998;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.15) 50%
-  );
-  background-size: 100% 6px;
-  opacity: 0.15;
-}
+
 
 /* ─── Surface System Primitives ─── */
 

@@ -151,7 +151,7 @@ const getRarityBackground = (r: Rarity) => {
     case "epic": return "linear-gradient(155deg,#0e081a,#090514)";
     case "legendary": return "linear-gradient(155deg,#1a1808,#141204)";
     case "mythic": return "linear-gradient(155deg,#1e0806,#160604)";
-    default: return "linear-gradient(155deg,#1a1a1a,#0a0a0a)";
+    default: return "linear-gradient(155deg,#1a1a1a,rgba(0,0,0,0.6))";
   }
 };
 
