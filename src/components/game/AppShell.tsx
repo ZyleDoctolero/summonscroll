@@ -46,32 +46,19 @@ export function AppShell({
 
   return (
     <div
-      className="min-h-screen relative w-full overflow-hidden flex flex-col"
-      style={{ background: "transparent", color: "var(--ink-primary)", zIndex: 1 }}
+      className="min-h-screen relative w-full flex flex-col"
+      style={{ color: "var(--ink-primary)", zIndex: 1 }}
     >
       {withHeader && <MobilePlayerHeader profile={profile} />}
       {withHeader && <PlayerHeader profile={profile} />}
-      {/* Ambient background for the entire shell (can be overridden by specific routes) */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div 
-          className="absolute inset-0 opacity-100 transition-all duration-1000 ease-in-out"
-          style={{ 
-            background: bgBackground
-          }} 
-        />
-        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#2a1e12]/90 to-transparent" />
-        <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-[#2a1e12] via-[#2a1e12]/95 to-transparent" />
-      </div>
 
-      <main className="w-full flex-1 overflow-hidden relative z-10 flex flex-col pt-16 md:pt-20">
+      <main className="max-w-5xl mx-auto px-4 py-6 pb-32 md:pb-12 w-full flex-1 relative z-10 flex flex-col pt-20 md:pt-28">
         {activeTabs && (
-          <div className="px-4 shrink-0 max-w-6xl mx-auto w-full pt-4">
+          <div className="shrink-0 w-full mb-6">
             <SubNav items={activeTabs} color={activeColor} />
           </div>
         )}
-        <div className="flex-1 overflow-y-auto no-scrollbar pb-32">
-          <RouteTransition>{children}</RouteTransition>
-        </div>
+        <RouteTransition>{children}</RouteTransition>
       </main>
 
       <Toaster

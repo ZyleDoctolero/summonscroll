@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { CascadeProvider } from "../components/game/CascadeCard";
 import { WhisperProvider } from "../components/game/WhisperFeed";
-import { AmbientBackground } from "../components/game/AmbientBackground";
 
 function NotFoundComponent() {
   return (
@@ -56,11 +55,9 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <AmbientBackground />
       <div className="app-content-layer">
         <Outlet />
       </div>
-      <div className="screen-scanlines" aria-hidden />
       <CascadeProvider />
       <WhisperProvider />
     </QueryClientProvider>

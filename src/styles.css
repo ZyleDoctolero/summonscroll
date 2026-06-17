@@ -491,9 +491,19 @@ html {
   color-scheme: dark;
 }
 body {
-  background: var(--ss-bg-deep) !important;
+  background-color: var(--ss-bg-deep) !important;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  ) !important;
+  background-attachment: fixed !important;
   color: var(--ss-text-primary) !important;
   font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
 

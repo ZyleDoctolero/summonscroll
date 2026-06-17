@@ -337,7 +337,7 @@ function CompendiumPage() {
 
   return (
     <AppShell profile={profileQ.data?.profile as React.ComponentProps<typeof AppShell>["profile"]}>
-      <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen pt-20">
+      <div className="w-full flex flex-col relative z-10">
         <header className="mb-6 relative z-20">
           <h1
             className="text-4xl font-serif font-bold tracking-tighter uppercase italic flex items-center gap-3 mb-2"
