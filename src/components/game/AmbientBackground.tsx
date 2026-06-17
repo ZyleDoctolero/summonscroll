@@ -23,8 +23,8 @@ export function AmbientBackground() {
         const duration = 14 + Math.random() * 22;
         const delay = -Math.random() * duration;
         const drift = (Math.random() - 0.5) * 60;
-        // tint: mostly gold, some violet/cyan
-        const tints = ["var(--gold-glow)", "var(--gold-glow)", "var(--violet)", "var(--cyan)"];
+        // tint: mostly element colors
+        const tints = ["#ff5e2a", "#38b8f5", "#3ed97a", "#ffe066", "#c47fff", "#c9a84c"];
         const color = tints[i % tints.length];
         return { left, size, duration, delay, drift, color, key: i };
       }),
@@ -35,6 +35,17 @@ export function AmbientBackground() {
     <div className="ambient-bg" aria-hidden>
       {/* arcane grid */}
       <div className="ambient-grid" />
+
+      {/* center pulse */}
+      <div className="absolute inset-0 pointer-events-none flex items-center justify-center mix-blend-screen">
+        <div 
+          className="w-[100vw] h-[100vw] max-w-[1200px] max-h-[1200px] rounded-full animate-pulse opacity-30"
+          style={{ 
+            background: 'radial-gradient(circle, rgba(255,224,102,0.06) 0%, transparent 60%)',
+            animationDuration: '8s'
+          }} 
+        />
+      </div>
 
       {/* drifting motes */}
       {!rm && (

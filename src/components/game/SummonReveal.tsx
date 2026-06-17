@@ -68,6 +68,8 @@ export function SummonReveal({
   const config = CEREMONY_CONFIG[r];
   const rm = reducedMotion();
   const [showExtraction, setShowExtraction] = useState(false);
+  const [shake, setShake] = useState(false);
+  const [flash, setFlash] = useState(false);
 
   const handleNextClick = () => {
     if (["epic", "legendary", "mythic", "ex"].includes(r)) {
@@ -76,6 +78,18 @@ export function SummonReveal({
       onNext();
     }
   };
+
+  useEffect(() => {
+    if (!rm) {
+      const isHighRarity = ["epic", "legendary", "mythic", "ex"].includes(r);
+      if (isHighRarity) {
+        setShake(true);
+        setTimeout(() => setShake(false), 500);
+      }
+      setFlash(true);
+      setTimeout(() => setFlash(false), 800);
+    }
+  }, [currentIndex, rm, r]);
 
   useEffect(() => {
     if (config.goldRain && !rm) {
@@ -112,7 +126,21 @@ export function SummonReveal({
   }, [r, rm, config]);
 
   return (
-    <div className="pull-stage cursor-pointer flex-col" onClick={handleNextClick}>
+    <motion.div 
+      className="pull-stage cursor-pointer flex-col overflow-hidden" 
+      onClick={handleNextClick}
+      animate={shake ? { x: [-10, 10, -8, 8, -5, 5, -2, 2, 0], y: [-8, 8, -6, 6, -4, 4, -1, 1, 0] } : { x: 0, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {flash && (
+        <motion.div 
+          className="absolute inset-0 z-50 pointer-events-none mix-blend-screen"
+          style={{ backgroundColor: RARITY_COLOR[r] || "white" }}
+          initial={{ opacity: 0.8 }}
+          animate={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        />
+      )}
       <div className="pull-rays" />
       <div
         key={`burst-${currentIndex}`}
@@ -138,7 +166,6 @@ export function SummonReveal({
             border: `3px solid ${RARITY_COLOR[r]}`,
             borderRadius: "16px",
             boxShadow: RARITY_GLOW[r],
-            backgroundImage: "url('https://www.transparenttextures.com/patterns/stardust.png')",
           }}
         >
           {/* Monster Art */}
@@ -256,7 +283,7 @@ export function SummonReveal({
           onNext();
         }}
       />
-    </div>
+    </motion.div>
   );
 }
 
@@ -301,8 +328,6 @@ export function SummonResults({
                 style={{
                   border: `2px solid ${RARITY_COLOR[r]}60`,
                   borderRadius: "12px",
-                  backgroundImage:
-                    "url('https://www.transparenttextures.com/patterns/stardust.png')",
                   boxShadow:
                     r !== "common" && r !== "uncommon"
                       ? `0 0 12px ${RARITY_COLOR[r]}20`

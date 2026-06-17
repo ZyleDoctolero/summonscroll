@@ -1685,6 +1685,9 @@ export type Database = {
           star_rating: number;
           team_slot: number | null;
           title: string | null;
+          personal_name: string | null;
+          personality_traits: string[] | null;
+          summon_context: string | null;
           user_id: string;
           xp: number;
         };
@@ -1708,6 +1711,9 @@ export type Database = {
           star_rating?: number;
           team_slot?: number | null;
           title?: string | null;
+          personal_name?: string | null;
+          personality_traits?: string[] | null;
+          summon_context?: string | null;
           user_id: string;
           xp?: number;
         };
@@ -1731,6 +1737,9 @@ export type Database = {
           star_rating?: number;
           team_slot?: number | null;
           title?: string | null;
+          personal_name?: string | null;
+          personality_traits?: string[] | null;
+          summon_context?: string | null;
           user_id?: string;
           xp?: number;
         };

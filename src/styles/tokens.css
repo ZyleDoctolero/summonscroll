@@ -56,7 +56,6 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  background-image: url('https://www.transparenttextures.com/patterns/old-wall.png');
 }
 .system-panel:hover {
   border-color: rgba(184, 151, 60, 0.9);
@@ -115,6 +114,6 @@
   }
   .ss-panel-holographic {
     @apply relative overflow-hidden border border-[#b8973c]/30 shadow-[0_4px_10px_rgba(0,0,0,0.4)];
-    background: #2a1e12 url('https://www.transparenttextures.com/patterns/old-wall.png');
+    background: #2a1e12;
   }
 }

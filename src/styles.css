@@ -177,12 +177,19 @@
   --ink-tertiary: #4dd0e1; /* vivid cyan */
 
   /* Signature Colors */
-  --gold-bright: #b8973c; /* Swapped to pure System Cyan */
-  --gold-glow: #8b0000;
-  --violet: #8a2be2; /* Shadow Purple */
-  --cyan: #b8973c; /* pure system neon */
-  --rose: #ff003c; /* blood red / warning */
-  --ember: #e50000;
+  --fire: #ff5e2a;
+  --water: #38b8f5;
+  --nature: #3ed97a;
+  --light: #ffe066;
+  --dark: #c47fff;
+  --void-el: #c9a84c;
+
+  --gold-bright: var(--light);
+  --gold-glow: var(--void-el);
+  --violet: var(--dark);
+  --cyan: var(--water);
+  --rose: #ff4f6a;
+  --ember: var(--fire);
 
   /* Utility */
   --success: #5a7b3a;
@@ -516,7 +523,6 @@ body::after {
   -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--ss-shadow-mid), inset 0 1px 1px rgba(212, 175, 63, 0.15), inset 0 0 20px rgba(212, 175, 63, 0.1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 .ss-card:hover {
   border-color: rgba(212, 175, 63, 0.7);
@@ -757,7 +763,6 @@ body::after {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
-  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
 }
 .ss-btn-d-primary::before {
   content: "";

@@ -25,23 +25,23 @@ export function AppShell({
 
   let activeTabs = null;
   let activeColor = "#b89947";
-  let bgImage = "url('/ancient-tome-bg.png')";
+  let bgBackground = "linear-gradient(180deg, #08080f 0%, #0c1020 50%, #080c18 100%)";
   if (HUB_TABS.some((t) => t.path === pathname)) {
     activeTabs = HUB_TABS;
     activeColor = "#b89947";
-    bgImage = "url('/bg_hub.png')";
+    bgBackground = "radial-gradient(ellipse 60% 50% at 50% 60%, rgba(255,224,102,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 20% 80%, rgba(196,127,255,0.07) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #0c1020 50%, #080c18 100%)";
   } else if (ROSTER_TABS.some((t) => t.path === pathname)) {
     activeTabs = ROSTER_TABS;
     activeColor = "#b89947";
-    bgImage = "url('/bg_roster.png')";
+    bgBackground = "radial-gradient(ellipse 50% 50% at 30% 40%, rgba(56,184,245,0.07) 0%, transparent 65%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(255,224,102,0.05) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #08101a 100%)";
   } else if (VOID_TABS.some((t) => t.path === pathname)) {
     activeTabs = VOID_TABS;
     activeColor = "#b89947";
-    bgImage = "url('/bg_void.png')";
+    bgBackground = "radial-gradient(ellipse 80% 40% at 50% 100%, rgba(255,79,106,0.10) 0%, transparent 70%), radial-gradient(ellipse 40% 50% at 80% 50%, rgba(245,166,35,0.06) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #120806 100%)";
   } else if (ALTAR_TABS.some((t) => t.path === pathname)) {
     activeTabs = ALTAR_TABS;
     activeColor = "#b89947";
-    bgImage = "url('/bg_altar.png')";
+    bgBackground = "radial-gradient(ellipse 70% 70% at 50% 80%, rgba(196,127,255,0.18) 0%, transparent 65%), radial-gradient(ellipse 30% 40% at 50% 100%, rgba(255,79,106,0.06) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #0a080f 100%)";
   }
 
   return (
@@ -56,9 +56,7 @@ export function AppShell({
         <div 
           className="absolute inset-0 opacity-100 transition-all duration-1000 ease-in-out"
           style={{ 
-            backgroundImage: bgImage,
-            backgroundSize: "cover",
-            backgroundPosition: "center"
+            background: bgBackground
           }} 
         />
         <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#2a1e12]/90 to-transparent" />
