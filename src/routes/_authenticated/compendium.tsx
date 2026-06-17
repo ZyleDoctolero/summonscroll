@@ -523,7 +523,7 @@ function CompendiumPage() {
                 style={{ 
                   borderColor: RARITY_COLOR[selectedUM.monster.rarity as Rarity],
                   background: "linear-gradient(145deg, #0f0f0f, #000000)",
-                  boxShadow: \`inset 0 0 20px \${RARITY_COLOR[selectedUM.monster.rarity as Rarity]}40\`
+                  boxShadow: `inset 0 0 20px ${RARITY_COLOR[selectedUM.monster.rarity as Rarity]}40`
                 }}
               >
                 <div className="absolute top-2 left-2 text-xs font-serif font-bold bg-[#0a0a0a]/80 border border-[#b89047]/50 px-1.5 rounded text-[#ffffff] z-10 backdrop-blur-sm">
@@ -538,13 +538,13 @@ function CompendiumPage() {
               <div className="flex w-full mt-2 rounded border border-[#b89047]/30 overflow-hidden text-xs font-bold uppercase tracking-widest bg-[#0a0a0a]">
                 <button
                   onClick={() => setModalTab("details")}
-                  className={\`flex-1 py-2 text-center transition-all \${modalTab === "details" ? "bg-[#b89047] text-[#000000] shadow-[0_0_15px_#b89047]" : "text-[#b89047]/60 hover:text-[#b89047] hover:bg-[#1a1a1a]"}\`}
+                  className={`flex-1 py-2 text-center transition-all ${modalTab === "details" ? "bg-[#b89047] text-[#000000] shadow-[0_0_15px_#b89047]" : "text-[#b89047]/60 hover:text-[#b89047] hover:bg-[#1a1a1a]"}`}
                 >
                   Stats
                 </button>
                 <button
                   onClick={() => setModalTab("equipment")}
-                  className={\`flex-1 py-2 text-center transition-all \${modalTab === "equipment" ? "bg-[#b89047] text-[#000000] shadow-[0_0_15px_#b89047]" : "text-[#b89047]/60 hover:text-[#b89047] hover:bg-[#1a1a1a]"}\`}
+                  className={`flex-1 py-2 text-center transition-all ${modalTab === "equipment" ? "bg-[#b89047] text-[#000000] shadow-[0_0_15px_#b89047]" : "text-[#b89047]/60 hover:text-[#b89047] hover:bg-[#1a1a1a]"}`}
                 >
                   Void Gear
                 </button>

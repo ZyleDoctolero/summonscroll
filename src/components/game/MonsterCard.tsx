@@ -216,11 +216,11 @@ export function MonsterCard({
         }
       `}</style>
       <div
-        className={\`relative w-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] \${compact ? "p-3" : "p-4"} group rounded-xl\`}
+        className={`relative w-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] ${compact ? "p-3" : "p-4"} group rounded-xl`}
         style={{
           background: getRarityBackground(r),
-          border: \`1.5px solid \${rColor}66\`,
-          boxShadow: \`0 6px 28px \${rColor}30\`,
+          border: `1.5px solid ${rColor}66`,
+          boxShadow: `0 6px 28px ${rColor}30`,
           opacity: fatigued ? 0.6 : 1,
           cursor: onClick ? "pointer" : "default",
         }}
@@ -229,7 +229,7 @@ export function MonsterCard({
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none z-20"
           style={{
-            background: \`linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.04) 50%, transparent 60%)\`,
+            background: `linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.04) 50%, transparent 60%)`,
           }}
         ></div>
 
@@ -244,7 +244,7 @@ export function MonsterCard({
           </div>
 
           <div className="flex flex-col items-end">
-            <span title={\`Mood: \${getMood(monster.bond_percent)}\`} className="text-sm">
+            <span title={`Mood: ${getMood(monster.bond_percent)}`} className="text-sm">
               {getMood(monster.bond_percent)}
             </span>
             <span className="font-['VT323'] text-[16px] leading-none text-white drop-shadow-md mt-1">
@@ -265,7 +265,7 @@ export function MonsterCard({
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
               style={{
                 filter: monster.bond_percent >= 100
-                  ? \`drop-shadow(0 0 10px \${rColor}) contrast(1.1)\`
+                  ? `drop-shadow(0 0 10px ${rColor}) contrast(1.1)`
                   : fatigued
                     ? "grayscale(100%) opacity(50%)"
                     : "drop-shadow(0 8px 16px rgba(0,0,0,0.8))",
@@ -283,7 +283,7 @@ export function MonsterCard({
 
         <div className="flex flex-col gap-1 relative z-10 text-center mt-2">
           <p
-            className={\`\${compact ? "text-xs" : "text-sm"} font-bold tracking-wider font-['Cinzel'] text-white truncate\`}
+            className={`${compact ? "text-xs" : "text-sm"} font-bold tracking-wider font-['Cinzel'] text-white truncate`}
             style={{ textShadow: "0 1px 2px rgba(0,0,0,0.8)" }}
           >
             {monster.monster.name}
@@ -293,8 +293,8 @@ export function MonsterCard({
             <div
               className="h-full transition-all duration-500 rounded-sm"
               style={{
-                width: \`\${Math.min(100, monster.bond_percent)}%\`,
-                background: \`linear-gradient(90deg, \${elColor}4d, \${elColor})\`,
+                width: `${Math.min(100, monster.bond_percent)}%`,
+                background: `linear-gradient(90deg, ${elColor}4d, ${elColor})`,
               }}
             />
           </div>
