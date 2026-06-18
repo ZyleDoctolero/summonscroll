@@ -24,29 +24,29 @@ export function AppShell({
 
   let activeTabs = null;
   let activeColor = "#b89947";
-  let bgBackground = "linear-gradient(180deg, #08080f 0%, #0c1020 50%, #080c18 100%)";
+  let bgBackground = "linear-gradient(180deg, #faf6f0 0%, #f5efe6 50%, #faf6f0 100%)";
   if (HUB_TABS.some((t) => t.path === pathname)) {
     activeTabs = HUB_TABS;
-    activeColor = "#b89947";
-    bgBackground = "radial-gradient(ellipse 60% 50% at 50% 60%, rgba(255,224,102,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 20% 80%, rgba(196,127,255,0.07) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #0c1020 50%, #080c18 100%)";
+    activeColor = "#b8860b";
+    bgBackground = "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255,213,79,0.12) 0%, transparent 70%), linear-gradient(180deg, #faf6f0 0%, #f5efe6 100%)";
   } else if (ROSTER_TABS.some((t) => t.path === pathname)) {
     activeTabs = ROSTER_TABS;
-    activeColor = "#b89947";
-    bgBackground = "radial-gradient(ellipse 50% 50% at 30% 40%, rgba(56,184,245,0.07) 0%, transparent 65%), radial-gradient(ellipse 60% 40% at 80% 80%, rgba(255,224,102,0.05) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #08101a 100%)";
+    activeColor = "#b8860b";
+    bgBackground = "radial-gradient(ellipse 50% 50% at 30% 40%, rgba(56,184,245,0.06) 0%, transparent 65%), linear-gradient(180deg, #faf6f0 0%, #f0ece4 100%)";
   } else if (VOID_TABS.some((t) => t.path === pathname)) {
     activeTabs = VOID_TABS;
-    activeColor = "#b89947";
-    bgBackground = "radial-gradient(ellipse 80% 40% at 50% 100%, rgba(255,79,106,0.10) 0%, transparent 70%), radial-gradient(ellipse 40% 50% at 80% 50%, rgba(245,166,35,0.06) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #120806 100%)";
+    activeColor = "#b8860b";
+    bgBackground = "radial-gradient(ellipse 80% 40% at 50% 100%, rgba(255,94,42,0.06) 0%, transparent 70%), linear-gradient(180deg, #faf6f0 0%, #f5ede2 100%)";
   } else if (ALTAR_TABS.some((t) => t.path === pathname)) {
     activeTabs = ALTAR_TABS;
-    activeColor = "#b89947";
-    bgBackground = "radial-gradient(ellipse 70% 70% at 50% 80%, rgba(196,127,255,0.18) 0%, transparent 65%), radial-gradient(ellipse 30% 40% at 50% 100%, rgba(255,79,106,0.06) 0%, transparent 60%), linear-gradient(180deg, #08080f 0%, #0a080f 100%)";
+    activeColor = "#b8860b";
+    bgBackground = "radial-gradient(ellipse 70% 70% at 50% 80%, rgba(200,154,62,0.08) 0%, transparent 65%), linear-gradient(180deg, #faf6f0 0%, #f3eee5 100%)";
   }
 
   return (
     <div
       className="min-h-screen relative w-full flex flex-col"
-      style={{ color: "var(--ink-primary)", zIndex: 1 }}
+      style={{ color: "var(--ink-primary)", zIndex: 1, background: bgBackground }}
     >
       {withHeader && <PlayerHeader profile={profile} />}
 
@@ -61,17 +61,16 @@ export function AppShell({
 
       <Toaster
         position="top-right"
-        theme="dark"
+        theme="light"
         toastOptions={{
           style: {
-            background:
-              "linear-gradient(145deg, rgba(26, 11, 46, 0.95), var(--manhwa-system-dark))",
-            border: "2px solid var(--manhwa-legendary-gold)",
-            borderRadius: "8px",
-            color: "var(--manhwa-legendary-gold)",
+            background: "rgba(255, 252, 247, 0.96)",
+            border: "1px solid rgba(200, 170, 110, 0.3)",
+            borderRadius: "12px",
+            color: "var(--ink-primary)",
             backdropFilter: "blur(12px)",
             WebkitBackdropFilter: "blur(12px)",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.9), inset 0 0 15px rgba(212, 175, 63, 0.2)",
+            boxShadow: "0 8px 32px rgba(120, 90, 50, 0.1)",
             fontFamily: "var(--ss-font-body)",
             letterSpacing: "0.02em",
           },

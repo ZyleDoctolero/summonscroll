@@ -40,12 +40,12 @@ export function BottomHUD() {
   return (
     <div className="fixed bottom-0 inset-x-0 z-50 flex justify-center pb-4 px-4 pointer-events-none">
       <div
-        className="flex items-center gap-2 md:gap-4 p-2 rounded-full pointer-events-auto shadow-[0_4px_10px_rgba(0,0,0,0.6)]"
+        className="flex items-center gap-2 md:gap-4 p-2 rounded-full pointer-events-auto shadow-[0_4px_16px_rgba(120,90,50,0.12)]"
         style={{
-          background: "rgba(8, 8, 20, 0.92)",
+          background: "rgba(255, 252, 247, 0.92)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
-          border: "1px solid rgba(255,213,79,0.15)",
+          border: "1px solid rgba(200, 170, 110, 0.25)",
         }}
       >
         {NAV_ITEMS.map((item) => {
@@ -61,7 +61,7 @@ export function BottomHUD() {
                   ? `rgba(${item.colorRgb}, 0.18)`
                   : "transparent",
                 boxShadow: isActive
-                  ? `0 2px 10px rgba(0,0,0,0.5)`
+                  ? `0 2px 10px rgba(${item.colorRgb},0.2)`
                   : "none",
                 border: isActive ? `1.5px solid ${item.color}` : "1.5px solid transparent",
               }}
@@ -72,8 +72,8 @@ export function BottomHUD() {
                 color={isActive ? item.color : "var(--ink-secondary)"}
                 className={
                   isActive
-                    ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
-                    : "opacity-70 group-hover:opacity-100 group-hover:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] transition-all"
+                    ? "drop-shadow-[0_1px_2px_rgba(0,0,0,0.15)]"
+                    : "opacity-50 group-hover:opacity-80 transition-all"
                 }
               />
             </Link>

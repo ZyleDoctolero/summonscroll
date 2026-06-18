@@ -105,7 +105,7 @@ function PenaltyZone() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-[var(--bg-stage)] overflow-hidden flex flex-col items-center justify-center p-4"
+      className="fixed inset-0 z-[100] bg-[var(--bg-deep)] overflow-hidden flex flex-col items-center justify-center p-4"
       onClick={!audioActive ? startAudio : undefined}
     >
       {/* Ambient red pulse */}
@@ -185,7 +185,7 @@ function PenaltyZone() {
               {hasTask ? (
                 <div
                   className="text-lg font-bold font-heading"
-                  style={{ color: "var(--bg-panel)" }}
+                  style={{ color: "var(--ink-primary)" }}
                 >
                   {profile.penalty_zone_task}
                 </div>

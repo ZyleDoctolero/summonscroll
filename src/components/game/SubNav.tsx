@@ -33,7 +33,7 @@ export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; colo
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
-    <div className="w-full flex gap-1 p-1 bg-[rgba(8,8,20,0.6)] border border-[rgba(255,255,255,0.1)] rounded-lg mb-6 overflow-x-auto no-scrollbar relative z-20 backdrop-blur-xl shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
+    <div className="w-full flex gap-1 p-1 bg-[rgba(255,252,247,0.7)] border border-[rgba(200,170,110,0.2)] rounded-lg mb-6 overflow-x-auto no-scrollbar relative z-20 backdrop-blur-xl shadow-[0_2px_8px_rgba(120,90,50,0.06)]">
       {items.map((item) => {
         const isActive = pathname === item.path;
         return (
@@ -50,9 +50,9 @@ export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; colo
                 layoutId="subNavActive"
                 className="absolute inset-0 rounded -z-10 border-b-2"
                 style={{ 
-                  borderColor: color, 
-                  backgroundColor: "rgba(255,255,255,0.06)",
-                  boxShadow: `inset 0 0 10px ${color}20`
+                  borderColor: color,
+                  backgroundColor: "rgba(200,170,110,0.08)",
+                  boxShadow: `0 1px 4px rgba(120,90,50,0.06)`
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />

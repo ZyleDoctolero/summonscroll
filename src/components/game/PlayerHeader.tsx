@@ -84,7 +84,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
             {/* HP bar */}
             <div
               className="w-12 h-1.5 rounded-full overflow-hidden"
-              style={{ background: "rgba(255,255,255,0.08)" }}
+              style={{ background: "rgba(180,150,100,0.15)" }}
             >
               <div
                 className="h-full rounded-full transition-all"

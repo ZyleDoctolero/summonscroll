@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap');
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -165,17 +165,17 @@
 
 /* ─── SummonScroll Game Design Tokens ─── */
 :root {
-  /* ─── Manhwa System UI Palette (Pick Me Up / Solo Leveling) ─── */
-  /* Backgrounds */
-  --bg-deep: #02040a; /* absolute void black */
-  --bg-stage: #050a12; /* deeper space */
-  --bg-panel: rgba(10, 10, 14, 0.65); /* sleek frosted glass panel */
-  --bg-pane: rgba(16, 20, 26, 0.4); /* inner pane */
+  /* ─── Warm Fantasy Palette (Goldkeeper-inspired) ─── */
+  /* Backgrounds — warm creams and sand, never harsh */
+  --bg-deep: #faf6f0; /* warm parchment */
+  --bg-stage: #f5efe6; /* slightly deeper cream */
+  --bg-panel: rgba(255, 252, 247, 0.85); /* frosted white-cream */
+  --bg-pane: rgba(245, 235, 220, 0.5); /* inner warm sand */
 
-  /* Text/Ink */
-  --ink-primary: #e0f7fa; /* crisp icy white */
-  --ink-secondary: #80deea; /* muted neon cyan */
-  --ink-tertiary: #4dd0e1; /* vivid cyan */
+  /* Text/Ink — warm darks, readable and soft */
+  --ink-primary: #3d2e1e; /* warm dark brown */
+  --ink-secondary: #8b7355; /* muted bronze */
+  --ink-tertiary: #b5a28a; /* soft tan */
 
   /* Signature Colors */
   --fire: #ff5e2a;
@@ -185,23 +185,23 @@
   --dark: #c47fff;
   --void-el: #c9a84c;
 
-  --gold-bright: var(--light);
-  --gold-glow: var(--void-el);
+  --gold-bright: #c89a3e;
+  --gold-glow: #b8860b;
   --violet: var(--dark);
   --cyan: var(--water);
   --rose: #ff4f6a;
   --ember: var(--fire);
 
   /* Utility */
-  --success: #5a7b3a;
-  --danger: #ff1744;
+  --success: #22c55e;
+  --danger: #ef4444;
 
   /* ─── Legacy Token Aliases (backward compatibility) ─── */
   --ss-bg-deep: var(--bg-deep);
   --ss-bg-surface: var(--bg-stage);
   --ss-bg-elevated: var(--bg-panel);
   --ss-bg-hover: var(--bg-pane);
-  --ss-bg-overlay: rgba(0, 0, 0, 0.72);
+  --ss-bg-overlay: rgba(60, 40, 20, 0.4);
 
   --ss-text-primary: var(--ink-primary);
   --ss-text-secondary: var(--ink-secondary);
@@ -236,8 +236,8 @@
   --ss-stat-per-rgb: 206, 147, 216;
 
   /* Borders */
-  --ss-border: rgba(255, 255, 255, 0.07);
-  --ss-border-active: rgba(255, 255, 255, 0.18);
+  --ss-border: rgba(180, 150, 100, 0.2);
+  --ss-border-active: rgba(180, 150, 100, 0.4);
 
   /* ─── Spacing scale ─── */
   --ss-space-1: 4px;
@@ -257,17 +257,17 @@
   --ss-radius-pill: 9999px;
 
   /* ─── Elevation scale ─── */
-  --ss-shadow-low: 0 2px 6px rgba(0, 0, 0, 0.25);
-  --ss-shadow-mid: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --ss-shadow-high: 0 24px 64px rgba(0, 0, 0, 0.55);
+  --ss-shadow-low: 0 2px 6px rgba(120, 90, 50, 0.08);
+  --ss-shadow-mid: 0 8px 24px rgba(120, 90, 50, 0.1);
+  --ss-shadow-high: 0 24px 64px rgba(120, 90, 50, 0.14);
 
   /* Inset highlight — gives surfaces faux "rim lighting" */
-  --ss-inset-edge: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --ss-inset-edge: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 
   /* ─── Hairlines ─── */
-  --ss-hairline: 1px solid rgba(255, 255, 255, 0.06);
-  --ss-hairline-soft: 1px solid rgba(255, 255, 255, 0.03);
-  --ss-hairline-active: 1px solid rgba(255, 213, 79, 0.32);
+  --ss-hairline: 1px solid rgba(180, 150, 100, 0.15);
+  --ss-hairline-soft: 1px solid rgba(180, 150, 100, 0.08);
+  --ss-hairline-active: 1px solid rgba(200, 154, 62, 0.4);
 
   /* ─── Realm Palettes (12 realms × 4 colors each) ─── */
   /* I. Ancient Vaults — Arcane */
@@ -392,13 +392,13 @@
   transition: all 160ms ease-out;
 }
 .ss-nav-primary:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(200, 154, 62, 0.06);
   color: var(--ink-primary);
 }
 .ss-nav-primary.active {
-  color: var(--gold-bright);
-  background: rgba(255, 213, 79, 0.08);
-  border-left-color: var(--gold-bright);
+  color: #b8860b;
+  background: rgba(200, 154, 62, 0.1);
+  border-left-color: #c89a3e;
 }
 
 .ss-nav-secondary {
@@ -415,12 +415,12 @@
   transition: all 140ms ease-out;
 }
 .ss-nav-secondary:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(200, 154, 62, 0.04);
   color: var(--ink-secondary);
 }
 .ss-nav-secondary.active {
   color: var(--ink-primary);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(200, 154, 62, 0.06);
   border-left-color: var(--ink-secondary);
 }
 
@@ -440,7 +440,7 @@
 }
 .ss-nav-more:hover {
   color: var(--ink-secondary);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(200, 154, 62, 0.04);
 }
 
 /* Global input styling for game forms */
@@ -504,19 +504,15 @@
 .font-lore { font-family: 'Spectral', serif; font-style: italic; }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 body {
-  background-color: var(--ss-bg-deep);
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.02) 0px,
-    rgba(255, 255, 255, 0.02) 1px,
-    transparent 1px,
-    transparent 8px
-  );
+  background-color: var(--bg-deep);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 213, 79, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(200, 154, 62, 0.05) 0%, transparent 60%);
   background-attachment: fixed;
-  color: var(--ss-text-primary);
+  color: var(--ink-primary);
   font-family: var(--ss-font-body);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -528,19 +524,19 @@ body {
 
 /* ─── Cards ─── */
 .ss-card {
-  background: linear-gradient(145deg, rgba(26, 11, 46, 0.6), rgba(10, 5, 18, 0.8));
-  border: 2px solid rgba(212, 175, 63, 0.3);
+  background: rgba(255, 252, 247, 0.9);
+  border: 1px solid rgba(200, 170, 110, 0.2);
   border-radius: var(--ss-radius-lg);
   padding: var(--ss-space-4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: var(--ss-shadow-mid), inset 0 1px 1px rgba(212, 175, 63, 0.15), inset 0 0 20px rgba(212, 175, 63, 0.1);
+  box-shadow: var(--ss-shadow-mid), inset 0 1px 0 rgba(255, 255, 255, 0.6);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .ss-card:hover {
-  border-color: rgba(212, 175, 63, 0.7);
-  box-shadow: var(--ss-shadow-high), 0 0 20px rgba(212, 175, 63, 0.3), inset 0 0 30px rgba(212, 175, 63, 0.2);
-  transform: translateY(-4px);
+  border-color: rgba(200, 154, 62, 0.4);
+  box-shadow: var(--ss-shadow-high), 0 0 15px rgba(200, 154, 62, 0.08);
+  transform: translateY(-2px);
 }
 
 /* Bigger, more important surface — hero card on a screen */
@@ -554,24 +550,24 @@ body {
 
 /* ─── Modals ─── */
 .ss-modal {
-  background: linear-gradient(180deg, rgba(16, 20, 26, 0.8) 0%, rgba(2, 4, 10, 0.95) 100%);
-  border: 1px solid rgba(255, 213, 79, 0.32);
+  background: rgba(255, 252, 247, 0.96);
+  border: 1px solid rgba(200, 170, 110, 0.3);
   border-radius: var(--ss-radius-xl);
   padding: var(--ss-space-5);
-  box-shadow: var(--ss-shadow-high), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(184, 151, 60, 0.1);
+  box-shadow: var(--ss-shadow-high), inset 0 1px 0 rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(24px);
   max-width: 28rem;
   width: 100%;
 }
 
 .ss-modal-backdrop {
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(60, 40, 20, 0.4);
   backdrop-filter: blur(3px);
 }
 
 /* ─── Panes (sub-sections within a card) ─── */
 .ss-pane {
-  background: rgba(0, 0, 0, 0.32);
+  background: rgba(240, 230, 210, 0.4);
   border-radius: var(--ss-radius-md);
   padding: var(--ss-space-3);
 }
@@ -610,12 +606,12 @@ body {
 /* Disabled state — flat muted slate, reads as "locked". */
 .ss-btn-primary:disabled,
 .ss-btn-d-primary:disabled {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(180, 150, 100, 0.08);
   color: var(--ink-tertiary);
   box-shadow: none;
   text-shadow: none;
   filter: none;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(180, 150, 100, 0.15);
   pointer-events: none;
   transform: none;
   opacity: 0.7;
@@ -623,7 +619,7 @@ body {
 }
 
 .ss-btn-secondary {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(200, 170, 110, 0.06);
   color: var(--ink-secondary);
   border: var(--ss-hairline);
 }
@@ -633,16 +629,16 @@ body {
 }
 
 .ss-btn-danger {
-  background: rgba(255, 23, 68, 0.15);
+  background: rgba(239, 68, 68, 0.08);
   color: var(--danger);
-  border: 1px solid rgba(255, 23, 68, 0.4);
-  box-shadow: 0 4px 20px rgba(255, 23, 68, 0.25), inset 0 0 10px rgba(255, 23, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
   transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .ss-btn-danger:hover {
-  background: rgba(255, 23, 68, 0.25);
-  border-color: rgba(255, 23, 68, 0.8);
-  box-shadow: 0 4px 25px rgba(255, 23, 68, 0.4), inset 0 0 15px rgba(255, 23, 68, 0.2);
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.15);
   transform: translateY(-1px);
 }
 
@@ -680,7 +676,7 @@ body {
   border-color: rgba(255, 213, 79, 0.32);
 }
 .ss-chip-muted {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(180, 150, 100, 0.08);
   color: var(--ink-tertiary);
 }
 
@@ -719,13 +715,12 @@ body {
 /* Elemental gradient border card */
 .ss-card-d-glow {
   position: relative;
-  background: var(--bg-panel);
+  background: rgba(255, 252, 247, 0.9);
   border-radius: var(--ss-radius-lg);
   padding: var(--ss-space-4);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
-    inset 0 0 20px rgba(255, 255, 255, 0.02);
+    0 8px 32px rgba(120, 90, 50, 0.1),
+    inset 0 0 0 1px rgba(200, 170, 110, 0.15);
 }
 .ss-card-d-glow::before {
   content: "";
@@ -762,17 +757,16 @@ body {
 
 /* Ancient Runic Button */
 .ss-btn-d-primary {
-  background: rgba(212, 175, 63, 0.15);
-  color: #fcd34d;
-  border: 2px solid rgba(212, 175, 63, 0.6);
-  border-radius: 8px;
+  background: linear-gradient(135deg, #c89a3e, #e8c55a);
+  color: white;
+  border: none;
+  border-radius: 10px;
   font-family: var(--ss-font-display);
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 0 0 15px rgba(212, 175, 63, 0.3), inset 0 0 15px rgba(212, 175, 63, 0.2);
-  text-shadow: 0 0 8px rgba(212, 175, 63, 0.8);
+  box-shadow: 0 4px 15px rgba(200, 154, 62, 0.3);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
@@ -786,8 +780,8 @@ body {
   transition: 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .ss-btn-d-primary:hover {
-  background: rgba(212, 175, 63, 0.3);
-  box-shadow: 0 0 25px rgba(212, 175, 63, 0.6), inset 0 0 20px rgba(212, 175, 63, 0.4);
+  background: linear-gradient(135deg, #d4a84a, #f0d070);
+  box-shadow: 0 6px 25px rgba(200, 154, 62, 0.4);
   transform: translateY(-2px) scale(1.02);
 }
 .ss-btn-d-primary:hover::before {
@@ -795,7 +789,7 @@ body {
 }
 .ss-btn-d-primary:active {
   transform: scale(0.96);
-  box-shadow: 0 0 10px rgba(184, 151, 60, 0.4), inset 0 0 10px rgba(184, 151, 60, 0.3);
+  box-shadow: 0 2px 8px rgba(200, 154, 62, 0.3);
 }
 
 /* Rarity star (with particle glow) */
@@ -845,8 +839,8 @@ body {
   align-items: center;
   padding: 12px 16px;
   border-radius: var(--ss-radius-md);
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(240, 230, 210, 0.5);
+  border: 1px solid rgba(200, 170, 110, 0.2);
 }
 .ss-stat-d-label {
   font-family: "Saira Condensed", sans-serif;
@@ -860,7 +854,7 @@ body {
   font-family: var(--ss-font-display);
   font-size: 28px;
   font-weight: 700;
-  color: var(--gold-bright);
+  color: #b8860b;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.02em;
 }
@@ -908,7 +902,7 @@ body {
 
 /* Apply base body typography */
 body {
-  font-family: var(--ss-font-body) !important;
+  font-family: var(--ss-font-body);
   font-size: var(--ss-text-base);
   color: var(--ink-primary);
   line-height: 1.5;
@@ -1018,19 +1012,6 @@ body {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  /* Holographic HUD grid lines & fallback base gradient */
-  background-image:
-    radial-gradient(circle at 50% 0%, rgba(17, 17, 28, 0.4) 0%, rgba(8, 8, 13, 0.96) 80%),
-    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
-  background-size:
-    100% 100%,
-    36px 36px,
-    36px 36px;
-  background-position:
-    center top,
-    0 0,
-    0 0;
   overflow: hidden;
 }
 
@@ -1048,15 +1029,13 @@ body {
   pointer-events: none;
   z-index: 1;
   background-image:
-    radial-gradient(circle at 10% 20%, rgba(255, 217, 92, 0.15) 1.5px, transparent 3px),
-    radial-gradient(circle at 80% 15%, rgba(163, 116, 255, 0.2) 2px, transparent 4px),
-    radial-gradient(circle at 35% 60%, rgba(90, 224, 255, 0.15) 1.5px, transparent 3px),
-    radial-gradient(circle at 75% 75%, rgba(255, 94, 133, 0.15) 2.5px, transparent 5px),
-    radial-gradient(circle at 90% 40%, rgba(255, 217, 92, 0.12) 1px, transparent 2.5px),
-    radial-gradient(circle at 15% 80%, rgba(163, 116, 255, 0.18) 2px, transparent 4px);
+    radial-gradient(circle at 10% 20%, rgba(200, 154, 62, 0.12) 1.5px, transparent 3px),
+    radial-gradient(circle at 80% 15%, rgba(200, 154, 62, 0.08) 2px, transparent 4px),
+    radial-gradient(circle at 35% 60%, rgba(180, 130, 50, 0.06) 1.5px, transparent 3px),
+    radial-gradient(circle at 75% 75%, rgba(200, 154, 62, 0.08) 2.5px, transparent 5px);
   background-size: 200% 200%;
   animation: bg-particle-drift 35s linear infinite;
-  opacity: 0.65;
+  opacity: 0.4;
 }
 
 @keyframes bg-particle-drift {
@@ -1114,8 +1093,8 @@ body {
     @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[var(--danger)] border border-[var(--bg-panel)] flex items-center justify-center text-[10px] font-bold text-white shadow-[0_2px_4px_rgba(0,0,0,0.5)];
   }
   .ss-panel-holographic {
-    @apply relative overflow-hidden border border-[var(--gold-bright)] shadow-[0_4px_10px_rgba(0,0,0,0.4)];
-    background: var(--bg-panel);
+    @apply relative overflow-hidden border border-[rgba(200,170,110,0.25)] shadow-[0_4px_16px_rgba(120,90,50,0.08)] rounded-xl;
+    background: rgba(255, 252, 247, 0.9);
   }
 }
 
