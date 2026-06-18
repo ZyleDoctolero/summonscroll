@@ -74,12 +74,12 @@ export function AkashicRecords({
 
   return (
     <div
-      className="relative w-full max-w-md mx-auto aspect-square rounded-full border border-cyan-500/20 overflow-hidden"
+      className="relative w-full max-w-md mx-auto aspect-square rounded-full border border-[#c89a3e]/20 overflow-hidden"
       style={{
-        background: "radial-gradient(circle, rgba(0,240,255,0.03) 0%, rgba(10,15,30,0.5) 70%)",
+        background: "radial-gradient(circle, rgba(200,154,62,0.04) 0%, rgba(245,239,230,0.6) 70%)",
         boxShadow: canSynthesize
-          ? "inset 0 0 80px rgba(0,240,255,0.08), 0 0 40px rgba(0,240,255,0.05)"
-          : "inset 0 0 50px rgba(0,240,255,0.03)",
+          ? "inset 0 0 80px rgba(200,154,62,0.06), 0 0 40px rgba(200,154,62,0.05)"
+          : "inset 0 0 50px rgba(200,154,62,0.03)",
       }}
     >
       <div className="absolute inset-0 scanlines opacity-10 pointer-events-none" />
@@ -98,7 +98,7 @@ export function AkashicRecords({
               x2={centerX}
               y2={centerY}
               // eslint-disable-next-line no-restricted-syntax
-              stroke={fodder.isAvailable ? "#00f0ff" : "#1e293b"}
+              stroke={fodder.isAvailable ? "#c89a3e" : "#1e293b"}
               strokeWidth={fodder.isAvailable ? 2 : 1}
               strokeDasharray={fodder.isAvailable ? "none" : "4 4"}
               initial={{ pathLength: 0, opacity: 0 }}
@@ -109,7 +109,7 @@ export function AkashicRecords({
                 ease: "easeOut",
               }}
               style={{
-                filter: fodder.isAvailable ? "drop-shadow(0 0 6px #00f0ff)" : "none",
+                filter: fodder.isAvailable ? "drop-shadow(0 0 6px #c89a3e)" : "none",
               }}
             />
           );
@@ -123,18 +123,18 @@ export function AkashicRecords({
             isSynthesizing
               ? {
                   scale: [1, 1.3, 1],
-                  boxShadow: ["0 0 20px #00f0ff", "0 0 80px #fff", "0 0 20px #00f0ff"],
+                  boxShadow: ["0 0 20px #c89a3e", "0 0 80px #fff", "0 0 20px #c89a3e"],
                 }
               : canSynthesize
                 ? {
                     scale: [1, 1.08, 1],
-                    boxShadow: ["0 0 20px #00f0ff", "0 0 40px #00f0ff", "0 0 20px #00f0ff"],
+                    boxShadow: ["0 0 20px #c89a3e", "0 0 40px #c89a3e", "0 0 20px #c89a3e"],
                   }
                 : {}
           }
           transition={{ duration: isSynthesizing ? 0.8 : 2, repeat: isSynthesizing ? 2 : Infinity }}
-          className={`w-24 h-24 rounded-full border-2 flex items-center justify-center bg-black/80 z-10 ${
-            canSynthesize ? "border-cyan-400" : isLocked ? "border-red-500/50" : "border-slate-700"
+          className={`w-24 h-24 rounded-full border-2 flex items-center justify-center bg-white/70 z-10 ${
+            canSynthesize ? "border-[#c89a3e]" : isLocked ? "border-red-500/50" : "border-[#b5a28a]/40"
           }`}
         >
           <AnimatePresence mode="wait">
@@ -149,8 +149,8 @@ export function AkashicRecords({
                 <Sparkles className="w-8 h-8 text-yellow-400 mx-auto" />
               ) : (
                 <>
-                  <div className="text-xs font-mono text-cyan-400">{targetStar}★</div>
-                  <div className="text-sm font-bold text-white truncate max-w-[80px]">
+                  <div className="text-xs font-mono text-[#c89a3e]">{targetStar}★</div>
+                  <div className="text-sm font-bold text-[var(--ink-primary)] truncate max-w-[80px]">
                     {targetName}
                   </div>
                 </>
@@ -184,19 +184,19 @@ export function AkashicRecords({
             }
           >
             <div
-              className={`w-14 h-14 rounded-full border-2 flex flex-col items-center justify-center bg-black/90 z-10 transition-colors ${
+              className={`w-14 h-14 rounded-full border-2 flex flex-col items-center justify-center bg-white/70 z-10 transition-colors ${
                 fodder.isAvailable
-                  ? "border-cyan-500 shadow-[0_0_15px_rgba(0,240,255,0.4)]"
-                  : "border-slate-800 border-dashed"
+                  ? "border-[#c89a3e] shadow-[0_0_15px_rgba(0,240,255,0.4)]"
+                  : "border-[#b5a28a]/30 border-dashed"
               }`}
             >
               <span
-                className={`text-[9px] font-mono font-bold ${fodder.isAvailable ? "text-cyan-400" : "text-slate-600"}`}
+                className={`text-[9px] font-mono font-bold ${fodder.isAvailable ? "text-[#c89a3e]" : "text-[#b5a28a]"}`}
               >
                 {fodder.isAvailable ? "READY" : "EMPTY"}
               </span>
               {fodder.isAvailable && (
-                <span className="text-[8px] text-cyan-300/60 truncate max-w-[40px]">
+                <span className="text-[8px] text-[#8b7355]/60 truncate max-w-[40px]">
                   {fodder.name}
                 </span>
               )}
@@ -210,7 +210,7 @@ export function AkashicRecords({
         {/* Status message */}
         <p
           className={`text-[10px] font-mono tracking-wider text-center ${
-            canSynthesize ? "text-cyan-400" : isLocked ? "text-red-400" : "text-slate-500"
+            canSynthesize ? "text-[#c89a3e]" : isLocked ? "text-red-400" : "text-[#8b7355]"
           }`}
         >
           {isLocked && <Lock className="w-3 h-3 inline mr-1 -mt-0.5" />}
@@ -222,8 +222,8 @@ export function AkashicRecords({
           disabled={!canSynthesize || isSynthesizing}
           className={`font-mono tracking-widest uppercase transition-all duration-300 ${
             canSynthesize
-              ? "bg-cyan-500 hover:bg-cyan-400 text-black shadow-[0_0_20px_rgba(0,240,255,0.5)]"
-              : "bg-slate-900/80 border border-slate-800 text-slate-600 cursor-not-allowed opacity-60"
+              ? "bg-[#c89a3e] hover:bg-[#b8860b] text-white shadow-[0_0_20px_rgba(200,154,62,0.3)]"
+              : "bg-[rgba(240,230,210,0.5)] border border-[#b5a28a]/30 text-[#b5a28a] cursor-not-allowed opacity-60"
           }`}
         >
           {isSynthesizing ? (

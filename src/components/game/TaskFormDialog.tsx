@@ -97,7 +97,7 @@ export function TaskFormDialog({
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.7)", backdropFilter: "blur(6px)" }}
+      style={{ background: "rgba(61,46,31,0.5)", backdropFilter: "blur(6px)" }}
       onClick={onClose}
     >
       <form onClick={(e) => e.stopPropagation()} onSubmit={submit} className="ss-modal">
@@ -118,7 +118,7 @@ export function TaskFormDialog({
                   background:
                     v.type === t
                       ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
-                      : "rgba(255,255,255,0.05)",
+                      : "rgba(200,154,62,0.06)",
                   color: v.type === t ? "#1a0b2e" : "var(--ink-secondary)",
                 }}
                 /* eslint-enable no-restricted-syntax */
@@ -198,7 +198,7 @@ export function TaskFormDialog({
                 className="flex-1 py-2 rounded text-xs uppercase font-semibold"
                 style={{
                   background:
-                    v.difficulty === d ? "rgba(255,213,79,0.18)" : "rgba(255,255,255,0.04)",
+                    v.difficulty === d ? "rgba(255,213,79,0.18)" : "rgba(200,154,62,0.04)",
                   color: v.difficulty === d ? "var(--gold-bright)" : "var(--ink-secondary)",
                   border: `1px solid ${v.difficulty === d ? "rgba(255,213,79,0.4)" : "transparent"}`,
                 }}
@@ -260,7 +260,7 @@ export function TaskFormDialog({
                     style={{
                       background: on
                         ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
-                        : "rgba(255,255,255,0.05)",
+                        : "rgba(200,154,62,0.06)",
                       color: on ? "#1a0b2e" : "var(--ink-secondary)",
                     }}
                     /* eslint-enable no-restricted-syntax */
@@ -278,7 +278,7 @@ export function TaskFormDialog({
             type="button"
             onClick={onClose}
             className="flex-1 py-2 rounded text-sm uppercase tracking-widest"
-            style={{ background: "rgba(255,255,255,0.05)", color: "var(--ink-secondary)" }}
+            style={{ background: "rgba(200,154,62,0.06)", color: "var(--ink-secondary)" }}
           >
             Cancel
           </button>

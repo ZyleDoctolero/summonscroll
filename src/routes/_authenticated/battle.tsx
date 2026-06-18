@@ -213,7 +213,7 @@ function BattlePage() {
                   transition={{ duration: dur.fast, ease: ease.out, delay: logDelays[i] }}
                   className="text-xs flex items-center gap-2"
                   style={{
-                    color: entry.actor === "player" ? "var(--bg-panel)" : "var(--danger)",
+                    color: entry.actor === "player" ? "var(--ink-primary)" : "var(--danger)",
                   }}
                 >
                   <span
@@ -343,7 +343,7 @@ function BattlePage() {
                         >
                           <Icon name="tower" size={14} color="var(--gold-bright)" />
                           <span>The Wailing Wall crumbles before you. </span>
-                          <span style={{ color: "var(--bg-panel)" }}>Badge earned.</span>
+                          <span style={{ color: "var(--ink-secondary)" }}>Badge earned.</span>
                         </motion.p>
                       )}
                       {badges.apex && (
@@ -361,7 +361,7 @@ function BattlePage() {
                             className="lucide-glow"
                           />
                           <span>You are the Apex. </span>
-                          <span style={{ color: "var(--bg-panel)" }}>Crown bestowed.</span>
+                          <span style={{ color: "var(--ink-secondary)" }}>Crown bestowed.</span>
                         </motion.p>
                       )}
                     </motion.div>
@@ -457,7 +457,7 @@ function BattlePage() {
 
         {/* Battle history */}
         <div>
-          <h2 className="text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
+          <h2 className="text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
             Recent Battles
           </h2>
           {(historyQ.data?.battles ?? []).length === 0 ? (
@@ -496,7 +496,7 @@ function BattlePage() {
                             <Icon name="close" size={14} color="var(--danger)" />
                           )}
                         </span>
-                        <span className="ml-2" style={{ color: "var(--bg-panel)" }}>
+                        <span className="ml-2" style={{ color: "var(--ink-primary)" }}>
                           {b.enemy_name}
                         </span>
                         <span className="ml-2 text-xs" style={{ color: "var(--ink-secondary)" }}>

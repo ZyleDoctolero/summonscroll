@@ -110,26 +110,26 @@ function whisperStyle(tone?: Whisper["tone"]): React.CSSProperties {
       return {
         background: "rgba(224,82,82,0.10)",
         borderColor: "rgba(224,82,82,0.32)",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.45), 0 0 12px rgba(224,82,82,0.15)",
+        boxShadow: "0 8px 24px rgba(120,90,50,0.12), 0 0 12px rgba(224,82,82,0.15)",
       };
     case "playful":
       return {
         background: "rgba(95,173,65,0.08)",
         borderColor: "rgba(95,173,65,0.28)",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.45)",
+        boxShadow: "0 8px 24px rgba(120,90,50,0.12)",
       };
     case "grave":
       return {
         background: "rgba(127,119,221,0.08)",
         borderColor: "rgba(127,119,221,0.28)",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
+        boxShadow: "0 8px 24px rgba(120,90,50,0.15)",
       };
     case "calm":
     default:
       return {
         background: "var(--bg-stage)",
         borderColor: "rgba(255,213,79,0.18)",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.45)",
+        boxShadow: "0 8px 24px rgba(120,90,50,0.12)",
       };
   }
 }

@@ -168,7 +168,7 @@ function ShopPage() {
                     : "var(--gold-bright)";
               return (
                 <div key={item.id} className="ss-card">
-                  <h3 className="font-bold text-sm mb-1" style={{ color: "var(--bg-panel)" }}>
+                  <h3 className="font-bold text-sm mb-1" style={{ color: "var(--ink-primary)" }}>
                     {item.name}
                   </h3>
                   <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>

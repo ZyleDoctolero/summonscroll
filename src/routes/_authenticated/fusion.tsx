@@ -130,7 +130,7 @@ function FusionPage() {
                     }}
                   />
                 </div>
-                <p className="t-label truncate" style={{ color: "var(--bg-panel)" }}>
+                <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>
                   {targetMonster.monster.name}
                 </p>
                 <p className="text-[10px]" style={{ color: "#8a6d3b" }}>
@@ -188,7 +188,7 @@ function FusionPage() {
                             }}
                           />
                         </div>
-                        <p className="text-[10px] truncate" style={{ color: "var(--bg-panel)" }}>
+                        <p className="text-[10px] truncate" style={{ color: "var(--ink-primary)" }}>
                           {um.monster.name}
                         </p>
                         <button
@@ -326,7 +326,7 @@ function FusionPage() {
                       </div>
                       <p
                         className="text-[10px] font-bold truncate"
-                        style={{ color: "var(--bg-panel)" }}
+                        style={{ color: "var(--ink-primary)" }}
                       >
                         {um.monster.name}
                       </p>

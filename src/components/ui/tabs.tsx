@@ -12,7 +12,7 @@ const TabsList = React.forwardRef<
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "inline-flex h-9 items-center justify-center rounded-lg bg-[#e0d4b8] p-1 text-[var(--ink-secondary)] border border-[var(--gold-glow)]/50 shadow-inner",
+      "inline-flex h-9 items-center justify-center rounded-lg bg-[var(--bg-stage)] p-1 text-[var(--ink-secondary)] border border-[var(--gold-glow)]/50 shadow-inner",
       className,
     )}
     {...props}
@@ -27,7 +27,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-bold tracking-wider ring-offset-[var(--bg-stage)] cursor-pointer transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--danger)] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed data-[state=active]:bg-[var(--bg-panel)] data-[state=active]:text-[var(--bg-stage)] data-[state=active]:shadow-md",
+      "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-bold tracking-wider ring-offset-[var(--bg-stage)] cursor-pointer transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold-glow)] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed data-[state=active]:bg-[var(--bg-panel)] data-[state=active]:text-[var(--ink-primary)] data-[state=active]:shadow-md",
       className,
     )}
     {...props}

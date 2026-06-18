@@ -93,7 +93,7 @@ export const TaskCard = React.memo(function TaskCard({
           {
             id: Math.random().toString(36).slice(2),
             text: `+${Math.max(10, Math.floor(Number(task.value) * 1.5))} XP`,
-            color: "var(--cyan)",
+            color: "var(--gold-bright)",
           },
         ]);
       }
@@ -124,7 +124,7 @@ export const TaskCard = React.memo(function TaskCard({
 
   return (
     <article
-      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-hidden duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(0,240,255,0.3)] z-10 hover:z-20"
+      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-hidden duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(200,154,62,0.2)] z-10 hover:z-20"
       /* eslint-disable no-restricted-syntax */
       style={{
         borderLeft: `4px solid ${task.is_starred ? "#fcd34d" : color}`,
@@ -149,7 +149,7 @@ export const TaskCard = React.memo(function TaskCard({
           /* eslint-disable no-restricted-syntax */
           style={{
             background: "linear-gradient(135deg,#d4af3f,#fcd34d)",
-            color: "#1a0b2e",
+            color: "#ffffff",
             border: "1px solid #fef08a",
             boxShadow: "0 0 10px rgba(212,175,63,0.5)",
           }}
@@ -200,9 +200,9 @@ export const TaskCard = React.memo(function TaskCard({
           className="relative w-11 h-11 rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
           /* eslint-disable no-restricted-syntax */
           style={{
-            background: task.completed ? color : "rgba(26,11,46,0.6)",
+            background: task.completed ? color : "rgba(180,150,100,0.12)",
             border: `3px solid ${color}`,
-            color: task.completed ? "#1a0b2e" : color,
+            color: task.completed ? "#ffffff" : color,
             boxShadow: `inset 0 0 8px ${color}40`,
           }}
           /* eslint-enable no-restricted-syntax */
@@ -242,7 +242,7 @@ export const TaskCard = React.memo(function TaskCard({
           <div className="relative">
             <button
               onClick={() => setOpen((o) => !o)}
-              className="w-11 h-11 grid place-items-center rounded hover:bg-white/5"
+              className="w-11 h-11 grid place-items-center rounded hover:bg-[rgba(200,154,62,0.06)]"
               style={{ color: "var(--ink-secondary)" }}
               aria-label="More options"
             >
@@ -259,7 +259,7 @@ export const TaskCard = React.memo(function TaskCard({
                     setOpen(false);
                     onEdit(task);
                   }}
-                  className="w-full text-left px-3 py-2 text-sm hover:bg-white/5 flex items-center gap-1.5"
+                  className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(200,154,62,0.06)] flex items-center gap-1.5"
                   style={{ color: "var(--ink-primary)" }}
                 >
                   <Icon name="edit" size={13} />
@@ -270,7 +270,7 @@ export const TaskCard = React.memo(function TaskCard({
                     setOpen(false);
                     onDelete();
                   }}
-                  className="w-full text-left px-3 py-2 text-sm hover:bg-white/5 flex items-center gap-1.5"
+                  className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(200,154,62,0.06)] flex items-center gap-1.5"
                   style={{ color: "var(--danger)" }}
                 >
                   <Icon name="delete" size={13} />
@@ -316,7 +316,7 @@ export const TaskCard = React.memo(function TaskCard({
           <div className="mt-2">
             <div
               className="h-1.5 rounded-full overflow-hidden"
-              style={{ background: "rgba(255,255,255,0.06)" }}
+              style={{ background: "rgba(180,150,100,0.12)" }}
             >
               <div
                 className="h-full rounded-full transition-all"

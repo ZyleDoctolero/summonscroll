@@ -144,7 +144,7 @@ function PenaltyZone() {
               <ShieldAlert
                 className="w-16 h-16"
                 style={{
-                  color: "var(--manhwa-penalty-red)",
+                  color: "#8b0000",
                   filter: "drop-shadow(0 0 20px rgba(139,0,0,0.8))",
                 }}
               />
@@ -154,7 +154,7 @@ function PenaltyZone() {
             <div className="space-y-2">
               <h1
                 className="text-3xl font-serif font-bold tracking-widest uppercase font-display"
-                style={{ color: "var(--manhwa-penalty-red)" }}
+                style={{ color: "#8b0000" }}
               >
                 Demonic Backlash
               </h1>
@@ -176,7 +176,7 @@ function PenaltyZone() {
             >
               <div
                 className="flex items-center gap-2 font-serif text-sm"
-                style={{ color: "var(--manhwa-penalty-red)" }}
+                style={{ color: "#8b0000" }}
               >
                 <Terminal className="w-4 h-4" />
                 <span>HEAVENLY_TRIBULATION.EXE</span>

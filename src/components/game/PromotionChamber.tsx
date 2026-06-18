@@ -220,7 +220,7 @@ function Body({
       {stage === "check" && (
         <>
           {/* Requirements grid */}
-          <div className="rounded-xl p-3 mb-4 space-y-1" style={{ background: "rgba(0,0,0,0.32)" }}>
+          <div className="rounded-xl p-3 mb-4 space-y-1" style={{ background: "rgba(61,46,31,0.06)" }}>
             <p
               className="text-[10px] uppercase tracking-[0.18em] mb-1.5"
               style={{ color: "var(--ink-tertiary)" }}
@@ -301,9 +301,9 @@ function Body({
               onClick={onClose}
               className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(61,46,31,0.04)",
                 color: "var(--ink-secondary)",
-                border: "1px solid rgba(255,255,255,0.06)",
+                border: "1px solid rgba(61,46,31,0.1)",
               }}
             >
               Cancel
@@ -336,7 +336,7 @@ function Body({
           </p>
           <div
             className="h-1.5 rounded-full overflow-hidden"
-            style={{ background: "rgba(255,255,255,0.06)" }}
+            style={{ background: "rgba(61,46,31,0.06)" }}
           >
             <motion.div
               className="h-full"

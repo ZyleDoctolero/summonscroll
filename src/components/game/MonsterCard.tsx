@@ -144,14 +144,14 @@ const getElementSprite = (el: string) => {
 
 const getRarityBackground = (r: Rarity) => {
   switch (r) {
-    case "common": return "linear-gradient(155deg,#1a0e08,#120a06)";
-    case "uncommon": return "linear-gradient(155deg,#061408,#0a1e0c)";
-    case "rare": return "linear-gradient(155deg,#061018,#040c14)";
-    case "elite": return "linear-gradient(155deg,#1c1004,#261608)";
-    case "epic": return "linear-gradient(155deg,#0e081a,#090514)";
-    case "legendary": return "linear-gradient(155deg,#1a1808,#141204)";
-    case "mythic": return "linear-gradient(155deg,#1e0806,#160604)";
-    default: return "linear-gradient(155deg,var(--ink-primary),rgba(0,0,0,0.6))";
+    case "common": return "linear-gradient(155deg,#f5efe6,#ede5d8)";
+    case "uncommon": return "linear-gradient(155deg,#eef5ec,#e8f0e5)";
+    case "rare": return "linear-gradient(155deg,#eaf0f5,#e3ebf2)";
+    case "elite": return "linear-gradient(155deg,#f5f0e6,#f0e8d8)";
+    case "epic": return "linear-gradient(155deg,#f0eaf5,#ebe4f0)";
+    case "legendary": return "linear-gradient(155deg,#f5f2e6,#f0ece0)";
+    case "mythic": return "linear-gradient(155deg,#f5eae6,#f0e4e0)";
+    default: return "linear-gradient(155deg,#f5efe6,rgba(240,230,215,0.8))";
   }
 };
 
@@ -204,11 +204,11 @@ export function MonsterCard({
         }
         .mon-sprite-container > svg {
           animation: mon-idle 3.2s ease-in-out infinite;
-          filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+          filter: drop-shadow(0 6px 12px rgba(61,46,31,0.2));
         }
         .mon-shadow {
           width: 60%; height: 8px;
-          background: rgba(0,0,0,0.4);
+          background: rgba(61,46,31,0.15);
           border-radius: 50%;
           margin: 0 auto;
           filter: blur(4px);
@@ -247,7 +247,7 @@ export function MonsterCard({
             <span title={`Mood: ${getMood(monster.bond_percent)}`} className="text-sm">
               {getMood(monster.bond_percent)}
             </span>
-            <span className="font-['VT323'] text-[16px] leading-none text-white drop-shadow-md mt-1">
+            <span className="font-['VT323'] text-[16px] leading-none text-[var(--ink-primary)] drop-shadow-md mt-1">
               Lv.{monster.level}
             </span>
             {ascensionLevel > 0 && (
@@ -268,7 +268,7 @@ export function MonsterCard({
                   ? `drop-shadow(0 0 10px ${rColor}) contrast(1.1)`
                   : fatigued
                     ? "grayscale(100%) opacity(50%)"
-                    : "drop-shadow(0 8px 16px rgba(0,0,0,0.8))",
+                    : "drop-shadow(0 8px 16px rgba(61,46,31,0.3))",
               }}
               alt={monster.monster.name}
               onError={() => setImageError(true)}
@@ -283,13 +283,13 @@ export function MonsterCard({
 
         <div className="flex flex-col gap-1 relative z-10 text-center mt-2">
           <p
-            className={`${compact ? "text-xs" : "text-sm"} font-bold tracking-wider font-['Cinzel'] text-white truncate`}
-            style={{ textShadow: "0 1px 2px rgba(0,0,0,0.8)" }}
+            className={`${compact ? "text-xs" : "text-sm"} font-bold tracking-wider font-['Cinzel'] text-[var(--ink-primary)] truncate`}
+            style={{ textShadow: "0 1px 2px rgba(200,154,62,0.15)" }}
           >
             {monster.monster.name}
           </p>
           
-          <div className="w-full mt-2 relative h-1 rounded-sm overflow-hidden" style={{ background: "rgba(255,255,255,0.08)" }}>
+          <div className="w-full mt-2 relative h-1 rounded-sm overflow-hidden" style={{ background: "rgba(180,150,100,0.12)" }}>
             <div
               className="h-full transition-all duration-500 rounded-sm"
               style={{
@@ -299,7 +299,7 @@ export function MonsterCard({
             />
           </div>
           <div className="flex justify-between items-center mt-1">
-            <span className="text-[9px] uppercase tracking-widest font-['Rajdhani'] font-bold text-white/50">
+            <span className="text-[9px] uppercase tracking-widest font-['Rajdhani'] font-bold text-[#8b7355]/60">
               Bond
             </span>
             <span className="text-[9px] uppercase tracking-widest font-['Rajdhani'] font-bold" style={{ color: elColor }}>

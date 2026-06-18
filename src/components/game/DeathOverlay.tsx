@@ -21,7 +21,7 @@ export function DeathOverlay({ trigger }: { trigger: number }) {
   return (
     <div
       className="fixed inset-0 z-[100] grid place-items-center transition-opacity duration-300"
-      style={{ background: "rgba(0,0,0,0.92)", opacity }}
+      style={{ background: "rgba(61,46,31,0.88)", opacity }}
     >
       <div className="text-center">
         <div

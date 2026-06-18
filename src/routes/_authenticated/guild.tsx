@@ -192,7 +192,7 @@ function GuildPage() {
               </div>
             ) : (
               <div className="ss-card">
-                <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
+                <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
                   Start a Quest
                 </h3>
                 <div className="space-y-2">
@@ -216,7 +216,7 @@ function GuildPage() {
                           <div>
                             <p
                               className="text-sm font-bold"
-                              style={{ color: "var(--bg-panel)" }}
+                              style={{ color: "var(--ink-primary)" }}
                             >
                               {t.name}
                             </p>
@@ -259,7 +259,7 @@ function GuildPage() {
 
             {/* Members */}
             <div className="ss-card">
-              <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
+              <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
                 Members
               </h3>
               <div className="space-y-2">
@@ -276,7 +276,7 @@ function GuildPage() {
                       <div className="flex-1">
                         <p
                           className="text-sm font-semibold flex items-center gap-1.5"
-                          style={{ color: "var(--bg-panel)" }}
+                          style={{ color: "var(--ink-primary)" }}
                         >
                           {m.role === "leader" && (
                             <Icon
@@ -330,7 +330,7 @@ function GuildPage() {
               }) => (
                 <div key={g.id} className="ss-card flex items-center justify-between">
                   <div>
-                    <p className="t-h3 font-bold text-sm" style={{ color: "var(--bg-panel)" }}>
+                    <p className="t-h3 font-bold text-sm" style={{ color: "var(--ink-primary)" }}>
                       {g.name}
                     </p>
                     <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>

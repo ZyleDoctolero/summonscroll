@@ -23,7 +23,7 @@ export function EmptyState({ icon, title, body, cta }: EmptyStateProps) {
       {cta && (
         <button
           onClick={cta.onClick}
-          className="mt-2 px-6 py-2 bg-[var(--bg-panel)] text-[var(--bg-stage)] border border-[var(--gold-glow)]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[var(--ink-secondary)] transition-all rounded-md font-medium tracking-wide uppercase text-sm"
+          className="mt-2 px-6 py-2 bg-[var(--bg-panel)] text-[var(--ink-primary)] border border-[var(--gold-glow)]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[rgba(200,154,62,0.08)] transition-all rounded-md font-medium tracking-wide uppercase text-sm"
         >
           {cta.label}
         </button>

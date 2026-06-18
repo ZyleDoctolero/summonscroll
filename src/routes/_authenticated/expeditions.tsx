@@ -152,7 +152,7 @@ function ExpeditionsPage() {
         {/* Active Expeditions Strip */}
         {activeExpeditions.length > 0 && (
           <div className="mb-10">
-            <h2 className="t-h3 mb-4" style={{ color: "var(--bg-panel)" }}>
+            <h2 className="t-h3 mb-4" style={{ color: "var(--ink-primary)" }}>
               Active Dispatches
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -183,7 +183,7 @@ function ExpeditionsPage() {
                         />
                       )}
                       <div>
-                        <h3 className="font-bold text-lg" style={{ color: "var(--bg-panel)" }}>
+                        <h3 className="font-bold text-lg" style={{ color: "var(--ink-primary)" }}>
                           {monster?.name}
                         </h3>
                         <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
@@ -230,14 +230,14 @@ function ExpeditionsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Realm Selection */}
           <div className="lg:col-span-1 flex flex-col gap-4">
-            <h2 className="t-h3" style={{ color: "var(--bg-panel)" }}>
+            <h2 className="t-h3" style={{ color: "var(--ink-primary)" }}>
               Select Realm
             </h2>
             {REALMS.map((r) => (
               <button
                 key={r.id}
                 onClick={() => setSelectedRealm(r)}
-                className={`ss-card p-4 text-left border-l-4 transition-all hover:scale-105 ${selectedRealm.id === r.id ? "shadow-[0_0_20px_rgba(0,0,0,0.5)]" : "opacity-70"}`}
+                className={`ss-card p-4 text-left border-l-4 transition-all hover:scale-105 ${selectedRealm.id === r.id ? "shadow-[0_0_20px_rgba(120,90,50,0.15)]" : "opacity-70"}`}
                 style={{
                   borderLeftColor: r.color,
                   ...(selectedRealm.id === r.id && { borderColor: r.color }),
@@ -255,7 +255,7 @@ function ExpeditionsPage() {
 
           {/* Dispatch Panel */}
           <div className="lg:col-span-2">
-            <h2 className="t-h3 mb-4" style={{ color: "var(--bg-panel)" }}>
+            <h2 className="t-h3 mb-4" style={{ color: "var(--ink-primary)" }}>
               Dispatch Companion
             </h2>
             <div className="ss-card p-6 bg-[var(--bg-stage)]/40 backdrop-blur-md border border-[rgba(61,46,31,0.1)] h-full flex flex-col">
@@ -286,7 +286,7 @@ function ExpeditionsPage() {
                         />
                         <span
                           className="text-[10px] font-bold mt-2 truncate w-full text-center"
-                          style={{ color: "var(--bg-panel)" }}
+                          style={{ color: "var(--ink-primary)" }}
                         >
                           {um.monster.name}
                         </span>

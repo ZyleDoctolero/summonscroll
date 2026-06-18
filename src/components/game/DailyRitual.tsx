@@ -89,8 +89,8 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
                 disabled={!isPicked && picked.length >= 3}
                 className="w-full text-left px-3 py-2 rounded-lg text-sm transition-colors disabled:opacity-40"
                 style={{
-                  background: isPicked ? "rgba(255,213,79,0.13)" : "rgba(255,255,255,0.02)",
-                  border: `1px solid ${isPicked ? "rgba(255,213,79,0.45)" : "rgba(255,255,255,0.06)"}`,
+                  background: isPicked ? "rgba(255,213,79,0.13)" : "rgba(200,154,62,0.02)",
+                  border: `1px solid ${isPicked ? "rgba(255,213,79,0.45)" : "rgba(200,154,62,0.08)"}`,
                   color: "var(--ink-primary)",
                 }}
               >
@@ -113,9 +113,9 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           onClick={onClose}
           className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
           style={{
-            background: "rgba(255,255,255,0.04)",
+            background: "rgba(200,154,62,0.04)",
             color: "var(--ink-secondary)",
-            border: "1px solid rgba(255,255,255,0.06)",
+            border: "1px solid rgba(200,154,62,0.08)",
           }}
         >
           Skip Today
@@ -128,7 +128,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
             background:
               picked.length > 0
                 ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
-                : "rgba(255,255,255,0.05)",
+                : "rgba(200,154,62,0.06)",
             color: picked.length > 0 ? "var(--bg-deep)" : "var(--ink-tertiary)",
             boxShadow: picked.length > 0 ? "0 4px 20px rgba(255,213,79,0.28)" : "none",
           }}
@@ -255,9 +255,9 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
           onClick={onClose}
           className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
           style={{
-            background: "rgba(255,255,255,0.04)",
+            background: "rgba(200,154,62,0.04)",
             color: "var(--ink-secondary)",
-            border: "1px solid rgba(255,255,255,0.06)",
+            border: "1px solid rgba(200,154,62,0.08)",
           }}
         >
           Later
@@ -358,7 +358,7 @@ function Slider({
               background:
                 v <= value
                   ? "linear-gradient(135deg,var(--violet),var(--violet-light))"
-                  : "rgba(255,255,255,0.05)",
+                  : "rgba(200,154,62,0.06)",
               color: v <= value ? "var(--bg-deep)" : "var(--ink-tertiary)",
             }}
           >

@@ -88,20 +88,20 @@ function AltarPage() {
             initial={{ scale: 0, opacity: 0, rotate: -90 }}
             animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 1], rotate: [0, 180, 360] }}
             transition={{ duration: 2.8, ease: "easeInOut" }}
-            className="w-40 h-40 rounded-full border-t-[6px] border-b-[6px] border-cyan-400 border-l-[2px] border-r-[2px] border-l-fuchsia-500 border-r-fuchsia-500 shadow-[0_0_60px_rgba(0,229,255,0.6),inset_0_0_40px_rgba(213,0,249,0.4)]"
+            className="w-40 h-40 rounded-full border-t-[6px] border-b-[6px] border-[#c89a3e] border-l-[2px] border-r-[2px] border-l-[#b8860b] border-r-[#b8860b] shadow-[0_0_60px_rgba(200,154,62,0.4),inset_0_0_40px_rgba(184,134,11,0.3)]"
           />
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "100vh", opacity: [0, 0.5, 0] }}
             transition={{ duration: 1.5, delay: 1, ease: "easeOut" }}
-            className="absolute w-[2px] bg-cyan-300 shadow-[0_0_20px_#00e5ff]"
+            className="absolute w-[2px] bg-[#c89a3e] shadow-[0_0_20px_rgba(200,154,62,0.4)]"
           />
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0, 1, 1] }}
             transition={{ duration: 3, times: [0, 0.2, 0.4, 0.6, 1] }}
-            className="absolute mt-64 text-4xl font-['VT323'] text-cyan-400 tracking-[0.5em] uppercase"
-            style={{ textShadow: "0 0 15px #00e5ff" }}
+            className="absolute mt-64 text-4xl font-['VT323'] text-[#c89a3e] tracking-[0.5em] uppercase"
+            style={{ textShadow: "0 0 15px rgba(200,154,62,0.4)" }}
           >
             Synthesizing
           </motion.h2>
@@ -138,19 +138,19 @@ function AltarPage() {
       <div className="relative w-full h-screen overflow-hidden flex flex-col md:flex-row text-[var(--ink-secondary)]">
         {/* Full Screen Banner Background (Placeholder) */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.15)_0%,rgba(5,10,20,0.9)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(200,154,62,0.08)_0%,rgba(250,246,240,0.95)_100%)]" />
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-color-dodge" />
           {/* A massive magical summoning circle suggestion in the background */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-cyan-500/10 shadow-[inset_0_0_100px_rgba(0,240,255,0.05)] pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-[#c89a3e]/10 shadow-[inset_0_0_100px_rgba(200,154,62,0.03)] pointer-events-none"
           />
         </div>
 
         {/* Left Side: Banner Selection (Vertical Tabs) */}
         <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[var(--gold-bright)]/30 bg-[var(--bg-stage)]/50 backdrop-blur-md">
-          <h1 className="text-4xl font-serif font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-100 to-yellow-600 tracking-widest drop-shadow-[0_0_10px_rgba(212,175,63,0.8)]">
+          <h1 className="text-4xl font-serif font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-[var(--gold-bright)] to-[var(--ink-secondary)] tracking-widest drop-shadow-[0_0_10px_rgba(212,175,63,0.8)]">
             SOUL RESONANCE ARRAY
           </h1>
           <div className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
@@ -162,15 +162,15 @@ function AltarPage() {
                   onClick={() => setSelectedBannerId(b.id)}
                   className={`relative flex items-center justify-start px-6 py-4 rounded-[16px] border-2 transition-all duration-300 overflow-hidden group min-w-[200px] ${
                     isActive
-                      ? "bg-[var(--primary)]/60 border-[var(--gold-bright)] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
-                      : "bg-[var(--bg-stage)]/40 border-[var(--ink-secondary)]/10 hover:border-[var(--gold-bright)]/50 hover:bg-[var(--primary)]/20"
+                      ? "bg-[var(--bg-panel)] border-[var(--gold-bright)] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
+                      : "bg-[var(--bg-stage)]/40 border-[var(--ink-secondary)]/10 hover:border-[var(--gold-bright)]/50 hover:bg-[rgba(200,154,62,0.08)]"
                   }`}
                 >
                   {isActive && (
                     <div className="absolute left-0 top-0 bottom-0 w-2 bg-[var(--gold-bright)] shadow-[0_0_15px_#d4af3f]" />
                   )}
                   <span
-                    className={`font-serif font-bold tracking-widest uppercase text-sm ${isActive ? "text-[var(--gold-bright)]" : "text-slate-400 group-hover:text-yellow-100"}`}
+                    className={`font-serif font-bold tracking-widest uppercase text-sm ${isActive ? "text-[var(--gold-bright)]" : "text-[var(--ink-tertiary)] group-hover:text-[var(--gold-bright)]"}`}
                   >
                     {b.name}
                   </span>
@@ -208,10 +208,10 @@ function AltarPage() {
                     <div className="text-[8rem] leading-none opacity-5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif font-bold text-[var(--ink-secondary)] mix-blend-overlay blur-sm">
                       {selectedBanner.realms?.icon ?? "✦"}
                     </div>
-                    <h2 className="text-5xl md:text-7xl font-serif font-bold italic tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                    <h2 className="text-5xl md:text-7xl font-serif font-bold italic tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#3d2e1e] to-[#8b7355] drop-shadow-[0_0_30px_rgba(200,154,62,0.2)]">
                       {selectedBanner.name}
                     </h2>
-                    <p className="text-xl md:text-2xl mt-4 text-cyan-400 tracking-[0.2em] font-serif">
+                    <p className="text-xl md:text-2xl mt-4 text-[#c89a3e] tracking-[0.2em] font-serif">
                       {selectedBanner.realms?.name ?? "ALL REALMS ALLOWED"}
                     </p>
                   </motion.div>
@@ -221,7 +221,7 @@ function AltarPage() {
                 <div className="relative w-full max-w-4xl mx-auto flex flex-col items-end gap-6 mt-auto">
                   {/* Currency Display */}
                   <div className="bg-[var(--bg-stage)]/60 backdrop-blur-md border border-[var(--ink-secondary)]/10 px-6 py-3 rounded-xl flex items-center gap-3">
-                    <span className="text-xs text-slate-400 uppercase tracking-widest font-bold">
+                    <span className="text-xs text-[var(--ink-tertiary)] uppercase tracking-widest font-bold">
                       Resonance Balance
                     </span>
                     <div
@@ -242,14 +242,14 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
                       disabled={!canPull1 || pullMut.isPending}
-                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[var(--gold-bright)]/60 bg-slate-900"
+                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[var(--gold-glow)]/40 hover:border-[var(--gold-bright)]/60 bg-[var(--bg-panel)] shadow-[0_2px_12px_rgba(200,154,62,0.1)]"
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
-                        <span className="text-slate-300 group-hover:text-yellow-100 text-lg transition-colors">
+                        <span className="text-[var(--ink-secondary)] group-hover:text-[var(--gold-bright)] text-lg transition-colors">
                           PULL ×1
                         </span>
-                        <div className="flex items-center gap-1.5 text-slate-400 text-sm mt-1">
+                        <div className="flex items-center gap-1.5 text-[var(--ink-tertiary)] text-sm mt-1">
                           <Icon
                             name={icon as React.ComponentProps<typeof Icon>["name"]}
                             size={14}

@@ -134,7 +134,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
               {classIcon}
             </span>
             <span
-              className="text-[10px] uppercase tracking-wider group-hover:text-white transition-colors"
+              className="text-[10px] uppercase tracking-wider group-hover:text-[var(--ink-primary)] transition-colors"
               style={{ color: "var(--ink-tertiary)" }}
             >
               LVL
@@ -297,7 +297,7 @@ function MiniBar({
       </div>
       <div
         className="h-2 rounded-full overflow-hidden relative"
-        style={{ background: "rgba(255,255,255,0.06)" }}
+        style={{ background: "rgba(180,150,100,0.12)" }}
       >
         <motion.div
           className="h-full rounded-full relative overflow-hidden"

@@ -305,7 +305,7 @@ function ProfilePage() {
                 <div className="flex justify-between items-center mb-2">
                   <h2
                     className="t-h2 text-lg font-bold flex items-center gap-2"
-                    style={{ color: "var(--bg-panel)" }}
+                    style={{ color: "var(--ink-primary)" }}
                   >
                     <Icon
                       name="sparkle"
@@ -376,7 +376,7 @@ function ProfilePage() {
                             alt={equippedMonster.monster.name}
                             className="w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] my-2"
                           />
-                          <p className="text-sm font-bold" style={{ color: "var(--bg-panel)" }}>
+                          <p className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
                             {equippedMonster.monster.name}
                           </p>
                           <p className="text-[10px] mb-3" style={{ color: "var(--ink-secondary)" }}>
@@ -478,7 +478,7 @@ function ProfilePage() {
                     </div>
                     <p
                       className="text-xs font-bold"
-                      style={{ color: a.unlocked ? "var(--bg-panel)" : "var(--ink-secondary)" }}
+                      style={{ color: a.unlocked ? "var(--ink-primary)" : "var(--ink-secondary)" }}
                     >
                       {a.name}
                     </p>
@@ -542,7 +542,7 @@ function ProfilePage() {
                             className="lucide-glow"
                           />
                         </div>
-                        <p className="text-xs font-bold" style={{ color: "var(--bg-panel)" }}>
+                        <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
                           {inv.item_name}
                         </p>
                         <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
@@ -559,7 +559,7 @@ function ProfilePage() {
                 <div>
                   <h3
                     className="t-h2 text-lg font-bold mt-6 mb-3"
-                    style={{ color: "var(--bg-panel)" }}
+                    style={{ color: "var(--ink-primary)" }}
                   >
                     Pets &amp; Mounts
                   </h3>
@@ -580,7 +580,7 @@ function ProfilePage() {
                               className="lucide-glow"
                             />
                           </div>
-                          <p className="text-xs font-bold" style={{ color: "var(--bg-panel)" }}>
+                          <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
                             {pet.pet_name}
                           </p>
                           <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
@@ -602,7 +602,7 @@ function ProfilePage() {
               <div className="ss-card">
                 <h3
                   className="t-h2 font-bold text-lg mb-3 flex items-center gap-2"
-                  style={{ color: "var(--bg-panel)" }}
+                  style={{ color: "var(--ink-primary)" }}
                 >
                   Talents
                 </h3>
@@ -645,7 +645,7 @@ function ProfilePage() {
                         className="flex justify-between items-center p-3 rounded-lg ss-pane border border-[var(--ink-secondary)]/5"
                       >
                         <div>
-                          <div className="font-bold text-sm text-[var(--bg-panel)]">
+                          <div className="font-bold text-sm text-[var(--ink-primary)]">
                             {t.name}{" "}
                             <span className="text-xs font-normal text-[var(--ink-secondary)]">
                               ({currentRank}/{t.max})
@@ -674,7 +674,7 @@ function ProfilePage() {
               </div>
 
               <div className="ss-card">
-                <h2 className="text-lg font-bold mb-4" style={{ color: "var(--bg-panel)" }}>
+                <h2 className="text-lg font-bold mb-4" style={{ color: "var(--ink-primary)" }}>
                   Class Details
                 </h2>
                 <p className="text-sm mb-2" style={{ color: "var(--ink-secondary)" }}>

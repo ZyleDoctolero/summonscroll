@@ -46,7 +46,7 @@ export function QuestBoardModal({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-[rgba(61,46,31,0.5)] backdrop-blur-sm"
             onClick={onClose}
           />
           <motion.div
@@ -54,10 +54,10 @@ export function QuestBoardModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-5xl max-h-[85vh] bg-[#0a0512] border-2 border-[#d4af3f]/30 rounded-xl shadow-[0_0_50px_rgba(10,5,18,0.9),inset_0_0_30px_rgba(212,175,63,0.1)] flex flex-col overflow-hidden"
+            className="relative w-full max-w-5xl max-h-[85vh] bg-[rgba(255,252,247,0.96)] border-2 border-[#c89a3e]/30 rounded-xl shadow-[0_8px_40px_rgba(120,90,50,0.15)] flex flex-col overflow-hidden"
           >
             {/* Modal Header */}
-            <div className="p-4 md:p-6 border-b border-[#d4af3f]/20 flex justify-between items-center bg-gradient-to-r from-[#1a0f2e] to-transparent">
+            <div className="p-4 md:p-6 border-b border-[#c89a3e]/20 flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.08)] to-transparent">
               <h2
                 className="t-h2 text-2xl"
                 style={{
@@ -76,7 +76,7 @@ export function QuestBoardModal({
                 </button>
                 <button
                   onClick={onClose}
-                  className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                  className="p-2 hover:bg-[rgba(200,154,62,0.1)] rounded-full transition-colors"
                 >
                   <Icon name="close" size={24} color="var(--ink-secondary)" />
                 </button>
@@ -87,13 +87,13 @@ export function QuestBoardModal({
             <div className="flex-1 overflow-y-auto p-4 md:p-6 custom-scrollbar">
               <div
                 className="flex gap-6 mb-6 border-b-2"
-                style={{ borderColor: "rgba(212,175,63,0.3)" }}
+                style={{ borderColor: "rgba(200,154,62,0.25)" }}
               >
                 {(["habit", "daily", "todo"] as const).map((t) => (
                   <button
                     key={t}
                     onClick={() => setTab(t)}
-                    className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active text-[#fcd34d]" : "text-[#b09e80] hover:text-[#d4af3f]"}`}
+                    className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active text-[#b8860b]" : "text-[#8b7355] hover:text-[#c89a3e]"}`}
                   >
                     {t === "habit" ? "Habits" : t === "daily" ? "Dailies" : "To-Dos"}
                   </button>

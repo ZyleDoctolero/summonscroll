@@ -19,7 +19,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-[var(--gold-glow)]/50 bg-[var(--bg-panel)] px-3 py-2 text-sm text-[var(--bg-stage)] shadow-inner transition-all duration-300 ring-offset-[var(--bg-panel)] cursor-pointer data-[placeholder]:text-[var(--gold-glow)]/50 focus:outline-none focus:ring-1 focus:ring-[var(--gold-glow)] focus:border-[var(--gold-glow)] focus:shadow-md hover:border-[var(--gold-glow)] hover:bg-[var(--ink-secondary)] disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      "flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-[var(--gold-glow)]/50 bg-[var(--bg-panel)] px-3 py-2 text-sm text-[var(--ink-primary)] shadow-inner transition-all duration-300 ring-offset-[var(--bg-panel)] cursor-pointer data-[placeholder]:text-[var(--gold-glow)]/50 focus:outline-none focus:ring-1 focus:ring-[var(--gold-glow)] focus:border-[var(--gold-glow)] focus:shadow-md hover:border-[var(--gold-glow)]/80 hover:bg-[rgba(200,154,62,0.04)] disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
       className,
     )}
     {...props}
@@ -111,7 +111,7 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none transition-colors focus:bg-[#e0d4b8] focus:text-[var(--danger)] data-[disabled]:pointer-events-none data-[disabled]:opacity-50 hover:bg-[#e0d4b8]",
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none transition-colors focus:bg-[var(--bg-pane)] focus:text-[var(--ink-primary)] data-[disabled]:pointer-events-none data-[disabled]:opacity-50 hover:bg-[var(--bg-pane)]",
       className,
     )}
     {...props}

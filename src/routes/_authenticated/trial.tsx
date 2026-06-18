@@ -162,7 +162,7 @@ function TrialPage() {
                       </div>
                       <p
                         className="text-[10px] font-bold truncate"
-                        style={{ color: "var(--bg-panel)" }}
+                        style={{ color: "var(--ink-primary)" }}
                       >
                         {um.monster.name}
                       </p>
@@ -202,7 +202,7 @@ function TrialPage() {
               className="ss-btn w-full disabled:opacity-40"
               style={{
                 background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
-                color: "var(--bg-panel)",
+                color: "#faf6f0",
                 boxShadow: "0 0 24px rgba(255,94,94,0.4)",
               }}
             >
@@ -247,7 +247,7 @@ function TrialPage() {
                     </div>
                     <p
                       className="text-[10px] font-bold truncate"
-                      style={{ color: "var(--bg-panel)" }}
+                      style={{ color: "var(--ink-primary)" }}
                     >
                       {um.monster.name}
                     </p>
@@ -295,7 +295,7 @@ function TrialPage() {
               className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
               style={{
                 background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
-                color: "var(--bg-panel)",
+                color: "#faf6f0",
                 boxShadow: "0 4px 20px rgba(255,94,94,0.35)",
               }}
             >
@@ -372,7 +372,7 @@ function TrialPage() {
                         delay: stagger(results.fallen.length, 0.12, 0.1)[i],
                       }}
                       className="text-sm flex items-center gap-1.5"
-                      style={{ color: "var(--bg-panel)" }}
+                      style={{ color: "var(--ink-primary)" }}
                     >
                       <Icon name="death" size={13} color="var(--danger)" />
                       <span>

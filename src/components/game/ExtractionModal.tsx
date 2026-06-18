@@ -61,7 +61,7 @@ export function ExtractionModal({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
-          style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(4px)" }}
+          style={{ background: "rgba(61,46,31,0.7)", backdropFilter: "blur(4px)" }}
         >
           <motion.div
             initial={{ scale: 0.9, y: 20 }}
@@ -109,7 +109,7 @@ export function ExtractionModal({
                         setIsError(false);
                       }}
                       placeholder="Type your command..."
-                      className={`text-center font-mono text-xl tracking-widest bg-black/50 text-white placeholder:text-white/20 ${
+                      className={`text-center font-mono text-xl tracking-widest bg-white/50 text-[var(--ink-primary)] placeholder:text-[#8b7355]/40 border-[#c89a3e]/30 ${
                         isError
                           ? "border-red-500 text-red-400 focus-visible:ring-red-500"
                           : "focus-visible:ring-cyan-500"

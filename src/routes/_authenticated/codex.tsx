@@ -343,7 +343,7 @@ function AwakeningLog({
             <p className="text-sm font-bold" style={{ color: "var(--gold-bright)" }}>
               {e.skill_name}
             </p>
-            <p className="text-xs" style={{ color: "var(--bg-panel)" }}>
+            <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
               {e.user_monster?.monster?.name ?? "Unknown"}
             </p>
             <p className="text-[10px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
@@ -381,7 +381,7 @@ function Block({ label, body }: { label: string; body: string }) {
       >
         {label}
       </div>
-      <p className="text-sm" style={{ color: "var(--bg-panel)" }}>
+      <p className="text-sm" style={{ color: "var(--ink-primary)" }}>
         {body}
       </p>
     </div>

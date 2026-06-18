@@ -46,7 +46,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-6"
-      style={{ background: "rgba(0,0,0,0.92)", backdropFilter: "blur(4px)" }}
+      style={{ background: "rgba(61,46,31,0.88)", backdropFilter: "blur(4px)" }}
     >
       <AnimatePresence mode="wait">
         <motion.div

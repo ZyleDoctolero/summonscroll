@@ -120,7 +120,7 @@ function AlchemyPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Recipe List */}
           <div className="flex flex-col gap-4">
-            <h2 className="t-h3" style={{ color: "var(--bg-panel)" }}>
+            <h2 className="t-h3" style={{ color: "var(--ink-primary)" }}>
               Branching Paths
             </h2>
             {ALCHEMY_RECIPES.map((r) => (
@@ -137,7 +137,7 @@ function AlchemyPage() {
                 }}
               >
                 <div className="flex justify-between items-start mb-1">
-                  <h3 className="font-bold text-lg" style={{ color: "var(--bg-panel)" }}>
+                  <h3 className="font-bold text-lg" style={{ color: "var(--ink-primary)" }}>
                     {r.result}
                   </h3>
                   <span
@@ -258,7 +258,7 @@ function AlchemyPage() {
               style={{
                 background: `linear-gradient(135deg, ${selectedRecipe.color}40, transparent)`,
                 border: `2px solid ${selectedRecipe.color}`,
-                color: "var(--bg-panel)",
+                color: "var(--ink-primary)",
                 boxShadow: `0 0 20px ${selectedRecipe.color}40`,
               }}
             >
@@ -269,7 +269,7 @@ function AlchemyPage() {
 
         {/* Compatible Monsters Drawer */}
         <div className="mt-8 ss-card p-6 border-t-4" style={{ borderColor: selectedRecipe.color }}>
-          <h3 className="t-h3 mb-4" style={{ color: "var(--bg-panel)" }}>
+          <h3 className="t-h3 mb-4" style={{ color: "var(--ink-primary)" }}>
             Available Bases
           </h3>
           {compatibleMonsters.length === 0 ? (
@@ -307,7 +307,7 @@ function AlchemyPage() {
                     />
                     <span
                       className="text-[10px] font-bold truncate w-full text-center"
-                      style={{ color: "var(--bg-panel)" }}
+                      style={{ color: "var(--ink-primary)" }}
                     >
                       {um.monster.name}
                     </span>

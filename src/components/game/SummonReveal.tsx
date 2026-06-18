@@ -149,7 +149,7 @@ export function SummonReveal({
       />
 
       {config.voidRift && (
-        <div className="absolute inset-0 z-0 bg-black mix-blend-multiply opacity-50 animate-pulse" />
+        <div className="absolute inset-0 z-0 bg-[#3d2e1e] mix-blend-multiply opacity-30 animate-pulse" />
       )}
 
       <AnimatePresence mode="wait">

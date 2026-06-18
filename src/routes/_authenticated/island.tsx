@@ -282,7 +282,7 @@ function IslandPage() {
           {/* Team slots */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-3">
-              <h2 className="t-h3 text-lg font-bold" style={{ color: "var(--bg-panel)" }}>
+              <h2 className="t-h3 text-lg font-bold" style={{ color: "var(--ink-primary)" }}>
                 Your Team
               </h2>
               <div className="flex items-center gap-4">
@@ -307,7 +307,7 @@ function IslandPage() {
           </div>
 
           {/* Monster roster */}
-          <h2 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
+          <h2 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
             Contracted Spirits ({roster.length})
           </h2>
           {roster.length === 0 ? (

@@ -204,7 +204,7 @@ function QuestsPage() {
                       >
                         <p
                           className="text-xs font-bold"
-                          style={{ color: type === k ? def.color : "var(--bg-panel)" }}
+                          style={{ color: type === k ? def.color : "var(--ink-secondary)" }}
                         >
                           {def.label}
                         </p>
@@ -254,7 +254,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
               </span>
             )}
           </div>
-          <h3 className="text-base font-bold" style={{ color: "var(--bg-panel)" }}>
+          <h3 className="text-base font-bold" style={{ color: "var(--ink-primary)" }}>
             {goal.title}
           </h3>
         </div>
