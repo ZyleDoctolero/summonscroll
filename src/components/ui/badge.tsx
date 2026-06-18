@@ -4,17 +4,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider transition-all focus:outline-none focus:ring-2 focus:ring-[#b8973c] focus:ring-offset-2",
+  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider transition-all focus:outline-none focus:ring-2 focus:ring-[var(--gold-glow)] focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          "border-[#b8973c]/50 bg-[#2a1e12] text-[#f4ecd8] shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[#3d2e1f]",
+          "border-[var(--gold-glow)]/50 bg-[var(--bg-panel)] text-[var(--bg-stage)] shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[var(--ink-secondary)]",
         secondary:
-          "border-amber-500/50 bg-[#2a1e12] text-amber-400 shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[#3d2e1f]",
+          "border-amber-500/50 bg-[var(--bg-panel)] text-amber-400 shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[var(--ink-secondary)]",
         destructive:
-          "border-red-500/50 bg-[#2a1e12] text-[#8b0000] shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[#3d2e1f]",
-        outline: "text-[#1a1a1a] border-[#b8973c]/50 hover:bg-[#2a1e12] hover:text-[#f4ecd8] hover:border-[#b8973c]/80",
+          "border-red-500/50 bg-[var(--bg-panel)] text-[var(--danger)] shadow-lg shadow-black/40 hover:shadow-lg hover:bg-[var(--ink-secondary)]",
+        outline: "text-[var(--ink-primary)] border-[var(--gold-glow)]/50 hover:bg-[var(--bg-panel)] hover:text-[var(--bg-stage)] hover:border-[var(--gold-glow)]/80",
       },
     },
     defaultVariants: {

@@ -97,10 +97,10 @@ function GuildPage() {
     <AppShell profile={profile}>
       <AtmosphereBackdrop realm="iron" />
       <div className="p-6 md:p-10 max-w-6xl">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "#b89047" }}>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Guild
         </h1>
-        <p className="text-sm mb-6" style={{ color: "#3d2e1f" }}>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
           {myGuild ? `Member of ${myGuild.name}` : "Join a guild to fight bosses cooperatively!"}
         </p>
 
@@ -140,13 +140,13 @@ function GuildPage() {
           <div className="space-y-6">
             {/* Guild info */}
             <div className="ss-card">
-              <h2 className="t-h2 text-xl font-bold mb-1" style={{ color: "#b89047" }}>
+              <h2 className="t-h2 text-xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
                 {myGuild.name}
               </h2>
-              <p className="text-sm mb-3" style={{ color: "#3d2e1f" }}>
+              <p className="text-sm mb-3" style={{ color: "var(--ink-secondary)" }}>
                 {myGuild.description || "No description."}
               </p>
-              <div className="flex gap-4 text-xs" style={{ color: "#3d2e1f" }}>
+              <div className="flex gap-4 text-xs" style={{ color: "var(--ink-secondary)" }}>
                 <span>Level {myGuild.level}</span>
                 <span>{members.length} members</span>
                 <span>Privacy: {myGuild.privacy}</span>
@@ -156,14 +156,14 @@ function GuildPage() {
             {/* Active Quest */}
             {activeQuest ? (
               <div className="ss-card" style={{ borderColor: "rgba(255,213,79,0.2)" }}>
-                <h3 className="t-h3 text-lg font-bold mb-2" style={{ color: "#b89047" }}>
+                <h3 className="t-h3 text-lg font-bold mb-2" style={{ color: "var(--gold-bright)" }}>
                   Active Quest: {activeQuest.quest_template?.name}
                 </h3>
                 {activeQuest.boss_hp_remaining != null && (
                   <div className="mb-3">
                     <div
                       className="flex justify-between text-xs mb-1"
-                      style={{ color: "#3d2e1f" }}
+                      style={{ color: "var(--ink-secondary)" }}
                     >
                       <span>Boss HP</span>
                       <span className="font-serif">
@@ -185,14 +185,14 @@ function GuildPage() {
                     </div>
                   </div>
                 )}
-                <p className="text-xs" style={{ color: "#3d2e1f" }}>
+                <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
                   Complete your tasks to deal damage to the boss! Missing dailies lets the boss
                   attack your party.
                 </p>
               </div>
             ) : (
               <div className="ss-card">
-                <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "#2a1e12" }}>
+                <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
                   Start a Quest
                 </h3>
                 <div className="space-y-2">
@@ -216,11 +216,11 @@ function GuildPage() {
                           <div>
                             <p
                               className="text-sm font-bold"
-                              style={{ color: "#2a1e12" }}
+                              style={{ color: "var(--bg-panel)" }}
                             >
                               {t.name}
                             </p>
-                            <p className="text-xs" style={{ color: "#3d2e1f" }}>
+                            <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
                               {t.quest_type === "boss"
                                 ? `Boss · HP ${t.boss_hp?.toLocaleString()}`
                                 : "Collection"}{" "}
@@ -259,7 +259,7 @@ function GuildPage() {
 
             {/* Members */}
             <div className="ss-card">
-              <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "#2a1e12" }}>
+              <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
                 Members
               </h3>
               <div className="space-y-2">
@@ -276,19 +276,19 @@ function GuildPage() {
                       <div className="flex-1">
                         <p
                           className="text-sm font-semibold flex items-center gap-1.5"
-                          style={{ color: "#2a1e12" }}
+                          style={{ color: "var(--bg-panel)" }}
                         >
                           {m.role === "leader" && (
                             <Icon
                               name="crown"
                               size={13}
-                              color="#b89047"
+                              color="var(--gold-bright)"
                               className="lucide-glow"
                             />
                           )}
                           <span>{m.profile.display_name}</span>
                         </p>
-                        <p className="text-xs" style={{ color: "#3d2e1f" }}>
+                        <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
                           Lvl {m.profile.level} · {m.profile.class || "No class"}
                         </p>
                       </div>
@@ -297,7 +297,7 @@ function GuildPage() {
                         style={{
                           background:
                             m.role === "leader" ? "rgba(255,213,79,0.2)" : "rgba(255,255,255,0.05)",
-                          color: m.role === "leader" ? "#b89047" : "#3d2e1f",
+                          color: m.role === "leader" ? "var(--gold-bright)" : "var(--ink-secondary)",
                         }}
                       >
                         {m.role}
@@ -330,10 +330,10 @@ function GuildPage() {
               }) => (
                 <div key={g.id} className="ss-card flex items-center justify-between">
                   <div>
-                    <p className="t-h3 font-bold text-sm" style={{ color: "#2a1e12" }}>
+                    <p className="t-h3 font-bold text-sm" style={{ color: "var(--bg-panel)" }}>
                       {g.name}
                     </p>
-                    <p className="text-xs" style={{ color: "#3d2e1f" }}>
+                    <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
                       Lvl {g.level} · {g.guild_members?.[0]?.count ?? "?"} members · {g.privacy}
                     </p>
                   </div>
@@ -360,10 +360,10 @@ function GuildPage() {
         {/* Create */}
         {tab === "create" && (
           <div className="ss-card max-w-md">
-            <h2 className="t-h2 text-lg font-bold mb-4" style={{ color: "#b89047" }}>
+            <h2 className="t-h2 text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
               Create Guild
             </h2>
-            <p className="text-xs mb-4" style={{ color: "#3d2e1f" }}>
+            <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>
               Costs 500 Crystals
             </p>
             <div className="space-y-3">

@@ -77,6 +77,7 @@ export const TaskCard = React.memo(function TaskCard({
   const color = VALUE_COLOR_HEX[valueColor(Number(task.value))];
   const [open, setOpen] = useState(false);
   const [floatingTexts, setFloatingTexts] = useState<FloatingTextItem[]>([]);
+  const [justCompleted, setJustCompleted] = useState(false);
 
   const categoryIcon = task.category
     ? (CATEGORY_ICONS[task.category.toLowerCase()] ?? "target")
@@ -85,6 +86,8 @@ export const TaskCard = React.memo(function TaskCard({
   const handleScore = useCallback(
     (dir: "plus" | "minus" | "complete" | "uncomplete") => {
       if (dir === "plus" || dir === "complete") {
+        setJustCompleted(true);
+        setTimeout(() => setJustCompleted(false), 800);
         setFloatingTexts((prev) => [
           ...prev,
           {
@@ -130,7 +133,11 @@ export const TaskCard = React.memo(function TaskCard({
         borderRadius: "12px",
         opacity: task.completed && task.type !== "habit" ? 0.55 : 1,
         boxShadow: task.is_starred ? "0 0 18px rgba(212,175,63,0.4)" : undefined,
-        animation: isTutorial ? "tutorial-pulse 2s ease-in-out infinite" : undefined,
+        animation: isTutorial 
+          ? "tutorial-pulse 2s ease-in-out infinite" 
+          : justCompleted 
+            ? "task-complete-flash 0.8s ease-out forwards" 
+            : undefined,
       }}
       /* eslint-enable no-restricted-syntax */
     >

@@ -57,12 +57,12 @@ function AkashicRecordsPage() {
         <header className="text-center space-y-2">
           <h1
             className="text-4xl font-serif font-bold tracking-widest font-display uppercase"
-            style={{ color: "#b89047", textShadow: "0 0 30px rgba(0,240,255,0.4)" }}
+            style={{ color: "var(--gold-bright)", textShadow: "0 0 30px rgba(0,240,255,0.4)" }}
           >
             Akashic Records
           </h1>
           <p
-            style={{ color: "#3d2e1f" }}
+            style={{ color: "var(--ink-secondary)" }}
             className="text-sm tracking-widest font-serif"
           >
             VIEW THE ASCENSION LINEAGE OF YOUR SOULS
@@ -73,23 +73,23 @@ function AkashicRecordsPage() {
           <>
             <p
               className="text-center text-xs tracking-widest uppercase font-bold"
-              style={{ color: "#b89047", textShadow: "0 0 10px rgba(0, 240, 255, 0.5)" }}
+              style={{ color: "var(--gold-bright)", textShadow: "0 0 10px rgba(0, 240, 255, 0.5)" }}
             >
               Select a soul to view its evolution milestones and future paths.
             </p>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-8">
               {monsters.map((m) => {
                 const rarity = (m.monster?.rarity || "common") as Rarity;
-                const rarityColor = RARITY_COLOR[rarity] || "#3d2e1f";
+                const rarityColor = RARITY_COLOR[rarity] || "var(--ink-secondary)";
                 const currentStar = m.current_star ?? m.star_level ?? 1;
 
                 return (
                   <button
                     key={m.id}
                     onClick={() => setSelectedTarget(m.id)}
-                    className={`system-panel p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity} bg-[#f4ecd8]/80 border border-cyan-900/30 hover:border-cyan-400/80 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]`}
+                    className={`system-panel p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity} bg-[var(--bg-stage)]/80 border border-cyan-900/30 hover:border-cyan-400/80 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]`}
                   >
-                    <div className="w-14 h-14 mx-auto mb-2 rounded-lg overflow-hidden ss-pane flex items-center justify-center border border-[#3d2e1f]/5 group-hover:border-cyan-400/50 transition-colors">
+                    <div className="w-14 h-14 mx-auto mb-2 rounded-lg overflow-hidden ss-pane flex items-center justify-center border border-[var(--ink-secondary)]/5 group-hover:border-cyan-400/50 transition-colors">
                       <img
                         src={
                           m.monster?.art_url
@@ -109,7 +109,7 @@ function AkashicRecordsPage() {
                     <div
                       className="text-xs truncate mt-1"
                       title={m.monster?.name}
-                      style={{ color: "#2a1e12" }}
+                      style={{ color: "var(--bg-panel)" }}
                     >
                       {m.monster?.name}
                     </div>
@@ -129,7 +129,7 @@ function AkashicRecordsPage() {
             <button
               onClick={() => setSelectedTarget(null)}
               className="mb-6 flex items-center gap-1 hover:gap-2 transition-all text-sm font-serif uppercase tracking-widest"
-              style={{ color: "#3d2e1f" }}
+              style={{ color: "var(--ink-secondary)" }}
             >
               <ChevronLeft className="w-4 h-4" />
               Return to Archives

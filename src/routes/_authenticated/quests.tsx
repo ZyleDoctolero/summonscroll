@@ -23,8 +23,8 @@ export const Route = createFileRoute("/_authenticated/quests")({
 
 const TYPE_LABELS: Record<GoalType, { label: string; days: number; hp: number; color: string }> = {
   quarterly: { label: "Quarterly Boss", days: 90, hp: 10000, color: "var(--danger)" },
-  monthly: { label: "Monthly Quest", days: 30, hp: 3500, color: "#b89047" },
-  weekly: { label: "Weekly Trial", days: 7, hp: 800, color: "#b89047" },
+  monthly: { label: "Monthly Quest", days: 30, hp: 3500, color: "var(--gold-bright)" },
+  weekly: { label: "Weekly Trial", days: 7, hp: 800, color: "var(--gold-bright)" },
 };
 
 function QuestsPage() {
@@ -68,10 +68,10 @@ function QuestsPage() {
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="wild" />
       <div className="p-6 md:p-10 max-w-6xl">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "#b89047" }}>
+        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Quests
         </h1>
-        <p className="text-sm mb-6" style={{ color: "#3d2e1f" }}>
+        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
           A goal is a boss. Each task you finish drains its HP. Slay one → mint a Tome of Reverse
           Heaven.
         </p>
@@ -134,18 +134,18 @@ function QuestsPage() {
                     <div>
                       <p
                         className="font-bold flex items-center gap-1.5"
-                        style={{ color: "#b89047" }}
+                        style={{ color: "var(--gold-bright)" }}
                       >
-                        <Icon name="crown" size={14} color="#b89047" />
+                        <Icon name="crown" size={14} color="var(--gold-bright)" />
                         <span>{g.title}</span>
                       </p>
-                      <p className="text-xs mt-1" style={{ color: "#3d2e1f" }}>
+                      <p className="text-xs mt-1" style={{ color: "var(--ink-secondary)" }}>
                         {TYPE_LABELS[g.type].label} · slain{" "}
                         {g.slain_at ? new Date(g.slain_at).toLocaleDateString() : "—"}
                       </p>
                     </div>
                     <span className="ss-chip ss-chip-gold flex items-center gap-1">
-                      <Icon name="tome" size={11} color="#b89047" />
+                      <Icon name="tome" size={11} color="var(--gold-bright)" />
                       <span>+1 Tome</span>
                     </span>
                   </div>
@@ -158,7 +158,7 @@ function QuestsPage() {
         {/* Forge */}
         {tab === "forge" && (
           <div className="game-panel p-5 max-w-lg">
-            <h2 className="text-lg font-bold mb-4" style={{ color: "#b89047" }}>
+            <h2 className="text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
               Forge a Quest
             </h2>
             <div className="space-y-4">
@@ -185,7 +185,7 @@ function QuestsPage() {
               <div>
                 <p
                   className="text-[10px] uppercase tracking-widest mb-2 font-semibold"
-                  style={{ color: "#3d2e1f" }}
+                  style={{ color: "var(--ink-secondary)" }}
                 >
                   Cadence
                 </p>
@@ -204,11 +204,11 @@ function QuestsPage() {
                       >
                         <p
                           className="text-xs font-bold"
-                          style={{ color: type === k ? def.color : "#2a1e12" }}
+                          style={{ color: type === k ? def.color : "var(--bg-panel)" }}
                         >
                           {def.label}
                         </p>
-                        <p className="text-[10px] mt-0.5" style={{ color: "#3d2e1f" }}>
+                        <p className="text-[10px] mt-0.5" style={{ color: "var(--ink-secondary)" }}>
                           {def.hp.toLocaleString()} HP · {def.days}d
                         </p>
                       </button>
@@ -248,13 +248,13 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
             {goal.identity && (
               <span
                 className="text-[10px] uppercase tracking-widest"
-                style={{ color: "#3d2e1f" }}
+                style={{ color: "var(--ink-secondary)" }}
               >
                 · {goal.identity}
               </span>
             )}
           </div>
-          <h3 className="text-base font-bold" style={{ color: "#2a1e12" }}>
+          <h3 className="text-base font-bold" style={{ color: "var(--bg-panel)" }}>
             {goal.title}
           </h3>
         </div>
@@ -263,7 +263,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
         </button>
       </div>
 
-      <div className="flex justify-between text-xs mb-1" style={{ color: "#3d2e1f" }}>
+      <div className="flex justify-between text-xs mb-1" style={{ color: "var(--ink-secondary)" }}>
         <span>Boss HP</span>
         <span className="font-serif" style={{ color: def.color }}>
           {goal.hp_remaining.toLocaleString()} / {goal.hp_total.toLocaleString()}
@@ -282,7 +282,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
           }}
         />
       </div>
-      <p className="text-[10px] mt-2" style={{ color: "#3d2e1f" }}>
+      <p className="text-[10px] mt-2" style={{ color: "var(--ink-secondary)" }}>
         {daysLeft} day{daysLeft === 1 ? "" : "s"} left · Link tasks via Task Edit dialog to drain
         HP.
       </p>
@@ -295,7 +295,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
     <label className="block">
       <div
         className="text-[10px] uppercase tracking-widest mb-1 font-semibold"
-        style={{ color: "#3d2e1f" }}
+        style={{ color: "var(--ink-secondary)" }}
       >
         {label}
       </div>

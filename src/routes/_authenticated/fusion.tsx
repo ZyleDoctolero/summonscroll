@@ -88,11 +88,11 @@ function FusionPage() {
       <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen flex flex-col items-center">
         <h1
           className="t-h1 text-4xl font-serif font-bold mb-2 tracking-widest uppercase font-display"
-          style={{ color: "#b89047", textShadow: "0 0 20px rgba(212,175,63,0.3)" }}
+          style={{ color: "var(--gold-bright)", textShadow: "0 0 20px rgba(212,175,63,0.3)" }}
         >
           Fusion Matrix
         </h1>
-        <p className="text-sm mb-12 max-w-lg text-center" style={{ color: "#3d2e1f" }}>
+        <p className="text-sm mb-12 max-w-lg text-center" style={{ color: "var(--ink-secondary)" }}>
           Transcend mortal limits. Select a target at max level, then sacrifice{" "}
           {currentStar > 1 ? currentStar : ""} same-star companions to increase its potential.
           Consumed monsters are lost forever.
@@ -102,18 +102,18 @@ function FusionPage() {
         <div className="relative w-full max-w-2xl flex flex-col items-center mb-12">
           {/* Target Slot */}
           <div className="relative z-20 mb-12">
-            <p className="text-center t-label mb-3" style={{ color: "#b89047" }}>
+            <p className="text-center t-label mb-3" style={{ color: "var(--gold-bright)" }}>
               TARGET VESSEL
             </p>
             {targetMonster ? (
               <div
                 className="ss-card text-center w-40 p-4 relative cursor-pointer hover:scale-105 transition-transform"
-                style={{ borderColor: "#b89047", boxShadow: "0 0 30px rgba(0,240,255,0.2)" }}
+                style={{ borderColor: "var(--gold-bright)", boxShadow: "0 0 30px rgba(0,240,255,0.2)" }}
                 onClick={() => setSelectingMode("target")}
               >
                 <div
-                  className="absolute -top-3 -right-3 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-[#f4ecd8] border-2"
-                  style={{ borderColor: "#b89047", color: "#b89047" }}
+                  className="absolute -top-3 -right-3 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-[var(--bg-stage)] border-2"
+                  style={{ borderColor: "var(--gold-bright)", color: "var(--gold-bright)" }}
                 >
                   {currentStar}★
                 </div>
@@ -130,7 +130,7 @@ function FusionPage() {
                     }}
                   />
                 </div>
-                <p className="t-label truncate" style={{ color: "#2a1e12" }}>
+                <p className="t-label truncate" style={{ color: "var(--bg-panel)" }}>
                   {targetMonster.monster.name}
                 </p>
                 <p className="text-[10px]" style={{ color: "#8a6d3b" }}>
@@ -140,8 +140,8 @@ function FusionPage() {
             ) : (
               <button
                 onClick={() => setSelectingMode("target")}
-                className="rounded-xl p-4 border-2 border-dashed w-40 h-48 flex flex-col items-center justify-center transition-colors hover:border-[#3d2e1f]/20"
-                style={{ borderColor: "#b89047", color: "#b89047" }}
+                className="rounded-xl p-4 border-2 border-dashed w-40 h-48 flex flex-col items-center justify-center transition-colors hover:border-[var(--ink-secondary)]/20"
+                style={{ borderColor: "var(--gold-bright)", color: "var(--gold-bright)" }}
               >
                 <span className="text-4xl mb-2">+</span>
                 <span className="text-xs font-bold tracking-widest">SELECT TARGET</span>
@@ -188,7 +188,7 @@ function FusionPage() {
                             }}
                           />
                         </div>
-                        <p className="text-[10px] truncate" style={{ color: "#2a1e12" }}>
+                        <p className="text-[10px] truncate" style={{ color: "var(--bg-panel)" }}>
                           {um.monster.name}
                         </p>
                         <button
@@ -198,7 +198,7 @@ function FusionPage() {
                             n[i] = null;
                             setFodderIds(n);
                           }}
-                          className="absolute -top-2 -right-2 bg-red-900 text-red-100 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold border border-red-500 hover:bg-red-500 hover:text-[#3d2e1f]"
+                          className="absolute -top-2 -right-2 bg-red-900 text-red-100 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold border border-red-500 hover:bg-red-500 hover:text-[var(--ink-secondary)]"
                         >
                           ×
                         </button>
@@ -232,7 +232,7 @@ function FusionPage() {
           <div className="flex flex-col items-center mt-8">
             <p
               className="text-xs mb-3 font-serif"
-              style={{ color: hasGold ? "#b89047" : "var(--danger)" }}
+              style={{ color: hasGold ? "var(--gold-bright)" : "var(--danger)" }}
             >
               Synthesis Cost: {cost} Gold
             </p>
@@ -245,7 +245,7 @@ function FusionPage() {
               {synthesizeMut.isPending ? "Synthesizing..." : "Synthesize"}
             </button>
             {!isReady && (
-              <p className="text-[10px] mt-3" style={{ color: "#3d2e1f" }}>
+              <p className="text-[10px] mt-3" style={{ color: "var(--ink-secondary)" }}>
                 Must fill all sacrifice slots to proceed.
               </p>
             )}
@@ -265,7 +265,7 @@ function FusionPage() {
           >
             <h3
               className="t-h3 text-xl font-bold mb-4"
-              style={{ color: selectingMode === "target" ? "#b89047" : "var(--danger)" }}
+              style={{ color: selectingMode === "target" ? "var(--gold-bright)" : "var(--danger)" }}
             >
               {selectingMode === "target"
                 ? "Select Target Vessel"
@@ -307,7 +307,7 @@ function FusionPage() {
                     >
                       <div
                         className="absolute top-1 right-1 text-[9px] font-bold z-10 drop-shadow-md"
-                        style={{ color: "#b89047" }}
+                        style={{ color: "var(--gold-bright)" }}
                       >
                         {umStar}★
                       </div>
@@ -326,11 +326,11 @@ function FusionPage() {
                       </div>
                       <p
                         className="text-[10px] font-bold truncate"
-                        style={{ color: "#2a1e12" }}
+                        style={{ color: "var(--bg-panel)" }}
                       >
                         {um.monster.name}
                       </p>
-                      <p className="text-[9px]" style={{ color: "#3d2e1f" }}>
+                      <p className="text-[9px]" style={{ color: "var(--ink-secondary)" }}>
                         Lvl {um.level}
                       </p>
                     </button>

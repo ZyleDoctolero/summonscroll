@@ -135,7 +135,7 @@ function AltarPage() {
 
   return (
     <AppShell profile={profile}>
-      <div className="relative w-full h-screen overflow-hidden flex flex-col md:flex-row text-[#3d2e1f]">
+      <div className="relative w-full h-screen overflow-hidden flex flex-col md:flex-row text-[var(--ink-secondary)]">
         {/* Full Screen Banner Background (Placeholder) */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.15)_0%,rgba(5,10,20,0.9)_100%)]" />
@@ -149,7 +149,7 @@ function AltarPage() {
         </div>
 
         {/* Left Side: Banner Selection (Vertical Tabs) */}
-        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[#b89047]/30 bg-[#f4ecd8]/50 backdrop-blur-md">
+        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[var(--gold-bright)]/30 bg-[var(--bg-stage)]/50 backdrop-blur-md">
           <h1 className="text-4xl font-serif font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-100 to-yellow-600 tracking-widest drop-shadow-[0_0_10px_rgba(212,175,63,0.8)]">
             SOUL RESONANCE ARRAY
           </h1>
@@ -162,15 +162,15 @@ function AltarPage() {
                   onClick={() => setSelectedBannerId(b.id)}
                   className={`relative flex items-center justify-start px-6 py-4 rounded-[16px] border-2 transition-all duration-300 overflow-hidden group min-w-[200px] ${
                     isActive
-                      ? "bg-[var(--primary)]/60 border-[#b89047] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
-                      : "bg-[#f4ecd8]/40 border-[#3d2e1f]/10 hover:border-[#b89047]/50 hover:bg-[var(--primary)]/20"
+                      ? "bg-[var(--primary)]/60 border-[var(--gold-bright)] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
+                      : "bg-[var(--bg-stage)]/40 border-[var(--ink-secondary)]/10 hover:border-[var(--gold-bright)]/50 hover:bg-[var(--primary)]/20"
                   }`}
                 >
                   {isActive && (
-                    <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#b89047] shadow-[0_0_15px_#d4af3f]" />
+                    <div className="absolute left-0 top-0 bottom-0 w-2 bg-[var(--gold-bright)] shadow-[0_0_15px_#d4af3f]" />
                   )}
                   <span
-                    className={`font-serif font-bold tracking-widest uppercase text-sm ${isActive ? "text-[#b89047]" : "text-slate-400 group-hover:text-yellow-100"}`}
+                    className={`font-serif font-bold tracking-widest uppercase text-sm ${isActive ? "text-[var(--gold-bright)]" : "text-slate-400 group-hover:text-yellow-100"}`}
                   >
                     {b.name}
                   </span>
@@ -192,7 +192,7 @@ function AltarPage() {
               : selectedBanner.pull_cost_10_crystals;
             const balance = isPactSeal ? profile.pact_seals : profile.crystals;
             const icon = isPactSeal ? "seal" : "crystal";
-            const iconColor = isPactSeal ? "var(--fuchsia)" : "#b89047"; // fuchsia or cyan
+            const iconColor = isPactSeal ? "var(--fuchsia)" : "var(--gold-bright)"; // fuchsia or cyan
             const canPull1 = balance >= cost1;
             const canPull10 = balance >= cost10;
 
@@ -205,7 +205,7 @@ function AltarPage() {
                     animate={{ y: 0, opacity: 1 }}
                     key={selectedBanner.id}
                   >
-                    <div className="text-[8rem] leading-none opacity-5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif font-bold text-[#3d2e1f] mix-blend-overlay blur-sm">
+                    <div className="text-[8rem] leading-none opacity-5 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 font-serif font-bold text-[var(--ink-secondary)] mix-blend-overlay blur-sm">
                       {selectedBanner.realms?.icon ?? "✦"}
                     </div>
                     <h2 className="text-5xl md:text-7xl font-serif font-bold italic tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
@@ -220,12 +220,12 @@ function AltarPage() {
                 {/* The Tactile Gacha Control Panel at the bottom */}
                 <div className="relative w-full max-w-4xl mx-auto flex flex-col items-end gap-6 mt-auto">
                   {/* Currency Display */}
-                  <div className="bg-[#f4ecd8]/60 backdrop-blur-md border border-[#3d2e1f]/10 px-6 py-3 rounded-xl flex items-center gap-3">
+                  <div className="bg-[var(--bg-stage)]/60 backdrop-blur-md border border-[var(--ink-secondary)]/10 px-6 py-3 rounded-xl flex items-center gap-3">
                     <span className="text-xs text-slate-400 uppercase tracking-widest font-bold">
                       Resonance Balance
                     </span>
                     <div
-                      className={`flex items-center gap-2 text-xl font-serif font-bold ${canPull1 ? "text-[#3d2e1f]" : "text-red-500"}`}
+                      className={`flex items-center gap-2 text-xl font-serif font-bold ${canPull1 ? "text-[var(--ink-secondary)]" : "text-red-500"}`}
                     >
                       <Icon
                         name={icon as React.ComponentProps<typeof Icon>["name"]}
@@ -242,7 +242,7 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
                       disabled={!canPull1 || pullMut.isPending}
-                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[#b89047]/60 bg-slate-900"
+                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-slate-600 hover:border-[var(--gold-bright)]/60 bg-slate-900"
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
@@ -264,7 +264,7 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
                       disabled={!canPull10 || pullMut.isPending}
-                      className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[#b89047] bg-[var(--primary)] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
+                      className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[var(--gold-bright)] bg-[var(--primary)] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
 
@@ -272,7 +272,7 @@ function AltarPage() {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
 
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
-                        <span className="text-[#b89047] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">
+                        <span className="text-[var(--gold-bright)] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">
                           ★ PULL ×10 ★
                         </span>
                         <div className="flex items-center gap-2 text-yellow-100 text-base mt-1">

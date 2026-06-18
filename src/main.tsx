@@ -3,8 +3,6 @@ import { RouterProvider } from "@tanstack/react-router";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { getRouter, queryClient } from "./router";
 import "./styles.css";
-import "./styles/tokens.css";
-import "./styles/typography.css";
 
 const router = getRouter();
 

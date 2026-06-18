@@ -355,7 +355,7 @@ function CompendiumPage() {
         <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 relative z-20 items-start">
           {/* Left Sidebar: Filters */}
           <div className="flex flex-col gap-6">
-            <div className="p-4 rounded-xl border border-[rgba(255,255,255,0.8)] shadow-[0_8px_24px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.1)]" style={{ background: "linear-gradient(145deg, #1a1a1a, rgba(0,0,0,0.6))" }}>
+            <div className="p-4 rounded-xl border border-[rgba(255,255,255,0.8)] shadow-[0_8px_24px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.1)]" style={{ background: "linear-gradient(145deg, var(--ink-primary), rgba(0,0,0,0.6))" }}>
               <h3 className="font-serif mb-3 text-sm uppercase tracking-widest font-bold" style={{ color: "rgba(255,255,255,0.8)" }}>
                 Progress
               </h3>
@@ -375,7 +375,7 @@ function CompendiumPage() {
               </div>
             </div>
 
-            <div className="p-4 rounded-xl border border-[rgba(255,255,255,0.8)] shadow-[0_8px_24px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.1)]" style={{ background: "linear-gradient(145deg, #1a1a1a, rgba(0,0,0,0.6))" }}>
+            <div className="p-4 rounded-xl border border-[rgba(255,255,255,0.8)] shadow-[0_8px_24px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.1)]" style={{ background: "linear-gradient(145deg, var(--ink-primary), rgba(0,0,0,0.6))" }}>
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -458,7 +458,7 @@ function CompendiumPage() {
                       aspectRatio: "3/4",
                       borderColor: owned ? color : "#111",
                       background: owned
-                        ? "linear-gradient(145deg, #1a1a1a, rgba(0,0,0,0.6))"
+                        ? "linear-gradient(145deg, var(--ink-primary), rgba(0,0,0,0.6))"
                         : "linear-gradient(145deg, #050505, rgba(0,0,0,0.4))",
                       boxShadow: owned ? `0 0 15px ${color}40, inset 0 1px 1px rgba(255,255,255,0.1)` : "inset 0 1px 1px rgba(255,255,255,0.05)",
                     }}
@@ -510,7 +510,7 @@ function CompendiumPage() {
         >
           <div
             className="max-w-3xl w-full flex flex-col md:flex-row gap-6 p-6 rounded-2xl border border-[rgba(255,255,255,0.8)] shadow-[0_0_40px_rgba(0,0,0,0.9),inset_0_1px_1px_rgba(255,255,255,0.1)] relative"
-            style={{ background: "linear-gradient(145deg, #1a1a1a, rgba(0,0,0,0.6))" }}
+            style={{ background: "linear-gradient(145deg, var(--ink-primary), rgba(0,0,0,0.6))" }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Left: Monster Portrait */}
@@ -615,7 +615,7 @@ function CompendiumPage() {
                         return (
                           <div
                             key={art.id}
-                            className="p-2 rounded-xl border border-[rgba(255,255,255,0.8)] bg-[#1a1a1a] relative group shadow-[0_4px_10px_rgba(0,0,0,0.8)]"
+                            className="p-2 rounded-xl border border-[rgba(255,255,255,0.8)] bg-[var(--ink-primary)] relative group shadow-[0_4px_10px_rgba(0,0,0,0.8)]"
                           >
                             <button
                               onClick={() => unequipMut.mutate(art.id)}
@@ -671,7 +671,7 @@ function CompendiumPage() {
                             onClick={() =>
                               equipMut.mutate({ artifactId: art.id, monsterId: selectedUM.id })
                             }
-                            className="mt-2 text-[10px] bg-[#1a1a1a] text-[rgba(255,255,255,0.8)] hover:bg-[rgba(255,255,255,0.8)] hover:text-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.8)]/50 transition-all rounded py-1 font-bold uppercase tracking-widest shadow-[0_2px_4px_rgba(0,0,0,0.5)] disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="mt-2 text-[10px] bg-[var(--ink-primary)] text-[rgba(255,255,255,0.8)] hover:bg-[rgba(255,255,255,0.8)] hover:text-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.8)]/50 transition-all rounded py-1 font-bold uppercase tracking-widest shadow-[0_2px_4px_rgba(0,0,0,0.5)] disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             Equip
                           </button>

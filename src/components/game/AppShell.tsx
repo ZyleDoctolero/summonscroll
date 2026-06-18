@@ -2,7 +2,6 @@ import { type ReactNode } from "react";
 import { motion } from "motion/react";
 import { useRouterState } from "@tanstack/react-router";
 import { PlayerHeader } from "./PlayerHeader";
-import { MobilePlayerHeader } from "./MobilePlayerHeader";
 import { Toaster } from "sonner";
 import { ease, dur, reducedMotion } from "@/lib/ui/motion-tokens";
 import { BottomHUD } from "./BottomHUD";
@@ -49,7 +48,6 @@ export function AppShell({
       className="min-h-screen relative w-full flex flex-col"
       style={{ color: "var(--ink-primary)", zIndex: 1 }}
     >
-      {withHeader && <MobilePlayerHeader profile={profile} />}
       {withHeader && <PlayerHeader profile={profile} />}
 
       <main className="max-w-5xl mx-auto px-4 py-6 pb-32 md:pb-12 w-full flex-1 relative z-10 flex flex-col pt-20 md:pt-28">

@@ -229,10 +229,10 @@ function IslandPage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
-      <div className="bg-[#f4ecd8] bg-[#f4ecd8]-hub relative min-h-screen">
+      <div className="bg-[var(--bg-stage)] bg-[var(--bg-stage)]-hub relative min-h-screen">
         <div className="p-6 md:p-10 max-w-6xl">
           <div className="flex items-center gap-3 mb-6">
-            <h1 className="t-h1 text-3xl font-bold" style={{ color: "#b89047" }}>
+            <h1 className="t-h1 text-3xl font-bold" style={{ color: "var(--gold-bright)" }}>
               Cultivation Realm
             </h1>
             <Icon
@@ -240,9 +240,9 @@ function IslandPage() {
               size={24}
               color={
                 weather === "sunny"
-                  ? "#b89047"
+                  ? "var(--gold-bright)"
                   : weather === "overcast"
-                    ? "#3d2e1f"
+                    ? "var(--ink-secondary)"
                     : "var(--danger)"
               }
             />
@@ -255,7 +255,7 @@ function IslandPage() {
           >
             <div
               className="text-sm flex items-center gap-2"
-              style={{ color: "#3d2e1f" }}
+              style={{ color: "var(--ink-secondary)" }}
             >
               <Icon
                 name={weatherIcon}
@@ -264,7 +264,7 @@ function IslandPage() {
                   weather === "sunny"
                     ? "var(--success)"
                     : weather === "overcast"
-                      ? "#b89047"
+                      ? "var(--gold-bright)"
                       : "var(--danger)"
                 }
               />
@@ -282,7 +282,7 @@ function IslandPage() {
           {/* Team slots */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-3">
-              <h2 className="t-h3 text-lg font-bold" style={{ color: "#2a1e12" }}>
+              <h2 className="t-h3 text-lg font-bold" style={{ color: "var(--bg-panel)" }}>
                 Your Team
               </h2>
               <div className="flex items-center gap-4">
@@ -298,7 +298,7 @@ function IslandPage() {
                     Condense {pendingHarvest} Spirit Stones
                   </button>
                 )}
-                <span className="text-sm font-serif" style={{ color: "#b89047" }}>
+                <span className="text-sm font-serif" style={{ color: "var(--gold-bright)" }}>
                   CP: {teamPower.toLocaleString()}
                 </span>
               </div>
@@ -307,7 +307,7 @@ function IslandPage() {
           </div>
 
           {/* Monster roster */}
-          <h2 className="t-h3 text-lg font-bold mb-3" style={{ color: "#2a1e12" }}>
+          <h2 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
             Contracted Spirits ({roster.length})
           </h2>
           {roster.length === 0 ? (
@@ -343,14 +343,14 @@ function IslandPage() {
                       {assignSlot !== null && (
                         <div
                           className="absolute inset-0 border-2 rounded-lg pointer-events-none"
-                          style={{ borderColor: "#b89047" }}
+                          style={{ borderColor: "var(--gold-bright)" }}
                         />
                       )}
                       {isMaxBond && (
                         <button
                           onClick={() => ascendMut.mutate(um.id)}
                           disabled={ascendMut.isPending}
-                          className="w-full mt-2 py-1 rounded text-[10px] font-bold text-[#3d2e1f] transition-all hover:opacity-80 disabled:opacity-50"
+                          className="w-full mt-2 py-1 rounded text-[10px] font-bold text-[var(--ink-secondary)] transition-all hover:opacity-80 disabled:opacity-50"
                           style={{
                             background:
                               "linear-gradient(135deg,var(--realm-void),var(--realm-chaos))",
@@ -375,7 +375,7 @@ function IslandPage() {
           style={{ background: "var(--bg-stage)" }}
         >
           <div className="max-w-4xl mx-auto flex items-center justify-between">
-            <p className="text-sm font-semibold" style={{ color: "#b89047" }}>
+            <p className="text-sm font-semibold" style={{ color: "var(--gold-bright)" }}>
               Select a monster for Slot {assignSlot}
             </p>
             <button

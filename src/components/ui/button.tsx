@@ -5,21 +5,21 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold uppercase tracking-wider cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#b8973c] disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold uppercase tracking-wider cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--gold-glow)] disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-[#2a1e12] text-[#f4ecd8] border border-[#b8973c]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[#3d2e1f]",
+          "bg-[var(--bg-panel)] text-[var(--ink-primary)] border border-[var(--ss-border)] shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:border-[var(--ss-border-active)] hover:text-[var(--ink-primary)] hover:shadow-[0_0_15px_rgba(212,175,63,0.15)] backdrop-blur-md",
         destructive:
-          "bg-[#2a1e12] text-[#8b0000] border border-[#8b0000]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[#3d2e1f]",
+          "bg-[rgba(255,23,68,0.15)] text-[var(--danger)] border border-[rgba(255,23,68,0.4)] shadow-[0_0_10px_rgba(255,23,68,0.1)] hover:bg-[rgba(255,23,68,0.25)] hover:border-[rgba(255,23,68,0.6)] backdrop-blur-md",
         outline:
-          "bg-transparent text-[#1a1a1a] border border-[#b8973c]/50 hover:bg-[#2a1e12] hover:text-[#f4ecd8] hover:shadow-lg",
+          "bg-transparent text-[var(--ink-primary)] border border-[var(--ss-border)] hover:bg-[var(--bg-panel)] hover:border-[var(--ss-border-active)] hover:shadow-[0_0_15px_rgba(212,175,63,0.15)]",
         secondary:
-          "bg-[#f4ecd8] text-[#1a1a1a] border border-[#b8973c]/50 shadow-lg shadow-black/40 hover:shadow-xl hover:bg-[#e0d4b8]",
+          "bg-[var(--bg-stage)] text-[var(--ink-secondary)] border border-[var(--ss-border)] hover:bg-[var(--bg-panel)] hover:text-[var(--ink-primary)]",
         ghost:
-          "text-[#1a1a1a] hover:bg-[#e0d4b8] hover:text-[#8b0000] hover:shadow-inner",
-        link: "text-[#1a1a1a] underline-offset-4 hover:underline hover:text-[#8b0000] drop-shadow-sm",
+          "text-[var(--ink-secondary)] hover:bg-[var(--bg-panel)] hover:text-[var(--ink-primary)]",
+        link: "text-[var(--gold-bright)] underline-offset-4 hover:underline drop-shadow-sm",
       },
       size: {
         default: "h-9 px-4 py-2",

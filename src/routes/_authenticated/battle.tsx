@@ -164,13 +164,13 @@ function BattlePage() {
                 transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.08 }}
                 className="font-serif text-4xl font-bold mb-1"
                 style={{
-                  color: result.won ? "#b89047" : "#7d2e2f",
+                  color: result.won ? "var(--gold-bright)" : "#7d2e2f",
                   letterSpacing: "0.05em",
                 }}
               >
                 {result.won ? (
                   <span className="flex items-center justify-center gap-2">
-                    <Icon name="battle" size={28} color="#b89047" /> VICTORY
+                    <Icon name="battle" size={28} color="var(--gold-bright)" /> VICTORY
                   </span>
                 ) : (
                   <span className="flex items-center justify-center gap-2">
@@ -178,7 +178,7 @@ function BattlePage() {
                   </span>
                 )}
               </motion.p>
-              <p className="text-sm font-serif" style={{ color: "#3d2e1f" }}>
+              <p className="text-sm font-serif" style={{ color: "var(--ink-secondary)" }}>
                 vs {result.enemyName} {result.mode !== "manual" && `— `}
                 {result.mode !== "manual" && <NumberFlow value={result.rounds} />}
                 {result.mode !== "manual" && ` rounds`}
@@ -213,12 +213,12 @@ function BattlePage() {
                   transition={{ duration: dur.fast, ease: ease.out, delay: logDelays[i] }}
                   className="text-xs flex items-center gap-2"
                   style={{
-                    color: entry.actor === "player" ? "#2a1e12" : "var(--danger)",
+                    color: entry.actor === "player" ? "var(--bg-panel)" : "var(--danger)",
                   }}
                 >
                   <span
                     className="font-serif w-8 flex-shrink-0"
-                    style={{ color: "#3d2e1f" }}
+                    style={{ color: "var(--ink-secondary)" }}
                   >
                     R{entry.round}
                   </span>
@@ -280,15 +280,15 @@ function BattlePage() {
                     >
                       <p
                         className="text-xs uppercase tracking-[0.18em] font-semibold mb-2"
-                        style={{ color: "#3d2e1f" }}
+                        style={{ color: "var(--ink-secondary)" }}
                       >
                         Rewards
                       </p>
                       <div className="flex flex-wrap gap-3 text-sm font-bold font-serif">
                         {result.rewards.crystals > 0 && (
                           <RewardChip>
-                            <span style={{ color: "#b89047" }}>
-                              <Icon name="crystal" size={12} color="#b89047" /> +
+                            <span style={{ color: "var(--gold-bright)" }}>
+                              <Icon name="crystal" size={12} color="var(--gold-bright)" /> +
                               <NumberFlow value={result.rewards.crystals} />
                             </span>
                           </RewardChip>
@@ -296,10 +296,10 @@ function BattlePage() {
                         {result.rewards.shards > 0 && (
                           <RewardChip>
                             <span
-                              style={{ color: "#b89047" }}
+                              style={{ color: "var(--gold-bright)" }}
                               className="flex items-center gap-1"
                             >
-                              <Icon name="crystal" size={12} color="#b89047" /> +
+                              <Icon name="crystal" size={12} color="var(--gold-bright)" /> +
                               <NumberFlow value={result.rewards.shards} />
                             </span>
                           </RewardChip>
@@ -307,7 +307,7 @@ function BattlePage() {
                         {result.rewards?.gold > 0 && (
                           <RewardChip>
                             <span
-                              style={{ color: "#b89047" }}
+                              style={{ color: "var(--gold-bright)" }}
                               className="flex items-center gap-1"
                             >
                               +<NumberFlow value={result.rewards.gold} /> Gold
@@ -317,17 +317,17 @@ function BattlePage() {
                         {result.rewards?.xp > 0 && (
                           <RewardChip>
                             <span
-                              style={{ color: "#3d2e1f" }}
+                              style={{ color: "var(--ink-secondary)" }}
                               className="flex items-center gap-1"
                             >
-                              <Icon name="xp" size={12} color="#b89047" /> +
+                              <Icon name="xp" size={12} color="var(--gold-bright)" /> +
                               <NumberFlow value={result.rewards.xp} /> XP
                             </span>
                           </RewardChip>
                         )}
                         {milestoneDrops.map((d, i) => (
                           <RewardChip key={i} delay={0.06 + i * 0.05}>
-                            <span style={{ color: "#b89047" }}>
+                            <span style={{ color: "var(--gold-bright)" }}>
                               +<NumberFlow value={d.qty} /> {d.name}
                             </span>
                           </RewardChip>
@@ -339,11 +339,11 @@ function BattlePage() {
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.25 }}
                           className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
-                          style={{ color: "#b89047", letterSpacing: "0.04em" }}
+                          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
                         >
-                          <Icon name="tower" size={14} color="#b89047" />
+                          <Icon name="tower" size={14} color="var(--gold-bright)" />
                           <span>The Wailing Wall crumbles before you. </span>
-                          <span style={{ color: "#2a1e12" }}>Badge earned.</span>
+                          <span style={{ color: "var(--bg-panel)" }}>Badge earned.</span>
                         </motion.p>
                       )}
                       {badges.apex && (
@@ -352,16 +352,16 @@ function BattlePage() {
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.3 }}
                           className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
-                          style={{ color: "#b89047", letterSpacing: "0.04em" }}
+                          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
                         >
                           <Icon
                             name="crown"
                             size={18}
-                            color="#b89047"
+                            color="var(--gold-bright)"
                             className="lucide-glow"
                           />
                           <span>You are the Apex. </span>
-                          <span style={{ color: "#2a1e12" }}>Crown bestowed.</span>
+                          <span style={{ color: "var(--bg-panel)" }}>Crown bestowed.</span>
                         </motion.p>
                       )}
                     </motion.div>
@@ -386,11 +386,11 @@ function BattlePage() {
 
   return (
     <AppShell profile={profile}>
-      <div className="bg-[#f4ecd8] bg-[#f4ecd8]-battle p-6 md:p-10 max-w-6xl min-h-screen">
-        <h1 className="font-serif text-3xl font-bold mb-1" style={{ color: "#b89047" }}>
+      <div className="bg-[var(--bg-stage)] bg-[var(--bg-stage)]-battle p-6 md:p-10 max-w-6xl min-h-screen">
+        <h1 className="font-serif text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Battle Arena
         </h1>
-        <p className="text-sm mb-6 font-serif" style={{ color: "#3d2e1f" }}>
+        <p className="text-sm mb-6 font-serif" style={{ color: "var(--ink-secondary)" }}>
           {canBattle
             ? `Team of ${team.length} monsters ready.`
             : "Build a team of 3+ monsters on your Island first."}
@@ -399,9 +399,9 @@ function BattlePage() {
         {!canBattle && (
           <div
             className="rounded-xl p-8 text-center border-2 border-dashed mb-6 ss-card"
-            style={{ borderColor: "rgba(61,46,31,0.08)", color: "#3d2e1f" }}
+            style={{ borderColor: "rgba(61,46,31,0.08)", color: "var(--ink-secondary)" }}
           >
-            <Icon name="battle" size={48} color="#3d2e1f" className="mb-2 mx-auto" />
+            <Icon name="battle" size={48} color="var(--ink-secondary)" className="mb-2 mx-auto" />
             <p className="mb-4">Build a team of 3+ to enter battle.</p>
             <a href="/island" className="ss-btn ss-btn-primary">
               Go to Island →
@@ -429,7 +429,7 @@ function BattlePage() {
           <ModeCard
             title="Chaos Tower"
             icon={
-              <Icon name="tower" size={28} color="#b89047" className="lucide-glow" />
+              <Icon name="tower" size={28} color="var(--gold-bright)" className="lucide-glow" />
             }
             desc={`Floor ${nextFloor} — Endless progression`}
             sub={`Highest: Floor ${highestFloor}`}
@@ -457,7 +457,7 @@ function BattlePage() {
 
         {/* Battle history */}
         <div>
-          <h2 className="text-lg font-bold mb-3" style={{ color: "#2a1e12" }}>
+          <h2 className="text-lg font-bold mb-3" style={{ color: "var(--bg-panel)" }}>
             Recent Battles
           </h2>
           {(historyQ.data?.battles ?? []).length === 0 ? (
@@ -496,18 +496,18 @@ function BattlePage() {
                             <Icon name="close" size={14} color="var(--danger)" />
                           )}
                         </span>
-                        <span className="ml-2" style={{ color: "#2a1e12" }}>
+                        <span className="ml-2" style={{ color: "var(--bg-panel)" }}>
                           {b.enemy_name}
                         </span>
-                        <span className="ml-2 text-xs" style={{ color: "#3d2e1f" }}>
+                        <span className="ml-2 text-xs" style={{ color: "var(--ink-secondary)" }}>
                           Floor {b.floor} · {b.rounds}R
                         </span>
                       </div>
                       <span
                         className="text-xs font-serif flex items-center gap-0.5"
-                        style={{ color: "#b89047" }}
+                        style={{ color: "var(--gold-bright)" }}
                       >
-                        <Icon name="crystal" size={10} color="#b89047" />+{b.reward_crystals}
+                        <Icon name="crystal" size={10} color="var(--gold-bright)" />+{b.reward_crystals}
                       </span>
                     </div>
                   ),
@@ -542,14 +542,14 @@ function ModeCard({
   return (
     <div className="ss-card p-6">
       <div className="mb-3">{icon}</div>
-      <h3 className="text-lg font-bold mb-1" style={{ color: "#b89047" }}>
+      <h3 className="text-lg font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
         {title}
       </h3>
       <p className="text-sm mb-1" style={{ color: "#8a6d3b" }}>
         {desc}
       </p>
       {sub && (
-        <p className="text-xs mb-3" style={{ color: "#3d2e1f" }}>
+        <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
           {sub}
         </p>
       )}
@@ -562,7 +562,7 @@ function ModeCard({
             className="h-full"
             style={{
               width: `${progress}%`,
-              background: "linear-gradient(90deg,#b89047,#b89047)",
+              background: "linear-gradient(90deg,var(--gold-bright),var(--gold-bright))",
             }}
           />
         </div>
@@ -594,7 +594,7 @@ function AnimatedHpBar({
   const pct = Math.max(0, Math.min(100, (current / max) * 100));
   return (
     <div>
-      <div className="flex justify-between text-xs mb-1" style={{ color: "#3d2e1f" }}>
+      <div className="flex justify-between text-xs mb-1" style={{ color: "var(--ink-secondary)" }}>
         <span>{label}</span>
         <span className="font-serif">
           <NumberFlow value={Math.max(0, current)} /> / {max.toLocaleString()}

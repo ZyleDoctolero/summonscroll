@@ -44,8 +44,8 @@ export function Compass({
   const towerQ = useQuery({ queryKey: ["tower"], queryFn: getTowerProgress });
   const tasksQ = useQuery({ queryKey: ["tasks"], queryFn: listTasks });
 
-  const suggestion = useMemo<Suggestion | null>(() => {
-    if (!profileQ.data || !logQ.data) return null;
+  const suggestions = useMemo<Suggestion[]>(() => {
+    if (!profileQ.data || !logQ.data) return [];
 
     const profile = profileQ.data.profile;
     const log = logQ.data;
@@ -220,7 +220,7 @@ export function Compass({
     }
 
     candidates.sort((a, b) => b.score - a.score);
-    return candidates[0];
+    return candidates.slice(0, 3);
   }, [
     profileQ.data,
     logQ.data,
@@ -232,7 +232,7 @@ export function Compass({
     onOpenEvening,
   ]);
 
-  if (!suggestion) return null;
+  if (suggestions.length === 0) return null;
 
   const toneStyles: Record<string, React.CSSProperties & Record<string, string>> = {
     calm: {
@@ -256,31 +256,36 @@ export function Compass({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -4 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={trans.cascadeIn}
-      role="region"
-      aria-label="Next action"
-      className="ss-card-d-glow mb-4 flex items-center gap-4"
-      style={toneStyles[suggestion.tone]}
-    >
-      <div className="shrink-0">
-        <Icon name={suggestion.icon as React.ComponentProps<typeof Icon>["name"]} size={28} />
-      </div>
-      <div className="flex-1 min-w-0">
-        <p className="t-h3">{suggestion.title}</p>
-        <p className="t-lore mt-0.5">{suggestion.reason}</p>
-      </div>
-      <button
-        onClick={() => {
-          if (suggestion.action) suggestion.action();
-          else if (suggestion.to) nav({ to: suggestion.to });
-        }}
-        className="ss-btn ss-btn-primary"
-      >
-        {suggestion.cta}
-      </button>
-    </motion.div>
+    <div className="flex flex-col gap-3 mb-4">
+      {suggestions.map((suggestion, index) => (
+        <motion.div
+          key={suggestion.id}
+          initial={{ opacity: 0, y: -4 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...trans.cascadeIn, delay: index * 0.1 }}
+          role="region"
+          aria-label="Next action"
+          className="ss-card-d-glow flex items-center gap-4"
+          style={toneStyles[suggestion.tone]}
+        >
+          <div className="shrink-0">
+            <Icon name={suggestion.icon as React.ComponentProps<typeof Icon>["name"]} size={28} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="t-h3">{suggestion.title}</p>
+            <p className="t-lore mt-0.5">{suggestion.reason}</p>
+          </div>
+          <button
+            onClick={() => {
+              if (suggestion.action) suggestion.action();
+              else if (suggestion.to) nav({ to: suggestion.to });
+            }}
+            className="ss-btn ss-btn-primary whitespace-nowrap"
+          >
+            {suggestion.cta}
+          </button>
+        </motion.div>
+      ))}
+    </div>
   );
 }

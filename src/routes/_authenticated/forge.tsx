@@ -30,7 +30,7 @@ const ALCHEMY_RECIPES = [
     habitRequirement: "Drops from Chores & Health tasks.",
     result: "Tidal Hound",
     desc: "Mutates a base Wolf into a high-defense water elemental.",
-    color: "#b89047",
+    color: "var(--gold-bright)",
     img: "/sprites/monsters/frostfang_lupus.png",
   },
   {
@@ -77,7 +77,7 @@ function AlchemyPage() {
     return (
       <div
         className="min-h-screen grid place-items-center"
-        style={{ color: "#3d2e1f" }}
+        style={{ color: "var(--ink-secondary)" }}
       >
         Igniting the Bloodline Crucible…
       </div>
@@ -98,21 +98,21 @@ function AlchemyPage() {
       <AtmosphereBackdrop realm="blight" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen pt-20">
         <header className="mb-10 text-center flex flex-col items-center">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-b from-[#b89047]/20 to-transparent border-2 border-[#b89047]/50 flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(212,175,63,0.3)]">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-b from-[var(--gold-bright)]/20 to-transparent border-2 border-[var(--gold-bright)]/50 flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(212,175,63,0.3)]">
             <Icon
               name="forge"
               size={40}
-              color="#b89047"
+              color="var(--gold-bright)"
               className="drop-shadow-[0_0_10px_#fcd34d]"
             />
           </div>
           <h1
             className="t-h1 text-4xl mb-2"
-            style={{ color: "#b89047", textShadow: "0 2px 15px rgba(212,175,63,0.5)" }}
+            style={{ color: "var(--gold-bright)", textShadow: "0 2px 15px rgba(212,175,63,0.5)" }}
           >
             Bloodline Crucible
           </h1>
-          <p className="max-w-xl text-sm" style={{ color: "#3d2e1f" }}>
+          <p className="max-w-xl text-sm" style={{ color: "var(--ink-secondary)" }}>
             Refine your Contracted Spirits with Beast Cores to trigger a Bloodline Awakening.
           </p>
         </header>
@@ -120,7 +120,7 @@ function AlchemyPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Recipe List */}
           <div className="flex flex-col gap-4">
-            <h2 className="t-h3" style={{ color: "#2a1e12" }}>
+            <h2 className="t-h3" style={{ color: "var(--bg-panel)" }}>
               Branching Paths
             </h2>
             {ALCHEMY_RECIPES.map((r) => (
@@ -130,27 +130,27 @@ function AlchemyPage() {
                   setSelectedRecipe(r);
                   setSelectedMonster(null);
                 }}
-                className={`ss-card p-4 text-left border-l-4 transition-all hover:scale-105 ${selectedRecipe.id === r.id ? "shadow-[0_0_20px_rgba(212,175,63,0.3)] bg-[#3d2e1f]/5" : "opacity-70"}`}
+                className={`ss-card p-4 text-left border-l-4 transition-all hover:scale-105 ${selectedRecipe.id === r.id ? "shadow-[0_0_20px_rgba(212,175,63,0.3)] bg-[var(--ink-secondary)]/5" : "opacity-70"}`}
                 style={{
                   borderLeftColor: r.color,
                   borderColor: selectedRecipe.id === r.id ? r.color : "rgba(61,46,31,0.1)",
                 }}
               >
                 <div className="flex justify-between items-start mb-1">
-                  <h3 className="font-bold text-lg" style={{ color: "#2a1e12" }}>
+                  <h3 className="font-bold text-lg" style={{ color: "var(--bg-panel)" }}>
                     {r.result}
                   </h3>
                   <span
-                    className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-[#f4ecd8]/50"
+                    className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-[var(--bg-stage)]/50"
                     style={{ color: r.color }}
                   >
                     {r.base} Base
                   </span>
                 </div>
-                <p className="text-xs mt-2" style={{ color: "#3d2e1f" }}>
-                  Requires: <strong style={{ color: "#b89047" }}>{r.catalyst}</strong>
+                <p className="text-xs mt-2" style={{ color: "var(--ink-secondary)" }}>
+                  Requires: <strong style={{ color: "var(--gold-bright)" }}>{r.catalyst}</strong>
                 </p>
-                <p className="text-[10px] italic mt-1" style={{ color: "#3d2e1f" }}>
+                <p className="text-[10px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
                   {r.habitRequirement}
                 </p>
               </button>
@@ -174,11 +174,11 @@ function AlchemyPage() {
             <div className="flex items-center justify-center gap-4 md:gap-10 relative z-10 mb-12 w-full">
               {/* Catalyst Input */}
               <div className="flex flex-col items-center">
-                <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-dashed border-[#b89047]/50 flex items-center justify-center bg-[#f4ecd8]/40 relative overflow-hidden shadow-[inset_0_0_20px_rgba(212,175,63,0.2)]">
+                <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-dashed border-[var(--gold-bright)]/50 flex items-center justify-center bg-[var(--bg-stage)]/40 relative overflow-hidden shadow-[inset_0_0_20px_rgba(212,175,63,0.2)]">
                   <Icon
                     name="sparkle"
                     size={32}
-                    color="#b89047"
+                    color="var(--gold-bright)"
                     className="opacity-50"
                   />
                   <div
@@ -190,7 +190,7 @@ function AlchemyPage() {
                 </div>
                 <span
                   className="mt-3 text-xs font-bold uppercase tracking-wider text-center"
-                  style={{ color: "#3d2e1f" }}
+                  style={{ color: "var(--ink-secondary)" }}
                 >
                   {selectedRecipe.catalyst}
                 </span>
@@ -199,13 +199,13 @@ function AlchemyPage() {
               <Icon
                 name="swords"
                 size={24}
-                color="#3d2e1f"
+                color="var(--ink-secondary)"
                 className="rotate-45 opacity-50"
               />
 
               {/* Monster Input */}
               <div className="flex flex-col items-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-[#f4ecd8]/60 relative overflow-hidden group">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-[var(--bg-stage)]/60 relative overflow-hidden group">
                   {selectedMonster ? (
                     <img
                       src={`/sprites/monsters/placeholder.png`}
@@ -217,12 +217,12 @@ function AlchemyPage() {
                       <Icon
                         name="target"
                         size={32}
-                        color="#3d2e1f"
+                        color="var(--ink-secondary)"
                         className="mx-auto mb-2"
                       />
                       <span
                         className="text-[10px] font-bold uppercase"
-                        style={{ color: "#3d2e1f" }}
+                        style={{ color: "var(--ink-secondary)" }}
                       >
                         Select Base
                       </span>
@@ -231,7 +231,7 @@ function AlchemyPage() {
                 </div>
                 <span
                   className="mt-3 text-xs font-bold uppercase tracking-wider text-center"
-                  style={{ color: "#3d2e1f" }}
+                  style={{ color: "var(--ink-secondary)" }}
                 >
                   Base: {selectedRecipe.base}
                 </span>
@@ -240,7 +240,7 @@ function AlchemyPage() {
 
             <p
               className="text-center text-sm max-w-md relative z-10 mb-8"
-              style={{ color: "#3d2e1f" }}
+              style={{ color: "var(--ink-secondary)" }}
             >
               {selectedRecipe.desc}
             </p>
@@ -258,7 +258,7 @@ function AlchemyPage() {
               style={{
                 background: `linear-gradient(135deg, ${selectedRecipe.color}40, transparent)`,
                 border: `2px solid ${selectedRecipe.color}`,
-                color: "#2a1e12",
+                color: "var(--bg-panel)",
                 boxShadow: `0 0 20px ${selectedRecipe.color}40`,
               }}
             >
@@ -269,20 +269,20 @@ function AlchemyPage() {
 
         {/* Compatible Monsters Drawer */}
         <div className="mt-8 ss-card p-6 border-t-4" style={{ borderColor: selectedRecipe.color }}>
-          <h3 className="t-h3 mb-4" style={{ color: "#2a1e12" }}>
+          <h3 className="t-h3 mb-4" style={{ color: "var(--bg-panel)" }}>
             Available Bases
           </h3>
           {compatibleMonsters.length === 0 ? (
-            <div className="p-8 text-center bg-[#f4ecd8]/40 rounded-lg border border-dashed border-[#3d2e1f]/10">
-              <p style={{ color: "#3d2e1f" }}>
+            <div className="p-8 text-center bg-[var(--bg-stage)]/40 rounded-lg border border-dashed border-[var(--ink-secondary)]/10">
+              <p style={{ color: "var(--ink-secondary)" }}>
                 No compatible monsters found in your Compendium.
               </p>
-              <p className="text-xs mt-2" style={{ color: "#3d2e1f" }}>
+              <p className="text-xs mt-2" style={{ color: "var(--ink-secondary)" }}>
                 Hint: You need a monster with "{selectedRecipe.base}" in its name or type.
               </p>
               <button
                 onClick={() => setSelectedMonster("mock_id")}
-                className="mt-4 px-4 py-2 text-xs border border-[#3d2e1f]/20 rounded hover:bg-[#3d2e1f]/10"
+                className="mt-4 px-4 py-2 text-xs border border-[var(--ink-secondary)]/20 rounded hover:bg-[var(--ink-secondary)]/10"
               >
                 Use Mock Monster (Dev Mode)
               </button>
@@ -294,7 +294,7 @@ function AlchemyPage() {
                   <button
                     key={um.id}
                     onClick={() => setSelectedMonster(um.id)}
-                    className={`flex-shrink-0 w-24 p-2 rounded-lg border flex flex-col items-center gap-2 transition-all hover:scale-105 ${selectedMonster === um.id ? "border-[#b89047] bg-[#3d2e1f]/10 shadow-[0_0_15px_rgba(212,175,63,0.3)]" : "border-[#3d2e1f]/10 opacity-70"}`}
+                    className={`flex-shrink-0 w-24 p-2 rounded-lg border flex flex-col items-center gap-2 transition-all hover:scale-105 ${selectedMonster === um.id ? "border-[var(--gold-bright)] bg-[var(--ink-secondary)]/10 shadow-[0_0_15px_rgba(212,175,63,0.3)]" : "border-[var(--ink-secondary)]/10 opacity-70"}`}
                   >
                     <img
                       src={
@@ -307,7 +307,7 @@ function AlchemyPage() {
                     />
                     <span
                       className="text-[10px] font-bold truncate w-full text-center"
-                      style={{ color: "#2a1e12" }}
+                      style={{ color: "var(--bg-panel)" }}
                     >
                       {um.monster.name}
                     </span>

@@ -105,7 +105,7 @@ function PenaltyZone() {
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-[#f4ecd8] overflow-hidden flex flex-col items-center justify-center p-4"
+      className="fixed inset-0 z-[100] bg-[var(--bg-stage)] overflow-hidden flex flex-col items-center justify-center p-4"
       onClick={!audioActive ? startAudio : undefined}
     >
       {/* Ambient red pulse */}
@@ -185,14 +185,14 @@ function PenaltyZone() {
               {hasTask ? (
                 <div
                   className="text-lg font-bold font-heading"
-                  style={{ color: "#2a1e12" }}
+                  style={{ color: "var(--bg-panel)" }}
                 >
                   {profile.penalty_zone_task}
                 </div>
               ) : (
                 <div
                   className="flex items-center gap-2 text-sm"
-                  style={{ color: "#3d2e1f" }}
+                  style={{ color: "var(--ink-secondary)" }}
                 >
                   <AlertTriangle className="w-4 h-4" />
                   <span className="font-serif">
@@ -210,7 +210,7 @@ function PenaltyZone() {
                   id="task-complete"
                   checked={isChecked}
                   onChange={(e) => setIsChecked(e.target.checked)}
-                  className="w-5 h-5 mt-0.5 accent-red-600 bg-[#f4ecd8] border-red-500 rounded-none cursor-pointer flex-shrink-0"
+                  className="w-5 h-5 mt-0.5 accent-red-600 bg-[var(--bg-stage)] border-red-500 rounded-none cursor-pointer flex-shrink-0"
                 />
                 <label
                   htmlFor="task-complete"
@@ -228,15 +228,15 @@ function PenaltyZone() {
               disabled={!isChecked || escapeMutation.isPending}
               className={`w-full font-serif font-bold tracking-widest uppercase transition-all duration-300 ${
                 isChecked
-                  ? "bg-red-700 hover:bg-red-600 text-[#3d2e1f] shadow-[0_0_25px_rgba(139,0,0,0.5)]"
-                  : "bg-[#f4ecd8]/50 border border-red-900/30 text-red-900/50 cursor-not-allowed"
+                  ? "bg-red-700 hover:bg-red-600 text-[var(--ink-secondary)] shadow-[0_0_25px_rgba(139,0,0,0.5)]"
+                  : "bg-[var(--bg-stage)]/50 border border-red-900/30 text-red-900/50 cursor-not-allowed"
               }`}
             >
               {escapeMutation.isPending ? "PROCESSING..." : "SUPPRESS DEMONIC QI"}
             </Button>
 
             {!audioActive && (
-              <p className="text-[10px] font-serif" style={{ color: "#3d2e1f" }}>
+              <p className="text-[10px] font-serif" style={{ color: "var(--ink-secondary)" }}>
                 Tap anywhere to enable ambient audio
               </p>
             )}
