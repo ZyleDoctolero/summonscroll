@@ -273,7 +273,7 @@ function HubPage() {
         </div>
 
         {/* Quest Board Icon Button */}
-        <div className="absolute right-4 bottom-28 md:right-10 md:bottom-32 pointer-events-auto">
+        <div className="absolute right-4 bottom-32 md:right-10 md:bottom-36 pointer-events-auto">
           <button onClick={() => setShowQuestBoard(true)} className="group ss-btn-quest-board">
             <div className="absolute inset-0 rounded-full bg-[rgba(200,154,62,0.1)] opacity-0 group-hover:opacity-100 transition-opacity" />
             <Icon

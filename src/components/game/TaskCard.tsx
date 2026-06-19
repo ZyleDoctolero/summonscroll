@@ -124,7 +124,7 @@ export const TaskCard = React.memo(function TaskCard({
 
   return (
     <article
-      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-hidden duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(200,154,62,0.2)] z-10 hover:z-20"
+      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-visible duration-300 hover:shadow-[0_4px_20px_rgba(200,154,62,0.2)]"
       /* eslint-disable no-restricted-syntax */
       style={{
         borderLeft: `4px solid ${task.is_starred ? "#fcd34d" : color}`,
@@ -166,7 +166,7 @@ export const TaskCard = React.memo(function TaskCard({
             <button
               disabled={busy}
               onClick={() => handleScore("plus")}
-              className="relative w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
+              className="relative w-10 h-10 min-w-[40px] rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
               style={{
                 background: "rgba(95,173,65,0.15)",
                 color: "var(--success)",
@@ -181,7 +181,7 @@ export const TaskCard = React.memo(function TaskCard({
             <button
               disabled={busy}
               onClick={() => handleScore("minus")}
-              className="relative w-11 h-11 rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
+              className="relative w-10 h-10 min-w-[40px] rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
               style={{
                 background: "rgba(224,82,82,0.15)",
                 color: "var(--danger)",
@@ -197,7 +197,7 @@ export const TaskCard = React.memo(function TaskCard({
         <button
           disabled={busy}
           onClick={() => handleScore(task.completed ? "uncomplete" : "complete")}
-          className="relative w-11 h-11 rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
+          className="relative w-10 h-10 min-w-[40px] rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
           /* eslint-disable no-restricted-syntax */
           style={{
             background: task.completed ? color : "rgba(180,150,100,0.12)",
@@ -242,7 +242,7 @@ export const TaskCard = React.memo(function TaskCard({
           <div className="relative">
             <button
               onClick={() => setOpen((o) => !o)}
-              className="w-11 h-11 grid place-items-center rounded hover:bg-[rgba(200,154,62,0.06)]"
+              className="w-9 h-9 min-w-[36px] grid place-items-center rounded hover:bg-[rgba(200,154,62,0.06)]"
               style={{ color: "var(--ink-secondary)" }}
               aria-label="More options"
             >
@@ -250,7 +250,7 @@ export const TaskCard = React.memo(function TaskCard({
             </button>
             {open && (
               <div
-                className="absolute right-0 top-8 z-10 min-w-[120px] rounded border shadow-xl ss-card"
+                className="absolute right-0 top-10 z-[70] min-w-[140px] rounded-lg border shadow-xl ss-card py-1"
                 style={{ borderColor: "var(--ss-hairline)" }}
                 onMouseLeave={() => setOpen(false)}
               >
@@ -259,7 +259,7 @@ export const TaskCard = React.memo(function TaskCard({
                     setOpen(false);
                     onEdit(task);
                   }}
-                  className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(200,154,62,0.06)] flex items-center gap-1.5"
+                  className="w-full text-left px-3 py-2.5 text-sm hover:bg-[rgba(200,154,62,0.06)] flex items-center gap-2"
                   style={{ color: "var(--ink-primary)" }}
                 >
                   <Icon name="edit" size={13} />
@@ -270,7 +270,7 @@ export const TaskCard = React.memo(function TaskCard({
                     setOpen(false);
                     onDelete();
                   }}
-                  className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(200,154,62,0.06)] flex items-center gap-1.5"
+                  className="w-full text-left px-3 py-2.5 text-sm hover:bg-[rgba(200,154,62,0.06)] flex items-center gap-2"
                   style={{ color: "var(--danger)" }}
                 >
                   <Icon name="delete" size={13} />

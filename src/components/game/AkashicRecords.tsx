@@ -186,7 +186,7 @@ export function AkashicRecords({
             <div
               className={`w-14 h-14 rounded-full border-2 flex flex-col items-center justify-center bg-white/70 z-10 transition-colors ${
                 fodder.isAvailable
-                  ? "border-[#c89a3e] shadow-[0_0_15px_rgba(0,240,255,0.4)]"
+                  ? "border-[#c89a3e] shadow-[0_0_15px_rgba(200,154,62,0.3)]"
                   : "border-[#b5a28a]/30 border-dashed"
               }`}
             >

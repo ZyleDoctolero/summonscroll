@@ -386,7 +386,7 @@ function BattlePage() {
 
   return (
     <AppShell profile={profile}>
-      <div className="bg-[var(--bg-stage)] bg-[var(--bg-stage)]-battle p-6 md:p-10 max-w-6xl min-h-screen">
+      <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen">
         <h1 className="font-serif text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Battle Arena
         </h1>

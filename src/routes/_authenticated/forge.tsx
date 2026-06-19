@@ -158,7 +158,7 @@ function AlchemyPage() {
           </div>
 
           {/* Bloodline Chamber */}
-          <div className="lg:col-span-2 ss-card p-8 flex flex-col justify-center items-center relative overflow-hidden bg-gradient-to-b from-[#1a0f2e] to-[#0a0512]">
+          <div className="lg:col-span-2 ss-card p-8 flex flex-col justify-center items-center relative overflow-hidden bg-gradient-to-b from-[rgba(200,154,62,0.06)] to-[rgba(245,239,230,0.9)]">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-overlay animate-[hud-shimmer_20s_linear_infinite]" />
 
             <h2

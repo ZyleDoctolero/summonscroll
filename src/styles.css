@@ -536,7 +536,6 @@ body {
 .ss-card:hover {
   border-color: rgba(200, 154, 62, 0.4);
   box-shadow: var(--ss-shadow-high), 0 0 15px rgba(200, 154, 62, 0.08);
-  transform: translateY(-2px);
 }
 
 /* Bigger, more important surface — hero card on a screen */
@@ -1047,7 +1046,7 @@ body {
 .aura-common {
   filter: sepia(0.8) contrast(1.2);
   position: relative;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 10px rgba(120, 90, 50, 0.15);
 }
 
 .aura-uncommon {
@@ -1066,7 +1065,7 @@ body {
 }
 
 .aura-epic {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5), inset 0 0 25px rgba(212, 175, 63, 0.2);
+  box-shadow: 0 4px 10px rgba(120,90,50,0.15), inset 0 0 25px rgba(212, 175, 63, 0.2);
   border-color: rgba(212, 175, 63, 0.7) !important;
 }
 
@@ -1087,10 +1086,10 @@ body {
 
 @layer components {
   .ss-btn-quest-board {
-    @apply relative flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-[var(--bg-panel)] border-2 border-[var(--gold-bright)] shadow-[0_4px_10px_rgba(0,0,0,0.5)] hover:scale-105 transition-all duration-300;
+    @apply relative flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[var(--bg-panel)] border-2 border-[var(--gold-bright)] shadow-[0_4px_16px_rgba(120,90,50,0.15)] hover:scale-105 active:scale-95 transition-all duration-300;
   }
   .ss-badge-notification {
-    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[var(--danger)] border border-[var(--bg-panel)] flex items-center justify-center text-[10px] font-bold text-white shadow-[0_2px_4px_rgba(0,0,0,0.5)];
+    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[var(--danger)] border border-[var(--bg-panel)] flex items-center justify-center text-[10px] font-bold text-white shadow-[0_2px_4px_rgba(120,90,50,0.3)];
   }
   .ss-panel-holographic {
     @apply relative overflow-hidden border border-[rgba(200,170,110,0.25)] shadow-[0_4px_16px_rgba(120,90,50,0.08)] rounded-xl;
@@ -1099,16 +1098,16 @@ body {
 }
 
 @keyframes task-complete-flash {
-  0% { transform: scale(1); box-shadow: 0 0 0 rgba(0,240,255,0); border-color: var(--ss-border); }
-  30% { transform: scale(1.02); box-shadow: 0 0 20px rgba(0,240,255,0.6); border-color: var(--cyan); }
-  100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,240,255,0); border-color: var(--ss-border); }
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(200,154,62,0); border-color: var(--ss-border); }
+  30% { transform: scale(1.02); box-shadow: 0 0 20px rgba(200,154,62,0.4); border-color: var(--gold-bright); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(200,154,62,0); border-color: var(--ss-border); }
 }
 
 /* Per-screen backgrounds with fallback CSS radial glows layered behind the images */
 .bg-atmos-hub {
   background-image:
-    radial-gradient(circle at 80% 20%, rgba(163, 116, 255, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 15% 75%, rgba(90, 224, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(200, 154, 62, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 15% 75%, rgba(180, 150, 100, 0.05) 0%, transparent 45%),
     radial-gradient(circle at 50% 50%, rgba(255, 217, 92, 0.03) 0%, transparent 70%),
     ;
 }
@@ -1266,7 +1265,7 @@ body {
     radial-gradient(
       circle at 50% 45%,
       rgba(163, 116, 255, 0.25) 0%,
-      rgba(0, 0, 0, 0.8) 55%,
+      rgba(61, 46, 31, 0.3) 55%,
       transparent 95%
     ),
     radial-gradient(circle at 15% 15%, rgba(255, 94, 94, 0.05) 0%, transparent 40%),
@@ -1424,7 +1423,7 @@ body {
 .ambient-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 100% 80% at 50% 30%, transparent 40%, rgba(0,0,0,0.55) 100%);
+  background: radial-gradient(ellipse 100% 80% at 50% 30%, transparent 40%, rgba(61,46,31,0.12) 100%);
 }
 
 /* Content must sit above the ambient layer */
@@ -1437,16 +1436,16 @@ body {
 .game-panel {
   position: relative;
   background:
-    linear-gradient(180deg, rgba(26, 26, 42, 0.92) 0%, rgba(17, 17, 28, 0.95) 100%);
-  border: 1px solid rgba(255, 213, 79, 0.18);
+    linear-gradient(180deg, rgba(255, 252, 247, 0.95) 0%, rgba(245, 239, 230, 0.98) 100%);
+  border: 1px solid rgba(200, 154, 62, 0.25);
   /* cut top-left + bottom-right corners for that sci-fantasy HUD look */
   clip-path: polygon(
     18px 0, 100% 0, 100% calc(100% - 18px),
     calc(100% - 18px) 100%, 0 100%, 0 18px
   );
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    0 12px 40px rgba(120, 90, 50, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 /* glowing accent line along the top edge */
 .game-panel::before {
@@ -1463,8 +1462,8 @@ body {
   position: absolute;
   bottom: 8px; right: 8px;
   width: 10px; height: 10px;
-  border-right: 1px solid rgba(255, 213, 79, 0.4);
-  border-bottom: 1px solid rgba(255, 213, 79, 0.4);
+  border-right: 1px solid rgba(200, 154, 62, 0.3);
+  border-bottom: 1px solid rgba(200, 154, 62, 0.3);
 }
 
 /* HUD corner brackets — wrap any element to get framed [ ] corners */
@@ -1472,7 +1471,7 @@ body {
 .hud-corners > .hud-c {
   position: absolute;
   width: 14px; height: 14px;
-  border-color: rgba(255, 213, 79, 0.5);
+  border-color: rgba(200, 154, 62, 0.35);
   pointer-events: none;
 }
 .hud-corners > .hud-tl { top: 0; left: 0; border-top: 2px solid; border-left: 2px solid; }
@@ -1508,7 +1507,7 @@ body {
 }
 .card-interactive:hover {
   transform: translateY(-3px) scale(1.015);
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), 0 0 28px rgba(255, 213, 79, 0.12);
+  box-shadow: 0 16px 44px rgba(120, 90, 50, 0.15), 0 0 28px rgba(255, 213, 79, 0.12);
   border-color: rgba(255, 213, 79, 0.4);
   z-index: 2;
 }
@@ -1565,8 +1564,8 @@ body {
 }
 .summon-loader .ring-2 {
   inset: 12px;
-  border-bottom-color: var(--violet);
-  border-left-color: var(--cyan);
+  border-bottom-color: var(--gold-bright);
+  border-left-color: var(--gold-glow);
   animation: summon-spin 2s linear infinite reverse;
 }
 .summon-loader .ring-3 {

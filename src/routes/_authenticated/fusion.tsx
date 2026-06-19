@@ -48,7 +48,7 @@ function FusionPage() {
       qc.invalidateQueries({ queryKey: ["my-monsters"] });
       qc.invalidateQueries({ queryKey: ["profile"] });
       // eslint-disable-next-line no-restricted-syntax
-      confetti({ particleCount: 150, spread: 100, colors: ["#00f0ff", "#d4af3f"] });
+      confetti({ particleCount: 150, spread: 100, colors: ["#c89a3e", "#d4af3f", "#e8c55a"] });
       toast.success(data?.message || "Synthesis Complete!");
       setTargetId(null);
       setFodderIds([]);

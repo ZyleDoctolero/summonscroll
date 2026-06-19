@@ -119,7 +119,7 @@ export function TaskFormDialog({
                     v.type === t
                       ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
                       : "rgba(200,154,62,0.06)",
-                  color: v.type === t ? "#1a0b2e" : "var(--ink-secondary)",
+                  color: v.type === t ? "#ffffff" : "var(--ink-secondary)",
                 }}
                 /* eslint-enable no-restricted-syntax */
               >
@@ -261,7 +261,7 @@ export function TaskFormDialog({
                       background: on
                         ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
                         : "rgba(200,154,62,0.06)",
-                      color: on ? "#1a0b2e" : "var(--ink-secondary)",
+                      color: on ? "#ffffff" : "var(--ink-secondary)",
                     }}
                     /* eslint-enable no-restricted-syntax */
                   >
@@ -287,7 +287,7 @@ export function TaskFormDialog({
             disabled={saving}
             className="flex-1 py-2 rounded text-sm uppercase tracking-widest font-bold disabled:opacity-50"
             // eslint-disable-next-line no-restricted-syntax
-            style={{ background: "linear-gradient(135deg,#d4af3f,#fcd34d)", color: "#1a0b2e" }}
+            style={{ background: "linear-gradient(135deg,#d4af3f,#fcd34d)", color: "#ffffff" }}
           >
             {saving ? "Saving" : initial ? "Save" : "Create"}
           </button>

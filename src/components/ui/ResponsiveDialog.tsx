@@ -20,10 +20,10 @@ export function ResponsiveDialog({
     return (
       <Drawer.Root open={open} onOpenChange={onOpenChange} shouldScaleBackground>
         <Drawer.Portal>
-          <Drawer.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm" />
+          <Drawer.Overlay className="fixed inset-0 bg-[rgba(61,46,31,0.6)] backdrop-blur-sm" />
           <Drawer.Content className="ss-modal fixed bottom-0 left-0 right-0 rounded-b-none mt-24 max-h-[92vh] overflow-y-auto">
             {/* Drag handle */}
-            <div className="mx-auto w-12 h-1.5 rounded-full bg-white/20 mb-4" />
+            <div className="mx-auto w-12 h-1.5 rounded-full bg-[#b5a28a]/30 mb-4" />
             {title && <h2 className="t-h2 mb-4">{title}</h2>}
             {children}
           </Drawer.Content>
@@ -43,7 +43,7 @@ export function ResponsiveDialog({
           transition={{ duration: dur.normal, ease: ease.out }}
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{
-            background: "rgba(0,0,0,0.78)",
+            background: "rgba(61,46,31,0.6)",
             backdropFilter: "blur(3px)",
           }}
           onClick={() => onOpenChange(false)}

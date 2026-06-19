@@ -175,22 +175,26 @@ const DarkSprite = () => (
 
 const getElementSprite = (el: string) => {
   switch (el?.toLowerCase()) {
-    case "fire": return <FireSprite />;
-    case "water": return <WaterSprite />;
-    case "nature": return <NatureSprite />;
-    case "light": return <LightSprite />;
-    case "dark": return <DarkSprite />;
-    default: return <DarkSprite />;
+    case "fire": case "chaos": return <FireSprite />;
+    case "water": case "digital": case "stellar": return <WaterSprite />;
+    case "nature": case "primal": return <NatureSprite />;
+    case "light": case "divine": return <LightSprite />;
+    case "dark": case "void": case "death": case "dread": return <DarkSprite />;
+    case "arcane": return <LightSprite />;
+    default: return <NatureSprite />;
   }
 };
 
 const getElementColor = (el: string) => {
   switch (el?.toLowerCase()) {
-    case "fire": return "#ff5e2a";
-    case "water": return "#38b8f5";
-    case "nature": return "#3ed97a";
-    case "light": return "#ffe066";
-    case "dark": return "#c47fff";
+    case "fire": case "chaos": return "#e85d3a";
+    case "water": case "digital": return "#38b8f5";
+    case "nature": case "primal": return "#3ed97a";
+    case "light": case "divine": return "#e8b830";
+    case "dark": case "void": return "#9b6dff";
+    case "death": case "dread": return "#c44f6f";
+    case "arcane": return "#d4a030";
+    case "stellar": return "#6db8e8";
     default: return "#c9a84c";
   }
 };
@@ -225,29 +229,30 @@ function PillBtn({
 function ImageOrSprite({ url, name, element, owned, color }: { url?: string|null, name: string, element: string, owned: boolean, color: string }) {
   const [error, setError] = useState(false);
   const elColor = getElementColor(element);
-  
+
   if (!error && url) {
     return (
       <img
         src={url}
         alt={name}
-        className="w-16 h-16 object-cover mb-2"
+        className="w-full h-full object-contain p-2"
         style={{
-          mixBlendMode: owned ? "screen" : "normal",
-          maskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 80%)",
-          WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 80%)",
-          filter: owned ? `drop-shadow(0 0 8px ${color}) drop-shadow(0 4px 8px rgba(61,46,31,0.3)) contrast(1.2)` : `brightness(0.3) drop-shadow(0 0 8px ${elColor})`,
+          filter: owned
+            ? `drop-shadow(0 0 6px ${color}80) drop-shadow(0 2px 4px rgba(61,46,31,0.2))`
+            : `brightness(0) saturate(0) opacity(0.15) drop-shadow(0 0 12px ${elColor}60)`,
         }}
         onError={() => setError(true)}
       />
     );
   }
-  
+
   return (
-    <div 
-      className="w-16 h-16 mb-2 flex items-center justify-center relative"
+    <div
+      className="w-full h-full flex items-center justify-center p-2"
       style={{
-        filter: owned ? `drop-shadow(0 0 8px ${color}) contrast(1.2)` : `brightness(0) drop-shadow(0 0 8px ${elColor})`,
+        filter: owned
+          ? `drop-shadow(0 0 6px ${color}80)`
+          : `opacity(0.7)`,
       }}
     >
       {getElementSprite(element)}
@@ -352,138 +357,146 @@ function CompendiumPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 relative z-20 items-start">
-          {/* Left Sidebar: Filters */}
-          <div className="flex flex-col gap-6">
-            <div className="p-4 rounded-xl border border-[rgba(200,154,62,0.2)] shadow-[0_8px_24px_rgba(120,90,50,0.08)]" style={{ background: "rgba(255,252,247,0.9)" }}>
-              <h3 className="font-serif mb-3 text-sm uppercase tracking-widest font-bold" style={{ color: "var(--ink-secondary)" }}>
-                Progress
-              </h3>
-              <div className="text-2xl font-bold font-serif" style={{ color: "var(--ink-primary)" }}>
-                {myMonstersMap.size}{" "}
-                <span className="text-sm text-[#8b7355]/60">
+        {/* Compact filter bar */}
+        <div className="relative z-20 mb-6">
+          <div className="flex flex-col gap-3">
+            {/* Progress + Search row */}
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xl font-bold font-serif" style={{ color: "var(--ink-primary)" }}>
+                  {myMonstersMap.size}
+                </span>
+                <span className="text-xs text-[#8b7355]/60">
                   / {monstersQ.data?.monsters?.length ?? 0}
                 </span>
+                <div className="w-20 h-1.5 bg-[rgba(180,150,100,0.12)] rounded-full overflow-hidden border border-[#c89a3e]/20">
+                  <div
+                    className="h-full bg-[#c89a3e] transition-all duration-500"
+                    style={{
+                      width: `${(myMonstersMap.size / (monstersQ.data?.monsters?.length || 1)) * 100}%`,
+                    }}
+                  />
+                </div>
               </div>
-              <div className="w-full h-1.5 bg-[rgba(180,150,100,0.12)] mt-2 rounded-full overflow-hidden border border-[#c89a3e]/20">
-                <div
-                  className="h-full bg-[#c89a3e] shadow-[0_0_8px_rgba(200,154,62,0.4)] transition-all duration-500"
-                  style={{
-                    width: `${(myMonstersMap.size / (monstersQ.data?.monsters?.length || 1)) * 100}%`,
-                  }}
-                />
-              </div>
-            </div>
-
-            <div className="p-4 rounded-xl border border-[rgba(200,154,62,0.2)] shadow-[0_8px_24px_rgba(120,90,50,0.08)]" style={{ background: "rgba(255,252,247,0.9)" }}>
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search monsters…"
-                className="w-full mb-4 px-3 py-2 bg-white border border-[rgba(200,154,62,0.25)] rounded text-[var(--ink-primary)] placeholder-[#8b7355]/50 focus:outline-none focus:border-[#c89a3e] focus:shadow-[0_0_8px_rgba(200,154,62,0.2)] transition-all font-serif"
+                className="flex-1 px-3 py-2 bg-white border border-[rgba(200,154,62,0.25)] rounded-lg text-[var(--ink-primary)] placeholder-[#8b7355]/50 focus:outline-none focus:border-[#c89a3e] focus:shadow-[0_0_8px_rgba(200,154,62,0.2)] transition-all font-serif text-sm"
               />
-              <div className="flex flex-wrap gap-2 mb-4">
-                <PillBtn active={rarityFilter === ""} onClick={() => setRarityFilter("")}>
-                  All Rarities
-                </PillBtn>
+            </div>
+
+            {/* Filter pills row */}
+            <div className="flex flex-wrap gap-1.5">
+              <PillBtn active={rarityFilter === ""} onClick={() => setRarityFilter("")}>
+                All
+              </PillBtn>
+              <PillBtn active={rarityFilter === "common"} onClick={() => setRarityFilter("common")}>
+                Common
+              </PillBtn>
+              <PillBtn active={rarityFilter === "rare"} onClick={() => setRarityFilter("rare")}>
+                Rare
+              </PillBtn>
+              <PillBtn active={rarityFilter === "epic"} onClick={() => setRarityFilter("epic")}>
+                Epic
+              </PillBtn>
+              <PillBtn active={rarityFilter === "legendary"} onClick={() => setRarityFilter("legendary")}>
+                Legend
+              </PillBtn>
+              <PillBtn active={rarityFilter === "mythic"} onClick={() => setRarityFilter("mythic")}>
+                Mythic
+              </PillBtn>
+              <span className="w-px bg-[#b5a28a]/30 mx-1 self-stretch" />
+              <PillBtn active={realmFilter === null} onClick={() => setRealmFilter(null)}>
+                All Realms
+              </PillBtn>
+              {(realmsQ.data?.realms ?? []).map((r: RealmData) => (
                 <PillBtn
-                  active={rarityFilter === "common"}
-                  onClick={() => setRarityFilter("common")}
+                  key={r.id}
+                  active={realmFilter === r.id}
+                  onClick={() => setRealmFilter(r.id)}
                 >
-                  Common
+                  {r.icon} {r.name}
+                  <span className="opacity-50 text-[9px] ml-1">
+                    {realmStats[r.id]?.owned || 0}/{realmStats[r.id]?.total || 0}
+                  </span>
                 </PillBtn>
-                <PillBtn active={rarityFilter === "rare"} onClick={() => setRarityFilter("rare")}>
-                  Rare
-                </PillBtn>
-                <PillBtn active={rarityFilter === "epic"} onClick={() => setRarityFilter("epic")}>
-                  Epic
-                </PillBtn>
-                <PillBtn
-                  active={rarityFilter === "legendary"}
-                  onClick={() => setRarityFilter("legendary")}
-                >
-                  Legend
-                </PillBtn>
-                <PillBtn
-                  active={rarityFilter === "mythic"}
-                  onClick={() => setRarityFilter("mythic")}
-                >
-                  Mythic
-                </PillBtn>
-              </div>
-              <div className="flex flex-col gap-2">
-                <PillBtn active={realmFilter === null} onClick={() => setRealmFilter(null)}>
-                  All Realms
-                </PillBtn>
-                {(realmsQ.data?.realms ?? []).map((r: RealmData) => (
-                  <PillBtn
-                    key={r.id}
-                    active={realmFilter === r.id}
-                    onClick={() => setRealmFilter(r.id)}
-                  >
-                    <div className="flex justify-between w-full">
-                      <span>
-                        {r.icon} {r.name}
-                      </span>
-                      <span className="opacity-50 text-[10px]">
-                        {realmStats[r.id]?.owned || 0}/{realmStats[r.id]?.total || 0}
-                      </span>
-                    </div>
-                  </PillBtn>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Right Side: Grid */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
+        {/* Monster Grid */}
+        <div className="relative z-20">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2.5">
             {filtered.map(
               (m: { id: string; art_url?: string | null; name: string; rarity: string; element: string }) => {
                 const ownsList = myMonstersMap.get(m.id) || [];
                 const owned = ownsList.length > 0;
-                const color = RARITY_COLOR[m.rarity as keyof typeof RARITY_COLOR] || "white";
+                const color = RARITY_COLOR[m.rarity as keyof typeof RARITY_COLOR] || "#c9a84c";
+                const elColor = getElementColor(m.element);
                 return (
                   <div
                     key={m.id}
                     onClick={() => {
                       if (owned) {
-                        // Just pick the highest level one if multiple
                         const highest = [...ownsList].sort((a, b) => b.level - a.level)[0];
                         setSelectedUM(highest);
                         setModalTab("details");
                       }
                     }}
-                    className="relative overflow-hidden group transition-all hover:scale-105 cursor-pointer rounded-xl border shadow-[0_4px_12px_rgba(120,90,50,0.1)]"
+                    className={`relative overflow-hidden group transition-all duration-200 rounded-xl border ${owned ? "cursor-pointer hover:scale-[1.04] hover:-translate-y-0.5" : ""}`}
                     style={{
                       aspectRatio: "3/4",
-                      borderColor: owned ? color : "rgba(180,150,100,0.15)",
+                      borderColor: owned ? `${color}60` : "rgba(180,150,100,0.12)",
                       background: owned
-                        ? "linear-gradient(145deg, #faf6f0, rgba(245,239,230,0.9))"
-                        : "linear-gradient(145deg, #f0ebe3, rgba(230,220,205,0.8))",
-                      boxShadow: owned ? `0 0 15px ${color}30` : "none",
+                        ? `linear-gradient(160deg, #faf6f0, ${color}08)`
+                        : `linear-gradient(160deg, #eee8dc, ${elColor}06)`,
+                      boxShadow: owned
+                        ? `0 4px 16px ${color}20, inset 0 1px 0 rgba(255,255,255,0.5)`
+                        : "0 2px 8px rgba(120,90,50,0.06), inset 0 1px 0 rgba(255,255,255,0.3)",
                     }}
                   >
-                    <div className="absolute inset-0 p-2 flex flex-col items-center justify-center">
-                      <ImageOrSprite url={m.art_url} name={m.name} element={m.element} owned={owned} color={color} />
+                    {/* Element indicator dot */}
+                    <div
+                      className="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full border border-white/50 z-10"
+                      style={{ background: elColor, boxShadow: `0 0 6px ${elColor}60` }}
+                      title={m.element}
+                    />
+
+                    {/* Monster art area */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-1.5">
+                      <div className="flex-1 w-full flex items-center justify-center">
+                        <ImageOrSprite url={m.art_url} name={m.name} element={m.element} owned={owned} color={color} />
+                      </div>
                       <span
-                        className="text-[10px] font-bold text-center w-full truncate px-1 relative z-10"
-                        style={{ color: owned ? "var(--ink-primary)" : "#8b7355", textShadow: owned ? "0 1px 2px rgba(200,154,62,0.15)" : "none" }}
+                        className="text-[10px] font-bold text-center w-full truncate px-1 pb-1 relative z-10"
+                        style={{ color: owned ? "var(--ink-primary)" : "#a09080" }}
                       >
                         {owned ? m.name : "???"}
                       </span>
                     </div>
+
+                    {/* Rarity badge */}
                     {owned && (
                       <div
-                        className="absolute top-1 left-1 text-[8px] uppercase font-serif tracking-widest font-bold px-1 rounded bg-white/80 border backdrop-blur-sm"
-                        style={{ color, borderColor: color, boxShadow: `0 0 8px ${color}40` }}
+                        className="absolute top-1 left-1 text-[7px] uppercase font-serif tracking-widest font-bold px-1.5 py-0.5 rounded-md bg-white/80 border backdrop-blur-sm z-10"
+                        style={{ color, borderColor: `${color}50` }}
                       >
                         {m.rarity}
                       </div>
                     )}
                     {ownsList.length > 1 && (
-                      <div className="absolute top-1 right-1 text-[8px] bg-white/80 border border-[#c89a3e]/30 text-[var(--ink-primary)] px-1 rounded font-bold font-serif backdrop-blur-sm">
+                      <div className="absolute bottom-6 right-1 text-[8px] bg-white/80 border border-[#c89a3e]/30 text-[var(--ink-primary)] px-1 rounded font-bold font-serif backdrop-blur-sm z-10">
                         x{ownsList.length}
                       </div>
+                    )}
+
+                    {/* Unowned overlay pattern */}
+                    {!owned && (
+                      <div className="absolute inset-0 rounded-xl" style={{
+                        background: `radial-gradient(circle at 50% 40%, transparent 30%, ${elColor}08 100%)`,
+                      }} />
                     )}
                   </div>
                 );
@@ -619,7 +632,7 @@ function CompendiumPage() {
                           >
                             <button
                               onClick={() => unequipMut.mutate(art.id)}
-                              className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 text-[10px] text-red-400 bg-red-900/40 px-1 rounded transition-opacity hover:bg-red-900/80 uppercase font-bold tracking-widest"
+                              className="absolute top-1 right-1 opacity-0 group-hover:opacity-100 text-[10px] text-red-600 bg-red-100 px-1.5 py-0.5 rounded transition-opacity hover:bg-red-200 uppercase font-bold tracking-widest border border-red-200"
                             >
                               Unequip
                             </button>

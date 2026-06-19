@@ -155,8 +155,8 @@ function ProfilePage() {
   return (
     <AppShell profile={profile}>
       <AtmosphereBackdrop realm="dark" />
-      <div className="bg-[var(--bg-stage)] bg-[var(--bg-stage)]-hub relative min-h-screen">
-        <div className="p-6 md:p-10 max-w-6xl">
+      <div className="relative min-h-screen">
+        <div className="p-6 md:p-10 max-w-6xl mx-auto">
           {/* Hero section */}
           <div className="game-panel p-5 mb-6">
             <div className="flex items-center gap-4 mb-4">
@@ -301,7 +301,7 @@ function ProfilePage() {
           {/* Companion Loadout */}
           {tab === ("companion-loadout" as Tab) && (
             <div className="space-y-6">
-              <div className="ss-card p-4 bg-gradient-to-r from-[rgba(138,43,226,0.2)] to-transparent border-l-4 border-[var(--primary)]">
+              <div className="ss-card p-4 bg-gradient-to-r from-[rgba(200,154,62,0.08)] to-transparent border-l-4 border-[var(--gold-bright)]">
                 <div className="flex justify-between items-center mb-2">
                   <h2
                     className="t-h2 text-lg font-bold flex items-center gap-2"
@@ -310,16 +310,16 @@ function ProfilePage() {
                     <Icon
                       name="sparkle"
                       size={20}
-                      color="rgb(138,43,226)"
-                      className="drop-shadow-[0_0_10px_rgb(138,43,226)]"
+                      color="var(--gold-bright)"
+                      className="drop-shadow-[0_0_10px_rgba(200,154,62,0.4)]"
                     />
                     Soul Load
                   </h2>
                   <div
                     className="text-xl font-bold font-serif"
                     style={{
-                      color: "var(--accent-void)",
-                      textShadow: "0 0 10px var(--accent-void)",
+                      color: "var(--gold-bright)",
+                      textShadow: "0 0 10px rgba(200,154,62,0.3)",
                     }}
                   >
                     {profile.soul_load_current ?? 0}{" "}
@@ -339,8 +339,8 @@ function ProfilePage() {
                     className="h-full transition-all duration-1000"
                     style={{
                       width: `${Math.min(100, ((profile.soul_load_current ?? 0) / (profile.soul_load_max ?? 10)) * 100)}%`,
-                      background: "var(--accent-void)",
-                      boxShadow: "0 0 10px var(--accent-void)",
+                      background: "linear-gradient(90deg, var(--gold-bright), #c89a3e)",
+                      boxShadow: "0 0 10px rgba(200,154,62,0.3)",
                     }}
                   />
                 </div>
@@ -374,7 +374,7 @@ function ProfilePage() {
                                 : `/sprites/monsters/placeholder.png`
                             }
                             alt={equippedMonster.monster.name}
-                            className="w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] my-2"
+                            className="w-20 h-20 object-contain drop-shadow-[0_0_15px_rgba(200,154,62,0.2)] my-2"
                           />
                           <p className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
                             {equippedMonster.monster.name}
@@ -386,7 +386,7 @@ function ProfilePage() {
                           <button
                             onClick={() => equipMut.mutate({ slot, monsterId: null })}
                             disabled={equipMut.isPending}
-                            className="ss-btn w-full py-1 text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity bg-red-900/50 border-red-500/50 hover:bg-red-900"
+                            className="ss-btn w-full py-1 text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity bg-red-100 border-red-300 text-red-700 hover:bg-red-200"
                           >
                             Unbind
                           </button>

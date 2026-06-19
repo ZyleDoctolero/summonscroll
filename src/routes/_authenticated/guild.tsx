@@ -96,7 +96,7 @@ function GuildPage() {
   return (
     <AppShell profile={profile}>
       <AtmosphereBackdrop realm="iron" />
-      <div className="p-6 md:p-10 max-w-6xl">
+      <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Guild
         </h1>

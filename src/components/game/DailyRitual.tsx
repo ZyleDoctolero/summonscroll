@@ -65,7 +65,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
 
       <div
         className="max-h-[300px] overflow-y-auto rounded-xl p-2 my-4 space-y-1"
-        style={{ background: "rgba(0,0,0,0.32)" }}
+        style={{ background: "rgba(180,150,100,0.1)" }}
       >
         {candidates.length === 0 ? (
           <p className="text-center py-8 text-xs" style={{ color: "var(--ink-tertiary)" }}>

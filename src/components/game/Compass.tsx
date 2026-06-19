@@ -248,10 +248,10 @@ export function Compass({
       boxShadow: "0 4px 20px rgba(255, 94, 94, 0.03)",
     },
     rare: {
-      background: "rgba(163, 116, 255, 0.03)",
-      "--ss-glow-start": "var(--violet)",
-      "--ss-glow-end": "var(--cyan)",
-      boxShadow: "0 4px 20px rgba(163, 116, 255, 0.03)",
+      background: "rgba(200, 154, 62, 0.04)",
+      "--ss-glow-start": "var(--gold-bright)",
+      "--ss-glow-end": "var(--gold-glow)",
+      boxShadow: "0 4px 20px rgba(200, 154, 62, 0.06)",
     },
   };
 

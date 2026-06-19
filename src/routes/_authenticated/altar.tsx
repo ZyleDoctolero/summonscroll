@@ -106,7 +106,7 @@ function AltarPage() {
             Synthesizing
           </motion.h2>
           {/* CRT Overlay just for the cutscene */}
-          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(0,229,255,0)_50%,rgba(0,229,255,0.05)_50%)] bg-[length:100%_4px]" />
+          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(200,154,62,0)_50%,rgba(200,154,62,0.03)_50%)] bg-[length:100%_4px]" />
         </div>
       </AppShell>
     );
@@ -275,7 +275,7 @@ function AltarPage() {
                         <span className="text-[var(--gold-bright)] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">
                           ★ PULL ×10 ★
                         </span>
-                        <div className="flex items-center gap-2 text-yellow-100 text-base mt-1">
+                        <div className="flex items-center gap-2 text-[#8b6914] text-base mt-1">
                           <Icon
                             name={icon as React.ComponentProps<typeof Icon>["name"]}
                             size={16}

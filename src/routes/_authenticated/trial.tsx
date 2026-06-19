@@ -94,7 +94,7 @@ function TrialPage() {
   return (
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="elder" />
-      <div className="bg-[var(--bg-stage)] bg-[var(--bg-stage)]-trial p-6 md:p-10 max-w-6xl min-h-screen">
+      <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--danger)" }}>
           Trial of Echoes
         </h1>

@@ -229,8 +229,8 @@ function IslandPage() {
 
   return (
     <AppShell profile={profileQ.data.profile}>
-      <div className="bg-[var(--bg-stage)] bg-[var(--bg-stage)]-hub relative min-h-screen">
-        <div className="p-6 md:p-10 max-w-6xl">
+      <div className="relative min-h-screen">
+        <div className="p-6 md:p-10 max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <h1 className="t-h1 text-3xl font-bold" style={{ color: "var(--gold-bright)" }}>
               Cultivation Realm

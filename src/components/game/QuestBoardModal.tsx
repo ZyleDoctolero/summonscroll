@@ -39,7 +39,7 @@ export function QuestBoardModal({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+          className="fixed inset-0 z-[60] flex items-end md:items-center justify-center p-0 md:p-8"
         >
           <motion.div
             initial={{ opacity: 0 }}
@@ -54,10 +54,10 @@ export function QuestBoardModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-5xl max-h-[85vh] bg-[rgba(255,252,247,0.96)] border-2 border-[#c89a3e]/30 rounded-xl shadow-[0_8px_40px_rgba(120,90,50,0.15)] flex flex-col overflow-hidden"
+            className="relative w-full max-w-5xl h-[100dvh] md:h-auto md:max-h-[85vh] bg-[rgba(255,252,247,0.96)] border-0 md:border-2 border-[#c89a3e]/30 rounded-t-2xl md:rounded-xl shadow-[0_8px_40px_rgba(120,90,50,0.15)] flex flex-col overflow-hidden"
           >
             {/* Modal Header */}
-            <div className="p-4 md:p-6 border-b border-[#c89a3e]/20 flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.08)] to-transparent">
+            <div className="p-4 md:p-6 border-b border-[#c89a3e]/20 flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.08)] to-transparent shrink-0">
               <h2
                 className="t-h2 text-2xl"
                 style={{
@@ -84,7 +84,7 @@ export function QuestBoardModal({
             </div>
 
             {/* Modal Body */}
-            <div className="flex-1 overflow-y-auto p-4 md:p-6 custom-scrollbar">
+            <div className="flex-1 overflow-y-auto p-4 md:p-6 pb-24 md:pb-6 custom-scrollbar">
               <div
                 className="flex gap-6 mb-6 border-b-2"
                 style={{ borderColor: "rgba(200,154,62,0.25)" }}
@@ -93,7 +93,7 @@ export function QuestBoardModal({
                   <button
                     key={t}
                     onClick={() => setTab(t)}
-                    className={`ss-tab-d pb-2 text-base font-semibold capitalize ${tab === t ? "active text-[#b8860b]" : "text-[#8b7355] hover:text-[#c89a3e]"}`}
+                    className={`ss-tab-d pb-2 text-base font-semibold capitalize min-h-[44px] ${tab === t ? "active text-[#b8860b]" : "text-[#8b7355] hover:text-[#c89a3e]"}`}
                   >
                     {t === "habit" ? "Habits" : t === "daily" ? "Dailies" : "To-Dos"}
                   </button>
@@ -117,7 +117,7 @@ export function QuestBoardModal({
                   }}
                 />
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {filtered.map((task) => (
                     <TaskCard
                       key={task.id}
