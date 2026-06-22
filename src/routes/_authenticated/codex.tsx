@@ -205,7 +205,7 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
         </div>
 
         <div
-          className="flex items-center gap-2 mt-4 text-[10px]"
+          className="flex items-center gap-2 mt-4 text-[11px]"
           style={{ color: "var(--ink-secondary)" }}
         >
           <span>Less</span>
@@ -346,10 +346,10 @@ function AwakeningLog({
             <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
               {e.user_monster?.monster?.name ?? "Unknown"}
             </p>
-            <p className="text-[10px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
+            <p className="text-[11px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
               {e.trigger_text}
             </p>
-            <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>
+            <p className="text-[11px] mt-1" style={{ color: "var(--ink-secondary)" }}>
               {new Date(e.created_at).toLocaleString()}
             </p>
           </div>
@@ -362,7 +362,7 @@ function AwakeningLog({
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="ss-pane flex-1">
-      <div className="text-[10px] uppercase" style={{ color: "var(--ink-secondary)" }}>
+      <div className="text-[11px] uppercase" style={{ color: "var(--ink-secondary)" }}>
         {label}
       </div>
       <div className="text-sm font-bold mt-0.5" style={{ color: "var(--gold-bright)" }}>
@@ -376,7 +376,7 @@ function Block({ label, body }: { label: string; body: string }) {
   return (
     <div className="ss-pane">
       <div
-        className="text-[10px] uppercase tracking-wider mb-1"
+        className="text-[11px] uppercase tracking-wider mb-1"
         style={{ color: "var(--ink-secondary)" }}
       >
         {label}

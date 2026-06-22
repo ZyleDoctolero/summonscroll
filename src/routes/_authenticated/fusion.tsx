@@ -133,7 +133,7 @@ function FusionPage() {
                 <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>
                   {targetMonster.monster.name}
                 </p>
-                <p className="text-[10px]" style={{ color: "#8a6d3b" }}>
+                <p className="text-[11px]" style={{ color: "#8a6d3b" }}>
                   Level {targetMonster.level}
                 </p>
               </div>
@@ -188,7 +188,7 @@ function FusionPage() {
                             }}
                           />
                         </div>
-                        <p className="text-[10px] truncate" style={{ color: "var(--ink-primary)" }}>
+                        <p className="text-[11px] truncate" style={{ color: "var(--ink-primary)" }}>
                           {um.monster.name}
                         </p>
                         <button
@@ -198,7 +198,7 @@ function FusionPage() {
                             n[i] = null;
                             setFodderIds(n);
                           }}
-                          className="absolute -top-2 -right-2 bg-red-900 text-red-100 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold border border-red-500 hover:bg-red-500 hover:text-[var(--ink-secondary)]"
+                          className="absolute -top-2 -right-2 bg-red-900 text-red-100 rounded-full w-5 h-5 flex items-center justify-center text-[11px] font-bold border border-red-500 hover:bg-red-500 hover:text-[var(--ink-secondary)]"
                         >
                           ×
                         </button>
@@ -216,7 +216,7 @@ function FusionPage() {
                       style={{ borderColor: "var(--danger)", color: "var(--danger)", opacity: 0.6 }}
                     >
                       <span className="text-2xl mb-1">+</span>
-                      <span className="text-[9px] uppercase tracking-widest">
+                      <span className="text-[11px] uppercase tracking-widest">
                         {currentStar}★ Fodder
                       </span>
                     </button>
@@ -245,7 +245,7 @@ function FusionPage() {
               {synthesizeMut.isPending ? "Synthesizing..." : "Synthesize"}
             </button>
             {!isReady && (
-              <p className="text-[10px] mt-3" style={{ color: "var(--ink-secondary)" }}>
+              <p className="text-[11px] mt-3" style={{ color: "var(--ink-secondary)" }}>
                 Must fill all sacrifice slots to proceed.
               </p>
             )}
@@ -306,7 +306,7 @@ function FusionPage() {
                       style={{ borderColor: `${RARITY_COLOR[r]}40` }}
                     >
                       <div
-                        className="absolute top-1 right-1 text-[9px] font-bold z-10 drop-shadow-md"
+                        className="absolute top-1 right-1 text-[11px] font-bold z-10 drop-shadow-md"
                         style={{ color: "var(--gold-bright)" }}
                       >
                         {umStar}★
@@ -325,12 +325,12 @@ function FusionPage() {
                         />
                       </div>
                       <p
-                        className="text-[10px] font-bold truncate"
+                        className="text-[11px] font-bold truncate"
                         style={{ color: "var(--ink-primary)" }}
                       >
                         {um.monster.name}
                       </p>
-                      <p className="text-[9px]" style={{ color: "var(--ink-secondary)" }}>
+                      <p className="text-[11px]" style={{ color: "var(--ink-secondary)" }}>
                         Lvl {um.level}
                       </p>
                     </button>

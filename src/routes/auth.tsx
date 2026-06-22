@@ -61,7 +61,7 @@ function AuthPage() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-md bg-white/80 backdrop-blur-md p-5 sm:p-8 rounded-2xl border border-[rgba(200,170,110,0.25)] shadow-[0_8px_40px_rgba(120,90,50,0.1)]">
+      <div className="relative z-10 w-full max-w-md backdrop-blur-md p-5 sm:p-8 rounded-2xl border shadow-[0_8px_60px_rgba(0,0,0,0.6)]" style={{ background: "rgba(18,14,9,0.92)", borderColor: "rgba(200,154,62,0.2)" }}>
         <div className="text-center mb-8">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-display font-bold tracking-wider md:tracking-widest text-[#b8860b]">
             SUMMONSCROLL
@@ -71,14 +71,14 @@ function AuthPage() {
           </p>
         </div>
 
-        <div className="flex justify-center gap-2 mb-8 p-1 bg-[rgba(240,230,210,0.5)] rounded-lg border border-[rgba(200,170,110,0.15)]">
+        <div className="flex justify-center gap-2 mb-8 p-1 bg-[rgba(255,200,80,0.05)] rounded-lg border border-[rgba(200,154,62,0.15)]">
           {(["signin", "signup"] as const).map((m) => (
             <button
               key={m}
               onClick={() => setMode(m)}
               className={`flex-1 py-2 text-xs font-bold uppercase tracking-wider rounded transition-all duration-300 ${
                 mode === m
-                  ? "bg-white text-[#b8860b] shadow-sm"
+                  ? "bg-[rgba(200,154,62,0.15)] text-[#c89a3e] shadow-sm"
                   : "text-[var(--ink-tertiary)] hover:text-[var(--ink-secondary)]"
               }`}
             >
@@ -95,7 +95,7 @@ function AuthPage() {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name..."
                 maxLength={40}
-                className="w-full bg-white border border-[rgba(200,170,110,0.25)] rounded-lg px-4 py-3 text-[var(--ink-primary)] placeholder:text-[var(--ink-tertiary)] focus:outline-none focus:border-[#c89a3e] focus:ring-1 focus:ring-[#c89a3e]/30 transition-all text-sm"
+                className="w-full bg-[rgba(255,200,80,0.04)] border border-[rgba(200,154,62,0.18)] rounded-lg px-4 py-3 text-[var(--ink-primary)] placeholder:text-[var(--ink-tertiary)] focus:outline-none focus:border-[#c89a3e] focus:ring-1 focus:ring-[#c89a3e]/30 transition-all text-sm"
               />
             </Field>
           )}
@@ -106,7 +106,7 @@ function AuthPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="w-full bg-white border border-[rgba(200,170,110,0.25)] rounded-lg px-4 py-3 text-[var(--ink-primary)] placeholder:text-[var(--ink-tertiary)] focus:outline-none focus:border-[#c89a3e] focus:ring-1 focus:ring-[#c89a3e]/30 transition-all text-sm"
+              className="w-full bg-[rgba(255,200,80,0.04)] border border-[rgba(200,154,62,0.18)] rounded-lg px-4 py-3 text-[var(--ink-primary)] placeholder:text-[var(--ink-tertiary)] focus:outline-none focus:border-[#c89a3e] focus:ring-1 focus:ring-[#c89a3e]/30 transition-all text-sm"
             />
           </Field>
           <Field label="Password">
@@ -118,7 +118,7 @@ function AuthPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="********"
-                className="w-full bg-white border border-[rgba(200,170,110,0.25)] rounded-lg pl-4 pr-16 py-3 text-[var(--ink-primary)] placeholder:text-[var(--ink-tertiary)] focus:outline-none focus:border-[#c89a3e] focus:ring-1 focus:ring-[#c89a3e]/30 transition-all text-sm"
+                className="w-full bg-[rgba(255,200,80,0.04)] border border-[rgba(200,154,62,0.18)] rounded-lg pl-4 pr-16 py-3 text-[var(--ink-primary)] placeholder:text-[var(--ink-tertiary)] focus:outline-none focus:border-[#c89a3e] focus:ring-1 focus:ring-[#c89a3e]/30 transition-all text-sm"
               />
               <button
                 type="button"

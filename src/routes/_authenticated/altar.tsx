@@ -150,15 +150,21 @@ function AltarPage() {
 
         {/* Left Side: Banner Selection (Vertical Tabs) */}
         <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[var(--gold-bright)]/30 bg-[var(--bg-stage)]/50 backdrop-blur-md">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[rgba(127,119,221,0.12)] to-transparent border-2 border-[rgba(127,119,221,0.2)] flex items-center justify-center mb-3 shadow-[0_0_16px_rgba(127,119,221,0.1)]">
+            <Icon name="altar" size={28} color="var(--violet)" />
+          </div>
           <h1 className="text-4xl font-serif font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-[var(--gold-bright)] to-[var(--ink-secondary)] tracking-widest drop-shadow-[0_0_10px_rgba(212,175,63,0.8)]">
             SOUL RESONANCE ARRAY
           </h1>
           <div className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
-            {banners.map((b) => {
+            {banners.map((b, i) => {
               const isActive = selectedBanner?.id === b.id;
               return (
-                <button
+                <motion.button
                   key={b.id}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
                   onClick={() => setSelectedBannerId(b.id)}
                   className={`relative flex items-center justify-start px-6 py-4 rounded-[16px] border-2 transition-all duration-300 overflow-hidden group min-w-[200px] ${
                     isActive
@@ -174,7 +180,7 @@ function AltarPage() {
                   >
                     {b.name}
                   </span>
-                </button>
+                </motion.button>
               );
             })}
           </div>

@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
+import { motion } from "motion/react";
 import { AppShell } from "@/components/game/AppShell";
 import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -68,6 +69,9 @@ function QuestsPage() {
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="wild" />
       <div className="p-6 md:p-10 max-w-6xl">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[rgba(232,93,58,0.12)] to-transparent border-2 border-[rgba(232,93,58,0.2)] flex items-center justify-center mb-3 shadow-[0_0_16px_rgba(232,93,58,0.1)]">
+          <Icon name="target" size={28} color="var(--danger)" />
+        </div>
         <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
           Quests
         </h1>
@@ -107,8 +111,15 @@ function QuestsPage() {
                 }}
               />
             ) : (
-              (activeQ.data?.goals ?? []).map((g) => (
-                <GoalCard key={g.id} goal={g} onDelete={() => delMut.mutate(g.id)} />
+              (activeQ.data?.goals ?? []).map((g, i) => (
+                <motion.div
+                  key={g.id}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
+                >
+                  <GoalCard goal={g} onDelete={() => delMut.mutate(g.id)} />
+                </motion.div>
               ))
             )}
           </div>
@@ -124,9 +135,12 @@ function QuestsPage() {
                 body="When you slay your first quarterly boss, the head hangs here."
               />
             ) : (
-              (slainQ.data?.goals ?? []).map((g) => (
-                <div
+              (slainQ.data?.goals ?? []).map((g, i) => (
+                <motion.div
                   key={g.id}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
                   className="game-panel p-5"
                   style={{ borderColor: "var(--ss-hairline-active)" }}
                 >
@@ -149,7 +163,7 @@ function QuestsPage() {
                       <span>+1 Tome</span>
                     </span>
                   </div>
-                </div>
+                </motion.div>
               ))
             )}
           </div>
@@ -184,7 +198,7 @@ function QuestsPage() {
 
               <div>
                 <p
-                  className="text-[10px] uppercase tracking-widest mb-2 font-semibold"
+                  className="text-[11px] uppercase tracking-widest mb-2 font-semibold"
                   style={{ color: "var(--ink-secondary)" }}
                 >
                   Cadence
@@ -208,7 +222,7 @@ function QuestsPage() {
                         >
                           {def.label}
                         </p>
-                        <p className="text-[10px] mt-0.5" style={{ color: "var(--ink-secondary)" }}>
+                        <p className="text-[11px] mt-0.5" style={{ color: "var(--ink-secondary)" }}>
                           {def.hp.toLocaleString()} HP · {def.days}d
                         </p>
                       </button>
@@ -247,7 +261,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
             </span>
             {goal.identity && (
               <span
-                className="text-[10px] uppercase tracking-widest"
+                className="text-[11px] uppercase tracking-widest"
                 style={{ color: "var(--ink-secondary)" }}
               >
                 · {goal.identity}
@@ -258,7 +272,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
             {goal.title}
           </h3>
         </div>
-        <button onClick={onDelete} className="ss-btn ss-btn-ghost text-[10px] min-h-[32px] px-3">
+        <button onClick={onDelete} className="ss-btn ss-btn-ghost text-[11px] min-h-[32px] px-3">
           Abandon
         </button>
       </div>
@@ -282,7 +296,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
           }}
         />
       </div>
-      <p className="text-[10px] mt-2" style={{ color: "var(--ink-secondary)" }}>
+      <p className="text-[11px] mt-2" style={{ color: "var(--ink-secondary)" }}>
         {daysLeft} day{daysLeft === 1 ? "" : "s"} left · Link tasks via Task Edit dialog to drain
         HP.
       </p>
@@ -294,7 +308,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   return (
     <label className="block">
       <div
-        className="text-[10px] uppercase tracking-widest mb-1 font-semibold"
+        className="text-[11px] uppercase tracking-widest mb-1 font-semibold"
         style={{ color: "var(--ink-secondary)" }}
       >
         {label}

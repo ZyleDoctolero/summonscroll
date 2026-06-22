@@ -165,17 +165,17 @@
 
 /* ─── SummonScroll Game Design Tokens ─── */
 :root {
-  /* ─── Warm Fantasy Palette (Goldkeeper-inspired) ─── */
-  /* Backgrounds — warm creams and sand, never harsh */
-  --bg-deep: #faf6f0; /* warm parchment */
-  --bg-stage: #f5efe6; /* slightly deeper cream */
-  --bg-panel: rgba(255, 252, 247, 0.85); /* frosted white-cream */
-  --bg-pane: rgba(245, 235, 220, 0.5); /* inner warm sand */
+  /* ─── Night Palette ─── */
+  /* Backgrounds — deep dark, slight warm undertone */
+  --bg-deep: #0c0a07; /* near black, warm */
+  --bg-stage: #13100c; /* slightly lighter dark */
+  --bg-panel: rgba(28, 23, 15, 0.94); /* dark frosted panel */
+  --bg-pane: rgba(38, 30, 18, 0.7); /* inner dark pane */
 
-  /* Text/Ink — warm darks, readable and soft */
-  --ink-primary: #3d2e1e; /* warm dark brown */
-  --ink-secondary: #8b7355; /* muted bronze */
-  --ink-tertiary: #b5a28a; /* soft tan */
+  /* Text/Ink — inverted, light on dark */
+  --ink-primary: #f0e8d8; /* warm white */
+  --ink-secondary: #a8916e; /* muted gold-grey */
+  --ink-tertiary: #6a5840; /* soft dark tan */
 
   /* Signature Colors */
   --fire: #ff5e2a;
@@ -201,7 +201,7 @@
   --ss-bg-surface: var(--bg-stage);
   --ss-bg-elevated: var(--bg-panel);
   --ss-bg-hover: var(--bg-pane);
-  --ss-bg-overlay: rgba(60, 40, 20, 0.4);
+  --ss-bg-overlay: rgba(0, 0, 0, 0.6);
 
   --ss-text-primary: var(--ink-primary);
   --ss-text-secondary: var(--ink-secondary);
@@ -257,17 +257,17 @@
   --ss-radius-pill: 9999px;
 
   /* ─── Elevation scale ─── */
-  --ss-shadow-low: 0 2px 6px rgba(120, 90, 50, 0.08);
-  --ss-shadow-mid: 0 8px 24px rgba(120, 90, 50, 0.1);
-  --ss-shadow-high: 0 24px 64px rgba(120, 90, 50, 0.14);
+  --ss-shadow-low: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --ss-shadow-mid: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --ss-shadow-high: 0 24px 72px rgba(0, 0, 0, 0.6);
 
-  /* Inset highlight — gives surfaces faux "rim lighting" */
-  --ss-inset-edge: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  /* Inset highlight — faint rim on dark surfaces */
+  --ss-inset-edge: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
   /* ─── Hairlines ─── */
-  --ss-hairline: 1px solid rgba(180, 150, 100, 0.15);
-  --ss-hairline-soft: 1px solid rgba(180, 150, 100, 0.08);
-  --ss-hairline-active: 1px solid rgba(200, 154, 62, 0.4);
+  --ss-hairline: 1px solid rgba(200, 154, 62, 0.1);
+  --ss-hairline-soft: 1px solid rgba(200, 154, 62, 0.06);
+  --ss-hairline-active: 1px solid rgba(200, 154, 62, 0.35);
 
   /* ─── Realm Palettes (12 realms × 4 colors each) ─── */
   /* I. Ancient Vaults — Arcane */
@@ -504,13 +504,13 @@
 .font-lore { font-family: 'Spectral', serif; font-style: italic; }
 
 html {
-  color-scheme: light;
+  color-scheme: dark;
 }
 body {
   background-color: var(--bg-deep);
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255, 213, 79, 0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(200, 154, 62, 0.05) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200, 154, 62, 0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(163, 116, 255, 0.04) 0%, transparent 60%);
   background-attachment: fixed;
   color: var(--ink-primary);
   font-family: var(--ss-font-body);
@@ -524,49 +524,49 @@ body {
 
 /* ─── Cards ─── */
 .ss-card {
-  background: rgba(255, 252, 247, 0.9);
-  border: 1px solid rgba(200, 170, 110, 0.2);
+  background: rgba(28, 23, 15, 0.9);
+  border: 1px solid rgba(200, 154, 62, 0.12);
   border-radius: var(--ss-radius-lg);
   padding: var(--ss-space-4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: var(--ss-shadow-mid), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .ss-card:hover {
-  border-color: rgba(200, 154, 62, 0.4);
-  box-shadow: var(--ss-shadow-high), 0 0 15px rgba(200, 154, 62, 0.08);
+  border-color: rgba(200, 154, 62, 0.28);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 20px rgba(200, 154, 62, 0.06);
 }
 
 /* Bigger, more important surface — hero card on a screen */
 .ss-card-hero {
-  background: linear-gradient(180deg, var(--bg-pane) 0%, var(--bg-stage) 100%);
-  border: var(--ss-hairline-active);
+  background: linear-gradient(180deg, rgba(30,24,14,0.96) 0%, rgba(18,14,8,0.98) 100%);
+  border: 1px solid rgba(200, 154, 62, 0.2);
   border-radius: var(--ss-radius-lg);
   padding: var(--ss-space-5);
-  box-shadow: var(--ss-shadow-mid), var(--ss-inset-edge);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 /* ─── Modals ─── */
 .ss-modal {
-  background: rgba(255, 252, 247, 0.96);
-  border: 1px solid rgba(200, 170, 110, 0.3);
+  background: rgba(20, 16, 10, 0.97);
+  border: 1px solid rgba(200, 154, 62, 0.2);
   border-radius: var(--ss-radius-xl);
   padding: var(--ss-space-5);
-  box-shadow: var(--ss-shadow-high), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(24px);
   max-width: 28rem;
   width: 100%;
 }
 
 .ss-modal-backdrop {
-  background: rgba(60, 40, 20, 0.4);
-  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
 }
 
 /* ─── Panes (sub-sections within a card) ─── */
 .ss-pane {
-  background: rgba(240, 230, 210, 0.4);
+  background: rgba(255, 200, 100, 0.04);
   border-radius: var(--ss-radius-md);
   padding: var(--ss-space-3);
 }
@@ -1089,11 +1089,11 @@ body {
     @apply relative flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[var(--bg-panel)] border-2 border-[var(--gold-bright)] shadow-[0_4px_16px_rgba(120,90,50,0.15)] hover:scale-105 active:scale-95 transition-all duration-300;
   }
   .ss-badge-notification {
-    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[var(--danger)] border border-[var(--bg-panel)] flex items-center justify-center text-[10px] font-bold text-white shadow-[0_2px_4px_rgba(120,90,50,0.3)];
+    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[var(--danger)] border border-[var(--bg-panel)] flex items-center justify-center text-[11px] font-bold text-white shadow-[0_2px_4px_rgba(120,90,50,0.3)];
   }
   .ss-panel-holographic {
-    @apply relative overflow-hidden border border-[rgba(200,170,110,0.25)] shadow-[0_4px_16px_rgba(120,90,50,0.08)] rounded-xl;
-    background: rgba(255, 252, 247, 0.9);
+    @apply relative overflow-hidden border border-[rgba(200,154,62,0.15)] shadow-[0_4px_24px_rgba(0,0,0,0.4)] rounded-xl;
+    background: rgba(22, 18, 11, 0.92);
   }
 }
 
@@ -1436,8 +1436,8 @@ body {
 .game-panel {
   position: relative;
   background:
-    linear-gradient(180deg, rgba(255, 252, 247, 0.95) 0%, rgba(245, 239, 230, 0.98) 100%);
-  border: 1px solid rgba(200, 154, 62, 0.25);
+    linear-gradient(180deg, rgba(24, 19, 12, 0.97) 0%, rgba(16, 13, 8, 0.99) 100%);
+  border: 1px solid rgba(200, 154, 62, 0.2);
   /* cut top-left + bottom-right corners for that sci-fantasy HUD look */
   clip-path: polygon(
     18px 0, 100% 0, 100% calc(100% - 18px),

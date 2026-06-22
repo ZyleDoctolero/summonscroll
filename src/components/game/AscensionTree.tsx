@@ -59,7 +59,7 @@ export function AscensionTree({
         className="relative z-10 ss-card p-4 rounded-full border-2 text-center mb-12 shadow-[0_4px_16px_rgba(120,90,50,0.1)]"
         style={{ borderColor: color, backgroundColor: "var(--bg-card)" }}
       >
-        <p className="text-[10px] font-mono tracking-widest text-[var(--ink-tertiary)]">ORIGIN</p>
+        <p className="text-[11px] font-mono tracking-widest text-[var(--ink-tertiary)]">ORIGIN</p>
         <p className="font-bold tracking-widest" style={{ color }}>
           {currentClass.toUpperCase()}
         </p>
@@ -94,7 +94,7 @@ export function AscensionTree({
               </div>
               <div>
                 <p className="text-xs font-bold text-[var(--ink-primary)]">{m.label}</p>
-                <p className="text-[10px] font-mono text-[#c89a3e]">REQUIRES {m.star}★</p>
+                <p className="text-[11px] font-mono text-[#c89a3e]">REQUIRES {m.star}★</p>
               </div>
             </div>
             {m.value && (
@@ -113,7 +113,7 @@ export function AscensionTree({
 
       {/* Future feature: Path Selection */}
       {currentStar >= 3 && currentStar < 10 && (
-        <p className="text-[10px] text-center mt-4 text-[#8b7355]/60 font-mono">
+        <p className="text-[11px] text-center mt-4 text-[#8b7355]/60 font-mono">
           Ascension Path verified. <br /> Continue Synthesis to breach mortal limits.
         </p>
       )}

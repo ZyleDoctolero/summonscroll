@@ -185,7 +185,7 @@ function ProfilePage() {
                   {profile.level >= 10 && (
                     <button
                       onClick={() => setShowClassPicker(true)}
-                      className="ss-btn ss-btn-ghost text-[10px] px-2 py-0.5"
+                      className="ss-btn ss-btn-ghost text-[11px] px-2 py-0.5"
                     >
                       Change
                     </button>
@@ -244,7 +244,7 @@ function ProfilePage() {
                   }}
                 >
                   <div
-                    className="text-[10px] uppercase tracking-[0.18em] font-semibold"
+                    className="text-[11px] uppercase tracking-[0.18em] font-semibold"
                     style={{ color: `var(--ss-stat-${stat})` }}
                   >
                     {label}
@@ -359,7 +359,7 @@ function ProfilePage() {
                       className="ss-card p-4 flex flex-col items-center justify-center relative overflow-hidden group"
                     >
                       <div
-                        className="absolute top-2 left-2 text-[10px] uppercase font-bold tracking-widest"
+                        className="absolute top-2 left-2 text-[11px] uppercase font-bold tracking-widest"
                         style={{ color: "var(--ink-secondary)" }}
                       >
                         {slot}
@@ -379,7 +379,7 @@ function ProfilePage() {
                           <p className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
                             {equippedMonster.monster.name}
                           </p>
-                          <p className="text-[10px] mb-3" style={{ color: "var(--ink-secondary)" }}>
+                          <p className="text-[11px] mb-3" style={{ color: "var(--ink-secondary)" }}>
                             Load: {equippedMonster.star_rating ?? 1}
                           </p>
 
@@ -403,7 +403,7 @@ function ProfilePage() {
                             />
                           </div>
                           <p
-                            className="text-[10px] text-center max-w-[150px] mb-3"
+                            className="text-[11px] text-center max-w-[150px] mb-3"
                             style={{ color: "var(--ink-secondary)" }}
                           >
                             No soul bound.
@@ -482,12 +482,12 @@ function ProfilePage() {
                     >
                       {a.name}
                     </p>
-                    <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>
+                    <p className="text-[11px] mt-1" style={{ color: "var(--ink-secondary)" }}>
                       {a.description}
                     </p>
                     {a.reward_crystals > 0 && (
                       <p
-                        className="text-[10px] mt-1 flex items-center justify-center gap-0.5"
+                        className="text-[11px] mt-1 flex items-center justify-center gap-0.5"
                         style={{ color: "var(--gold-bright)" }}
                       >
                         <Icon name="crystal" size={10} color="var(--gold-bright)" />+{a.reward_crystals}
@@ -545,7 +545,7 @@ function ProfilePage() {
                         <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
                           {inv.item_name}
                         </p>
-                        <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
+                        <p className="text-[11px]" style={{ color: "var(--ink-secondary)" }}>
                           ×{inv.quantity}
                         </p>
                       </div>
@@ -583,7 +583,7 @@ function ProfilePage() {
                           <p className="text-xs font-bold" style={{ color: "var(--ink-primary)" }}>
                             {pet.pet_name}
                           </p>
-                          <p className="text-[10px]" style={{ color: "var(--ink-secondary)" }}>
+                          <p className="text-[11px]" style={{ color: "var(--ink-secondary)" }}>
                             {pet.is_mount ? "Mount" : `Pet · Fed ${pet.food_fed}/50`}
                           </p>
                         </div>
@@ -776,7 +776,7 @@ function ProfilePage() {
                     <p className="font-bold text-sm" style={{ color: info.color }}>
                       {info.label}
                     </p>
-                    <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>
+                    <p className="text-[11px] mt-1" style={{ color: "var(--ink-secondary)" }}>
                       {info.desc}
                     </p>
                   </button>
@@ -808,7 +808,7 @@ function Bar({
   return (
     <div>
       <div
-        className="flex justify-between text-[10px] uppercase tracking-wider mb-0.5"
+        className="flex justify-between text-[11px] uppercase tracking-wider mb-0.5"
         style={{ color: "var(--ink-secondary)" }}
       >
         <span>{label}</span>

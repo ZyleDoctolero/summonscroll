@@ -50,13 +50,25 @@ export async function getMyProfile() {
   } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
-  const { data: profile, error } = await supabase
+  let { data: profile, error } = await supabase
     .from("profiles")
     .select("*")
     .eq("id", user.id)
     .maybeSingle();
   if (error) throw error;
-  if (!profile) throw new Error("Profile not found");
+  if (!profile) {
+    const { data: created, error: createErr } = await supabase
+      .from("profiles")
+      .insert({
+        id: user.id,
+        display_name: user.email?.split("@")[0] ?? "Adventurer",
+        email: user.email ?? "",
+      })
+      .select("*")
+      .single();
+    if (createErr) throw createErr;
+    profile = created;
+  }
 
   const cron = await runCronIfNeeded(user.id, profile);
 

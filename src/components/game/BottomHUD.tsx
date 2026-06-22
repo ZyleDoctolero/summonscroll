@@ -39,13 +39,14 @@ export function BottomHUD() {
 
   return (
     <div className="fixed bottom-0 inset-x-0 z-50 flex justify-center pb-4 px-4 pointer-events-none">
-      <div
-        className="flex items-center gap-2 md:gap-4 p-2 rounded-full pointer-events-auto shadow-[0_4px_16px_rgba(120,90,50,0.12)]"
+      <nav
+        aria-label="Main navigation"
+        className="flex items-center gap-2 md:gap-4 p-2 rounded-full pointer-events-auto shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
         style={{
-          background: "rgba(255, 252, 247, 0.92)",
+          background: "rgba(16, 13, 8, 0.92)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
-          border: "1px solid rgba(200, 170, 110, 0.25)",
+          border: "1px solid rgba(200, 154, 62, 0.18)",
         }}
       >
         {NAV_ITEMS.map((item) => {
@@ -55,20 +56,20 @@ export function BottomHUD() {
             <Link
               key={item.id}
               to={item.path}
-              className="relative group flex flex-col items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 z-10"
+              className="relative group flex flex-col items-center justify-center w-16 h-16 md:w-18 md:h-18 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 z-10 gap-0.5"
               style={{
                 background: isActive
-                  ? `rgba(${item.colorRgb}, 0.18)`
+                  ? `rgba(${item.colorRgb}, 0.15)`
                   : "transparent",
                 boxShadow: isActive
-                  ? `0 2px 10px rgba(${item.colorRgb},0.2)`
+                  ? `0 2px 12px rgba(${item.colorRgb},0.25)`
                   : "none",
                 border: isActive ? `1.5px solid ${item.color}` : "1.5px solid transparent",
               }}
             >
               <Icon
                 name={item.icon as React.ComponentProps<typeof Icon>["name"]}
-                size={isActive ? 28 : 24}
+                size={isActive ? 26 : 22}
                 color={isActive ? item.color : "var(--ink-secondary)"}
                 className={
                   isActive
@@ -76,10 +77,19 @@ export function BottomHUD() {
                     : "opacity-50 group-hover:opacity-80 transition-all"
                 }
               />
+              <span
+                className="text-[11px] font-bold tracking-wider leading-none"
+                style={{
+                  color: isActive ? item.color : "var(--ink-secondary)",
+                  opacity: isActive ? 1 : 0.5,
+                }}
+              >
+                {item.label}
+              </span>
             </Link>
           );
         })}
-      </div>
+      </nav>
     </div>
   );
 }

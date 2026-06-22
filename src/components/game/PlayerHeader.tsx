@@ -69,7 +69,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
           >
             {classIcon}
             {isComboActive && (
-              <div className="absolute -bottom-2 -right-4 bg-[var(--danger)] text-white text-[8px] font-bold px-1 rounded shadow-lg border border-[var(--bg-deep)] animate-pulse">
+              <div className="absolute -bottom-2 -right-4 bg-[var(--danger)] text-white text-[11px] font-bold px-1 rounded shadow-lg border border-[var(--bg-deep)] animate-pulse">
                 {comboCount}x
               </div>
             )}
@@ -134,7 +134,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
               {classIcon}
             </span>
             <span
-              className="text-[10px] uppercase tracking-wider group-hover:text-[var(--ink-primary)] transition-colors"
+              className="text-[11px] uppercase tracking-wider group-hover:text-[var(--ink-primary)] transition-colors"
               style={{ color: "var(--ink-tertiary)" }}
             >
               LVL
@@ -146,7 +146,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
               {profile.level}
             </span>
             {isComboActive && (
-              <div className="absolute -bottom-6 -left-1 bg-[var(--danger)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-lg border border-[var(--bg-deep)] animate-pulse whitespace-nowrap">
+              <div className="absolute -bottom-6 -left-1 bg-[var(--danger)] text-white text-[11px] font-bold px-1.5 py-0.5 rounded shadow-lg border border-[var(--bg-deep)] animate-pulse whitespace-nowrap">
                 {comboCount}x COMBO
               </div>
             )}
@@ -287,12 +287,13 @@ function MiniBar({
   return (
     <div className="flex-1 max-w-[140px]">
       <div
-        className="flex justify-between text-[10px] uppercase tracking-wider mb-0.5"
+        className="flex justify-between items-baseline text-[11px] uppercase tracking-wider mb-0.5"
         style={{ color: "var(--ink-tertiary)" }}
       >
         <span>{label}</span>
-        <span style={{ color }} className="t-mono">
-          <NumberFlow value={current} />/{max}
+        <span style={{ color }} className="t-mono whitespace-nowrap inline-flex items-baseline">
+          <NumberFlow value={current} style={{ display: 'inline-block', fontSize: 'inherit', lineHeight: 'inherit' }} />
+          <span>/{max}</span>
         </span>
       </div>
       <div
@@ -338,8 +339,8 @@ function Currency({
   color: string;
 }) {
   return (
-    <div className="ss-chip ss-chip-muted">
-      <span className="flex items-center">{label}</span>
+    <div className="ss-chip ss-chip-muted" aria-label={`${icon}: ${value.toLocaleString()}`}>
+      <span className="flex items-center" aria-hidden="true">{label}</span>
       <span className="t-mono font-bold" style={{ color: "var(--ink-primary)" }}>
         {value.toLocaleString()}
       </span>

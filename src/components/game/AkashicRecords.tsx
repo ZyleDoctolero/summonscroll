@@ -191,12 +191,12 @@ export function AkashicRecords({
               }`}
             >
               <span
-                className={`text-[9px] font-mono font-bold ${fodder.isAvailable ? "text-[#c89a3e]" : "text-[#b5a28a]"}`}
+                className={`text-[11px] font-mono font-bold ${fodder.isAvailable ? "text-[#c89a3e]" : "text-[#b5a28a]"}`}
               >
                 {fodder.isAvailable ? "READY" : "EMPTY"}
               </span>
               {fodder.isAvailable && (
-                <span className="text-[8px] text-[#8b7355]/60 truncate max-w-[40px]">
+                <span className="text-[11px] text-[#8b7355]/60 truncate max-w-[40px]">
                   {fodder.name}
                 </span>
               )}
@@ -209,7 +209,7 @@ export function AkashicRecords({
       <div className="absolute bottom-6 left-0 right-0 flex flex-col items-center justify-center space-y-2 px-4">
         {/* Status message */}
         <p
-          className={`text-[10px] font-mono tracking-wider text-center ${
+          className={`text-[11px] font-mono tracking-wider text-center ${
             canSynthesize ? "text-[#c89a3e]" : isLocked ? "text-red-400" : "text-[#8b7355]"
           }`}
         >

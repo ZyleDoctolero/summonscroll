@@ -205,7 +205,7 @@ function Body({
               initial={{ opacity: 0, scale: 0.4 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.1 }}
-              className="absolute -bottom-2 px-2 py-0.5 rounded-full text-[10px] font-bold"
+              className="absolute -bottom-2 px-2 py-0.5 rounded-full text-[11px] font-bold"
               style={{
                 background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
                 color: "var(--bg-deep)",
@@ -222,7 +222,7 @@ function Body({
           {/* Requirements grid */}
           <div className="rounded-xl p-3 mb-4 space-y-1" style={{ background: "rgba(61,46,31,0.06)" }}>
             <p
-              className="text-[10px] uppercase tracking-[0.18em] mb-1.5"
+              className="text-[11px] uppercase tracking-[0.18em] mb-1.5"
               style={{ color: "var(--ink-tertiary)" }}
             >
               Requirements

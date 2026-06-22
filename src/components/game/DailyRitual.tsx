@@ -97,7 +97,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
                 <span className="mr-2">{isPicked ? "*" : "o"}</span>
                 <span>{t.title}</span>
                 <span
-                  className="text-[10px] ml-2 uppercase tracking-wider"
+                  className="text-[11px] ml-2 uppercase tracking-wider"
                   style={{ color: "var(--ink-tertiary)" }}
                 >
                   {t.type}
@@ -306,7 +306,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   return (
     <label className="block">
       <div
-        className="text-[10px] uppercase tracking-[0.18em] mb-1 font-semibold"
+        className="text-[11px] uppercase tracking-[0.18em] mb-1 font-semibold"
         style={{ color: "var(--ink-secondary)" }}
       >
         {label}
@@ -331,7 +331,7 @@ function Slider({
     <div>
       <div className="flex justify-between items-end mb-1">
         <span
-          className="text-[10px] uppercase tracking-[0.18em] font-semibold"
+          className="text-[11px] uppercase tracking-[0.18em] font-semibold"
           style={{ color: "var(--ink-secondary)" }}
         >
           {label}

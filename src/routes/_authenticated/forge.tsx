@@ -141,7 +141,7 @@ function AlchemyPage() {
                     {r.result}
                   </h3>
                   <span
-                    className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-[var(--bg-stage)]/50"
+                    className="text-[11px] uppercase font-bold px-2 py-1 rounded bg-[var(--bg-stage)]/50"
                     style={{ color: r.color }}
                   >
                     {r.base} Base
@@ -150,7 +150,7 @@ function AlchemyPage() {
                 <p className="text-xs mt-2" style={{ color: "var(--ink-secondary)" }}>
                   Requires: <strong style={{ color: "var(--gold-bright)" }}>{r.catalyst}</strong>
                 </p>
-                <p className="text-[10px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
+                <p className="text-[11px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
                   {r.habitRequirement}
                 </p>
               </button>
@@ -182,7 +182,7 @@ function AlchemyPage() {
                     className="opacity-50"
                   />
                   <div
-                    className="absolute bottom-2 text-[10px] font-bold text-center w-full"
+                    className="absolute bottom-2 text-[11px] font-bold text-center w-full"
                     style={{ color: "var(--gold-base)" }}
                   >
                     0 / 1
@@ -221,7 +221,7 @@ function AlchemyPage() {
                         className="mx-auto mb-2"
                       />
                       <span
-                        className="text-[10px] font-bold uppercase"
+                        className="text-[11px] font-bold uppercase"
                         style={{ color: "var(--ink-secondary)" }}
                       >
                         Select Base
@@ -306,7 +306,7 @@ function AlchemyPage() {
                       className="w-16 h-16 object-contain"
                     />
                     <span
-                      className="text-[10px] font-bold truncate w-full text-center"
+                      className="text-[11px] font-bold truncate w-full text-center"
                       style={{ color: "var(--ink-primary)" }}
                     >
                       {um.monster.name}

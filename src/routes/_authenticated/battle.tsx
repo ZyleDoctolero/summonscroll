@@ -387,14 +387,19 @@ function BattlePage() {
   return (
     <AppShell profile={profile}>
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen">
-        <h1 className="font-serif text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
-          Battle Arena
-        </h1>
-        <p className="text-sm mb-6 font-serif" style={{ color: "var(--ink-secondary)" }}>
-          {canBattle
-            ? `Team of ${team.length} monsters ready.`
-            : "Build a team of 3+ monsters on your Island first."}
-        </p>
+        <div className="flex flex-col items-center text-center mb-8">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[rgba(255,94,42,0.12)] to-transparent border-2 border-[rgba(255,94,42,0.2)] flex items-center justify-center mb-3 shadow-[0_0_16px_rgba(255,94,42,0.1)]">
+            <Icon name="battle" size={28} color="var(--danger)" />
+          </div>
+          <h1 className="font-serif text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+            Battle Arena
+          </h1>
+          <p className="text-sm font-serif" style={{ color: "var(--ink-secondary)" }}>
+            {canBattle
+              ? `Team of ${team.length} monsters ready.`
+              : "Build a team of 3+ monsters on your Island first."}
+          </p>
+        </div>
 
         {!canBattle && (
           <div
@@ -448,10 +453,11 @@ function BattlePage() {
             title="Boss Rush"
             icon={<Icon name="battle" size={28} color="var(--danger)" className="lucide-glow" />}
             desc="5 bosses in sequence"
-            sub="High risk, high reward"
+            sub={profile.level < 20 ? `Requires Level 20 (you're ${profile.level})` : "High risk, high reward"}
             disabled={!canBattle || battleMut.isPending || profile.level < 20}
             loading={battleMut.isPending}
             onClick={() => battleMut.mutate({ mode: "boss_rush", floor: 1 })}
+            accent="var(--danger)"
           />
         </div>
 
@@ -529,6 +535,7 @@ function ModeCard({
   disabled,
   loading,
   onClick,
+  accent = "var(--gold-bright)",
 }: {
   title: string;
   icon: React.ReactNode;
@@ -538,31 +545,50 @@ function ModeCard({
   disabled: boolean;
   loading: boolean;
   onClick: () => void;
+  accent?: string;
 }) {
   return (
-    <div className="ss-card p-6">
-      <div className="mb-3">{icon}</div>
-      <h3 className="text-lg font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+    <div
+      className="ss-card p-6 group transition-all duration-300 hover:scale-[1.02]"
+      style={{
+        borderColor: `color-mix(in srgb, ${accent}, transparent 75%)`,
+      }}
+    >
+      <div className="flex items-start justify-between mb-3">
+        <div className="w-12 h-12 rounded-xl grid place-items-center" style={{
+          background: `color-mix(in srgb, ${accent}, transparent 88%)`,
+          border: `1px solid color-mix(in srgb, ${accent}, transparent 70%)`,
+        }}>
+          {icon}
+        </div>
+        {progress !== undefined && (
+          <span className="text-xs font-bold font-serif" style={{ color: accent }}>
+            {Math.round(progress)}%
+          </span>
+        )}
+      </div>
+      <h3 className="text-lg font-bold mb-1" style={{ color: "var(--ink-primary)" }}>
         {title}
       </h3>
-      <p className="text-sm mb-1" style={{ color: "#8a6d3b" }}>
+      <p className="text-sm mb-1" style={{ color: "var(--ink-secondary)" }}>
         {desc}
       </p>
       {sub && (
-        <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
+        <p className="text-xs mb-3" style={{ color: "var(--ink-tertiary)" }}>
           {sub}
         </p>
       )}
       {progress !== undefined && (
         <div
-          className="h-1.5 rounded-full mb-4 overflow-hidden"
+          className="h-2 rounded-full mb-4 overflow-hidden"
           style={{ background: "rgba(61,46,31,0.06)" }}
         >
           <div
-            className="h-full"
+            className="h-full rounded-full transition-all duration-700"
             style={{
               width: `${progress}%`,
-              background: "linear-gradient(90deg,var(--gold-bright),var(--gold-bright))",
+              background: `linear-gradient(90deg, color-mix(in srgb, ${accent}, transparent 40%), ${accent})`,
+              boxShadow: `0 0 8px color-mix(in srgb, ${accent}, transparent 50%)`,
             }}
           />
         </div>
@@ -570,9 +596,9 @@ function ModeCard({
       <button
         onClick={onClick}
         disabled={disabled}
-        className="ss-btn ss-btn-d-primary w-full py-2.5 shadow-[0_0_15px_rgba(212,175,63,0.3)] disabled:opacity-30"
+        className="ss-btn ss-btn-d-primary w-full py-3 text-sm font-bold tracking-wider disabled:opacity-30 transition-all group-hover:shadow-lg"
       >
-        {loading ? "Fighting…" : "Enter →"}
+        {loading ? "Fighting…" : "Enter Battle →"}
       </button>
     </div>
   );

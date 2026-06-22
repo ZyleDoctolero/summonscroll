@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { toast } from "sonner";
+import { motion } from "motion/react";
 import { AppShell } from "@/components/game/AppShell";
 import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -97,12 +98,17 @@ function GuildPage() {
     <AppShell profile={profile}>
       <AtmosphereBackdrop realm="iron" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
-          Guild
-        </h1>
-        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
-          {myGuild ? `Member of ${myGuild.name}` : "Join a guild to fight bosses cooperatively!"}
-        </p>
+        <header className="mb-8 text-center flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[var(--gold-bright)]/20 to-transparent border-2 border-[var(--gold-bright)]/40 flex items-center justify-center mb-3 shadow-[0_0_24px_rgba(212,175,63,0.25)]">
+            <Icon name="crown" size={32} color="var(--gold-bright)" className="drop-shadow-[0_0_8px_#fcd34d]" />
+          </div>
+          <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)", textShadow: "0 2px 12px rgba(212,175,63,0.4)" }}>
+            Guild Hall
+          </h1>
+          <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+            {myGuild ? `Member of ${myGuild.name}` : "Join a guild to fight bosses cooperatively!"}
+          </p>
+        </header>
 
         {/* Tabs */}
         <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
@@ -116,7 +122,7 @@ function GuildPage() {
             <button
               key={k}
               onClick={() => setTab(k)}
-              className={`ss-tab-d pb-2 text-sm font-semibold ${tab === k ? "active" : ""}`}
+              className={`ss-tab-d pb-2 text-sm font-semibold min-h-[44px] ${tab === k ? "active" : ""}`}
             >
               {l}
             </button>
@@ -227,7 +233,7 @@ function GuildPage() {
                               · {t.difficulty}
                             </p>
                             <p
-                              className="text-[10px] mt-1 font-semibold flex items-center gap-1"
+                              className="text-[11px] mt-1 font-semibold flex items-center gap-1"
                               style={{ color: hasScroll ? "var(--success)" : "var(--danger)" }}
                             >
                               {hasScroll ? (
@@ -268,8 +274,13 @@ function GuildPage() {
                     id: string;
                     role: string;
                     profile: { display_name: string; level: number; class: string };
-                  }) => (
-                    <div key={m.id} className="flex items-center gap-3 p-2 rounded ss-pane">
+                  }, i: number) => (
+                    <motion.div
+                      key={m.id}
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.2, delay: Math.min(i * 0.05, 0.3) }}
+                      className="flex items-center gap-3 p-2 rounded ss-pane hover:bg-[rgba(200,154,62,0.06)] transition-colors">
                       <div className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs ss-btn-d-primary">
                         {m.profile.display_name[0].toUpperCase()}
                       </div>
@@ -302,7 +313,7 @@ function GuildPage() {
                       >
                         {m.role}
                       </span>
-                    </div>
+                    </motion.div>
                   ),
                 )}
               </div>

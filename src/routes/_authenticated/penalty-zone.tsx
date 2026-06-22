@@ -236,7 +236,7 @@ function PenaltyZone() {
             </Button>
 
             {!audioActive && (
-              <p className="text-[10px] font-serif" style={{ color: "var(--ink-secondary)" }}>
+              <p className="text-[11px] font-serif" style={{ color: "var(--ink-secondary)" }}>
                 Tap anywhere to enable ambient audio
               </p>
             )}

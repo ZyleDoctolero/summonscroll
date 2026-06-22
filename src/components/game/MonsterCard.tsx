@@ -145,13 +145,26 @@ const getElementSprite = (el: string) => {
 const getRarityBackground = (r: Rarity) => {
   switch (r) {
     case "common": return "linear-gradient(155deg,#f5efe6,#ede5d8)";
-    case "uncommon": return "linear-gradient(155deg,#eef5ec,#e8f0e5)";
-    case "rare": return "linear-gradient(155deg,#eaf0f5,#e3ebf2)";
-    case "elite": return "linear-gradient(155deg,#f5f0e6,#f0e8d8)";
-    case "epic": return "linear-gradient(155deg,#f0eaf5,#ebe4f0)";
-    case "legendary": return "linear-gradient(155deg,#f5f2e6,#f0ece0)";
-    case "mythic": return "linear-gradient(155deg,#f5eae6,#f0e4e0)";
+    case "uncommon": return "linear-gradient(155deg,#eef5ec,#e4eddf)";
+    case "rare": return "linear-gradient(155deg,#e8eef5,#dce6f0)";
+    case "elite": return "linear-gradient(155deg,#f5f0e6,#ede4d2)";
+    case "epic": return "linear-gradient(155deg,#efe8f5,#e6dcf0)";
+    case "legendary": return "linear-gradient(155deg,#f5efe2,#ede5cc)";
+    case "mythic": return "linear-gradient(155deg,#f5e8e2,#f0dcd4)";
     default: return "linear-gradient(155deg,#f5efe6,rgba(240,230,215,0.8))";
+  }
+};
+
+const getRarityBorder = (r: Rarity, rColor: string) => {
+  switch (r) {
+    case "common": return { width: "1.5px", style: `1.5px solid ${rColor}40`, shadow: `0 4px 16px ${rColor}15` };
+    case "uncommon": return { width: "1.5px", style: `1.5px solid ${rColor}55`, shadow: `0 4px 20px ${rColor}20` };
+    case "rare": return { width: "2px", style: `2px solid ${rColor}70`, shadow: `0 4px 24px ${rColor}30, inset 0 0 20px ${rColor}08` };
+    case "elite": return { width: "2px", style: `2px solid ${rColor}80`, shadow: `0 6px 28px ${rColor}35, inset 0 0 24px ${rColor}10` };
+    case "epic": return { width: "2.5px", style: `2.5px solid ${rColor}90`, shadow: `0 6px 32px ${rColor}40, 0 0 16px ${rColor}25, inset 0 0 28px ${rColor}12` };
+    case "legendary": return { width: "3px", style: `3px solid ${rColor}`, shadow: `0 8px 36px ${rColor}50, 0 0 24px ${rColor}35, inset 0 0 32px ${rColor}15` };
+    case "mythic": return { width: "3px", style: `3px solid ${rColor}`, shadow: `0 8px 40px ${rColor}60, 0 0 32px ${rColor}40, inset 0 0 40px ${rColor}18` };
+    default: return { width: "1.5px", style: `1.5px solid ${rColor}40`, shadow: `0 4px 16px ${rColor}15` };
   }
 };
 
@@ -190,6 +203,7 @@ export function MonsterCard({
   
   const elColor = getElementColor(monster.monster.element);
   const rColor = RARITY_COLOR[r] || "#ffffff";
+  const rarityBorder = getRarityBorder(r, rColor);
 
   return (
     <>
@@ -216,30 +230,37 @@ export function MonsterCard({
         }
       `}</style>
       <div
-        className={`relative w-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] ${compact ? "p-3" : "p-4"} group rounded-xl`}
+        className={`relative w-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] ${compact ? "p-3" : "p-4"} group rounded-xl hover:scale-[1.03]`}
         style={{
           background: getRarityBackground(r),
-          border: `1.5px solid ${rColor}66`,
-          boxShadow: `0 6px 28px ${rColor}30`,
+          border: rarityBorder.style,
+          boxShadow: rarityBorder.shadow,
           opacity: fatigued ? 0.6 : 1,
           cursor: onClick ? "pointer" : "default",
         }}
         onClick={onClick}
       >
         <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none z-20"
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none z-20"
           style={{
-            background: `linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.04) 50%, transparent 60%)`,
+            background: `linear-gradient(105deg, transparent 35%, ${elColor}08 45%, rgba(255,255,255,0.06) 50%, ${elColor}08 55%, transparent 65%)`,
           }}
-        ></div>
+        />
+        <div
+          className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none z-0"
+          style={{
+            boxShadow: `0 0 20px ${elColor}30, inset 0 0 20px ${elColor}08`,
+          }}
+        />
 
         <div className="absolute top-2 left-3 right-3 flex justify-between items-start z-10 pointer-events-none">
           <div className="flex flex-col gap-0.5">
             <span
-              className="text-[9px] font-bold uppercase tracking-widest font-['Rajdhani']"
+              className="text-[11px] font-bold uppercase tracking-widest font-['Rajdhani'] flex items-center gap-1.5"
               style={{ color: rColor }}
             >
-              [{r.toUpperCase()}] {monster.monster.element || "VOID"}
+              <span className="w-2 h-2 rounded-full inline-block" style={{ background: elColor, boxShadow: `0 0 6px ${elColor}80` }} />
+              {r.toUpperCase()}
             </span>
           </div>
 
@@ -299,17 +320,17 @@ export function MonsterCard({
             />
           </div>
           <div className="flex justify-between items-center mt-1">
-            <span className="text-[9px] uppercase tracking-widest font-['Rajdhani'] font-bold text-[#8b7355]/60">
+            <span className="text-[11px] uppercase tracking-widest font-['Rajdhani'] font-bold text-[#8b7355]/60">
               Bond
             </span>
-            <span className="text-[9px] uppercase tracking-widest font-['Rajdhani'] font-bold" style={{ color: elColor }}>
+            <span className="text-[11px] uppercase tracking-widest font-['Rajdhani'] font-bold" style={{ color: elColor }}>
               {Math.round(monster.bond_percent)}%
             </span>
           </div>
         </div>
 
         {fatigued && (
-          <div className="absolute bottom-1 left-1 text-[8px] px-1.5 py-0.5 rounded font-bold tracking-widest z-10 bg-red-900/50 text-red-400 border border-red-500/50">
+          <div className="absolute bottom-2 left-2 text-[11px] px-2 py-0.5 rounded font-bold tracking-widest z-10 bg-red-100 text-red-600 border border-red-200">
             FATIGUE
           </div>
         )}
@@ -320,7 +341,7 @@ export function MonsterCard({
               e.stopPropagation();
               onRemove();
             }}
-            className="mt-2 text-[10px] px-2 py-1.5 rounded font-bold w-full uppercase tracking-widest border border-red-500/50 hover:bg-red-500/20 hover:border-red-400 transition-colors shadow-[0_0_8px_rgba(239,68,68,0.2)] text-red-500"
+            className="mt-2 text-[11px] px-2 py-2 rounded-lg font-bold w-full uppercase tracking-widest border border-red-200 hover:bg-red-50 hover:border-red-300 transition-colors text-red-500"
           >
             DISMISS
           </button>

@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
+import { motion } from "motion/react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
 import { AppShell } from "@/components/game/AppShell";
 import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
+import { Icon } from "@/components/ui/Icon";
 import {
   getMyProfile,
   listMyMonsters,
@@ -137,14 +139,17 @@ function ExpeditionsPage() {
       />
 
       <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto pt-20">
-        <header className="mb-8 text-center">
+        <header className="mb-8 text-center flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[var(--gold-bright)]/20 to-transparent border-2 border-[var(--gold-bright)]/40 flex items-center justify-center mb-3 shadow-[0_0_24px_rgba(212,175,63,0.25)]">
+            <Icon name="compass" size={32} color="var(--gold-bright)" className="drop-shadow-[0_0_8px_#fcd34d]" />
+          </div>
           <h1
             className="t-h1 text-4xl mb-2"
-            style={{ color: "var(--gold-bright)", textShadow: "0 0 20px var(--gold-bright)" }}
+            style={{ color: "var(--gold-bright)", textShadow: "0 2px 15px rgba(212,175,63,0.5)" }}
           >
             Astral Expeditions
           </h1>
-          <p style={{ color: "var(--ink-secondary)" }}>
+          <p className="max-w-md" style={{ color: "var(--ink-secondary)" }}>
             Dispatch your inactive companions to cultivate and gather resources.
           </p>
         </header>
@@ -156,15 +161,18 @@ function ExpeditionsPage() {
               Active Dispatches
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {activeExpeditions.map((exp) => {
+              {activeExpeditions.map((exp, i) => {
                 const { progress, isDone } = calculateProgress(
                   exp.start_time,
                   exp.duration_minutes,
                 );
                 const monster = (exp as ActiveExpedition).user_monster?.monster;
                 return (
-                  <div
+                  <motion.div
                     key={exp.id}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.1 }}
                     className="ss-card flex flex-col p-4 relative overflow-hidden group"
                   >
                     <div className="flex gap-4 items-center mb-4">
@@ -220,7 +228,7 @@ function ExpeditionsPage() {
                         {Math.floor(progress)}% Complete
                       </button>
                     )}
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -285,13 +293,13 @@ function ExpeditionsPage() {
                           }}
                         />
                         <span
-                          className="text-[10px] font-bold mt-2 truncate w-full text-center"
+                          className="text-[11px] font-bold mt-2 truncate w-full text-center"
                           style={{ color: "var(--ink-primary)" }}
                         >
                           {um.monster.name}
                         </span>
                         {isBusy && (
-                          <div className="absolute inset-0 bg-[var(--bg-stage)]/50 flex items-center justify-center text-[10px] font-bold text-[var(--ink-secondary)] uppercase tracking-widest">
+                          <div className="absolute inset-0 bg-[var(--bg-stage)]/50 flex items-center justify-center text-[11px] font-bold text-[var(--ink-secondary)] uppercase tracking-widest">
                             Busy
                           </div>
                         )}

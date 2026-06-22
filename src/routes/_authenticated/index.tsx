@@ -3,11 +3,10 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { AppShell } from "@/components/game/AppShell";
 import { TaskCard, type Task } from "@/components/game/TaskCard";
 import { TaskFormDialog, type TaskFormValue } from "@/components/game/TaskFormDialog";
-import { QuestBoardModal } from "@/components/game/QuestBoardModal";
 import { useTaskScoring } from "@/hooks/useTaskScoring";
 import { DeathOverlay } from "@/components/game/DeathOverlay";
 import { MorningRitual, EveningRitual } from "@/components/game/DailyRitual";
@@ -17,7 +16,6 @@ import { LoadingScreen } from "@/components/game/LoadingScreen";
 import { Icon } from "@/components/ui/Icon";
 import { TutorialFollowUpModal } from "@/components/game/TutorialFollowUpModal";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { showCascade, type CascadeEvent } from "@/components/game/CascadeCard";
 import { whisper } from "@/components/game/WhisperFeed";
 import { RealmPulse } from "@/components/game/RealmPulse";
 import { SoulResonanceTimer } from "@/components/game/SoulResonanceTimer";
@@ -27,40 +25,12 @@ import {
   createTask,
   updateTask,
   deleteTask,
-  scoreTask,
   getDevotedCommentary,
   completeOnboarding,
   listMyMonsters,
 } from "@/lib/game/supabase-api";
 import type { TaskType } from "@/lib/game/constants";
 import { useWhisperFeed } from "@/hooks/useWhisperFeed";
-
-function shootConfetti() {
-  confetti({
-    particleCount: 150,
-    spread: 70,
-    origin: { y: 0.6 },
-    // eslint-disable-next-line no-restricted-syntax
-    colors: ["#ffb83d", "#FFD54F", "#4FC3F7", "#7F77DD"],
-  });
-}
-
-const REALM_VOICES: Record<string, string> = {
-  "Ancient Vaults": "The text remembers being read.",
-  "Chaos Wastes": "Stronger today. Smaller tomorrow. Pull the bow again.",
-  "The Outer Dark": "I am here. I have always been here.",
-  "Blighted Expanse": "Lay your weapon down a moment. Sit beside the candle.",
-  "Wild Frontier": "Run with me. There will be a reason.",
-  "Divine Threshold": "The breath comes. The breath goes.",
-  "Haunted Veil": "You came back. Most don't.",
-  "Digital Nexus": "Process complete. Beginning next process.",
-  "Elder Realm": "You came hungry. We have soup.",
-  "Void Frontier": "There — that light. We go there.",
-  "Myth Eternal": "This is older than you think. So are you.",
-  "Iron Dominion": "This task. I will finish it. With you.",
-};
-
-// Replaced standard Focus Ritual with Manhwa System Soul Resonance Timer
 
 export const Route = createFileRoute("/_authenticated/")({
   head: () => ({ meta: [{ title: "Hub Directives — SummonScroll" }] }),
@@ -93,12 +63,12 @@ function HubPage() {
   const [editing, setEditing] = useState<Task | null>(null);
   const [deathTick, setDeathTick] = useState(0);
   const [busyIds, setBusyIds] = useState<Set<string>>(new Set());
-  const [tourStep, setTourStep] = useState(3);
+
   const [showMorning, setShowMorning] = useState(false);
   const [showEvening, setShowEvening] = useState(false);
   const [showTutorialFollowUp, setShowTutorialFollowUp] = useState(false);
   const [activeRealmPulse, setActiveRealmPulse] = useState<number | null>(null);
-  const [showQuestBoard, setShowQuestBoard] = useState(false);
+  const [questSearch, setQuestSearch] = useState("");
 
   useEffect(() => {
     if (profileQ.data?.cron?.died) {
@@ -123,7 +93,7 @@ function HubPage() {
     () => (tasksQ.data?.tasks ?? []) as unknown as Task[],
     [tasksQ.data?.tasks],
   );
-  const sideQuests = useMemo(() => tasks.filter((t) => t.category === "side_quest"), [tasks]);
+
   const filtered = useMemo(
     () =>
       tasks.filter((t) => {
@@ -135,6 +105,28 @@ function HubPage() {
       }),
     [tasks, tab],
   );
+
+  const sortedTasks = useMemo(() => {
+    let items = [...filtered];
+    if (questSearch.trim()) {
+      const q = questSearch.toLowerCase();
+      items = items.filter(
+        (t) =>
+          t.title.toLowerCase().includes(q) ||
+          t.category?.toLowerCase().includes(q) ||
+          t.notes?.toLowerCase().includes(q),
+      );
+    }
+    items.sort((a, b) => {
+      if (a.is_starred && !b.is_starred) return -1;
+      if (!a.is_starred && b.is_starred) return 1;
+      if (!a.completed && b.completed) return -1;
+      if (a.completed && !b.completed) return 1;
+      const diffOrder: Record<string, number> = { hard: 0, medium: 1, easy: 2, trivial: 3 };
+      return (diffOrder[a.difficulty] ?? 2) - (diffOrder[b.difficulty] ?? 2);
+    });
+    return items;
+  }, [filtered, questSearch]);
 
   const scoreMut = useTaskScoring({
     setBusyIds,
@@ -203,63 +195,49 @@ function HubPage() {
       {showOnboarding && <Onboarding onComplete={() => onboardingMut.mutate()} />}
       <DeathOverlay trigger={deathTick} />
 
-      {/* Lobby Environment */}
-      <div className="absolute inset-0 overflow-hidden flex items-center justify-center pointer-events-none z-0">
-        <div className="absolute inset-0 bg-[#3d2e1e]/5 opacity-30 mix-blend-overlay" />
-        <div
-          className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"
-          style={{ animation: "hud-shimmer 20s linear infinite" }}
-        />
-
-        {/* Tethered Monster Display */}
-        <div className="relative z-10 flex flex-col items-center justify-center animate-[float_4s_ease-in-out_infinite] hover:scale-105 transition-transform duration-700">
-          {tetheredUm ? (
-            <>
-              <img
-                src={
-                  tetheredUm.monster.art_url
-                    ? tetheredUm.monster.art_url
-                    : `/sprites/monsters/${tetheredUm.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
-                }
-                alt={tetheredUm.monster.name}
-                className="w-64 h-64 md:w-96 md:h-96 object-contain drop-shadow-[0_0_30px_rgba(212,175,63,0.5)]"
-                onError={(e) => {
-                  e.currentTarget.src = "/monsters/placeholder.png";
-                }}
-              />
-              <div className="mt-4 text-center backdrop-blur-md bg-white/60 px-6 py-2 rounded-full border border-[rgba(200,154,62,0.2)]">
-                <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
-                  Life-Bound Beast
-                </p>
-                <h2 className="text-xl font-bold" style={{ color: "var(--ink-primary)" }}>
-                  {tetheredUm.monster.name}
-                </h2>
+      {/* Inline Hub Content */}
+      <div className="relative z-10 p-4 md:p-6 max-w-5xl mx-auto pb-28">
+        {/* Tethered Monster + Utilities Row */}
+        <div className="flex items-start gap-4 mb-6">
+          {/* Tethered Monster Compact */}
+          <div className="flex items-center gap-3 flex-1 min-w-0">
+            {tetheredUm ? (
+              <div className="flex items-center gap-3">
+                <div className="w-16 h-16 rounded-xl border-2 border-[rgba(200,154,62,0.3)] bg-gradient-to-b from-[rgba(200,154,62,0.08)] to-transparent flex items-center justify-center overflow-hidden shadow-[0_0_16px_rgba(212,175,63,0.15)]">
+                  <img
+                    src={
+                      tetheredUm.monster.art_url
+                        ? tetheredUm.monster.art_url
+                        : `/sprites/monsters/${tetheredUm.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                    }
+                    alt={tetheredUm.monster.name}
+                    className="w-full h-full object-contain p-1 drop-shadow-[0_0_8px_rgba(212,175,63,0.4)]"
+                    onError={(e) => {
+                      e.currentTarget.src = "/monsters/placeholder.png";
+                    }}
+                  />
+                </div>
+                <div>
+                  <p className="text-[11px] uppercase tracking-wider font-bold" style={{ color: "var(--ink-tertiary)" }}>Life-Bound</p>
+                  <h2 className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>{tetheredUm.monster.name}</h2>
+                </div>
               </div>
-            </>
-          ) : (
-            <div className="text-center backdrop-blur-md bg-white/60 px-8 py-6 rounded-2xl border border-[rgba(200,154,62,0.15)]">
-              <Icon name="scroll" size={48} color="var(--ink-tertiary)" className="mx-auto mb-4" />
-              <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
-                No Life-Bound Beast
-              </p>
-              <p className="text-xs mt-2 max-w-xs" style={{ color: "var(--ink-tertiary)" }}>
-                Go to the Compendium to tether a monster and manifest it here.
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <div className="w-16 h-16 rounded-xl border-2 border-dashed border-[rgba(200,154,62,0.2)] flex items-center justify-center">
+                  <Icon name="scroll" size={24} color="var(--ink-tertiary)" />
+                </div>
+                <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>No beast tethered</p>
+              </div>
+            )}
+          </div>
 
-      {/* Diegetic Lobby HUD */}
-      <div className="absolute inset-0 z-10 pointer-events-none p-4 md:p-8 flex flex-col justify-between">
-        <div className="flex justify-between items-start mt-16 md:mt-0">
-          <div className="pointer-events-auto">
+          {/* Compact Utilities */}
+          <div className="flex items-center gap-2 shrink-0">
             <Compass
               onOpenMorning={() => setShowMorning(true)}
               onOpenEvening={() => setShowEvening(true)}
             />
-          </div>
-          <div className="pointer-events-auto">
             <SoulResonanceTimer
               monsterId={profile?.soul_tether_id || "unlinked"}
               monsterName="Life-Bound Beast"
@@ -272,50 +250,102 @@ function HubPage() {
           </div>
         </div>
 
-        {/* Quest Board Icon Button */}
-        <div className="absolute right-4 bottom-32 md:right-10 md:bottom-36 pointer-events-auto">
-          <button onClick={() => setShowQuestBoard(true)} className="group ss-btn-quest-board">
-            <div className="absolute inset-0 rounded-full bg-[rgba(200,154,62,0.1)] opacity-0 group-hover:opacity-100 transition-opacity" />
-            <Icon
-              name="checklist"
-              size={32}
-              color="var(--ink-secondary)"
-              className="group-hover:drop-shadow-[0_0_8px_rgba(200,154,62,0.4)] transition-all"
-            />
-            <span className="text-[10px] font-bold tracking-widest mt-1 text-[var(--ink-secondary)] uppercase">
-              Quests
-            </span>
+        {/* Inline Quest Board */}
+        <div className="ss-card p-0 overflow-hidden border-[rgba(200,154,62,0.2)]">
+          {/* Header */}
+          <div className="px-4 py-3 border-b border-[rgba(200,154,62,0.15)] flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.06)] to-transparent">
+            <h2 className="t-h3 text-lg" style={{ color: "var(--gold-bright)" }}>Quest Board</h2>
+            <button
+              onClick={() => {
+                setEditing(null);
+                setDialogOpen(true);
+              }}
+              className="ss-btn ss-btn-d-primary text-xs px-4 py-2"
+            >
+              + Issue Quest
+            </button>
+          </div>
 
-            {/* Notification Badge */}
-            {tasks.filter((t) => !t.completed).length > 0 && (
-              <div className="ss-badge-notification">
-                {tasks.filter((t) => !t.completed).length}
+          {/* Search */}
+          <div className="px-4 pt-3">
+            <div className="relative">
+              <Icon name="target" size={14} color="var(--ink-tertiary)" className="absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={questSearch}
+                onChange={(e) => setQuestSearch(e.target.value)}
+                placeholder="Search quests..."
+                className="ss-input w-full pl-9 text-sm"
+                style={{ height: "40px" }}
+              />
+            </div>
+          </div>
+
+          {/* Tabs */}
+          <div className="px-4 pt-3 flex gap-4 border-b-2" style={{ borderColor: "rgba(200,154,62,0.2)" }}>
+            {([
+              { key: "habit" as const, label: "Rites" },
+              { key: "daily" as const, label: "Duties" },
+              { key: "todo" as const, label: "Hunts" },
+            ] as const).map((t) => (
+              <button
+                key={t.key}
+                onClick={() => setTab(t.key)}
+                className={`pb-2 text-sm font-semibold min-h-[44px] flex items-center gap-2 border-b-2 transition-colors ${
+                  tab === t.key
+                    ? "text-[#b8860b] border-[#b8860b]"
+                    : "text-[#8b7355] hover:text-[#c89a3e] border-transparent"
+                }`}
+              >
+                {t.label}
+                {tab === t.key && sortedTasks.filter((s) => !s.completed).length > 0 && (
+                  <span className="text-[11px] px-1.5 py-0.5 rounded-full font-bold leading-none" style={{ background: "rgba(200,154,62,0.15)", color: "var(--gold-bright)" }}>
+                    {sortedTasks.filter((s) => !s.completed).length}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Task List */}
+          <div className="p-4">
+            {sortedTasks.length === 0 ? (
+              <EmptyState
+                icon={tab === "habit" ? "morning" : tab === "daily" ? "morning" : "checklist"}
+                title={questSearch ? "No matching quests." : tab === "habit" ? "The board is empty." : tab === "daily" ? "No daily bounties." : "No pending requests."}
+                body={questSearch ? "Try a different search term." : "Issue a new quest to begin earning rewards."}
+                cta={questSearch
+                  ? { label: "Clear Search", onClick: () => setQuestSearch("") }
+                  : { label: "Issue Quest", onClick: () => { setEditing(null); setDialogOpen(true); } }
+                }
+              />
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {sortedTasks.map((task, i) => (
+                  <motion.div
+                    key={task.id}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
+                  >
+                    <TaskCard
+                      task={task}
+                      busy={busyIds.has(task.id)}
+                      isTutorial={profile?.tutorial_directive_id === task.id}
+                      onScore={(_, dir) => scoreMut.mutate({ id: task.id, direction: dir })}
+                      onEdit={() => {
+                        setEditing(task);
+                        setDialogOpen(true);
+                      }}
+                      onDelete={() => deleteMut.mutate(task.id)}
+                    />
+                  </motion.div>
+                ))}
               </div>
             )}
-          </button>
+          </div>
         </div>
       </div>
-
-      {/* Quest Board Modal Overlay */}
-      <QuestBoardModal
-        open={showQuestBoard}
-        onClose={() => setShowQuestBoard(false)}
-        tab={tab}
-        setTab={setTab}
-        filtered={filtered}
-        busyIds={busyIds}
-        profile={profile}
-        onScore={(id, direction) => scoreMut.mutate({ id, direction })}
-        onEdit={(task) => {
-          setEditing(task);
-          setDialogOpen(true);
-        }}
-        onDelete={(id) => deleteMut.mutate(id)}
-        onIssueQuest={() => {
-          setEditing(null);
-          setDialogOpen(true);
-        }}
-      />
 
       <TaskFormDialog
         open={dialogOpen}

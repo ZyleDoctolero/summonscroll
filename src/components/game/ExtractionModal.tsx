@@ -119,7 +119,7 @@ export function ExtractionModal({
                     />
                   </motion.div>
                   <p
-                    className="mt-2 text-[10px] font-mono"
+                    className="mt-2 text-[11px] font-mono"
                     style={{ color: "var(--ink-tertiary)" }}
                   >
                     Try: {ACCEPTED_COMMANDS.join(" · ")}

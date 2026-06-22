@@ -220,7 +220,7 @@ export function SummonReveal({
 
           {/* Realm Skill */}
           {current.monster.realmSkill && (
-            <p className="text-[10px] mt-1 font-mono" style={{ color: "var(--ink-tertiary)" }}>
+            <p className="text-[11px] mt-1 font-mono" style={{ color: "var(--ink-tertiary)" }}>
               Skill: {current.monster.realmSkill}
             </p>
           )}
@@ -366,7 +366,7 @@ export function SummonResults({
                   {r}
                 </span>
                 {res.isNew && (
-                  <p className="text-[10px] mt-1" style={{ color: "var(--success)" }}>
+                  <p className="text-[11px] mt-1" style={{ color: "var(--success)" }}>
                     New!
                   </p>
                 )}

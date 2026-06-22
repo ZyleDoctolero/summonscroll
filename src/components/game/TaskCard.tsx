@@ -145,7 +145,7 @@ export const TaskCard = React.memo(function TaskCard({
 
       {task.is_starred && (
         <div
-          className="absolute -top-2 -right-2 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
+          className="absolute -top-2 -right-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
           /* eslint-disable no-restricted-syntax */
           style={{
             background: "linear-gradient(135deg,#d4af3f,#fcd34d)",
@@ -166,11 +166,11 @@ export const TaskCard = React.memo(function TaskCard({
             <button
               disabled={busy}
               onClick={() => handleScore("plus")}
-              className="relative w-10 h-10 min-w-[40px] rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
+              className="relative w-12 h-12 min-w-[48px] rounded-lg grid place-items-center transition-all hover:scale-110 active:scale-95 disabled:opacity-40 font-bold text-xl"
               style={{
-                background: "rgba(95,173,65,0.15)",
+                background: "rgba(95,173,65,0.12)",
                 color: "var(--success)",
-                border: "1px solid rgba(95,173,65,0.4)",
+                border: "1.5px solid rgba(95,173,65,0.35)",
               }}
               aria-label="Score positive"
             >
@@ -181,11 +181,11 @@ export const TaskCard = React.memo(function TaskCard({
             <button
               disabled={busy}
               onClick={() => handleScore("minus")}
-              className="relative w-10 h-10 min-w-[40px] rounded-md grid place-items-center transition-all hover:scale-110 disabled:opacity-40 font-bold text-lg"
+              className="relative w-12 h-12 min-w-[48px] rounded-lg grid place-items-center transition-all hover:scale-110 active:scale-95 disabled:opacity-40 font-bold text-xl"
               style={{
-                background: "rgba(224,82,82,0.15)",
+                background: "rgba(224,82,82,0.12)",
                 color: "var(--danger)",
-                border: "1px solid rgba(224,82,82,0.4)",
+                border: "1.5px solid rgba(224,82,82,0.35)",
               }}
               aria-label="Score negative"
             >
@@ -197,7 +197,7 @@ export const TaskCard = React.memo(function TaskCard({
         <button
           disabled={busy}
           onClick={() => handleScore(task.completed ? "uncomplete" : "complete")}
-          className="relative w-10 h-10 min-w-[40px] rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 disabled:opacity-40"
+          className="relative w-12 h-12 min-w-[48px] rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 active:scale-95 disabled:opacity-40"
           /* eslint-disable no-restricted-syntax */
           style={{
             background: task.completed ? color : "rgba(180,150,100,0.12)",
@@ -217,12 +217,12 @@ export const TaskCard = React.memo(function TaskCard({
           <div className="min-w-0">
             {task.category && (
               <div
-                className="text-[10px] uppercase tracking-widest mb-0.5 flex items-center gap-1"
+                className="text-[11px] uppercase tracking-widest mb-0.5 flex items-center gap-1"
                 style={{ color }}
               >
                 <Icon
                   name={categoryIcon as React.ComponentProps<typeof Icon>["name"]}
-                  size={10}
+                  size={11}
                   color={color}
                 />
                 <span>{task.category}</span>
@@ -242,11 +242,11 @@ export const TaskCard = React.memo(function TaskCard({
           <div className="relative">
             <button
               onClick={() => setOpen((o) => !o)}
-              className="w-9 h-9 min-w-[36px] grid place-items-center rounded hover:bg-[rgba(200,154,62,0.06)]"
+              className="w-11 h-11 min-w-[44px] grid place-items-center rounded-lg hover:bg-[rgba(200,154,62,0.08)]"
               style={{ color: "var(--ink-secondary)" }}
               aria-label="More options"
             >
-              <Icon name="more" size={16} />
+              <Icon name="more" size={18} />
             </button>
             {open && (
               <div
@@ -302,9 +302,13 @@ export const TaskCard = React.memo(function TaskCard({
             <span className="ml-1">{DIFFICULTY_LABELS[task.difficulty] ?? task.difficulty}</span>
           </span>
           {task.streak > 0 && (
-            <span className="flex items-center gap-1">
-              <Icon name="streak" size={12} color="var(--warning)" />
-              <span className="t-mono" style={{ color: "var(--warning)" }}>
+            <span className="flex items-center gap-1" style={{
+              color: task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "var(--warning)",
+            }}>
+              <Icon name="streak" size={task.streak >= 14 ? 15 : task.streak >= 7 ? 13 : 12} color={
+                task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "var(--warning)"
+              } className={task.streak >= 7 ? "drop-shadow-[0_0_4px_rgba(230,138,0,0.5)]" : ""} />
+              <span className="t-mono font-bold">
                 {task.streak}
               </span>
             </span>

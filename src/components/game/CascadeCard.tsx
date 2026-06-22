@@ -102,11 +102,11 @@ function CascadeBody({ events }: { events: CascadeEvent[] }) {
           <span className="t-label" style={{ color: "var(--gold-bright)" }}>
             Cascade
           </span>
-          <span className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
+          <span className="text-[11px]" style={{ color: "var(--ink-tertiary)" }}>
             {events.length} effect{events.length === 1 ? "" : "s"}
           </span>
         </div>
-        <span className="text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
+        <span className="text-[11px]" style={{ color: "var(--ink-tertiary)" }}>
           tap to dismiss
         </span>
       </div>

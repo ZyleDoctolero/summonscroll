@@ -114,7 +114,7 @@ function AkashicRecordsPage() {
                       {m.monster?.name}
                     </div>
                     <div
-                      className="text-[9px] uppercase tracking-wider mt-0.5"
+                      className="text-[11px] uppercase tracking-wider mt-0.5"
                       style={{ color: rarityColor }}
                     >
                       {rarity}

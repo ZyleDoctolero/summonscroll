@@ -7,9 +7,9 @@ export interface SubNavItem {
 }
 
 export const HUB_TABS: SubNavItem[] = [
-  { path: "/", label: "Tasks" },
+  { path: "/", label: "Directives" },
   { path: "/island", label: "Sanctuary" },
-  { path: "/guild", label: "Guild" },
+  { path: "/guild", label: "Guild Hall" },
 ];
 
 export const ROSTER_TABS: SubNavItem[] = [
@@ -20,8 +20,8 @@ export const ROSTER_TABS: SubNavItem[] = [
 
 export const VOID_TABS: SubNavItem[] = [
   { path: "/battle", label: "Campaign" },
-  { path: "/expeditions", label: "Expedition" },
-  { path: "/quests", label: "Quests" },
+  { path: "/expeditions", label: "Dispatch" },
+  { path: "/quests", label: "Bounties" },
 ];
 
 export const ALTAR_TABS: SubNavItem[] = [
@@ -33,7 +33,7 @@ export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; colo
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
-    <div className="w-full flex gap-1 p-1 bg-[rgba(255,252,247,0.7)] border border-[rgba(200,170,110,0.2)] rounded-lg mb-6 overflow-x-auto no-scrollbar relative z-20 backdrop-blur-xl shadow-[0_2px_8px_rgba(120,90,50,0.06)]">
+    <nav aria-label="Section navigation" className="w-full flex gap-1 p-1 border rounded-lg mb-6 overflow-x-auto no-scrollbar relative z-20 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.4)]" style={{ background: "rgba(14,11,7,0.85)", borderColor: "rgba(200,154,62,0.15)" }}>
       {items.map((item) => {
         const isActive = pathname === item.path;
         return (
@@ -51,8 +51,8 @@ export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; colo
                 className="absolute inset-0 rounded -z-10 border-b-2"
                 style={{ 
                   borderColor: color,
-                  backgroundColor: "rgba(200,170,110,0.08)",
-                  boxShadow: `0 1px 4px rgba(120,90,50,0.06)`
+                  backgroundColor: "rgba(200,154,62,0.08)",
+                  boxShadow: `0 1px 4px rgba(0,0,0,0.3)`
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
@@ -61,6 +61,6 @@ export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; colo
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }

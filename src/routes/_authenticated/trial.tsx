@@ -95,13 +95,18 @@ function TrialPage() {
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="elder" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--danger)" }}>
-          Trial of Echoes
-        </h1>
-        <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
-          20 procedural floors. <b style={{ color: "var(--danger)" }}>Permadeath</b>. Pick 5 souls.
-          Bring them home or honor them in the Memorial.
-        </p>
+        <header className="mb-8 text-center flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[var(--danger)]/20 to-transparent border-2 border-[var(--danger)]/40 flex items-center justify-center mb-3 shadow-[0_0_24px_rgba(255,94,94,0.25)]">
+            <Icon name="death" size={32} color="var(--danger)" className="drop-shadow-[0_0_8px_rgba(255,94,94,0.6)]" />
+          </div>
+          <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--danger)", textShadow: "0 2px 12px rgba(255,94,94,0.3)" }}>
+            Trial of Echoes
+          </h1>
+          <p className="text-sm max-w-md" style={{ color: "var(--ink-secondary)" }}>
+            20 procedural floors. <b style={{ color: "var(--danger)" }}>Permadeath</b>. Pick 5 souls.
+            Bring them home or honor them in the Memorial.
+          </p>
+        </header>
 
         <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
           {[
@@ -111,7 +116,7 @@ function TrialPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className={`ss-tab-d pb-2 text-sm font-semibold capitalize ${tab === t.key ? "active" : ""}`}
+              className={`ss-tab-d pb-2 text-sm font-semibold capitalize min-h-[44px] ${tab === t.key ? "active" : ""}`}
             >
               {t.label}
             </button>
@@ -161,13 +166,13 @@ function TrialPage() {
                         />
                       </div>
                       <p
-                        className="text-[10px] font-bold truncate"
+                        className="text-[11px] font-bold truncate"
                         style={{ color: "var(--ink-primary)" }}
                       >
                         {um.monster.name}
                       </p>
                       <p
-                        className="text-[9px] flex items-center justify-center gap-0.5"
+                        className="text-[11px] flex items-center justify-center gap-0.5"
                         style={{ color: "var(--danger)" }}
                       >
                         <span>{um.star_level}</span>
@@ -188,7 +193,7 @@ function TrialPage() {
                     >
                       ?
                     </div>
-                    <p className="text-[9px] mt-1" style={{ color: "var(--ink-secondary)" }}>
+                    <p className="text-[11px] mt-1" style={{ color: "var(--ink-secondary)" }}>
                       Slot {i + 1}
                     </p>
                   </div>
@@ -216,11 +221,14 @@ function TrialPage() {
               Choose your 5
             </h2>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
-              {roster.map((um) => {
+              {roster.map((um, i) => {
                 const isPicked = picked.includes(um.id);
                 return (
-                  <button
+                  <motion.button
                     key={um.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.4) }}
                     onClick={() => {
                       if (isPicked) setPicked(picked.filter((p) => p !== um.id));
                       else if (picked.length < 5) setPicked([...picked, um.id]);
@@ -246,13 +254,13 @@ function TrialPage() {
                       />
                     </div>
                     <p
-                      className="text-[10px] font-bold truncate"
+                      className="text-[11px] font-bold truncate"
                       style={{ color: "var(--ink-primary)" }}
                     >
                       {um.monster.name}
                     </p>
                     <p
-                      className="text-[9px] flex items-center justify-center gap-1"
+                      className="text-[11px] flex items-center justify-center gap-1"
                       style={{ color: "var(--ink-secondary)" }}
                     >
                       <span className="flex items-center gap-0.5">
@@ -262,7 +270,7 @@ function TrialPage() {
                       <span>·</span>
                       <span>{Math.round(um.bond_percent)}%</span>
                     </p>
-                  </button>
+                  </motion.button>
                 );
               })}
             </div>
@@ -356,7 +364,7 @@ function TrialPage() {
               {results.fallen.length > 0 && (
                 <div className="ss-pane my-4" style={{ borderColor: "rgba(255,94,94,0.32)" }}>
                   <p
-                    className="text-[10px] uppercase tracking-[0.18em] mb-2"
+                    className="text-[11px] uppercase tracking-[0.18em] mb-2"
                     style={{ color: "var(--ink-secondary)" }}
                   >
                     Fallen
@@ -394,7 +402,7 @@ function TrialPage() {
                   }}
                 >
                   <p
-                    className="text-[10px] uppercase tracking-[0.18em] mb-2"
+                    className="text-[11px] uppercase tracking-[0.18em] mb-2"
                     style={{ color: "var(--gold-bright)" }}
                   >
                     Rewards
@@ -470,7 +478,7 @@ function Memorial({
                 {f.name}
               </p>
               <p
-                className="text-[10px] flex items-center gap-1.5"
+                className="text-[11px] flex items-center gap-1.5"
                 style={{ color: "var(--ink-secondary)" }}
               >
                 <span>Fell on floor {f.floor + 1}</span>
@@ -482,7 +490,7 @@ function Memorial({
                 <span>·</span>
                 <span>bond {Math.round(f.bond_percent)}%</span>
               </p>
-              <p className="text-[10px] mt-1" style={{ color: "var(--ink-secondary)" }}>
+              <p className="text-[11px] mt-1" style={{ color: "var(--ink-secondary)" }}>
                 {new Date(f.when).toLocaleString()}
               </p>
             </div>

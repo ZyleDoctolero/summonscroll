@@ -12,6 +12,7 @@ export async function listAllMonsters() {
     .from("monsters")
     .select("*, realms(name, icon)")
     .lte("bestiary_id", CURRENT_RELEASED_MAX)
+    .not("art_url", "is", null)
     .order("realm_id")
     .order("rarity");
   if (error) throw error;
