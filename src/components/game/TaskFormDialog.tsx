@@ -24,7 +24,17 @@ export type TaskFormValue = {
   schedule_days: number[];
   tags: string[];
   realm_id: number | null;
+  element: string | null;
 };
+
+const ELEMENT_OPTIONS: { key: string; label: string; color: string; icon: string }[] = [
+  { key: "fire",   label: "Fire",   color: "#ff5e2a", icon: "🔥" },
+  { key: "water",  label: "Water",  color: "#38b8f5", icon: "💧" },
+  { key: "nature", label: "Nature", color: "#3ed97a", icon: "🌿" },
+  { key: "light",  label: "Light",  color: "#ffe066", icon: "✨" },
+  { key: "dark",   label: "Dark",   color: "#c47fff", icon: "🌑" },
+  { key: "arcane", label: "Arcane", color: "#c89a3e", icon: "🔮" },
+];
 
 export function TaskFormDialog({
   open,
@@ -50,6 +60,7 @@ export function TaskFormDialog({
     schedule_days: [0, 1, 2, 3, 4, 5, 6],
     tags: [],
     realm_id: null,
+    element: null,
   });
   const [tagsInput, setTagsInput] = useState("");
   const [saving, setSaving] = useState(false);
@@ -73,6 +84,7 @@ export function TaskFormDialog({
       schedule_days: initial?.schedule_days ?? [0, 1, 2, 3, 4, 5, 6],
       tags: initial?.tags ?? [],
       realm_id: initial?.realm_id ?? null,
+      element: (initial as { element?: string | null })?.element ?? null,
     });
     setTagsInput((initial?.tags ?? []).join(", "));
   }, [open, initial, defaultType]);
@@ -96,32 +108,30 @@ export function TaskFormDialog({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(61,46,31,0.5)", backdropFilter: "blur(6px)" }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto"
+      style={{ background: "rgba(0,0,0,0.82)" }}
       onClick={onClose}
     >
-      <form onClick={(e) => e.stopPropagation()} onSubmit={submit} className="ss-modal">
-        <h2 className="t-h2 text-xl font-bold" style={{ color: "var(--gold-bright)" }}>
-          {initial ? "Edit Directive" : "New Directive"}
+      <form onClick={(e) => e.stopPropagation()} onSubmit={submit} className="ss-modal w-full" style={{ maxHeight: "90vh", overflowY: "auto" }}>
+        <h2 className="font-bold font-['Cinzel'] text-base mb-3" style={{ color: "var(--gold-bright)", letterSpacing: "0.1em" }}>
+          {initial ? "EDIT DIRECTIVE" : "NEW DIRECTIVE"}
         </h2>
 
         {!initial && (
-          <div className="flex gap-2">
+          <div className="flex gap-0 mb-1" style={{ border: "2px solid rgba(200,154,62,0.3)", borderRadius: 0 }}>
             {(["habit", "daily", "todo"] as const).map((t) => (
               <button
                 type="button"
                 key={t}
                 onClick={() => setV((s) => ({ ...s, type: t }))}
-                className="flex-1 py-2 rounded text-xs uppercase tracking-widest font-bold"
-                /* eslint-disable no-restricted-syntax */
+                className="flex-1 py-2 text-[9px] uppercase font-bold"
                 style={{
-                  background:
-                    v.type === t
-                      ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
-                      : "rgba(200,154,62,0.06)",
-                  color: v.type === t ? "#ffffff" : "var(--ink-secondary)",
+                  fontFamily: "var(--ss-font-pixel)",
+                  background: v.type === t ? "var(--gold-bright)" : "transparent",
+                  color: v.type === t ? "var(--bg-deep)" : "var(--ink-tertiary)",
+                  borderRight: t !== "todo" ? "1px solid rgba(200,154,62,0.2)" : "none",
+                  letterSpacing: "0.04em",
                 }}
-                /* eslint-enable no-restricted-syntax */
               >
                 {t}
               </button>
@@ -189,21 +199,61 @@ export function TaskFormDialog({
         </Field>
 
         <Field label="Difficulty">
-          <div className="flex gap-2">
-            {(["trivial", "easy", "medium", "hard"] as const).map((d) => (
+          <div className="flex gap-0" style={{ border: "2px solid rgba(200,154,62,0.25)", borderRadius: 0 }}>
+            {(["trivial", "easy", "medium", "hard"] as const).map((d, i) => (
               <button
                 key={d}
                 type="button"
                 onClick={() => setV({ ...v, difficulty: d })}
-                className="flex-1 py-2 rounded text-xs uppercase font-semibold"
+                className="flex-1 py-2 text-[9px] uppercase font-bold"
                 style={{
-                  background:
-                    v.difficulty === d ? "rgba(255,213,79,0.18)" : "rgba(200,154,62,0.04)",
-                  color: v.difficulty === d ? "var(--gold-bright)" : "var(--ink-secondary)",
-                  border: `1px solid ${v.difficulty === d ? "rgba(255,213,79,0.4)" : "transparent"}`,
+                  fontFamily: "var(--ss-font-pixel)",
+                  background: v.difficulty === d ? "rgba(200,154,62,0.2)" : "transparent",
+                  color: v.difficulty === d ? "var(--gold-bright)" : "var(--ink-tertiary)",
+                  borderRight: i < 3 ? "1px solid rgba(200,154,62,0.2)" : "none",
+                  letterSpacing: "0.04em",
                 }}
               >
                 {d}
+              </button>
+            ))}
+          </div>
+        </Field>
+
+        <Field label="Element Tag — for Ritual Incubation">
+          <div className="flex gap-1 flex-wrap">
+            <button
+              type="button"
+              onClick={() => setV({ ...v, element: null })}
+              className="py-1 px-2 text-[9px] font-bold uppercase"
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                background: v.element === null ? "rgba(180,150,100,0.25)" : "transparent",
+                color: v.element === null ? "var(--ink-primary)" : "var(--ink-tertiary)",
+                border: `1px solid ${v.element === null ? "rgba(180,150,100,0.5)" : "rgba(180,150,100,0.2)"}`,
+                borderRadius: 0,
+                letterSpacing: "0.04em",
+              }}
+            >
+              None
+            </button>
+            {ELEMENT_OPTIONS.map((el) => (
+              <button
+                key={el.key}
+                type="button"
+                onClick={() => setV({ ...v, element: el.key })}
+                className="py-1 px-2 text-[9px] font-bold uppercase flex items-center gap-1"
+                style={{
+                  fontFamily: "var(--ss-font-pixel)",
+                  background: v.element === el.key ? `${el.color}22` : "transparent",
+                  color: v.element === el.key ? el.color : "var(--ink-tertiary)",
+                  border: `1px solid ${v.element === el.key ? el.color : "rgba(180,150,100,0.2)"}`,
+                  borderRadius: 0,
+                  letterSpacing: "0.04em",
+                  boxShadow: v.element === el.key ? `2px 2px 0 rgba(0,0,0,0.35)` : "none",
+                }}
+              >
+                {el.icon} {el.label}
               </button>
             ))}
           </div>
@@ -255,15 +305,15 @@ export function TaskFormDialog({
                           : [...v.schedule_days, i].sort(),
                       })
                     }
-                    className="flex-1 py-2 text-xs font-bold rounded"
-                    /* eslint-disable no-restricted-syntax */
+                    className="flex-1 py-2 text-[9px] font-bold"
                     style={{
-                      background: on
-                        ? "linear-gradient(135deg,#d4af3f,#fcd34d)"
-                        : "rgba(200,154,62,0.06)",
-                      color: on ? "#ffffff" : "var(--ink-secondary)",
+                      fontFamily: "var(--ss-font-pixel)",
+                      background: on ? "var(--gold-bright)" : "rgba(200,154,62,0.06)",
+                      color: on ? "var(--bg-deep)" : "var(--ink-secondary)",
+                      border: `2px solid ${on ? "var(--gold-glow)" : "rgba(200,154,62,0.15)"}`,
+                      borderRadius: 0,
+                      boxShadow: on ? "2px 2px 0 var(--gold-glow)" : "none",
                     }}
-                    /* eslint-enable no-restricted-syntax */
                   >
                     {d}
                   </button>
@@ -277,19 +327,16 @@ export function TaskFormDialog({
           <button
             type="button"
             onClick={onClose}
-            className="flex-1 py-2 rounded text-sm uppercase tracking-widest"
-            style={{ background: "rgba(200,154,62,0.06)", color: "var(--ink-secondary)" }}
+            className="flex-1 py-2 text-[10px] uppercase font-bold ss-btn ss-btn-secondary"
           >
             Cancel
           </button>
           <button
             type="submit"
             disabled={saving}
-            className="flex-1 py-2 rounded text-sm uppercase tracking-widest font-bold disabled:opacity-50"
-            // eslint-disable-next-line no-restricted-syntax
-            style={{ background: "linear-gradient(135deg,#d4af3f,#fcd34d)", color: "#ffffff" }}
+            className="flex-1 py-2 text-[10px] uppercase font-bold ss-btn ss-btn-primary disabled:opacity-50"
           >
-            {saving ? "Saving" : initial ? "Save" : "Create"}
+            {saving ? "Saving..." : initial ? "Save" : "Create"}
           </button>
         </div>
         {/* .ss-input styles defined globally in styles.css */}
@@ -302,8 +349,8 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   return (
     <label className="block">
       <div
-        className="text-[11px] uppercase tracking-widest mb-1 font-semibold"
-        style={{ color: "var(--ink-secondary)" }}
+        className="mb-1 uppercase"
+        style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, letterSpacing: "0.06em", color: "var(--ink-tertiary)", fontWeight: 700 }}
       >
         {label}
       </div>

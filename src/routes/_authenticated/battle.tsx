@@ -230,30 +230,53 @@ function BattlePage() {
 
             {/* Manual Controls */}
             {result.mode === "manual" && !result.initialState.complete && (
-              <div className="grid grid-cols-3 gap-2 mt-4">
+              <div className="space-y-2 mt-4">
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    onClick={() => turnMut.mutate("attack")}
+                    disabled={turnMut.isPending}
+                    className="ss-btn ss-btn-primary"
+                    style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 10 }}
+                  >
+                    ⚔ Attack
+                  </button>
+                  <button
+                    onClick={() => turnMut.mutate("defend")}
+                    disabled={turnMut.isPending}
+                    className="ss-btn ss-btn-secondary"
+                    style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 10 }}
+                  >
+                    🛡 Defend
+                  </button>
+                  <button
+                    onClick={() => turnMut.mutate("special")}
+                    disabled={turnMut.isPending || result.initialState.specialCooldown > 0}
+                    className="ss-btn ss-btn-danger"
+                    style={{ opacity: result.initialState.specialCooldown > 0 ? 0.4 : 1, fontFamily: "var(--ss-font-pixel)", fontSize: 10 }}
+                  >
+                    {result.initialState.specialCooldown > 0
+                      ? `CD: ${result.initialState.specialCooldown}`
+                      : "★ Special"}
+                  </button>
+                </div>
+                {/* Tamer Class ability */}
                 <button
-                  onClick={() => turnMut.mutate("attack")}
+                  onClick={() => turnMut.mutate("tamer_bond")}
                   disabled={turnMut.isPending}
-                  className="ss-btn ss-btn-primary"
+                  className="w-full py-2 border"
+                  style={{
+                    fontFamily: "var(--ss-font-pixel)",
+                    fontSize: 10,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.04em",
+                    background: "rgba(127,119,221,0.1)",
+                    borderColor: "rgba(127,119,221,0.3)",
+                    borderRadius: 0,
+                    color: "var(--violet)",
+                    boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+                  }}
                 >
-                  Attack
-                </button>
-                <button
-                  onClick={() => turnMut.mutate("defend")}
-                  disabled={turnMut.isPending}
-                  className="ss-btn ss-btn-secondary"
-                >
-                  Defend
-                </button>
-                <button
-                  onClick={() => turnMut.mutate("special")}
-                  disabled={turnMut.isPending || result.initialState.specialCooldown > 0}
-                  className="ss-btn ss-btn-danger"
-                  style={{ opacity: result.initialState.specialCooldown > 0 ? 0.4 : 1 }}
-                >
-                  {result.initialState.specialCooldown > 0
-                    ? `CD: ${result.initialState.specialCooldown}`
-                    : "Special"}
+                  🐾 Tamer Bond — Boost ally bond +5%
                 </button>
               </div>
             )}
@@ -371,7 +394,7 @@ function BattlePage() {
                     whileTap={{ scale: 0.97 }}
                     whileHover={{ y: -1 }}
                     transition={trans.springy}
-                    className="w-full py-3 rounded-lg font-bold text-sm uppercase tracking-[0.18em] ss-btn ss-btn-primary"
+                    className="w-full py-3 font-bold text-sm uppercase ss-btn ss-btn-primary"
                   >
                     Continue
                   </motion.button>
@@ -388,13 +411,13 @@ function BattlePage() {
     <AppShell profile={profile}>
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen">
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[rgba(255,94,42,0.12)] to-transparent border-2 border-[rgba(255,94,42,0.2)] flex items-center justify-center mb-3 shadow-[0_0_16px_rgba(255,94,42,0.1)]">
+          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(255,94,42,0.3)", borderRadius: 0, background: "rgba(255,94,42,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
             <Icon name="battle" size={28} color="var(--danger)" />
           </div>
-          <h1 className="font-serif text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
-            Battle Arena
+          <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+            BATTLE ARENA
           </h1>
-          <p className="text-sm font-serif" style={{ color: "var(--ink-secondary)" }}>
+          <p className="text-[10px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
             {canBattle
               ? `Team of ${team.length} monsters ready.`
               : "Build a team of 3+ monsters on your Island first."}
@@ -403,13 +426,13 @@ function BattlePage() {
 
         {!canBattle && (
           <div
-            className="rounded-xl p-8 text-center border-2 border-dashed mb-6 ss-card"
-            style={{ borderColor: "rgba(61,46,31,0.08)", color: "var(--ink-secondary)" }}
+            className="p-8 text-center border-2 border-dashed mb-6 ss-card"
+            style={{ borderColor: "rgba(200,154,62,0.2)", borderRadius: 0, color: "var(--ink-secondary)" }}
           >
             <Icon name="battle" size={48} color="var(--ink-secondary)" className="mb-2 mx-auto" />
-            <p className="mb-4">Build a team of 3+ to enter battle.</p>
+            <p className="mb-4" style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 11 }}>Build a team of 3+ to enter battle.</p>
             <a href="/island" className="ss-btn ss-btn-primary">
-              Go to Island →
+              Go to Island
             </a>
           </div>
         )}
@@ -463,8 +486,8 @@ function BattlePage() {
 
         {/* Battle history */}
         <div>
-          <h2 className="text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
-            Recent Battles
+          <h2 className="text-base font-bold mb-3" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)", letterSpacing: "0.04em" }}>
+            RECENT BATTLES
           </h2>
           {(historyQ.data?.battles ?? []).length === 0 ? (
             <EmptyState
@@ -489,7 +512,7 @@ function BattlePage() {
                   }) => (
                     <div
                       key={b.id}
-                      className="ss-card rounded-md p-3 flex items-center justify-between text-sm"
+                      className="ss-card p-3 flex items-center justify-between text-sm"
                     >
                       <div>
                         <span
@@ -549,56 +572,53 @@ function ModeCard({
 }) {
   return (
     <div
-      className="ss-card p-6 group transition-all duration-300 hover:scale-[1.02]"
+      className="ss-card p-6 group transition-all duration-150"
       style={{
         borderColor: `color-mix(in srgb, ${accent}, transparent 75%)`,
+        borderRadius: 0,
+        boxShadow: `4px 4px 0 rgba(0,0,0,0.4)`,
       }}
     >
       <div className="flex items-start justify-between mb-3">
-        <div className="w-12 h-12 rounded-xl grid place-items-center" style={{
+        <div className="w-12 h-12 grid place-items-center" style={{
           background: `color-mix(in srgb, ${accent}, transparent 88%)`,
-          border: `1px solid color-mix(in srgb, ${accent}, transparent 70%)`,
+          border: `2px solid color-mix(in srgb, ${accent}, transparent 60%)`,
+          borderRadius: 0,
         }}>
           {icon}
         </div>
         {progress !== undefined && (
-          <span className="text-xs font-bold font-serif" style={{ color: accent }}>
+          <span className="text-[10px] font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: accent }}>
             {Math.round(progress)}%
           </span>
         )}
       </div>
-      <h3 className="text-lg font-bold mb-1" style={{ color: "var(--ink-primary)" }}>
+      <h3 className="text-lg font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)" }}>
         {title}
       </h3>
-      <p className="text-sm mb-1" style={{ color: "var(--ink-secondary)" }}>
+      <p className="text-[10px] mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
         {desc}
       </p>
       {sub && (
-        <p className="text-xs mb-3" style={{ color: "var(--ink-tertiary)" }}>
+        <p className="text-[9px] mb-3" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
           {sub}
         </p>
       )}
       {progress !== undefined && (
-        <div
-          className="h-2 rounded-full mb-4 overflow-hidden"
-          style={{ background: "rgba(61,46,31,0.06)" }}
-        >
+        <div className="ss-bar-pixel mb-4" style={{ height: 10 }}>
           <div
-            className="h-full rounded-full transition-all duration-700"
-            style={{
-              width: `${progress}%`,
-              background: `linear-gradient(90deg, color-mix(in srgb, ${accent}, transparent 40%), ${accent})`,
-              boxShadow: `0 0 8px color-mix(in srgb, ${accent}, transparent 50%)`,
-            }}
+            className="ss-bar-pixel-fill transition-all duration-700"
+            style={{ width: `${progress}%`, background: accent }}
           />
         </div>
       )}
       <button
         onClick={onClick}
         disabled={disabled}
-        className="ss-btn ss-btn-d-primary w-full py-3 text-sm font-bold tracking-wider disabled:opacity-30 transition-all group-hover:shadow-lg"
+        className="ss-btn ss-btn-d-primary w-full py-3 text-[10px] font-bold uppercase disabled:opacity-30 transition-all"
+        style={{ fontFamily: "var(--ss-font-pixel)", letterSpacing: "0.06em" }}
       >
-        {loading ? "Fighting…" : "Enter Battle →"}
+        {loading ? "Fighting..." : "ENTER BATTLE"}
       </button>
     </div>
   );
@@ -620,22 +640,19 @@ function AnimatedHpBar({
   const pct = Math.max(0, Math.min(100, (current / max) * 100));
   return (
     <div>
-      <div className="flex justify-between text-xs mb-1" style={{ color: "var(--ink-secondary)" }}>
-        <span>{label}</span>
-        <span className="font-serif">
+      <div className="flex justify-between mb-1" style={{ color: "var(--ink-secondary)" }}>
+        <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.04em" }}>{label}</span>
+        <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9 }}>
           <NumberFlow value={Math.max(0, current)} /> / {max.toLocaleString()}
         </span>
       </div>
-      <div
-        className="h-3 rounded-full overflow-hidden"
-        style={{ background: "rgba(61,46,31,0.06)" }}
-      >
+      <div className="ss-bar-pixel" style={{ height: 12 }}>
         <motion.div
           initial={{ width: "100%" }}
           animate={{ width: `${pct}%` }}
           transition={{ duration: dur.weighty, ease: ease.weighty, delay }}
-          className="h-full rounded-full"
-          style={{ background: color, boxShadow: `0 0 10px ${color}80` }}
+          className="ss-bar-pixel-fill"
+          style={{ background: color }}
         />
       </div>
     </div>

@@ -87,10 +87,10 @@ function FusionPage() {
       <AtmosphereBackdrop realm="void" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen flex flex-col items-center">
         <h1
-          className="t-h1 text-4xl font-serif font-bold mb-2 tracking-widest uppercase font-display"
-          style={{ color: "var(--gold-bright)", textShadow: "0 0 20px rgba(212,175,63,0.3)" }}
+          className="text-3xl font-bold mb-2 uppercase"
+          style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}
         >
-          Fusion Matrix
+          FUSION MATRIX
         </h1>
         <p className="text-sm mb-12 max-w-lg text-center" style={{ color: "var(--ink-secondary)" }}>
           Transcend mortal limits. Select a target at max level, then sacrifice{" "}
@@ -112,12 +112,12 @@ function FusionPage() {
                 onClick={() => setSelectingMode("target")}
               >
                 <div
-                  className="absolute -top-3 -right-3 w-8 h-8 rounded-full flex items-center justify-center font-bold bg-[var(--bg-stage)] border-2"
-                  style={{ borderColor: "var(--gold-bright)", color: "var(--gold-bright)" }}
+                  className="absolute -top-3 -right-3 w-8 h-8 flex items-center justify-center font-bold bg-[var(--bg-stage)] border-2"
+                  style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", borderColor: "var(--gold-bright)", color: "var(--gold-bright)" }}
                 >
                   {currentStar}★
                 </div>
-                <div className="w-24 h-24 mx-auto rounded mb-3 flex items-center justify-center overflow-hidden ss-pane">
+                <div className="w-24 h-24 mx-auto mb-3 flex items-center justify-center overflow-hidden ss-pane">
                   <img
                     src={
                       targetMonster.monster.art_url ||
@@ -140,11 +140,11 @@ function FusionPage() {
             ) : (
               <button
                 onClick={() => setSelectingMode("target")}
-                className="rounded-xl p-4 border-2 border-dashed w-40 h-48 flex flex-col items-center justify-center transition-colors hover:border-[var(--ink-secondary)]/20"
-                style={{ borderColor: "var(--gold-bright)", color: "var(--gold-bright)" }}
+                className="p-4 border-2 border-dashed w-40 h-48 flex flex-col items-center justify-center transition-colors"
+                style={{ borderColor: "var(--gold-bright)", color: "var(--gold-bright)", borderRadius: 0, fontFamily: "var(--ss-font-pixel)" }}
               >
                 <span className="text-4xl mb-2">+</span>
-                <span className="text-xs font-bold tracking-widest">SELECT TARGET</span>
+                <span className="text-[10px] font-bold">SELECT TARGET</span>
               </button>
             )}
           </div>
@@ -175,7 +175,7 @@ function FusionPage() {
                           setSelectingMode("fodder");
                         }}
                       >
-                        <div className="w-16 h-16 mx-auto rounded mb-2 flex items-center justify-center overflow-hidden ss-pane grayscale group-hover:grayscale-0 transition-all">
+                        <div className="w-16 h-16 mx-auto mb-2 flex items-center justify-center overflow-hidden ss-pane grayscale group-hover:grayscale-0 transition-all">
                           <img
                             src={
                               um.monster.art_url ||
@@ -198,7 +198,8 @@ function FusionPage() {
                             n[i] = null;
                             setFodderIds(n);
                           }}
-                          className="absolute -top-2 -right-2 bg-red-900 text-red-100 rounded-full w-5 h-5 flex items-center justify-center text-[11px] font-bold border border-red-500 hover:bg-red-500 hover:text-[var(--ink-secondary)]"
+                          className="absolute -top-2 -right-2 bg-red-900 text-red-100 w-5 h-5 flex items-center justify-center text-[11px] font-bold border border-red-500 hover:bg-red-500"
+                          style={{ borderRadius: 0 }}
                         >
                           ×
                         </button>
@@ -212,8 +213,8 @@ function FusionPage() {
                         setFodderSlotIndex(i);
                         setSelectingMode("fodder");
                       }}
-                      className="rounded-xl p-2 border-2 border-dashed w-28 h-32 flex flex-col items-center justify-center transition-colors hover:border-red-500/50"
-                      style={{ borderColor: "var(--danger)", color: "var(--danger)", opacity: 0.6 }}
+                      className="p-2 border-2 border-dashed w-28 h-32 flex flex-col items-center justify-center transition-colors"
+                      style={{ borderColor: "var(--danger)", color: "var(--danger)", opacity: 0.6, borderRadius: 0, fontFamily: "var(--ss-font-pixel)" }}
                     >
                       <span className="text-2xl mb-1">+</span>
                       <span className="text-[11px] uppercase tracking-widest">
@@ -311,7 +312,7 @@ function FusionPage() {
                       >
                         {umStar}★
                       </div>
-                      <div className="w-full aspect-square rounded mb-1 flex items-center justify-center overflow-hidden ss-pane">
+                      <div className="w-full aspect-square mb-1 flex items-center justify-center overflow-hidden ss-pane">
                         <img
                           src={
                             um.monster.art_url ||

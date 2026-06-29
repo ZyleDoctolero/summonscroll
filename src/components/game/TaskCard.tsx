@@ -18,6 +18,16 @@ export type Task = {
   is_starred?: boolean;
   tags?: string[];
   realm_id?: number | null;
+  element?: string | null;
+};
+
+const ELEMENT_COLOR: Record<string, string> = {
+  fire: "#ff5e2a", water: "#38b8f5", nature: "#3ed97a",
+  light: "#ffe066", dark: "#c47fff", arcane: "#c89a3e",
+};
+const ELEMENT_ICON: Record<string, string> = {
+  fire: "🔥", water: "💧", nature: "🌿",
+  light: "✨", dark: "🌑", arcane: "🔮",
 };
 
 // Category  realm affinity mapping per FR01 2.8
@@ -124,19 +134,18 @@ export const TaskCard = React.memo(function TaskCard({
 
   return (
     <article
-      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-visible duration-300 hover:shadow-[0_4px_20px_rgba(200,154,62,0.2)]"
+      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-visible duration-150"
       /* eslint-disable no-restricted-syntax */
       style={{
         borderLeft: `4px solid ${task.is_starred ? "#fcd34d" : color}`,
         borderLeftWidth: task.is_starred ? 6 : 4,
         borderLeftColor: task.is_starred ? "#fcd34d" : color,
-        borderRadius: "12px",
+        borderRadius: 0,
         opacity: task.completed && task.type !== "habit" ? 0.55 : 1,
-        boxShadow: task.is_starred ? "0 0 18px rgba(212,175,63,0.4)" : undefined,
-        animation: isTutorial 
-          ? "tutorial-pulse 2s ease-in-out infinite" 
-          : justCompleted 
-            ? "task-complete-flash 0.8s ease-out forwards" 
+        animation: isTutorial
+          ? "tutorial-pulse 2s ease-in-out infinite"
+          : justCompleted
+            ? "task-complete-flash 0.8s ease-out forwards"
             : undefined,
       }}
       /* eslint-enable no-restricted-syntax */
@@ -145,33 +154,30 @@ export const TaskCard = React.memo(function TaskCard({
 
       {task.is_starred && (
         <div
-          className="absolute -top-2 -right-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-widest shadow flex items-center gap-1"
+          className="absolute -top-2 -right-2 px-2 py-0.5 text-[9px] font-bold uppercase flex items-center gap-1"
           /* eslint-disable no-restricted-syntax */
           style={{
-            background: "linear-gradient(135deg,#d4af3f,#fcd34d)",
-            color: "#ffffff",
-            border: "1px solid #fef08a",
-            boxShadow: "0 0 10px rgba(212,175,63,0.5)",
+            fontFamily: "var(--ss-font-pixel)",
+            background: "#c89a3e",
+            color: "var(--bg-deep)",
+            border: "2px solid #7a5a1a",
+            borderRadius: 0,
+            boxShadow: "2px 2px 0 #7a5a1a",
           }}
           /* eslint-enable no-restricted-syntax */
         >
-          <Icon name="star" size={10} color="var(--bg-deep)" className="fill-current" />
+          <Icon name="star" size={9} color="var(--bg-deep)" className="fill-current" />
           Sacred
         </div>
       )}
-      {/* Action buttons - FR01 2.3: [+] and [-] for habits */}
+      {/* Action buttons — pixel art push style */}
       {task.type === "habit" ? (
         <div className="flex flex-col gap-1.5">
           {task.positive_enabled && (
             <button
               disabled={busy}
               onClick={() => handleScore("plus")}
-              className="relative w-12 h-12 min-w-[48px] rounded-lg grid place-items-center transition-all hover:scale-110 active:scale-95 disabled:opacity-40 font-bold text-xl"
-              style={{
-                background: "rgba(95,173,65,0.12)",
-                color: "var(--success)",
-                border: "1.5px solid rgba(95,173,65,0.35)",
-              }}
+              className="ss-task-btn-plus disabled:opacity-40"
               aria-label="Score positive"
             >
               +
@@ -181,12 +187,7 @@ export const TaskCard = React.memo(function TaskCard({
             <button
               disabled={busy}
               onClick={() => handleScore("minus")}
-              className="relative w-12 h-12 min-w-[48px] rounded-lg grid place-items-center transition-all hover:scale-110 active:scale-95 disabled:opacity-40 font-bold text-xl"
-              style={{
-                background: "rgba(224,82,82,0.12)",
-                color: "var(--danger)",
-                border: "1.5px solid rgba(224,82,82,0.35)",
-              }}
+              className="ss-task-btn-minus disabled:opacity-40"
               aria-label="Score negative"
             >
               -
@@ -197,13 +198,14 @@ export const TaskCard = React.memo(function TaskCard({
         <button
           disabled={busy}
           onClick={() => handleScore(task.completed ? "uncomplete" : "complete")}
-          className="relative w-12 h-12 min-w-[48px] rounded-[12px] grid place-items-center self-start transition-all hover:scale-110 active:scale-95 disabled:opacity-40"
+          className="relative w-12 h-12 min-w-[48px] grid place-items-center self-start disabled:opacity-40 transition-all"
           /* eslint-disable no-restricted-syntax */
           style={{
             background: task.completed ? color : "rgba(180,150,100,0.12)",
-            border: `3px solid ${color}`,
+            border: `2px solid ${color}`,
+            borderRadius: 0,
             color: task.completed ? "#ffffff" : color,
-            boxShadow: `inset 0 0 8px ${color}40`,
+            boxShadow: task.completed ? `2px 2px 0 rgba(0,0,0,0.4)` : `3px 3px 0 rgba(0,0,0,0.3)`,
           }}
           /* eslint-enable no-restricted-syntax */
           aria-label="Toggle complete"
@@ -242,16 +244,16 @@ export const TaskCard = React.memo(function TaskCard({
           <div className="relative">
             <button
               onClick={() => setOpen((o) => !o)}
-              className="w-11 h-11 min-w-[44px] grid place-items-center rounded-lg hover:bg-[rgba(200,154,62,0.08)]"
-              style={{ color: "var(--ink-secondary)" }}
+              className="w-11 h-11 min-w-[44px] grid place-items-center hover:bg-[rgba(200,154,62,0.08)]"
+              style={{ borderRadius: 0, color: "var(--ink-secondary)" }}
               aria-label="More options"
             >
               <Icon name="more" size={18} />
             </button>
             {open && (
               <div
-                className="absolute right-0 top-10 z-[70] min-w-[140px] rounded-lg border shadow-xl ss-card py-1"
-                style={{ borderColor: "var(--ss-hairline)" }}
+                className="absolute right-0 top-10 z-[70] min-w-[140px] border ss-card py-1"
+                style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)", borderColor: "var(--ss-hairline)" }}
                 onMouseLeave={() => setOpen(false)}
               >
                 <button
@@ -289,41 +291,54 @@ export const TaskCard = React.memo(function TaskCard({
 
         {/* Task meta row */}
         <div
-          className="flex items-center gap-3 mt-2 text-[11px]"
+          className="flex items-center gap-2 mt-2 flex-wrap"
           style={{ color: "var(--ink-tertiary)" }}
         >
-          <span className="t-mono flex items-center gap-1" style={{ color }}>
+          <span className="flex items-center gap-1" style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color }}>
             {Array.from({ length: DIFFICULTY_STARS[task.difficulty] ?? 0 }).map((_, i) => (
-              <Icon key={i} name="star" size={10} color={color} className="fill-current" />
+              <Icon key={i} name="star" size={9} color={color} className="fill-current" />
             ))}
             {DIFFICULTY_STARS[task.difficulty] === 0 && (
-              <Icon name="star" size={10} color={color} className="opacity-40" />
+              <Icon name="star" size={9} color={color} className="opacity-40" />
             )}
             <span className="ml-1">{DIFFICULTY_LABELS[task.difficulty] ?? task.difficulty}</span>
           </span>
           {task.streak > 0 && (
             <span className="flex items-center gap-1" style={{
-              color: task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "var(--warning)",
+              fontFamily: "var(--ss-font-pixel)", fontSize: 9,
+              color: task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "#ffb74d",
             }}>
-              <Icon name="streak" size={task.streak >= 14 ? 15 : task.streak >= 7 ? 13 : 12} color={
-                task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "var(--warning)"
-              } className={task.streak >= 7 ? "drop-shadow-[0_0_4px_rgba(230,138,0,0.5)]" : ""} />
-              <span className="t-mono font-bold">
-                {task.streak}
-              </span>
+              <Icon name="streak" size={11} color={
+                task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "#ffb74d"
+              } />
+              {task.streak}🔥
+            </span>
+          )}
+          {task.element && ELEMENT_COLOR[task.element] && (
+            <span
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                fontSize: 9,
+                padding: "1px 5px",
+                border: `1px solid ${ELEMENT_COLOR[task.element]}`,
+                color: ELEMENT_COLOR[task.element],
+                background: `${ELEMENT_COLOR[task.element]}15`,
+                borderRadius: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.04em",
+              }}
+            >
+              {ELEMENT_ICON[task.element]} {task.element}
             </span>
           )}
         </div>
 
-        {/* Streak health bar - FR01 2.2 */}
+        {/* Streak health bar — segmented pixel art */}
         {task.type !== "todo" && task.streak > 0 && (
           <div className="mt-2">
-            <div
-              className="h-1.5 rounded-full overflow-hidden"
-              style={{ background: "rgba(180,150,100,0.12)" }}
-            >
+            <div className="ss-bar-pixel" style={{ height: 10 }}>
               <div
-                className="h-full rounded-full transition-all"
+                className="ss-bar-pixel-fill"
                 style={{ width: `${streakHealth}%`, background: streakColor }}
               />
             </div>

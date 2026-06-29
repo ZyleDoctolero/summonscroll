@@ -61,7 +61,7 @@ function AuthPage() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-md backdrop-blur-md p-5 sm:p-8 rounded-2xl border shadow-[0_8px_60px_rgba(0,0,0,0.6)]" style={{ background: "rgba(18,14,9,0.92)", borderColor: "rgba(200,154,62,0.2)" }}>
+      <div className="relative z-10 w-full max-w-md p-5 sm:p-8 border-2" style={{ background: "rgba(18,14,9,0.95)", borderColor: "rgba(200,154,62,0.3)", boxShadow: "6px 6px 0 rgba(0,0,0,0.5)" }}>
         <div className="text-center mb-8">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-display font-bold tracking-wider md:tracking-widest text-[#b8860b]">
             SUMMONSCROLL

@@ -7,6 +7,8 @@ const NAV_RARE = [
   { to: "/trial", label: "Trial of Echoes", icon: "death" },
   { to: "/guild", label: "Guild", icon: "crown" },
   { to: "/fusion", label: "Fusion", icon: "sparkle" },
+  { to: "/cross-fusion", label: "X-Fusion", icon: "sparkle" },
+  { to: "/race-skills", label: "Race Skills", icon: "compass" },
   { to: "/bazaar", label: "Shop", icon: "gold" },
 ] as const;
 

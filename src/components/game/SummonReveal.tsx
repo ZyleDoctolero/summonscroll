@@ -169,7 +169,7 @@ export function SummonReveal({
           }}
         >
           {/* Monster Art */}
-          <div className="w-40 h-40 mx-auto rounded-lg mb-4 flex items-center justify-center overflow-hidden ss-pane relative">
+          <div className="w-40 h-40 mx-auto mb-4 flex items-center justify-center overflow-hidden ss-pane relative">
             <img
               src={
                 current.monster.artUrl
@@ -334,7 +334,7 @@ export function SummonResults({
                       : undefined,
                 }}
               >
-                <div className="w-16 h-16 mx-auto rounded mb-3 flex items-center justify-center overflow-hidden ss-pane">
+                <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center overflow-hidden ss-pane">
                   <img
                     src={
                       res.monster.artUrl

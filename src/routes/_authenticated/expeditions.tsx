@@ -140,14 +140,14 @@ function ExpeditionsPage() {
 
       <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto pt-20">
         <header className="mb-8 text-center flex flex-col items-center">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[var(--gold-bright)]/20 to-transparent border-2 border-[var(--gold-bright)]/40 flex items-center justify-center mb-3 shadow-[0_0_24px_rgba(212,175,63,0.25)]">
-            <Icon name="compass" size={32} color="var(--gold-bright)" className="drop-shadow-[0_0_8px_#fcd34d]" />
+          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(200,154,62,0.4)", borderRadius: 0, background: "rgba(200,154,62,0.08)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+            <Icon name="compass" size={32} color="var(--gold-bright)" />
           </div>
           <h1
-            className="t-h1 text-4xl mb-2"
-            style={{ color: "var(--gold-bright)", textShadow: "0 2px 15px rgba(212,175,63,0.5)" }}
+            className="text-3xl font-bold mb-2"
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}
           >
-            Astral Expeditions
+            ASTRAL EXPEDITIONS
           </h1>
           <p className="max-w-md" style={{ color: "var(--ink-secondary)" }}>
             Dispatch your inactive companions to cultivate and gather resources.
@@ -201,9 +201,9 @@ function ExpeditionsPage() {
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-stage)]/50 mb-4 border border-[rgba(61,46,31,0.1)]">
+                    <div className="ss-bar-pixel mb-4" style={{ height: 8 }}>
                       <div
-                        className="h-full transition-all duration-1000"
+                        className="ss-bar-pixel-fill transition-all duration-1000"
                         style={{
                           width: `${progress}%`,
                           background: isDone ? "var(--success)" : "var(--gold-bright)",
@@ -266,7 +266,7 @@ function ExpeditionsPage() {
             <h2 className="t-h3 mb-4" style={{ color: "var(--ink-primary)" }}>
               Dispatch Companion
             </h2>
-            <div className="ss-card p-6 bg-[var(--bg-stage)]/40 backdrop-blur-md border border-[rgba(61,46,31,0.1)] h-full flex flex-col">
+            <div className="ss-card p-6 bg-[var(--bg-stage)]/60 border border-[rgba(61,46,31,0.1)] h-full flex flex-col">
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 mb-6 flex-1 overflow-y-auto max-h-[400px] custom-scrollbar pr-2">
                 {monstersQ.data?.userMonsters
                   .filter((m: { id: string }) => m.id !== profileQ.data?.profile.soul_tether_id)
@@ -278,7 +278,8 @@ function ExpeditionsPage() {
                         key={um.id}
                         disabled={isBusy}
                         onClick={() => setSelectedMonster(um.id)}
-                        className={`relative rounded-lg p-2 transition-all flex flex-col items-center ${isBusy ? "opacity-30 grayscale cursor-not-allowed" : "hover:scale-105 hover:bg-[var(--ink-secondary)]/10"} ${isSelected ? "bg-[var(--ink-secondary)]/10 border border-[var(--ink-secondary)]/30 shadow-[0_0_15px_rgba(255,255,255,0.2)]" : "border border-transparent"}`}
+                        className={`relative p-2 transition-all flex flex-col items-center ${isBusy ? "opacity-30 grayscale cursor-not-allowed" : ""} ${isSelected ? "bg-[var(--ink-secondary)]/10 border border-[var(--ink-secondary)]/30" : "border border-transparent"}`}
+                        style={{ borderRadius: 0, boxShadow: isSelected ? "3px 3px 0 rgba(0,0,0,0.3)" : undefined }}
                       >
                         <img
                           src={

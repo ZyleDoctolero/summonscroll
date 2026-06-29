@@ -149,13 +149,51 @@ function AltarPage() {
         </div>
 
         {/* Left Side: Banner Selection (Vertical Tabs) */}
-        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[var(--gold-bright)]/30 bg-[var(--bg-stage)]/50 backdrop-blur-md">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[rgba(127,119,221,0.12)] to-transparent border-2 border-[rgba(127,119,221,0.2)] flex items-center justify-center mb-3 shadow-[0_0_16px_rgba(127,119,221,0.1)]">
+        <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[var(--gold-bright)]/30 bg-[var(--bg-stage)]/80">
+          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(127,119,221,0.3)", borderRadius: 0, background: "rgba(127,119,221,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
             <Icon name="altar" size={28} color="var(--violet)" />
           </div>
-          <h1 className="text-4xl font-serif font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-[var(--gold-bright)] to-[var(--ink-secondary)] tracking-widest drop-shadow-[0_0_10px_rgba(212,175,63,0.8)]">
+          <h1 className="text-2xl font-bold mb-8" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
             SOUL RESONANCE ARRAY
           </h1>
+          {/* Ritual Incubation tracker */}
+          {(() => {
+            const p = profile as Record<string, unknown>;
+            const el = (p.ritual_incubation_element as string | null) ?? null;
+            const days = (p.ritual_incubation_day_count as number | null) ?? 0;
+            const ELEMENT_COLOR: Record<string, string> = {
+              fire: "#ff5e2a", water: "#38b8f5", nature: "#3ed97a",
+              light: "#ffe066", dark: "#c47fff", arcane: "#c89a3e",
+            };
+            const elColor = el ? (ELEMENT_COLOR[el] ?? "#c89a3e") : "#c89a3e";
+            const pct = Math.min(100, (days / 7) * 100);
+            return (
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-1">
+                  <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: "var(--ink-tertiary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                    🔮 Ritual Incubation
+                  </span>
+                  <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: elColor }}>
+                    {days}/7 days
+                  </span>
+                </div>
+                <div className="ss-ritual-bar">
+                  <div className="ss-ritual-bar-fill" style={{ width: `${pct}%`, background: elColor }} />
+                </div>
+                {el && (
+                  <div style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: elColor, marginTop: 3, textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                    Element: {el} — {days >= 7 ? "★ Guaranteed pull ready!" : `${7 - days} days remaining`}
+                  </div>
+                )}
+                {!el && (
+                  <div style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 8, color: "var(--ink-tertiary)", marginTop: 3 }}>
+                    Tag tasks with an element to begin incubation
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
           <div className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
             {banners.map((b, i) => {
               const isActive = selectedBanner?.id === b.id;
@@ -166,11 +204,13 @@ function AltarPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
                   onClick={() => setSelectedBannerId(b.id)}
-                  className={`relative flex items-center justify-start px-6 py-4 rounded-[16px] border-2 transition-all duration-300 overflow-hidden group min-w-[200px] ${
-                    isActive
-                      ? "bg-[var(--bg-panel)] border-[var(--gold-bright)] shadow-[0_0_25px_rgba(212,175,63,0.4)] scale-105"
-                      : "bg-[var(--bg-stage)]/40 border-[var(--ink-secondary)]/10 hover:border-[var(--gold-bright)]/50 hover:bg-[rgba(200,154,62,0.08)]"
-                  }`}
+                  className={`relative flex items-center justify-start px-6 py-4 border-2 transition-all duration-150 overflow-hidden group min-w-[200px]`}
+                  style={{
+                    borderRadius: 0,
+                    background: isActive ? "var(--bg-panel)" : "rgba(var(--bg-stage-rgb,12,10,6),0.4)",
+                    borderColor: isActive ? "var(--gold-bright)" : "rgba(200,154,62,0.1)",
+                    boxShadow: isActive ? "4px 4px 0 rgba(0,0,0,0.4)" : "2px 2px 0 rgba(0,0,0,0.2)",
+                  }}
                 >
                   {isActive && (
                     <div className="absolute left-0 top-0 bottom-0 w-2 bg-[var(--gold-bright)] shadow-[0_0_15px_#d4af3f]" />
@@ -226,8 +266,8 @@ function AltarPage() {
                 {/* The Tactile Gacha Control Panel at the bottom */}
                 <div className="relative w-full max-w-4xl mx-auto flex flex-col items-end gap-6 mt-auto">
                   {/* Currency Display */}
-                  <div className="bg-[var(--bg-stage)]/60 backdrop-blur-md border border-[var(--ink-secondary)]/10 px-6 py-3 rounded-xl flex items-center gap-3">
-                    <span className="text-xs text-[var(--ink-tertiary)] uppercase tracking-widest font-bold">
+                  <div className="border px-6 py-3 flex items-center gap-3" style={{ borderColor: "rgba(200,154,62,0.15)", borderRadius: 0, background: "rgba(12,10,6,0.7)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+                    <span className="text-[9px] uppercase font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)", letterSpacing: "0.06em" }}>
                       Resonance Balance
                     </span>
                     <div
@@ -248,7 +288,8 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
                       disabled={!canPull1 || pullMut.isPending}
-                      className="relative flex-1 md:w-[220px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[var(--gold-glow)]/40 hover:border-[var(--gold-bright)]/60 bg-[var(--bg-panel)] shadow-[0_2px_12px_rgba(200,154,62,0.1)]"
+                      className="relative flex-1 md:w-[220px] h-[80px] group disabled:opacity-50 transition-all overflow-hidden border-2 border-[var(--gold-glow)]/40 hover:border-[var(--gold-bright)]/60 bg-[var(--bg-panel)]"
+                      style={{ borderRadius: 0, boxShadow: "4px 4px 0 rgba(0,0,0,0.4)" }}
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
@@ -270,7 +311,8 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
                       disabled={!canPull10 || pullMut.isPending}
-                      className="relative flex-[1.5] md:w-[320px] h-[80px] rounded-2xl group disabled:opacity-50 transition-all active:scale-95 overflow-hidden border-2 border-[var(--gold-bright)] bg-[var(--primary)] shadow-[0_0_30px_rgba(212,175,63,0.4)]"
+                      className="relative flex-[1.5] md:w-[320px] h-[80px] group disabled:opacity-50 transition-all overflow-hidden border-2 border-[var(--gold-bright)] bg-gradient-to-r from-[#c89a3e] to-[#e8c55a] text-white"
+                      style={{ borderRadius: 0, boxShadow: "4px 4px 0 rgba(0,0,0,0.5)" }}
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
 
@@ -278,10 +320,10 @@ function AltarPage() {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
 
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
-                        <span className="text-[var(--gold-bright)] text-2xl drop-shadow-[0_0_8px_rgba(212,175,63,0.8)]">
+                        <span className="text-white text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
                           ★ PULL ×10 ★
                         </span>
-                        <div className="flex items-center gap-2 text-[#8b6914] text-base mt-1">
+                        <div className="flex items-center gap-2 text-white/90 text-base mt-1">
                           <Icon
                             name={icon as React.ComponentProps<typeof Icon>["name"]}
                             size={16}

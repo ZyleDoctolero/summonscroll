@@ -205,91 +205,91 @@ export function MonsterCard({
   const rColor = RARITY_COLOR[r] || "#ffffff";
   const rarityBorder = getRarityBorder(r, rColor);
 
+  const isSoulBound = monster.bond_percent >= 100;
+  const isDormant = (monster as { grimoire_dormant?: boolean }).grimoire_dormant === true;
+  const isFallen = (monster as { fallen_covenant?: boolean }).fallen_covenant === true;
+
   return (
     <>
       <style>{`
         @keyframes mon-idle {
-          0%, 100% { transform: translateY(0) rotate(-1deg); }
-          50% { transform: translateY(-7px) rotate(1deg); }
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
         }
-        @keyframes shadow-pulse {
-          0%, 100% { transform: scaleX(1); opacity: 0.5; }
-          50% { transform: scaleX(0.7); opacity: 0.3; }
+        @keyframes mon-shadow-pulse {
+          0%, 100% { transform: scaleX(1); opacity: 0.4; }
+          50% { transform: scaleX(0.75); opacity: 0.2; }
         }
         .mon-sprite-container > svg {
-          animation: mon-idle 3.2s ease-in-out infinite;
-          filter: drop-shadow(0 6px 12px rgba(61,46,31,0.2));
+          animation: mon-idle 2.8s ease-in-out infinite;
         }
         .mon-shadow {
-          width: 60%; height: 8px;
-          background: rgba(61,46,31,0.15);
-          border-radius: 50%;
+          width: 55%; height: 6px;
+          background: rgba(61,46,31,0.18);
+          border-radius: 0;
           margin: 0 auto;
-          filter: blur(4px);
-          animation: shadow-pulse 3.2s ease-in-out infinite;
+          animation: mon-shadow-pulse 2.8s ease-in-out infinite;
         }
       `}</style>
       <div
-        className={`relative w-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] ${compact ? "p-3" : "p-4"} group rounded-xl hover:scale-[1.03]`}
+        className={`relative w-full overflow-hidden transition-all duration-150 ${compact ? "p-3" : "p-4"} group`}
         style={{
-          background: getRarityBackground(r),
-          border: rarityBorder.style,
-          boxShadow: rarityBorder.shadow,
-          opacity: fatigued ? 0.6 : 1,
+          background: isDormant ? "rgba(20,18,14,0.92)" : getRarityBackground(r),
+          border: `2px solid ${isDormant ? "#444" : isFallen ? "#800" : isSoulBound ? "#c47fff" : rColor}`,
+          borderRadius: 0,
+          boxShadow: `4px 4px 0 ${isDormant ? "rgba(0,0,0,0.5)" : isFallen ? "rgba(80,0,0,0.6)" : isSoulBound ? "rgba(100,40,160,0.5)" : "rgba(0,0,0,0.45)"}`,
+          opacity: isDormant ? 0.7 : 1,
           cursor: onClick ? "pointer" : "default",
+          filter: isDormant ? "grayscale(0.7)" : undefined,
         }}
         onClick={onClick}
       >
-        <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none z-20"
-          style={{
-            background: `linear-gradient(105deg, transparent 35%, ${elColor}08 45%, rgba(255,255,255,0.06) 50%, ${elColor}08 55%, transparent 65%)`,
-          }}
-        />
-        <div
-          className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none z-0"
-          style={{
-            boxShadow: `0 0 20px ${elColor}30, inset 0 0 20px ${elColor}08`,
-          }}
-        />
+        {/* Dormant overlay */}
+        {isDormant && (
+          <div className="ss-monster-dormant-overlay">
+            <span style={{ fontSize: 22 }}>💤</span>
+            <span className="px-font" style={{ fontSize: 9, color: "#888", textTransform: "uppercase" }}>Dormant</span>
+          </div>
+        )}
 
-        <div className="absolute top-2 left-3 right-3 flex justify-between items-start z-10 pointer-events-none">
-          <div className="flex flex-col gap-0.5">
+        {/* Top badges row */}
+        <div className="absolute top-2 left-2 right-2 flex justify-between items-start z-10 pointer-events-none">
+          <div className="flex flex-col gap-1">
             <span
-              className="text-[11px] font-bold uppercase tracking-widest font-['Rajdhani'] flex items-center gap-1.5"
+              className="px-font text-[9px] font-bold uppercase flex items-center gap-1"
               style={{ color: rColor }}
             >
-              <span className="w-2 h-2 rounded-full inline-block" style={{ background: elColor, boxShadow: `0 0 6px ${elColor}80` }} />
+              <span className="w-2 h-2 inline-block" style={{ background: elColor }} />
               {r.toUpperCase()}
             </span>
+            {isSoulBound && <span className="ss-badge-soul-bound">✦ Soul</span>}
+            {isFallen && <span className="ss-badge-fallen">💀 Fallen</span>}
           </div>
-
-          <div className="flex flex-col items-end">
-            <span title={`Mood: ${getMood(monster.bond_percent)}`} className="text-sm">
-              {getMood(monster.bond_percent)}
-            </span>
-            <span className="font-['VT323'] text-[16px] leading-none text-[var(--ink-primary)] drop-shadow-md mt-1">
+          <div className="flex flex-col items-end gap-0.5">
+            <span className="px-font text-[10px]" style={{ color: "var(--ink-tertiary)" }}>
               Lv.{monster.level}
             </span>
             {ascensionLevel > 0 && (
-              <span className="font-['VT323'] text-sm leading-none mt-0.5" style={{color: RARITY_COLOR["epic"]}}>
+              <span className="px-font text-[9px]" style={{ color: RARITY_COLOR["epic"] }}>
                 +{ascensionLevel}
               </span>
             )}
           </div>
         </div>
 
-        <div className="w-full aspect-square flex flex-col items-center justify-center relative mt-4 bg-transparent z-10">
+        {/* Monster art — pixelated frame */}
+        <div className="w-full aspect-square flex flex-col items-center justify-center relative mt-6 ss-monster-frame z-10">
           {!imageError && monster.monster.art_url ? (
             <img
               src={monster.monster.art_url}
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full object-contain"
               style={{
-                filter: monster.bond_percent >= 100
-                  ? `drop-shadow(0 0 10px ${rColor}) contrast(1.1)`
+                imageRendering: "pixelated",
+                filter: isDormant
+                  ? "grayscale(100%) brightness(0.5)"
                   : fatigued
-                    ? "grayscale(100%) opacity(50%)"
-                    : "drop-shadow(0 8px 16px rgba(61,46,31,0.3))",
+                    ? "grayscale(60%) brightness(0.7)"
+                    : undefined,
               }}
               alt={monster.monster.name}
               onError={() => setImageError(true)}
@@ -299,39 +299,39 @@ export function MonsterCard({
               {getElementSprite(monster.monster.element)}
             </div>
           )}
-          {(!monster.monster.art_url || imageError) && <div className="mon-shadow mt-[-10px]"></div>}
+          {(!monster.monster.art_url || imageError) && <div className="mon-shadow mt-[-6px]"></div>}
         </div>
 
-        <div className="flex flex-col gap-1 relative z-10 text-center mt-2">
+        {/* Name + bond bar */}
+        <div className="flex flex-col gap-1 relative z-10 mt-3">
           <p
-            className={`${compact ? "text-xs" : "text-sm"} font-bold tracking-wider font-['Cinzel'] text-[var(--ink-primary)] truncate`}
-            style={{ textShadow: "0 1px 2px rgba(200,154,62,0.15)" }}
+            className={`${compact ? "text-[11px]" : "text-sm"} font-bold font-['Cinzel'] truncate text-center`}
+            style={{ color: "var(--ink-primary)" }}
           >
             {monster.monster.name}
           </p>
-          
-          <div className="w-full mt-2 relative h-1 rounded-sm overflow-hidden" style={{ background: "rgba(180,150,100,0.12)" }}>
+
+          {/* Segmented bond bar */}
+          <div className="ss-bar-pixel mt-1">
             <div
-              className="h-full transition-all duration-500 rounded-sm"
+              className="ss-bar-pixel-fill"
               style={{
                 width: `${Math.min(100, monster.bond_percent)}%`,
-                background: `linear-gradient(90deg, ${elColor}4d, ${elColor})`,
+                background: isSoulBound ? "#c47fff" : elColor,
               }}
             />
           </div>
-          <div className="flex justify-between items-center mt-1">
-            <span className="text-[11px] uppercase tracking-widest font-['Rajdhani'] font-bold text-[#8b7355]/60">
-              Bond
-            </span>
-            <span className="text-[11px] uppercase tracking-widest font-['Rajdhani'] font-bold" style={{ color: elColor }}>
+          <div className="flex justify-between items-center mt-0.5">
+            <span className="px-font text-[9px] uppercase" style={{ color: "var(--ink-tertiary)" }}>Bond</span>
+            <span className="px-font text-[9px]" style={{ color: isSoulBound ? "#c47fff" : elColor }}>
               {Math.round(monster.bond_percent)}%
             </span>
           </div>
         </div>
 
-        {fatigued && (
-          <div className="absolute bottom-2 left-2 text-[11px] px-2 py-0.5 rounded font-bold tracking-widest z-10 bg-red-100 text-red-600 border border-red-200">
-            FATIGUE
+        {fatigued && !isDormant && (
+          <div className="ss-badge-dormant mt-2 w-full justify-center">
+            FADING — needs care
           </div>
         )}
 
@@ -341,7 +341,7 @@ export function MonsterCard({
               e.stopPropagation();
               onRemove();
             }}
-            className="mt-2 text-[11px] px-2 py-2 rounded-lg font-bold w-full uppercase tracking-widest border border-red-200 hover:bg-red-50 hover:border-red-300 transition-colors text-red-500"
+            className="mt-2 ss-btn ss-btn-danger w-full text-[10px] py-1.5"
           >
             DISMISS
           </button>

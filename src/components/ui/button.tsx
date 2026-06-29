@@ -5,14 +5,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold uppercase tracking-wider cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--gold-glow)] disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold uppercase tracking-wider cursor-pointer transition-all duration-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[var(--gold-glow)] disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-[var(--bg-panel)] text-[var(--ink-primary)] border border-[var(--ss-border)] shadow-[0_2px_10px_rgba(120,90,50,0.1)] hover:border-[var(--ss-border-active)] hover:text-[var(--ink-primary)] hover:shadow-[0_0_15px_rgba(212,175,63,0.15)] backdrop-blur-md",
+          "bg-[var(--bg-panel)] text-[var(--ink-primary)] border-2 border-[var(--ss-border)] shadow-[3px_3px_0_rgba(0,0,0,0.3)] hover:border-[var(--ss-border-active)] hover:text-[var(--ink-primary)]",
         destructive:
-          "bg-[rgba(255,23,68,0.15)] text-[var(--danger)] border border-[rgba(255,23,68,0.4)] shadow-[0_0_10px_rgba(255,23,68,0.1)] hover:bg-[rgba(255,23,68,0.25)] hover:border-[rgba(255,23,68,0.6)] backdrop-blur-md",
+          "bg-[rgba(255,23,68,0.15)] text-[var(--danger)] border-2 border-[rgba(255,23,68,0.4)] shadow-[3px_3px_0_rgba(0,0,0,0.3)] hover:bg-[rgba(255,23,68,0.25)] hover:border-[rgba(255,23,68,0.6)]",
         outline:
           "bg-transparent text-[var(--ink-primary)] border border-[var(--ss-border)] hover:bg-[var(--bg-panel)] hover:border-[var(--ss-border-active)] hover:shadow-[0_0_15px_rgba(212,175,63,0.15)]",
         secondary:
@@ -23,8 +23,8 @@ const buttonVariants = cva(
       },
       size: {
         default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
+        sm: "h-8 px-3 text-xs",
+        lg: "h-10 px-8",
         icon: "h-9 w-9",
       },
     },

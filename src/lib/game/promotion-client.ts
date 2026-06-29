@@ -12,6 +12,7 @@ export type PromotionRequirement = {
   newStarLevel: number;
   unlocks?: string;
   locked?: { reason: string };
+  realmKeyRequired?: boolean;
 };
 
 export type PromotionCheck = {
@@ -142,6 +143,19 @@ export function requirementForPromotion(currentStar: number, role: string): Prom
       dupesRequired: 5,
       newStarLevel: 7,
       unlocks: "Transcendent Title + portrait variant",
+    };
+  }
+  if (currentStar === 7) {
+    return {
+      stones: { name: stoneName, qty: 200 },
+      materials: [{ name: matName, qty: 10 }],
+      bondRequired: 100,
+      levelRequired: 90,
+      goldRequired: 50000,
+      dupesRequired: 7,
+      newStarLevel: 8,
+      unlocks: "EX Tier — Heritage Trait unlocked + unique realm aura",
+      realmKeyRequired: true,
     };
   }
   return {
@@ -302,6 +316,30 @@ export async function checkPromotionEligibility(userMonsterId: string): Promise<
       return {
         canPromote: false,
         reason: `Need ${mat.qty} ${mat.name} — have ${have[mat.name] ?? 0}.`,
+        requirement: req,
+        have: {
+          stones: have[stoneName] ?? 0,
+          materials: have,
+          bond: um.bond_percent,
+          level: um.level,
+          gold,
+          dupes,
+        },
+      };
+    }
+  }
+
+  if (req.realmKeyRequired) {
+    const { data: keyRows } = await supabase
+      .from("inventory")
+      .select("quantity")
+      .eq("user_id", user.id)
+      .eq("item_type", "realm_key");
+    const totalKeys = (keyRows ?? []).reduce((s, r) => s + (r.quantity ?? 0), 0);
+    if (totalKeys < 1) {
+      return {
+        canPromote: false,
+        reason: "Requires a Realm Key — obtain from World Raids or special events.",
         requirement: req,
         have: {
           stones: have[stoneName] ?? 0,

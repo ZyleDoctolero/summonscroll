@@ -203,7 +203,7 @@ function HubPage() {
           <div className="flex items-center gap-3 flex-1 min-w-0">
             {tetheredUm ? (
               <div className="flex items-center gap-3">
-                <div className="w-16 h-16 rounded-xl border-2 border-[rgba(200,154,62,0.3)] bg-gradient-to-b from-[rgba(200,154,62,0.08)] to-transparent flex items-center justify-center overflow-hidden shadow-[0_0_16px_rgba(212,175,63,0.15)]">
+                <div className="w-16 h-16 border-[3px] border-[rgba(200,154,62,0.3)] bg-gradient-to-b from-[rgba(200,154,62,0.08)] to-transparent flex items-center justify-center overflow-hidden" style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)", imageRendering: "pixelated" as const }}>
                   <img
                     src={
                       tetheredUm.monster.art_url
@@ -224,7 +224,7 @@ function HubPage() {
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                <div className="w-16 h-16 rounded-xl border-2 border-dashed border-[rgba(200,154,62,0.2)] flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-dashed border-[rgba(200,154,62,0.2)] flex items-center justify-center" style={{ borderRadius: 0 }}>
                   <Icon name="scroll" size={24} color="var(--ink-tertiary)" />
                 </div>
                 <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>No beast tethered</p>
@@ -254,7 +254,7 @@ function HubPage() {
         <div className="ss-card p-0 overflow-hidden border-[rgba(200,154,62,0.2)]">
           {/* Header */}
           <div className="px-4 py-3 border-b border-[rgba(200,154,62,0.15)] flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.06)] to-transparent">
-            <h2 className="t-h3 text-lg" style={{ color: "var(--gold-bright)" }}>Quest Board</h2>
+            <h2 className="text-lg font-bold uppercase" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}>QUEST BOARD</h2>
             <button
               onClick={() => {
                 setEditing(null);
@@ -299,13 +299,46 @@ function HubPage() {
               >
                 {t.label}
                 {tab === t.key && sortedTasks.filter((s) => !s.completed).length > 0 && (
-                  <span className="text-[11px] px-1.5 py-0.5 rounded-full font-bold leading-none" style={{ background: "rgba(200,154,62,0.15)", color: "var(--gold-bright)" }}>
+                  <span className="text-[9px] px-1.5 py-0.5 font-bold leading-none" style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", background: "rgba(200,154,62,0.15)", color: "var(--gold-bright)" }}>
                     {sortedTasks.filter((s) => !s.completed).length}
                   </span>
                 )}
               </button>
             ))}
           </div>
+
+          {/* Fallen Covenant pinned quest */}
+          {(() => {
+            const fallen = (myMonstersQ.data?.userMonsters ?? []).filter(
+              (m: Record<string, unknown>) => m.fallen_covenant === true,
+            );
+            return fallen.length > 0 ? (
+              <div className="px-4 pt-3">
+                <div
+                  className="p-3 border flex items-center gap-3"
+                  style={{
+                    borderColor: "rgba(196,79,111,0.3)",
+                    borderRadius: 0,
+                    background: "linear-gradient(135deg, rgba(196,79,111,0.06), transparent)",
+                    boxShadow: "3px 3px 0 rgba(0,0,0,0.3)",
+                  }}
+                >
+                  <span className="text-xl">💀</span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] uppercase font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--danger)", letterSpacing: "0.04em" }}>
+                      Fallen Covenant — Redemption Required
+                    </p>
+                    <p className="text-[9px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+                      {fallen.length} creature{fallen.length > 1 ? "s" : ""} in fallen state: {fallen.slice(0, 3).map((m: { monster: { name: string } }) => m.monster.name).join(", ")}
+                    </p>
+                  </div>
+                  <span className="ss-badge-fallen text-[9px]">
+                    {fallen.length}
+                  </span>
+                </div>
+              </div>
+            ) : null;
+          })()}
 
           {/* Task List */}
           <div className="p-4">

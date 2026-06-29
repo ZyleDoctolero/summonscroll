@@ -38,50 +38,42 @@ export function BottomHUD() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 flex justify-center pb-4 px-4 pointer-events-none">
+    <div className="fixed bottom-0 inset-x-0 z-50 flex justify-center pointer-events-none">
       <nav
         aria-label="Main navigation"
-        className="flex items-center gap-2 md:gap-4 p-2 rounded-full pointer-events-auto shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+        className="flex items-stretch w-full max-w-md pointer-events-auto"
         style={{
-          background: "rgba(16, 13, 8, 0.92)",
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
-          border: "1px solid rgba(200, 154, 62, 0.18)",
+          background: "rgba(14, 11, 7, 0.97)",
+          borderTop: "2px solid rgba(200, 154, 62, 0.35)",
+          boxShadow: "0 -3px 0 rgba(0,0,0,0.5)",
         }}
       >
         {NAV_ITEMS.map((item) => {
-          // It's active if the current pathname matches the pillar's path OR any of its sub-tabs
           const isActive = item.tabs.some((t) => t.path === pathname) || pathname === item.path;
           return (
             <Link
               key={item.id}
               to={item.path}
-              className="relative group flex flex-col items-center justify-center w-16 h-16 md:w-18 md:h-18 rounded-full transition-all duration-300 hover:scale-110 active:scale-95 z-10 gap-0.5"
+              className="relative flex-1 flex flex-col items-center justify-center py-3 gap-1 transition-all duration-100"
               style={{
-                background: isActive
-                  ? `rgba(${item.colorRgb}, 0.15)`
-                  : "transparent",
-                boxShadow: isActive
-                  ? `0 2px 12px rgba(${item.colorRgb},0.25)`
-                  : "none",
-                border: isActive ? `1.5px solid ${item.color}` : "1.5px solid transparent",
+                background: isActive ? `rgba(${item.colorRgb}, 0.12)` : "transparent",
+                borderTop: isActive ? `2px solid ${item.color}` : "2px solid transparent",
+                marginTop: -2,
               }}
             >
               <Icon
                 name={item.icon as React.ComponentProps<typeof Icon>["name"]}
-                size={isActive ? 26 : 22}
-                color={isActive ? item.color : "var(--ink-secondary)"}
-                className={
-                  isActive
-                    ? "drop-shadow-[0_1px_2px_rgba(0,0,0,0.15)]"
-                    : "opacity-50 group-hover:opacity-80 transition-all"
-                }
+                size={isActive ? 22 : 20}
+                color={isActive ? item.color : "var(--ink-tertiary)"}
               />
               <span
-                className="text-[11px] font-bold tracking-wider leading-none"
                 style={{
-                  color: isActive ? item.color : "var(--ink-secondary)",
-                  opacity: isActive ? 1 : 0.5,
+                  fontFamily: "var(--ss-font-pixel)",
+                  fontSize: 9,
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  color: isActive ? item.color : "var(--ink-tertiary)",
+                  lineHeight: 1,
                 }}
               >
                 {item.label}

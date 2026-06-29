@@ -69,11 +69,11 @@ function QuestsPage() {
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="wild" />
       <div className="p-6 md:p-10 max-w-6xl">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[rgba(232,93,58,0.12)] to-transparent border-2 border-[rgba(232,93,58,0.2)] flex items-center justify-center mb-3 shadow-[0_0_16px_rgba(232,93,58,0.1)]">
+        <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(232,93,58,0.3)", borderRadius: 0, background: "rgba(232,93,58,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
           <Icon name="target" size={28} color="var(--danger)" />
         </div>
-        <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
-          Quests
+        <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+          BOUNTIES
         </h1>
         <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
           A goal is a boss. Each task you finish drains its HP. Slay one → mint a Tome of Reverse
@@ -203,7 +203,7 @@ function QuestsPage() {
                 >
                   Cadence
                 </p>
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {(["quarterly", "monthly", "weekly"] as GoalType[]).map((k) => {
                     const def = TYPE_LABELS[k];
                     return (
@@ -253,26 +253,27 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
 
   return (
     <div className="ss-card" style={{ borderColor: `${def.color}40` }}>
-      <div className="flex items-start justify-between mb-3">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="ss-chip" style={{ background: `${def.color}20`, color: def.color }}>
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
+        <div className="flex-1 min-w-0">
+          <div className="flex flex-wrap items-center gap-2 mb-1">
+            <span className="ss-chip whitespace-nowrap" style={{ background: `${def.color}20`, color: def.color }}>
               {def.label}
             </span>
             {goal.identity && (
               <span
-                className="text-[11px] uppercase tracking-widest"
+                className="text-[11px] uppercase tracking-widest truncate"
                 style={{ color: "var(--ink-secondary)" }}
+                title={goal.identity}
               >
                 · {goal.identity}
               </span>
             )}
           </div>
-          <h3 className="text-base font-bold" style={{ color: "var(--ink-primary)" }}>
+          <h3 className="text-base font-bold break-words" style={{ color: "var(--ink-primary)" }}>
             {goal.title}
           </h3>
         </div>
-        <button onClick={onDelete} className="ss-btn ss-btn-ghost text-[11px] min-h-[32px] px-3">
+        <button onClick={onDelete} className="ss-btn ss-btn-ghost text-[11px] h-8 px-3 shrink-0 self-start sm:self-auto">
           Abandon
         </button>
       </div>
@@ -284,11 +285,11 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
         </span>
       </div>
       <div
-        className="h-3 rounded-full overflow-hidden"
-        style={{ background: "rgba(61,46,31,0.06)" }}
+        className="ss-bar-pixel"
+        style={{ height: 10 }}
       >
         <div
-          className="h-full transition-all"
+          className="ss-bar-pixel-fill transition-all"
           style={{
             width: `${pct}%`,
             background: def.color,

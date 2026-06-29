@@ -181,7 +181,7 @@ function PillBtn({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-1.5 rounded-full text-xs font-serif font-bold transition-all border whitespace-nowrap ${
+      className={`px-3 py-1.5 text-[10px] font-bold transition-all border whitespace-nowrap ${
         active
           ? "bg-[rgba(200,154,62,0.12)] border-[#c89a3e]/50 text-[#3d2e1e] shadow-[0_0_10px_rgba(200,154,62,0.15)]"
           : "bg-transparent border-[#b5a28a]/20 text-[#8b7355]/60 hover:text-[#3d2e1e]/90 hover:border-[#b5a28a]/40"
@@ -212,7 +212,7 @@ function ImageOrSprite({ url, name, element, owned, color }: { url?: string|null
         />
         {!owned && (
           <div
-            className="absolute inset-0 rounded-xl pointer-events-none"
+            className="absolute inset-0 pointer-events-none"
             style={{
               background: `radial-gradient(ellipse 90% 45% at 50% 105%, ${elColor}60 0%, ${elColor}18 50%, transparent 75%)`,
             }}
@@ -305,14 +305,14 @@ function CompendiumPage() {
     <AppShell profile={profileQ.data?.profile as React.ComponentProps<typeof AppShell>["profile"]}>
       <div className="w-full flex flex-col relative z-10">
         <header className="mb-4 relative z-20">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[rgba(200,154,62,0.12)] to-transparent border-2 border-[rgba(200,154,62,0.2)] flex items-center justify-center mb-3 shadow-[0_0_16px_rgba(200,154,62,0.1)]">
+          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(200,154,62,0.3)", borderRadius: 0, background: "rgba(200,154,62,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
             <Icon name="sparkle" size={28} color="#c89a3e" />
           </div>
           <h1
-            className="text-4xl font-serif font-bold tracking-tighter uppercase italic mb-1"
-            style={{ color: "#b8860b", textShadow: "0 0 20px rgba(200,154,62,0.3)" }}
+            className="text-3xl font-bold uppercase mb-1"
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "#b8860b", letterSpacing: "0.08em" }}
           >
-            Compendium
+            COMPENDIUM
           </h1>
           <p className="text-sm max-w-xl font-serif" style={{ color: "var(--ink-secondary)" }}>
             Explore the Codex of all known entities. Click any monster to view its lore, stats, and abilities.
@@ -335,8 +335,8 @@ function CompendiumPage() {
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative z-20 mb-5 p-4 rounded-2xl border"
-              style={{ borderColor: "rgba(200,154,62,0.25)", background: "linear-gradient(135deg, rgba(200,154,62,0.08), rgba(180,140,80,0.04))" }}
+              className="relative z-20 mb-5 p-4 border"
+              style={{ borderColor: "rgba(200,154,62,0.25)", borderRadius: 0, background: "linear-gradient(135deg, rgba(200,154,62,0.08), rgba(180,140,80,0.04))", boxShadow: "3px 3px 0 rgba(0,0,0,0.3)" }}
             >
               <div className="flex items-end justify-between mb-2">
                 <div>
@@ -344,15 +344,15 @@ function CompendiumPage() {
                   <span className="text-sm font-serif ml-1.5" style={{ color: "var(--ink-secondary)" }}>/ {total} discovered</span>
                 </div>
                 <span
-                  className="text-[11px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-full border"
-                  style={{ color: rank.color, borderColor: `${rank.color}40`, background: `${rank.color}12` }}
+                  className="text-[9px] uppercase font-bold px-2.5 py-1 border"
+                  style={{ fontFamily: "var(--ss-font-pixel)", color: rank.color, borderColor: `${rank.color}40`, background: `${rank.color}12`, borderRadius: 0, letterSpacing: "0.04em" }}
                 >
                   {rank.label}
                 </span>
               </div>
-              <div className="h-2.5 rounded-full overflow-hidden" style={{ background: "rgba(180,150,100,0.12)" }}>
+              <div className="ss-bar-pixel" style={{ height: 10 }}>
                 <motion.div
-                  className="h-full rounded-full"
+                  className="ss-bar-pixel-fill"
                   initial={{ width: 0 }}
                   animate={{ width: `${pct}%` }}
                   transition={{ duration: 1, type: "spring", stiffness: 60, damping: 20 }}
@@ -372,12 +372,14 @@ function CompendiumPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search monsters…"
-                className="flex-1 px-3 py-2 bg-white border border-[rgba(200,154,62,0.25)] rounded-lg text-[var(--ink-primary)] placeholder-[#8b7355]/50 focus:outline-none focus:border-[#c89a3e] focus:shadow-[0_0_8px_rgba(200,154,62,0.2)] transition-all font-serif text-sm"
+                className="flex-1 px-3 py-2 bg-white border border-[rgba(200,154,62,0.25)] text-[var(--ink-primary)] placeholder-[#8b7355]/50 focus:outline-none focus:border-[#c89a3e] transition-all text-sm"
+                style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", boxShadow: "2px 2px 0 rgba(0,0,0,0.2)" }}
               />
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                className="px-2 py-2 bg-white border border-[rgba(200,154,62,0.25)] rounded-lg text-[var(--ink-primary)] focus:outline-none focus:border-[#c89a3e] transition-all font-serif text-xs"
+                className="px-2 py-2 bg-white border border-[rgba(200,154,62,0.25)] text-[var(--ink-primary)] focus:outline-none focus:border-[#c89a3e] transition-all text-xs"
+                style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", boxShadow: "2px 2px 0 rgba(0,0,0,0.2)" }}
               >
                 <option value="bestiary">Bestiary #</option>
                 <option value="rarity">Rarity ↓</option>
@@ -450,8 +452,9 @@ function CompendiumPage() {
                         setSelectedUM(null);
                       }
                     }}
-                    className="relative overflow-hidden group transition-all duration-200 rounded-xl cursor-pointer hover:scale-[1.04] hover:-translate-y-0.5"
+                    className="relative overflow-hidden group transition-all duration-150 cursor-pointer"
                     style={{
+                      borderRadius: 0,
                       aspectRatio: "3/4",
                       background: owned
                         ? `linear-gradient(170deg, ${elColor}22, ${elColor}10, #131008)`
@@ -480,14 +483,14 @@ function CompendiumPage() {
                     {/* Rarity badge */}
                     {owned && (
                       <div
-                        className="absolute top-1 left-1 text-[11px] uppercase font-serif tracking-wider font-bold px-1 py-0.5 rounded-md border backdrop-blur-sm z-10 leading-none"
-                        style={{ color, borderColor: `${color}50`, background: `rgba(0,0,0,0.5)` }}
+                        className="absolute top-1 left-1 text-[9px] uppercase font-bold px-1 py-0.5 border z-10 leading-none"
+                        style={{ fontFamily: "var(--ss-font-pixel)", borderRadius: 0, color, borderColor: `${color}50`, background: `rgba(0,0,0,0.5)` }}
                       >
                         {m.rarity}
                       </div>
                     )}
                     {ownsList.length > 1 && (
-                      <div className="absolute bottom-6 right-1 text-[11px] bg-black/50 border border-[#c89a3e]/30 text-[#f0e8d8] px-1 rounded font-bold font-serif backdrop-blur-sm z-10">
+                      <div className="absolute bottom-6 right-1 text-[9px] bg-black/60 border border-[#c89a3e]/30 text-[#f0e8d8] px-1 font-bold z-10" style={{ fontFamily: "var(--ss-font-pixel)", borderRadius: 0 }}>
                         x{ownsList.length}
                       </div>
                     )}

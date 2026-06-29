@@ -40,6 +40,9 @@ type UserMonster = {
   current_class?: string;
   title?: string;
   corruption_level?: number;
+  grimoire_dormant?: boolean | null;
+  fallen_covenant?: boolean | null;
+  echo_memories?: unknown[] | null;
 };
 
 const ELEMENT_COLORS: Record<string, string> = {
@@ -97,19 +100,19 @@ function StatBar({
       <div className="w-8 flex justify-center">
         <Icon name={icon as React.ComponentProps<typeof Icon>["name"]} size={14} color={color} />
       </div>
-      <span className="w-8 text-[11px] uppercase tracking-wider font-bold" style={{ color: "var(--ink-tertiary)" }}>
+      <span className="w-8 text-[9px] uppercase font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
         {label}
       </span>
-      <div className="flex-1 h-2 rounded-full overflow-hidden" style={{ background: "rgba(180,150,100,0.12)" }}>
+      <div className="flex-1 ss-bar-pixel" style={{ height: 10 }}>
         <motion.div
-          className="h-full rounded-full"
+          className="ss-bar-pixel-fill"
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
           transition={{ type: "spring", stiffness: 80, damping: 20, delay }}
           style={{ background: color }}
         />
       </div>
-      <span className="w-12 text-right t-mono text-xs font-bold" style={{ color }}>
+      <span className="w-12 text-right text-[10px] font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color }}>
         {value}
       </span>
     </div>
@@ -122,10 +125,12 @@ function SkillCard({ skill, index, color, locked }: { skill: Skill; index: numbe
       initial={{ opacity: 0, y: 6 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, delay: 0.3 + index * 0.08 }}
-      className="p-3 rounded-xl border"
+      className="p-3 border"
       style={{
         borderColor: locked ? "rgba(180,150,100,0.1)" : `${color}30`,
         background: locked ? "rgba(0,0,0,0.15)" : `linear-gradient(135deg, ${color}08, transparent)`,
+        borderRadius: 0,
+        boxShadow: locked ? "none" : `2px 2px 0 rgba(0,0,0,0.3)`,
       }}
     >
       {locked ? (
@@ -198,7 +203,7 @@ export function MonsterDetailPanel({
   return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.7)", backdropFilter: "blur(8px)" }}
+      style={{ background: "rgba(0,0,0,0.82)" }}
       onClick={onClose}
     >
       <motion.div
@@ -206,21 +211,24 @@ export function MonsterDetailPanel({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="max-w-2xl w-full max-h-[90vh] overflow-y-auto rounded-2xl border relative"
+        className="max-w-2xl w-full max-h-[90vh] overflow-y-auto border relative"
         style={{
           borderColor: `${elColor}40`,
+          borderRadius: 0,
           background: "linear-gradient(180deg, rgba(22,18,14,0.98), rgba(16,13,10,0.99))",
-          boxShadow: `0 20px 60px rgba(0,0,0,0.6), ${glow}`,
+          boxShadow: `6px 6px 0 rgba(0,0,0,0.6), ${glow}`,
         }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
-          className="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center z-50 transition-all border"
+          className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center z-50 transition-all border"
           style={{
             background: "rgba(0,0,0,0.5)",
             borderColor: "rgba(200,154,62,0.2)",
+            borderRadius: 0,
             color: "#a09080",
+            boxShadow: "2px 2px 0 rgba(0,0,0,0.4)",
           }}
           onClick={onClose}
         >
@@ -250,11 +258,13 @@ export function MonsterDetailPanel({
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="w-44 h-44 md:w-52 md:h-52 rounded-2xl border-2 flex items-center justify-center relative overflow-hidden shrink-0"
+              className="w-44 h-44 md:w-52 md:h-52 border-[3px] flex items-center justify-center relative overflow-hidden shrink-0 ss-monster-frame"
               style={{
                 borderColor: owned ? `${color}80` : `${elColor}30`,
+                borderRadius: 0,
                 background: `linear-gradient(145deg, ${elColor}12, rgba(10,8,6,0.9))`,
-                boxShadow: owned ? `inset 0 0 30px ${color}20, 0 8px 32px rgba(0,0,0,0.4)` : `inset 0 0 20px ${elColor}10`,
+                boxShadow: owned ? `4px 4px 0 rgba(0,0,0,0.5)` : `3px 3px 0 rgba(0,0,0,0.4)`,
+                imageRendering: "pixelated",
               }}
             >
               {artElement}
@@ -269,21 +279,21 @@ export function MonsterDetailPanel({
             <div className="flex-1 text-center md:text-left">
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2">
                 <span
-                  className="text-[11px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full border"
-                  style={{ color, borderColor: `${color}50`, background: `${color}15` }}
+                  className="text-[9px] uppercase font-bold px-2 py-0.5 border"
+                  style={{ fontFamily: "var(--ss-font-pixel)", color, borderColor: `${color}50`, background: `${color}15`, borderRadius: 0, letterSpacing: "0.04em" }}
                 >
                   {monster.rarity}
                 </span>
                 <span
-                  className="text-[11px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full border flex items-center gap-1"
-                  style={{ color: elColor, borderColor: `${elColor}40`, background: `${elColor}10` }}
+                  className="text-[9px] uppercase font-bold px-2 py-0.5 border flex items-center gap-1"
+                  style={{ fontFamily: "var(--ss-font-pixel)", color: elColor, borderColor: `${elColor}40`, background: `${elColor}10`, borderRadius: 0, letterSpacing: "0.04em" }}
                 >
                   <Icon name={roleIcon as React.ComponentProps<typeof Icon>["name"]} size={11} color={elColor} />
                   {monster.role}
                 </span>
                 <span
-                  className="text-[11px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full border"
-                  style={{ color: elColor, borderColor: `${elColor}30`, background: `${elColor}08` }}
+                  className="text-[9px] uppercase font-bold px-2 py-0.5 border"
+                  style={{ fontFamily: "var(--ss-font-pixel)", color: elColor, borderColor: `${elColor}30`, background: `${elColor}08`, borderRadius: 0, letterSpacing: "0.04em" }}
                 >
                   {monster.element}
                 </span>
@@ -304,15 +314,24 @@ export function MonsterDetailPanel({
 
               {owned && userMonster && (
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-3">
-                  <span className="text-sm t-mono font-bold px-2 py-0.5 rounded border border-[var(--gold-bright)]/30 bg-[var(--gold-bright)]/10" style={{ color: "var(--gold-bright)" }}>
+                  <span className="text-[10px] font-bold px-2 py-0.5 border border-[var(--gold-bright)]/30 bg-[var(--gold-bright)]/10" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", borderRadius: 0 }}>
                     Lv. {userMonster.level}
                   </span>
-                  <span className="text-sm t-mono font-bold" style={{ color: "var(--gold-bright)" }}>
+                  <span className="text-[10px] font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)" }}>
                     {userMonster.current_star ?? userMonster.star_level ?? 1}★
                   </span>
-                  <span className="text-xs font-serif" style={{ color: "var(--ink-tertiary)" }}>
+                  <span className="text-[9px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
                     Bond: {userMonster.bond_percent}%
                   </span>
+                  {userMonster.bond_percent >= 100 && (
+                    <span className="ss-badge-soul-bound">✦ Soul-Bound</span>
+                  )}
+                  {userMonster.grimoire_dormant && (
+                    <span className="ss-badge-dormant">💤 Dormant</span>
+                  )}
+                  {userMonster.fallen_covenant && (
+                    <span className="ss-badge-fallen">💀 Fallen</span>
+                  )}
                 </div>
               )}
             </div>
@@ -327,10 +346,12 @@ export function MonsterDetailPanel({
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.1 }}
-              className="p-4 rounded-xl border"
+              className="p-4 border"
               style={{
                 borderColor: "rgba(200,154,62,0.12)",
+                borderRadius: 0,
                 background: "linear-gradient(135deg, rgba(200,154,62,0.04), transparent)",
+                boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
               }}
             >
               <p className="text-sm font-serif italic leading-relaxed" style={{ color: "var(--ink-secondary)" }}>
@@ -349,10 +370,10 @@ export function MonsterDetailPanel({
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.15 }}
-            className="p-4 rounded-xl border"
-            style={{ borderColor: "rgba(200,154,62,0.12)", background: "rgba(0,0,0,0.2)" }}
+            className="p-4 border"
+            style={{ borderColor: "rgba(200,154,62,0.12)", borderRadius: 0, background: "rgba(0,0,0,0.2)", boxShadow: "2px 2px 0 rgba(0,0,0,0.3)" }}
           >
-            <p className="text-[11px] uppercase tracking-widest font-bold mb-3" style={{ color: "var(--gold-bright)" }}>
+            <p className="text-[9px] uppercase font-bold mb-3" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}>
               Combat Stats {owned ? `(Lv. ${level})` : "(Base)"}
             </p>
             <div className="space-y-2">
@@ -369,13 +390,15 @@ export function MonsterDetailPanel({
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.2 }}
-              className="p-4 rounded-xl border"
+              className="p-4 border"
               style={{
                 borderColor: `${elColor}20`,
+                borderRadius: 0,
                 background: `linear-gradient(135deg, ${elColor}06, transparent)`,
+                boxShadow: `2px 2px 0 rgba(0,0,0,0.3)`,
               }}
             >
-              <p className="text-[11px] uppercase tracking-widest font-bold mb-1" style={{ color: elColor }}>
+              <p className="text-[9px] uppercase font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: elColor, letterSpacing: "0.06em" }}>
                 Realm Passive
               </p>
               <p className="text-sm font-bold font-serif" style={{ color: "#f0e8d8" }}>
@@ -392,7 +415,7 @@ export function MonsterDetailPanel({
           {/* Skills */}
           {skills.length > 0 && (
             <div>
-              <p className="text-[11px] uppercase tracking-widest font-bold mb-2 px-1" style={{ color: "var(--gold-bright)" }}>
+              <p className="text-[9px] uppercase font-bold mb-2 px-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}>
                 Abilities
               </p>
               <div className="space-y-2">
@@ -401,6 +424,138 @@ export function MonsterDetailPanel({
                 ))}
               </div>
             </div>
+          )}
+
+          {/* Heritage Trait — unlocks at ★7 + 100% bond */}
+          {owned && userMonster && (() => {
+            const star = userMonster.current_star ?? userMonster.star_level ?? 1;
+            const isSoulBound = userMonster.bond_percent >= 100;
+            const unlocked = star >= 7 && isSoulBound;
+            return (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.4 }}
+                className="p-4 border"
+                style={{
+                  borderColor: unlocked ? `${elColor}40` : "rgba(180,150,100,0.1)",
+                  borderRadius: 0,
+                  background: unlocked ? `linear-gradient(135deg, ${elColor}08, transparent)` : "rgba(0,0,0,0.15)",
+                  boxShadow: unlocked ? `2px 2px 0 rgba(0,0,0,0.3)` : "none",
+                }}
+              >
+                <p className="text-[9px] uppercase font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: unlocked ? elColor : "var(--ink-tertiary)", letterSpacing: "0.06em" }}>
+                  🧬 Heritage Trait
+                </p>
+                {unlocked ? (
+                  <p className="text-xs font-serif" style={{ color: "var(--ink-secondary)" }}>
+                    {monster.realm_skill ? `Passive bonus from ${monster.realms?.name ?? "realm"} lineage — amplified at Soul-Bound.` : "Trait will manifest as bond deepens."}
+                  </p>
+                ) : (
+                  <div className="flex items-center gap-2 opacity-50">
+                    <Icon name="lock" size={12} color="var(--ink-tertiary)" />
+                    <span className="text-[9px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+                      Requires ★7 + Soul-Bound ({star}/7★ · {userMonster.bond_percent}% bond)
+                    </span>
+                  </div>
+                )}
+              </motion.div>
+            );
+          })()}
+
+          {/* Echo Memory Slot */}
+          {owned && userMonster && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 0.45 }}
+              className="p-4 border"
+              style={{
+                borderColor: "rgba(127,119,221,0.2)",
+                borderRadius: 0,
+                background: "linear-gradient(135deg, rgba(127,119,221,0.05), transparent)",
+                boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+              }}
+            >
+              <p className="text-[9px] uppercase font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--violet)", letterSpacing: "0.06em" }}>
+                🌀 Echo Memory
+              </p>
+              {userMonster.echo_memories && userMonster.echo_memories.length > 0 ? (
+                <div className="space-y-1">
+                  {userMonster.echo_memories.map((mem, i) => (
+                    <div key={i} className="text-xs font-serif" style={{ color: "var(--ink-secondary)" }}>
+                      Slot {i + 1}: {(mem as { name?: string })?.name ?? "Unknown echo"}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex items-center gap-2 opacity-50">
+                  <span className="text-[9px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+                    No echoes inscribed — defeat bosses to capture echoes
+                  </span>
+                </div>
+              )}
+            </motion.div>
+          )}
+
+          {/* Grimoire Dormant — Revival Shard action */}
+          {owned && userMonster?.grimoire_dormant && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 0.5 }}
+              className="p-4 border"
+              style={{
+                borderColor: "rgba(100,100,120,0.3)",
+                borderRadius: 0,
+                background: "rgba(0,0,0,0.25)",
+                boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+              }}
+            >
+              <p className="text-[9px] uppercase font-bold mb-2" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)", letterSpacing: "0.06em" }}>
+                💤 Grimoire Dormant
+              </p>
+              <p className="text-xs font-serif mb-3" style={{ color: "var(--ink-tertiary)" }}>
+                This creature's grimoire has entered dormancy. Use a Revival Shard to reawaken it.
+              </p>
+              <button
+                className="ss-btn ss-btn-secondary w-full py-2 text-[10px] uppercase"
+                style={{ fontFamily: "var(--ss-font-pixel)" }}
+                onClick={(e) => { e.stopPropagation(); }}
+              >
+                💎 Use Revival Shard
+              </button>
+            </motion.div>
+          )}
+
+          {/* Fallen Covenant — resolution action */}
+          {owned && userMonster?.fallen_covenant && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2, delay: 0.5 }}
+              className="p-4 border"
+              style={{
+                borderColor: "rgba(196,79,111,0.3)",
+                borderRadius: 0,
+                background: "linear-gradient(135deg, rgba(196,79,111,0.06), transparent)",
+                boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+              }}
+            >
+              <p className="text-[9px] uppercase font-bold mb-2" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--danger)", letterSpacing: "0.06em" }}>
+                💀 Fallen Covenant
+              </p>
+              <p className="text-xs font-serif mb-3" style={{ color: "var(--danger)" }}>
+                Bond shattered. Complete the Redemption Quest to restore this creature's covenant.
+              </p>
+              <button
+                className="ss-btn ss-btn-danger w-full py-2 text-[10px] uppercase"
+                style={{ fontFamily: "var(--ss-font-pixel)" }}
+                onClick={(e) => { e.stopPropagation(); }}
+              >
+                ⚔ Begin Redemption Quest
+              </button>
+            </motion.div>
           )}
         </div>
       </motion.div>

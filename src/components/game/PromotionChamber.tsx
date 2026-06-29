@@ -180,8 +180,9 @@ function Body({
             repeat: stage === "ritual" ? Infinity : 0,
             ease: ease.inOut,
           }}
-          className="w-32 h-32 rounded-full border-2 relative overflow-hidden grid place-items-center"
+          className="w-32 h-32 border-2 relative overflow-hidden grid place-items-center"
           style={{
+            borderRadius: 0,
             borderColor: stage === "ritual" ? "var(--gold-bright)" : "rgba(255,213,79,0.3)",
             background: "radial-gradient(circle, rgba(255,213,79,0.18), transparent 70%)",
           }}
@@ -192,7 +193,8 @@ function Body({
                 ? artUrl
                 : `/sprites/monsters/${monsterName.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
             }
-            className="w-24 h-24 object-cover rounded-full"
+            className="w-24 h-24 object-cover"
+            style={{ imageRendering: "pixelated", borderRadius: 0 }}
             alt={monsterName}
             onError={(e) => {
               e.currentTarget.src = "/monsters/placeholder.png";
@@ -205,8 +207,9 @@ function Body({
               initial={{ opacity: 0, scale: 0.4 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.1 }}
-              className="absolute -bottom-2 px-2 py-0.5 rounded-full text-[11px] font-bold"
+              className="absolute -bottom-2 px-2 py-0.5 text-[10px] font-bold"
               style={{
+                fontFamily: "var(--ss-font-pixel)", borderRadius: 0,
                 background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
                 color: "var(--bg-deep)",
               }}
@@ -220,7 +223,7 @@ function Body({
       {stage === "check" && (
         <>
           {/* Requirements grid */}
-          <div className="rounded-xl p-3 mb-4 space-y-1" style={{ background: "rgba(61,46,31,0.06)" }}>
+          <div className="p-3 mb-4 space-y-1" style={{ borderRadius: 0, background: "rgba(61,46,31,0.06)", boxShadow: "2px 2px 0 rgba(0,0,0,0.2)" }}>
             <p
               className="text-[11px] uppercase tracking-[0.18em] mb-1.5"
               style={{ color: "var(--ink-tertiary)" }}
@@ -299,7 +302,7 @@ function Body({
             <SpringyButton
               ref={closeBtnRef}
               onClick={onClose}
-              className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
+              className="flex-1 py-2.5 text-[10px] uppercase font-bold"
               style={{
                 background: "rgba(61,46,31,0.04)",
                 color: "var(--ink-secondary)",
@@ -311,7 +314,7 @@ function Body({
             <SpringyButton
               onClick={onBegin}
               disabled={!c.canPromote}
-              className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
+              className="flex-[2] py-2.5 text-[10px] uppercase font-bold disabled:opacity-40"
               style={{
                 background: c.canPromote
                   ? "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))"
@@ -334,12 +337,9 @@ function Body({
           >
             The Chamber sings.
           </p>
-          <div
-            className="h-1.5 rounded-full overflow-hidden"
-            style={{ background: "rgba(61,46,31,0.06)" }}
-          >
+          <div className="ss-bar-pixel" style={{ height: 6 }}>
             <motion.div
-              className="h-full"
+              className="ss-bar-pixel-fill"
               style={{
                 background: "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))",
                 width: `${ritualPct}%`,
@@ -377,7 +377,7 @@ function Body({
           )}
           <SpringyButton
             onClick={onClose}
-            className="w-full py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
+            className="w-full py-2.5 text-[10px] uppercase font-bold"
             style={{
               background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
               color: "var(--bg-deep)",

@@ -64,8 +64,8 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
       </Sub>
 
       <div
-        className="max-h-[300px] overflow-y-auto rounded-xl p-2 my-4 space-y-1"
-        style={{ background: "rgba(180,150,100,0.1)" }}
+        className="max-h-[300px] overflow-y-auto p-2 my-4 space-y-1"
+        style={{ borderRadius: 0, background: "rgba(180,150,100,0.1)" }}
       >
         {candidates.length === 0 ? (
           <p className="text-center py-8 text-xs" style={{ color: "var(--ink-tertiary)" }}>
@@ -87,7 +87,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
                 whileTap={{ scale: 0.985 }}
                 onClick={() => toggle(t.id)}
                 disabled={!isPicked && picked.length >= 3}
-                className="w-full text-left px-3 py-2 rounded-lg text-sm transition-colors disabled:opacity-40"
+                className="w-full text-left px-3 py-2 text-sm transition-colors disabled:opacity-40"
                 style={{
                   background: isPicked ? "rgba(255,213,79,0.13)" : "rgba(200,154,62,0.02)",
                   border: `1px solid ${isPicked ? "rgba(255,213,79,0.45)" : "rgba(200,154,62,0.08)"}`,
@@ -111,7 +111,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
       <Actions>
         <SpringyButton
           onClick={onClose}
-          className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
+          className="flex-1 py-2.5 text-[10px] uppercase font-bold"
           style={{
             background: "rgba(200,154,62,0.04)",
             color: "var(--ink-secondary)",
@@ -123,7 +123,7 @@ export function MorningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
         <SpringyButton
           onClick={() => saveMut.mutate()}
           disabled={picked.length === 0 || saveMut.isPending}
-          className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
+          className="flex-[2] py-2.5 text-[10px] uppercase font-bold disabled:opacity-40"
           style={{
             background:
               picked.length > 0
@@ -253,7 +253,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
       <Actions>
         <SpringyButton
           onClick={onClose}
-          className="flex-1 py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold"
+          className="flex-1 py-2.5 text-[10px] uppercase font-bold"
           style={{
             background: "rgba(200,154,62,0.04)",
             color: "var(--ink-secondary)",
@@ -265,7 +265,7 @@ export function EveningRitual({ tasks, onClose }: { tasks: Task[]; onClose: () =
         <SpringyButton
           onClick={() => submitMut.mutate()}
           disabled={submitMut.isPending}
-          className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
+          className="flex-[2] py-2.5 text-[10px] uppercase font-bold disabled:opacity-40"
           style={{
             background: "linear-gradient(135deg,var(--violet),var(--violet-light))",
             color: "var(--bg-deep)",

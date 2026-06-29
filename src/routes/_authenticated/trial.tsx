@@ -96,11 +96,11 @@ function TrialPage() {
       <AtmosphereBackdrop realm="elder" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
         <header className="mb-8 text-center flex flex-col items-center">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[var(--danger)]/20 to-transparent border-2 border-[var(--danger)]/40 flex items-center justify-center mb-3 shadow-[0_0_24px_rgba(255,94,94,0.25)]">
-            <Icon name="death" size={32} color="var(--danger)" className="drop-shadow-[0_0_8px_rgba(255,94,94,0.6)]" />
+          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(255,94,94,0.4)", borderRadius: 0, background: "rgba(255,94,94,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+            <Icon name="death" size={32} color="var(--danger)" />
           </div>
-          <h1 className="t-h1 text-3xl font-bold mb-1" style={{ color: "var(--danger)", textShadow: "0 2px 12px rgba(255,94,94,0.3)" }}>
-            Trial of Echoes
+          <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--danger)", letterSpacing: "0.08em" }}>
+            TRIAL OF ECHOES
           </h1>
           <p className="text-sm max-w-md" style={{ color: "var(--ink-secondary)" }}>
             20 procedural floors. <b style={{ color: "var(--danger)" }}>Permadeath</b>. Pick 5 souls.
@@ -148,7 +148,7 @@ function TrialPage() {
                   return (
                     <div
                       key={i}
-                      className="ss-card rounded-md p-2 text-center"
+                      className="ss-card p-2 text-center"
                       style={{ borderColor: "var(--danger)" }}
                     >
                       <div className="aspect-square mb-1 grid place-items-center overflow-hidden ss-pane rounded">
@@ -184,7 +184,7 @@ function TrialPage() {
                 return (
                   <div
                     key={i}
-                    className="ss-card rounded-md p-2 text-center border-2 border-dashed"
+                    className="ss-card p-2 text-center border-2 border-dashed"
                     style={{ borderColor: "var(--ss-border)" }}
                   >
                     <div
@@ -300,11 +300,12 @@ function TrialPage() {
             <SpringyButton
               onClick={() => runMut.mutate()}
               disabled={runMut.isPending}
-              className="flex-[2] py-2.5 rounded-lg text-xs uppercase tracking-[0.18em] font-bold disabled:opacity-40"
+              className="flex-[2] py-2.5 text-[10px] uppercase font-bold disabled:opacity-40"
               style={{
+                borderRadius: 0, fontFamily: "var(--ss-font-pixel)",
                 background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
                 color: "#faf6f0",
-                boxShadow: "0 4px 20px rgba(255,94,94,0.35)",
+                boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
               }}
             >
               {runMut.isPending ? "Echoes…" : "We Walk Together"}

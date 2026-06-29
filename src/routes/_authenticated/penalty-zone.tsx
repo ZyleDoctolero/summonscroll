@@ -153,14 +153,14 @@ function PenaltyZone() {
             {/* Title */}
             <div className="space-y-2">
               <h1
-                className="text-3xl font-serif font-bold tracking-widest uppercase font-display"
-                style={{ color: "#8b0000" }}
+                className="text-3xl font-bold uppercase"
+                style={{ fontFamily: "var(--ss-font-pixel)", color: "#8b0000", letterSpacing: "0.08em" }}
               >
-                Demonic Backlash
+                DEMONIC BACKLASH
               </h1>
               <p
-                className="font-serif text-sm tracking-widest"
-                style={{ color: "rgba(139,0,0,0.7)" }}
+                className="text-xs uppercase"
+                style={{ fontFamily: "var(--ss-font-pixel)", color: "rgba(139,0,0,0.7)" }}
               >
                 CULTIVATION FAILED — DEMONIC QI INVADING
               </p>
@@ -168,10 +168,10 @@ function PenaltyZone() {
 
             {/* Task Panel */}
             <div
-              className="w-full p-5 text-left space-y-4 rounded-lg"
+              className="w-full p-5 text-left space-y-4"
               style={{
-                background: "rgba(139,0,0,0.08)",
-                border: "1px solid rgba(139,0,0,0.25)",
+                borderRadius: 0, background: "rgba(139,0,0,0.08)",
+                border: "1px solid rgba(139,0,0,0.25)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
               }}
             >
               <div

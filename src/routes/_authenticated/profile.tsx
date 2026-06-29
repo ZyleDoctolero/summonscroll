@@ -158,13 +158,13 @@ function ProfilePage() {
       <div className="relative min-h-screen">
         <div className="p-6 md:p-10 max-w-6xl mx-auto">
           {/* Hero section */}
-          <div className="game-panel p-5 mb-6">
+          <div className="game-panel p-5 mb-6" style={{ borderRadius: 0, boxShadow: "4px 4px 0 rgba(0,0,0,0.4)" }}>
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-16 h-16 rounded-full grid place-items-center text-2xl font-bold ss-btn-d-primary">
+              <div className="w-16 h-16 grid place-items-center text-2xl font-bold" style={{ fontFamily: "var(--ss-font-pixel)", border: "2px solid var(--gold-bright)", borderRadius: 0, background: "rgba(200,154,62,0.1)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
                 {profile.display_name[0].toUpperCase()}
               </div>
               <div>
-                <h1 className="t-h1 text-2xl" style={{ color: "var(--gold-bright)" }}>
+                <h1 className="text-2xl font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}>
                   {profile.display_name}
                 </h1>
                 <div className="flex items-center gap-2 mt-1">
@@ -238,7 +238,7 @@ function ProfilePage() {
               ).map(([label, stat, v]) => (
                 <div
                   key={label}
-                  className="text-center rounded-md p-2 ss-pane"
+                  className="text-center p-2 ss-pane"
                   style={{
                     border: `1px solid rgba(var(--ss-stat-${stat}-rgb),0.18)`,
                   }}
@@ -463,7 +463,7 @@ function ProfilePage() {
                 }) => (
                   <div
                     key={a.id}
-                    className="ss-card rounded-lg p-4 text-center"
+                    className="ss-card p-4 text-center"
                     style={{
                       borderColor: a.unlocked ? "var(--gold-bright)" : undefined,
                       opacity: a.unlocked ? 1 : 0.4,
@@ -554,6 +554,38 @@ function ProfilePage() {
                 </div>
               )}
 
+              {/* Realm Keys */}
+              {(() => {
+                const inv = full?.inventory ?? [];
+                const realmKeys = inv.filter((i: { item_type: string }) => i.item_type === "realm_key");
+                return realmKeys.length > 0 ? (
+                  <div>
+                    <h3
+                      className="text-[10px] font-bold mt-4 mb-2 uppercase"
+                      style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}
+                    >
+                      🔑 Realm Keys
+                    </h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                      {realmKeys.map((k: { id: string; item_name: string; quantity: number }) => (
+                        <div key={k.id} className="p-3 text-center border" style={{ borderColor: "rgba(200,154,62,0.2)", borderRadius: 0, background: "rgba(200,154,62,0.04)", boxShadow: "2px 2px 0 rgba(0,0,0,0.3)" }}>
+                          <div className="text-xl mb-1">🗝</div>
+                          <p className="text-[9px] font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)" }}>
+                            {k.item_name}
+                          </p>
+                          <p className="text-[9px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+                            x{k.quantity}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-[8px] mt-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+                      Required for ★7 → ★8 promotion
+                    </p>
+                  </div>
+                ) : null;
+              })()}
+
               {/* Pets */}
               {(full?.pets ?? []).length > 0 && (
                 <div>
@@ -642,7 +674,7 @@ function ProfilePage() {
                     return (
                       <div
                         key={t.id}
-                        className="flex justify-between items-center p-3 rounded-lg ss-pane border border-[var(--ink-secondary)]/5"
+                        className="flex justify-between items-center p-3 ss-pane border border-[var(--ink-secondary)]/5"
                       >
                         <div>
                           <div className="font-bold text-sm text-[var(--ink-primary)]">
@@ -709,8 +741,8 @@ function ProfilePage() {
                     return (
                       <div
                         key={i}
-                        className="w-4 h-4 rounded-sm flex-shrink-0"
-                        style={{ background: color }}
+                        className="w-4 h-4 flex-shrink-0"
+                        style={{ borderRadius: 0, background: color }}
                         title={`${ds}: ${c} tasks`}
                       />
                     );
@@ -763,7 +795,7 @@ function ProfilePage() {
                     key={key}
                     onClick={() => classMut.mutate(key as "warrior" | "mage" | "rogue" | "healer")}
                     disabled={classMut.isPending || profile.class === key || cooldownDays > 0}
-                    className="ss-card rounded-lg p-4 text-center transition-all hover:scale-[1.03] disabled:opacity-40"
+                    className="ss-card p-4 text-center transition-all hover:scale-[1.03] disabled:opacity-40"
                     style={{ borderColor: profile.class === key ? info.color : undefined }}
                   >
                     <div className="mb-2 flex justify-center">
@@ -808,20 +840,17 @@ function Bar({
   return (
     <div>
       <div
-        className="flex justify-between text-[11px] uppercase tracking-wider mb-0.5"
-        style={{ color: "var(--ink-secondary)" }}
+        className="flex justify-between mb-0.5"
+        style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.04em", color: "var(--ink-secondary)" }}
       >
         <span>{label}</span>
-        <span className="font-serif" style={{ color }}>
+        <span style={{ color }}>
           {current}/{max}
         </span>
       </div>
-      <div
-        className="h-2 rounded-full overflow-hidden"
-        style={{ background: "rgba(61,46,31,0.06)" }}
-      >
+      <div className="ss-bar-pixel" style={{ height: 10 }}>
         <div
-          className="h-full rounded-full"
+          className="ss-bar-pixel-fill"
           style={{
             width: `${pct}%`,
             background: gradient
@@ -849,27 +878,25 @@ function VoidFrontierSeal({ streak }: { streak: number }) {
       className="ss-card mt-4"
       style={{
         borderColor: streak >= 30 ? "var(--violet)" : undefined,
-        boxShadow: streak >= 30 ? "0 0 16px rgba(163, 116, 255, 0.2)" : undefined,
+        borderRadius: 0,
+        boxShadow: streak >= 30 ? "3px 3px 0 rgba(127,119,221,0.3)" : "3px 3px 0 rgba(0,0,0,0.3)",
       }}
     >
       <h3
-        className="font-bold text-sm mb-1 flex justify-between"
-        style={{ color: "var(--violet)" }}
+        className="font-bold text-[10px] mb-1 flex justify-between uppercase"
+        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--violet)", letterSpacing: "0.04em" }}
       >
         <span>Void Frontier Seal</span>
-        <span className="font-serif">
+        <span>
           {streak}/{goal} Days
         </span>
       </h3>
-      <p className="text-xs mb-3" style={{ color: "var(--ink-secondary)" }}>
+      <p className="text-[9px] mb-3" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
         {message}
       </p>
-      <div
-        className="h-2 rounded-full overflow-hidden"
-        style={{ background: "rgba(61,46,31,0.06)" }}
-      >
+      <div className="ss-bar-pixel" style={{ height: 10 }}>
         <div
-          className="h-full rounded-full"
+          className="ss-bar-pixel-fill"
           style={{ width: `${pct}%`, background: "var(--violet)" }}
         />
       </div>

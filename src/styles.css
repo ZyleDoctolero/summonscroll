@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Spectral:ital,wght@0,400;0,600;1,400&family=Pixelify+Sans:wght@400;700&display=swap');
 @source "../src";
 
 @custom-variant dark (&:is(.dark *));
@@ -165,17 +165,17 @@
 
 /* ─── SummonScroll Game Design Tokens ─── */
 :root {
-  /* ─── Night Palette ─── */
-  /* Backgrounds — deep dark, slight warm undertone */
-  --bg-deep: #0c0a07; /* near black, warm */
-  --bg-stage: #13100c; /* slightly lighter dark */
-  --bg-panel: rgba(28, 23, 15, 0.94); /* dark frosted panel */
-  --bg-pane: rgba(38, 30, 18, 0.7); /* inner dark pane */
+  /* ─── Ancient Beastmaster Tome Palette ─── */
+  /* Backgrounds — worn parchment, old paper */
+  --bg-deep: #dccba9; /* desk / deep parchment */
+  --bg-stage: #ece1c6; /* main paper */
+  --bg-panel: rgba(250, 245, 235, 0.94); /* frosted card surface */
+  --bg-pane: rgba(230, 220, 200, 0.7); /* inner pane */
 
-  /* Text/Ink — inverted, light on dark */
-  --ink-primary: #f0e8d8; /* warm white */
-  --ink-secondary: #a8916e; /* muted gold-grey */
-  --ink-tertiary: #6a5840; /* soft dark tan */
+  /* Text/Ink — dark sepia / charcoal */
+  --ink-primary: #2c1f14; /* near black brown */
+  --ink-secondary: #5e4e3f; /* medium brown */
+  --ink-tertiary: #8b7967; /* light brown */
 
   /* Signature Colors */
   --fire: #ff5e2a;
@@ -249,17 +249,17 @@
   --ss-space-7: 40px;
   --ss-space-8: 48px;
 
-  /* ─── Radius scale ─── */
-  --ss-radius-sm: 4px; /* chips */
-  --ss-radius-md: 8px; /* inputs */
-  --ss-radius-lg: 12px; /* cards */
-  --ss-radius-xl: 16px; /* modals */
-  --ss-radius-pill: 9999px;
+  /* ─── Radius scale ─── pixel art: sharp corners everywhere */
+  --ss-radius-sm: 0px;
+  --ss-radius-md: 2px;
+  --ss-radius-lg: 0px;
+  --ss-radius-xl: 2px;
+  --ss-radius-pill: 2px;
 
-  /* ─── Elevation scale ─── */
-  --ss-shadow-low: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --ss-shadow-mid: 0 8px 32px rgba(0, 0, 0, 0.45);
-  --ss-shadow-high: 0 24px 72px rgba(0, 0, 0, 0.6);
+  /* ─── Elevation scale ─── pixel art: hard offset shadows */
+  --ss-shadow-low:  3px 3px 0 rgba(0, 0, 0, 0.55);
+  --ss-shadow-mid:  4px 4px 0 rgba(0, 0, 0, 0.6);
+  --ss-shadow-high: 6px 6px 0 rgba(0, 0, 0, 0.65);
 
   /* Inset highlight — faint rim on dark surfaces */
   --ss-inset-edge: inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -343,38 +343,39 @@
   --realm-iron-atmos: #1c1d22;
 }
 
-/* Stat chip utility — used on task tags, monster role labels, expedition badges. */
+/* Stat chip utility — pixel art: sharp corners, pixel font */
 .ss-stat-chip {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 2px 8px;
-  border-radius: 9999px;
+  padding: 2px 7px;
+  border-radius: 0;
   font-size: 10px;
   font-weight: 700;
+  font-family: var(--ss-font-pixel);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.06em;
   line-height: 1;
 }
 .ss-stat-chip[data-stat="str"] {
-  background: rgba(var(--ss-stat-str-rgb), 0.12);
+  background: rgba(var(--ss-stat-str-rgb), 0.15);
   color: var(--ss-stat-str);
-  border: 1px solid rgba(var(--ss-stat-str-rgb), 0.32);
+  border: 1px solid rgba(var(--ss-stat-str-rgb), 0.45);
 }
 .ss-stat-chip[data-stat="int"] {
-  background: rgba(var(--ss-stat-int-rgb), 0.12);
+  background: rgba(var(--ss-stat-int-rgb), 0.15);
   color: var(--ss-stat-int);
-  border: 1px solid rgba(var(--ss-stat-int-rgb), 0.32);
+  border: 1px solid rgba(var(--ss-stat-int-rgb), 0.45);
 }
 .ss-stat-chip[data-stat="con"] {
-  background: rgba(var(--ss-stat-con-rgb), 0.12);
+  background: rgba(var(--ss-stat-con-rgb), 0.15);
   color: var(--ss-stat-con);
-  border: 1px solid rgba(var(--ss-stat-con-rgb), 0.32);
+  border: 1px solid rgba(var(--ss-stat-con-rgb), 0.45);
 }
 .ss-stat-chip[data-stat="per"] {
-  background: rgba(var(--ss-stat-per-rgb), 0.12);
+  background: rgba(var(--ss-stat-per-rgb), 0.15);
   color: var(--ss-stat-per);
-  border: 1px solid rgba(var(--ss-stat-per-rgb), 0.32);
+  border: 1px solid rgba(var(--ss-stat-per-rgb), 0.45);
 }
 
 /* ─── Nav Hierarchy (Daily / Weekly / Rare tiers) ─── */
@@ -495,6 +496,7 @@
   --ss-font-body:    "Inter", system-ui, -apple-system, sans-serif;
   --ss-font-stats:   "Rajdhani", "Inter", sans-serif;
   --ss-font-mono:    "JetBrains Mono", "Fira Code", monospace;
+  --ss-font-pixel:   "Pixelify Sans", monospace;
 }
 
 .font-display { font-family: var(--ss-font-display); }
@@ -504,141 +506,150 @@
 .font-lore { font-family: 'Spectral', serif; font-style: italic; }
 
 html {
-  color-scheme: dark;
+  color-scheme: light;
 }
 body {
-  background-color: var(--bg-deep);
+  background-color: var(--bg-stage);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200, 154, 62, 0.06) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(163, 116, 255, 0.04) 0%, transparent 60%);
+    radial-gradient(circle, rgba(200, 154, 62, 0.06) 1px, transparent 1px),
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200, 154, 62, 0.1) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(163, 116, 255, 0.06) 0%, transparent 60%);
+  background-size: 4px 4px, 100% 100%, 100% 100%;
   background-attachment: fixed;
   color: var(--ink-primary);
   font-family: var(--ss-font-body);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  image-rendering: pixelated;
 }
 
 
 
 /* ─── Surface System Primitives ─── */
 
-/* ─── Cards ─── */
+/* ─── Cards ─── pixel art: hard offset shadow, sharp corners, no blur */
 .ss-card {
-  background: rgba(28, 23, 15, 0.9);
-  border: 1px solid rgba(200, 154, 62, 0.12);
-  border-radius: var(--ss-radius-lg);
+  background: var(--bg-panel);
+  border: 2px solid rgba(200, 154, 62, 0.3);
+  border-radius: 0;
   padding: var(--ss-space-4);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--ss-shadow-mid);
+  transition: box-shadow 80ms ease-out, transform 80ms ease-out;
 }
 .ss-card:hover {
-  border-color: rgba(200, 154, 62, 0.28);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 20px rgba(200, 154, 62, 0.06);
+  border-color: rgba(200, 154, 62, 0.55);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.65);
 }
 
 /* Bigger, more important surface — hero card on a screen */
 .ss-card-hero {
-  background: linear-gradient(180deg, rgba(30,24,14,0.96) 0%, rgba(18,14,8,0.98) 100%);
-  border: 1px solid rgba(200, 154, 62, 0.2);
-  border-radius: var(--ss-radius-lg);
+  background: var(--bg-panel);
+  border: 2px solid rgba(200, 154, 62, 0.35);
+  border-radius: 0;
   padding: var(--ss-space-5);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+  box-shadow: var(--ss-shadow-mid);
 }
 
-/* ─── Modals ─── */
+/* ─── Modals ─── pixel art: sharp corners, hard shadow */
 .ss-modal {
-  background: rgba(20, 16, 10, 0.97);
-  border: 1px solid rgba(200, 154, 62, 0.2);
-  border-radius: var(--ss-radius-xl);
+  background: var(--bg-panel);
+  border: 2px solid rgba(200, 154, 62, 0.45);
+  border-radius: 0;
   padding: var(--ss-space-5);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(24px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.6);
   max-width: 28rem;
   width: 100%;
 }
 
 .ss-modal-backdrop {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.82);
 }
 
 /* ─── Panes (sub-sections within a card) ─── */
 .ss-pane {
   background: rgba(255, 200, 100, 0.04);
-  border-radius: var(--ss-radius-md);
+  border: 1px solid rgba(200, 154, 62, 0.12);
+  border-radius: 0;
   padding: var(--ss-space-3);
 }
 
-/* ─── Buttons ─── */
+/* ─── Buttons ─── pixel art: hard offset shadow, push-down on :active */
 .ss-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--ss-space-2);
   padding: 10px 16px;
-  border-radius: var(--ss-radius-md);
+  border-radius: 0;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  font-family: var(--ss-font-pixel);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
-  transition:
-    transform 120ms ease-out,
-    box-shadow 120ms ease-out;
+  transition: box-shadow 50ms ease-out, transform 50ms ease-out;
   user-select: none;
 }
 
 .ss-btn-primary {
-  background: linear-gradient(135deg, var(--gold-glow), var(--gold-bright));
+  background: var(--gold-bright);
   color: var(--bg-deep);
-  border: none;
-  box-shadow: 0 4px 20px rgba(255, 213, 79, 0.28);
+  border: 2px solid var(--gold-glow);
+  box-shadow: 4px 4px 0 var(--gold-glow);
 }
 .ss-btn-primary:hover {
-  transform: translateY(-1px);
+  background: #d4a94a;
+  box-shadow: 3px 3px 0 var(--gold-glow);
+  transform: translate(1px, 1px);
 }
 .ss-btn-primary:active {
-  transform: translateY(0);
+  box-shadow: 0 0 0 var(--gold-glow);
+  transform: translate(4px, 4px);
 }
-/* Disabled state — flat muted slate, reads as "locked". */
+/* Disabled state */
 .ss-btn-primary:disabled,
 .ss-btn-d-primary:disabled {
-  background: rgba(180, 150, 100, 0.08);
+  background: rgba(180, 150, 100, 0.12);
   color: var(--ink-tertiary);
-  box-shadow: none;
-  text-shadow: none;
-  filter: none;
-  border: 1px solid rgba(180, 150, 100, 0.15);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  border: 2px solid rgba(180, 150, 100, 0.2);
   pointer-events: none;
-  transform: none;
   opacity: 0.7;
   cursor: not-allowed;
 }
 
 .ss-btn-secondary {
-  background: rgba(200, 170, 110, 0.06);
+  background: rgba(200, 170, 110, 0.08);
   color: var(--ink-secondary);
-  border: var(--ss-hairline);
+  border: 2px solid rgba(200, 154, 62, 0.3);
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.4);
 }
 .ss-btn-secondary:hover {
-  border-color: var(--ss-hairline-active);
+  border-color: rgba(200, 154, 62, 0.55);
   color: var(--ink-primary);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+  transform: translate(1px, 1px);
+}
+.ss-btn-secondary:active {
+  box-shadow: 0 0 0;
+  transform: translate(3px, 3px);
 }
 
 .ss-btn-danger {
-  background: rgba(239, 68, 68, 0.08);
+  background: rgba(139, 26, 26, 0.15);
   color: var(--danger);
-  border: 1px solid rgba(239, 68, 68, 0.25);
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 2px solid rgba(239, 68, 68, 0.45);
+  box-shadow: 3px 3px 0 rgba(80, 0, 0, 0.6);
 }
 .ss-btn-danger:hover {
-  background: rgba(239, 68, 68, 0.12);
-  border-color: rgba(239, 68, 68, 0.4);
-  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.15);
-  transform: translateY(-1px);
+  background: rgba(139, 26, 26, 0.22);
+  border-color: rgba(239, 68, 68, 0.7);
+  box-shadow: 2px 2px 0 rgba(80, 0, 0, 0.6);
+  transform: translate(1px, 1px);
+}
+.ss-btn-danger:active {
+  box-shadow: 0 0 0;
+  transform: translate(3px, 3px);
 }
 
 @keyframes shimmer {
@@ -655,28 +666,30 @@ body {
   color: var(--ink-primary);
 }
 
-/* ─── Chips ─── */
+/* ─── Chips ─── pixel art: sharp corners, pixel font */
 .ss-chip {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 2px 8px;
-  border-radius: var(--ss-radius-pill);
+  padding: 3px 8px;
+  border-radius: 0;
   font-size: 10px;
   font-weight: 700;
+  font-family: var(--ss-font-pixel);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.06em;
   line-height: 1;
   border: 1px solid transparent;
 }
 .ss-chip-gold {
-  background: rgba(255, 213, 79, 0.12);
+  background: rgba(200, 154, 62, 0.15);
   color: var(--gold-bright);
-  border-color: rgba(255, 213, 79, 0.32);
+  border-color: rgba(200, 154, 62, 0.45);
 }
 .ss-chip-muted {
   background: rgba(180, 150, 100, 0.08);
   color: var(--ink-tertiary);
+  border-color: rgba(180, 150, 100, 0.2);
 }
 
 /* ─── Dividers ─── */
@@ -731,13 +744,16 @@ body {
   opacity: 0.6;
 }
 
-/* Tab under-bar */
+/* Tab under-bar — pixel art: hard underline, pixel font */
 .ss-tab-d {
   position: relative;
   padding: 12px 18px;
   color: var(--ink-secondary);
-  font-weight: 600;
-  transition: color 160ms ease-out;
+  font-weight: 700;
+  font-family: var(--ss-font-pixel);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  transition: color 80ms ease-out;
 }
 .ss-tab-d.active {
   color: var(--gold-bright);
@@ -745,50 +761,38 @@ body {
 .ss-tab-d.active::after {
   content: "";
   position: absolute;
-  left: 10px;
-  right: 10px;
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 3px;
   background: var(--gold-bright);
-  border-radius: 3px 3px 0 0;
-  box-shadow: 0 -2px 8px rgba(255, 213, 79, 0.5);
+  border-radius: 0;
 }
 
-/* Ancient Runic Button */
+/* Ancient Runic Button — pixel art variant */
 .ss-btn-d-primary {
-  background: linear-gradient(135deg, #c89a3e, #e8c55a);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-family: var(--ss-font-display);
-  font-size: 16px;
+  background: var(--gold-bright);
+  color: var(--bg-deep);
+  border: 2px solid var(--gold-glow);
+  border-radius: 0;
+  font-family: var(--ss-font-pixel);
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 0 4px 15px rgba(200, 154, 62, 0.3);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 0.08em;
+  box-shadow: 4px 4px 0 var(--gold-glow);
+  transition: box-shadow 50ms ease-out, transform 50ms ease-out;
   position: relative;
   overflow: hidden;
 }
-.ss-btn-d-primary::before {
-  content: "";
-  position: absolute;
-  top: 0; left: -100%; width: 50%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 63, 0.5), transparent);
-  transform: skewX(-20deg);
-  transition: 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
 .ss-btn-d-primary:hover {
-  background: linear-gradient(135deg, #d4a84a, #f0d070);
-  box-shadow: 0 6px 25px rgba(200, 154, 62, 0.4);
-  transform: translateY(-2px) scale(1.02);
-}
-.ss-btn-d-primary:hover::before {
-  left: 150%;
+  background: #d4a94a;
+  box-shadow: 3px 3px 0 var(--gold-glow);
+  transform: translate(1px, 1px);
 }
 .ss-btn-d-primary:active {
-  transform: scale(0.96);
-  box-shadow: 0 2px 8px rgba(200, 154, 62, 0.3);
+  box-shadow: 0 0 0 var(--gold-glow);
+  transform: translate(4px, 4px);
 }
 
 /* Rarity star (with particle glow) */
@@ -916,34 +920,37 @@ body {
   line-height: 1.05;
 }
 
-/* ─── Heading roles — Saira Condensed ─── */
+/* ─── Heading roles — Pixelify Sans (pixel-art) ─── */
 .t-h1 {
-  font-family: var(--ss-font-heading);
+  font-family: var(--ss-font-pixel);
   font-size: var(--ss-text-3xl);
   font-weight: 700;
-  letter-spacing: var(--ss-track-wider);
+  letter-spacing: 0.08em;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 .t-h2 {
-  font-family: var(--ss-font-heading);
+  font-family: var(--ss-font-pixel);
   font-size: var(--ss-text-xl);
   font-weight: 700;
-  letter-spacing: var(--ss-track-normal);
+  letter-spacing: 0.06em;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 .t-h3 {
-  font-family: var(--ss-font-heading);
+  font-family: var(--ss-font-pixel);
   font-size: var(--ss-text-base);
   font-weight: 700;
-  letter-spacing: var(--ss-track-wider);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* ─── Label role ─── */
 .t-label {
-  font-family: var(--ss-font-body);
-  font-size: 10px;
+  font-family: var(--ss-font-pixel);
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: var(--ss-track-widest);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink-secondary);
 }
@@ -1086,14 +1093,27 @@ body {
 
 @layer components {
   .ss-btn-quest-board {
-    @apply relative flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-[var(--bg-panel)] border-2 border-[var(--gold-bright)] shadow-[0_4px_16px_rgba(120,90,50,0.15)] hover:scale-105 active:scale-95 transition-all duration-300;
+    @apply relative flex flex-col items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-[var(--bg-panel)] border-2 border-[var(--gold-bright)] transition-all duration-150;
+    box-shadow: 4px 4px 0 var(--gold-glow);
+    border-radius: 0;
+  }
+  .ss-btn-quest-board:hover {
+    box-shadow: 3px 3px 0 var(--gold-glow);
+    transform: translate(1px, 1px);
+  }
+  .ss-btn-quest-board:active {
+    box-shadow: 0 0 0;
+    transform: translate(4px, 4px);
   }
   .ss-badge-notification {
-    @apply absolute top-0 right-0 w-6 h-6 rounded-full bg-[var(--danger)] border border-[var(--bg-panel)] flex items-center justify-center text-[11px] font-bold text-white shadow-[0_2px_4px_rgba(120,90,50,0.3)];
+    @apply absolute top-0 right-0 w-5 h-5 bg-[var(--danger)] border border-[var(--bg-panel)] flex items-center justify-center text-[10px] font-bold text-white;
+    border-radius: 0;
   }
   .ss-panel-holographic {
-    @apply relative overflow-hidden border border-[rgba(200,154,62,0.15)] shadow-[0_4px_24px_rgba(0,0,0,0.4)] rounded-xl;
-    background: rgba(22, 18, 11, 0.92);
+    @apply relative overflow-hidden border-2 border-[rgba(200,154,62,0.25)];
+    background: rgba(22, 18, 11, 0.94);
+    border-radius: 0;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.55);
   }
 }
 
@@ -1479,7 +1499,7 @@ body {
 .hud-corners > .hud-bl { bottom: 0; left: 0; border-bottom: 2px solid; border-left: 2px solid; }
 .hud-corners > .hud-br { bottom: 0; right: 0; border-bottom: 2px solid; border-right: 2px solid; }
 
-/* ─── Screen scanline overlay (very subtle, CRT-game feel) ─── */
+/* ─── Screen scanline overlay — heavier for pixel art CRT feel ─── */
 .screen-scanlines {
   position: fixed;
   inset: 0;
@@ -1487,32 +1507,43 @@ body {
   pointer-events: none;
   background: repeating-linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0.012) 0px,
-    rgba(255, 255, 255, 0.012) 1px,
+    rgba(0, 0, 0, 0.07) 0px,
+    rgba(0, 0, 0, 0.07) 1px,
     transparent 1px,
     transparent 3px
   );
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
+}
+
+/* ─── Inline scanlines (component-level, not fixed) ─── */
+.scanlines {
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.09) 0px,
+    rgba(0, 0, 0, 0.09) 1px,
+    transparent 1px,
+    transparent 3px
+  );
 }
 
 /* ════════════════════════════════════════════════════════════════════════
    GAME FEEL — interaction juice, loading, pull cinematic
    ════════════════════════════════════════════════════════════════════════ */
 
-/* ─── Interactive card hover (collection cards, mode cards) ─── */
+/* ─── Interactive card hover — pixel art push style ─── */
 .card-interactive {
-  transition: transform 180ms cubic-bezier(0.2, 0.65, 0.3, 1),
-    box-shadow 180ms ease-out, border-color 180ms ease-out;
+  transition: box-shadow 60ms ease-out, transform 60ms ease-out, border-color 60ms ease-out;
   will-change: transform;
 }
 .card-interactive:hover {
-  transform: translateY(-3px) scale(1.015);
-  box-shadow: 0 16px 44px rgba(120, 90, 50, 0.15), 0 0 28px rgba(255, 213, 79, 0.12);
-  border-color: rgba(255, 213, 79, 0.4);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.6);
+  border-color: rgba(200, 154, 62, 0.55);
   z-index: 2;
 }
 .card-interactive:active {
-  transform: translateY(-1px) scale(0.995);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+  transform: translate(3px, 3px);
 }
 
 /* ─── Primary button glint sweep ─── */
@@ -1651,4 +1682,275 @@ body {
 }
 .group:hover .group-hover\:animate-shimmer {
   animation: shimmer 1s ease-in-out infinite;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   PIXEL ART COMPONENT PRIMITIVES — Habitica-style game UI
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Pixel font utility ─── */
+.px-font {
+  font-family: var(--ss-font-pixel);
+  letter-spacing: 0.02em;
+}
+
+/* ─── Segmented progress bars (classic RPG) ─── */
+.ss-bar-pixel {
+  position: relative;
+  height: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+}
+.ss-bar-pixel-fill {
+  height: 100%;
+  position: relative;
+  transition: width 300ms ease-out;
+}
+.ss-bar-pixel-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 10px,
+    rgba(0, 0, 0, 0.28) 10px,
+    rgba(0, 0, 0, 0.28) 12px
+  );
+}
+
+/* ─── Monster art frame (double border) ─── */
+.ss-monster-frame {
+  border: 3px solid var(--gold-bright);
+  outline: 1px solid var(--gold-glow);
+  outline-offset: -5px;
+  border-radius: 0;
+  overflow: hidden;
+  background: rgba(13, 10, 4, 0.9);
+  position: relative;
+}
+.ss-monster-frame img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* ─── Bond/status badges ─── */
+.ss-badge-soul-bound {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  font-family: var(--ss-font-pixel);
+  font-size: 9px;
+  font-weight: 700;
+  background: rgba(196, 127, 255, 0.2);
+  color: #c47fff;
+  border: 1px solid #c47fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ss-badge-dormant {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  font-family: var(--ss-font-pixel);
+  font-size: 9px;
+  font-weight: 700;
+  background: rgba(60, 60, 60, 0.5);
+  color: #888;
+  border: 1px solid #555;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ss-badge-fallen {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  font-family: var(--ss-font-pixel);
+  font-size: 9px;
+  font-weight: 700;
+  background: rgba(80, 0, 0, 0.35);
+  color: #ff9090;
+  border: 1px solid #800;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  animation: fallen-pulse 2s ease-in-out infinite;
+}
+@keyframes fallen-pulse {
+  0%, 100% { border-color: #800; }
+  50% { border-color: #ff2020; }
+}
+.ss-badge-synergy-harmony {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  font-family: var(--ss-font-pixel);
+  font-size: 9px;
+  font-weight: 700;
+  background: rgba(15, 61, 43, 0.5);
+  color: #3ed97a;
+  border: 1px solid #3ed97a;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+.ss-badge-synergy-focus {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  font-family: var(--ss-font-pixel);
+  font-size: 9px;
+  font-weight: 700;
+  background: rgba(200, 154, 62, 0.15);
+  color: var(--gold-bright);
+  border: 1px solid var(--gold-bright);
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+/* ─── Dormant card overlay ─── */
+.ss-monster-dormant-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  z-index: 10;
+}
+
+/* ─── Ritual Incubation progress bar ─── */
+.ss-ritual-bar {
+  border: 2px solid rgba(196, 127, 255, 0.4);
+  height: 12px;
+  border-radius: 0;
+  overflow: hidden;
+  background: rgba(30, 0, 50, 0.3);
+  position: relative;
+}
+.ss-ritual-bar-fill {
+  height: 100%;
+  background: #c47fff;
+  position: relative;
+  transition: width 400ms ease-out;
+}
+.ss-ritual-bar-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 10px,
+    rgba(0, 0, 0, 0.25) 10px,
+    rgba(0, 0, 0, 0.25) 12px
+  );
+}
+
+/* ─── Pixel art input ─── */
+.ss-input {
+  width: 100%;
+  background: var(--ss-bg-elevated);
+  border: 2px solid rgba(200, 154, 62, 0.3);
+  border-radius: 0;
+  padding: 10px 12px;
+  color: var(--ss-text-primary);
+  font-family: var(--ss-font-pixel);
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.1s;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.ss-input:focus {
+  border-color: var(--gold-bright);
+  box-shadow: 3px 3px 0 var(--gold-glow);
+}
+
+/* ─── Pixel art nav (bottom HUD) ─── */
+.ss-pixel-nav {
+  border-radius: 0;
+  border: 2px solid rgba(200, 154, 62, 0.28);
+  background: rgba(16, 13, 8, 0.95);
+  box-shadow: 0 -3px 0 rgba(0,0,0,0.5);
+}
+.ss-pixel-nav-item {
+  border-radius: 0;
+  font-family: var(--ss-font-pixel);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+.ss-pixel-nav-item.active {
+  border: 1px solid currentColor;
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.06);
+}
+
+/* ─── Pixel art task card action buttons ─── */
+.ss-task-btn-plus {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: var(--ss-font-pixel);
+  background: rgba(95, 173, 65, 0.15);
+  color: var(--success);
+  border: 2px solid rgba(95, 173, 65, 0.45);
+  box-shadow: 3px 3px 0 rgba(0, 60, 0, 0.5);
+  transition: box-shadow 50ms, transform 50ms;
+  cursor: pointer;
+}
+.ss-task-btn-plus:hover { box-shadow: 2px 2px 0 rgba(0,60,0,0.5); transform: translate(1px,1px); }
+.ss-task-btn-plus:active { box-shadow: 0 0; transform: translate(3px,3px); }
+
+.ss-task-btn-minus {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: var(--ss-font-pixel);
+  background: rgba(224, 82, 82, 0.15);
+  color: var(--danger);
+  border: 2px solid rgba(224, 82, 82, 0.45);
+  box-shadow: 3px 3px 0 rgba(60, 0, 0, 0.5);
+  transition: box-shadow 50ms, transform 50ms;
+  cursor: pointer;
+}
+.ss-task-btn-minus:hover { box-shadow: 2px 2px 0 rgba(60,0,0,0.5); transform: translate(1px,1px); }
+.ss-task-btn-minus:active { box-shadow: 0 0; transform: translate(3px,3px); }
+
+/* ─── Typography additions ─── */
+.t-pixel {
+  font-family: var(--ss-font-pixel);
+  letter-spacing: 0.04em;
+}
+.t-mono {
+  font-family: var(--ss-font-pixel);
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.t-label {
+  font-family: var(--ss-font-pixel);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
 }

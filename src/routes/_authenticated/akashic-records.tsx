@@ -56,14 +56,14 @@ function AkashicRecordsPage() {
       <div className="relative z-10 p-4 md:p-8 max-w-6xl mx-auto pt-20 space-y-8 min-h-screen">
         <header className="text-center space-y-2">
           <h1
-            className="text-4xl font-serif font-bold tracking-widest font-display uppercase"
-            style={{ color: "#b8860b" }}
+            className="text-3xl font-bold uppercase"
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "#b8860b", letterSpacing: "0.08em" }}
           >
-            Akashic Records
+            AKASHIC RECORDS
           </h1>
           <p
-            style={{ color: "var(--ink-secondary)" }}
-            className="text-sm tracking-widest font-serif"
+            style={{ color: "var(--ink-secondary)", fontFamily: "var(--ss-font-pixel)", fontSize: "10px" }}
+            className="uppercase"
           >
             VIEW THE ASCENSION LINEAGE OF YOUR SOULS
           </p>
@@ -89,7 +89,7 @@ function AkashicRecordsPage() {
                     onClick={() => setSelectedTarget(m.id)}
                     className={`ss-card p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity}`}
                   >
-                    <div className="w-14 h-14 mx-auto mb-2 rounded-lg overflow-hidden ss-pane flex items-center justify-center transition-colors">
+                    <div className="w-14 h-14 mx-auto mb-2 overflow-hidden ss-pane flex items-center justify-center transition-colors">
                       <img
                         src={
                           m.monster?.art_url

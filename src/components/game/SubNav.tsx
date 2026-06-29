@@ -1,5 +1,4 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { motion } from "motion/react";
 
 export interface SubNavItem {
   path: string;
@@ -15,7 +14,9 @@ export const HUB_TABS: SubNavItem[] = [
 export const ROSTER_TABS: SubNavItem[] = [
   { path: "/compendium", label: "Compendium" },
   { path: "/fusion", label: "Fusion" },
+  { path: "/cross-fusion", label: "X-Fusion" },
   { path: "/akashic-records", label: "Akashic" },
+  { path: "/race-skills", label: "Race Skills" },
 ];
 
 export const VOID_TABS: SubNavItem[] = [
@@ -33,30 +34,33 @@ export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; colo
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
-    <nav aria-label="Section navigation" className="w-full flex gap-1 p-1 border rounded-lg mb-6 overflow-x-auto no-scrollbar relative z-20 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.4)]" style={{ background: "rgba(14,11,7,0.85)", borderColor: "rgba(200,154,62,0.15)" }}>
+    <nav
+      aria-label="Section navigation"
+      className="w-full flex mb-6 overflow-x-auto no-scrollbar relative z-20"
+      style={{
+        background: "rgba(12, 10, 6, 0.96)",
+        border: "2px solid rgba(200,154,62,0.2)",
+        borderRadius: 0,
+        boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+      }}
+    >
       {items.map((item) => {
         const isActive = pathname === item.path;
         return (
           <Link
             key={item.path}
             to={item.path}
-            className={`flex-1 py-3 px-3 text-[11px] md:text-xs uppercase tracking-wider font-semibold whitespace-nowrap text-center rounded-md transition-all relative z-10 flex items-center justify-center`}
+            className="flex-1 py-3 px-3 whitespace-nowrap text-center transition-all relative flex items-center justify-center"
             style={{
-              color: isActive ? color : "var(--ink-secondary)",
+              fontFamily: "var(--ss-font-pixel)",
+              fontSize: 10,
+              letterSpacing: "0.05em",
+              textTransform: "uppercase",
+              color: isActive ? color : "var(--ink-tertiary)",
+              background: isActive ? `rgba(200,154,62,0.08)` : "transparent",
+              borderBottom: isActive ? `3px solid ${color}` : "3px solid transparent",
             }}
           >
-            {isActive && (
-              <motion.div
-                layoutId="subNavActive"
-                className="absolute inset-0 rounded -z-10 border-b-2"
-                style={{ 
-                  borderColor: color,
-                  backgroundColor: "rgba(200,154,62,0.08)",
-                  boxShadow: `0 1px 4px rgba(0,0,0,0.3)`
-                }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              />
-            )}
             {item.label}
           </Link>
         );

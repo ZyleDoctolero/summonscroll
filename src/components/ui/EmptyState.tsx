@@ -13,25 +13,28 @@ interface EmptyStateProps {
 export function EmptyState({ icon, title, body, cta }: EmptyStateProps) {
   return (
     <div
-      className="flex flex-col items-center gap-4 py-14 px-8 text-center rounded-xl border shadow-inner"
+      className="flex flex-col items-center gap-4 py-14 px-8 text-center border-2"
       style={{
+        borderRadius: 0,
         background: "linear-gradient(180deg, rgba(250,246,240,0.6), rgba(245,239,230,0.8))",
         borderColor: "rgba(200,154,62,0.2)",
-        boxShadow: "inset 0 2px 12px rgba(120,90,50,0.04), 0 4px 20px rgba(120,90,50,0.06)",
+        boxShadow: "4px 4px 0 rgba(0,0,0,0.3)",
       }}
     >
       <div
-        className="w-16 h-16 rounded-full grid place-items-center"
+        className="w-16 h-16 grid place-items-center"
         style={{
+          borderRadius: 0,
           background: "rgba(200,154,62,0.08)",
-          border: "1.5px solid rgba(200,154,62,0.15)",
+          border: "2px solid rgba(200,154,62,0.2)",
+          boxShadow: "3px 3px 0 rgba(0,0,0,0.3)",
         }}
       >
         <Icon name={icon} size={32} color="var(--gold-bright)" />
       </div>
       <h3
-        className="font-heading text-lg font-bold tracking-wider"
-        style={{ color: "var(--ink-primary)" }}
+        className="text-lg font-bold uppercase"
+        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)", letterSpacing: "0.06em" }}
       >
         {title}
       </h3>
@@ -46,12 +49,13 @@ export function EmptyState({ icon, title, body, cta }: EmptyStateProps) {
       {cta && (
         <button
           onClick={cta.onClick}
-          className="mt-2 px-6 py-2.5 rounded-lg font-semibold tracking-wide uppercase text-sm transition-all hover:scale-105 active:scale-95"
+          className="mt-2 px-6 py-2.5 font-bold uppercase text-[11px] transition-all"
           style={{
+            fontFamily: "var(--ss-font-pixel)", borderRadius: 0,
             background: "linear-gradient(135deg, rgba(200,154,62,0.12), rgba(200,154,62,0.06))",
             color: "var(--ink-primary)",
-            border: "1.5px solid rgba(200,154,62,0.3)",
-            boxShadow: "0 4px 16px rgba(120,90,50,0.08)",
+            border: "2px solid rgba(200,154,62,0.3)",
+            boxShadow: "3px 3px 0 rgba(0,0,0,0.3)",
           }}
         >
           {cta.label}

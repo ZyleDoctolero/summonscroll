@@ -53,18 +53,20 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
     <>
       {/* MOBILE HEADER */}
       <header
-        className="md:hidden fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 py-3 border-b backdrop-blur-md"
+        className="md:hidden fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 py-3 border-b"
         style={{
           background: "var(--bg-panel)",
           borderColor: "var(--ss-hairline)",
+          boxShadow: "0 3px 0 rgba(0,0,0,0.4)",
         }}
       >
         <Link to="/profile" className="flex items-center gap-3 active:scale-95 transition-transform">
           <div
-            className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs shadow-[0_0_10px_rgba(212,175,63,0.3)] relative"
+            className="w-8 h-8 grid place-items-center font-bold text-[10px] relative"
             style={{
+              borderRadius: 0, fontFamily: "var(--ss-font-pixel)",
               background: "linear-gradient(135deg, var(--gold-glow), var(--gold-bright))",
-              color: "var(--bg-deep)",
+              color: "var(--bg-deep)", boxShadow: "2px 2px 0 rgba(0,0,0,0.4)",
             }}
           >
             {classIcon}
@@ -81,20 +83,17 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
             <span className="text-xs" style={{ color: "var(--ink-secondary)" }}>
               {profile.hp}/{profile.max_hp}
             </span>
-            {/* HP bar */}
-            <div
-              className="w-12 h-1.5 rounded-full overflow-hidden"
-              style={{ background: "rgba(180,150,100,0.15)" }}
-            >
+            {/* HP bar — pixel art segmented */}
+            <div className="ss-bar-pixel" style={{ width: 48, height: 10 }}>
               <div
-                className="h-full rounded-full transition-all"
+                className="ss-bar-pixel-fill"
                 style={{
                   width: `${Math.min(100, (profile.hp / Math.max(1, profile.max_hp)) * 100)}%`,
                   background:
                     profile.hp / profile.max_hp > 0.5
                       ? "var(--success)"
                       : profile.hp / profile.max_hp > 0.25
-                        ? "var(--ss-warning, var(--warning))"
+                        ? "#ffb74d"
                         : "var(--danger)",
                 }}
               />
@@ -115,10 +114,11 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
 
       {/* DESKTOP HEADER */}
       <header
-        className="hidden md:flex items-center justify-between fixed top-0 inset-x-0 z-40 h-14 px-6 border-b backdrop-blur-md"
+        className="hidden md:flex items-center justify-between fixed top-0 inset-x-0 z-40 h-14 px-6 border-b"
         style={{
           background: "var(--bg-stage)",
           borderColor: "var(--ss-hairline)",
+          boxShadow: "0 3px 0 rgba(0,0,0,0.4)",
         }}
       >
         <div className="flex items-center gap-4">
@@ -287,41 +287,26 @@ function MiniBar({
   return (
     <div className="flex-1 max-w-[140px]">
       <div
-        className="flex justify-between items-baseline text-[11px] uppercase tracking-wider mb-0.5"
-        style={{ color: "var(--ink-tertiary)" }}
+        className="flex justify-between items-baseline mb-0.5"
+        style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: "var(--ink-tertiary)", textTransform: "uppercase", letterSpacing: "0.05em" }}
       >
         <span>{label}</span>
-        <span style={{ color }} className="t-mono whitespace-nowrap inline-flex items-baseline">
+        <span style={{ color, fontFamily: "var(--ss-font-pixel)", fontSize: 9 }} className="whitespace-nowrap">
           <NumberFlow value={current} style={{ display: 'inline-block', fontSize: 'inherit', lineHeight: 'inherit' }} />
-          <span>/{max}</span>
+          /{max}
         </span>
       </div>
-      <div
-        className="h-2 rounded-full overflow-hidden relative"
-        style={{ background: "rgba(180,150,100,0.12)" }}
-      >
+      {/* Segmented pixel bar */}
+      <div className="ss-bar-pixel" style={{ height: 10, boxShadow: glow ? `0 0 6px ${color}` : undefined }}>
         <motion.div
-          className="h-full rounded-full relative overflow-hidden"
+          className="ss-bar-pixel-fill"
           initial={false}
           animate={{ width: `${pct}%` }}
           transition={{ type: "spring", stiffness: 120, damping: 20 }}
           style={{
-            background: gradient
-              ? "linear-gradient(90deg, var(--gold-glow), var(--gold-bright))"
-              : color,
-            boxShadow: glow ? `0 0 12px ${color}` : undefined,
+            background: gradient ? "var(--gold-bright)" : color,
           }}
-        >
-          {/* shimmer sweep */}
-          <span
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(100deg, transparent 20%, rgba(255,255,255,0.35) 50%, transparent 80%)",
-              animation: "hud-shimmer 3s ease-in-out infinite",
-            }}
-          />
-        </motion.div>
+        />
       </div>
     </div>
   );

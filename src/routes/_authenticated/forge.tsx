@@ -98,19 +98,14 @@ function AlchemyPage() {
       <AtmosphereBackdrop realm="blight" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen pt-20">
         <header className="mb-10 text-center flex flex-col items-center">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-b from-[var(--gold-bright)]/20 to-transparent border-2 border-[var(--gold-bright)]/50 flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(212,175,63,0.3)]">
-            <Icon
-              name="forge"
-              size={40}
-              color="var(--gold-bright)"
-              className="drop-shadow-[0_0_10px_#fcd34d]"
-            />
+          <div className="w-16 h-16 flex items-center justify-center mb-4" style={{ border: "2px solid rgba(200,154,62,0.5)", borderRadius: 0, background: "rgba(200,154,62,0.08)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+            <Icon name="forge" size={36} color="var(--gold-bright)" />
           </div>
           <h1
-            className="t-h1 text-4xl mb-2"
-            style={{ color: "var(--gold-bright)", textShadow: "0 2px 15px rgba(212,175,63,0.5)" }}
+            className="text-3xl font-bold mb-2"
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}
           >
-            Bloodline Crucible
+            BLOODLINE CRUCIBLE
           </h1>
           <p className="max-w-xl text-sm" style={{ color: "var(--ink-secondary)" }}>
             Refine your Contracted Spirits with Beast Cores to trigger a Bloodline Awakening.
@@ -174,7 +169,7 @@ function AlchemyPage() {
             <div className="flex items-center justify-center gap-4 md:gap-10 relative z-10 mb-12 w-full">
               {/* Catalyst Input */}
               <div className="flex flex-col items-center">
-                <div className="w-20 h-20 md:w-28 md:h-28 rounded-full border-2 border-dashed border-[var(--gold-bright)]/50 flex items-center justify-center bg-[var(--bg-stage)]/40 relative overflow-hidden shadow-[inset_0_0_20px_rgba(212,175,63,0.2)]">
+                <div className="w-20 h-20 md:w-28 md:h-28 border-2 border-dashed border-[var(--gold-bright)]/50 flex items-center justify-center bg-[var(--bg-stage)]/40 relative overflow-hidden" style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
                   <Icon
                     name="sparkle"
                     size={32}
@@ -205,7 +200,7 @@ function AlchemyPage() {
 
               {/* Monster Input */}
               <div className="flex flex-col items-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-xl border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-[var(--bg-stage)]/60 relative overflow-hidden group">
+                <div className="w-24 h-24 md:w-32 md:h-32 border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-[var(--bg-stage)]/60 relative overflow-hidden group" style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
                   {selectedMonster ? (
                     <img
                       src={`/sprites/monsters/placeholder.png`}
@@ -273,7 +268,7 @@ function AlchemyPage() {
             Available Bases
           </h3>
           {compatibleMonsters.length === 0 ? (
-            <div className="p-8 text-center bg-[var(--bg-stage)]/40 rounded-lg border border-dashed border-[var(--ink-secondary)]/10">
+            <div className="p-8 text-center bg-[var(--bg-stage)]/40 border border-dashed border-[var(--ink-secondary)]/10" style={{ borderRadius: 0 }}>
               <p style={{ color: "var(--ink-secondary)" }}>
                 No compatible monsters found in your Compendium.
               </p>
@@ -294,7 +289,8 @@ function AlchemyPage() {
                   <button
                     key={um.id}
                     onClick={() => setSelectedMonster(um.id)}
-                    className={`flex-shrink-0 w-24 p-2 rounded-lg border flex flex-col items-center gap-2 transition-all hover:scale-105 ${selectedMonster === um.id ? "border-[var(--gold-bright)] bg-[var(--ink-secondary)]/10 shadow-[0_0_15px_rgba(212,175,63,0.3)]" : "border-[var(--ink-secondary)]/10 opacity-70"}`}
+                    className={`flex-shrink-0 w-24 p-2 border flex flex-col items-center gap-2 transition-all ${selectedMonster === um.id ? "border-[var(--gold-bright)] bg-[var(--ink-secondary)]/10" : "border-[var(--ink-secondary)]/10 opacity-70"}`}
+                    style={{ borderRadius: 0, boxShadow: selectedMonster === um.id ? "3px 3px 0 rgba(200,154,62,0.3)" : "2px 2px 0 rgba(0,0,0,0.2)" }}
                   >
                     <img
                       src={

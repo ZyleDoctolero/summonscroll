@@ -13,6 +13,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
 import { Route as AuthenticatedTrialRouteImport } from './routes/_authenticated/trial'
+import { Route as AuthenticatedRaceSkillsRouteImport } from './routes/_authenticated/race-skills'
 import { Route as AuthenticatedQuestsRouteImport } from './routes/_authenticated/quests'
 import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
 import { Route as AuthenticatedPenaltyZoneRouteImport } from './routes/_authenticated/penalty-zone'
@@ -21,6 +22,7 @@ import { Route as AuthenticatedGuildRouteImport } from './routes/_authenticated/
 import { Route as AuthenticatedFusionRouteImport } from './routes/_authenticated/fusion'
 import { Route as AuthenticatedForgeRouteImport } from './routes/_authenticated/forge'
 import { Route as AuthenticatedExpeditionsRouteImport } from './routes/_authenticated/expeditions'
+import { Route as AuthenticatedCrossFusionRouteImport } from './routes/_authenticated/cross-fusion'
 import { Route as AuthenticatedCompendiumRouteImport } from './routes/_authenticated/compendium'
 import { Route as AuthenticatedCodexRouteImport } from './routes/_authenticated/codex'
 import { Route as AuthenticatedBazaarRouteImport } from './routes/_authenticated/bazaar'
@@ -45,6 +47,11 @@ const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
 const AuthenticatedTrialRoute = AuthenticatedTrialRouteImport.update({
   id: '/trial',
   path: '/trial',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedRaceSkillsRoute = AuthenticatedRaceSkillsRouteImport.update({
+  id: '/race-skills',
+  path: '/race-skills',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedQuestsRoute = AuthenticatedQuestsRouteImport.update({
@@ -89,6 +96,12 @@ const AuthenticatedExpeditionsRoute =
     path: '/expeditions',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
+const AuthenticatedCrossFusionRoute =
+  AuthenticatedCrossFusionRouteImport.update({
+    id: '/cross-fusion',
+    path: '/cross-fusion',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedCompendiumRoute = AuthenticatedCompendiumRouteImport.update({
   id: '/compendium',
   path: '/compendium',
@@ -130,6 +143,7 @@ export interface FileRoutesByFullPath {
   '/bazaar': typeof AuthenticatedBazaarRoute
   '/codex': typeof AuthenticatedCodexRoute
   '/compendium': typeof AuthenticatedCompendiumRoute
+  '/cross-fusion': typeof AuthenticatedCrossFusionRoute
   '/expeditions': typeof AuthenticatedExpeditionsRoute
   '/forge': typeof AuthenticatedForgeRoute
   '/fusion': typeof AuthenticatedFusionRoute
@@ -138,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
   '/profile': typeof AuthenticatedProfileRoute
   '/quests': typeof AuthenticatedQuestsRoute
+  '/race-skills': typeof AuthenticatedRaceSkillsRoute
   '/trial': typeof AuthenticatedTrialRoute
 }
 export interface FileRoutesByTo {
@@ -148,6 +163,7 @@ export interface FileRoutesByTo {
   '/bazaar': typeof AuthenticatedBazaarRoute
   '/codex': typeof AuthenticatedCodexRoute
   '/compendium': typeof AuthenticatedCompendiumRoute
+  '/cross-fusion': typeof AuthenticatedCrossFusionRoute
   '/expeditions': typeof AuthenticatedExpeditionsRoute
   '/forge': typeof AuthenticatedForgeRoute
   '/fusion': typeof AuthenticatedFusionRoute
@@ -156,6 +172,7 @@ export interface FileRoutesByTo {
   '/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
   '/profile': typeof AuthenticatedProfileRoute
   '/quests': typeof AuthenticatedQuestsRoute
+  '/race-skills': typeof AuthenticatedRaceSkillsRoute
   '/trial': typeof AuthenticatedTrialRoute
   '/': typeof AuthenticatedIndexRoute
 }
@@ -169,6 +186,7 @@ export interface FileRoutesById {
   '/_authenticated/bazaar': typeof AuthenticatedBazaarRoute
   '/_authenticated/codex': typeof AuthenticatedCodexRoute
   '/_authenticated/compendium': typeof AuthenticatedCompendiumRoute
+  '/_authenticated/cross-fusion': typeof AuthenticatedCrossFusionRoute
   '/_authenticated/expeditions': typeof AuthenticatedExpeditionsRoute
   '/_authenticated/forge': typeof AuthenticatedForgeRoute
   '/_authenticated/fusion': typeof AuthenticatedFusionRoute
@@ -177,6 +195,7 @@ export interface FileRoutesById {
   '/_authenticated/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
   '/_authenticated/profile': typeof AuthenticatedProfileRoute
   '/_authenticated/quests': typeof AuthenticatedQuestsRoute
+  '/_authenticated/race-skills': typeof AuthenticatedRaceSkillsRoute
   '/_authenticated/trial': typeof AuthenticatedTrialRoute
   '/_authenticated/': typeof AuthenticatedIndexRoute
 }
@@ -191,6 +210,7 @@ export interface FileRouteTypes {
     | '/bazaar'
     | '/codex'
     | '/compendium'
+    | '/cross-fusion'
     | '/expeditions'
     | '/forge'
     | '/fusion'
@@ -199,6 +219,7 @@ export interface FileRouteTypes {
     | '/penalty-zone'
     | '/profile'
     | '/quests'
+    | '/race-skills'
     | '/trial'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -209,6 +230,7 @@ export interface FileRouteTypes {
     | '/bazaar'
     | '/codex'
     | '/compendium'
+    | '/cross-fusion'
     | '/expeditions'
     | '/forge'
     | '/fusion'
@@ -217,6 +239,7 @@ export interface FileRouteTypes {
     | '/penalty-zone'
     | '/profile'
     | '/quests'
+    | '/race-skills'
     | '/trial'
     | '/'
   id:
@@ -229,6 +252,7 @@ export interface FileRouteTypes {
     | '/_authenticated/bazaar'
     | '/_authenticated/codex'
     | '/_authenticated/compendium'
+    | '/_authenticated/cross-fusion'
     | '/_authenticated/expeditions'
     | '/_authenticated/forge'
     | '/_authenticated/fusion'
@@ -237,6 +261,7 @@ export interface FileRouteTypes {
     | '/_authenticated/penalty-zone'
     | '/_authenticated/profile'
     | '/_authenticated/quests'
+    | '/_authenticated/race-skills'
     | '/_authenticated/trial'
     | '/_authenticated/'
   fileRoutesById: FileRoutesById
@@ -274,6 +299,13 @@ declare module '@tanstack/react-router' {
       path: '/trial'
       fullPath: '/trial'
       preLoaderRoute: typeof AuthenticatedTrialRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/race-skills': {
+      id: '/_authenticated/race-skills'
+      path: '/race-skills'
+      fullPath: '/race-skills'
+      preLoaderRoute: typeof AuthenticatedRaceSkillsRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/quests': {
@@ -332,6 +364,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedExpeditionsRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/cross-fusion': {
+      id: '/_authenticated/cross-fusion'
+      path: '/cross-fusion'
+      fullPath: '/cross-fusion'
+      preLoaderRoute: typeof AuthenticatedCrossFusionRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/compendium': {
       id: '/_authenticated/compendium'
       path: '/compendium'
@@ -384,6 +423,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedBazaarRoute: typeof AuthenticatedBazaarRoute
   AuthenticatedCodexRoute: typeof AuthenticatedCodexRoute
   AuthenticatedCompendiumRoute: typeof AuthenticatedCompendiumRoute
+  AuthenticatedCrossFusionRoute: typeof AuthenticatedCrossFusionRoute
   AuthenticatedExpeditionsRoute: typeof AuthenticatedExpeditionsRoute
   AuthenticatedForgeRoute: typeof AuthenticatedForgeRoute
   AuthenticatedFusionRoute: typeof AuthenticatedFusionRoute
@@ -392,6 +432,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedPenaltyZoneRoute: typeof AuthenticatedPenaltyZoneRoute
   AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
   AuthenticatedQuestsRoute: typeof AuthenticatedQuestsRoute
+  AuthenticatedRaceSkillsRoute: typeof AuthenticatedRaceSkillsRoute
   AuthenticatedTrialRoute: typeof AuthenticatedTrialRoute
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
 }
@@ -403,6 +444,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedBazaarRoute: AuthenticatedBazaarRoute,
   AuthenticatedCodexRoute: AuthenticatedCodexRoute,
   AuthenticatedCompendiumRoute: AuthenticatedCompendiumRoute,
+  AuthenticatedCrossFusionRoute: AuthenticatedCrossFusionRoute,
   AuthenticatedExpeditionsRoute: AuthenticatedExpeditionsRoute,
   AuthenticatedForgeRoute: AuthenticatedForgeRoute,
   AuthenticatedFusionRoute: AuthenticatedFusionRoute,
@@ -411,6 +453,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedPenaltyZoneRoute: AuthenticatedPenaltyZoneRoute,
   AuthenticatedProfileRoute: AuthenticatedProfileRoute,
   AuthenticatedQuestsRoute: AuthenticatedQuestsRoute,
+  AuthenticatedRaceSkillsRoute: AuthenticatedRaceSkillsRoute,
   AuthenticatedTrialRoute: AuthenticatedTrialRoute,
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
 }
