@@ -384,9 +384,8 @@ function GuildPage() {
                         className="ss-chip"
                         style={{
                           background:
-                            m.role === "leader" ? "rgba(255,213,79,0.2)" : "rgba(255,255,255,0.05)",
-                          color:
-                            m.role === "leader" ? "var(--gold-bright)" : "var(--ink-secondary)",
+                            m.role === "leader" ? "rgba(200,154,62,0.18)" : "rgba(44,31,20,0.06)",
+                          color: m.role === "leader" ? "var(--gold-glow)" : "var(--ink-secondary)",
                         }}
                       >
                         {m.role}

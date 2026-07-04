@@ -22,29 +22,26 @@ export function AppShell({
 }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
+  // Stage backgrounds live in the parchment system (see styles.css tokens).
+  // The old near-black gradients here made every page-level ink color
+  // unreadable — dark surfaces are reserved for HUD chrome (SubNav/BottomHUD)
+  // and monster frames. Each section keeps its mood via a soft color wash.
+  const parchment = "linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-stage) 45%)";
   let activeTabs = null;
-  let activeColor = "#c89a3e";
-  let bgBackground = "linear-gradient(180deg, #0c0a07 0%, #110e09 50%, #0c0a07 100%)";
+  const activeColor = "var(--gold-bright)";
+  let bgBackground = parchment;
   if (HUB_TABS.some((t) => t.path === pathname)) {
     activeTabs = HUB_TABS;
-    activeColor = "#c89a3e";
-    bgBackground =
-      "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200,154,62,0.08) 0%, transparent 70%), linear-gradient(180deg, #0c0a07 0%, #13100c 100%)";
+    bgBackground = `radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200,154,62,0.14) 0%, transparent 70%), ${parchment}`;
   } else if (ROSTER_TABS.some((t) => t.path === pathname)) {
     activeTabs = ROSTER_TABS;
-    activeColor = "#c89a3e";
-    bgBackground =
-      "radial-gradient(ellipse 50% 50% at 30% 40%, rgba(56,184,245,0.05) 0%, transparent 65%), linear-gradient(180deg, #0c0a07 0%, #0e0c0a 100%)";
+    bgBackground = `radial-gradient(ellipse 50% 50% at 30% 40%, rgba(56,184,245,0.1) 0%, transparent 65%), ${parchment}`;
   } else if (VOID_TABS.some((t) => t.path === pathname)) {
     activeTabs = VOID_TABS;
-    activeColor = "#c89a3e";
-    bgBackground =
-      "radial-gradient(ellipse 80% 40% at 50% 100%, rgba(163,116,255,0.07) 0%, transparent 70%), linear-gradient(180deg, #0c0a07 0%, #0f0c0a 100%)";
+    bgBackground = `radial-gradient(ellipse 80% 40% at 50% 100%, rgba(163,116,255,0.12) 0%, transparent 70%), ${parchment}`;
   } else if (ALTAR_TABS.some((t) => t.path === pathname)) {
     activeTabs = ALTAR_TABS;
-    activeColor = "#c89a3e";
-    bgBackground =
-      "radial-gradient(ellipse 70% 70% at 50% 80%, rgba(200,154,62,0.07) 0%, transparent 65%), linear-gradient(180deg, #0c0a07 0%, #110e09 100%)";
+    bgBackground = `radial-gradient(ellipse 70% 70% at 50% 80%, rgba(200,154,62,0.13) 0%, transparent 65%), ${parchment}`;
   }
 
   return (

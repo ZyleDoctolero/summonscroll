@@ -232,7 +232,12 @@ export const TaskCard = React.memo(function TaskCard({
             background: task.completed ? color : "rgba(180,150,100,0.12)",
             border: `2px solid ${color}`,
             borderRadius: 0,
-            color: task.completed ? "#ffffff" : color,
+            // cyan is the only light value fill — dark ink reads there, white on the rest
+            color: task.completed
+              ? valueColor(Number(task.value)) === "blue"
+                ? "var(--ink-primary)"
+                : "#ffffff"
+              : color,
             boxShadow: task.completed ? `2px 2px 0 rgba(0,0,0,0.4)` : `3px 3px 0 rgba(0,0,0,0.3)`,
           }}
           /* eslint-enable no-restricted-syntax */

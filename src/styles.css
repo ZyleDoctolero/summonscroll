@@ -175,7 +175,10 @@
   /* Text/Ink — dark sepia / charcoal */
   --ink-primary: #2c1f14; /* near black brown */
   --ink-secondary: #5e4e3f; /* medium brown */
-  --ink-tertiary: #8b7967; /* light brown */
+  --ink-tertiary: #71604d; /* muted brown — AA (4.6:1) on --bg-stage */
+  /* Ink for text sitting on dark HUD chrome (nav bars, monster frames) */
+  --ink-on-dark: #dccba9;
+  --ink-on-dark-muted: #b0a189;
 
   /* Signature Colors */
   --fire: #ff5e2a;
@@ -192,9 +195,10 @@
   --rose: #ff4f6a;
   --ember: var(--fire);
 
-  /* Utility */
-  --success: #22c55e;
-  --danger: #ef4444;
+  /* Utility — darkened for AA text contrast on parchment surfaces */
+  --success: #15803d;
+  --danger: #b91c1c;
+  --warning: #b45309; /* was referenced but never defined */
 
   /* ─── Legacy Token Aliases (backward compatibility) ─── */
   --ss-bg-deep: var(--bg-deep);
@@ -593,7 +597,7 @@ body {
 
 .ss-btn-primary {
   background: var(--gold-bright);
-  color: var(--bg-deep);
+  color: var(--ink-primary); /* 6.2:1 on gold — was --bg-deep at 1.6:1 */
   border: 2px solid var(--gold-glow);
   box-shadow: 4px 4px 0 var(--gold-glow);
 }
@@ -772,7 +776,7 @@ body {
 /* Ancient Runic Button — pixel art variant */
 .ss-btn-d-primary {
   background: var(--gold-bright);
-  color: var(--bg-deep);
+  color: var(--ink-primary); /* AA on gold */
   border: 2px solid var(--gold-glow);
   border-radius: 0;
   font-family: var(--ss-font-pixel);

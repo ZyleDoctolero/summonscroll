@@ -56,7 +56,7 @@ export function SubNav({ items, color = "#b89947" }: { items: SubNavItem[]; colo
               fontSize: 10,
               letterSpacing: "0.05em",
               textTransform: "uppercase",
-              color: isActive ? color : "var(--ink-tertiary)",
+              color: isActive ? color : "var(--ink-on-dark-muted)",
               background: isActive ? `rgba(200,154,62,0.08)` : "transparent",
               borderBottom: isActive ? `3px solid ${color}` : "3px solid transparent",
             }}

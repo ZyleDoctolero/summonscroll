@@ -101,25 +101,39 @@ function HubPage() {
   const isRestingDaily = (t: Task) =>
     t.type === "daily" && !(t.schedule_days ?? [0, 1, 2, 3, 4, 5, 6]).includes(todayDow);
 
+  const matchesTab = (t: Task, key: TaskType | "today" | "vice") => {
+    if (key === "today") {
+      // the "what do I need to do right now" view:
+      // dailies scheduled for today + todos due today or overdue
+      if (t.type === "daily") return !isRestingDaily(t);
+      if (t.type === "todo") return !t.completed && !!t.due_date && t.due_date <= todayLocal;
+      return false;
+    }
+    if (key === "vice")
+      return t.type === "habit" && (t as { negative_enabled?: boolean }).negative_enabled;
+    if (key === "habit")
+      return t.type === "habit" && (t as { positive_enabled?: boolean }).positive_enabled;
+    return t.type === key && t.category !== "side_quest";
+  };
+
   const filtered = useMemo(
-    () =>
-      tasks.filter((t) => {
-        if (tab === "today") {
-          // the "what do I need to do right now" view:
-          // dailies scheduled for today + todos due today or overdue
-          if (t.type === "daily") return !isRestingDaily(t);
-          if (t.type === "todo") return !t.completed && !!t.due_date && t.due_date <= todayLocal;
-          return false;
-        }
-        if (tab === "vice")
-          return t.type === "habit" && (t as { negative_enabled?: boolean }).negative_enabled;
-        if (tab === "habit")
-          return t.type === "habit" && (t as { positive_enabled?: boolean }).positive_enabled;
-        return t.type === tab && t.category !== "side_quest";
-      }),
+    () => tasks.filter((t) => matchesTab(t, tab)),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [tasks, tab, todayDow, todayLocal],
   );
+
+  // pending counts per tab so the board is navigable at a glance
+  // (habits have no "done" state, so no badge there)
+  const tabCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const k of ["today", "daily", "todo"] as const) {
+      counts[k] = tasks.filter(
+        (t) => matchesTab(t, k) && !t.completed && !(k === "daily" && isRestingDaily(t)),
+      ).length;
+    }
+    return counts;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tasks, todayDow, todayLocal]);
 
   const sortedTasks = useMemo(() => {
     let items = [...filtered];
@@ -245,6 +259,30 @@ function HubPage() {
     return <LoadingScreen />;
   }
 
+  if (profileQ.isError || tasksQ.isError) {
+    return (
+      <AppShell profile={undefined as never} withHeader={false}>
+        <div className="relative z-10 p-6 max-w-xl mx-auto pt-20">
+          <EmptyState
+            icon="warning"
+            title="The scroll could not be read."
+            body={
+              (profileQ.error ?? tasksQ.error)?.message ??
+              "Something went wrong loading your board."
+            }
+            cta={{
+              label: "Try Again",
+              onClick: () => {
+                profileQ.refetch();
+                tasksQ.refetch();
+              },
+            }}
+          />
+        </div>
+      </AppShell>
+    );
+  }
+
   const profile = profileQ.data?.profile;
   // Only show onboarding if the column exists in the DB and is explicitly null.
   // If the column doesn't exist at all (migration not run), skip onboarding entirely.
@@ -342,16 +380,30 @@ function HubPage() {
         <div className="ss-card p-0 overflow-hidden border-[rgba(200,154,62,0.2)]">
           {/* Header */}
           <div className="px-4 py-3 border-b border-[rgba(200,154,62,0.15)] flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.06)] to-transparent">
-            <h2
-              className="text-lg font-bold uppercase"
-              style={{
-                fontFamily: "var(--ss-font-pixel)",
-                color: "var(--gold-bright)",
-                letterSpacing: "0.06em",
-              }}
-            >
-              QUEST BOARD
-            </h2>
+            <div>
+              <h2
+                className="text-lg font-bold uppercase"
+                style={{
+                  fontFamily: "var(--ss-font-pixel)",
+                  color: "var(--gold-bright)",
+                  letterSpacing: "0.06em",
+                }}
+              >
+                QUEST BOARD
+              </h2>
+              {tab === "today" && (
+                <p
+                  className="text-[10px] uppercase tracking-wider"
+                  style={{ color: "var(--ink-secondary)" }}
+                >
+                  {new Date().toLocaleDateString(undefined, {
+                    weekday: "long",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </p>
+              )}
+            </div>
             <button
               onClick={() => {
                 setEditing(null);
@@ -363,9 +415,10 @@ function HubPage() {
             </button>
           </div>
 
-          {/* Quick add — log a task without opening the full dialog */}
-          <div className="px-4 pt-3">
-            <div className="relative flex gap-2">
+          {/* Quick add (primary action) + search (utility) in one row so the
+              task list — the point of this page — stays above the fold */}
+          <div className="px-4 pt-3 flex flex-col sm:flex-row gap-2">
+            <div className="relative flex-1 flex gap-2">
               <div className="relative flex-1">
                 <Icon
                   name="plus"
@@ -408,11 +461,7 @@ function HubPage() {
                 </button>
               )}
             </div>
-          </div>
-
-          {/* Search */}
-          <div className="px-4 pt-3">
-            <div className="relative">
+            <div className="relative sm:w-48">
               <Icon
                 name="search"
                 size={14}
@@ -423,9 +472,10 @@ function HubPage() {
                 type="text"
                 value={questSearch}
                 onChange={(e) => setQuestSearch(e.target.value)}
-                placeholder="Search quests..."
+                placeholder="Search..."
+                aria-label="Search quests"
                 className="ss-input w-full pl-9 text-sm"
-                style={{ height: "40px" }}
+                style={{ height: "44px" }}
               />
             </div>
           </div>
@@ -446,24 +496,29 @@ function HubPage() {
               <button
                 key={t.key}
                 onClick={() => setTab(t.key)}
-                className={`pb-2 text-sm font-semibold min-h-[44px] flex items-center gap-2 border-b-2 transition-colors ${
+                className={`pb-2 text-sm min-h-[44px] flex items-center gap-2 border-b-2 transition-colors ${
                   tab === t.key
-                    ? "text-[#b8860b] border-[#b8860b]"
-                    : "text-[#8b7355] hover:text-[#c89a3e] border-transparent"
+                    ? "font-bold border-[var(--gold-glow)]"
+                    : "font-semibold border-transparent"
                 }`}
+                style={{
+                  // gold marks the active tab via the border; text stays AA-readable ink
+                  color: tab === t.key ? "var(--ink-primary)" : "var(--ink-secondary)",
+                }}
+                aria-current={tab === t.key ? "page" : undefined}
               >
                 {t.label}
-                {tab === t.key && sortedTasks.filter((s) => !s.completed).length > 0 && (
+                {t.key in tabCounts && tabCounts[t.key] > 0 && (
                   <span
                     className="text-[9px] px-1.5 py-0.5 font-bold leading-none"
                     style={{
                       borderRadius: 0,
                       fontFamily: "var(--ss-font-pixel)",
-                      background: "rgba(200,154,62,0.15)",
-                      color: "var(--gold-bright)",
+                      background: tab === t.key ? "var(--gold-bright)" : "rgba(200,154,62,0.15)",
+                      color: tab === t.key ? "var(--ink-primary)" : "var(--ink-secondary)",
                     }}
                   >
-                    {sortedTasks.filter((s) => !s.completed).length}
+                    {tabCounts[t.key]}
                   </span>
                 )}
               </button>

@@ -254,9 +254,7 @@ function AltarPage() {
                   className={`relative flex items-center justify-start px-6 py-4 border-2 transition-all duration-150 overflow-hidden group min-w-[200px]`}
                   style={{
                     borderRadius: 0,
-                    background: isActive
-                      ? "var(--bg-panel)"
-                      : "rgba(var(--bg-stage-rgb,12,10,6),0.4)",
+                    background: isActive ? "var(--bg-panel)" : "var(--bg-pane)",
                     borderColor: isActive ? "var(--gold-bright)" : "rgba(200,154,62,0.1)",
                     boxShadow: isActive ? "4px 4px 0 rgba(0,0,0,0.4)" : "2px 2px 0 rgba(0,0,0,0.2)",
                   }}
@@ -287,7 +285,7 @@ function AltarPage() {
               : selectedBanner.pull_cost_10_crystals;
             const balance = isPactSeal ? profile.pact_seals : profile.crystals;
             const icon = isPactSeal ? "seal" : "crystal";
-            const iconColor = isPactSeal ? "var(--fuchsia)" : "var(--gold-bright)"; // fuchsia or cyan
+            const iconColor = isPactSeal ? "var(--violet)" : "var(--gold-bright)";
             const canPull1 = balance >= cost1;
             const canPull10 = balance >= cost10;
 
@@ -328,14 +326,14 @@ function AltarPage() {
                       className="text-[9px] uppercase font-bold"
                       style={{
                         fontFamily: "var(--ss-font-pixel)",
-                        color: "var(--ink-tertiary)",
+                        color: "var(--ink-on-dark-muted)",
                         letterSpacing: "0.06em",
                       }}
                     >
                       Resonance Balance
                     </span>
                     <div
-                      className={`flex items-center gap-2 text-xl font-serif font-bold ${canPull1 ? "text-[var(--ink-secondary)]" : "text-red-500"}`}
+                      className={`flex items-center gap-2 text-xl font-serif font-bold ${canPull1 ? "text-[var(--ink-on-dark)]" : "text-red-500"}`}
                     >
                       <Icon
                         name={icon as React.ComponentProps<typeof Icon>["name"]}
@@ -375,7 +373,7 @@ function AltarPage() {
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 10 })}
                       disabled={!canPull10 || pullMut.isPending}
-                      className="relative flex-[1.5] md:w-[320px] h-[80px] group disabled:opacity-50 transition-all overflow-hidden border-2 border-[var(--gold-bright)] bg-gradient-to-r from-[#c89a3e] to-[#e8c55a] text-white"
+                      className="relative flex-[1.5] md:w-[320px] h-[80px] group disabled:opacity-50 transition-all overflow-hidden border-2 border-[var(--gold-glow)] bg-gradient-to-r from-[#c89a3e] to-[#e8c55a] text-[var(--ink-primary)]"
                       style={{ borderRadius: 0, boxShadow: "4px 4px 0 rgba(0,0,0,0.5)" }}
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 pointer-events-none mix-blend-overlay" />
@@ -384,10 +382,8 @@ function AltarPage() {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
 
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
-                        <span className="text-white text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
-                          ★ PULL ×10 ★
-                        </span>
-                        <div className="flex items-center gap-2 text-white/90 text-base mt-1">
+                        <span className="text-[var(--ink-primary)] text-2xl">★ PULL ×10 ★</span>
+                        <div className="flex items-center gap-2 text-[var(--ink-primary)]/85 text-base mt-1">
                           <Icon
                             name={icon as React.ComponentProps<typeof Icon>["name"]}
                             size={16}

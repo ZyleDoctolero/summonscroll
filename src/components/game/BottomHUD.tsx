@@ -72,7 +72,7 @@ export function BottomHUD() {
               <Icon
                 name={item.icon as React.ComponentProps<typeof Icon>["name"]}
                 size={isActive ? 22 : 20}
-                color={isActive ? item.color : "var(--ink-tertiary)"}
+                color={isActive ? item.color : "var(--ink-on-dark-muted)"}
               />
               <span
                 style={{
@@ -80,7 +80,7 @@ export function BottomHUD() {
                   fontSize: 9,
                   letterSpacing: "0.04em",
                   textTransform: "uppercase",
-                  color: isActive ? item.color : "var(--ink-tertiary)",
+                  color: isActive ? item.color : "var(--ink-on-dark-muted)",
                   lineHeight: 1,
                 }}
               >

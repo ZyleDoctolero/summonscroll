@@ -216,14 +216,14 @@ function AlchemyPage() {
               {/* Monster Input */}
               <div className="flex flex-col items-center">
                 <div
-                  className="w-24 h-24 md:w-32 md:h-32 border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-[var(--bg-stage)]/60 relative overflow-hidden group"
+                  className="w-24 h-24 md:w-32 md:h-32 border-2 border-[rgba(200,154,62,0.3)] flex items-center justify-center bg-[var(--bg-stage)]/60 relative overflow-hidden group"
                   style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}
                 >
                   {selectedMonster ? (
                     <img
                       src={`/sprites/monsters/placeholder.png`}
                       alt="Selected"
-                      className="w-full h-full object-contain p-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+                      className="w-full h-full object-contain p-2 drop-shadow-[0_0_15px_rgba(200,154,62,0.35)]"
                     />
                   ) : (
                     <div className="text-center p-2 opacity-50 group-hover:opacity-100 transition-opacity">

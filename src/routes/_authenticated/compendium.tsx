@@ -695,8 +695,9 @@ function CompendiumPage() {
                     {/* Unowned overlay pattern */}
                     {!owned && (
                       <div
-                        className="absolute inset-0 rounded-xl"
+                        className="absolute inset-0"
                         style={{
+                          borderRadius: 0,
                           background: `radial-gradient(circle at 50% 40%, transparent 20%, ${elColor}12 100%)`,
                         }}
                       />

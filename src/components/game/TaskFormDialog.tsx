@@ -151,7 +151,7 @@ export function TaskFormDialog({
                 style={{
                   fontFamily: "var(--ss-font-pixel)",
                   background: v.type === t ? "var(--gold-bright)" : "transparent",
-                  color: v.type === t ? "var(--bg-deep)" : "var(--ink-tertiary)",
+                  color: v.type === t ? "var(--ink-primary)" : "var(--ink-tertiary)",
                   borderRight: t !== "todo" ? "1px solid rgba(200,154,62,0.2)" : "none",
                   letterSpacing: "0.04em",
                 }}
@@ -362,7 +362,7 @@ export function TaskFormDialog({
                     style={{
                       fontFamily: "var(--ss-font-pixel)",
                       background: on ? "var(--gold-bright)" : "rgba(200,154,62,0.06)",
-                      color: on ? "var(--bg-deep)" : "var(--ink-secondary)",
+                      color: on ? "var(--ink-primary)" : "var(--ink-secondary)",
                       border: `2px solid ${on ? "var(--gold-glow)" : "rgba(200,154,62,0.15)"}`,
                       borderRadius: 0,
                       boxShadow: on ? "2px 2px 0 var(--gold-glow)" : "none",
