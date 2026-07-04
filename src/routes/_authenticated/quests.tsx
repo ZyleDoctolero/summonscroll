@@ -69,10 +69,25 @@ function QuestsPage() {
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="wild" />
       <div className="p-6 md:p-10 max-w-6xl">
-        <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(232,93,58,0.3)", borderRadius: 0, background: "rgba(232,93,58,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+        <div
+          className="w-16 h-16 flex items-center justify-center mb-3"
+          style={{
+            border: "2px solid rgba(232,93,58,0.3)",
+            borderRadius: 0,
+            background: "rgba(232,93,58,0.06)",
+            boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+          }}
+        >
           <Icon name="target" size={28} color="var(--danger)" />
         </div>
-        <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+        <h1
+          className="text-3xl font-bold mb-1"
+          style={{
+            fontFamily: "var(--ss-font-pixel)",
+            color: "var(--gold-bright)",
+            letterSpacing: "0.08em",
+          }}
+        >
           BOUNTIES
         </h1>
         <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
@@ -256,7 +271,10 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2 mb-1">
-            <span className="ss-chip whitespace-nowrap" style={{ background: `${def.color}20`, color: def.color }}>
+            <span
+              className="ss-chip whitespace-nowrap"
+              style={{ background: `${def.color}20`, color: def.color }}
+            >
               {def.label}
             </span>
             {goal.identity && (
@@ -273,7 +291,10 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
             {goal.title}
           </h3>
         </div>
-        <button onClick={onDelete} className="ss-btn ss-btn-ghost text-[11px] h-8 px-3 shrink-0 self-start sm:self-auto">
+        <button
+          onClick={onDelete}
+          className="ss-btn ss-btn-ghost text-[11px] h-8 px-3 shrink-0 self-start sm:self-auto"
+        >
           Abandon
         </button>
       </div>
@@ -284,10 +305,7 @@ function GoalCard({ goal, onDelete }: { goal: Goal; onDelete: () => void }) {
           {goal.hp_remaining.toLocaleString()} / {goal.hp_total.toLocaleString()}
         </span>
       </div>
-      <div
-        className="ss-bar-pixel"
-        style={{ height: 10 }}
-      >
+      <div className="ss-bar-pixel" style={{ height: 10 }}>
         <div
           className="ss-bar-pixel-fill transition-all"
           style={{

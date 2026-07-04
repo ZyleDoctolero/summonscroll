@@ -140,12 +140,24 @@ function ExpeditionsPage() {
 
       <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto pt-20">
         <header className="mb-8 text-center flex flex-col items-center">
-          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(200,154,62,0.4)", borderRadius: 0, background: "rgba(200,154,62,0.08)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="w-16 h-16 flex items-center justify-center mb-3"
+            style={{
+              border: "2px solid rgba(200,154,62,0.4)",
+              borderRadius: 0,
+              background: "rgba(200,154,62,0.08)",
+              boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+            }}
+          >
             <Icon name="compass" size={32} color="var(--gold-bright)" />
           </div>
           <h1
             className="text-3xl font-bold mb-2"
-            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "var(--gold-bright)",
+              letterSpacing: "0.08em",
+            }}
           >
             ASTRAL EXPEDITIONS
           </h1>
@@ -207,7 +219,9 @@ function ExpeditionsPage() {
                         style={{
                           width: `${progress}%`,
                           background: isDone ? "var(--success)" : "var(--gold-bright)",
-                          boxShadow: isDone ? "0 0 10px var(--success)" : "0 0 10px var(--gold-bright)",
+                          boxShadow: isDone
+                            ? "0 0 10px var(--success)"
+                            : "0 0 10px var(--gold-bright)",
                         }}
                       />
                     </div>
@@ -279,7 +293,10 @@ function ExpeditionsPage() {
                         disabled={isBusy}
                         onClick={() => setSelectedMonster(um.id)}
                         className={`relative p-2 transition-all flex flex-col items-center ${isBusy ? "opacity-30 grayscale cursor-not-allowed" : ""} ${isSelected ? "bg-[var(--ink-secondary)]/10 border border-[var(--ink-secondary)]/30" : "border border-transparent"}`}
-                        style={{ borderRadius: 0, boxShadow: isSelected ? "3px 3px 0 rgba(0,0,0,0.3)" : undefined }}
+                        style={{
+                          borderRadius: 0,
+                          boxShadow: isSelected ? "3px 3px 0 rgba(0,0,0,0.3)" : undefined,
+                        }}
                       >
                         <img
                           src={

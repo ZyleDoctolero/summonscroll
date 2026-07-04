@@ -36,10 +36,45 @@ const RACE_TREES: RaceTree[] = [
     color: "#d4843a",
     icon: "🐾",
     nodes: [
-      { id: "b1", name: "Feral Instinct", description: "Critical rate +5% for beast-type souls", icon: "⚔", cost: 100, tier: 1, unlocked: false },
-      { id: "b2", name: "Pack Tactics", description: "If 2+ beasts in team, ATK +8%", icon: "🐺", cost: 200, tier: 2, unlocked: false, requires: "b1" },
-      { id: "b3", name: "Apex Predator", description: "Beast souls heal 3% HP on kill", icon: "🦁", cost: 500, tier: 3, unlocked: false, requires: "b2" },
-      { id: "b4", name: "Primal Fury", description: "Below 30% HP, beast ATK doubles", icon: "💥", cost: 1000, tier: 4, unlocked: false, requires: "b3" },
+      {
+        id: "b1",
+        name: "Feral Instinct",
+        description: "Critical rate +5% for beast-type souls",
+        icon: "⚔",
+        cost: 100,
+        tier: 1,
+        unlocked: false,
+      },
+      {
+        id: "b2",
+        name: "Pack Tactics",
+        description: "If 2+ beasts in team, ATK +8%",
+        icon: "🐺",
+        cost: 200,
+        tier: 2,
+        unlocked: false,
+        requires: "b1",
+      },
+      {
+        id: "b3",
+        name: "Apex Predator",
+        description: "Beast souls heal 3% HP on kill",
+        icon: "🦁",
+        cost: 500,
+        tier: 3,
+        unlocked: false,
+        requires: "b2",
+      },
+      {
+        id: "b4",
+        name: "Primal Fury",
+        description: "Below 30% HP, beast ATK doubles",
+        icon: "💥",
+        cost: 1000,
+        tier: 4,
+        unlocked: false,
+        requires: "b3",
+      },
     ],
   },
   {
@@ -47,10 +82,45 @@ const RACE_TREES: RaceTree[] = [
     color: "#e85d3a",
     icon: "🐲",
     nodes: [
-      { id: "d1", name: "Dragonscale", description: "DEF +8% for dragon-type souls", icon: "🛡", cost: 100, tier: 1, unlocked: false },
-      { id: "d2", name: "Breath Mastery", description: "Elemental skill damage +12%", icon: "🔥", cost: 200, tier: 2, unlocked: false, requires: "d1" },
-      { id: "d3", name: "Dragonflight", description: "Evade +10%, ignore terrain penalties", icon: "🕊", cost: 500, tier: 3, unlocked: false, requires: "d2" },
-      { id: "d4", name: "Ancient Wyrm", description: "All stats +5% per dragon in team", icon: "⭐", cost: 1000, tier: 4, unlocked: false, requires: "d3" },
+      {
+        id: "d1",
+        name: "Dragonscale",
+        description: "DEF +8% for dragon-type souls",
+        icon: "🛡",
+        cost: 100,
+        tier: 1,
+        unlocked: false,
+      },
+      {
+        id: "d2",
+        name: "Breath Mastery",
+        description: "Elemental skill damage +12%",
+        icon: "🔥",
+        cost: 200,
+        tier: 2,
+        unlocked: false,
+        requires: "d1",
+      },
+      {
+        id: "d3",
+        name: "Dragonflight",
+        description: "Evade +10%, ignore terrain penalties",
+        icon: "🕊",
+        cost: 500,
+        tier: 3,
+        unlocked: false,
+        requires: "d2",
+      },
+      {
+        id: "d4",
+        name: "Ancient Wyrm",
+        description: "All stats +5% per dragon in team",
+        icon: "⭐",
+        cost: 1000,
+        tier: 4,
+        unlocked: false,
+        requires: "d3",
+      },
     ],
   },
   {
@@ -58,10 +128,45 @@ const RACE_TREES: RaceTree[] = [
     color: "#9b6dff",
     icon: "👻",
     nodes: [
-      { id: "s1", name: "Ethereal Form", description: "15% chance to dodge physical attacks", icon: "💨", cost: 100, tier: 1, unlocked: false },
-      { id: "s2", name: "Soul Drain", description: "Attacks steal 2% of damage as HP", icon: "💜", cost: 200, tier: 2, unlocked: false, requires: "s1" },
-      { id: "s3", name: "Phase Shift", description: "First hit each battle is nullified", icon: "🔮", cost: 500, tier: 3, unlocked: false, requires: "s2" },
-      { id: "s4", name: "Astral Projection", description: "On death, fight as ghost for 2 turns", icon: "✨", cost: 1000, tier: 4, unlocked: false, requires: "s3" },
+      {
+        id: "s1",
+        name: "Ethereal Form",
+        description: "15% chance to dodge physical attacks",
+        icon: "💨",
+        cost: 100,
+        tier: 1,
+        unlocked: false,
+      },
+      {
+        id: "s2",
+        name: "Soul Drain",
+        description: "Attacks steal 2% of damage as HP",
+        icon: "💜",
+        cost: 200,
+        tier: 2,
+        unlocked: false,
+        requires: "s1",
+      },
+      {
+        id: "s3",
+        name: "Phase Shift",
+        description: "First hit each battle is nullified",
+        icon: "🔮",
+        cost: 500,
+        tier: 3,
+        unlocked: false,
+        requires: "s2",
+      },
+      {
+        id: "s4",
+        name: "Astral Projection",
+        description: "On death, fight as ghost for 2 turns",
+        icon: "✨",
+        cost: 1000,
+        tier: 4,
+        unlocked: false,
+        requires: "s3",
+      },
     ],
   },
   {
@@ -69,10 +174,45 @@ const RACE_TREES: RaceTree[] = [
     color: "#38b8f5",
     icon: "⚙",
     nodes: [
-      { id: "c1", name: "Reinforced Plating", description: "Max HP +10% for constructs", icon: "🔧", cost: 100, tier: 1, unlocked: false },
-      { id: "c2", name: "Overclock", description: "Speed +15% for first 3 turns", icon: "⚡", cost: 200, tier: 2, unlocked: false, requires: "c1" },
-      { id: "c3", name: "Emergency Repair", description: "Auto-heal 20% HP once per battle", icon: "🔩", cost: 500, tier: 3, unlocked: false, requires: "c2" },
-      { id: "c4", name: "Singularity Core", description: "Immune to debuffs, +20% all stats", icon: "💎", cost: 1000, tier: 4, unlocked: false, requires: "c3" },
+      {
+        id: "c1",
+        name: "Reinforced Plating",
+        description: "Max HP +10% for constructs",
+        icon: "🔧",
+        cost: 100,
+        tier: 1,
+        unlocked: false,
+      },
+      {
+        id: "c2",
+        name: "Overclock",
+        description: "Speed +15% for first 3 turns",
+        icon: "⚡",
+        cost: 200,
+        tier: 2,
+        unlocked: false,
+        requires: "c1",
+      },
+      {
+        id: "c3",
+        name: "Emergency Repair",
+        description: "Auto-heal 20% HP once per battle",
+        icon: "🔩",
+        cost: 500,
+        tier: 3,
+        unlocked: false,
+        requires: "c2",
+      },
+      {
+        id: "c4",
+        name: "Singularity Core",
+        description: "Immune to debuffs, +20% all stats",
+        icon: "💎",
+        cost: 1000,
+        tier: 4,
+        unlocked: false,
+        requires: "c3",
+      },
     ],
   },
   {
@@ -80,10 +220,45 @@ const RACE_TREES: RaceTree[] = [
     color: "#c44f6f",
     icon: "💀",
     nodes: [
-      { id: "u1", name: "Deathless", description: "Survive fatal blow with 1 HP (once)", icon: "☠", cost: 100, tier: 1, unlocked: false },
-      { id: "u2", name: "Necrotic Aura", description: "Enemies near undead lose 2% HP/turn", icon: "🦴", cost: 200, tier: 2, unlocked: false, requires: "u1" },
-      { id: "u3", name: "Grave Rising", description: "Revive once with 30% HP after 2 turns", icon: "⚰", cost: 500, tier: 3, unlocked: false, requires: "u2" },
-      { id: "u4", name: "Lich King", description: "Each fallen ally boosts undead ATK +15%", icon: "👑", cost: 1000, tier: 4, unlocked: false, requires: "u3" },
+      {
+        id: "u1",
+        name: "Deathless",
+        description: "Survive fatal blow with 1 HP (once)",
+        icon: "☠",
+        cost: 100,
+        tier: 1,
+        unlocked: false,
+      },
+      {
+        id: "u2",
+        name: "Necrotic Aura",
+        description: "Enemies near undead lose 2% HP/turn",
+        icon: "🦴",
+        cost: 200,
+        tier: 2,
+        unlocked: false,
+        requires: "u1",
+      },
+      {
+        id: "u3",
+        name: "Grave Rising",
+        description: "Revive once with 30% HP after 2 turns",
+        icon: "⚰",
+        cost: 500,
+        tier: 3,
+        unlocked: false,
+        requires: "u2",
+      },
+      {
+        id: "u4",
+        name: "Lich King",
+        description: "Each fallen ally boosts undead ATK +15%",
+        icon: "👑",
+        cost: 1000,
+        tier: 4,
+        unlocked: false,
+        requires: "u3",
+      },
     ],
   },
 ];
@@ -93,11 +268,11 @@ function RaceSkillsPage() {
   const [selectedRace, setSelectedRace] = useState(0);
 
   if (profileQ.isLoading) return <LoadingScreen />;
-  if (!profileQ.data?.profile) return <EmptyState icon="alert" message="Not authenticated" />;
+  if (!profileQ.data?.profile) return <EmptyState icon="alert" title="Not authenticated" />;
 
   const profile = profileQ.data.profile;
   const tree = RACE_TREES[selectedRace];
-  const sp = (profile as Record<string, unknown>).skill_points as number ?? 0;
+  const sp = ((profile as Record<string, unknown>).skill_points as number) ?? 0;
 
   return (
     <AppShell profile={profile}>
@@ -119,7 +294,11 @@ function RaceSkillsPage() {
           <div>
             <h1
               className="text-3xl font-bold uppercase"
-              style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                color: "var(--gold-bright)",
+                letterSpacing: "0.08em",
+              }}
             >
               RACE SKILL TREES
             </h1>
@@ -227,7 +406,9 @@ function RaceSkillsPage() {
                       borderRadius: 0,
                       borderColor: node.unlocked ? `${tree.color}50` : `${tree.color}20`,
                       background: node.unlocked ? `${tree.color}10` : "rgba(0,0,0,0.05)",
-                      boxShadow: node.unlocked ? `3px 3px 0 ${tree.color}25` : "2px 2px 0 rgba(0,0,0,0.15)",
+                      boxShadow: node.unlocked
+                        ? `3px 3px 0 ${tree.color}25`
+                        : "2px 2px 0 rgba(0,0,0,0.15)",
                       opacity: isAvailable || node.unlocked ? 1 : 0.5,
                     }}
                   >
@@ -246,13 +427,9 @@ function RaceSkillsPage() {
                         style={{
                           fontFamily: "var(--ss-font-pixel)",
                           borderRadius: 0,
-                          borderColor: node.unlocked
-                            ? `${tree.color}40`
-                            : "rgba(139,115,85,0.2)",
+                          borderColor: node.unlocked ? `${tree.color}40` : "rgba(139,115,85,0.2)",
                           color: node.unlocked ? tree.color : "var(--ink-tertiary)",
-                          background: node.unlocked
-                            ? `${tree.color}15`
-                            : "rgba(0,0,0,0.05)",
+                          background: node.unlocked ? `${tree.color}15` : "rgba(0,0,0,0.05)",
                         }}
                       >
                         {node.unlocked ? "UNLOCKED" : `${node.cost} SP`}
@@ -270,9 +447,7 @@ function RaceSkillsPage() {
                           borderRadius: 0,
                           borderColor: canAfford ? tree.color : "rgba(139,115,85,0.2)",
                           color: canAfford ? "#fff" : "var(--ink-tertiary)",
-                          background: canAfford
-                            ? tree.color
-                            : "rgba(0,0,0,0.05)",
+                          background: canAfford ? tree.color : "rgba(0,0,0,0.05)",
                           boxShadow: canAfford ? "2px 2px 0 rgba(0,0,0,0.4)" : "none",
                         }}
                       >
@@ -303,8 +478,9 @@ function RaceSkillsPage() {
             {tree.race} LINEAGE BONUS
           </p>
           <p className="text-[11px]" style={{ color: "var(--ink-secondary)" }}>
-            Unlocking all 4 nodes grants the <b style={{ color: tree.color }}>{tree.race} Lineage Mastery</b> title
-            and a permanent +3% all-stats bonus to every {tree.race.toLowerCase()}-type soul.
+            Unlocking all 4 nodes grants the{" "}
+            <b style={{ color: tree.color }}>{tree.race} Lineage Mastery</b> title and a permanent
+            +3% all-stats bonus to every {tree.race.toLowerCase()}-type soul.
           </p>
         </div>
       </div>

@@ -22,12 +22,20 @@ export type Task = {
 };
 
 const ELEMENT_COLOR: Record<string, string> = {
-  fire: "#ff5e2a", water: "#38b8f5", nature: "#3ed97a",
-  light: "#ffe066", dark: "#c47fff", arcane: "#c89a3e",
+  fire: "#ff5e2a",
+  water: "#38b8f5",
+  nature: "#3ed97a",
+  light: "#ffe066",
+  dark: "#c47fff",
+  arcane: "#c89a3e",
 };
 const ELEMENT_ICON: Record<string, string> = {
-  fire: "🔥", water: "💧", nature: "🌿",
-  light: "✨", dark: "🌑", arcane: "🔮",
+  fire: "🔥",
+  water: "💧",
+  nature: "🌿",
+  light: "✨",
+  dark: "🌑",
+  arcane: "🔮",
 };
 
 // Category  realm affinity mapping per FR01 2.8
@@ -253,7 +261,11 @@ export const TaskCard = React.memo(function TaskCard({
             {open && (
               <div
                 className="absolute right-0 top-10 z-[70] min-w-[140px] border ss-card py-1"
-                style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)", borderColor: "var(--ss-hairline)" }}
+                style={{
+                  borderRadius: 0,
+                  boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+                  borderColor: "var(--ss-hairline)",
+                }}
                 onMouseLeave={() => setOpen(false)}
               >
                 <button
@@ -294,7 +306,10 @@ export const TaskCard = React.memo(function TaskCard({
           className="flex items-center gap-2 mt-2 flex-wrap"
           style={{ color: "var(--ink-tertiary)" }}
         >
-          <span className="flex items-center gap-1" style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color }}>
+          <span
+            className="flex items-center gap-1"
+            style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color }}
+          >
             {Array.from({ length: DIFFICULTY_STARS[task.difficulty] ?? 0 }).map((_, i) => (
               <Icon key={i} name="star" size={9} color={color} className="fill-current" />
             ))}
@@ -304,13 +319,34 @@ export const TaskCard = React.memo(function TaskCard({
             <span className="ml-1">{DIFFICULTY_LABELS[task.difficulty] ?? task.difficulty}</span>
           </span>
           {task.streak > 0 && (
-            <span className="flex items-center gap-1" style={{
-              fontFamily: "var(--ss-font-pixel)", fontSize: 9,
-              color: task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "#ffb74d",
-            }}>
-              <Icon name="streak" size={11} color={
-                task.streak >= 30 ? "#e63e00" : task.streak >= 14 ? "#e68a00" : task.streak >= 7 ? "var(--gold-bright)" : "#ffb74d"
-              } />
+            <span
+              className="flex items-center gap-1"
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                fontSize: 9,
+                color:
+                  task.streak >= 30
+                    ? "#e63e00"
+                    : task.streak >= 14
+                      ? "#e68a00"
+                      : task.streak >= 7
+                        ? "var(--gold-bright)"
+                        : "#ffb74d",
+              }}
+            >
+              <Icon
+                name="streak"
+                size={11}
+                color={
+                  task.streak >= 30
+                    ? "#e63e00"
+                    : task.streak >= 14
+                      ? "#e68a00"
+                      : task.streak >= 7
+                        ? "var(--gold-bright)"
+                        : "#ffb74d"
+                }
+              />
               {task.streak}🔥
             </span>
           )}

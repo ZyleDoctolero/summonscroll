@@ -238,5 +238,12 @@ export async function listMemorial() {
     .eq("user_id", user.id)
     .order("created_at", { ascending: false });
   if (error) throw error;
-  return { memorials: data ?? [] };
+  // `fallen` is a Json column; normalize to the shape this module writes
+  // (see finishTrial) so consumers get a typed, never-null array.
+  return {
+    memorials: (data ?? []).map((row) => ({
+      ...row,
+      fallen: (Array.isArray(row.fallen) ? row.fallen : []) as TrialResult["fallen"],
+    })),
+  };
 }

@@ -4,7 +4,15 @@ import { motion } from "motion/react";
 import { HUB_TABS, ROSTER_TABS, VOID_TABS, ALTAR_TABS } from "./SubNav";
 
 const NAV_ITEMS = [
-  { path: "/", id: "hub", tabs: HUB_TABS, icon: "hub", label: "Hub", color: "#FFD54F", colorRgb: "255,213,79" },
+  {
+    path: "/",
+    id: "hub",
+    tabs: HUB_TABS,
+    icon: "hub",
+    label: "Hub",
+    color: "#FFD54F",
+    colorRgb: "255,213,79",
+  },
   {
     path: "/compendium",
     id: "roster",

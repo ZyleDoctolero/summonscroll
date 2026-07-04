@@ -28,6 +28,9 @@ export async function listMyMonsters() {
   return { userMonsters: data ?? [] };
 }
 
+/** A user-owned monster row incl. joined monster/realm — derived from the query above. */
+export type UserMonster = Awaited<ReturnType<typeof listMyMonsters>>["userMonsters"][number];
+
 export async function updateTeamSlot(userMonsterId: string, slot: number | null) {
   if (slot !== null) {
     await supabase
@@ -51,11 +54,15 @@ export async function getTeam() {
   if (error) throw error;
   return { team: data ?? [] };
 }
-export async function synthesizeMonster(targetId: string, fodderIds: string[], useFragments: boolean = false) {
-  const { data, error } = await supabase.rpc('synthesize_monster', {
+export async function synthesizeMonster(
+  targetId: string,
+  fodderIds: string[],
+  useFragments: boolean = false,
+) {
+  const { data, error } = await supabase.rpc("synthesize_monster", {
     p_target_id: targetId,
     p_fodder_ids: fodderIds,
-    p_use_fragments: useFragments
+    p_use_fragments: useFragments,
   });
   if (error) throw error;
   return data;

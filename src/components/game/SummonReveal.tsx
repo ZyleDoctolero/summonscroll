@@ -126,14 +126,18 @@ export function SummonReveal({
   }, [r, rm, config]);
 
   return (
-    <motion.div 
-      className="pull-stage cursor-pointer flex-col overflow-hidden" 
+    <motion.div
+      className="pull-stage cursor-pointer flex-col overflow-hidden"
       onClick={handleNextClick}
-      animate={shake ? { x: [-10, 10, -8, 8, -5, 5, -2, 2, 0], y: [-8, 8, -6, 6, -4, 4, -1, 1, 0] } : { x: 0, y: 0 }}
+      animate={
+        shake
+          ? { x: [-10, 10, -8, 8, -5, 5, -2, 2, 0], y: [-8, 8, -6, 6, -4, 4, -1, 1, 0] }
+          : { x: 0, y: 0 }
+      }
       transition={{ duration: 0.5 }}
     >
       {flash && (
-        <motion.div 
+        <motion.div
           className="absolute inset-0 z-50 pointer-events-none mix-blend-screen"
           style={{ backgroundColor: RARITY_COLOR[r] || "white" }}
           initial={{ opacity: 0.8 }}

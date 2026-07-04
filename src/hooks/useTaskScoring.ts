@@ -123,7 +123,10 @@ export function useTaskScoring({
       }
 
       if (res?.time_skipped) {
-        toast.info("-30m Cultivation Time!", { icon: "⏳", style: { color: "var(--gold-bright)" } });
+        toast.info("-30m Cultivation Time!", {
+          icon: "⏳",
+          style: { color: "var(--gold-bright)" },
+        });
       }
 
       if (res?.leveledUp && res.reward) {

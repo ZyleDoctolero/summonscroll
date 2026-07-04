@@ -5,6 +5,8 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
+    // e2e/ is Playwright's turf — vitest must not pick up its specs.
+    exclude: ["node_modules/**", "dist/**", "e2e/**"],
   },
   resolve: {
     alias: {

@@ -14,7 +14,8 @@ const badgeVariants = cva(
           "border-amber-500/50 bg-[var(--bg-panel)] text-amber-600 shadow-lg shadow-[rgba(120,90,50,0.08)] hover:shadow-lg hover:bg-[rgba(200,154,62,0.08)]",
         destructive:
           "border-red-500/50 bg-[var(--bg-panel)] text-[var(--danger)] shadow-lg shadow-[rgba(120,90,50,0.08)] hover:shadow-lg hover:bg-[rgba(200,154,62,0.08)]",
-        outline: "text-[var(--ink-primary)] border-[var(--gold-glow)]/50 hover:bg-[var(--bg-panel)] hover:text-[var(--ink-primary)] hover:border-[var(--gold-glow)]/80",
+        outline:
+          "text-[var(--ink-primary)] border-[var(--gold-glow)]/50 hover:bg-[var(--bg-panel)] hover:text-[var(--ink-primary)] hover:border-[var(--gold-glow)]/80",
       },
     },
     defaultVariants: {

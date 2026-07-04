@@ -50,12 +50,13 @@ export async function getMyProfile() {
   } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
-  let { data: profile, error } = await supabase
+  const { data: fetched, error } = await supabase
     .from("profiles")
     .select("*")
     .eq("id", user.id)
     .maybeSingle();
   if (error) throw error;
+  let profile = fetched;
   if (!profile) {
     const { data: created, error: createErr } = await supabase
       .from("profiles")

@@ -203,7 +203,14 @@ function HubPage() {
           <div className="flex items-center gap-3 flex-1 min-w-0">
             {tetheredUm ? (
               <div className="flex items-center gap-3">
-                <div className="w-16 h-16 border-[3px] border-[rgba(200,154,62,0.3)] bg-gradient-to-b from-[rgba(200,154,62,0.08)] to-transparent flex items-center justify-center overflow-hidden" style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)", imageRendering: "pixelated" as const }}>
+                <div
+                  className="w-16 h-16 border-[3px] border-[rgba(200,154,62,0.3)] bg-gradient-to-b from-[rgba(200,154,62,0.08)] to-transparent flex items-center justify-center overflow-hidden"
+                  style={{
+                    borderRadius: 0,
+                    boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+                    imageRendering: "pixelated" as const,
+                  }}
+                >
                   <img
                     src={
                       tetheredUm.monster.art_url
@@ -218,16 +225,28 @@ function HubPage() {
                   />
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wider font-bold" style={{ color: "var(--ink-tertiary)" }}>Life-Bound</p>
-                  <h2 className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>{tetheredUm.monster.name}</h2>
+                  <p
+                    className="text-[11px] uppercase tracking-wider font-bold"
+                    style={{ color: "var(--ink-tertiary)" }}
+                  >
+                    Life-Bound
+                  </p>
+                  <h2 className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
+                    {tetheredUm.monster.name}
+                  </h2>
                 </div>
               </div>
             ) : (
               <div className="flex items-center gap-3">
-                <div className="w-16 h-16 border-2 border-dashed border-[rgba(200,154,62,0.2)] flex items-center justify-center" style={{ borderRadius: 0 }}>
+                <div
+                  className="w-16 h-16 border-2 border-dashed border-[rgba(200,154,62,0.2)] flex items-center justify-center"
+                  style={{ borderRadius: 0 }}
+                >
                   <Icon name="scroll" size={24} color="var(--ink-tertiary)" />
                 </div>
-                <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>No beast tethered</p>
+                <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
+                  No beast tethered
+                </p>
               </div>
             )}
           </div>
@@ -254,7 +273,16 @@ function HubPage() {
         <div className="ss-card p-0 overflow-hidden border-[rgba(200,154,62,0.2)]">
           {/* Header */}
           <div className="px-4 py-3 border-b border-[rgba(200,154,62,0.15)] flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.06)] to-transparent">
-            <h2 className="text-lg font-bold uppercase" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}>QUEST BOARD</h2>
+            <h2
+              className="text-lg font-bold uppercase"
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                color: "var(--gold-bright)",
+                letterSpacing: "0.06em",
+              }}
+            >
+              QUEST BOARD
+            </h2>
             <button
               onClick={() => {
                 setEditing(null);
@@ -269,7 +297,12 @@ function HubPage() {
           {/* Search */}
           <div className="px-4 pt-3">
             <div className="relative">
-              <Icon name="target" size={14} color="var(--ink-tertiary)" className="absolute left-3 top-1/2 -translate-y-1/2" />
+              <Icon
+                name="target"
+                size={14}
+                color="var(--ink-tertiary)"
+                className="absolute left-3 top-1/2 -translate-y-1/2"
+              />
               <input
                 type="text"
                 value={questSearch}
@@ -282,12 +315,17 @@ function HubPage() {
           </div>
 
           {/* Tabs */}
-          <div className="px-4 pt-3 flex gap-4 border-b-2" style={{ borderColor: "rgba(200,154,62,0.2)" }}>
-            {([
-              { key: "habit" as const, label: "Rites" },
-              { key: "daily" as const, label: "Duties" },
-              { key: "todo" as const, label: "Hunts" },
-            ] as const).map((t) => (
+          <div
+            className="px-4 pt-3 flex gap-4 border-b-2"
+            style={{ borderColor: "rgba(200,154,62,0.2)" }}
+          >
+            {(
+              [
+                { key: "habit" as const, label: "Rites" },
+                { key: "daily" as const, label: "Duties" },
+                { key: "todo" as const, label: "Hunts" },
+              ] as const
+            ).map((t) => (
               <button
                 key={t.key}
                 onClick={() => setTab(t.key)}
@@ -299,7 +337,15 @@ function HubPage() {
               >
                 {t.label}
                 {tab === t.key && sortedTasks.filter((s) => !s.completed).length > 0 && (
-                  <span className="text-[9px] px-1.5 py-0.5 font-bold leading-none" style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", background: "rgba(200,154,62,0.15)", color: "var(--gold-bright)" }}>
+                  <span
+                    className="text-[9px] px-1.5 py-0.5 font-bold leading-none"
+                    style={{
+                      borderRadius: 0,
+                      fontFamily: "var(--ss-font-pixel)",
+                      background: "rgba(200,154,62,0.15)",
+                      color: "var(--gold-bright)",
+                    }}
+                  >
                     {sortedTasks.filter((s) => !s.completed).length}
                   </span>
                 )}
@@ -325,16 +371,28 @@ function HubPage() {
                 >
                   <span className="text-xl">💀</span>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[10px] uppercase font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--danger)", letterSpacing: "0.04em" }}>
+                    <p
+                      className="text-[10px] uppercase font-bold"
+                      style={{
+                        fontFamily: "var(--ss-font-pixel)",
+                        color: "var(--danger)",
+                        letterSpacing: "0.04em",
+                      }}
+                    >
                       Fallen Covenant — Redemption Required
                     </p>
-                    <p className="text-[9px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
-                      {fallen.length} creature{fallen.length > 1 ? "s" : ""} in fallen state: {fallen.slice(0, 3).map((m: { monster: { name: string } }) => m.monster.name).join(", ")}
+                    <p
+                      className="text-[9px]"
+                      style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}
+                    >
+                      {fallen.length} creature{fallen.length > 1 ? "s" : ""} in fallen state:{" "}
+                      {fallen
+                        .slice(0, 3)
+                        .map((m: { monster: { name: string } }) => m.monster.name)
+                        .join(", ")}
                     </p>
                   </div>
-                  <span className="ss-badge-fallen text-[9px]">
-                    {fallen.length}
-                  </span>
+                  <span className="ss-badge-fallen text-[9px]">{fallen.length}</span>
                 </div>
               </div>
             ) : null;
@@ -345,11 +403,30 @@ function HubPage() {
             {sortedTasks.length === 0 ? (
               <EmptyState
                 icon={tab === "habit" ? "morning" : tab === "daily" ? "morning" : "checklist"}
-                title={questSearch ? "No matching quests." : tab === "habit" ? "The board is empty." : tab === "daily" ? "No daily bounties." : "No pending requests."}
-                body={questSearch ? "Try a different search term." : "Issue a new quest to begin earning rewards."}
-                cta={questSearch
-                  ? { label: "Clear Search", onClick: () => setQuestSearch("") }
-                  : { label: "Issue Quest", onClick: () => { setEditing(null); setDialogOpen(true); } }
+                title={
+                  questSearch
+                    ? "No matching quests."
+                    : tab === "habit"
+                      ? "The board is empty."
+                      : tab === "daily"
+                        ? "No daily bounties."
+                        : "No pending requests."
+                }
+                body={
+                  questSearch
+                    ? "Try a different search term."
+                    : "Issue a new quest to begin earning rewards."
+                }
+                cta={
+                  questSearch
+                    ? { label: "Clear Search", onClick: () => setQuestSearch("") }
+                    : {
+                        label: "Issue Quest",
+                        onClick: () => {
+                          setEditing(null);
+                          setDialogOpen(true);
+                        },
+                      }
                 }
               />
             ) : (

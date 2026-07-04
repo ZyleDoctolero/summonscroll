@@ -209,7 +209,8 @@ function Body({
               transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.1 }}
               className="absolute -bottom-2 px-2 py-0.5 text-[10px] font-bold"
               style={{
-                fontFamily: "var(--ss-font-pixel)", borderRadius: 0,
+                fontFamily: "var(--ss-font-pixel)",
+                borderRadius: 0,
                 background: "linear-gradient(135deg,var(--gold-glow),var(--gold-bright))",
                 color: "var(--bg-deep)",
               }}
@@ -223,7 +224,14 @@ function Body({
       {stage === "check" && (
         <>
           {/* Requirements grid */}
-          <div className="p-3 mb-4 space-y-1" style={{ borderRadius: 0, background: "rgba(61,46,31,0.06)", boxShadow: "2px 2px 0 rgba(0,0,0,0.2)" }}>
+          <div
+            className="p-3 mb-4 space-y-1"
+            style={{
+              borderRadius: 0,
+              background: "rgba(61,46,31,0.06)",
+              boxShadow: "2px 2px 0 rgba(0,0,0,0.2)",
+            }}
+          >
             <p
               className="text-[11px] uppercase tracking-[0.18em] mb-1.5"
               style={{ color: "var(--ink-tertiary)" }}

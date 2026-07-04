@@ -88,7 +88,11 @@ function FusionPage() {
       <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen flex flex-col items-center">
         <h1
           className="text-3xl font-bold mb-2 uppercase"
-          style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}
+          style={{
+            fontFamily: "var(--ss-font-pixel)",
+            color: "var(--gold-bright)",
+            letterSpacing: "0.08em",
+          }}
         >
           FUSION MATRIX
         </h1>
@@ -108,12 +112,20 @@ function FusionPage() {
             {targetMonster ? (
               <div
                 className="ss-card text-center w-40 p-4 relative cursor-pointer hover:scale-105 transition-transform"
-                style={{ borderColor: "var(--gold-bright)", boxShadow: "0 0 30px rgba(0,240,255,0.2)" }}
+                style={{
+                  borderColor: "var(--gold-bright)",
+                  boxShadow: "0 0 30px rgba(0,240,255,0.2)",
+                }}
                 onClick={() => setSelectingMode("target")}
               >
                 <div
                   className="absolute -top-3 -right-3 w-8 h-8 flex items-center justify-center font-bold bg-[var(--bg-stage)] border-2"
-                  style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", borderColor: "var(--gold-bright)", color: "var(--gold-bright)" }}
+                  style={{
+                    borderRadius: 0,
+                    fontFamily: "var(--ss-font-pixel)",
+                    borderColor: "var(--gold-bright)",
+                    color: "var(--gold-bright)",
+                  }}
                 >
                   {currentStar}★
                 </div>
@@ -141,7 +153,12 @@ function FusionPage() {
               <button
                 onClick={() => setSelectingMode("target")}
                 className="p-4 border-2 border-dashed w-40 h-48 flex flex-col items-center justify-center transition-colors"
-                style={{ borderColor: "var(--gold-bright)", color: "var(--gold-bright)", borderRadius: 0, fontFamily: "var(--ss-font-pixel)" }}
+                style={{
+                  borderColor: "var(--gold-bright)",
+                  color: "var(--gold-bright)",
+                  borderRadius: 0,
+                  fontFamily: "var(--ss-font-pixel)",
+                }}
               >
                 <span className="text-4xl mb-2">+</span>
                 <span className="text-[10px] font-bold">SELECT TARGET</span>
@@ -214,7 +231,13 @@ function FusionPage() {
                         setSelectingMode("fodder");
                       }}
                       className="p-2 border-2 border-dashed w-28 h-32 flex flex-col items-center justify-center transition-colors"
-                      style={{ borderColor: "var(--danger)", color: "var(--danger)", opacity: 0.6, borderRadius: 0, fontFamily: "var(--ss-font-pixel)" }}
+                      style={{
+                        borderColor: "var(--danger)",
+                        color: "var(--danger)",
+                        opacity: 0.6,
+                        borderRadius: 0,
+                        fontFamily: "var(--ss-font-pixel)",
+                      }}
                     >
                       <span className="text-2xl mb-1">+</span>
                       <span className="text-[11px] uppercase tracking-widest">

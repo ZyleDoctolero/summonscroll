@@ -57,12 +57,20 @@ function AkashicRecordsPage() {
         <header className="text-center space-y-2">
           <h1
             className="text-3xl font-bold uppercase"
-            style={{ fontFamily: "var(--ss-font-pixel)", color: "#b8860b", letterSpacing: "0.08em" }}
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "#b8860b",
+              letterSpacing: "0.08em",
+            }}
           >
             AKASHIC RECORDS
           </h1>
           <p
-            style={{ color: "var(--ink-secondary)", fontFamily: "var(--ss-font-pixel)", fontSize: "10px" }}
+            style={{
+              color: "var(--ink-secondary)",
+              fontFamily: "var(--ss-font-pixel)",
+              fontSize: "10px",
+            }}
             className="uppercase"
           >
             VIEW THE ASCENSION LINEAGE OF YOUR SOULS

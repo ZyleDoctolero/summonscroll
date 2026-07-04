@@ -233,16 +233,35 @@ function IslandPage() {
       <div className="relative min-h-screen">
         <div className="p-6 md:p-10 max-w-6xl mx-auto">
           <div className="mb-6">
-            <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(62,217,122,0.3)", borderRadius: 0, background: "rgba(62,217,122,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
-              <Icon name={weatherIcon} size={28} color={
-                weather === "sunny"
-                  ? "var(--gold-bright)"
-                  : weather === "overcast"
-                    ? "var(--ink-secondary)"
-                    : "var(--danger)"
-              } />
+            <div
+              className="w-16 h-16 flex items-center justify-center mb-3"
+              style={{
+                border: "2px solid rgba(62,217,122,0.3)",
+                borderRadius: 0,
+                background: "rgba(62,217,122,0.06)",
+                boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+              }}
+            >
+              <Icon
+                name={weatherIcon}
+                size={28}
+                color={
+                  weather === "sunny"
+                    ? "var(--gold-bright)"
+                    : weather === "overcast"
+                      ? "var(--ink-secondary)"
+                      : "var(--danger)"
+                }
+              />
             </div>
-            <h1 className="text-3xl font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+            <h1
+              className="text-3xl font-bold"
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                color: "var(--gold-bright)",
+                letterSpacing: "0.08em",
+              }}
+            >
               CULTIVATION REALM
             </h1>
           </div>
@@ -252,12 +271,26 @@ function IslandPage() {
             className="ss-card mb-6 flex items-center gap-3"
             style={{
               background: weatherBg,
-              borderColor: weather === "sunny" ? "rgba(95,173,65,0.2)" : weather === "overcast" ? "rgba(200,154,62,0.2)" : "rgba(224,82,82,0.2)",
+              borderColor:
+                weather === "sunny"
+                  ? "rgba(95,173,65,0.2)"
+                  : weather === "overcast"
+                    ? "rgba(200,154,62,0.2)"
+                    : "rgba(224,82,82,0.2)",
             }}
           >
-            <div className="w-10 h-10 grid place-items-center flex-shrink-0" style={{ borderRadius: 0,
-              background: weather === "sunny" ? "rgba(95,173,65,0.15)" : weather === "overcast" ? "rgba(255,183,77,0.15)" : "rgba(224,82,82,0.15)",
-            }}>
+            <div
+              className="w-10 h-10 grid place-items-center flex-shrink-0"
+              style={{
+                borderRadius: 0,
+                background:
+                  weather === "sunny"
+                    ? "rgba(95,173,65,0.15)"
+                    : weather === "overcast"
+                      ? "rgba(255,183,77,0.15)"
+                      : "rgba(224,82,82,0.15)",
+              }}
+            >
               <Icon
                 name={weatherIcon}
                 size={20}
@@ -278,8 +311,10 @@ function IslandPage() {
               </p>
               <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
                 {weather === "sunny" && "All dailies complete — your realm prospers!"}
-                {weather === "overcast" && `${completedDailies}/${dailies.length} dailies done — clouds gather.`}
-                {weather === "stormy" && `Only ${completedDailies}/${dailies.length} dailies — demonic qi rages!`}
+                {weather === "overcast" &&
+                  `${completedDailies}/${dailies.length} dailies done — clouds gather.`}
+                {weather === "stormy" &&
+                  `Only ${completedDailies}/${dailies.length} dailies — demonic qi rages!`}
               </p>
             </div>
           </div>
@@ -288,18 +323,30 @@ function IslandPage() {
           {(realmSynergy || elementSynergy) && (
             <div className="flex gap-2 mb-4">
               {realmSynergy && (
-                <span className="text-[9px] px-2 py-1 font-bold uppercase" style={{
-                  fontFamily: "var(--ss-font-pixel)", borderRadius: 0, background: "rgba(200,154,62,0.1)",
-                  color: "var(--gold-bright)", border: "1px solid rgba(200,154,62,0.2)",
-                }}>
+                <span
+                  className="text-[9px] px-2 py-1 font-bold uppercase"
+                  style={{
+                    fontFamily: "var(--ss-font-pixel)",
+                    borderRadius: 0,
+                    background: "rgba(200,154,62,0.1)",
+                    color: "var(--gold-bright)",
+                    border: "1px solid rgba(200,154,62,0.2)",
+                  }}
+                >
                   Realm Synergy +15%
                 </span>
               )}
               {elementSynergy && (
-                <span className="text-[9px] px-2 py-1 font-bold uppercase" style={{
-                  fontFamily: "var(--ss-font-pixel)", borderRadius: 0, background: "rgba(56,184,245,0.1)",
-                  color: "#38b8f5", border: "1px solid rgba(56,184,245,0.2)",
-                }}>
+                <span
+                  className="text-[9px] px-2 py-1 font-bold uppercase"
+                  style={{
+                    fontFamily: "var(--ss-font-pixel)",
+                    borderRadius: 0,
+                    background: "rgba(56,184,245,0.1)",
+                    color: "#38b8f5",
+                    border: "1px solid rgba(56,184,245,0.2)",
+                  }}
+                >
                   Element Synergy +5%
                 </span>
               )}
@@ -346,14 +393,17 @@ function IslandPage() {
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
               {roster.map(
-                (um: {
-                  id: string;
-                  monster: { name: string; rarity: string; element: string };
-                  level: number;
-                  bond_percent: number;
-                  ascension_level: number;
-                  is_on_team: boolean;
-                }, i: number) => {
+                (
+                  um: {
+                    id: string;
+                    monster: { name: string; rarity: string; element: string };
+                    level: number;
+                    bond_percent: number;
+                    ascension_level: number;
+                    is_on_team: boolean;
+                  },
+                  i: number,
+                ) => {
                   const r = um.monster.rarity as Rarity;
                   const isMaxBond = um.bond_percent >= 100;
                   return (
@@ -385,8 +435,11 @@ function IslandPage() {
                           disabled={ascendMut.isPending}
                           className="w-full mt-2 py-1.5 text-[10px] font-bold uppercase transition-all disabled:opacity-50"
                           style={{
-                            borderRadius: 0, fontFamily: "var(--ss-font-pixel)", boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
-                            background: "linear-gradient(135deg, rgba(200,154,62,0.15), rgba(200,154,62,0.08))",
+                            borderRadius: 0,
+                            fontFamily: "var(--ss-font-pixel)",
+                            boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+                            background:
+                              "linear-gradient(135deg, rgba(200,154,62,0.15), rgba(200,154,62,0.08))",
                             color: "var(--gold-bright)",
                             border: "1px solid rgba(200,154,62,0.3)",
                           }}

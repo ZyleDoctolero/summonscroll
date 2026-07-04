@@ -23,7 +23,9 @@ function computeTeamSynergy(monsters: SlimMonster[]): {
   label: string;
   bonus: string;
 } {
-  const active = monsters.filter((m) => m.team_slot !== null && m.team_slot >= 1 && m.team_slot <= 3);
+  const active = monsters.filter(
+    (m) => m.team_slot !== null && m.team_slot >= 1 && m.team_slot <= 3,
+  );
   if (active.length < 3) return { type: "none", label: "", bonus: "" };
 
   const elements = active.map((m) => m.monster.element.toLowerCase());
@@ -52,11 +54,19 @@ export function IslandZones({
       {/* Team Synergy badge */}
       {synergy.type !== "none" && (
         <div className="flex items-center gap-2 mb-3">
-          <span className={synergy.type === "harmony" ? "ss-badge-synergy-harmony" : "ss-badge-synergy-focus"}>
+          <span
+            className={
+              synergy.type === "harmony" ? "ss-badge-synergy-harmony" : "ss-badge-synergy-focus"
+            }
+          >
             {synergy.type === "harmony" ? "⬟" : "◆"} {synergy.label}
           </span>
           <span
-            style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: synergy.type === "harmony" ? "#3ed97a" : "var(--gold-bright)" }}
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              fontSize: 9,
+              color: synergy.type === "harmony" ? "#3ed97a" : "var(--gold-bright)",
+            }}
           >
             {synergy.bonus}
           </span>
@@ -71,12 +81,20 @@ export function IslandZones({
             <div key={zone} className="island-zone min-w-[80px]">
               <span
                 className="text-[9px] mb-2 block text-center uppercase"
-                style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)", letterSpacing: "0.04em" }}
+                style={{
+                  fontFamily: "var(--ss-font-pixel)",
+                  color: "var(--ink-tertiary)",
+                  letterSpacing: "0.04em",
+                }}
               >
                 {zone}
               </span>
               {monster ? (
-                <MonsterCard monster={monster as Parameters<typeof MonsterCard>[0]["monster"]} compact={true} onRemove={() => onEmptyClick?.(slot)} />
+                <MonsterCard
+                  monster={monster as Parameters<typeof MonsterCard>[0]["monster"]}
+                  compact={true}
+                  onRemove={() => onEmptyClick?.(slot)}
+                />
               ) : (
                 <EmptyZoneSlot zoneIndex={slot} onClick={() => onEmptyClick?.(slot)} />
               )}
@@ -88,7 +106,13 @@ export function IslandZones({
   );
 }
 
-function EmptyZoneSlot({ zoneIndex: _zoneIndex, onClick }: { zoneIndex: number; onClick?: () => void }) {
+function EmptyZoneSlot({
+  zoneIndex: _zoneIndex,
+  onClick,
+}: {
+  zoneIndex: number;
+  onClick?: () => void;
+}) {
   return (
     <button
       onClick={onClick}
@@ -99,7 +123,9 @@ function EmptyZoneSlot({ zoneIndex: _zoneIndex, onClick }: { zoneIndex: number; 
         background: "rgba(200,154,62,0.03)",
       }}
     >
-      <span className="text-2xl" style={{ color: "var(--ink-tertiary)" }}>+</span>
+      <span className="text-2xl" style={{ color: "var(--ink-tertiary)" }}>
+        +
+      </span>
     </button>
   );
 }

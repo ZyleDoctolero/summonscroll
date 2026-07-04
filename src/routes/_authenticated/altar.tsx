@@ -150,10 +150,25 @@ function AltarPage() {
 
         {/* Left Side: Banner Selection (Vertical Tabs) */}
         <div className="relative z-10 w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 md:border-r border-[var(--gold-bright)]/30 bg-[var(--bg-stage)]/80">
-          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(127,119,221,0.3)", borderRadius: 0, background: "rgba(127,119,221,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="w-16 h-16 flex items-center justify-center mb-3"
+            style={{
+              border: "2px solid rgba(127,119,221,0.3)",
+              borderRadius: 0,
+              background: "rgba(127,119,221,0.06)",
+              boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+            }}
+          >
             <Icon name="altar" size={28} color="var(--violet)" />
           </div>
-          <h1 className="text-2xl font-bold mb-8" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+          <h1
+            className="text-2xl font-bold mb-8"
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "var(--gold-bright)",
+              letterSpacing: "0.08em",
+            }}
+          >
             SOUL RESONANCE ARRAY
           </h1>
           {/* Ritual Incubation tracker */}
@@ -162,15 +177,27 @@ function AltarPage() {
             const el = (p.ritual_incubation_element as string | null) ?? null;
             const days = (p.ritual_incubation_day_count as number | null) ?? 0;
             const ELEMENT_COLOR: Record<string, string> = {
-              fire: "#ff5e2a", water: "#38b8f5", nature: "#3ed97a",
-              light: "#ffe066", dark: "#c47fff", arcane: "#c89a3e",
+              fire: "#ff5e2a",
+              water: "#38b8f5",
+              nature: "#3ed97a",
+              light: "#ffe066",
+              dark: "#c47fff",
+              arcane: "#c89a3e",
             };
             const elColor = el ? (ELEMENT_COLOR[el] ?? "#c89a3e") : "#c89a3e";
             const pct = Math.min(100, (days / 7) * 100);
             return (
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-1">
-                  <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: "var(--ink-tertiary)", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--ss-font-pixel)",
+                      fontSize: 9,
+                      color: "var(--ink-tertiary)",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
                     🔮 Ritual Incubation
                   </span>
                   <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: elColor }}>
@@ -178,15 +205,35 @@ function AltarPage() {
                   </span>
                 </div>
                 <div className="ss-ritual-bar">
-                  <div className="ss-ritual-bar-fill" style={{ width: `${pct}%`, background: elColor }} />
+                  <div
+                    className="ss-ritual-bar-fill"
+                    style={{ width: `${pct}%`, background: elColor }}
+                  />
                 </div>
                 {el && (
-                  <div style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: elColor, marginTop: 3, textTransform: "uppercase", letterSpacing: "0.04em" }}>
-                    Element: {el} — {days >= 7 ? "★ Guaranteed pull ready!" : `${7 - days} days remaining`}
+                  <div
+                    style={{
+                      fontFamily: "var(--ss-font-pixel)",
+                      fontSize: 9,
+                      color: elColor,
+                      marginTop: 3,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.04em",
+                    }}
+                  >
+                    Element: {el} —{" "}
+                    {days >= 7 ? "★ Guaranteed pull ready!" : `${7 - days} days remaining`}
                   </div>
                 )}
                 {!el && (
-                  <div style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 8, color: "var(--ink-tertiary)", marginTop: 3 }}>
+                  <div
+                    style={{
+                      fontFamily: "var(--ss-font-pixel)",
+                      fontSize: 8,
+                      color: "var(--ink-tertiary)",
+                      marginTop: 3,
+                    }}
+                  >
                     Tag tasks with an element to begin incubation
                   </div>
                 )}
@@ -207,7 +254,9 @@ function AltarPage() {
                   className={`relative flex items-center justify-start px-6 py-4 border-2 transition-all duration-150 overflow-hidden group min-w-[200px]`}
                   style={{
                     borderRadius: 0,
-                    background: isActive ? "var(--bg-panel)" : "rgba(var(--bg-stage-rgb,12,10,6),0.4)",
+                    background: isActive
+                      ? "var(--bg-panel)"
+                      : "rgba(var(--bg-stage-rgb,12,10,6),0.4)",
                     borderColor: isActive ? "var(--gold-bright)" : "rgba(200,154,62,0.1)",
                     boxShadow: isActive ? "4px 4px 0 rgba(0,0,0,0.4)" : "2px 2px 0 rgba(0,0,0,0.2)",
                   }}
@@ -266,8 +315,23 @@ function AltarPage() {
                 {/* The Tactile Gacha Control Panel at the bottom */}
                 <div className="relative w-full max-w-4xl mx-auto flex flex-col items-end gap-6 mt-auto">
                   {/* Currency Display */}
-                  <div className="border px-6 py-3 flex items-center gap-3" style={{ borderColor: "rgba(200,154,62,0.15)", borderRadius: 0, background: "rgba(12,10,6,0.7)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
-                    <span className="text-[9px] uppercase font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)", letterSpacing: "0.06em" }}>
+                  <div
+                    className="border px-6 py-3 flex items-center gap-3"
+                    style={{
+                      borderColor: "rgba(200,154,62,0.15)",
+                      borderRadius: 0,
+                      background: "rgba(12,10,6,0.7)",
+                      boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+                    }}
+                  >
+                    <span
+                      className="text-[9px] uppercase font-bold"
+                      style={{
+                        fontFamily: "var(--ss-font-pixel)",
+                        color: "var(--ink-tertiary)",
+                        letterSpacing: "0.06em",
+                      }}
+                    >
                       Resonance Balance
                     </span>
                     <div

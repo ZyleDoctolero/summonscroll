@@ -154,7 +154,11 @@ function PenaltyZone() {
             <div className="space-y-2">
               <h1
                 className="text-3xl font-bold uppercase"
-                style={{ fontFamily: "var(--ss-font-pixel)", color: "#8b0000", letterSpacing: "0.08em" }}
+                style={{
+                  fontFamily: "var(--ss-font-pixel)",
+                  color: "#8b0000",
+                  letterSpacing: "0.08em",
+                }}
               >
                 DEMONIC BACKLASH
               </h1>
@@ -170,8 +174,10 @@ function PenaltyZone() {
             <div
               className="w-full p-5 text-left space-y-4"
               style={{
-                borderRadius: 0, background: "rgba(139,0,0,0.08)",
-                border: "1px solid rgba(139,0,0,0.25)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+                borderRadius: 0,
+                background: "rgba(139,0,0,0.08)",
+                border: "1px solid rgba(139,0,0,0.25)",
+                boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
               }}
             >
               <div

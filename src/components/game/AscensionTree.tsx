@@ -57,7 +57,11 @@ export function AscensionTree({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="relative z-10 ss-card p-4 border-2 text-center mb-12"
-        style={{ borderColor: color, backgroundColor: "var(--bg-card)", boxShadow: "4px 4px 0 rgba(0,0,0,0.3)" }}
+        style={{
+          borderColor: color,
+          backgroundColor: "var(--bg-card)",
+          boxShadow: "4px 4px 0 rgba(0,0,0,0.3)",
+        }}
       >
         <p className="text-[11px] font-mono tracking-widest text-[var(--ink-tertiary)]">ORIGIN</p>
         <p className="font-bold tracking-widest" style={{ color }}>
@@ -89,7 +93,12 @@ export function AscensionTree({
             <div className="flex items-center gap-3 mb-2">
               <div
                 className={`w-8 h-8 flex items-center justify-center ${m.active ? "bg-[#c89a3e]/15 text-[#c89a3e]" : "bg-[rgba(180,150,100,0.1)] text-[#b5a28a]"}`}
-                style={{ border: m.active ? "2px solid rgba(200,154,62,0.3)" : "2px solid rgba(180,150,100,0.15)", boxShadow: m.active ? "2px 2px 0 rgba(0,0,0,0.3)" : "none" }}
+                style={{
+                  border: m.active
+                    ? "2px solid rgba(200,154,62,0.3)"
+                    : "2px solid rgba(180,150,100,0.15)",
+                  boxShadow: m.active ? "2px 2px 0 rgba(0,0,0,0.3)" : "none",
+                }}
               >
                 <m.icon size={16} />
               </div>
@@ -99,7 +108,10 @@ export function AscensionTree({
               </div>
             </div>
             {m.value && (
-              <div className="mt-2 p-2 bg-[rgba(240,230,210,0.4)] text-center" style={{ border: "1px solid rgba(200,154,62,0.15)" }}>
+              <div
+                className="mt-2 p-2 bg-[rgba(240,230,210,0.4)] text-center"
+                style={{ border: "1px solid rgba(200,154,62,0.15)" }}
+              >
                 <span
                   className="text-xs font-bold tracking-widest"
                   style={{ color: m.active ? "var(--gold-bright)" : "var(--ink-tertiary)" }}

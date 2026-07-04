@@ -28,11 +28,11 @@ export type TaskFormValue = {
 };
 
 const ELEMENT_OPTIONS: { key: string; label: string; color: string; icon: string }[] = [
-  { key: "fire",   label: "Fire",   color: "#ff5e2a", icon: "🔥" },
-  { key: "water",  label: "Water",  color: "#38b8f5", icon: "💧" },
+  { key: "fire", label: "Fire", color: "#ff5e2a", icon: "🔥" },
+  { key: "water", label: "Water", color: "#38b8f5", icon: "💧" },
   { key: "nature", label: "Nature", color: "#3ed97a", icon: "🌿" },
-  { key: "light",  label: "Light",  color: "#ffe066", icon: "✨" },
-  { key: "dark",   label: "Dark",   color: "#c47fff", icon: "🌑" },
+  { key: "light", label: "Light", color: "#ffe066", icon: "✨" },
+  { key: "dark", label: "Dark", color: "#c47fff", icon: "🌑" },
   { key: "arcane", label: "Arcane", color: "#c89a3e", icon: "🔮" },
 ];
 
@@ -112,13 +112,24 @@ export function TaskFormDialog({
       style={{ background: "rgba(0,0,0,0.82)" }}
       onClick={onClose}
     >
-      <form onClick={(e) => e.stopPropagation()} onSubmit={submit} className="ss-modal w-full" style={{ maxHeight: "90vh", overflowY: "auto" }}>
-        <h2 className="font-bold font-['Cinzel'] text-base mb-3" style={{ color: "var(--gold-bright)", letterSpacing: "0.1em" }}>
+      <form
+        onClick={(e) => e.stopPropagation()}
+        onSubmit={submit}
+        className="ss-modal w-full"
+        style={{ maxHeight: "90vh", overflowY: "auto" }}
+      >
+        <h2
+          className="font-bold font-['Cinzel'] text-base mb-3"
+          style={{ color: "var(--gold-bright)", letterSpacing: "0.1em" }}
+        >
           {initial ? "EDIT DIRECTIVE" : "NEW DIRECTIVE"}
         </h2>
 
         {!initial && (
-          <div className="flex gap-0 mb-1" style={{ border: "2px solid rgba(200,154,62,0.3)", borderRadius: 0 }}>
+          <div
+            className="flex gap-0 mb-1"
+            style={{ border: "2px solid rgba(200,154,62,0.3)", borderRadius: 0 }}
+          >
             {(["habit", "daily", "todo"] as const).map((t) => (
               <button
                 type="button"
@@ -199,7 +210,10 @@ export function TaskFormDialog({
         </Field>
 
         <Field label="Difficulty">
-          <div className="flex gap-0" style={{ border: "2px solid rgba(200,154,62,0.25)", borderRadius: 0 }}>
+          <div
+            className="flex gap-0"
+            style={{ border: "2px solid rgba(200,154,62,0.25)", borderRadius: 0 }}
+          >
             {(["trivial", "easy", "medium", "hard"] as const).map((d, i) => (
               <button
                 key={d}
@@ -350,7 +364,13 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
     <label className="block">
       <div
         className="mb-1 uppercase"
-        style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, letterSpacing: "0.06em", color: "var(--ink-tertiary)", fontWeight: 700 }}
+        style={{
+          fontFamily: "var(--ss-font-pixel)",
+          fontSize: 9,
+          letterSpacing: "0.06em",
+          color: "var(--ink-tertiary)",
+          fontWeight: 700,
+        }}
       >
         {label}
       </div>

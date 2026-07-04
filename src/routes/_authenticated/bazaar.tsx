@@ -56,7 +56,14 @@ function ShopPage() {
     <AppShell profile={profile}>
       <AtmosphereBackdrop realm="myth" />
       <div className="p-6 md:p-10 max-w-6xl">
-        <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+        <h1
+          className="text-3xl font-bold mb-1"
+          style={{
+            fontFamily: "var(--ss-font-pixel)",
+            color: "var(--gold-bright)",
+            letterSpacing: "0.08em",
+          }}
+        >
           THE BAZAAR
         </h1>
         <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
@@ -116,7 +123,10 @@ function ShopPage() {
             </h2>
             <p className="text-sm mb-4" style={{ color: "var(--ink-secondary)" }}>
               Spend 100{" "}
-              <span className="inline-flex items-center gap-0.5" style={{ color: "var(--gold-bright)" }}>
+              <span
+                className="inline-flex items-center gap-0.5"
+                style={{ color: "var(--gold-bright)" }}
+              >
                 <Icon name="crystal" size={12} /> Crystals
               </span>{" "}
               for a chance at rare equipment, food for your pets, or bonus XP!

@@ -252,7 +252,11 @@ function BattlePage() {
                     onClick={() => turnMut.mutate("special")}
                     disabled={turnMut.isPending || result.initialState.specialCooldown > 0}
                     className="ss-btn ss-btn-danger"
-                    style={{ opacity: result.initialState.specialCooldown > 0 ? 0.4 : 1, fontFamily: "var(--ss-font-pixel)", fontSize: 10 }}
+                    style={{
+                      opacity: result.initialState.specialCooldown > 0 ? 0.4 : 1,
+                      fontFamily: "var(--ss-font-pixel)",
+                      fontSize: 10,
+                    }}
                   >
                     {result.initialState.specialCooldown > 0
                       ? `CD: ${result.initialState.specialCooldown}`
@@ -411,13 +415,31 @@ function BattlePage() {
     <AppShell profile={profile}>
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen">
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(255,94,42,0.3)", borderRadius: 0, background: "rgba(255,94,42,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="w-16 h-16 flex items-center justify-center mb-3"
+            style={{
+              border: "2px solid rgba(255,94,42,0.3)",
+              borderRadius: 0,
+              background: "rgba(255,94,42,0.06)",
+              boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+            }}
+          >
             <Icon name="battle" size={28} color="var(--danger)" />
           </div>
-          <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+          <h1
+            className="text-3xl font-bold mb-1"
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "var(--gold-bright)",
+              letterSpacing: "0.08em",
+            }}
+          >
             BATTLE ARENA
           </h1>
-          <p className="text-[10px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
+          <p
+            className="text-[10px]"
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}
+          >
             {canBattle
               ? `Team of ${team.length} monsters ready.`
               : "Build a team of 3+ monsters on your Island first."}
@@ -427,10 +449,16 @@ function BattlePage() {
         {!canBattle && (
           <div
             className="p-8 text-center border-2 border-dashed mb-6 ss-card"
-            style={{ borderColor: "rgba(200,154,62,0.2)", borderRadius: 0, color: "var(--ink-secondary)" }}
+            style={{
+              borderColor: "rgba(200,154,62,0.2)",
+              borderRadius: 0,
+              color: "var(--ink-secondary)",
+            }}
           >
             <Icon name="battle" size={48} color="var(--ink-secondary)" className="mb-2 mx-auto" />
-            <p className="mb-4" style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 11 }}>Build a team of 3+ to enter battle.</p>
+            <p className="mb-4" style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 11 }}>
+              Build a team of 3+ to enter battle.
+            </p>
             <a href="/island" className="ss-btn ss-btn-primary">
               Go to Island
             </a>
@@ -476,7 +504,11 @@ function BattlePage() {
             title="Boss Rush"
             icon={<Icon name="battle" size={28} color="var(--danger)" className="lucide-glow" />}
             desc="5 bosses in sequence"
-            sub={profile.level < 20 ? `Requires Level 20 (you're ${profile.level})` : "High risk, high reward"}
+            sub={
+              profile.level < 20
+                ? `Requires Level 20 (you're ${profile.level})`
+                : "High risk, high reward"
+            }
             disabled={!canBattle || battleMut.isPending || profile.level < 20}
             loading={battleMut.isPending}
             onClick={() => battleMut.mutate({ mode: "boss_rush", floor: 1 })}
@@ -486,7 +518,14 @@ function BattlePage() {
 
         {/* Battle history */}
         <div>
-          <h2 className="text-base font-bold mb-3" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)", letterSpacing: "0.04em" }}>
+          <h2
+            className="text-base font-bold mb-3"
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "var(--ink-primary)",
+              letterSpacing: "0.04em",
+            }}
+          >
             RECENT BATTLES
           </h2>
           {(historyQ.data?.battles ?? []).length === 0 ? (
@@ -536,7 +575,8 @@ function BattlePage() {
                         className="text-xs font-serif flex items-center gap-0.5"
                         style={{ color: "var(--gold-bright)" }}
                       >
-                        <Icon name="crystal" size={10} color="var(--gold-bright)" />+{b.reward_crystals}
+                        <Icon name="crystal" size={10} color="var(--gold-bright)" />+
+                        {b.reward_crystals}
                       </span>
                     </div>
                   ),
@@ -580,27 +620,42 @@ function ModeCard({
       }}
     >
       <div className="flex items-start justify-between mb-3">
-        <div className="w-12 h-12 grid place-items-center" style={{
-          background: `color-mix(in srgb, ${accent}, transparent 88%)`,
-          border: `2px solid color-mix(in srgb, ${accent}, transparent 60%)`,
-          borderRadius: 0,
-        }}>
+        <div
+          className="w-12 h-12 grid place-items-center"
+          style={{
+            background: `color-mix(in srgb, ${accent}, transparent 88%)`,
+            border: `2px solid color-mix(in srgb, ${accent}, transparent 60%)`,
+            borderRadius: 0,
+          }}
+        >
           {icon}
         </div>
         {progress !== undefined && (
-          <span className="text-[10px] font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: accent }}>
+          <span
+            className="text-[10px] font-bold"
+            style={{ fontFamily: "var(--ss-font-pixel)", color: accent }}
+          >
             {Math.round(progress)}%
           </span>
         )}
       </div>
-      <h3 className="text-lg font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)" }}>
+      <h3
+        className="text-lg font-bold mb-1"
+        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)" }}
+      >
         {title}
       </h3>
-      <p className="text-[10px] mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
+      <p
+        className="text-[10px] mb-1"
+        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}
+      >
         {desc}
       </p>
       {sub && (
-        <p className="text-[9px] mb-3" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+        <p
+          className="text-[9px] mb-3"
+          style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}
+        >
           {sub}
         </p>
       )}
@@ -641,7 +696,16 @@ function AnimatedHpBar({
   return (
     <div>
       <div className="flex justify-between mb-1" style={{ color: "var(--ink-secondary)" }}>
-        <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.04em" }}>{label}</span>
+        <span
+          style={{
+            fontFamily: "var(--ss-font-pixel)",
+            fontSize: 9,
+            textTransform: "uppercase",
+            letterSpacing: "0.04em",
+          }}
+        >
+          {label}
+        </span>
         <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9 }}>
           <NumberFlow value={Math.max(0, current)} /> / {max.toLocaleString()}
         </span>

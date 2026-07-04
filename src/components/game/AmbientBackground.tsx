@@ -38,12 +38,12 @@ export function AmbientBackground() {
 
       {/* center pulse */}
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center mix-blend-screen">
-        <div 
+        <div
           className="w-[100vw] h-[100vw] max-w-[1200px] max-h-[1200px] rounded-full animate-pulse opacity-30"
-          style={{ 
-            background: 'radial-gradient(circle, rgba(255,224,102,0.06) 0%, transparent 60%)',
-            animationDuration: '8s'
-          }} 
+          style={{
+            background: "radial-gradient(circle, rgba(255,224,102,0.06) 0%, transparent 60%)",
+            animationDuration: "8s",
+          }}
         />
       </div>
 

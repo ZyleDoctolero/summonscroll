@@ -46,7 +46,14 @@ function CodexPage() {
     <AppShell profile={profileQ.data.profile}>
       <AtmosphereBackdrop realm="vaults" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
-        <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+        <h1
+          className="text-3xl font-bold mb-1"
+          style={{
+            fontFamily: "var(--ss-font-pixel)",
+            color: "var(--gold-bright)",
+            letterSpacing: "0.08em",
+          }}
+        >
           CODEX
         </h1>
         <p className="text-sm mb-6" style={{ color: "var(--ink-secondary)" }}>
@@ -391,24 +398,99 @@ function Block({ label, body }: { label: string; body: string }) {
 }
 
 const EX_TIER_ENTRIES = [
-  { realm: "Verdant", color: "#3ed97a", trait: "Evergreen Veil", desc: "Passive HP regen scales with team plant count. At full team, grants immunity to Burn.", aura: "Leaves orbit the soul in battle" },
-  { realm: "Infernal", color: "#e85d3a", trait: "Hellfire Core", desc: "Fire skills ignore 25% DEF. On kill, explode for AoE damage equal to 10% of the fallen enemy's max HP.", aura: "Embers trail every movement" },
-  { realm: "Abyssal", color: "#9b6dff", trait: "Void Resonance", desc: "Dark skills have 15% chance to inflict Silence. Immune to Charm and Fear.", aura: "Shadow tendrils writhe beneath" },
-  { realm: "Celestial", color: "#ffe066", trait: "Divine Mandate", desc: "Healing skills also cleanse 1 debuff. Upon reaching 100% HP, gain a shield equal to 15% max HP.", aura: "Golden halos pulse gently" },
-  { realm: "Tidal", color: "#38b8f5", trait: "Abyssal Current", desc: "Water skills slow enemy speed by 10% (stacks 3×). In rain weather, all stats +8%.", aura: "Water droplets orbit in rings" },
-  { realm: "Elder", color: "#c44f6f", trait: "Ancestral Echo", desc: "On death, bestow a random stat boost (+20%) to the lowest-HP ally. Revive passives trigger twice.", aura: "Ghostly runes circle the soul" },
-  { realm: "Blight", color: "#6dc4c4", trait: "Miasma Shroud", desc: "Poison ticks deal 50% more damage. Immune to poison. Enemies attacking this soul have 10% chance to be poisoned.", aura: "Toxic mist clings to the ground" },
-  { realm: "Myth", color: "#d4a030", trait: "Fable Weaver", desc: "Support skills have doubled duration. Buffs cast by this soul cannot be dispelled for the first 2 turns.", aura: "Storybook pages flutter around" },
-  { realm: "Stellar", color: "#6db8e8", trait: "Cosmic Drift", desc: "Evade rate +12%. After dodging, next attack deals 30% bonus damage. Immune to Gravity.", aura: "Stardust sparkles in wake" },
-  { realm: "Primal", color: "#d4843a", trait: "Earthen Roots", desc: "Cannot be knocked back or displaced. DEF +15% when HP is above 50%. Taunt duration +1 turn.", aura: "Stone plates orbit defensively" },
-  { realm: "Digital", color: "#38b8f5", trait: "Code Override", desc: "Debuffs have 20% chance to be reflected. Construct allies gain +10% ATK. Immune to Glitch.", aura: "Binary streams cascade down" },
-  { realm: "Void", color: "#9b6dff", trait: "Null Field", desc: "Negate the first buff applied to each enemy per battle. Skills cost 15% less. Immune to Seal.", aura: "Reality fractures around the soul" },
+  {
+    realm: "Verdant",
+    color: "#3ed97a",
+    trait: "Evergreen Veil",
+    desc: "Passive HP regen scales with team plant count. At full team, grants immunity to Burn.",
+    aura: "Leaves orbit the soul in battle",
+  },
+  {
+    realm: "Infernal",
+    color: "#e85d3a",
+    trait: "Hellfire Core",
+    desc: "Fire skills ignore 25% DEF. On kill, explode for AoE damage equal to 10% of the fallen enemy's max HP.",
+    aura: "Embers trail every movement",
+  },
+  {
+    realm: "Abyssal",
+    color: "#9b6dff",
+    trait: "Void Resonance",
+    desc: "Dark skills have 15% chance to inflict Silence. Immune to Charm and Fear.",
+    aura: "Shadow tendrils writhe beneath",
+  },
+  {
+    realm: "Celestial",
+    color: "#ffe066",
+    trait: "Divine Mandate",
+    desc: "Healing skills also cleanse 1 debuff. Upon reaching 100% HP, gain a shield equal to 15% max HP.",
+    aura: "Golden halos pulse gently",
+  },
+  {
+    realm: "Tidal",
+    color: "#38b8f5",
+    trait: "Abyssal Current",
+    desc: "Water skills slow enemy speed by 10% (stacks 3×). In rain weather, all stats +8%.",
+    aura: "Water droplets orbit in rings",
+  },
+  {
+    realm: "Elder",
+    color: "#c44f6f",
+    trait: "Ancestral Echo",
+    desc: "On death, bestow a random stat boost (+20%) to the lowest-HP ally. Revive passives trigger twice.",
+    aura: "Ghostly runes circle the soul",
+  },
+  {
+    realm: "Blight",
+    color: "#6dc4c4",
+    trait: "Miasma Shroud",
+    desc: "Poison ticks deal 50% more damage. Immune to poison. Enemies attacking this soul have 10% chance to be poisoned.",
+    aura: "Toxic mist clings to the ground",
+  },
+  {
+    realm: "Myth",
+    color: "#d4a030",
+    trait: "Fable Weaver",
+    desc: "Support skills have doubled duration. Buffs cast by this soul cannot be dispelled for the first 2 turns.",
+    aura: "Storybook pages flutter around",
+  },
+  {
+    realm: "Stellar",
+    color: "#6db8e8",
+    trait: "Cosmic Drift",
+    desc: "Evade rate +12%. After dodging, next attack deals 30% bonus damage. Immune to Gravity.",
+    aura: "Stardust sparkles in wake",
+  },
+  {
+    realm: "Primal",
+    color: "#d4843a",
+    trait: "Earthen Roots",
+    desc: "Cannot be knocked back or displaced. DEF +15% when HP is above 50%. Taunt duration +1 turn.",
+    aura: "Stone plates orbit defensively",
+  },
+  {
+    realm: "Digital",
+    color: "#38b8f5",
+    trait: "Code Override",
+    desc: "Debuffs have 20% chance to be reflected. Construct allies gain +10% ATK. Immune to Glitch.",
+    aura: "Binary streams cascade down",
+  },
+  {
+    realm: "Void",
+    color: "#9b6dff",
+    trait: "Null Field",
+    desc: "Negate the first buff applied to each enemy per battle. Skills cost 15% less. Immune to Seal.",
+    aura: "Reality fractures around the soul",
+  },
 ];
 
 function ExTierCodex() {
   return (
     <div className="space-y-3">
-      <p className="text-[10px] uppercase font-bold mb-4" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)" }}>
+      <p
+        className="text-[10px] uppercase font-bold mb-4"
+        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)" }}
+      >
         ★8 EX TIER HERITAGE TRAITS BY REALM — REQUIRES REALM KEY + ★7→★8 PROMOTION
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -424,10 +506,7 @@ function ExTierCodex() {
             }}
           >
             <div className="flex items-center gap-2 mb-1.5">
-              <div
-                className="w-3 h-3"
-                style={{ borderRadius: 0, background: entry.color }}
-              />
+              <div className="w-3 h-3" style={{ borderRadius: 0, background: entry.color }} />
               <span
                 className="text-[11px] font-bold uppercase"
                 style={{ fontFamily: "var(--ss-font-pixel)", color: entry.color }}

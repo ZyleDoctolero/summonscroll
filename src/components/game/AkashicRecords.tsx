@@ -134,7 +134,11 @@ export function AkashicRecords({
           }
           transition={{ duration: isSynthesizing ? 0.8 : 2, repeat: isSynthesizing ? 2 : Infinity }}
           className={`w-24 h-24 rounded-full border-2 flex items-center justify-center bg-white/70 z-10 ${
-            canSynthesize ? "border-[#c89a3e]" : isLocked ? "border-red-500/50" : "border-[#b5a28a]/40"
+            canSynthesize
+              ? "border-[#c89a3e]"
+              : isLocked
+                ? "border-red-500/50"
+                : "border-[#b5a28a]/40"
           }`}
         >
           <AnimatePresence mode="wait">

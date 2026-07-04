@@ -60,13 +60,18 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
           boxShadow: "0 3px 0 rgba(0,0,0,0.4)",
         }}
       >
-        <Link to="/profile" className="flex items-center gap-3 active:scale-95 transition-transform">
+        <Link
+          to="/profile"
+          className="flex items-center gap-3 active:scale-95 transition-transform"
+        >
           <div
             className="w-8 h-8 grid place-items-center font-bold text-[10px] relative"
             style={{
-              borderRadius: 0, fontFamily: "var(--ss-font-pixel)",
+              borderRadius: 0,
+              fontFamily: "var(--ss-font-pixel)",
               background: "linear-gradient(135deg, var(--gold-glow), var(--gold-bright))",
-              color: "var(--bg-deep)", boxShadow: "2px 2px 0 rgba(0,0,0,0.4)",
+              color: "var(--bg-deep)",
+              boxShadow: "2px 2px 0 rgba(0,0,0,0.4)",
             }}
           >
             {classIcon}
@@ -288,16 +293,31 @@ function MiniBar({
     <div className="flex-1 max-w-[140px]">
       <div
         className="flex justify-between items-baseline mb-0.5"
-        style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: "var(--ink-tertiary)", textTransform: "uppercase", letterSpacing: "0.05em" }}
+        style={{
+          fontFamily: "var(--ss-font-pixel)",
+          fontSize: 9,
+          color: "var(--ink-tertiary)",
+          textTransform: "uppercase",
+          letterSpacing: "0.05em",
+        }}
       >
         <span>{label}</span>
-        <span style={{ color, fontFamily: "var(--ss-font-pixel)", fontSize: 9 }} className="whitespace-nowrap">
-          <NumberFlow value={current} style={{ display: 'inline-block', fontSize: 'inherit', lineHeight: 'inherit' }} />
+        <span
+          style={{ color, fontFamily: "var(--ss-font-pixel)", fontSize: 9 }}
+          className="whitespace-nowrap"
+        >
+          <NumberFlow
+            value={current}
+            style={{ display: "inline-block", fontSize: "inherit", lineHeight: "inherit" }}
+          />
           /{max}
         </span>
       </div>
       {/* Segmented pixel bar */}
-      <div className="ss-bar-pixel" style={{ height: 10, boxShadow: glow ? `0 0 6px ${color}` : undefined }}>
+      <div
+        className="ss-bar-pixel"
+        style={{ height: 10, boxShadow: glow ? `0 0 6px ${color}` : undefined }}
+      >
         <motion.div
           className="ss-bar-pixel-fill"
           initial={false}
@@ -325,7 +345,9 @@ function Currency({
 }) {
   return (
     <div className="ss-chip ss-chip-muted" aria-label={`${icon}: ${value.toLocaleString()}`}>
-      <span className="flex items-center" aria-hidden="true">{label}</span>
+      <span className="flex items-center" aria-hidden="true">
+        {label}
+      </span>
       <span className="t-mono font-bold" style={{ color: "var(--ink-primary)" }}>
         {value.toLocaleString()}
       </span>

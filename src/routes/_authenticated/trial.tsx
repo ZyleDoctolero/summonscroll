@@ -96,15 +96,30 @@ function TrialPage() {
       <AtmosphereBackdrop realm="elder" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
         <header className="mb-8 text-center flex flex-col items-center">
-          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(255,94,94,0.4)", borderRadius: 0, background: "rgba(255,94,94,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="w-16 h-16 flex items-center justify-center mb-3"
+            style={{
+              border: "2px solid rgba(255,94,94,0.4)",
+              borderRadius: 0,
+              background: "rgba(255,94,94,0.06)",
+              boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+            }}
+          >
             <Icon name="death" size={32} color="var(--danger)" />
           </div>
-          <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--danger)", letterSpacing: "0.08em" }}>
+          <h1
+            className="text-3xl font-bold mb-1"
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "var(--danger)",
+              letterSpacing: "0.08em",
+            }}
+          >
             TRIAL OF ECHOES
           </h1>
           <p className="text-sm max-w-md" style={{ color: "var(--ink-secondary)" }}>
-            20 procedural floors. <b style={{ color: "var(--danger)" }}>Permadeath</b>. Pick 5 souls.
-            Bring them home or honor them in the Memorial.
+            20 procedural floors. <b style={{ color: "var(--danger)" }}>Permadeath</b>. Pick 5
+            souls. Bring them home or honor them in the Memorial.
           </p>
         </header>
 
@@ -302,7 +317,8 @@ function TrialPage() {
               disabled={runMut.isPending}
               className="flex-[2] py-2.5 text-[10px] uppercase font-bold disabled:opacity-40"
               style={{
-                borderRadius: 0, fontFamily: "var(--ss-font-pixel)",
+                borderRadius: 0,
+                fontFamily: "var(--ss-font-pixel)",
                 background: "linear-gradient(135deg,var(--realm-dark),var(--danger))",
                 color: "#faf6f0",
                 boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",

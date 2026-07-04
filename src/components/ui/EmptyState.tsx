@@ -34,7 +34,11 @@ export function EmptyState({ icon, title, body, cta }: EmptyStateProps) {
       </div>
       <h3
         className="text-lg font-bold uppercase"
-        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)", letterSpacing: "0.06em" }}
+        style={{
+          fontFamily: "var(--ss-font-pixel)",
+          color: "var(--ink-primary)",
+          letterSpacing: "0.06em",
+        }}
       >
         {title}
       </h3>
@@ -51,7 +55,8 @@ export function EmptyState({ icon, title, body, cta }: EmptyStateProps) {
           onClick={cta.onClick}
           className="mt-2 px-6 py-2.5 font-bold uppercase text-[11px] transition-all"
           style={{
-            fontFamily: "var(--ss-font-pixel)", borderRadius: 0,
+            fontFamily: "var(--ss-font-pixel)",
+            borderRadius: 0,
             background: "linear-gradient(135deg, rgba(200,154,62,0.12), rgba(200,154,62,0.06))",
             color: "var(--ink-primary)",
             border: "2px solid rgba(200,154,62,0.3)",

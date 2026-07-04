@@ -98,12 +98,24 @@ function AlchemyPage() {
       <AtmosphereBackdrop realm="blight" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto relative z-10 min-h-screen pt-20">
         <header className="mb-10 text-center flex flex-col items-center">
-          <div className="w-16 h-16 flex items-center justify-center mb-4" style={{ border: "2px solid rgba(200,154,62,0.5)", borderRadius: 0, background: "rgba(200,154,62,0.08)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="w-16 h-16 flex items-center justify-center mb-4"
+            style={{
+              border: "2px solid rgba(200,154,62,0.5)",
+              borderRadius: 0,
+              background: "rgba(200,154,62,0.08)",
+              boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+            }}
+          >
             <Icon name="forge" size={36} color="var(--gold-bright)" />
           </div>
           <h1
             className="text-3xl font-bold mb-2"
-            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "var(--gold-bright)",
+              letterSpacing: "0.08em",
+            }}
           >
             BLOODLINE CRUCIBLE
           </h1>
@@ -169,7 +181,10 @@ function AlchemyPage() {
             <div className="flex items-center justify-center gap-4 md:gap-10 relative z-10 mb-12 w-full">
               {/* Catalyst Input */}
               <div className="flex flex-col items-center">
-                <div className="w-20 h-20 md:w-28 md:h-28 border-2 border-dashed border-[var(--gold-bright)]/50 flex items-center justify-center bg-[var(--bg-stage)]/40 relative overflow-hidden" style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+                <div
+                  className="w-20 h-20 md:w-28 md:h-28 border-2 border-dashed border-[var(--gold-bright)]/50 flex items-center justify-center bg-[var(--bg-stage)]/40 relative overflow-hidden"
+                  style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}
+                >
                   <Icon
                     name="sparkle"
                     size={32}
@@ -200,7 +215,10 @@ function AlchemyPage() {
 
               {/* Monster Input */}
               <div className="flex flex-col items-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-[var(--bg-stage)]/60 relative overflow-hidden group" style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+                <div
+                  className="w-24 h-24 md:w-32 md:h-32 border-2 border-[rgba(255,255,255,0.2)] flex items-center justify-center bg-[var(--bg-stage)]/60 relative overflow-hidden group"
+                  style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}
+                >
                   {selectedMonster ? (
                     <img
                       src={`/sprites/monsters/placeholder.png`}
@@ -268,7 +286,10 @@ function AlchemyPage() {
             Available Bases
           </h3>
           {compatibleMonsters.length === 0 ? (
-            <div className="p-8 text-center bg-[var(--bg-stage)]/40 border border-dashed border-[var(--ink-secondary)]/10" style={{ borderRadius: 0 }}>
+            <div
+              className="p-8 text-center bg-[var(--bg-stage)]/40 border border-dashed border-[var(--ink-secondary)]/10"
+              style={{ borderRadius: 0 }}
+            >
               <p style={{ color: "var(--ink-secondary)" }}>
                 No compatible monsters found in your Compendium.
               </p>
@@ -290,7 +311,13 @@ function AlchemyPage() {
                     key={um.id}
                     onClick={() => setSelectedMonster(um.id)}
                     className={`flex-shrink-0 w-24 p-2 border flex flex-col items-center gap-2 transition-all ${selectedMonster === um.id ? "border-[var(--gold-bright)] bg-[var(--ink-secondary)]/10" : "border-[var(--ink-secondary)]/10 opacity-70"}`}
-                    style={{ borderRadius: 0, boxShadow: selectedMonster === um.id ? "3px 3px 0 rgba(200,154,62,0.3)" : "2px 2px 0 rgba(0,0,0,0.2)" }}
+                    style={{
+                      borderRadius: 0,
+                      boxShadow:
+                        selectedMonster === um.id
+                          ? "3px 3px 0 rgba(200,154,62,0.3)"
+                          : "2px 2px 0 rgba(0,0,0,0.2)",
+                    }}
                   >
                     <img
                       src={

@@ -99,13 +99,31 @@ function GuildPage() {
       <AtmosphereBackdrop realm="iron" />
       <div className="p-6 md:p-10 max-w-6xl mx-auto min-h-screen relative z-10">
         <header className="mb-8 text-center flex flex-col items-center">
-          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(200,154,62,0.4)", borderRadius: 0, background: "rgba(200,154,62,0.08)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="w-16 h-16 flex items-center justify-center mb-3"
+            style={{
+              border: "2px solid rgba(200,154,62,0.4)",
+              borderRadius: 0,
+              background: "rgba(200,154,62,0.08)",
+              boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+            }}
+          >
             <Icon name="crown" size={32} color="var(--gold-bright)" />
           </div>
-          <h1 className="text-3xl font-bold mb-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.08em" }}>
+          <h1
+            className="text-3xl font-bold mb-1"
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "var(--gold-bright)",
+              letterSpacing: "0.08em",
+            }}
+          >
             GUILD HALL
           </h1>
-          <p className="text-[10px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
+          <p
+            className="text-[10px]"
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}
+          >
             {myGuild ? `Member of ${myGuild.name}` : "Join a guild to fight bosses cooperatively!"}
           </p>
         </header>
@@ -123,22 +141,43 @@ function GuildPage() {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-[10px] uppercase font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--danger)", letterSpacing: "0.06em" }}>
+                <p
+                  className="text-[10px] uppercase font-bold"
+                  style={{
+                    fontFamily: "var(--ss-font-pixel)",
+                    color: "var(--danger)",
+                    letterSpacing: "0.06em",
+                  }}
+                >
                   🌋 World Raid — Coming Soon
                 </p>
-                <p className="text-[9px] mt-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
+                <p
+                  className="text-[9px] mt-1"
+                  style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}
+                >
                   All guilds unite against a realm-tier boss. Contribute damage through daily tasks.
                 </p>
               </div>
               <div className="text-center">
                 <div className="text-2xl">⚔</div>
-                <span className="text-[8px] uppercase" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>Season 1</span>
+                <span
+                  className="text-[8px] uppercase"
+                  style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}
+                >
+                  Season 1
+                </span>
               </div>
             </div>
             <div className="ss-bar-pixel mt-3" style={{ height: 8 }}>
-              <div className="ss-bar-pixel-fill" style={{ width: "0%", background: "var(--danger)" }} />
+              <div
+                className="ss-bar-pixel-fill"
+                style={{ width: "0%", background: "var(--danger)" }}
+              />
             </div>
-            <p className="text-[8px] mt-1 text-right" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+            <p
+              className="text-[8px] mt-1 text-right"
+              style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}
+            >
               Global HP: ???/??? — Awaiting raid start
             </p>
           </div>
@@ -203,7 +242,13 @@ function GuildPage() {
                   <div className="mb-3">
                     <div
                       className="flex justify-between mb-1"
-                      style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: "var(--ink-secondary)", textTransform: "uppercase", letterSpacing: "0.04em" }}
+                      style={{
+                        fontFamily: "var(--ss-font-pixel)",
+                        fontSize: 9,
+                        color: "var(--ink-secondary)",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.04em",
+                      }}
                     >
                       <span>Boss HP</span>
                       <span>
@@ -246,10 +291,7 @@ function GuildPage() {
                         (s: { item_name: string }) => s.item_name === requiredScroll,
                       );
                       return (
-                        <div
-                          key={t.id}
-                          className="ss-pane flex items-center justify-between p-3"
-                        >
+                        <div key={t.id} className="ss-pane flex items-center justify-between p-3">
                           <div>
                             <p
                               className="text-sm font-bold"
@@ -301,17 +343,21 @@ function GuildPage() {
               </h3>
               <div className="space-y-2">
                 {members.map(
-                  (m: {
-                    id: string;
-                    role: string;
-                    profile: { display_name: string; level: number; class: string };
-                  }, i: number) => (
+                  (
+                    m: {
+                      id: string;
+                      role: string;
+                      profile: { display_name: string; level: number; class: string };
+                    },
+                    i: number,
+                  ) => (
                     <motion.div
                       key={m.id}
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2, delay: Math.min(i * 0.05, 0.3) }}
-                      className="flex items-center gap-3 p-2 rounded ss-pane hover:bg-[rgba(200,154,62,0.06)] transition-colors">
+                      className="flex items-center gap-3 p-2 rounded ss-pane hover:bg-[rgba(200,154,62,0.06)] transition-colors"
+                    >
                       <div className="w-8 h-8 rounded-full grid place-items-center font-bold text-xs ss-btn-d-primary">
                         {m.profile.display_name[0].toUpperCase()}
                       </div>
@@ -339,7 +385,8 @@ function GuildPage() {
                         style={{
                           background:
                             m.role === "leader" ? "rgba(255,213,79,0.2)" : "rgba(255,255,255,0.05)",
-                          color: m.role === "leader" ? "var(--gold-bright)" : "var(--ink-secondary)",
+                          color:
+                            m.role === "leader" ? "var(--gold-bright)" : "var(--ink-secondary)",
                         }}
                       >
                         {m.role}

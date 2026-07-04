@@ -158,13 +158,32 @@ function ProfilePage() {
       <div className="relative min-h-screen">
         <div className="p-6 md:p-10 max-w-6xl mx-auto">
           {/* Hero section */}
-          <div className="game-panel p-5 mb-6" style={{ borderRadius: 0, boxShadow: "4px 4px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="game-panel p-5 mb-6"
+            style={{ borderRadius: 0, boxShadow: "4px 4px 0 rgba(0,0,0,0.4)" }}
+          >
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-16 h-16 grid place-items-center text-2xl font-bold" style={{ fontFamily: "var(--ss-font-pixel)", border: "2px solid var(--gold-bright)", borderRadius: 0, background: "rgba(200,154,62,0.1)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+              <div
+                className="w-16 h-16 grid place-items-center text-2xl font-bold"
+                style={{
+                  fontFamily: "var(--ss-font-pixel)",
+                  border: "2px solid var(--gold-bright)",
+                  borderRadius: 0,
+                  background: "rgba(200,154,62,0.1)",
+                  boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+                }}
+              >
                 {profile.display_name[0].toUpperCase()}
               </div>
               <div>
-                <h1 className="text-2xl font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}>
+                <h1
+                  className="text-2xl font-bold"
+                  style={{
+                    fontFamily: "var(--ss-font-pixel)",
+                    color: "var(--gold-bright)",
+                    letterSpacing: "0.06em",
+                  }}
+                >
                   {profile.display_name}
                 </h1>
                 <div className="flex items-center gap-2 mt-1">
@@ -249,7 +268,10 @@ function ProfilePage() {
                   >
                     {label}
                   </div>
-                  <div className="font-serif-lg font-bold" style={{ color: `var(--ss-stat-${stat})` }}>
+                  <div
+                    className="font-serif-lg font-bold"
+                    style={{ color: `var(--ss-stat-${stat})` }}
+                  >
                     {v}
                   </div>
                 </div>
@@ -276,10 +298,7 @@ function ProfilePage() {
           </div>
 
           {/* Tabs */}
-          <div
-            className="flex gap-2 mb-6 border-b"
-            style={{ borderColor: "rgba(61,46,31,0.08)" }}
-          >
+          <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
             {(
               [
                 ["stats", "Stats"],
@@ -490,7 +509,8 @@ function ProfilePage() {
                         className="text-[11px] mt-1 flex items-center justify-center gap-0.5"
                         style={{ color: "var(--gold-bright)" }}
                       >
-                        <Icon name="crystal" size={10} color="var(--gold-bright)" />+{a.reward_crystals}
+                        <Icon name="crystal" size={10} color="var(--gold-bright)" />+
+                        {a.reward_crystals}
                       </p>
                     )}
                   </div>
@@ -557,29 +577,59 @@ function ProfilePage() {
               {/* Realm Keys */}
               {(() => {
                 const inv = full?.inventory ?? [];
-                const realmKeys = inv.filter((i: { item_type: string }) => i.item_type === "realm_key");
+                const realmKeys = inv.filter(
+                  (i: { item_type: string }) => i.item_type === "realm_key",
+                );
                 return realmKeys.length > 0 ? (
                   <div>
                     <h3
                       className="text-[10px] font-bold mt-4 mb-2 uppercase"
-                      style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)", letterSpacing: "0.06em" }}
+                      style={{
+                        fontFamily: "var(--ss-font-pixel)",
+                        color: "var(--gold-bright)",
+                        letterSpacing: "0.06em",
+                      }}
                     >
                       🔑 Realm Keys
                     </h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                       {realmKeys.map((k: { id: string; item_name: string; quantity: number }) => (
-                        <div key={k.id} className="p-3 text-center border" style={{ borderColor: "rgba(200,154,62,0.2)", borderRadius: 0, background: "rgba(200,154,62,0.04)", boxShadow: "2px 2px 0 rgba(0,0,0,0.3)" }}>
+                        <div
+                          key={k.id}
+                          className="p-3 text-center border"
+                          style={{
+                            borderColor: "rgba(200,154,62,0.2)",
+                            borderRadius: 0,
+                            background: "rgba(200,154,62,0.04)",
+                            boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
+                          }}
+                        >
                           <div className="text-xl mb-1">🗝</div>
-                          <p className="text-[9px] font-bold" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)" }}>
+                          <p
+                            className="text-[9px] font-bold"
+                            style={{
+                              fontFamily: "var(--ss-font-pixel)",
+                              color: "var(--gold-bright)",
+                            }}
+                          >
                             {k.item_name}
                           </p>
-                          <p className="text-[9px]" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+                          <p
+                            className="text-[9px]"
+                            style={{
+                              fontFamily: "var(--ss-font-pixel)",
+                              color: "var(--ink-tertiary)",
+                            }}
+                          >
                             x{k.quantity}
                           </p>
                         </div>
                       ))}
                     </div>
-                    <p className="text-[8px] mt-1" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}>
+                    <p
+                      className="text-[8px] mt-1"
+                      style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}
+                    >
                       Required for ★7 → ★8 promotion
                     </p>
                   </div>
@@ -841,7 +891,13 @@ function Bar({
     <div>
       <div
         className="flex justify-between mb-0.5"
-        style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, textTransform: "uppercase", letterSpacing: "0.04em", color: "var(--ink-secondary)" }}
+        style={{
+          fontFamily: "var(--ss-font-pixel)",
+          fontSize: 9,
+          textTransform: "uppercase",
+          letterSpacing: "0.04em",
+          color: "var(--ink-secondary)",
+        }}
       >
         <span>{label}</span>
         <span style={{ color }}>
@@ -884,14 +940,21 @@ function VoidFrontierSeal({ streak }: { streak: number }) {
     >
       <h3
         className="font-bold text-[10px] mb-1 flex justify-between uppercase"
-        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--violet)", letterSpacing: "0.04em" }}
+        style={{
+          fontFamily: "var(--ss-font-pixel)",
+          color: "var(--violet)",
+          letterSpacing: "0.04em",
+        }}
       >
         <span>Void Frontier Seal</span>
         <span>
           {streak}/{goal} Days
         </span>
       </h3>
-      <p className="text-[9px] mb-3" style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}>
+      <p
+        className="text-[9px] mb-3"
+        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}
+      >
         {message}
       </p>
       <div className="ss-bar-pixel" style={{ height: 10 }}>

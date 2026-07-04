@@ -28,19 +28,23 @@ export function AppShell({
   if (HUB_TABS.some((t) => t.path === pathname)) {
     activeTabs = HUB_TABS;
     activeColor = "#c89a3e";
-    bgBackground = "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200,154,62,0.08) 0%, transparent 70%), linear-gradient(180deg, #0c0a07 0%, #13100c 100%)";
+    bgBackground =
+      "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200,154,62,0.08) 0%, transparent 70%), linear-gradient(180deg, #0c0a07 0%, #13100c 100%)";
   } else if (ROSTER_TABS.some((t) => t.path === pathname)) {
     activeTabs = ROSTER_TABS;
     activeColor = "#c89a3e";
-    bgBackground = "radial-gradient(ellipse 50% 50% at 30% 40%, rgba(56,184,245,0.05) 0%, transparent 65%), linear-gradient(180deg, #0c0a07 0%, #0e0c0a 100%)";
+    bgBackground =
+      "radial-gradient(ellipse 50% 50% at 30% 40%, rgba(56,184,245,0.05) 0%, transparent 65%), linear-gradient(180deg, #0c0a07 0%, #0e0c0a 100%)";
   } else if (VOID_TABS.some((t) => t.path === pathname)) {
     activeTabs = VOID_TABS;
     activeColor = "#c89a3e";
-    bgBackground = "radial-gradient(ellipse 80% 40% at 50% 100%, rgba(163,116,255,0.07) 0%, transparent 70%), linear-gradient(180deg, #0c0a07 0%, #0f0c0a 100%)";
+    bgBackground =
+      "radial-gradient(ellipse 80% 40% at 50% 100%, rgba(163,116,255,0.07) 0%, transparent 70%), linear-gradient(180deg, #0c0a07 0%, #0f0c0a 100%)";
   } else if (ALTAR_TABS.some((t) => t.path === pathname)) {
     activeTabs = ALTAR_TABS;
     activeColor = "#c89a3e";
-    bgBackground = "radial-gradient(ellipse 70% 70% at 50% 80%, rgba(200,154,62,0.07) 0%, transparent 65%), linear-gradient(180deg, #0c0a07 0%, #110e09 100%)";
+    bgBackground =
+      "radial-gradient(ellipse 70% 70% at 50% 80%, rgba(200,154,62,0.07) 0%, transparent 65%), linear-gradient(180deg, #0c0a07 0%, #110e09 100%)";
   }
 
   return (

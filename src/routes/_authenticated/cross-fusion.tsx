@@ -54,7 +54,7 @@ function CrossFusionPage() {
   const [selectingSlot, setSelectingSlot] = useState<"primary" | "catalyst" | null>(null);
 
   if (profileQ.isLoading || monstersQ.isLoading) return <LoadingScreen />;
-  if (!profileQ.data?.profile) return <EmptyState icon="alert" message="Not authenticated" />;
+  if (!profileQ.data?.profile) return <EmptyState icon="alert" title="Not authenticated" />;
 
   const monsters = (monstersQ.data?.userMonsters ?? []) as SlimMonster[];
   const primary = monsters.find((m) => m.id === primaryId);
@@ -224,7 +224,10 @@ function CrossFusionPage() {
                 </div>
                 <span
                   className="text-[10px] font-bold truncate w-full text-center"
-                  style={{ fontFamily: "var(--ss-font-pixel)", color: getRealmColor(catalystRealm) }}
+                  style={{
+                    fontFamily: "var(--ss-font-pixel)",
+                    color: getRealmColor(catalystRealm),
+                  }}
                 >
                   {catalyst.monster.name}
                 </span>
@@ -421,7 +424,9 @@ function CrossFusionPage() {
           </p>
           <ul className="space-y-1.5 text-[11px]" style={{ color: "var(--ink-secondary)" }}>
             <li>• Both souls must be ★5 or higher</li>
-            <li>• Souls must originate from <b>different realms</b></li>
+            <li>
+              • Souls must originate from <b>different realms</b>
+            </li>
             <li>• The catalyst soul is consumed in the process</li>
             <li>• Primary soul gains dual-realm affinity + Cross-Realm passive</li>
             <li>• Cross-Realm passives stack with Heritage Traits</li>

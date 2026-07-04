@@ -37,65 +37,124 @@ type RealmData = {
   name: string;
 };
 
-const ElementSigil = ({ color, glyph, accent }: { color: string; glyph: string; accent: string }) => (
+const ElementSigil = ({
+  color,
+  glyph,
+  accent,
+}: {
+  color: string;
+  glyph: string;
+  accent: string;
+}) => (
   <svg width="100%" height="100%" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <radialGradient id={`sg-${color.replace('#','')}`} cx="50%" cy="45%" r="45%">
-        <stop offset="0%" stopColor={color} stopOpacity="0.15"/>
-        <stop offset="100%" stopColor={color} stopOpacity="0"/>
+      <radialGradient id={`sg-${color.replace("#", "")}`} cx="50%" cy="45%" r="45%">
+        <stop offset="0%" stopColor={color} stopOpacity="0.15" />
+        <stop offset="100%" stopColor={color} stopOpacity="0" />
       </radialGradient>
-      <filter id={`gl-${color.replace('#','')}`}>
-        <feGaussianBlur stdDeviation="3" result="blur"/>
-        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      <filter id={`gl-${color.replace("#", "")}`}>
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
       </filter>
     </defs>
-    <circle cx="48" cy="48" r="38" fill={`url(#sg-${color.replace('#','')})`}/>
-    <circle cx="48" cy="48" r="30" fill="none" stroke={color} strokeWidth="1" opacity="0.15"/>
-    <circle cx="48" cy="48" r="22" fill="none" stroke={color} strokeWidth="0.7" opacity="0.1" strokeDasharray="3 4"/>
-    <line x1="48" y1="14" x2="48" y2="82" stroke={color} strokeWidth="0.5" opacity="0.08"/>
-    <line x1="14" y1="48" x2="82" y2="48" stroke={color} strokeWidth="0.5" opacity="0.08"/>
-    <text x="48" y="56" textAnchor="middle" fill={color} fontSize="28" opacity="0.8" fontFamily="serif" filter={`url(#gl-${color.replace('#','')})`}>{glyph}</text>
-    <circle cx="48" cy="48" r="26" fill="none" stroke={accent} strokeWidth="1.5" opacity="0.2" strokeDasharray="2 6"/>
-    <circle cx="48" cy="20" r="2" fill={color} opacity="0.4"/>
-    <circle cx="48" cy="76" r="2" fill={color} opacity="0.4"/>
-    <circle cx="20" cy="48" r="2" fill={color} opacity="0.4"/>
-    <circle cx="76" cy="48" r="2" fill={color} opacity="0.4"/>
+    <circle cx="48" cy="48" r="38" fill={`url(#sg-${color.replace("#", "")})`} />
+    <circle cx="48" cy="48" r="30" fill="none" stroke={color} strokeWidth="1" opacity="0.15" />
+    <circle
+      cx="48"
+      cy="48"
+      r="22"
+      fill="none"
+      stroke={color}
+      strokeWidth="0.7"
+      opacity="0.1"
+      strokeDasharray="3 4"
+    />
+    <line x1="48" y1="14" x2="48" y2="82" stroke={color} strokeWidth="0.5" opacity="0.08" />
+    <line x1="14" y1="48" x2="82" y2="48" stroke={color} strokeWidth="0.5" opacity="0.08" />
+    <text
+      x="48"
+      y="56"
+      textAnchor="middle"
+      fill={color}
+      fontSize="28"
+      opacity="0.8"
+      fontFamily="serif"
+      filter={`url(#gl-${color.replace("#", "")})`}
+    >
+      {glyph}
+    </text>
+    <circle
+      cx="48"
+      cy="48"
+      r="26"
+      fill="none"
+      stroke={accent}
+      strokeWidth="1.5"
+      opacity="0.2"
+      strokeDasharray="2 6"
+    />
+    <circle cx="48" cy="20" r="2" fill={color} opacity="0.4" />
+    <circle cx="48" cy="76" r="2" fill={color} opacity="0.4" />
+    <circle cx="20" cy="48" r="2" fill={color} opacity="0.4" />
+    <circle cx="76" cy="48" r="2" fill={color} opacity="0.4" />
   </svg>
 );
 
 const ELEMENT_SIGILS: Record<string, { color: string; glyph: string; accent: string }> = {
-  fire:    { color: "#ff5e2a", glyph: "🜂", accent: "#ffe066" },
-  chaos:   { color: "#e85d3a", glyph: "⛧", accent: "#ff9040" },
-  water:   { color: "#38b8f5", glyph: "🜄", accent: "#80d4ff" },
+  fire: { color: "#ff5e2a", glyph: "🜂", accent: "#ffe066" },
+  chaos: { color: "#e85d3a", glyph: "⛧", accent: "#ff9040" },
+  water: { color: "#38b8f5", glyph: "🜄", accent: "#80d4ff" },
   digital: { color: "#38b8f5", glyph: "⎔", accent: "#60e0ff" },
   stellar: { color: "#6db8e8", glyph: "✦", accent: "#a0d8ff" },
-  nature:  { color: "#3ed97a", glyph: "🜃", accent: "#80ffb0" },
-  primal:  { color: "#d4843a", glyph: "◭", accent: "#e8a060" },
-  light:   { color: "#ffe066", glyph: "☉", accent: "#fff4b0" },
-  divine:  { color: "#e8b830", glyph: "✝", accent: "#ffe880" },
-  arcane:  { color: "#d4a030", glyph: "⊛", accent: "#f0d070" },
-  dark:    { color: "#9b6dff", glyph: "☽", accent: "#c4a0ff" },
-  void:    { color: "#9b6dff", glyph: "◎", accent: "#b080ff" },
-  death:   { color: "#c44f6f", glyph: "☠", accent: "#e87090" },
-  dread:   { color: "#6dc4c4", glyph: "⛥", accent: "#90e0e0" },
+  nature: { color: "#3ed97a", glyph: "🜃", accent: "#80ffb0" },
+  primal: { color: "#d4843a", glyph: "◭", accent: "#e8a060" },
+  light: { color: "#ffe066", glyph: "☉", accent: "#fff4b0" },
+  divine: { color: "#e8b830", glyph: "✝", accent: "#ffe880" },
+  arcane: { color: "#d4a030", glyph: "⊛", accent: "#f0d070" },
+  dark: { color: "#9b6dff", glyph: "☽", accent: "#c4a0ff" },
+  void: { color: "#9b6dff", glyph: "◎", accent: "#b080ff" },
+  death: { color: "#c44f6f", glyph: "☠", accent: "#e87090" },
+  dread: { color: "#6dc4c4", glyph: "⛥", accent: "#90e0e0" },
 };
 
 const getElementSprite = (el: string) => {
-  const sig = ELEMENT_SIGILS[el?.toLowerCase()] ?? { color: "#c9a84c", glyph: "◆", accent: "#e0c870" };
+  const sig = ELEMENT_SIGILS[el?.toLowerCase()] ?? {
+    color: "#c9a84c",
+    glyph: "◆",
+    accent: "#e0c870",
+  };
   return <ElementSigil color={sig.color} glyph={sig.glyph} accent={sig.accent} />;
 };
 
 const getElementColor = (el: string) => {
   switch (el?.toLowerCase()) {
-    case "fire": case "chaos": return "#e85d3a";
-    case "water": case "digital": return "#38b8f5";
-    case "nature": case "primal": return "#3ed97a";
-    case "light": case "divine": return "#e8b830";
-    case "dark": case "void": return "#9b6dff";
-    case "death": case "dread": return "#c44f6f";
-    case "arcane": return "#d4a030";
-    case "stellar": return "#6db8e8";
-    default: return "#c9a84c";
+    case "fire":
+    case "chaos":
+      return "#e85d3a";
+    case "water":
+    case "digital":
+      return "#38b8f5";
+    case "nature":
+    case "primal":
+      return "#3ed97a";
+    case "light":
+    case "divine":
+      return "#e8b830";
+    case "dark":
+    case "void":
+      return "#9b6dff";
+    case "death":
+    case "dread":
+      return "#c44f6f";
+    case "arcane":
+      return "#d4a030";
+    case "stellar":
+      return "#6db8e8";
+    default:
+      return "#c9a84c";
   }
 };
 
@@ -119,49 +178,97 @@ function CardFrame({ color, rarity, owned }: { color: string; rarity: string; ow
         <defs>
           <filter id={`fg-${rarity}`} x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="1.2" result="blur" />
-            <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
           </filter>
         </defs>
       )}
 
       {/* Outer border */}
-      <rect x="1.5" y="1.5" width="72" height="97" rx="0"
-        fill="none" stroke={color} strokeWidth="1" opacity={opacity * 0.5} />
+      <rect
+        x="1.5"
+        y="1.5"
+        width="72"
+        height="97"
+        rx="0"
+        fill="none"
+        stroke={color}
+        strokeWidth="1"
+        opacity={opacity * 0.5}
+      />
 
       {/* Inner inset line */}
-      <rect x="4" y="4" width="67" height="92" rx="0"
-        fill="none" stroke={color} strokeWidth="0.4" opacity={opacity * 0.3} />
+      <rect
+        x="4"
+        y="4"
+        width="67"
+        height="92"
+        rx="0"
+        fill="none"
+        stroke={color}
+        strokeWidth="0.4"
+        opacity={opacity * 0.3}
+      />
 
       {/* Top-left bracket */}
-      <path d={`M 1.5 ${B + 2} L 1.5 1.5 L ${B + 2} 1.5`}
-        fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="square" opacity={opacity}
-        filter={isEpic ? `url(#fg-${rarity})` : undefined} />
+      <path
+        d={`M 1.5 ${B + 2} L 1.5 1.5 L ${B + 2} 1.5`}
+        fill="none"
+        stroke={color}
+        strokeWidth="2.5"
+        strokeLinecap="square"
+        opacity={opacity}
+        filter={isEpic ? `url(#fg-${rarity})` : undefined}
+      />
 
       {/* Top-right bracket */}
-      <path d={`M ${73 - B} 1.5 L 73.5 1.5 L 73.5 ${B + 2}`}
-        fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="square" opacity={opacity}
-        filter={isEpic ? `url(#fg-${rarity})` : undefined} />
+      <path
+        d={`M ${73 - B} 1.5 L 73.5 1.5 L 73.5 ${B + 2}`}
+        fill="none"
+        stroke={color}
+        strokeWidth="2.5"
+        strokeLinecap="square"
+        opacity={opacity}
+        filter={isEpic ? `url(#fg-${rarity})` : undefined}
+      />
 
       {/* Bottom-left bracket */}
-      <path d={`M 1.5 ${98 - B} L 1.5 98.5 L ${B + 2} 98.5`}
-        fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="square" opacity={opacity}
-        filter={isEpic ? `url(#fg-${rarity})` : undefined} />
+      <path
+        d={`M 1.5 ${98 - B} L 1.5 98.5 L ${B + 2} 98.5`}
+        fill="none"
+        stroke={color}
+        strokeWidth="2.5"
+        strokeLinecap="square"
+        opacity={opacity}
+        filter={isEpic ? `url(#fg-${rarity})` : undefined}
+      />
 
       {/* Bottom-right bracket */}
-      <path d={`M ${73 - B} 98.5 L 73.5 98.5 L 73.5 ${98 - B}`}
-        fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="square" opacity={opacity}
-        filter={isEpic ? `url(#fg-${rarity})` : undefined} />
+      <path
+        d={`M ${73 - B} 98.5 L 73.5 98.5 L 73.5 ${98 - B}`}
+        fill="none"
+        stroke={color}
+        strokeWidth="2.5"
+        strokeLinecap="square"
+        opacity={opacity}
+        filter={isEpic ? `url(#fg-${rarity})` : undefined}
+      />
 
       {/* Top-center diamond */}
-      <polygon points="37.5,1 41,5.5 37.5,10 34,5.5"
-        fill={color} opacity={opacity} />
+      <polygon points="37.5,1 41,5.5 37.5,10 34,5.5" fill={color} opacity={opacity} />
 
       {/* Bracket endpoint dots */}
       {[
-        [1.5, B + 2], [B + 2, 1.5],
-        [73 - B, 1.5], [73.5, B + 2],
-        [1.5, 98 - B], [B + 2, 98.5],
-        [73 - B, 98.5], [73.5, 98 - B],
+        [1.5, B + 2],
+        [B + 2, 1.5],
+        [73 - B, 1.5],
+        [73.5, B + 2],
+        [1.5, 98 - B],
+        [B + 2, 98.5],
+        [73 - B, 98.5],
+        [73.5, 98 - B],
       ].map(([cx, cy], i) => (
         <circle key={i} cx={cx} cy={cy} r="1.5" fill={color} opacity={opacity * 0.7} />
       ))}
@@ -192,7 +299,19 @@ function PillBtn({
   );
 }
 
-function ImageOrSprite({ url, name, element, owned, color }: { url?: string|null, name: string, element: string, owned: boolean, color: string }) {
+function ImageOrSprite({
+  url,
+  name,
+  element,
+  owned,
+  color,
+}: {
+  url?: string | null;
+  name: string;
+  element: string;
+  owned: boolean;
+  color: string;
+}) {
   const [error, setError] = useState(false);
   const elColor = getElementColor(element);
 
@@ -226,9 +345,7 @@ function ImageOrSprite({ url, name, element, owned, color }: { url?: string|null
     <div
       className="w-full h-full flex items-center justify-center p-2"
       style={{
-        filter: owned
-          ? `drop-shadow(0 0 6px ${color}80)`
-          : `grayscale(1) brightness(0.4)`,
+        filter: owned ? `drop-shadow(0 0 6px ${color}80)` : `grayscale(1) brightness(0.4)`,
       }}
     >
       {getElementSprite(element)}
@@ -249,7 +366,6 @@ function CompendiumPage() {
   const [selectedMonster, setSelectedMonster] = useState<any | null>(null);
   const [sortBy, setSortBy] = useState<"bestiary" | "rarity" | "element" | "name">("bestiary");
 
-
   const myMonstersMap = useMemo(() => {
     const map = new Map();
     for (const um of myMonstersQ.data?.userMonsters ?? []) {
@@ -269,13 +385,18 @@ function CompendiumPage() {
       list = list.filter((m: { name: string }) => m.name.toLowerCase().includes(q));
     }
     if (sortBy === "rarity") {
-      list = [...list].sort((a: { rarity: string }, b: { rarity: string }) =>
-        (RARITY_ORDER[b.rarity as Rarity] ?? 0) - (RARITY_ORDER[a.rarity as Rarity] ?? 0)
+      list = [...list].sort(
+        (a: { rarity: string }, b: { rarity: string }) =>
+          (RARITY_ORDER[b.rarity as Rarity] ?? 0) - (RARITY_ORDER[a.rarity as Rarity] ?? 0),
       );
     } else if (sortBy === "name") {
-      list = [...list].sort((a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name));
+      list = [...list].sort((a: { name: string }, b: { name: string }) =>
+        a.name.localeCompare(b.name),
+      );
     } else if (sortBy === "element") {
-      list = [...list].sort((a: { element: string }, b: { element: string }) => a.element.localeCompare(b.element));
+      list = [...list].sort((a: { element: string }, b: { element: string }) =>
+        a.element.localeCompare(b.element),
+      );
     }
     return list;
   }, [monstersQ.data, realmFilter, rarityFilter, search, sortBy]);
@@ -305,17 +426,30 @@ function CompendiumPage() {
     <AppShell profile={profileQ.data?.profile as React.ComponentProps<typeof AppShell>["profile"]}>
       <div className="w-full flex flex-col relative z-10">
         <header className="mb-4 relative z-20">
-          <div className="w-16 h-16 flex items-center justify-center mb-3" style={{ border: "2px solid rgba(200,154,62,0.3)", borderRadius: 0, background: "rgba(200,154,62,0.06)", boxShadow: "3px 3px 0 rgba(0,0,0,0.4)" }}>
+          <div
+            className="w-16 h-16 flex items-center justify-center mb-3"
+            style={{
+              border: "2px solid rgba(200,154,62,0.3)",
+              borderRadius: 0,
+              background: "rgba(200,154,62,0.06)",
+              boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
+            }}
+          >
             <Icon name="sparkle" size={28} color="#c89a3e" />
           </div>
           <h1
             className="text-3xl font-bold uppercase mb-1"
-            style={{ fontFamily: "var(--ss-font-pixel)", color: "#b8860b", letterSpacing: "0.08em" }}
+            style={{
+              fontFamily: "var(--ss-font-pixel)",
+              color: "#b8860b",
+              letterSpacing: "0.08em",
+            }}
           >
             COMPENDIUM
           </h1>
           <p className="text-sm max-w-xl font-serif" style={{ color: "var(--ink-secondary)" }}>
-            Explore the Codex of all known entities. Click any monster to view its lore, stats, and abilities.
+            Explore the Codex of all known entities. Click any monster to view its lore, stats, and
+            abilities.
           </p>
         </header>
 
@@ -325,27 +459,53 @@ function CompendiumPage() {
           const owned = myMonstersMap.size;
           const pct = total > 0 ? (owned / total) * 100 : 0;
           const rank =
-            pct >= 100 ? { label: "Arch-Collector", color: "#ff9d00" } :
-            pct >= 75  ? { label: "Sage",            color: "#9b6dff" } :
-            pct >= 50  ? { label: "Scholar",         color: "#38b8f5" } :
-            pct >= 25  ? { label: "Explorer",        color: "#3ed97a" } :
-                         { label: "Wanderer",        color: "#8b7355" };
+            pct >= 100
+              ? { label: "Arch-Collector", color: "#ff9d00" }
+              : pct >= 75
+                ? { label: "Sage", color: "#9b6dff" }
+                : pct >= 50
+                  ? { label: "Scholar", color: "#38b8f5" }
+                  : pct >= 25
+                    ? { label: "Explorer", color: "#3ed97a" }
+                    : { label: "Wanderer", color: "#8b7355" };
           return (
             <motion.div
               initial={{ opacity: 0, y: -6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               className="relative z-20 mb-5 p-4 border"
-              style={{ borderColor: "rgba(200,154,62,0.25)", borderRadius: 0, background: "linear-gradient(135deg, rgba(200,154,62,0.08), rgba(180,140,80,0.04))", boxShadow: "3px 3px 0 rgba(0,0,0,0.3)" }}
+              style={{
+                borderColor: "rgba(200,154,62,0.25)",
+                borderRadius: 0,
+                background: "linear-gradient(135deg, rgba(200,154,62,0.08), rgba(180,140,80,0.04))",
+                boxShadow: "3px 3px 0 rgba(0,0,0,0.3)",
+              }}
             >
               <div className="flex items-end justify-between mb-2">
                 <div>
-                  <span className="text-3xl font-bold font-serif" style={{ color: "var(--ink-primary)" }}>{owned}</span>
-                  <span className="text-sm font-serif ml-1.5" style={{ color: "var(--ink-secondary)" }}>/ {total} discovered</span>
+                  <span
+                    className="text-3xl font-bold font-serif"
+                    style={{ color: "var(--ink-primary)" }}
+                  >
+                    {owned}
+                  </span>
+                  <span
+                    className="text-sm font-serif ml-1.5"
+                    style={{ color: "var(--ink-secondary)" }}
+                  >
+                    / {total} discovered
+                  </span>
                 </div>
                 <span
                   className="text-[9px] uppercase font-bold px-2.5 py-1 border"
-                  style={{ fontFamily: "var(--ss-font-pixel)", color: rank.color, borderColor: `${rank.color}40`, background: `${rank.color}12`, borderRadius: 0, letterSpacing: "0.04em" }}
+                  style={{
+                    fontFamily: "var(--ss-font-pixel)",
+                    color: rank.color,
+                    borderColor: `${rank.color}40`,
+                    background: `${rank.color}12`,
+                    borderRadius: 0,
+                    letterSpacing: "0.04em",
+                  }}
                 >
                   {rank.label}
                 </span>
@@ -373,13 +533,21 @@ function CompendiumPage() {
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search monsters…"
                 className="flex-1 px-3 py-2 bg-white border border-[rgba(200,154,62,0.25)] text-[var(--ink-primary)] placeholder-[#8b7355]/50 focus:outline-none focus:border-[#c89a3e] transition-all text-sm"
-                style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", boxShadow: "2px 2px 0 rgba(0,0,0,0.2)" }}
+                style={{
+                  borderRadius: 0,
+                  fontFamily: "var(--ss-font-pixel)",
+                  boxShadow: "2px 2px 0 rgba(0,0,0,0.2)",
+                }}
               />
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
                 className="px-2 py-2 bg-white border border-[rgba(200,154,62,0.25)] text-[var(--ink-primary)] focus:outline-none focus:border-[#c89a3e] transition-all text-xs"
-                style={{ borderRadius: 0, fontFamily: "var(--ss-font-pixel)", boxShadow: "2px 2px 0 rgba(0,0,0,0.2)" }}
+                style={{
+                  borderRadius: 0,
+                  fontFamily: "var(--ss-font-pixel)",
+                  boxShadow: "2px 2px 0 rgba(0,0,0,0.2)",
+                }}
               >
                 <option value="bestiary">Bestiary #</option>
                 <option value="rarity">Rarity ↓</option>
@@ -402,7 +570,10 @@ function CompendiumPage() {
               <PillBtn active={rarityFilter === "epic"} onClick={() => setRarityFilter("epic")}>
                 Epic
               </PillBtn>
-              <PillBtn active={rarityFilter === "legendary"} onClick={() => setRarityFilter("legendary")}>
+              <PillBtn
+                active={rarityFilter === "legendary"}
+                onClick={() => setRarityFilter("legendary")}
+              >
                 Legend
               </PillBtn>
               <PillBtn active={rarityFilter === "mythic"} onClick={() => setRarityFilter("mythic")}>
@@ -432,7 +603,16 @@ function CompendiumPage() {
         <div className="relative z-20">
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2.5">
             {filtered.map(
-              (m: { id: string; art_url?: string | null; name: string; rarity: string; element: string }, i: number) => {
+              (
+                m: {
+                  id: string;
+                  art_url?: string | null;
+                  name: string;
+                  rarity: string;
+                  element: string;
+                },
+                i: number,
+              ) => {
                 const ownsList = myMonstersMap.get(m.id) || [];
                 const owned = ownsList.length > 0;
                 const color = RARITY_COLOR[m.rarity as keyof typeof RARITY_COLOR] || "#c9a84c";
@@ -446,7 +626,9 @@ function CompendiumPage() {
                     onClick={() => {
                       setSelectedMonster(m);
                       if (owned) {
-                        const highest = [...ownsList].sort((a: any, b: any) => b.level - a.level)[0];
+                        const highest = [...ownsList].sort(
+                          (a: any, b: any) => b.level - a.level,
+                        )[0];
                         setSelectedUM(highest);
                       } else {
                         setSelectedUM(null);
@@ -470,7 +652,13 @@ function CompendiumPage() {
                     {/* Monster art area */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-1.5">
                       <div className="flex-1 w-full flex items-center justify-center">
-                        <ImageOrSprite url={m.art_url} name={m.name} element={m.element} owned={owned} color={color} />
+                        <ImageOrSprite
+                          url={m.art_url}
+                          name={m.name}
+                          element={m.element}
+                          owned={owned}
+                          color={color}
+                        />
                       </div>
                       <span
                         className="text-[11px] font-bold text-center w-full truncate px-1 pb-1 relative z-10 uppercase tracking-wider"
@@ -484,22 +672,34 @@ function CompendiumPage() {
                     {owned && (
                       <div
                         className="absolute top-1 left-1 text-[9px] uppercase font-bold px-1 py-0.5 border z-10 leading-none"
-                        style={{ fontFamily: "var(--ss-font-pixel)", borderRadius: 0, color, borderColor: `${color}50`, background: `rgba(0,0,0,0.5)` }}
+                        style={{
+                          fontFamily: "var(--ss-font-pixel)",
+                          borderRadius: 0,
+                          color,
+                          borderColor: `${color}50`,
+                          background: `rgba(0,0,0,0.5)`,
+                        }}
                       >
                         {m.rarity}
                       </div>
                     )}
                     {ownsList.length > 1 && (
-                      <div className="absolute bottom-6 right-1 text-[9px] bg-black/60 border border-[#c89a3e]/30 text-[#f0e8d8] px-1 font-bold z-10" style={{ fontFamily: "var(--ss-font-pixel)", borderRadius: 0 }}>
+                      <div
+                        className="absolute bottom-6 right-1 text-[9px] bg-black/60 border border-[#c89a3e]/30 text-[#f0e8d8] px-1 font-bold z-10"
+                        style={{ fontFamily: "var(--ss-font-pixel)", borderRadius: 0 }}
+                      >
                         x{ownsList.length}
                       </div>
                     )}
 
                     {/* Unowned overlay pattern */}
                     {!owned && (
-                      <div className="absolute inset-0 rounded-xl" style={{
-                        background: `radial-gradient(circle at 50% 40%, transparent 20%, ${elColor}12 100%)`,
-                      }} />
+                      <div
+                        className="absolute inset-0 rounded-xl"
+                        style={{
+                          background: `radial-gradient(circle at 50% 40%, transparent 20%, ${elColor}12 100%)`,
+                        }}
+                      />
                     )}
                   </motion.div>
                 );
