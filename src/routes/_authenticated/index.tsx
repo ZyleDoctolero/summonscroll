@@ -29,7 +29,8 @@ import {
   completeOnboarding,
   listMyMonsters,
 } from "@/lib/game/supabase-api";
-import type { TaskType } from "@/lib/game/constants";
+import { localTodayISO, type TaskType } from "@/lib/game/constants";
+import type { TaskInput } from "@/lib/game/tasks-client";
 import { useWhisperFeed } from "@/hooks/useWhisperFeed";
 
 export const Route = createFileRoute("/_authenticated/")({
@@ -58,7 +59,8 @@ function HubPage() {
     refetchOnWindowFocus: false,
   });
 
-  const [tab, setTab] = useState<TaskType | "vice">("habit");
+  const [tab, setTab] = useState<TaskType | "today" | "vice">("today");
+  const [quickTitle, setQuickTitle] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editing, setEditing] = useState<Task | null>(null);
   const [deathTick, setDeathTick] = useState(0);
@@ -94,16 +96,29 @@ function HubPage() {
     [tasksQ.data?.tasks],
   );
 
+  const todayDow = new Date().getDay();
+  const todayLocal = localTodayISO();
+  const isRestingDaily = (t: Task) =>
+    t.type === "daily" && !(t.schedule_days ?? [0, 1, 2, 3, 4, 5, 6]).includes(todayDow);
+
   const filtered = useMemo(
     () =>
       tasks.filter((t) => {
+        if (tab === "today") {
+          // the "what do I need to do right now" view:
+          // dailies scheduled for today + todos due today or overdue
+          if (t.type === "daily") return !isRestingDaily(t);
+          if (t.type === "todo") return !t.completed && !!t.due_date && t.due_date <= todayLocal;
+          return false;
+        }
         if (tab === "vice")
           return t.type === "habit" && (t as { negative_enabled?: boolean }).negative_enabled;
         if (tab === "habit")
           return t.type === "habit" && (t as { positive_enabled?: boolean }).positive_enabled;
         return t.type === tab && t.category !== "side_quest";
       }),
-    [tasks, tab],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [tasks, tab, todayDow, todayLocal],
   );
 
   const sortedTasks = useMemo(() => {
@@ -120,13 +135,29 @@ function HubPage() {
     items.sort((a, b) => {
       if (a.is_starred && !b.is_starred) return -1;
       if (!a.is_starred && b.is_starred) return 1;
-      if (!a.completed && b.completed) return -1;
-      if (a.completed && !b.completed) return 1;
+      // actionable first, then resting dailies, then completed
+      const rank = (t: Task) => (t.completed ? 2 : isRestingDaily(t) ? 1 : 0);
+      if (rank(a) !== rank(b)) return rank(a) - rank(b);
+      if (tab === "today") {
+        // Today view reads like an agenda: timed items in clock order first
+        const tA = a.due_time ?? "99:99";
+        const tB = b.due_time ?? "99:99";
+        if (tA !== tB) return tA < tB ? -1 : 1;
+        const dA = a.due_date ?? "9999-12-31";
+        const dB = b.due_date ?? "9999-12-31";
+        if (dA !== dB) return dA < dB ? -1 : 1;
+      } else {
+        // earliest due date/time first; undated items last
+        const dueA = `${a.due_date ?? "9999-12-31"} ${a.due_time ?? "99:99"}`;
+        const dueB = `${b.due_date ?? "9999-12-31"} ${b.due_time ?? "99:99"}`;
+        if (dueA !== dueB) return dueA < dueB ? -1 : 1;
+      }
       const diffOrder: Record<string, number> = { hard: 0, medium: 1, easy: 2, trivial: 3 };
       return (diffOrder[a.difficulty] ?? 2) - (diffOrder[b.difficulty] ?? 2);
     });
     return items;
-  }, [filtered, questSearch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtered, questSearch, todayDow]);
 
   const scoreMut = useTaskScoring({
     setBusyIds,
@@ -137,23 +168,61 @@ function HubPage() {
     setActiveRealmPulse,
   });
 
+  const warnDropped = (dropped?: string[]) => {
+    if (dropped?.length) {
+      toast.warning(
+        `Saved, but this database is missing: ${dropped.join(", ")}. Run CATCHUP_TASKS.sql in the Supabase SQL editor to enable those fields.`,
+        { duration: 8000 },
+      );
+    }
+  };
+
   const createMut = useMutation({
     mutationFn: (v: TaskFormValue) => createTask(v),
-    onSuccess: () => {
+    onSuccess: (res) => {
+      warnDropped(res.droppedFields);
       qc.invalidateQueries({ queryKey: ["tasks"] });
       setDialogOpen(false);
     },
     onError: (e: Error) => toast.error(e.message),
   });
 
+  const quickAddMut = useMutation({
+    mutationFn: (v: TaskInput) => createTask(v),
+    onSuccess: (res) => {
+      warnDropped(res.droppedFields);
+      qc.invalidateQueries({ queryKey: ["tasks"] });
+      setQuickTitle("");
+      toast.success(`Logged: ${res.task?.title ?? "task"}`);
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
   const updateMut = useMutation({
     mutationFn: (v: { id: string; patch: Partial<TaskFormValue> }) => updateTask(v.id, v.patch),
-    onSuccess: () => {
+    onSuccess: (res) => {
+      warnDropped(res.droppedFields);
       qc.invalidateQueries({ queryKey: ["tasks"] });
       setDialogOpen(false);
       setEditing(null);
     },
+    onError: (e: Error) => toast.error(e.message),
   });
+
+  function quickAdd() {
+    const title = quickTitle.trim();
+    if (!title || quickAddMut.isPending) return;
+    const type: TaskType = tab === "today" ? "todo" : tab === "vice" ? "habit" : tab;
+    quickAddMut.mutate({
+      type,
+      title,
+      difficulty: "easy",
+      positive_enabled: true,
+      negative_enabled: tab === "vice",
+      // from the Today tab a quick task is something to do today
+      ...(tab === "today" ? { due_date: todayLocal } : {}),
+    });
+  }
 
   const deleteMut = useMutation({
     mutationFn: (id: string) => deleteTask(id),
@@ -294,11 +363,58 @@ function HubPage() {
             </button>
           </div>
 
+          {/* Quick add — log a task without opening the full dialog */}
+          <div className="px-4 pt-3">
+            <div className="relative flex gap-2">
+              <div className="relative flex-1">
+                <Icon
+                  name="plus"
+                  size={14}
+                  color="var(--gold-bright)"
+                  className="absolute left-3 top-1/2 -translate-y-1/2"
+                />
+                <input
+                  type="text"
+                  value={quickTitle}
+                  onChange={(e) => setQuickTitle(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      quickAdd();
+                    }
+                  }}
+                  placeholder={
+                    tab === "today"
+                      ? "Quick add for today — type and press Enter"
+                      : tab === "daily"
+                        ? "Quick add a daily duty — press Enter"
+                        : tab === "habit"
+                          ? "Quick add a habit — press Enter"
+                          : "Quick add a to-do — press Enter"
+                  }
+                  maxLength={120}
+                  className="ss-input w-full pl-9 text-sm"
+                  style={{ height: "44px" }}
+                />
+              </div>
+              {quickTitle.trim() && (
+                <button
+                  onClick={quickAdd}
+                  disabled={quickAddMut.isPending}
+                  className="ss-btn ss-btn-d-primary text-xs px-4 disabled:opacity-50"
+                  style={{ height: "44px" }}
+                >
+                  {quickAddMut.isPending ? "..." : "Add"}
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Search */}
           <div className="px-4 pt-3">
             <div className="relative">
               <Icon
-                name="target"
+                name="search"
                 size={14}
                 color="var(--ink-tertiary)"
                 className="absolute left-3 top-1/2 -translate-y-1/2"
@@ -321,6 +437,7 @@ function HubPage() {
           >
             {(
               [
+                { key: "today" as const, label: "Today" },
                 { key: "habit" as const, label: "Rites" },
                 { key: "daily" as const, label: "Duties" },
                 { key: "todo" as const, label: "Hunts" },
@@ -402,20 +519,26 @@ function HubPage() {
           <div className="p-4">
             {sortedTasks.length === 0 ? (
               <EmptyState
-                icon={tab === "habit" ? "morning" : tab === "daily" ? "morning" : "checklist"}
+                icon={
+                  tab === "today" || tab === "habit" || tab === "daily" ? "morning" : "checklist"
+                }
                 title={
                   questSearch
                     ? "No matching quests."
-                    : tab === "habit"
-                      ? "The board is empty."
-                      : tab === "daily"
-                        ? "No daily bounties."
-                        : "No pending requests."
+                    : tab === "today"
+                      ? "All clear for today."
+                      : tab === "habit"
+                        ? "The board is empty."
+                        : tab === "daily"
+                          ? "No daily bounties."
+                          : "No pending requests."
                 }
                 body={
                   questSearch
                     ? "Try a different search term."
-                    : "Issue a new quest to begin earning rewards."
+                    : tab === "today"
+                      ? "Type in the quick-add bar above to log something for today."
+                      : "Issue a new quest to begin earning rewards."
                 }
                 cta={
                   questSearch
@@ -441,6 +564,7 @@ function HubPage() {
                     <TaskCard
                       task={task}
                       busy={busyIds.has(task.id)}
+                      notToday={tab === "daily" && isRestingDaily(task)}
                       isTutorial={profile?.tutorial_directive_id === task.id}
                       onScore={(_, dir) => scoreMut.mutate({ id: task.id, direction: dir })}
                       onEdit={() => {
@@ -459,7 +583,7 @@ function HubPage() {
 
       <TaskFormDialog
         open={dialogOpen}
-        defaultType={tab === "vice" ? "habit" : tab}
+        defaultType={tab === "vice" ? "habit" : tab === "today" ? "todo" : tab}
         initial={editing ?? undefined}
         onClose={() => {
           setDialogOpen(false);

@@ -84,4 +84,37 @@ export function dowFromISO(iso: string): number {
   return new Date(iso + "T00:00:00Z").getUTCDay();
 }
 
+export function localTodayISO(): string {
+  // The user's wall-clock day — due dates and daily schedules are picked and
+  // read in local time, so comparisons must not use the UTC day key.
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+export type DueInfo = { label: string; tone: "overdue" | "today" | "future" };
+
+export function dueInfoFor(
+  dueDate: string | null | undefined,
+  dueTime: string | null | undefined,
+): DueInfo | null {
+  if (!dueDate) {
+    if (!dueTime) return null;
+    // time-only (e.g. a daily at 07:00) — always "today"
+    return { label: `at ${dueTime.slice(0, 5)}`, tone: "today" };
+  }
+  const today = localTodayISO();
+  const time = dueTime ? ` · ${dueTime.slice(0, 5)}` : "";
+  const diff = dayDiff(today, dueDate);
+  if (diff < 0) {
+    return { label: `Overdue ${-diff}d${time}`, tone: "overdue" };
+  }
+  if (diff === 0) {
+    return { label: `Due today${time}`, tone: "today" };
+  }
+  if (diff === 1) return { label: `Due tomorrow${time}`, tone: "future" };
+  const d = new Date(dueDate + "T00:00:00");
+  const label = d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  return { label: `Due ${label}${time}`, tone: "future" };
+}
+
 export const CURRENT_RELEASED_MAX = 150;

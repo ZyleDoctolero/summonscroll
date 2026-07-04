@@ -46,6 +46,11 @@ import {
   Home,
   TrendingUp,
   Battery,
+  MoreVertical,
+  ListChecks,
+  Calendar,
+  Clock,
+  Plus,
   type LucideIcon,
 } from "lucide-react";
 
@@ -110,6 +115,11 @@ const ICONS: Record<string, LucideIcon> = {
   user: User,
   pet: PawPrint,
   mount: Compass,
+  more: MoreVertical,
+  checklist: ListChecks,
+  calendar: Calendar,
+  clock: Clock,
+  plus: Plus,
 };
 
 export type IconName = keyof typeof ICONS;

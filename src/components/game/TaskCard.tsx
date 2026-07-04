@@ -1,6 +1,12 @@
 import React, { useState, useCallback } from "react";
 import { Icon } from "@/components/ui/Icon";
-import { valueColor, VALUE_COLOR_HEX, type Difficulty, type TaskType } from "@/lib/game/constants";
+import {
+  valueColor,
+  VALUE_COLOR_HEX,
+  dueInfoFor,
+  type Difficulty,
+  type TaskType,
+} from "@/lib/game/constants";
 import { FloatingTextContainer, type FloatingTextItem } from "./FloatingText";
 
 export type Task = {
@@ -19,6 +25,9 @@ export type Task = {
   tags?: string[];
   realm_id?: number | null;
   element?: string | null;
+  schedule_days?: number[];
+  due_date?: string | null;
+  due_time?: string | null;
 };
 
 const ELEMENT_COLOR: Record<string, string> = {
@@ -84,6 +93,7 @@ export const TaskCard = React.memo(function TaskCard({
   onDelete,
   busy,
   isTutorial = false,
+  notToday = false,
 }: {
   task: Task;
   onScore: (id: string, direction: "plus" | "minus" | "complete" | "uncomplete") => void;
@@ -91,6 +101,8 @@ export const TaskCard = React.memo(function TaskCard({
   onDelete: () => void;
   busy: boolean;
   isTutorial?: boolean;
+  /** Daily that is not scheduled for today — rendered resting/dimmed. */
+  notToday?: boolean;
 }) {
   const color = VALUE_COLOR_HEX[valueColor(Number(task.value))];
   const [open, setOpen] = useState(false);
@@ -100,6 +112,14 @@ export const TaskCard = React.memo(function TaskCard({
   const categoryIcon = task.category
     ? (CATEGORY_ICONS[task.category.toLowerCase()] ?? "target")
     : "target";
+
+  const dueInfo = task.type === "habit" ? null : dueInfoFor(task.due_date, task.due_time);
+  const dueColor =
+    dueInfo?.tone === "overdue"
+      ? "var(--danger)"
+      : dueInfo?.tone === "today"
+        ? "var(--gold-bright)"
+        : "var(--ink-tertiary)";
 
   const handleScore = useCallback(
     (dir: "plus" | "minus" | "complete" | "uncomplete") => {
@@ -149,7 +169,7 @@ export const TaskCard = React.memo(function TaskCard({
         borderLeftWidth: task.is_starred ? 6 : 4,
         borderLeftColor: task.is_starred ? "#fcd34d" : color,
         borderRadius: 0,
-        opacity: task.completed && task.type !== "habit" ? 0.55 : 1,
+        opacity: task.completed && task.type !== "habit" ? 0.55 : notToday ? 0.5 : 1,
         animation: isTutorial
           ? "tutorial-pulse 2s ease-in-out infinite"
           : justCompleted
@@ -318,6 +338,46 @@ export const TaskCard = React.memo(function TaskCard({
             )}
             <span className="ml-1">{DIFFICULTY_LABELS[task.difficulty] ?? task.difficulty}</span>
           </span>
+          {dueInfo && (
+            <span
+              className="flex items-center gap-1"
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                fontSize: 9,
+                padding: "1px 5px",
+                border: `1px solid ${dueColor}`,
+                color: dueColor,
+                background:
+                  dueInfo.tone === "overdue"
+                    ? "rgba(230,62,0,0.1)"
+                    : dueInfo.tone === "today"
+                      ? "rgba(200,154,62,0.1)"
+                      : "transparent",
+                borderRadius: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.04em",
+              }}
+            >
+              <Icon name={task.due_time ? "clock" : "calendar"} size={10} color={dueColor} />
+              {dueInfo.label}
+            </span>
+          )}
+          {notToday && (
+            <span
+              style={{
+                fontFamily: "var(--ss-font-pixel)",
+                fontSize: 9,
+                padding: "1px 5px",
+                border: "1px solid rgba(180,150,100,0.3)",
+                color: "var(--ink-tertiary)",
+                borderRadius: 0,
+                textTransform: "uppercase",
+                letterSpacing: "0.04em",
+              }}
+            >
+              Resting — not due today
+            </span>
+          )}
           {task.streak > 0 && (
             <span
               className="flex items-center gap-1"

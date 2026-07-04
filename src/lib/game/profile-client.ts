@@ -95,10 +95,40 @@ async function runCronIfNeeded(userId: string, profile: Record<string, unknown>)
 
   if (error) {
     console.error("Cron Error:", error);
-    return { ran: false, died: false, missedDailies: 0, hpLost: 0 };
+    // The edge function isn't deployed on every environment. Without a
+    // fallback, dailies stay checked forever and the tracker is unusable —
+    // so do the essential part of the rollover client-side: uncheck dailies
+    // completed on a previous day and stamp last_cron_date. (Missed-daily HP
+    // damage is skipped here; the edge function owns punishment logic.)
+    return runLocalRollover(userId, today);
   }
 
   return data;
+}
+
+async function runLocalRollover(userId: string, today: string) {
+  try {
+    const { error: taskErr } = await supabase
+      .from("tasks")
+      .update({ completed: false })
+      .eq("user_id", userId)
+      .eq("type", "daily")
+      .eq("completed", true)
+      // NULL never matches .neq(), so include never-stamped rows explicitly
+      .or(`last_completed_date.is.null,last_completed_date.neq.${today}`);
+    if (taskErr) throw taskErr;
+
+    const { error: profErr } = await supabase
+      .from("profiles")
+      .update({ last_cron_date: today })
+      .eq("id", userId);
+    if (profErr) throw profErr;
+
+    return { ran: true, died: false, missedDailies: 0, hpLost: 0, fallback: true };
+  } catch (e) {
+    console.error("Local rollover failed:", e);
+    return { ran: false, died: false, missedDailies: 0, hpLost: 0 };
+  }
 }
 
 export async function getFullProfile() {

@@ -25,6 +25,8 @@ export type TaskFormValue = {
   tags: string[];
   realm_id: number | null;
   element: string | null;
+  due_date: string | null;
+  due_time: string | null;
 };
 
 const ELEMENT_OPTIONS: { key: string; label: string; color: string; icon: string }[] = [
@@ -61,6 +63,8 @@ export function TaskFormDialog({
     tags: [],
     realm_id: null,
     element: null,
+    due_date: null,
+    due_time: null,
   });
   const [tagsInput, setTagsInput] = useState("");
   const [saving, setSaving] = useState(false);
@@ -85,6 +89,8 @@ export function TaskFormDialog({
       tags: initial?.tags ?? [],
       realm_id: initial?.realm_id ?? null,
       element: (initial as { element?: string | null })?.element ?? null,
+      due_date: initial?.due_date ?? null,
+      due_time: initial?.due_time ? initial.due_time.slice(0, 5) : null,
     });
     setTagsInput((initial?.tags ?? []).join(", "));
   }, [open, initial, defaultType]);
@@ -100,7 +106,13 @@ export function TaskFormDialog({
         .split(",")
         .map((t) => t.trim())
         .filter(Boolean);
-      await onSubmit({ ...v, tags: finalTags });
+      await onSubmit({
+        ...v,
+        tags: finalTags,
+        // habits have no schedule; dailies recur so a fixed date makes no sense
+        due_date: v.type === "todo" ? v.due_date : null,
+        due_time: v.type === "habit" ? null : v.due_time,
+      });
     } finally {
       setSaving(false);
     }
@@ -160,6 +172,33 @@ export function TaskFormDialog({
             autoFocus
           />
         </Field>
+
+        {v.type !== "habit" && (
+          <div className="flex gap-2">
+            {v.type === "todo" && (
+              <div className="flex-1">
+                <Field label="Due date (optional)">
+                  <input
+                    type="date"
+                    className="ss-input"
+                    value={v.due_date ?? ""}
+                    onChange={(e) => setV({ ...v, due_date: e.target.value || null })}
+                  />
+                </Field>
+              </div>
+            )}
+            <div className="flex-1">
+              <Field label="At time (optional)">
+                <input
+                  type="time"
+                  className="ss-input"
+                  value={v.due_time ?? ""}
+                  onChange={(e) => setV({ ...v, due_time: e.target.value || null })}
+                />
+              </Field>
+            </div>
+          </div>
+        )}
 
         <Field label="Category (optional)">
           <input
