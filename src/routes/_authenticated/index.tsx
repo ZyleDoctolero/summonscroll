@@ -305,7 +305,7 @@ function HubPage() {
       {/* Inline Hub Content */}
       <div className="relative z-10 p-4 md:p-6 max-w-5xl mx-auto pb-28">
         {/* Tethered Monster + Utilities Row */}
-        <div className="flex items-start gap-4 mb-6">
+        <div className="flex flex-wrap items-start gap-4 mb-6">
           {/* Tethered Monster Compact */}
           <div className="flex items-center gap-3 flex-1 min-w-0">
             {tetheredUm ? (
@@ -359,7 +359,7 @@ function HubPage() {
           </div>
 
           {/* Compact Utilities */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex flex-wrap items-center gap-2">
             <Compass
               onOpenMorning={() => setShowMorning(true)}
               onOpenEvening={() => setShowEvening(true)}

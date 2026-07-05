@@ -91,13 +91,14 @@ export function SoulResonanceTimer({
 
   return (
     <div
-      className={`p-6 rounded-lg system-panel relative overflow-hidden transition-colors ${
+      className={`p-4 relative overflow-hidden transition-colors border-2 bg-[var(--bg-panel)] ${
         isFailed
-          ? "border-red-500 shadow-[0_0_20px_rgba(255,0,60,0.3)]"
+          ? "border-[var(--danger)]"
           : isActive
-            ? "border-[#c89a3e] shadow-[0_0_20px_rgba(200,154,62,0.2)]"
-            : "border-[#b5a28a]/30"
+            ? "border-[var(--gold-bright)]"
+            : "border-[rgba(200,154,62,0.25)]"
       }`}
+      style={{ borderRadius: 0, boxShadow: "3px 3px 0 rgba(44,31,20,0.3)" }}
     >
       {/* Background Progress Bar */}
       <motion.div
@@ -107,24 +108,27 @@ export function SoulResonanceTimer({
         transition={{ duration: 1, ease: "linear" }}
       />
 
-      <div className="flex flex-col items-center justify-center space-y-4">
-        <h3 className="text-sm font-mono tracking-widest text-[var(--ink-tertiary)] uppercase">
+      <div className="flex flex-col items-center justify-center space-y-2">
+        <h3
+          className="text-[10px] tracking-widest uppercase"
+          style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}
+        >
           Soul Resonance
         </h3>
 
         <div
-          className={`text-5xl font-black font-mono tracking-wider ${
+          className={`text-3xl font-black font-mono tracking-wider ${
             isFailed
-              ? "text-red-500"
+              ? "text-[var(--danger)]"
               : isActive
-                ? "text-[#c89a3e] drop-shadow-[0_0_10px_rgba(200,154,62,0.3)]"
+                ? "text-[var(--gold-glow)]"
                 : "text-[var(--ink-secondary)]"
           }`}
         >
           {formatTime(timeLeft)}
         </div>
 
-        <div className="text-xs font-mono text-[var(--ink-tertiary)] h-4">
+        <div className="text-[10px] font-mono text-[var(--ink-tertiary)] h-4">
           {monsterId ? `Tethered: [${monsterName}]` : "Awaiting Soul Tether..."}
         </div>
 
@@ -133,7 +137,7 @@ export function SoulResonanceTimer({
           variant={isActive ? "destructive" : "default"}
           className={`w-full font-mono tracking-widest ${
             !isActive && !isFailed
-              ? "bg-[#c89a3e] text-white hover:bg-[#b8860b] border border-[#c89a3e]"
+              ? "bg-[var(--gold-bright)] text-[var(--ink-primary)] hover:bg-[#b8860b] border border-[var(--gold-glow)]"
               : ""
           }`}
         >
