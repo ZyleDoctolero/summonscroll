@@ -132,7 +132,7 @@ export function TaskFormDialog({
       >
         <h2
           className="font-bold font-['Cinzel'] text-base mb-3"
-          style={{ color: "var(--gold-bright)", letterSpacing: "0.1em" }}
+          style={{ color: "var(--gold-ink)", letterSpacing: "0.1em" }}
         >
           {initial ? "EDIT DIRECTIVE" : "NEW DIRECTIVE"}
         </h2>
@@ -262,7 +262,7 @@ export function TaskFormDialog({
                 style={{
                   fontFamily: "var(--ss-font-pixel)",
                   background: v.difficulty === d ? "rgba(200,154,62,0.2)" : "transparent",
-                  color: v.difficulty === d ? "var(--gold-bright)" : "var(--ink-tertiary)",
+                  color: v.difficulty === d ? "var(--ink-primary)" : "var(--ink-tertiary)",
                   borderRight: i < 3 ? "1px solid rgba(200,154,62,0.2)" : "none",
                   letterSpacing: "0.04em",
                 }}

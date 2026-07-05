@@ -165,7 +165,7 @@ function AltarPage() {
             className="text-2xl font-bold mb-8"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "var(--gold-bright)",
+              color: "var(--gold-ink)",
               letterSpacing: "0.08em",
             }}
           >
@@ -200,7 +200,13 @@ function AltarPage() {
                   >
                     🔮 Ritual Incubation
                   </span>
-                  <span style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 9, color: elColor }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--ss-font-pixel)",
+                      fontSize: 9,
+                      color: "var(--ink-secondary)",
+                    }}
+                  >
                     {days}/7 days
                   </span>
                 </div>
@@ -263,7 +269,7 @@ function AltarPage() {
                     <div className="absolute left-0 top-0 bottom-0 w-2 bg-[var(--gold-bright)] shadow-[0_0_15px_#d4af3f]" />
                   )}
                   <span
-                    className={`font-serif font-bold tracking-widest uppercase text-sm ${isActive ? "text-[var(--gold-bright)]" : "text-[var(--ink-tertiary)] group-hover:text-[var(--gold-bright)]"}`}
+                    className={`font-serif font-bold tracking-widest uppercase text-sm ${isActive ? "text-[var(--gold-ink)]" : "text-[var(--ink-tertiary)] group-hover:text-[var(--gold-ink)]"}`}
                   >
                     {b.name}
                   </span>
@@ -304,7 +310,7 @@ function AltarPage() {
                     <h2 className="text-5xl md:text-7xl font-serif font-bold italic tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#3d2e1e] to-[#8b7355] drop-shadow-[0_0_30px_rgba(200,154,62,0.2)]">
                       {selectedBanner.name}
                     </h2>
-                    <p className="text-xl md:text-2xl mt-4 text-[#c89a3e] tracking-[0.2em] font-serif">
+                    <p className="text-xl md:text-2xl mt-4 text-[var(--gold-ink)] tracking-[0.2em] font-serif">
                       {selectedBanner.realms?.name ?? "ALL REALMS ALLOWED"}
                     </p>
                   </motion.div>
@@ -326,7 +332,7 @@ function AltarPage() {
                       className="text-[9px] uppercase font-bold"
                       style={{
                         fontFamily: "var(--ss-font-pixel)",
-                        color: "var(--ink-on-dark-muted)",
+                        color: "var(--ink-on-dark)",
                         letterSpacing: "0.06em",
                       }}
                     >

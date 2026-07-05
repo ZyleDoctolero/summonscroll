@@ -24,8 +24,8 @@ export const Route = createFileRoute("/_authenticated/quests")({
 
 const TYPE_LABELS: Record<GoalType, { label: string; days: number; hp: number; color: string }> = {
   quarterly: { label: "Quarterly Boss", days: 90, hp: 10000, color: "var(--danger)" },
-  monthly: { label: "Monthly Quest", days: 30, hp: 3500, color: "var(--gold-bright)" },
-  weekly: { label: "Weekly Trial", days: 7, hp: 800, color: "var(--gold-bright)" },
+  monthly: { label: "Monthly Quest", days: 30, hp: 3500, color: "var(--gold-ink)" },
+  weekly: { label: "Weekly Trial", days: 7, hp: 800, color: "var(--gold-ink)" },
 };
 
 function QuestsPage() {
@@ -84,7 +84,7 @@ function QuestsPage() {
           className="text-3xl font-bold mb-1"
           style={{
             fontFamily: "var(--ss-font-pixel)",
-            color: "var(--gold-bright)",
+            color: "var(--gold-ink)",
             letterSpacing: "0.08em",
           }}
         >
@@ -163,7 +163,7 @@ function QuestsPage() {
                     <div>
                       <p
                         className="font-bold flex items-center gap-1.5"
-                        style={{ color: "var(--gold-bright)" }}
+                        style={{ color: "var(--gold-ink)" }}
                       >
                         <Icon name="crown" size={14} color="var(--gold-bright)" />
                         <span>{g.title}</span>
@@ -187,7 +187,7 @@ function QuestsPage() {
         {/* Forge */}
         {tab === "forge" && (
           <div className="game-panel p-5 max-w-lg">
-            <h2 className="text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="text-lg font-bold mb-4" style={{ color: "var(--gold-ink)" }}>
               Forge a Quest
             </h2>
             <div className="space-y-4">

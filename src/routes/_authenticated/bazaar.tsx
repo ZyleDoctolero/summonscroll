@@ -62,7 +62,7 @@ function ShopPage() {
           className="text-3xl font-bold mb-1"
           style={{
             fontFamily: "var(--ss-font-pixel)",
-            color: "var(--gold-bright)",
+            color: "var(--gold-ink)",
             letterSpacing: "0.08em",
           }}
         >
@@ -76,19 +76,19 @@ function ShopPage() {
         <div className="flex gap-4 mb-6 text-sm" style={{ color: "var(--ink-secondary)" }}>
           <span>
             <Icon name="gold" size={13} color="var(--gold-bright)" />{" "}
-            <b className="font-serif" style={{ color: "var(--gold-bright)" }}>
+            <b className="font-serif" style={{ color: "var(--gold-ink)" }}>
               {profile.gold.toLocaleString()}
             </b>
           </span>
           <span>
             <Icon name="crystal" size={13} color="var(--gold-bright)" />{" "}
-            <b className="font-serif" style={{ color: "var(--gold-bright)" }}>
+            <b className="font-serif" style={{ color: "var(--gold-ink)" }}>
               {profile.crystals.toLocaleString()}
             </b>
           </span>
           <span>
             <Icon name="seal" size={13} color="var(--violet)" />{" "}
-            <b className="font-serif" style={{ color: "var(--violet)" }}>
+            <b className="font-serif" style={{ color: "var(--violet-ink)" }}>
               {profile.pact_seals}
             </b>
           </span>
@@ -120,14 +120,14 @@ function ShopPage() {
             <div className="mb-4">
               <Icon name="stone" size={48} color="var(--gold-bright)" className="lucide-glow" />
             </div>
-            <h2 className="text-xl font-bold mb-2" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="text-xl font-bold mb-2" style={{ color: "var(--gold-ink)" }}>
               Enchanted Armoire
             </h2>
             <p className="text-sm mb-4" style={{ color: "var(--ink-secondary)" }}>
               Spend 100{" "}
               <span
                 className="inline-flex items-center gap-0.5"
-                style={{ color: "var(--gold-bright)" }}
+                style={{ color: "var(--gold-ink)" }}
               >
                 <Icon name="crystal" size={12} /> Crystals
               </span>{" "}
@@ -200,7 +200,7 @@ function ShopPage() {
                   <div className="flex items-center justify-between">
                     <span
                       className="font-serif font-bold text-sm flex items-center gap-1"
-                      style={{ color: canAfford ? "var(--gold-bright)" : "var(--danger)" }}
+                      style={{ color: canAfford ? "var(--gold-ink)" : "var(--danger)" }}
                     >
                       <Icon name={iconName} size={14} color={iconColor} />
                       {item.price}

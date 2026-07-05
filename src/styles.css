@@ -190,6 +190,10 @@
 
   --gold-bright: #c89a3e;
   --gold-glow: #b8860b;
+  /* Gold for TEXT on parchment surfaces — #c89a3e is decorative-only (2.3:1) */
+  --gold-ink: #7a5a10;
+  /* Violet for TEXT on parchment — #c47fff is decorative-only (2.1:1) */
+  --violet-ink: #6d28a8;
   --violet: var(--dark);
   --cyan: var(--water);
   --rose: #ff4f6a;
@@ -229,14 +233,16 @@
   --ss-rarity-ex: #ffffff;
 
   /* Stat colors — the cross-cutting visual language. STR/INT/CON/PER are used
-     consistently across tasks, expeditions, monster roles, stones, stat readouts. */
-  --ss-stat-str: #e05252;
+     consistently across tasks, expeditions, monster roles, stones, stat readouts.
+     Darkened to AA (>=4.5:1) as text on parchment; the -rgb values stay bright
+     for tinted backgrounds/borders. */
+  --ss-stat-str: #a02c2c;
   --ss-stat-str-rgb: 224, 82, 82;
-  --ss-stat-int: #7fd4ff;
+  --ss-stat-int: #14587a;
   --ss-stat-int-rgb: 127, 212, 255;
-  --ss-stat-con: #5fad41;
+  --ss-stat-con: #116632;
   --ss-stat-con-rgb: 95, 173, 65;
-  --ss-stat-per: #ce93d8;
+  --ss-stat-per: #5e35a8;
   --ss-stat-per-rgb: 206, 147, 216;
 
   /* Borders */
@@ -760,7 +766,7 @@ body {
   transition: color 80ms ease-out;
 }
 .ss-tab-d.active {
-  color: var(--gold-bright);
+  color: var(--gold-ink); /* readable on parchment; underline carries the gold */
 }
 .ss-tab-d.active::after {
   content: "";

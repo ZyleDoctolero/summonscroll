@@ -258,7 +258,7 @@ function IslandPage() {
               className="text-3xl font-bold"
               style={{
                 fontFamily: "var(--ss-font-pixel)",
-                color: "var(--gold-bright)",
+                color: "var(--gold-ink)",
                 letterSpacing: "0.08em",
               }}
             >
@@ -329,7 +329,7 @@ function IslandPage() {
                     fontFamily: "var(--ss-font-pixel)",
                     borderRadius: 0,
                     background: "rgba(200,154,62,0.1)",
-                    color: "var(--gold-bright)",
+                    color: "var(--gold-ink)",
                     border: "1px solid rgba(200,154,62,0.2)",
                   }}
                 >
@@ -372,7 +372,7 @@ function IslandPage() {
                     Condense {pendingHarvest} Spirit Stones
                   </button>
                 )}
-                <span className="text-sm font-serif" style={{ color: "var(--gold-bright)" }}>
+                <span className="text-sm font-serif" style={{ color: "var(--gold-ink)" }}>
                   CP: {teamPower.toLocaleString()}
                 </span>
               </div>
@@ -440,7 +440,7 @@ function IslandPage() {
                             boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
                             background:
                               "linear-gradient(135deg, rgba(200,154,62,0.15), rgba(200,154,62,0.08))",
-                            color: "var(--gold-bright)",
+                            color: "var(--gold-ink)",
                             border: "1px solid rgba(200,154,62,0.3)",
                           }}
                         >
@@ -463,7 +463,7 @@ function IslandPage() {
           style={{ background: "var(--bg-stage)" }}
         >
           <div className="max-w-4xl mx-auto flex items-center justify-between">
-            <p className="text-sm font-semibold" style={{ color: "var(--gold-bright)" }}>
+            <p className="text-sm font-semibold" style={{ color: "var(--gold-ink)" }}>
               Select a monster for Slot {assignSlot}
             </p>
             <button

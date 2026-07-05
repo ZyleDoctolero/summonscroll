@@ -288,7 +288,8 @@ function CrossFusionPage() {
         {/* Fuse Button */}
         <button
           disabled={!canFuse}
-          className="px-8 py-3 font-bold uppercase disabled:opacity-30 transition-all"
+          // the disabled state doubles as the page's instruction — keep it legible
+          className="px-8 py-3 font-bold uppercase transition-all"
           style={{
             fontFamily: "var(--ss-font-pixel)",
             fontSize: 12,
@@ -296,9 +297,10 @@ function CrossFusionPage() {
             background: canFuse
               ? "linear-gradient(135deg, #9b6dff, #6db8e8)"
               : "rgba(139,115,85,0.1)",
-            color: canFuse ? "#fff" : "var(--ink-tertiary)",
+            color: canFuse ? "var(--ink-primary)" : "var(--ink-secondary)",
             border: `2px solid ${canFuse ? "#9b6dff" : "rgba(139,115,85,0.2)"}`,
             boxShadow: canFuse ? "4px 4px 0 rgba(0,0,0,0.4)" : "none",
+            cursor: canFuse ? "pointer" : "default",
           }}
         >
           {canFuse ? "⚗ INITIATE CROSS-REALM FUSION" : "SELECT TWO DIFFERENT-REALM ★5+ SOULS"}
@@ -418,7 +420,7 @@ function CrossFusionPage() {
         >
           <p
             className="text-[10px] uppercase font-bold mb-2"
-            style={{ fontFamily: "var(--ss-font-pixel)", color: "#9b6dff" }}
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--violet-ink)" }}
           >
             HOW CROSS-REALM FUSION WORKS
           </p>

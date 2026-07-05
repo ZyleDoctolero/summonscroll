@@ -114,7 +114,7 @@ function GuildPage() {
             className="text-3xl font-bold mb-1"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "var(--gold-bright)",
+              color: "var(--gold-ink)",
               letterSpacing: "0.08em",
             }}
           >
@@ -219,7 +219,7 @@ function GuildPage() {
           <div className="space-y-6">
             {/* Guild info */}
             <div className="ss-card">
-              <h2 className="t-h2 text-xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+              <h2 className="t-h2 text-xl font-bold mb-1" style={{ color: "var(--gold-ink)" }}>
                 {myGuild.name}
               </h2>
               <p className="text-sm mb-3" style={{ color: "var(--ink-secondary)" }}>
@@ -235,7 +235,7 @@ function GuildPage() {
             {/* Active Quest */}
             {activeQuest ? (
               <div className="ss-card" style={{ borderColor: "rgba(255,213,79,0.2)" }}>
-                <h3 className="t-h3 text-lg font-bold mb-2" style={{ color: "var(--gold-bright)" }}>
+                <h3 className="t-h3 text-lg font-bold mb-2" style={{ color: "var(--gold-ink)" }}>
                   Active Quest: {activeQuest.quest_template?.name}
                 </h3>
                 {activeQuest.boss_hp_remaining != null && (
@@ -448,7 +448,7 @@ function GuildPage() {
         {/* Create */}
         {tab === "create" && (
           <div className="ss-card max-w-md">
-            <h2 className="t-h2 text-lg font-bold mb-4" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="t-h2 text-lg font-bold mb-4" style={{ color: "var(--gold-ink)" }}>
               Create Guild
             </h2>
             <p className="text-xs mb-4" style={{ color: "var(--ink-secondary)" }}>

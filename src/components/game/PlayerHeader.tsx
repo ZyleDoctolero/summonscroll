@@ -82,7 +82,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
             )}
           </div>
           <div className="flex items-center gap-2">
-            <span className="t-mono text-sm" style={{ color: "var(--gold-bright)" }}>
+            <span className="t-mono text-sm" style={{ color: "var(--gold-ink)" }}>
               Lv.{profile.level}
             </span>
             <span className="text-xs" style={{ color: "var(--ink-secondary)" }}>
@@ -106,12 +106,12 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
           </div>
         </Link>
         <div className="flex items-center gap-3 t-mono text-xs">
-          <span className="flex items-center gap-1" style={{ color: "var(--gold-bright)" }}>
-            <Icon name="gold" size={14} />
+          <span className="flex items-center gap-1" style={{ color: "var(--gold-ink)" }}>
+            <Icon name="gold" size={14} color="var(--gold-bright)" />
             {profile.gold?.toLocaleString() ?? 0}
           </span>
-          <span className="flex items-center gap-1" style={{ color: "var(--cyan)" }}>
-            <Icon name="crystal" size={14} />
+          <span className="flex items-center gap-1" style={{ color: "var(--gold-ink)" }}>
+            <Icon name="crystal" size={14} color="var(--cyan)" />
             {profile.crystals?.toLocaleString() ?? 0}
           </span>
         </div>
@@ -146,7 +146,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
             </span>
             <span
               className="t-mono font-bold group-hover:drop-shadow-[0_0_8px_var(--gold-bright)] transition-all"
-              style={{ color: "var(--gold-bright)" }}
+              style={{ color: "var(--gold-ink)" }}
             >
               {profile.level}
             </span>
@@ -247,7 +247,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
               <span
                 className="t-mono font-bold"
                 style={{
-                  color: profile.streak > 0 ? "var(--ember)" : "var(--ink-tertiary)",
+                  color: profile.streak > 0 ? "var(--ink-primary)" : "var(--ink-tertiary)",
                 }}
               >
                 {profile.streak}
@@ -260,7 +260,7 @@ export function PlayerHeader({ profile }: { profile: Profile }) {
                 title="Freeze Charms (Protects streak)"
               >
                 <Icon name="cold" size={14} color="var(--cyan)" />
-                <span className="t-mono font-bold" style={{ color: "var(--cyan)" }}>
+                <span className="t-mono font-bold" style={{ color: "var(--ink-primary)" }}>
                   x{profile.streak_freeze_charges}
                 </span>
               </div>
@@ -303,7 +303,8 @@ function MiniBar({
       >
         <span>{label}</span>
         <span
-          style={{ color, fontFamily: "var(--ss-font-pixel)", fontSize: 9 }}
+          // bar fill carries the semantic color; 9px text must stay readable ink
+          style={{ color: "var(--ink-secondary)", fontFamily: "var(--ss-font-pixel)", fontSize: 9 }}
           className="whitespace-nowrap"
         >
           <NumberFlow

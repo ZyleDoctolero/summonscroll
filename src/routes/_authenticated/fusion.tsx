@@ -90,7 +90,7 @@ function FusionPage() {
           className="text-3xl font-bold mb-2 uppercase"
           style={{
             fontFamily: "var(--ss-font-pixel)",
-            color: "var(--gold-bright)",
+            color: "var(--gold-ink)",
             letterSpacing: "0.08em",
           }}
         >
@@ -106,7 +106,7 @@ function FusionPage() {
         <div className="relative w-full max-w-2xl flex flex-col items-center mb-12">
           {/* Target Slot */}
           <div className="relative z-20 mb-12">
-            <p className="text-center t-label mb-3" style={{ color: "var(--gold-bright)" }}>
+            <p className="text-center t-label mb-3" style={{ color: "var(--gold-ink)" }}>
               TARGET VESSEL
             </p>
             {targetMonster ? (
@@ -124,7 +124,7 @@ function FusionPage() {
                     borderRadius: 0,
                     fontFamily: "var(--ss-font-pixel)",
                     borderColor: "var(--gold-bright)",
-                    color: "var(--gold-bright)",
+                    color: "var(--gold-ink)",
                   }}
                 >
                   {currentStar}★
@@ -155,7 +155,7 @@ function FusionPage() {
                 className="p-4 border-2 border-dashed w-40 h-48 flex flex-col items-center justify-center transition-colors"
                 style={{
                   borderColor: "var(--gold-bright)",
-                  color: "var(--gold-bright)",
+                  color: "var(--gold-ink)",
                   borderRadius: 0,
                   fontFamily: "var(--ss-font-pixel)",
                 }}
@@ -256,7 +256,7 @@ function FusionPage() {
           <div className="flex flex-col items-center mt-8">
             <p
               className="text-xs mb-3 font-serif"
-              style={{ color: hasGold ? "var(--gold-bright)" : "var(--danger)" }}
+              style={{ color: hasGold ? "var(--gold-ink)" : "var(--danger)" }}
             >
               Synthesis Cost: {cost} Gold
             </p>
@@ -289,7 +289,7 @@ function FusionPage() {
           >
             <h3
               className="t-h3 text-xl font-bold mb-4"
-              style={{ color: selectingMode === "target" ? "var(--gold-bright)" : "var(--danger)" }}
+              style={{ color: selectingMode === "target" ? "var(--gold-ink)" : "var(--danger)" }}
             >
               {selectingMode === "target"
                 ? "Select Target Vessel"
@@ -331,7 +331,7 @@ function FusionPage() {
                     >
                       <div
                         className="absolute top-1 right-1 text-[11px] font-bold z-10 drop-shadow-md"
-                        style={{ color: "var(--gold-bright)" }}
+                        style={{ color: "var(--gold-ink)" }}
                       >
                         {umStar}★
                       </div>

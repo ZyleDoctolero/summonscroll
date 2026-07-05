@@ -164,7 +164,7 @@ function BattlePage() {
                 transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.08 }}
                 className="font-serif text-4xl font-bold mb-1"
                 style={{
-                  color: result.won ? "var(--gold-bright)" : "#7d2e2f",
+                  color: result.won ? "var(--gold-ink)" : "#7d2e2f",
                   letterSpacing: "0.05em",
                 }}
               >
@@ -314,7 +314,7 @@ function BattlePage() {
                       <div className="flex flex-wrap gap-3 text-sm font-bold font-serif">
                         {result.rewards.crystals > 0 && (
                           <RewardChip>
-                            <span style={{ color: "var(--gold-bright)" }}>
+                            <span style={{ color: "var(--gold-ink)" }}>
                               <Icon name="crystal" size={12} color="var(--gold-bright)" /> +
                               <NumberFlow value={result.rewards.crystals} />
                             </span>
@@ -323,7 +323,7 @@ function BattlePage() {
                         {result.rewards.shards > 0 && (
                           <RewardChip>
                             <span
-                              style={{ color: "var(--gold-bright)" }}
+                              style={{ color: "var(--gold-ink)" }}
                               className="flex items-center gap-1"
                             >
                               <Icon name="crystal" size={12} color="var(--gold-bright)" /> +
@@ -334,7 +334,7 @@ function BattlePage() {
                         {result.rewards?.gold > 0 && (
                           <RewardChip>
                             <span
-                              style={{ color: "var(--gold-bright)" }}
+                              style={{ color: "var(--gold-ink)" }}
                               className="flex items-center gap-1"
                             >
                               +<NumberFlow value={result.rewards.gold} /> Gold
@@ -354,7 +354,7 @@ function BattlePage() {
                         )}
                         {milestoneDrops.map((d, i) => (
                           <RewardChip key={i} delay={0.06 + i * 0.05}>
-                            <span style={{ color: "var(--gold-bright)" }}>
+                            <span style={{ color: "var(--gold-ink)" }}>
                               +<NumberFlow value={d.qty} /> {d.name}
                             </span>
                           </RewardChip>
@@ -366,7 +366,7 @@ function BattlePage() {
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.25 }}
                           className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
-                          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
+                          style={{ color: "var(--gold-ink)", letterSpacing: "0.04em" }}
                         >
                           <Icon name="tower" size={14} color="var(--gold-bright)" />
                           <span>The Wailing Wall crumbles before you. </span>
@@ -379,7 +379,7 @@ function BattlePage() {
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.3 }}
                           className="mt-3 text-sm text-center flex items-center justify-center gap-1.5"
-                          style={{ color: "var(--gold-bright)", letterSpacing: "0.04em" }}
+                          style={{ color: "var(--gold-ink)", letterSpacing: "0.04em" }}
                         >
                           <Icon
                             name="crown"
@@ -430,7 +430,7 @@ function BattlePage() {
             className="text-3xl font-bold mb-1"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "var(--gold-bright)",
+              color: "var(--gold-ink)",
               letterSpacing: "0.08em",
             }}
           >
@@ -573,7 +573,7 @@ function BattlePage() {
                       </div>
                       <span
                         className="text-xs font-serif flex items-center gap-0.5"
-                        style={{ color: "var(--gold-bright)" }}
+                        style={{ color: "var(--gold-ink)" }}
                       >
                         <Icon name="crystal" size={10} color="var(--gold-bright)" />+
                         {b.reward_crystals}
@@ -633,7 +633,7 @@ function ModeCard({
         {progress !== undefined && (
           <span
             className="text-[10px] font-bold"
-            style={{ fontFamily: "var(--ss-font-pixel)", color: accent }}
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-secondary)" }}
           >
             {Math.round(progress)}%
           </span>

@@ -30,7 +30,7 @@ const ALCHEMY_RECIPES = [
     habitRequirement: "Drops from Chores & Health tasks.",
     result: "Tidal Hound",
     desc: "Mutates a base Wolf into a high-defense water elemental.",
-    color: "var(--gold-bright)",
+    color: "var(--gold-ink)",
     img: "/sprites/monsters/frostfang_lupus.png",
   },
   {
@@ -113,7 +113,7 @@ function AlchemyPage() {
             className="text-3xl font-bold mb-2"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "var(--gold-bright)",
+              color: "var(--gold-ink)",
               letterSpacing: "0.08em",
             }}
           >
@@ -155,7 +155,7 @@ function AlchemyPage() {
                   </span>
                 </div>
                 <p className="text-xs mt-2" style={{ color: "var(--ink-secondary)" }}>
-                  Requires: <strong style={{ color: "var(--gold-bright)" }}>{r.catalyst}</strong>
+                  Requires: <strong style={{ color: "var(--gold-ink)" }}>{r.catalyst}</strong>
                 </p>
                 <p className="text-[11px] italic mt-1" style={{ color: "var(--ink-secondary)" }}>
                   {r.habitRequirement}

@@ -33,7 +33,7 @@ const CLASS_INFO: Record<string, { icon: string; label: string; desc: string; co
     icon: "summon",
     label: "Mage",
     desc: "+INT, +XP, +mana regen, high risk",
-    color: "var(--gold-bright)",
+    color: "var(--gold-ink)",
   },
   healer: {
     icon: "hp",
@@ -180,7 +180,7 @@ function ProfilePage() {
                   className="text-2xl font-bold"
                   style={{
                     fontFamily: "var(--ss-font-pixel)",
-                    color: "var(--gold-bright)",
+                    color: "var(--gold-ink)",
                     letterSpacing: "0.06em",
                   }}
                 >
@@ -337,7 +337,7 @@ function ProfilePage() {
                   <div
                     className="text-xl font-bold font-serif"
                     style={{
-                      color: "var(--gold-bright)",
+                      color: "var(--gold-ink)",
                       textShadow: "0 0 10px rgba(200,154,62,0.3)",
                     }}
                   >
@@ -507,7 +507,7 @@ function ProfilePage() {
                     {a.reward_crystals > 0 && (
                       <p
                         className="text-[11px] mt-1 flex items-center justify-center gap-0.5"
-                        style={{ color: "var(--gold-bright)" }}
+                        style={{ color: "var(--gold-ink)" }}
                       >
                         <Icon name="crystal" size={10} color="var(--gold-bright)" />+
                         {a.reward_crystals}
@@ -586,7 +586,7 @@ function ProfilePage() {
                       className="text-[10px] font-bold mt-4 mb-2 uppercase"
                       style={{
                         fontFamily: "var(--ss-font-pixel)",
-                        color: "var(--gold-bright)",
+                        color: "var(--gold-ink)",
                         letterSpacing: "0.06em",
                       }}
                     >
@@ -609,7 +609,7 @@ function ProfilePage() {
                             className="text-[9px] font-bold"
                             style={{
                               fontFamily: "var(--ss-font-pixel)",
-                              color: "var(--gold-bright)",
+                              color: "var(--gold-ink)",
                             }}
                           >
                             {k.item_name}
@@ -811,7 +811,7 @@ function ProfilePage() {
           onClick={() => setShowClassPicker(false)}
         >
           <div onClick={(e) => e.stopPropagation()} className="ss-modal">
-            <h2 className="text-xl font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="text-xl font-bold mb-1" style={{ color: "var(--gold-ink)" }}>
               Choose Your Class
             </h2>
             {profile.class !== "none" ? (
@@ -824,7 +824,7 @@ function ProfilePage() {
                   Changing class costs{" "}
                   <span
                     className="inline-flex items-center gap-0.5"
-                    style={{ color: "var(--gold-bright)" }}
+                    style={{ color: "var(--gold-ink)" }}
                   >
                     500
                     <Icon name="crystal" size={11} color="var(--gold-bright)" />
@@ -900,7 +900,8 @@ function Bar({
         }}
       >
         <span>{label}</span>
-        <span style={{ color }}>
+        {/* bar fill carries the semantic color; tiny value text stays readable ink */}
+        <span>
           {current}/{max}
         </span>
       </div>
@@ -942,7 +943,7 @@ function VoidFrontierSeal({ streak }: { streak: number }) {
         className="font-bold text-[10px] mb-1 flex justify-between uppercase"
         style={{
           fontFamily: "var(--ss-font-pixel)",
-          color: "var(--violet)",
+          color: "var(--violet-ink)",
           letterSpacing: "0.04em",
         }}
       >

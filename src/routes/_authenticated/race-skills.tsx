@@ -296,7 +296,7 @@ function RaceSkillsPage() {
               className="text-3xl font-bold uppercase"
               style={{
                 fontFamily: "var(--ss-font-pixel)",
-                color: "var(--gold-bright)",
+                color: "var(--gold-ink)",
                 letterSpacing: "0.08em",
               }}
             >
@@ -321,7 +321,7 @@ function RaceSkillsPage() {
           <Icon name="sparkle" size={14} color="var(--gold-bright)" />
           <span
             className="text-[11px] font-bold"
-            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)" }}
+            style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-ink)" }}
           >
             {sp} SP AVAILABLE
           </span>
@@ -339,7 +339,7 @@ function RaceSkillsPage() {
                 borderRadius: 0,
                 borderColor: selectedRace === i ? rt.color : "rgba(139,115,85,0.2)",
                 background: selectedRace === i ? `${rt.color}18` : "transparent",
-                color: selectedRace === i ? rt.color : "var(--ink-tertiary)",
+                color: selectedRace === i ? "var(--ink-primary)" : "var(--ink-tertiary)",
                 boxShadow: selectedRace === i ? `3px 3px 0 ${rt.color}40` : "none",
               }}
             >
@@ -362,7 +362,7 @@ function RaceSkillsPage() {
             <span className="text-2xl">{tree.icon}</span>
             <h2
               className="text-xl font-bold uppercase"
-              style={{ fontFamily: "var(--ss-font-pixel)", color: tree.color }}
+              style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)" }}
             >
               {tree.race} LINEAGE
             </h2>

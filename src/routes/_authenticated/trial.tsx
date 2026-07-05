@@ -369,7 +369,7 @@ function TrialPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ ...trans.cascadeIn, delay: 0.2 }}
                   className="text-center text-xs mb-4"
-                  style={{ color: "var(--gold-bright)" }}
+                  style={{ color: "var(--gold-ink)" }}
                 >
                   <span className="flex items-center justify-center gap-1">
                     <Icon name="sparkle" size={12} color="var(--gold-bright)" /> Echo-Touched
@@ -420,7 +420,7 @@ function TrialPage() {
                 >
                   <p
                     className="text-[11px] uppercase tracking-[0.18em] mb-2"
-                    style={{ color: "var(--gold-bright)" }}
+                    style={{ color: "var(--gold-ink)" }}
                   >
                     Rewards
                   </p>
@@ -431,7 +431,7 @@ function TrialPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: dur.fast, ease: ease.out, delay: 0.25 + i * 0.08 }}
                       className="text-sm"
-                      style={{ color: "var(--gold-bright)" }}
+                      style={{ color: "var(--gold-ink)" }}
                     >
                       +<NumberFlow value={r.qty} /> {r.name}
                     </motion.p>

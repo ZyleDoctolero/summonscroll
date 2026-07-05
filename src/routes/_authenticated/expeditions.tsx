@@ -53,7 +53,7 @@ const REALMS = [
     id: "astral",
     name: "Astral Peaks",
     duration: 720,
-    color: "var(--gold-bright)",
+    color: "var(--gold-ink)",
     desc: "A 12-hour deep dive. High chance of rare evolution materials.",
   },
 ];
@@ -155,7 +155,7 @@ function ExpeditionsPage() {
             className="text-3xl font-bold mb-2"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "var(--gold-bright)",
+              color: "var(--gold-ink)",
               letterSpacing: "0.08em",
             }}
           >

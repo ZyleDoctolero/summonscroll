@@ -50,7 +50,7 @@ function CodexPage() {
           className="text-3xl font-bold mb-1"
           style={{
             fontFamily: "var(--ss-font-pixel)",
-            color: "var(--gold-bright)",
+            color: "var(--gold-ink)",
             letterSpacing: "0.08em",
           }}
         >
@@ -90,7 +90,7 @@ function CodexPage() {
           onClick={() => setSelectedDate(null)}
         >
           <div onClick={(e) => e.stopPropagation()} className="ss-modal">
-            <h2 className="text-lg font-bold mb-1" style={{ color: "var(--gold-bright)" }}>
+            <h2 className="text-lg font-bold mb-1" style={{ color: "var(--gold-ink)" }}>
               {new Date(selectedDate).toLocaleDateString(undefined, {
                 weekday: "long",
                 month: "long",
@@ -140,7 +140,8 @@ function CodexPage() {
 function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: string) => void }) {
   // Group into weeks: first cell's day-of-week determines offset
   const weeks = useMemo(() => {
-    if (cells.length === 0) return [] as HeatmapCell[][];
+    if (!Array.isArray(cells) || cells.length === 0 || !cells[0]?.date)
+      return [] as HeatmapCell[][];
     const out: HeatmapCell[][] = [];
     const firstDay = new Date(cells[0].date).getDay(); // 0..6
     let week: (HeatmapCell | null)[] = Array(firstDay).fill(null);
@@ -167,20 +168,20 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
     <div>
       <div className="flex flex-wrap gap-4 mb-4 text-xs" style={{ color: "var(--ink-secondary)" }}>
         <span>
-          <b className="font-serif" style={{ color: "var(--gold-bright)" }}>
+          <b className="font-serif" style={{ color: "var(--gold-ink)" }}>
             {activeDays}
           </b>{" "}
           active days
         </span>
         <span>
-          <b className="font-serif" style={{ color: "var(--gold-bright)" }}>
+          <b className="font-serif" style={{ color: "var(--gold-ink)" }}>
             {totalDays}
           </b>{" "}
           days tracked
         </span>
         <span>
           <Icon name="stamina" size={12} color="var(--gold-bright)" />{" "}
-          <b className="font-serif" style={{ color: "var(--gold-bright)" }}>
+          <b className="font-serif" style={{ color: "var(--gold-ink)" }}>
             {totalAwakenings}
           </b>{" "}
           awakening days
@@ -290,7 +291,7 @@ function Journal({
             {l.pm_mood && (
               <span className="text-xs">
                 {MOOD_EMOJI[l.pm_mood - 1]}{" "}
-                <span style={{ color: "var(--gold-bright)" }}>{l.pm_mood}/5</span>
+                <span style={{ color: "var(--gold-ink)" }}>{l.pm_mood}/5</span>
               </span>
             )}
           </div>
@@ -349,7 +350,7 @@ function AwakeningLog({
             <Icon name="stamina" size={18} color="var(--gold-bright)" className="lucide-glow" />
           </div>
           <div className="flex-1">
-            <p className="text-sm font-bold" style={{ color: "var(--gold-bright)" }}>
+            <p className="text-sm font-bold" style={{ color: "var(--gold-ink)" }}>
               {e.skill_name}
             </p>
             <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
@@ -374,7 +375,7 @@ function Stat({ label, value }: { label: string; value: string }) {
       <div className="text-[11px] uppercase" style={{ color: "var(--ink-secondary)" }}>
         {label}
       </div>
-      <div className="text-sm font-bold mt-0.5" style={{ color: "var(--gold-bright)" }}>
+      <div className="text-sm font-bold mt-0.5" style={{ color: "var(--gold-ink)" }}>
         {value}
       </div>
     </div>
@@ -489,7 +490,7 @@ function ExTierCodex() {
     <div className="space-y-3">
       <p
         className="text-[10px] uppercase font-bold mb-4"
-        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-bright)" }}
+        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--gold-ink)" }}
       >
         ★8 EX TIER HERITAGE TRAITS BY REALM — REQUIRES REALM KEY + ★7→★8 PROMOTION
       </p>
@@ -509,7 +510,7 @@ function ExTierCodex() {
               <div className="w-3 h-3" style={{ borderRadius: 0, background: entry.color }} />
               <span
                 className="text-[11px] font-bold uppercase"
-                style={{ fontFamily: "var(--ss-font-pixel)", color: entry.color }}
+                style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)" }}
               >
                 {entry.realm} — {entry.trait}
               </span>
@@ -517,7 +518,7 @@ function ExTierCodex() {
             <p className="text-[11px] mb-1.5" style={{ color: "var(--ink-secondary)" }}>
               {entry.desc}
             </p>
-            <p className="text-[9px] italic" style={{ color: `${entry.color}90` }}>
+            <p className="text-[9px] italic" style={{ color: "var(--ink-tertiary)" }}>
               Aura: {entry.aura}
             </p>
           </div>

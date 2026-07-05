@@ -9,12 +9,9 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[var(--bg-deep)] px-4">
       <div className="max-w-md text-center text-[var(--ink-primary)]">
-        <h1 className="text-7xl font-bold text-[#c89a3e]">404</h1>
+        <h1 className="text-7xl font-bold text-[var(--gold-ink)]">404</h1>
         <h2 className="mt-4 text-xl font-semibold">Page not found</h2>
-        <a
-          href="/"
-          className="mt-6 inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#c89a3e] to-[#e8c55a] px-4 py-2 text-sm font-medium text-white transition-colors hover:brightness-110 shadow-sm"
-        >
+        <a href="/" className="ss-btn ss-btn-primary mt-6 inline-flex px-4 py-2 text-sm">
           Return to Hub
         </a>
       </div>
@@ -36,7 +33,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             router.invalidate();
             reset();
           }}
-          className="mt-6 rounded-lg bg-gradient-to-r from-[#c89a3e] to-[#e8c55a] px-4 py-2 text-sm font-medium text-white shadow-sm"
+          className="ss-btn ss-btn-primary mt-6 px-4 py-2 text-sm"
         >
           Try again
         </button>

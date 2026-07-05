@@ -385,7 +385,7 @@ function HubPage() {
                 className="text-lg font-bold uppercase"
                 style={{
                   fontFamily: "var(--ss-font-pixel)",
-                  color: "var(--gold-bright)",
+                  color: "var(--gold-ink)",
                   letterSpacing: "0.06em",
                 }}
               >

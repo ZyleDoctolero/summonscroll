@@ -443,7 +443,7 @@ function CompendiumPage() {
             className="text-3xl font-bold uppercase mb-1"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "#b8860b",
+              color: "var(--gold-ink)",
               letterSpacing: "0.08em",
             }}
           >
@@ -502,9 +502,10 @@ function CompendiumPage() {
                   className="text-[9px] uppercase font-bold px-2.5 py-1 border"
                   style={{
                     fontFamily: "var(--ss-font-pixel)",
-                    color: rank.color,
-                    borderColor: `${rank.color}40`,
-                    background: `${rank.color}12`,
+                    // rank color decorates the frame; text stays readable ink
+                    color: "var(--ink-primary)",
+                    borderColor: `${rank.color}70`,
+                    background: `${rank.color}18`,
                     borderRadius: 0,
                     letterSpacing: "0.04em",
                   }}
