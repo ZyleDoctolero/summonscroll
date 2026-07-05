@@ -710,7 +710,15 @@ function AnimatedHpBar({
           <NumberFlow value={Math.max(0, current)} /> / {max.toLocaleString()}
         </span>
       </div>
-      <div className="ss-bar-pixel" style={{ height: 12 }}>
+      <div
+        className="ss-bar-pixel"
+        style={{ height: 12 }}
+        role="progressbar"
+        aria-label={label}
+        aria-valuemin={0}
+        aria-valuemax={max}
+        aria-valuenow={Math.max(0, current)}
+      >
         <motion.div
           initial={{ width: "100%" }}
           animate={{ width: `${pct}%` }}

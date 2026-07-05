@@ -1,11 +1,11 @@
 {
   "name": "SummonScroll",
   "short_name": "SummonScroll",
-  "description": "Dark Fantasy Productivity RPG",
+  "description": "Pixel-art RPG habit tracker — complete real tasks, summon monsters.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0C0E14",
-  "theme_color": "#13161F",
+  "background_color": "#ece1c6",
+  "theme_color": "#ece1c6",
   "icons": [
     {
       "src": "/vite.svg",

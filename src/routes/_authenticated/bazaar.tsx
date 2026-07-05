@@ -31,6 +31,8 @@ function ShopPage() {
   const itemsQ = useQuery({ queryKey: ["shop-items"], queryFn: listShopItems });
 
   const [tab, setTab] = useState<ShopTab>("potion");
+  // two-tap purchase guard: first click arms the button, second confirms
+  const [armedId, setArmedId] = useState<string | null>(null);
 
   const purchaseMut = useMutation({
     mutationFn: async (shopItemId: string) => purchaseItem(shopItemId, 1),
@@ -133,6 +135,15 @@ function ShopPage() {
             </p>
             <button
               onClick={() => {
+                if (armedId !== "armoire") {
+                  setArmedId("armoire");
+                  window.setTimeout(
+                    () => setArmedId((cur) => (cur === "armoire" ? null : cur)),
+                    3000,
+                  );
+                  return;
+                }
+                setArmedId(null);
                 const armoireItem = (itemsQ.data?.items ?? []).find(
                   (i: ShopItem) => i.category === "armoire",
                 );
@@ -143,6 +154,8 @@ function ShopPage() {
             >
               {purchaseMut.isPending ? (
                 "Opening…"
+              ) : armedId === "armoire" ? (
+                "Confirm — spend 100?"
               ) : (
                 <>
                   <Icon name="sparkle" size={14} />
@@ -193,11 +206,22 @@ function ShopPage() {
                       {item.price}
                     </span>
                     <button
-                      onClick={() => purchaseMut.mutate(item.id)}
+                      onClick={() => {
+                        if (armedId === item.id) {
+                          setArmedId(null);
+                          purchaseMut.mutate(item.id);
+                        } else {
+                          setArmedId(item.id);
+                          window.setTimeout(
+                            () => setArmedId((cur) => (cur === item.id ? null : cur)),
+                            3000,
+                          );
+                        }
+                      }}
                       disabled={!canAfford || purchaseMut.isPending}
                       className={`ss-btn disabled:opacity-40 ${canAfford ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
                     >
-                      {purchaseMut.isPending ? "…" : "Buy"}
+                      {purchaseMut.isPending ? "…" : armedId === item.id ? "Confirm?" : "Buy"}
                     </button>
                   </div>
                 </div>

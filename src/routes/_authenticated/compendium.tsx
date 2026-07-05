@@ -321,6 +321,8 @@ function ImageOrSprite({
         <img
           src={url}
           alt={owned ? name : element}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-contain"
           style={{
             filter: owned
