@@ -1,23 +1,55 @@
 {
   "name": "SummonScroll",
   "short_name": "SummonScroll",
-  "description": "Dark Fantasy Productivity RPG",
+  "description": "A habit-tracking gacha RPG. Complete real-world habits to summon monsters.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#0C0E14",
-  "theme_color": "#13161F",
+  "theme_color": "#0C0E14",
+  "categories": ["games", "productivity", "lifestyle"],
   "icons": [
     {
-      "src": "/vite.svg",
-      "sizes": "192x192",
+      "src": "/favicon.svg",
+      "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/vite.svg",
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Directives",
+      "short_name": "Habits",
+      "description": "View and complete your habits",
+      "url": "/directives",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Altar",
+      "short_name": "Summon",
+      "description": "Summon new monsters",
+      "url": "/altar",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
     }
   ]
 }

@@ -7,7 +7,6 @@ Build the SummonScroll Compendium and Monster Bonding module. This is the collec
 **Crucial Design Constraint:** SummonScroll is a dark-fantasy productivity RPG. Every screen uses a deep dark background (`#0C0E14`), gold accent colors (`#C89A3E` / `#FFD54F`), and the Cinzel font for headings. Monster cards must communicate rarity through glow intensity (not just color), and the visual bond between habits and monsters must be immediately obvious — missing habits makes monsters visually degrade.
 
 **Core Design Tokens:**
-
 ```
 Backgrounds:   #0C0E14 (page) · #13161F (cards) · #1A1E2A (modals)
 Rarity Glows:  Common: none · Uncommon: 0 0 8px rgba(129,199,132,0.30)
@@ -24,11 +23,9 @@ Fonts:          Cinzel (monster names) · DM Sans (labels) · JetBrains Mono (st
 ### Realm Tab Navigation
 
 Pill-style tabs across the top, one per realm. Each tab shows the realm name and a collection count badge:
-
 ```
 [ Ancient Vaults 43/160 ] [ Chaos Wastes 28/155 ] [ Outer Dark 12/145 ] ...
 ```
-
 - Active tab: gold background + dark text with badge count
 - Scrollable horizontally on mobile
 - "All Realms" tab as first option shows the complete collection
@@ -36,7 +33,6 @@ Pill-style tabs across the top, one per realm. Each tab shows the realm name and
 ### Filter Bar
 
 Below the realm tabs, a comprehensive filter row:
-
 ```
 [Search 🔍]  [Rarity ▼]  [Element ▼]  [Role ▼]  [Sort: Rarity↓ ▼]  [Grid/List toggle]
 ```
@@ -71,7 +67,6 @@ Below the realm tabs, a comprehensive filter row:
 ### Monster Card (List View)
 
 Compact horizontal row:
-
 ```
 [Art 64px] [Name · Rarity Badge]  [Lvl 42]  [Bond 78%]  [Element]  [Role]
 ```
@@ -80,12 +75,12 @@ Toggle between Grid and List view via a toggle button in the filter bar top-righ
 
 ### Responsive Grid
 
-| Breakpoint       | Columns | Card Width |
-| ---------------- | ------- | ---------- |
-| 375px (mobile)   | 2       | 160px      |
-| 768px (tablet)   | 3       | 210px      |
-| 1024px (desktop) | 4       | 220px      |
-| 1280px+ (wide)   | 5       | 230px      |
+| Breakpoint | Columns | Card Width |
+|---|---|---|
+| 375px (mobile) | 2 | 160px |
+| 768px (tablet) | 3 | 210px |
+| 1024px (desktop) | 4 | 220px |
+| 1280px+ (wide) | 5 | 230px |
 
 No horizontal scrolling. Cards wrap vertically.
 
@@ -132,7 +127,6 @@ Milestone markers at:
 ### Skill List
 
 Display the monster's skills in a vertical list:
-
 ```
 [Skill 1]  "Arcane Bolt"  — Always unlocked
 [Skill 2]  "Mana Shield"  — Unlocked at 25% bond (or locked/greyed if below)
@@ -156,11 +150,9 @@ Locked skills: greyed out icon + text, with "Requires XX% bond" label in tertiar
 ### Skin Selector
 
 If the monster has unlocked cosmetic skins, display a horizontal skin thumbnail strip:
-
 ```
 [Default ✓] [Eclipse] [Frost] [Infernal]
 ```
-
 Tapping a skin swaps the portrait art. Selected skin shows a gold checkmark border.
 
 ---
@@ -171,16 +163,15 @@ This is the key feature that makes SummonScroll unique — the visual connection
 
 ### Visual Degradation States
 
-| Habit State                            | Monster Visual Effect                                            |
-| -------------------------------------- | ---------------------------------------------------------------- |
-| Healthy streak (7+ days)               | Full color, bright rarity glow at 100%, element particles        |
-| Moderate streak (3–6 days)             | Slightly desaturated, glow at 70% intensity                      |
+| Habit State | Monster Visual Effect |
+|---|---|
+| Healthy streak (7+ days) | Full color, bright rarity glow at 100%, element particles |
+| Moderate streak (3–6 days) | Slightly desaturated, glow at 70% intensity |
 | At risk (1–2 days or missed yesterday) | Amber tint overlay, glow at 40%, small crack texture on portrait |
-| Broken (missed today's habit)          | Greyscale portrait, red crack overlay, "FATIGUED" badge in red   |
-| Just completed (animation)             | Flash of element color, sparkles burst, brief scale 1.1 bounce   |
+| Broken (missed today's habit) | Greyscale portrait, red crack overlay, "FATIGUED" badge in red |
+| Just completed (animation) | Flash of element color, sparkles burst, brief scale 1.1 bounce |
 
 **Where this renders:**
-
 - **Monster Cards** in the Compendium grid — thumbnail shows degradation
 - **Island screen sprites** — monsters on the island visually degrade
 - **Detail view portrait** — full-size art shows the effect
@@ -208,21 +199,21 @@ Missing habits = those realm's monsters receive NO bond XP and begin degrading v
 
 ### Skeleton Loaders (No spinners — learned from Genshin)
 
-| Component          | Skeleton Shape                                                       |
-| ------------------ | -------------------------------------------------------------------- |
+| Component | Skeleton Shape |
+|---|---|
 | MonsterCard (grid) | Dark rect 200×280px, rounded 16px, 3 inner rects for name/level/bond |
-| MonsterCard (list) | Full-width rect 80px tall with placeholder rectangles                |
-| Monster Detail     | Large square + 4 text lines + 2 bars                                 |
-| Filter Bar         | Row of pill-shaped rects                                             |
+| MonsterCard (list) | Full-width rect 80px tall with placeholder rectangles |
+| Monster Detail | Large square + 4 text lines + 2 bars |
+| Filter Bar | Row of pill-shaped rects |
 
 Skeleton shimmer: `background: linear-gradient(90deg, #13161F 25%, #1A1E2A 50%, #13161F 75%)` animated left→right.
 
 ### Empty States
 
-| State                 | Visual                             | Message                                        | CTA                                 |
-| --------------------- | ---------------------------------- | ---------------------------------------------- | ----------------------------------- |
-| No monsters collected | Shadowed tome with closed lock     | "Your bestiary awaits your first summon."      | "Go to Altar →"                     |
-| Realm tab empty       | Realm-themed silhouette art        | "No creatures discovered in [Realm Name] yet." | "Summon from this realm's banner →" |
-| Search no results     | Magnifying glass over empty scroll | "No monsters match your search."               | —                                   |
+| State | Visual | Message | CTA |
+|---|---|---|---|
+| No monsters collected | Shadowed tome with closed lock | "Your bestiary awaits your first summon." | "Go to Altar →" |
+| Realm tab empty | Realm-themed silhouette art | "No creatures discovered in [Realm Name] yet." | "Summon from this realm's banner →" |
+| Search no results | Magnifying glass over empty scroll | "No monsters match your search." | — |
 
 Empty state illustrations should feel atmospheric and dark-fantasy themed — not generic clip art.

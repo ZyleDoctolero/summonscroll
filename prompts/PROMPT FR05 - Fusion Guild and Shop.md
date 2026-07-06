@@ -7,7 +7,6 @@ Build the SummonScroll Fusion Matrix, Guild System, and Shop modules. The Guild 
 **Crucial Design Constraint:** SummonScroll is a dark-fantasy productivity RPG. Every screen uses a deep dark background (`#0C0E14`), gold accent colors (`#C89A3E` / `#FFD54F`), and the Cinzel font for headings. Cards use `#13161F` surfaces with subtle `rgba(255,255,255,0.07)` borders. These screens must feel like part of the same cohesive dark-fantasy game world.
 
 **Core Design Tokens:**
-
 ```
 Backgrounds:   #0C0E14 (page) · #13161F (cards) · #1A1E2A (modals)
 Accents:        #C89A3E (gold) · #FFD54F (gold-bright) · #7F77DD (void) · #E05252 (danger)
@@ -49,12 +48,12 @@ The Fusion Matrix allows players to combine 2 or 3 monsters into a single more p
 
 ### Fusion Types
 
-| Type                  | Ingredients                    | Result Rarity         | Special             |
-| --------------------- | ------------------------------ | --------------------- | ------------------- |
-| Standard 2-ingredient | 2 specific monsters            | Varies (recipe-based) | Most common         |
-| Triple fusion         | 3 specific monsters            | Mythic                | Rare recipes        |
-| EX fusion             | 2+ EX monsters                 | Cross-realm EX        | Unique, ultra-rare  |
-| Cross-realm           | Monsters from different realms | Legendary+            | "CROSS-REALM" badge |
+| Type | Ingredients | Result Rarity | Special |
+|---|---|---|---|
+| Standard 2-ingredient | 2 specific monsters | Varies (recipe-based) | Most common |
+| Triple fusion | 3 specific monsters | Mythic | Rare recipes |
+| EX fusion | 2+ EX monsters | Cross-realm EX | Unique, ultra-rare |
+| Cross-realm | Monsters from different realms | Legendary+ | "CROSS-REALM" badge |
 
 ### Fusion Confirmation Modal
 
@@ -71,7 +70,6 @@ Uses the shared `<Modal>` component with focus trap, escape key, body scroll loc
 ### Recipe Browser
 
 Browse known fusion recipes:
-
 - [Ingredient 1] + [Ingredient 2] → [Result]
 - Owned ingredients highlighted gold, missing greyed
 - "Ready to fuse!" badge on completable recipes
@@ -85,7 +83,6 @@ The Guild in SummonScroll functions exactly like Habitica's Party system — it'
 ### 2.1 Guild = Quest Party
 
 **The guild IS the quest party.** When a guild member starts a Boss Quest (using a Quest Scroll), ALL guild members participate:
-
 - **Completing tasks** = damage to the boss (shared across all members)
 - **Missing Dailies** = the boss attacks ALL guild members for HP damage
 - This social accountability is the core motivator — "If I skip my habits, my friends get hurt"
@@ -93,7 +90,6 @@ The Guild in SummonScroll functions exactly like Habitica's Party system — it'
 ### 2.2 Guild Dashboard
 
 **Pill-tab navigation:**
-
 ```
 [ My Guild ] [ Members ] [ Active Quest ] [ Quest Log ] [ Browse ]
 ```
@@ -101,7 +97,6 @@ The Guild in SummonScroll functions exactly like Habitica's Party system — it'
 ### My Guild Tab
 
 If the player is in a guild:
-
 ```
 ┌──────────────────────────────────────────────────────┐
 │  [Guild Banner Art]                                   │
@@ -126,7 +121,6 @@ If the player is in a guild:
 ```
 
 If NOT in a guild — empty state:
-
 ```
 [Tavern illustration with empty table]
 "No guild yet. Find your Vanguard."
@@ -138,7 +132,6 @@ If NOT in a guild — empty state:
 ```
 [Avatar] [Username] [Class Icon] [Level] [Role] [Today's Damage] [Last Active]
 ```
-
 - Guild leader: crown icon ♛
 - Officers: star icon ⭐
 - Class icons show each member's class (⚔ Warrior, 🔮 Mage, 💚 Healer, 🗡 Rogue)
@@ -150,7 +143,6 @@ If NOT in a guild — empty state:
 Full quest detail view (see FR04 §3.2 for Boss Quest UI and §3.3 for Collection Quest UI).
 
 **Quest Management:**
-
 - Quest owner or guild leader can **force-start** a quest if members haven't responded
 - Quest owner can **abort** an active quest (requires confirmation — lost progress, no rewards)
 - Members can join/leave quests individually
@@ -158,7 +150,6 @@ Full quest detail view (see FR04 §3.2 for Boss Quest UI and §3.3 for Collectio
 ### 2.5 Quest Log
 
 History of completed quests:
-
 ```
 [✓] "Slay Tiamat" — Completed 3 days ago — Reward: Dragon Egg 🥚
 [✓] "Gather Dragon Scales" — Completed 1 week ago — Reward: 500💎
@@ -168,13 +159,11 @@ History of completed quests:
 ### 2.6 Browse & Create
 
 **Browse Guilds:**
-
 ```
 [Guild Name] [Level] [Members X/30] [Active Quest] [Apply →]
 ```
 
 **Create Guild:**
-
 ```
 Guild Name:     [text input, 3-30 chars]
 Description:    [textarea, 200 chars max]
@@ -191,7 +180,6 @@ The Shop mirrors Habitica's Market structure: equipment, potions, quest scrolls,
 ### 3.1 Shop Tab Navigation
 
 Underline-style tabs:
-
 ```
 [ Equipment ] [ Potions & Items ] [ Quest Scrolls ] [ Seasonal ] [ Enchanted Armoire ]
 ```
@@ -209,7 +197,6 @@ Equipment provides stat bonuses to the player. Equipped gear from the player's c
 | Accessory | Ring of Fortitude, Amulet of Perception | Any stat |
 
 **Equipment Card:**
-
 ```
 ┌────────────────────────────────┐
 │  [Equipment Art 64px]          │
@@ -227,20 +214,19 @@ Equipment provides stat bonuses to the player. Equipped gear from the player's c
 **Class Bonus Display:** If the equipment matches the player's class, show the boosted stats in gold text below the base stats: "(⚔ Warrior: +18 CON +12 STR)" — the 50% class bonus applied.
 
 **Equipment Management (Profile → Equipment):**
-
 - Equip/unequip gear
 - Compare stats of new vs currently equipped
 - Sell equipment back for 50% of purchase price
 
 ### 3.3 Potions & Items Tab
 
-| Item                             | Cost  | Effect                                                        |
-| -------------------------------- | ----- | ------------------------------------------------------------- |
-| Health Potion                    | 25💎  | Restore 15 HP (max 50 HP). Purchasable anytime.               |
-| Fortify Potion                   | 100💎 | Prevent HP loss from missed Dailies for 1 day. Emergency use. |
-| Bond Accelerator                 | 200💎 | 2× bond XP gain for 24 hours.                                 |
-| XP Booster                       | 150💎 | 2× XP gain for 24 hours.                                      |
-| Hatching Potion (specific realm) | 75💎  | One realm-specific hatching potion for pet hatching.          |
+| Item | Cost | Effect |
+|---|---|---|
+| Health Potion | 25💎 | Restore 15 HP (max 50 HP). Purchasable anytime. |
+| Fortify Potion | 100💎 | Prevent HP loss from missed Dailies for 1 day. Emergency use. |
+| Bond Accelerator | 200💎 | 2× bond XP gain for 24 hours. |
+| XP Booster | 150💎 | 2× XP gain for 24 hours. |
+| Hatching Potion (specific realm) | 75💎 | One realm-specific hatching potion for pet hatching. |
 
 **Batch Buying:** Players can buy multiple of the same item at once (quantity selector), matching Habitica's batch buying feature.
 
@@ -248,20 +234,19 @@ Equipment provides stat bonuses to the player. Equipped gear from the player's c
 
 Quest Scrolls are items that start cooperative Boss or Collection quests (see FR04 §3.4):
 
-| Scroll                 | Cost    | Boss/Collection       | Difficulty |
-| ---------------------- | ------- | --------------------- | ---------- |
-| Shadow Drake Scroll    | 200💎   | Boss (HP: 5,000)      | Easy       |
-| Tiamat's Wrath         | 500💎   | Boss (HP: 10,000)     | Hard       |
-| Dragon Scale Hunt      | 150💎   | Collection (30 items) | Easy       |
-| Void Essence Gathering | 400💎   | Collection (50 items) | Medium     |
-| EX: Vecna's Ascension  | 1,000💎 | Boss (HP: 25,000)     | Legendary  |
+| Scroll | Cost | Boss/Collection | Difficulty |
+|---|---|---|---|
+| Shadow Drake Scroll | 200💎 | Boss (HP: 5,000) | Easy |
+| Tiamat's Wrath | 500💎 | Boss (HP: 10,000) | Hard |
+| Dragon Scale Hunt | 150💎 | Collection (30 items) | Easy |
+| Void Essence Gathering | 400💎 | Collection (50 items) | Medium |
+| EX: Vecna's Ascension | 1,000💎 | Boss (HP: 25,000) | Legendary |
 
 Scrolls can also drop randomly from task completion (~1% base chance, improved by PER stat).
 
 ### 3.5 Seasonal Tab
 
 During seasonal events (4 per year), special limited-time equipment becomes available:
-
 - **Class-specific seasonal gear** purchasable with 💎 (current season)
 - **Previous season's gear** purchasable with 🔷 Void Shards (premium currency)
 - Seasonal gear is purely cosmetic variants with identical stats to standard equipment
@@ -270,7 +255,6 @@ During seasonal events (4 per year), special limited-time equipment becomes avai
 ### 3.6 Enchanted Armoire (from Habitica)
 
 A mystery-reward feature:
-
 ```
 ┌──────────────────────────────────────────────┐
 │  🗄 ENCHANTED ARMOIRE                         │
@@ -369,20 +353,17 @@ DANGER ZONE:
 ## 5. Technical Requirements
 
 ### State Management
-
 - **TanStack Query** for all server data (guilds, shop items, fusion recipes, quests, equipment)
 - **Zustand** for UI-only state with `devtools` middleware and named actions
 - Feature-scoped query keys and API modules
 
 ### Animation
-
 - All animations via **Framer Motion** — no CSS `@keyframes`
 - Motion variants defined externally, never inline
 - `AnimatePresence` for mount/unmount transitions
 - All animations respect `prefers-reduced-motion`
 
 ### Component Architecture
-
 - One component per file, PascalCase, max ~150 lines
 - Shared UI components: `Card`, `Modal`, `PillTabs`, `UnderlineTabs`
 - `cn()` utility for conditional class composition
@@ -390,7 +371,6 @@ DANGER ZONE:
 - `border-border` Tailwind class — never inline `style={{ borderColor }}`
 
 ### Real-Time Updates
-
 - Quest boss HP, party damage, rage bar → WebSocket push events
 - Guild chat → WebSocket
 - Currency changes → WebSocket (reflects instantly in header bar)

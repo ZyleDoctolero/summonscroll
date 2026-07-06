@@ -1,65 +1,75 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Outlet, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
-import { useEffect } from "react";
-import { reportLovableError } from "../lib/lovable-error-reporting";
-import { CascadeProvider } from "../components/game/CascadeCard";
-import { WhisperProvider } from "../components/game/WhisperFeed";
+import { createRootRoute, Outlet, Link, useLocation } from '@tanstack/react-router'
+import { useEffect, useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import { useUserStore } from '@/stores/userStore'
+import { authApi } from '@/features/auth/api/auth.api'
+import { api } from '@/lib/api'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { LoginRewardModal } from '@/components/ui/LoginReward'
+import { useWebSocket } from '@/hooks/useWebSocket'
+import type { ApiResponse } from '@/types'
 
-function NotFoundComponent() {
+function NotFound() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[var(--bg-deep)] px-4">
-      <div className="max-w-md text-center text-[var(--ink-primary)]">
-        <h1 className="text-7xl font-bold text-[#c89a3e]">404</h1>
-        <h2 className="mt-4 text-xl font-semibold">Page not found</h2>
-        <a
-          href="/"
-          className="mt-6 inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#c89a3e] to-[#e8c55a] px-4 py-2 text-sm font-medium text-white transition-colors hover:brightness-110 shadow-sm"
+    <div className="min-h-screen bg-bg-deep flex items-center justify-center p-4">
+      <div className="text-center space-y-4">
+        <h1 className="font-cinzel text-48 text-text-primary">404</h1>
+        <p className="text-18 text-text-secondary">Page not found</p>
+        <Link
+          to="/"
+          className="inline-block px-6 py-3 bg-gold text-bg-deep rounded-lg font-medium hover:bg-gold-bright transition-colors"
         >
-          Return to Hub
-        </a>
+          Go to Hub
+        </Link>
       </div>
     </div>
-  );
+  )
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
-  const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-[var(--bg-deep)] px-4 text-[var(--ink-primary)]">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold">Something went wrong</h1>
-        <button
-          onClick={() => {
-            router.invalidate();
-            reset();
-          }}
-          className="mt-6 rounded-lg bg-gradient-to-r from-[#c89a3e] to-[#e8c55a] px-4 py-2 text-sm font-medium text-white shadow-sm"
-        >
-          Try again
-        </button>
-      </div>
-    </div>
-  );
-}
-
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+export const Route = createRootRoute({
   component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
-});
+  notFoundComponent: NotFound,
+})
 
 function RootComponent() {
-  const { queryClient } = Route.useRouteContext();
+  const { accessToken, setUser, logout } = useUserStore()
+  const [showLoginReward, setShowLoginReward] = useState(false)
+  const location = useLocation()
+  
+  // Initialize WebSocket connection
+  useWebSocket()
+
+  useEffect(() => {
+    if (!accessToken) return
+
+    authApi
+      .me()
+      .then((res) => {
+        setUser(res.data)
+        // Check if the user can claim today's login reward
+        return api.get<ApiResponse<{ canClaimToday: boolean }>>('/auth/login-reward/status')
+      })
+      .then((statusRes) => {
+        if (statusRes.data.canClaimToday) {
+          setShowLoginReward(true)
+        }
+      })
+      .catch(() => {
+        logout()
+      })
+  }, []) // Run once on mount
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="app-content-layer">
-        <Outlet />
-      </div>
-      <CascadeProvider />
-      <WhisperProvider />
-    </QueryClientProvider>
-  );
+    <ErrorBoundary>
+      <a href="#main-content" className="skip-to-content">
+        Skip to content
+      </a>
+      <AnimatePresence mode="wait">
+        <Outlet key={location.pathname} />
+      </AnimatePresence>
+      {showLoginReward && (
+        <LoginRewardModal onClose={() => setShowLoginReward(false)} />
+      )}
+    </ErrorBoundary>
+  )
 }

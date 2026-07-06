@@ -9,461 +9,351 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as AuthRouteImport } from './routes/auth'
-import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
-import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
-import { Route as AuthenticatedTrialRouteImport } from './routes/_authenticated/trial'
-import { Route as AuthenticatedRaceSkillsRouteImport } from './routes/_authenticated/race-skills'
-import { Route as AuthenticatedQuestsRouteImport } from './routes/_authenticated/quests'
-import { Route as AuthenticatedProfileRouteImport } from './routes/_authenticated/profile'
-import { Route as AuthenticatedPenaltyZoneRouteImport } from './routes/_authenticated/penalty-zone'
-import { Route as AuthenticatedIslandRouteImport } from './routes/_authenticated/island'
-import { Route as AuthenticatedGuildRouteImport } from './routes/_authenticated/guild'
-import { Route as AuthenticatedFusionRouteImport } from './routes/_authenticated/fusion'
-import { Route as AuthenticatedForgeRouteImport } from './routes/_authenticated/forge'
-import { Route as AuthenticatedExpeditionsRouteImport } from './routes/_authenticated/expeditions'
-import { Route as AuthenticatedCrossFusionRouteImport } from './routes/_authenticated/cross-fusion'
-import { Route as AuthenticatedCompendiumRouteImport } from './routes/_authenticated/compendium'
-import { Route as AuthenticatedCodexRouteImport } from './routes/_authenticated/codex'
-import { Route as AuthenticatedBazaarRouteImport } from './routes/_authenticated/bazaar'
-import { Route as AuthenticatedBattleRouteImport } from './routes/_authenticated/battle'
-import { Route as AuthenticatedAltarRouteImport } from './routes/_authenticated/altar'
-import { Route as AuthenticatedAkashicRecordsRouteImport } from './routes/_authenticated/akashic-records'
+import { Route as AppRouteImport } from './routes/_app'
+import { Route as AppIndexRouteImport } from './routes/_app/index'
+import { Route as AuthRegisterRouteImport } from './routes/auth/register'
+import { Route as AuthLoginRouteImport } from './routes/auth/login'
+import { Route as AppShopRouteImport } from './routes/_app/shop'
+import { Route as AppSettingsRouteImport } from './routes/_app/settings'
+import { Route as AppProfileRouteImport } from './routes/_app/profile'
+import { Route as AppIslandRouteImport } from './routes/_app/island'
+import { Route as AppHubRouteImport } from './routes/_app/hub'
+import { Route as AppGuildRouteImport } from './routes/_app/guild'
+import { Route as AppFusionRouteImport } from './routes/_app/fusion'
+import { Route as AppDirectivesRouteImport } from './routes/_app/directives'
+import { Route as AppCompendiumRouteImport } from './routes/_app/compendium'
+import { Route as AppBattlesRouteImport } from './routes/_app/battles'
+import { Route as AppAltarRouteImport } from './routes/_app/altar'
 
-const AuthRoute = AuthRouteImport.update({
-  id: '/auth',
-  path: '/auth',
+const AppRoute = AppRouteImport.update({
+  id: '/_app',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
-  id: '/_authenticated',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
+const AppIndexRoute = AppIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => AuthenticatedRouteRoute,
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedTrialRoute = AuthenticatedTrialRouteImport.update({
-  id: '/trial',
-  path: '/trial',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const AuthRegisterRoute = AuthRegisterRouteImport.update({
+  id: '/auth/register',
+  path: '/auth/register',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedRaceSkillsRoute = AuthenticatedRaceSkillsRouteImport.update({
-  id: '/race-skills',
-  path: '/race-skills',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const AuthLoginRoute = AuthLoginRouteImport.update({
+  id: '/auth/login',
+  path: '/auth/login',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const AuthenticatedQuestsRoute = AuthenticatedQuestsRouteImport.update({
-  id: '/quests',
-  path: '/quests',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const AppShopRoute = AppShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedProfileRoute = AuthenticatedProfileRouteImport.update({
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppProfileRoute = AppProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
-  getParentRoute: () => AuthenticatedRouteRoute,
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedPenaltyZoneRoute =
-  AuthenticatedPenaltyZoneRouteImport.update({
-    id: '/penalty-zone',
-    path: '/penalty-zone',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
-const AuthenticatedIslandRoute = AuthenticatedIslandRouteImport.update({
+const AppIslandRoute = AppIslandRouteImport.update({
   id: '/island',
   path: '/island',
-  getParentRoute: () => AuthenticatedRouteRoute,
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedGuildRoute = AuthenticatedGuildRouteImport.update({
+const AppHubRoute = AppHubRouteImport.update({
+  id: '/hub',
+  path: '/hub',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppGuildRoute = AppGuildRouteImport.update({
   id: '/guild',
   path: '/guild',
-  getParentRoute: () => AuthenticatedRouteRoute,
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedFusionRoute = AuthenticatedFusionRouteImport.update({
+const AppFusionRoute = AppFusionRouteImport.update({
   id: '/fusion',
   path: '/fusion',
-  getParentRoute: () => AuthenticatedRouteRoute,
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedForgeRoute = AuthenticatedForgeRouteImport.update({
-  id: '/forge',
-  path: '/forge',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const AppDirectivesRoute = AppDirectivesRouteImport.update({
+  id: '/directives',
+  path: '/directives',
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedExpeditionsRoute =
-  AuthenticatedExpeditionsRouteImport.update({
-    id: '/expeditions',
-    path: '/expeditions',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
-const AuthenticatedCrossFusionRoute =
-  AuthenticatedCrossFusionRouteImport.update({
-    id: '/cross-fusion',
-    path: '/cross-fusion',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
-const AuthenticatedCompendiumRoute = AuthenticatedCompendiumRouteImport.update({
+const AppCompendiumRoute = AppCompendiumRouteImport.update({
   id: '/compendium',
   path: '/compendium',
-  getParentRoute: () => AuthenticatedRouteRoute,
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedCodexRoute = AuthenticatedCodexRouteImport.update({
-  id: '/codex',
-  path: '/codex',
-  getParentRoute: () => AuthenticatedRouteRoute,
+const AppBattlesRoute = AppBattlesRouteImport.update({
+  id: '/battles',
+  path: '/battles',
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedBazaarRoute = AuthenticatedBazaarRouteImport.update({
-  id: '/bazaar',
-  path: '/bazaar',
-  getParentRoute: () => AuthenticatedRouteRoute,
-} as any)
-const AuthenticatedBattleRoute = AuthenticatedBattleRouteImport.update({
-  id: '/battle',
-  path: '/battle',
-  getParentRoute: () => AuthenticatedRouteRoute,
-} as any)
-const AuthenticatedAltarRoute = AuthenticatedAltarRouteImport.update({
+const AppAltarRoute = AppAltarRouteImport.update({
   id: '/altar',
   path: '/altar',
-  getParentRoute: () => AuthenticatedRouteRoute,
+  getParentRoute: () => AppRoute,
 } as any)
-const AuthenticatedAkashicRecordsRoute =
-  AuthenticatedAkashicRecordsRouteImport.update({
-    id: '/akashic-records',
-    path: '/akashic-records',
-    getParentRoute: () => AuthenticatedRouteRoute,
-  } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof AuthenticatedIndexRoute
-  '/auth': typeof AuthRoute
-  '/akashic-records': typeof AuthenticatedAkashicRecordsRoute
-  '/altar': typeof AuthenticatedAltarRoute
-  '/battle': typeof AuthenticatedBattleRoute
-  '/bazaar': typeof AuthenticatedBazaarRoute
-  '/codex': typeof AuthenticatedCodexRoute
-  '/compendium': typeof AuthenticatedCompendiumRoute
-  '/cross-fusion': typeof AuthenticatedCrossFusionRoute
-  '/expeditions': typeof AuthenticatedExpeditionsRoute
-  '/forge': typeof AuthenticatedForgeRoute
-  '/fusion': typeof AuthenticatedFusionRoute
-  '/guild': typeof AuthenticatedGuildRoute
-  '/island': typeof AuthenticatedIslandRoute
-  '/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
-  '/profile': typeof AuthenticatedProfileRoute
-  '/quests': typeof AuthenticatedQuestsRoute
-  '/race-skills': typeof AuthenticatedRaceSkillsRoute
-  '/trial': typeof AuthenticatedTrialRoute
+  '/': typeof AppIndexRoute
+  '/altar': typeof AppAltarRoute
+  '/battles': typeof AppBattlesRoute
+  '/compendium': typeof AppCompendiumRoute
+  '/directives': typeof AppDirectivesRoute
+  '/fusion': typeof AppFusionRoute
+  '/guild': typeof AppGuildRoute
+  '/hub': typeof AppHubRoute
+  '/island': typeof AppIslandRoute
+  '/profile': typeof AppProfileRoute
+  '/settings': typeof AppSettingsRoute
+  '/shop': typeof AppShopRoute
+  '/auth/login': typeof AuthLoginRoute
+  '/auth/register': typeof AuthRegisterRoute
 }
 export interface FileRoutesByTo {
-  '/auth': typeof AuthRoute
-  '/akashic-records': typeof AuthenticatedAkashicRecordsRoute
-  '/altar': typeof AuthenticatedAltarRoute
-  '/battle': typeof AuthenticatedBattleRoute
-  '/bazaar': typeof AuthenticatedBazaarRoute
-  '/codex': typeof AuthenticatedCodexRoute
-  '/compendium': typeof AuthenticatedCompendiumRoute
-  '/cross-fusion': typeof AuthenticatedCrossFusionRoute
-  '/expeditions': typeof AuthenticatedExpeditionsRoute
-  '/forge': typeof AuthenticatedForgeRoute
-  '/fusion': typeof AuthenticatedFusionRoute
-  '/guild': typeof AuthenticatedGuildRoute
-  '/island': typeof AuthenticatedIslandRoute
-  '/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
-  '/profile': typeof AuthenticatedProfileRoute
-  '/quests': typeof AuthenticatedQuestsRoute
-  '/race-skills': typeof AuthenticatedRaceSkillsRoute
-  '/trial': typeof AuthenticatedTrialRoute
-  '/': typeof AuthenticatedIndexRoute
+  '/altar': typeof AppAltarRoute
+  '/battles': typeof AppBattlesRoute
+  '/compendium': typeof AppCompendiumRoute
+  '/directives': typeof AppDirectivesRoute
+  '/fusion': typeof AppFusionRoute
+  '/guild': typeof AppGuildRoute
+  '/hub': typeof AppHubRoute
+  '/island': typeof AppIslandRoute
+  '/profile': typeof AppProfileRoute
+  '/settings': typeof AppSettingsRoute
+  '/shop': typeof AppShopRoute
+  '/auth/login': typeof AuthLoginRoute
+  '/auth/register': typeof AuthRegisterRoute
+  '/': typeof AppIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
-  '/auth': typeof AuthRoute
-  '/_authenticated/akashic-records': typeof AuthenticatedAkashicRecordsRoute
-  '/_authenticated/altar': typeof AuthenticatedAltarRoute
-  '/_authenticated/battle': typeof AuthenticatedBattleRoute
-  '/_authenticated/bazaar': typeof AuthenticatedBazaarRoute
-  '/_authenticated/codex': typeof AuthenticatedCodexRoute
-  '/_authenticated/compendium': typeof AuthenticatedCompendiumRoute
-  '/_authenticated/cross-fusion': typeof AuthenticatedCrossFusionRoute
-  '/_authenticated/expeditions': typeof AuthenticatedExpeditionsRoute
-  '/_authenticated/forge': typeof AuthenticatedForgeRoute
-  '/_authenticated/fusion': typeof AuthenticatedFusionRoute
-  '/_authenticated/guild': typeof AuthenticatedGuildRoute
-  '/_authenticated/island': typeof AuthenticatedIslandRoute
-  '/_authenticated/penalty-zone': typeof AuthenticatedPenaltyZoneRoute
-  '/_authenticated/profile': typeof AuthenticatedProfileRoute
-  '/_authenticated/quests': typeof AuthenticatedQuestsRoute
-  '/_authenticated/race-skills': typeof AuthenticatedRaceSkillsRoute
-  '/_authenticated/trial': typeof AuthenticatedTrialRoute
-  '/_authenticated/': typeof AuthenticatedIndexRoute
+  '/_app': typeof AppRouteWithChildren
+  '/_app/altar': typeof AppAltarRoute
+  '/_app/battles': typeof AppBattlesRoute
+  '/_app/compendium': typeof AppCompendiumRoute
+  '/_app/directives': typeof AppDirectivesRoute
+  '/_app/fusion': typeof AppFusionRoute
+  '/_app/guild': typeof AppGuildRoute
+  '/_app/hub': typeof AppHubRoute
+  '/_app/island': typeof AppIslandRoute
+  '/_app/profile': typeof AppProfileRoute
+  '/_app/settings': typeof AppSettingsRoute
+  '/_app/shop': typeof AppShopRoute
+  '/auth/login': typeof AuthLoginRoute
+  '/auth/register': typeof AuthRegisterRoute
+  '/_app/': typeof AppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/auth'
-    | '/akashic-records'
     | '/altar'
-    | '/battle'
-    | '/bazaar'
-    | '/codex'
+    | '/battles'
     | '/compendium'
-    | '/cross-fusion'
-    | '/expeditions'
-    | '/forge'
+    | '/directives'
     | '/fusion'
     | '/guild'
+    | '/hub'
     | '/island'
-    | '/penalty-zone'
     | '/profile'
-    | '/quests'
-    | '/race-skills'
-    | '/trial'
+    | '/settings'
+    | '/shop'
+    | '/auth/login'
+    | '/auth/register'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/auth'
-    | '/akashic-records'
     | '/altar'
-    | '/battle'
-    | '/bazaar'
-    | '/codex'
+    | '/battles'
     | '/compendium'
-    | '/cross-fusion'
-    | '/expeditions'
-    | '/forge'
+    | '/directives'
     | '/fusion'
     | '/guild'
+    | '/hub'
     | '/island'
-    | '/penalty-zone'
     | '/profile'
-    | '/quests'
-    | '/race-skills'
-    | '/trial'
+    | '/settings'
+    | '/shop'
+    | '/auth/login'
+    | '/auth/register'
     | '/'
   id:
     | '__root__'
-    | '/_authenticated'
-    | '/auth'
-    | '/_authenticated/akashic-records'
-    | '/_authenticated/altar'
-    | '/_authenticated/battle'
-    | '/_authenticated/bazaar'
-    | '/_authenticated/codex'
-    | '/_authenticated/compendium'
-    | '/_authenticated/cross-fusion'
-    | '/_authenticated/expeditions'
-    | '/_authenticated/forge'
-    | '/_authenticated/fusion'
-    | '/_authenticated/guild'
-    | '/_authenticated/island'
-    | '/_authenticated/penalty-zone'
-    | '/_authenticated/profile'
-    | '/_authenticated/quests'
-    | '/_authenticated/race-skills'
-    | '/_authenticated/trial'
-    | '/_authenticated/'
+    | '/_app'
+    | '/_app/altar'
+    | '/_app/battles'
+    | '/_app/compendium'
+    | '/_app/directives'
+    | '/_app/fusion'
+    | '/_app/guild'
+    | '/_app/hub'
+    | '/_app/island'
+    | '/_app/profile'
+    | '/_app/settings'
+    | '/_app/shop'
+    | '/auth/login'
+    | '/auth/register'
+    | '/_app/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
-  AuthRoute: typeof AuthRoute
+  AppRoute: typeof AppRouteWithChildren
+  AuthLoginRoute: typeof AuthLoginRoute
+  AuthRegisterRoute: typeof AuthRegisterRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/auth': {
-      id: '/auth'
-      path: '/auth'
-      fullPath: '/auth'
-      preLoaderRoute: typeof AuthRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_authenticated': {
-      id: '/_authenticated'
+    '/_app': {
+      id: '/_app'
       path: ''
       fullPath: '/'
-      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/': {
-      id: '/_authenticated/'
+    '/_app/': {
+      id: '/_app/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof AuthenticatedIndexRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+      preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/trial': {
-      id: '/_authenticated/trial'
-      path: '/trial'
-      fullPath: '/trial'
-      preLoaderRoute: typeof AuthenticatedTrialRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+    '/auth/register': {
+      id: '/auth/register'
+      path: '/auth/register'
+      fullPath: '/auth/register'
+      preLoaderRoute: typeof AuthRegisterRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/race-skills': {
-      id: '/_authenticated/race-skills'
-      path: '/race-skills'
-      fullPath: '/race-skills'
-      preLoaderRoute: typeof AuthenticatedRaceSkillsRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+    '/auth/login': {
+      id: '/auth/login'
+      path: '/auth/login'
+      fullPath: '/auth/login'
+      preLoaderRoute: typeof AuthLoginRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/_authenticated/quests': {
-      id: '/_authenticated/quests'
-      path: '/quests'
-      fullPath: '/quests'
-      preLoaderRoute: typeof AuthenticatedQuestsRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+    '/_app/shop': {
+      id: '/_app/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof AppShopRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/profile': {
-      id: '/_authenticated/profile'
+    '/_app/settings': {
+      id: '/_app/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/profile': {
+      id: '/_app/profile'
       path: '/profile'
       fullPath: '/profile'
-      preLoaderRoute: typeof AuthenticatedProfileRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+      preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/penalty-zone': {
-      id: '/_authenticated/penalty-zone'
-      path: '/penalty-zone'
-      fullPath: '/penalty-zone'
-      preLoaderRoute: typeof AuthenticatedPenaltyZoneRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/island': {
-      id: '/_authenticated/island'
+    '/_app/island': {
+      id: '/_app/island'
       path: '/island'
       fullPath: '/island'
-      preLoaderRoute: typeof AuthenticatedIslandRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+      preLoaderRoute: typeof AppIslandRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/guild': {
-      id: '/_authenticated/guild'
+    '/_app/hub': {
+      id: '/_app/hub'
+      path: '/hub'
+      fullPath: '/hub'
+      preLoaderRoute: typeof AppHubRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/guild': {
+      id: '/_app/guild'
       path: '/guild'
       fullPath: '/guild'
-      preLoaderRoute: typeof AuthenticatedGuildRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+      preLoaderRoute: typeof AppGuildRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/fusion': {
-      id: '/_authenticated/fusion'
+    '/_app/fusion': {
+      id: '/_app/fusion'
       path: '/fusion'
       fullPath: '/fusion'
-      preLoaderRoute: typeof AuthenticatedFusionRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+      preLoaderRoute: typeof AppFusionRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/forge': {
-      id: '/_authenticated/forge'
-      path: '/forge'
-      fullPath: '/forge'
-      preLoaderRoute: typeof AuthenticatedForgeRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+    '/_app/directives': {
+      id: '/_app/directives'
+      path: '/directives'
+      fullPath: '/directives'
+      preLoaderRoute: typeof AppDirectivesRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/expeditions': {
-      id: '/_authenticated/expeditions'
-      path: '/expeditions'
-      fullPath: '/expeditions'
-      preLoaderRoute: typeof AuthenticatedExpeditionsRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/cross-fusion': {
-      id: '/_authenticated/cross-fusion'
-      path: '/cross-fusion'
-      fullPath: '/cross-fusion'
-      preLoaderRoute: typeof AuthenticatedCrossFusionRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/compendium': {
-      id: '/_authenticated/compendium'
+    '/_app/compendium': {
+      id: '/_app/compendium'
       path: '/compendium'
       fullPath: '/compendium'
-      preLoaderRoute: typeof AuthenticatedCompendiumRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+      preLoaderRoute: typeof AppCompendiumRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/codex': {
-      id: '/_authenticated/codex'
-      path: '/codex'
-      fullPath: '/codex'
-      preLoaderRoute: typeof AuthenticatedCodexRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+    '/_app/battles': {
+      id: '/_app/battles'
+      path: '/battles'
+      fullPath: '/battles'
+      preLoaderRoute: typeof AppBattlesRouteImport
+      parentRoute: typeof AppRoute
     }
-    '/_authenticated/bazaar': {
-      id: '/_authenticated/bazaar'
-      path: '/bazaar'
-      fullPath: '/bazaar'
-      preLoaderRoute: typeof AuthenticatedBazaarRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/battle': {
-      id: '/_authenticated/battle'
-      path: '/battle'
-      fullPath: '/battle'
-      preLoaderRoute: typeof AuthenticatedBattleRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/altar': {
-      id: '/_authenticated/altar'
+    '/_app/altar': {
+      id: '/_app/altar'
       path: '/altar'
       fullPath: '/altar'
-      preLoaderRoute: typeof AuthenticatedAltarRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
-    }
-    '/_authenticated/akashic-records': {
-      id: '/_authenticated/akashic-records'
-      path: '/akashic-records'
-      fullPath: '/akashic-records'
-      preLoaderRoute: typeof AuthenticatedAkashicRecordsRouteImport
-      parentRoute: typeof AuthenticatedRouteRoute
+      preLoaderRoute: typeof AppAltarRouteImport
+      parentRoute: typeof AppRoute
     }
   }
 }
 
-interface AuthenticatedRouteRouteChildren {
-  AuthenticatedAkashicRecordsRoute: typeof AuthenticatedAkashicRecordsRoute
-  AuthenticatedAltarRoute: typeof AuthenticatedAltarRoute
-  AuthenticatedBattleRoute: typeof AuthenticatedBattleRoute
-  AuthenticatedBazaarRoute: typeof AuthenticatedBazaarRoute
-  AuthenticatedCodexRoute: typeof AuthenticatedCodexRoute
-  AuthenticatedCompendiumRoute: typeof AuthenticatedCompendiumRoute
-  AuthenticatedCrossFusionRoute: typeof AuthenticatedCrossFusionRoute
-  AuthenticatedExpeditionsRoute: typeof AuthenticatedExpeditionsRoute
-  AuthenticatedForgeRoute: typeof AuthenticatedForgeRoute
-  AuthenticatedFusionRoute: typeof AuthenticatedFusionRoute
-  AuthenticatedGuildRoute: typeof AuthenticatedGuildRoute
-  AuthenticatedIslandRoute: typeof AuthenticatedIslandRoute
-  AuthenticatedPenaltyZoneRoute: typeof AuthenticatedPenaltyZoneRoute
-  AuthenticatedProfileRoute: typeof AuthenticatedProfileRoute
-  AuthenticatedQuestsRoute: typeof AuthenticatedQuestsRoute
-  AuthenticatedRaceSkillsRoute: typeof AuthenticatedRaceSkillsRoute
-  AuthenticatedTrialRoute: typeof AuthenticatedTrialRoute
-  AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
+interface AppRouteChildren {
+  AppAltarRoute: typeof AppAltarRoute
+  AppBattlesRoute: typeof AppBattlesRoute
+  AppCompendiumRoute: typeof AppCompendiumRoute
+  AppDirectivesRoute: typeof AppDirectivesRoute
+  AppFusionRoute: typeof AppFusionRoute
+  AppGuildRoute: typeof AppGuildRoute
+  AppHubRoute: typeof AppHubRoute
+  AppIslandRoute: typeof AppIslandRoute
+  AppProfileRoute: typeof AppProfileRoute
+  AppSettingsRoute: typeof AppSettingsRoute
+  AppShopRoute: typeof AppShopRoute
+  AppIndexRoute: typeof AppIndexRoute
 }
 
-const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
-  AuthenticatedAkashicRecordsRoute: AuthenticatedAkashicRecordsRoute,
-  AuthenticatedAltarRoute: AuthenticatedAltarRoute,
-  AuthenticatedBattleRoute: AuthenticatedBattleRoute,
-  AuthenticatedBazaarRoute: AuthenticatedBazaarRoute,
-  AuthenticatedCodexRoute: AuthenticatedCodexRoute,
-  AuthenticatedCompendiumRoute: AuthenticatedCompendiumRoute,
-  AuthenticatedCrossFusionRoute: AuthenticatedCrossFusionRoute,
-  AuthenticatedExpeditionsRoute: AuthenticatedExpeditionsRoute,
-  AuthenticatedForgeRoute: AuthenticatedForgeRoute,
-  AuthenticatedFusionRoute: AuthenticatedFusionRoute,
-  AuthenticatedGuildRoute: AuthenticatedGuildRoute,
-  AuthenticatedIslandRoute: AuthenticatedIslandRoute,
-  AuthenticatedPenaltyZoneRoute: AuthenticatedPenaltyZoneRoute,
-  AuthenticatedProfileRoute: AuthenticatedProfileRoute,
-  AuthenticatedQuestsRoute: AuthenticatedQuestsRoute,
-  AuthenticatedRaceSkillsRoute: AuthenticatedRaceSkillsRoute,
-  AuthenticatedTrialRoute: AuthenticatedTrialRoute,
-  AuthenticatedIndexRoute: AuthenticatedIndexRoute,
+const AppRouteChildren: AppRouteChildren = {
+  AppAltarRoute: AppAltarRoute,
+  AppBattlesRoute: AppBattlesRoute,
+  AppCompendiumRoute: AppCompendiumRoute,
+  AppDirectivesRoute: AppDirectivesRoute,
+  AppFusionRoute: AppFusionRoute,
+  AppGuildRoute: AppGuildRoute,
+  AppHubRoute: AppHubRoute,
+  AppIslandRoute: AppIslandRoute,
+  AppProfileRoute: AppProfileRoute,
+  AppSettingsRoute: AppSettingsRoute,
+  AppShopRoute: AppShopRoute,
+  AppIndexRoute: AppIndexRoute,
 }
 
-const AuthenticatedRouteRouteWithChildren =
-  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
-  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
-  AuthRoute: AuthRoute,
+  AppRoute: AppRouteWithChildren,
+  AuthLoginRoute: AuthLoginRoute,
+  AuthRegisterRoute: AuthRegisterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

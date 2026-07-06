@@ -1,0 +1,141 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        bg: {
+          deep:     'var(--color-bg-deep)',
+          surface:  'var(--color-bg-surface)',
+          elevated: 'var(--color-bg-elevated)',
+          hover:    'var(--color-bg-hover)',
+        },
+        text: {
+          primary:   'var(--color-text-primary)',
+          secondary: 'var(--color-text-secondary)',
+          tertiary:  'var(--color-text-tertiary)',
+          disabled:  'var(--color-text-disabled)',
+        },
+        gold:    'var(--color-gold)',
+        'gold-bright': 'var(--color-gold-bright)',
+        void:    'var(--color-void)',
+        danger:  'var(--color-danger)',
+        success: 'var(--color-success)',
+        warning: 'var(--color-warning)',
+        rarity: {
+          common:    'var(--rarity-common)',
+          uncommon:  'var(--rarity-uncommon)',
+          rare:      'var(--rarity-rare)',
+          elite:     'var(--rarity-elite)',
+          epic:      'var(--rarity-epic)',
+          legendary: 'var(--rarity-legendary)',
+          mythic:    'var(--rarity-mythic)',
+          ex:        'var(--rarity-ex)',
+        },
+        element: {
+          fire:       'var(--element-fire)',
+          water:      'var(--element-water)',
+          earth:      'var(--element-earth)',
+          wind:       'var(--element-wind)',
+          light:      'var(--element-light)',
+          dark:       'var(--element-dark)',
+          void:       'var(--element-void)',
+          digital:    'var(--element-digital)',
+          ice:        'var(--element-ice)',
+          thunder:    'var(--element-thunder)',
+          nature:     'var(--element-nature)',
+          stellar:    'var(--element-stellar)',
+          primordial: 'var(--element-primordial)',
+          synthetic:  'var(--element-synthetic)',
+        },
+      },
+      fontFamily: {
+        cinzel:  ['Cinzel', 'serif'],
+        sans:    ['DM Sans', 'sans-serif'],
+        mono:    ['JetBrains Mono', 'monospace'],
+      },
+      fontSize: {
+        '11': '11px',
+        '12': '12px',
+        '13': '13px',
+        '14': '14px',
+        '16': '16px',
+        '20': '20px',
+        '24': '24px',
+        '32': '32px',
+        '48': '48px',
+        '64': '64px',
+      },
+      borderRadius: {
+        sm:   'var(--radius-sm)',
+        md:   'var(--radius-md)',
+        lg:   'var(--radius-lg)',
+        xl:   'var(--radius-xl)',
+        pill: 'var(--radius-pill)',
+      },
+      transitionDuration: {
+        fast:   '150ms',
+        base:   '200ms',
+        slow:   '300ms',
+        spring: '400ms',
+      },
+      zIndex: {
+        card:   '10',
+        nav:    '100',
+        modal:  '200',
+        toast:  '300',
+        reveal: '400',
+      },
+      boxShadow: {
+        'glow-uncommon':  'var(--glow-uncommon)',
+        'glow-rare':      'var(--glow-rare)',
+        'glow-elite':     'var(--glow-elite)',
+        'glow-epic':      'var(--glow-epic)',
+        'glow-legendary': 'var(--glow-legendary)',
+        'glow-mythic':    'var(--glow-mythic)',
+        'glow-ex':        'var(--glow-ex)',
+      },
+      keyframes: {
+        shimmer: {
+          '0%':   { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        'float-up': {
+          '0%':   { opacity: '1', transform: 'translateY(0)' },
+          '100%': { opacity: '0', transform: 'translateY(-48px)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '1' },
+          '50%':      { opacity: '0.6' },
+        },
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '20%':      { transform: 'translateX(-6px)' },
+          '40%':      { transform: 'translateX(6px)' },
+          '60%':      { transform: 'translateX(-4px)' },
+          '80%':      { transform: 'translateX(4px)' },
+        },
+        'streak-fire': {
+          '0%, 100%': { transform: 'scale(1)',    opacity: '1' },
+          '50%':      { transform: 'scale(1.15)', opacity: '0.85' },
+        },
+        'nova-expand': {
+          '0%':   { transform: 'scale(0)', opacity: '1' },
+          '100%': { transform: 'scale(20)', opacity: '0' },
+        },
+      },
+      animation: {
+        shimmer:      'shimmer 1.5s infinite',
+        'float-up':   'float-up 800ms ease-out forwards',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        shake:        'shake 200ms ease-in-out',
+        'streak-fire':'streak-fire 1.5s ease-in-out infinite',
+        'nova-expand':'nova-expand 400ms ease-out forwards',
+      },
+    },
+  },
+  plugins: [],
+}
+
+export default config

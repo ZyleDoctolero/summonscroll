@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* ── Backgrounds ── */
+    --color-bg-deep:       #0C0E14;
+    --color-bg-surface:    #13161F;
+    --color-bg-elevated:   #1A1E2A;
+    --color-bg-hover:      #1E2333;
+    --color-bg-overlay:    rgba(0,0,0,0.72);
+
+    /* ── Text ── */
+    --color-text-primary:  #F0EDE6;
+    --color-text-secondary:#A09D96;
+    --color-text-tertiary: #6B6864;
+    --color-text-disabled: #3E3D3A;
+
+    /* ── Borders ── */
+    --color-border:        rgba(255,255,255,0.07);
+    --color-border-active: rgba(255,255,255,0.18);
+    --color-border-focus:  rgba(200,154,62,0.6);
+
+    /* ── Core accents ── */
+    --color-gold:          #C89A3E;
+    --color-gold-bright:   #FFD54F;
+    --color-void:          #7F77DD;
+    --color-danger:        #E05252;
+    --color-success:       #5FAD41;
+    --color-warning:       #FFB74D;
+
+    /* ── Element colors (14 elements) ── */
+    --element-fire:        #E8583A;
+    --element-water:       #3A8AE8;
+    --element-earth:       #8B6E3C;
+    --element-wind:        #7ABFAB;
+    --element-light:       #F5E6A0;
+    --element-dark:        #7A5C9E;
+    --element-void:        #5A4FCF;
+    --element-digital:     #1D9E75;
+    --element-ice:         #88D8EF;
+    --element-thunder:     #F0C040;
+    --element-nature:      #5FAD41;
+    --element-stellar:     #9BB8F5;
+    --element-primordial:  #CF8A40;
+    --element-synthetic:   #4FC8D0;
+    --element-arcane:      #9B59B6;
+    --element-chaos:       #C0392B;
+    --element-dread:       #6C3483;
+    --element-death:       #5D6D7E;
+    --element-divine:      #F9E79F;
+
+    /* ── Rarity colors ── */
+    --rarity-common:       #9E9E9E;
+    --rarity-uncommon:     #81C784;
+    --rarity-rare:         #4FC3F7;
+    --rarity-elite:        #FFB74D;
+    --rarity-epic:         #CE93D8;
+    --rarity-legendary:    #FFD54F;
+    --rarity-mythic:       #FF8A65;
+    --rarity-ex:           #FFFFFF;
+
+    /* ── Rarity glows ── */
+    --glow-common:         none;
+    --glow-uncommon:       0 0 8px  rgba(129,199,132,0.30);
+    --glow-rare:           0 0 12px rgba(79,195,247,0.40);
+    --glow-elite:          0 0 14px rgba(255,183,77,0.45);
+    --glow-epic:           0 0 18px rgba(206,147,216,0.50);
+    --glow-legendary:      0 0 28px rgba(255,213,79,0.65), 0 0 56px rgba(255,213,79,0.20);
+    --glow-mythic:         0 0 32px rgba(255,138,101,0.70), 0 0 64px rgba(200,80,40,0.30);
+    --glow-ex:             0 0 48px rgba(255,255,255,0.90), 0 0 96px rgba(255,255,255,0.40);
+
+    /* ── Spacing scale ── */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+
+    /* ── Border radius ── */
+    --radius-sm:   8px;
+    --radius-md:   12px;
+    --radius-lg:   16px;
+    --radius-xl:   24px;
+    --radius-pill: 9999px;
+
+    /* ── Transitions ── */
+    --transition-fast:   150ms ease;
+    --transition-base:   200ms ease;
+    --transition-slow:   300ms ease;
+    --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* ── Z-index layers ── */
+    --z-card:   10;
+    --z-nav:    100;
+    --z-modal:  200;
+    --z-toast:  300;
+    --z-reveal: 400;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg-deep);
+    color: var(--color-text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  /* Skip-to-content for keyboard navigation */
+  .skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 9999;
+    padding: 8px 16px;
+    background: var(--color-gold);
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .skip-to-content:focus {
+    top: 0;
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-surface);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.12);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.22);
+  }
+}
+
+/* ── Skeleton shimmer ── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-surface) 25%,
+    var(--color-bg-elevated) 50%,
+    var(--color-bg-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+/* ── Reduced motion overrides ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* User-controlled reduced motion (from Settings toggle) */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+

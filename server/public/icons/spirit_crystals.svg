@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="crystalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4FC3F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0288D1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- Crystal shape -->
+    <path d="M32 4 L48 20 L44 52 L20 52 L16 20 Z" fill="url(#crystalGrad)" stroke="#01579B" stroke-width="2"/>
+    <path d="M32 4 L32 52" stroke="#B3E5FC" stroke-width="1" opacity="0.5"/>
+    <path d="M16 20 L48 20" stroke="#B3E5FC" stroke-width="1" opacity="0.5"/>
+    <path d="M20 52 L32 20 L44 52" stroke="#B3E5FC" stroke-width="1" opacity="0.3"/>
+    <!-- Shine effect -->
+    <circle cx="28" cy="16" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="38" cy="24" r="2" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+</svg>

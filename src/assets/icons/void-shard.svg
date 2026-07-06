@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <title>Void Shard</title>
+  
+  <!-- Dark void effects -->
+  <defs>
+    <radialGradient id="voidGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="voidFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4338ca" />
+      <stop offset="50%" style="stop-color:#312e81" />
+      <stop offset="100%" style="stop-color:#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="voidHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#4338ca;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient id="voidEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1" />
+      <stop offset="100%" style="stop-color:#1e1b4b" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer glow -->
+  <circle cx="16" cy="16" r="14" fill="url(#voidGlow)" />
+  
+  <!-- Main shard body - jagged angular design -->
+  <path 
+    d="M16 3 L20 8 L24 12 L22 20 L16 29 L10 20 L8 12 L12 8 Z" 
+    fill="url(#voidFill)" 
+    stroke="#1e1b4b" 
+    stroke-width="1.5" 
+    stroke-linejoin="miter"
+  />
+  
+  <!-- Top left facet -->
+  <path 
+    d="M8 12 L12 8 L16 3 L16 16 Z" 
+    fill="#312e81" 
+    opacity="0.8"
+  />
+  
+  <!-- Top right facet -->
+  <path 
+    d="M24 12 L20 8 L16 3 L16 16 Z" 
+    fill="#4338ca" 
+    opacity="0.6"
+  />
+  
+  <!-- Center top facet -->
+  <path 
+    d="M12 8 L16 3 L20 8 L16 12 Z" 
+    fill="#4f46e5" 
+    opacity="0.7"
+  />
+  
+  <!-- Bottom left facet -->
+  <path 
+    d="M8 12 L16 16 L10 20 Z" 
+    fill="#1e1b4b" 
+    opacity="0.9"
+  />
+  
+  <!-- Bottom right facet -->
+  <path 
+    d="M24 12 L16 16 L22 20 Z" 
+    fill="#27216b" 
+    opacity="0.8"
+  />
+  
+  <!-- Lower left facet -->
+  <path 
+    d="M10 20 L16 16 L16 29 Z" 
+    fill="#1e1b4b" 
+    opacity="0.95"
+  />
+  
+  <!-- Lower right facet -->
+  <path 
+    d="M22 20 L16 16 L16 29 Z" 
+    fill="#312e81" 
+    opacity="0.85"
+  />
+  
+  <!-- Mysterious glow highlight at top -->
+  <path 
+    d="M14 6 L16 3 L18 6 L16 9 Z" 
+    fill="url(#voidHighlight)" 
+    opacity="0.8"
+  />
+  
+  <!-- Inner void energy -->
+  <ellipse 
+    cx="16" 
+    cy="14" 
+    rx="2.5" 
+    ry="3.5" 
+    fill="#6366f1" 
+    opacity="0.4"
+  />
+  
+  <!-- Smaller inner glow -->
+  <ellipse 
+    cx="16" 
+    cy="13" 
+    rx="1.5" 
+    ry="2" 
+    fill="#818cf8" 
+    opacity="0.6"
+  />
+  
+  <!-- Edge highlights for crystalline structure -->
+  <line x1="16" y1="3" x2="16" y2="29" stroke="url(#voidEdge)" stroke-width="0.5" opacity="0.5" />
+  <line x1="12" y1="8" x2="16" y2="16" stroke="#4338ca" stroke-width="0.5" opacity="0.4" />
+  <line x1="20" y1="8" x2="16" y2="16" stroke="#4338ca" stroke-width="0.5" opacity="0.4" />
+  <line x1="8" y1="12" x2="16" y2="16" stroke="#312e81" stroke-width="0.5" opacity="0.3" />
+  <line x1="24" y1="12" x2="16" y2="16" stroke="#312e81" stroke-width="0.5" opacity="0.3" />
+  
+  <!-- Jagged crack details for mysterious effect -->
+  <path 
+    d="M16 12 L15 15 L16 18 L17 15 Z" 
+    fill="none" 
+    stroke="#6366f1" 
+    stroke-width="0.5" 
+    opacity="0.7"
+  />
+  
+  <!-- Small void particles floating -->
+  <circle cx="12" cy="10" r="0.5" fill="#818cf8" opacity="0.6" />
+  <circle cx="20" cy="11" r="0.5" fill="#818cf8" opacity="0.5" />
+  <circle cx="14" cy="22" r="0.5" fill="#6366f1" opacity="0.4" />
+  <circle cx="18" cy="23" r="0.5" fill="#6366f1" opacity="0.5" />
+</svg>

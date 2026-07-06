@@ -1,19 +1,57 @@
-import ReactDOM from "react-dom/client";
-import { RouterProvider } from "@tanstack/react-router";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { getRouter, queryClient } from "./router";
-import "./styles.css";
+import { StrictMode, Suspense } from 'react'
+import { createRoot } from 'react-dom/client'
+import { RouterProvider, createRouter } from '@tanstack/react-router'
+import * as Sentry from '@sentry/react'
+import { QueryProvider } from './providers/QueryProvider'
+import { ToastContainer } from './components/ui/Toast'
+import { CurrencyFloatLayer } from './components/ui/CurrencyFloat'
+import { LevelUpOverlay } from './components/ui/LevelUp'
+import { RouteLoader } from './components/ui/RouteLoader'
+import './index.css'
 
-const router = getRouter();
+// Import the generated route tree
+import { routeTree } from './routeTree.gen'
 
-declare module "@tanstack/react-router" {
+// ── Sentry initialisation ─────────────────────────────────────────────────────
+const sentryDsn = import.meta.env.VITE_SENTRY_DSN as string | undefined
+if (sentryDsn) {
+  Sentry.init({
+    dsn: sentryDsn,
+    environment: import.meta.env.MODE,
+    integrations: [
+      Sentry.browserTracingIntegration(),
+      Sentry.replayIntegration({ maskAllText: false, blockAllMedia: false }),
+    ],
+    tracesSampleRate: import.meta.env.PROD ? 0.1 : 1.0,
+    replaysSessionSampleRate: 0.1,
+    replaysOnErrorSampleRate: 1.0,
+  })
+}
+
+const router = createRouter({
+  routeTree,
+  defaultPreload: 'intent',
+  defaultPreloadStaleTime: 0,
+})
+
+// Register the router instance for type safety
+declare module '@tanstack/react-router' {
   interface Register {
-    router: ReturnType<typeof getRouter>;
+    router: typeof router
   }
 }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <QueryClientProvider client={queryClient}>
-    <RouterProvider router={router} />
-  </QueryClientProvider>,
-);
+const rootElement = document.getElementById('root')!
+
+createRoot(rootElement).render(
+  <StrictMode>
+    <QueryProvider>
+      <Suspense fallback={<RouteLoader />}>
+        <RouterProvider router={router} />
+      </Suspense>
+      <ToastContainer />
+      <CurrencyFloatLayer />
+      <LevelUpOverlay />
+    </QueryProvider>
+  </StrictMode>,
+)

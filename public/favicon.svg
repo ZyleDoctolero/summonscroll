@@ -1,0 +1,22 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>SummonScroll</title>
+  
+  <!-- Scroll background -->
+  <rect x="4" y="6" width="24" height="20" rx="3" fill="#1A1E2A" stroke="#C89A3E" stroke-width="1.5"/>
+  
+  <!-- Scroll curls -->
+  <circle cx="7" cy="9" r="1.5" fill="#C89A3E" opacity="0.3"/>
+  <circle cx="25" cy="9" r="1.5" fill="#C89A3E" opacity="0.3"/>
+  <circle cx="7" cy="23" r="1.5" fill="#C89A3E" opacity="0.3"/>
+  <circle cx="25" cy="23" r="1.5" fill="#C89A3E" opacity="0.3"/>
+  
+  <!-- Summoning circle -->
+  <circle cx="16" cy="16" r="6" stroke="#7F77DD" stroke-width="1.2" opacity="0.6"/>
+  <circle cx="16" cy="16" r="4" stroke="#C89A3E" stroke-width="1.2"/>
+  
+  <!-- Mystical runes -->
+  <path d="M16 13L17.5 15L16 17L14.5 15L16 13Z" fill="#FFD54F" opacity="0.8"/>
+  <path d="M16 17L17.5 19L16 21L14.5 19L16 17Z" fill="#FFD54F" opacity="0.8"/>
+  <path d="M13 16L15 17.5L17 16L15 14.5L13 16Z" fill="#7F77DD" opacity="0.6"/>
+  <path d="M17 16L19 17.5L21 16L19 14.5L17 16Z" fill="#7F77DD" opacity="0.6"/>
+</svg>

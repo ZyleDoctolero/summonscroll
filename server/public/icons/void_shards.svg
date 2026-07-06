@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="voidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7E57C2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A148C;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="voidGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#9575CD;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#4A148C;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <g>
+    <!-- Glow effect -->
+    <circle cx="32" cy="32" r="28" fill="url(#voidGlow)"/>
+    <!-- Shard shape -->
+    <path d="M32 8 L42 28 L38 56 L26 56 L22 28 Z" fill="url(#voidGrad)" stroke="#311B92" stroke-width="2"/>
+    <path d="M32 8 L32 56" stroke="#B39DDB" stroke-width="1" opacity="0.4"/>
+    <path d="M22 28 L42 28" stroke="#B39DDB" stroke-width="1" opacity="0.4"/>
+    <!-- Void particles -->
+    <circle cx="20" cy="20" r="2" fill="#9575CD" opacity="0.7"/>
+    <circle cx="44" cy="24" r="1.5" fill="#9575CD" opacity="0.6"/>
+    <circle cx="28" cy="44" r="1.5" fill="#9575CD" opacity="0.5"/>
+  </g>
+</svg>

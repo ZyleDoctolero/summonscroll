@@ -10,20 +10,15 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-.output
-.vinxi
-.tanstack/**
-.nitro
 *.local
 
-# Environment variables
+# Environment variables (contain secrets)
 .env
 .env.local
-.env.production
-
-# Wrangler / Cloudflare
-.wrangler/
-.dev.vars
+.env.*.local
+server/.env
+server/.env.local
+server/.env.*.local
 
 # Editor directories and files
 .vscode/*
@@ -35,8 +30,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.vercel
-
-# Development artifacts
-batch_generation_test_report.md
-triage_report.csv

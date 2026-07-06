@@ -1,0 +1,1242 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SummonScroll API",
+    "version": "1.0.0",
+    "description": "Production-ready API for SummonScroll - a gamified habit tracking application with monster collection mechanics",
+    "contact": {
+      "name": "SummonScroll Team"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Development server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Authentication",
+      "description": "User authentication and session management"
+    },
+    {
+      "name": "Banners",
+      "description": "Gacha banner operations and pulls"
+    },
+    {
+      "name": "Monsters",
+      "description": "Monster bestiary and user collection"
+    },
+    {
+      "name": "Habits",
+      "description": "Habit, daily, and todo management"
+    },
+    {
+      "name": "Icons",
+      "description": "Dynamic icon management"
+    },
+    {
+      "name": "Shop",
+      "description": "In-game shop operations"
+    },
+    {
+      "name": "Guild",
+      "description": "Guild management"
+    },
+    {
+      "name": "Battles",
+      "description": "Battle system"
+    },
+    {
+      "name": "Fusion",
+      "description": "Monster fusion mechanics"
+    },
+    {
+      "name": "User",
+      "description": "User profile and settings"
+    },
+    {
+      "name": "Achievements",
+      "description": "Achievement tracking"
+    },
+    {
+      "name": "Health",
+      "description": "System health and monitoring"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Health check endpoint",
+        "description": "Returns application health status including database connectivity",
+        "responses": {
+          "200": {
+            "description": "System is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                },
+                "example": {
+                  "status": "ok",
+                  "db": "ok",
+                  "uptime": 3600,
+                  "timestamp": "2024-01-01T12:00:00.000Z"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "System is degraded (database unavailable)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                },
+                "example": {
+                  "status": "degraded",
+                  "db": "error",
+                  "uptime": 3600,
+                  "timestamp": "2024-01-01T12:00:00.000Z"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/metrics": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Application metrics",
+        "description": "Returns application performance metrics",
+        "responses": {
+          "200": {
+            "description": "Metrics retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetricsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/register": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Register a new user",
+        "description": "Creates a new user account with username, email, and password",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              },
+              "example": {
+                "username": "CrimsonBlade",
+                "email": "crimson@example.com",
+                "password": "SecurePass123"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User registered successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "409": {
+            "description": "Username or email already taken",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "message": "Username or email already taken"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Login user",
+        "description": "Authenticates user and returns JWT tokens",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              },
+              "example": {
+                "email": "crimson@example.com",
+                "password": "SecurePass123"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "401": {
+            "description": "Invalid credentials",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "message": "Invalid credentials"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/refresh": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Refresh access token",
+        "description": "Generates new access and refresh tokens using a valid refresh token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["refreshToken"],
+                "properties": {
+                  "refreshToken": {
+                    "type": "string",
+                    "description": "Valid refresh token"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tokens refreshed successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/TokenPair"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "401": {
+            "description": "Invalid refresh token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/me": {
+      "get": {
+        "tags": ["Authentication"],
+        "summary": "Get current user",
+        "description": "Returns the authenticated user's profile",
+        "security": [{"bearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "User profile retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "description": "User not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/logout": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Logout user",
+        "description": "Invalidates the user's refresh token",
+        "security": [{"bearerAuth": []}],
+        "responses": {
+          "204": {
+            "description": "Logout successful"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/auth/login-reward": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Claim daily login reward",
+        "description": "Claims the daily login reward for the current 7-day cycle",
+        "security": [{"bearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "Reward claimed successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "day": {
+                          "type": "integer",
+                          "description": "Day number (1-7)"
+                        },
+                        "reward": {
+                          "type": "object",
+                          "properties": {
+                            "spiritCrystals": {"type": "integer"},
+                            "voidShards": {"type": "integer"},
+                            "pactSeals": {"type": "integer"}
+                          }
+                        },
+                        "nextDay": {
+                          "type": "integer",
+                          "nullable": true,
+                          "description": "Next claimable day, null if cycle complete"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "409": {
+            "description": "Reward already claimed today or cycle complete",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login-reward/status": {
+      "get": {
+        "tags": ["Authentication"],
+        "summary": "Get login reward status",
+        "description": "Returns the current login reward cycle status",
+        "security": [{"bearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "Status retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "claimedDays": {
+                          "type": "array",
+                          "items": {"type": "integer"}
+                        },
+                        "nextDay": {"type": "integer"},
+                        "canClaimToday": {"type": "boolean"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/banners": {
+      "get": {
+        "tags": ["Banners"],
+        "summary": "List active banners",
+        "description": "Returns all active gacha banners. Cached for 60 seconds.",
+        "security": [{"bearerAuth": []}],
+        "responses": {
+          "200": {
+            "description": "Banners retrieved successfully",
+            "headers": {
+              "Cache-Control": {
+                "schema": {"type": "string"},
+                "description": "public, max-age=60, stale-while-revalidate=30"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedBannersResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/banners/{id}": {
+      "get": {
+        "tags": ["Banners"],
+        "summary": "Get banner by ID",
+        "description": "Returns detailed information about a specific banner",
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {"type": "string", "format": "uuid"},
+            "description": "Banner UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Banner retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Banner"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "description": "Banner not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/banners/{id}/pull": {
+      "post": {
+        "tags": ["Banners"],
+        "summary": "Pull from banner",
+        "description": "Performs a gacha pull (1x or 10x) from the specified banner. Rate limited to 10 pulls per minute.",
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {"type": "string", "format": "uuid"},
+            "description": "Banner UUID"
+          },
+          {
+            "name": "X-RateLimit-Limit",
+            "in": "header",
+            "schema": {"type": "integer"},
+            "description": "Rate limit: 10 pulls per minute"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "count": {
+                    "type": "integer",
+                    "enum": [1, 10],
+                    "default": 1,
+                    "description": "Number of pulls (1 or 10)"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pull successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/PullResult"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid pull count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "402": {
+            "description": "Insufficient currency",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "message": "Insufficient spiritCrystals"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Banner not found or inactive",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "message": "Pull rate limit exceeded"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/monsters": {
+      "get": {
+        "tags": ["Monsters"],
+        "summary": "List all monsters",
+        "description": "Returns the complete monster bestiary with filtering and pagination. Cached for 5 minutes.",
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {
+            "name": "realmId",
+            "in": "query",
+            "schema": {"type": "string", "format": "uuid"},
+            "description": "Filter by realm"
+          },
+          {
+            "name": "rarity",
+            "in": "query",
+            "schema": {"type": "string", "enum": ["common", "uncommon", "rare", "elite", "epic", "legendary", "mythic", "ex"]},
+            "description": "Filter by rarity"
+          },
+          {
+            "name": "element",
+            "in": "query",
+            "schema": {"type": "string"},
+            "description": "Filter by element"
+          },
+          {
+            "name": "role",
+            "in": "query",
+            "schema": {"type": "string"},
+            "description": "Filter by role"
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "schema": {"type": "string"},
+            "description": "Search by monster name"
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {"type": "string", "enum": ["rarity", "name"], "default": "rarity"},
+            "description": "Sort order"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {"type": "integer", "default": 1},
+            "description": "Page number"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {"type": "integer", "default": 20},
+            "description": "Items per page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Monsters retrieved successfully",
+            "headers": {
+              "Cache-Control": {
+                "schema": {"type": "string"},
+                "description": "public, max-age=300, stale-while-revalidate=60"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedMonstersResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/monsters/{id}": {
+      "get": {
+        "tags": ["Monsters"],
+        "summary": "Get monster by ID",
+        "description": "Returns detailed information about a specific monster",
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {"type": "string", "format": "uuid"},
+            "description": "Monster UUID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Monster retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Monster"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "404": {
+            "description": "Monster not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user/monsters": {
+      "get": {
+        "tags": ["Monsters"],
+        "summary": "Get user's monster collection",
+        "description": "Returns the authenticated user's owned monsters with filtering and pagination",
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {
+            "name": "realmId",
+            "in": "query",
+            "schema": {"type": "string", "format": "uuid"}
+          },
+          {
+            "name": "rarity",
+            "in": "query",
+            "schema": {"type": "string"}
+          },
+          {
+            "name": "element",
+            "in": "query",
+            "schema": {"type": "string"}
+          },
+          {
+            "name": "role",
+            "in": "query",
+            "schema": {"type": "string"}
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "schema": {"type": "string"}
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {"type": "string", "default": "rarity"}
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {"type": "integer", "default": 1}
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {"type": "integer", "default": 20}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User monsters retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedUserMonstersResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/icons": {
+      "get": {
+        "tags": ["Icons"],
+        "summary": "List all icons",
+        "description": "Returns all currency and UI icons. Cached for 5 minutes.",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {"type": "string", "enum": ["currency", "monster", "ui"]},
+            "description": "Filter by icon type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Icons retrieved successfully",
+            "headers": {
+              "Cache-Control": {
+                "schema": {"type": "string"},
+                "description": "public, max-age=300, stale-while-revalidate=60"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Icon"
+                      }
+                    },
+                    "total": {"type": "integer"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "JWT access token obtained from /api/auth/login or /api/auth/register"
+      }
+    },
+    "schemas": {
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": ["ok", "degraded"]
+          },
+          "db": {
+            "type": "string",
+            "enum": ["ok", "error"]
+          },
+          "uptime": {
+            "type": "number",
+            "description": "Server uptime in seconds"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "MetricsResponse": {
+        "type": "object",
+        "properties": {
+          "requestCount": {"type": "integer"},
+          "errorCount": {"type": "integer"},
+          "totalResponseMs": {"type": "number"},
+          "responseCount": {"type": "integer"},
+          "averageResponseMs": {"type": "number"},
+          "uptime": {"type": "number"},
+          "memoryUsage": {
+            "type": "object",
+            "properties": {
+              "rss": {"type": "integer"},
+              "heapTotal": {"type": "integer"},
+              "heapUsed": {"type": "integer"},
+              "external": {"type": "integer"}
+            }
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "errors": {
+            "type": "object",
+            "description": "Validation errors (optional)"
+          }
+        }
+      },
+      "RegisterRequest": {
+        "type": "object",
+        "required": ["username", "email", "password"],
+        "properties": {
+          "username": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 20,
+            "pattern": "^[a-zA-Z0-9_]+$",
+            "description": "Alphanumeric username with underscores"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Valid email address"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 8,
+            "description": "Password (min 8 characters)"
+          }
+        }
+      },
+      "LoginRequest": {
+        "type": "object",
+        "required": ["email", "password"],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "format": "uuid"},
+          "username": {"type": "string"},
+          "email": {"type": "string", "format": "email"},
+          "level": {"type": "integer"},
+          "xp": {"type": "integer"},
+          "xpToNextLevel": {"type": "integer"},
+          "spiritCrystals": {"type": "integer", "description": "Primary currency"},
+          "voidShards": {"type": "integer", "description": "Streak banner currency"},
+          "pactSeals": {"type": "integer", "description": "Premium currency"},
+          "currentStreak": {"type": "integer"},
+          "longestStreak": {"type": "integer"},
+          "avatarUrl": {"type": "string", "nullable": true},
+          "guildId": {"type": "string", "format": "uuid", "nullable": true},
+          "createdAt": {"type": "string", "format": "date-time"}
+        }
+      },
+      "TokenPair": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string",
+            "description": "JWT access token (15 minutes expiry)"
+          },
+          "refreshToken": {
+            "type": "string",
+            "description": "JWT refresh token (7 days expiry)"
+          },
+          "expiresIn": {
+            "type": "integer",
+            "description": "Access token expiry in seconds (900)"
+          }
+        }
+      },
+      "AuthResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "$ref": "#/components/schemas/User"
+              },
+              "tokens": {
+                "$ref": "#/components/schemas/TokenPair"
+              }
+            }
+          }
+        }
+      },
+      "Banner": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "format": "uuid"},
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "bannerType": {
+            "type": "string",
+            "enum": ["standard", "featured", "streak", "pact_seal", "event"]
+          },
+          "pullCost": {"type": "integer"},
+          "pullCurrency": {
+            "type": "string",
+            "enum": ["spiritCrystals", "voidShards", "pactSeals"]
+          },
+          "isActive": {"type": "boolean"},
+          "startsAt": {"type": "string", "format": "date-time"},
+          "endsAt": {"type": "string", "format": "date-time", "nullable": true},
+          "realmId": {"type": "string", "format": "uuid", "nullable": true},
+          "realm": {
+            "$ref": "#/components/schemas/Realm"
+          }
+        }
+      },
+      "Realm": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "format": "uuid"},
+          "name": {"type": "string"},
+          "number": {"type": "integer"},
+          "description": {"type": "string"}
+        }
+      },
+      "Monster": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "format": "uuid"},
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "rarity": {
+            "type": "string",
+            "enum": ["common", "uncommon", "rare", "elite", "epic", "legendary", "mythic", "ex"]
+          },
+          "element": {"type": "string"},
+          "role": {"type": "string"},
+          "baseHp": {"type": "integer"},
+          "baseAtk": {"type": "integer"},
+          "baseDef": {"type": "integer"},
+          "baseSpeed": {"type": "integer"},
+          "isEx": {"type": "boolean"},
+          "bannerType": {"type": "string"},
+          "artworkUrl": {"type": "string"},
+          "iconUrl": {"type": "string"},
+          "realmId": {"type": "string", "format": "uuid"},
+          "realm": {
+            "$ref": "#/components/schemas/Realm"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Skill"
+            }
+          }
+        }
+      },
+      "Skill": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "format": "uuid"},
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "cooldown": {"type": "integer"},
+          "manaCost": {"type": "integer"}
+        }
+      },
+      "UserMonster": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "format": "uuid"},
+          "userId": {"type": "string", "format": "uuid"},
+          "monsterId": {"type": "string", "format": "uuid"},
+          "level": {"type": "integer"},
+          "xp": {"type": "integer"},
+          "isOnTeam": {"type": "boolean"},
+          "teamSlot": {"type": "integer", "nullable": true},
+          "awakeningStage": {"type": "integer"},
+          "corruptionState": {"type": "string"},
+          "rankForm": {"type": "string"},
+          "equippedSkinId": {"type": "string", "format": "uuid", "nullable": true},
+          "acquiredAt": {"type": "string", "format": "date-time"},
+          "monster": {
+            "$ref": "#/components/schemas/Monster"
+          }
+        }
+      },
+      "PullResult": {
+        "type": "object",
+        "properties": {
+          "monster": {
+            "$ref": "#/components/schemas/Monster"
+          },
+          "isNew": {
+            "type": "boolean",
+            "description": "True if this is the first time obtaining this monster"
+          },
+          "isDuplicate": {
+            "type": "boolean",
+            "description": "True if user already owns this monster"
+          },
+          "transcendenceStoneGranted": {
+            "type": "boolean",
+            "description": "True if a transcendence stone was granted (EX monster duplicate)"
+          }
+        }
+      },
+      "Icon": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "format": "uuid"},
+          "name": {"type": "string"},
+          "displayName": {"type": "string"},
+          "type": {
+            "type": "string",
+            "enum": ["currency", "monster", "ui"]
+          },
+          "url": {"type": "string", "format": "uri"},
+          "format": {
+            "type": "string",
+            "enum": ["svg", "png", "webp"]
+          },
+          "width": {"type": "integer"},
+          "height": {"type": "integer"},
+          "createdAt": {"type": "string", "format": "date-time"},
+          "updatedAt": {"type": "string", "format": "date-time"}
+        }
+      },
+      "PaginatedBannersResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Banner"
+            }
+          },
+          "total": {"type": "integer"},
+          "page": {"type": "integer"},
+          "pageSize": {"type": "integer"},
+          "hasMore": {"type": "boolean"}
+        }
+      },
+      "PaginatedMonstersResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Monster"
+            }
+          },
+          "total": {"type": "integer"},
+          "page": {"type": "integer"},
+          "pageSize": {"type": "integer"},
+          "hasMore": {"type": "boolean"}
+        }
+      },
+      "PaginatedUserMonstersResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserMonster"
+            }
+          },
+          "total": {"type": "integer"},
+          "page": {"type": "integer"},
+          "pageSize": {"type": "integer"},
+          "hasMore": {"type": "boolean"}
+        }
+      }
+    },
+    "responses": {
+      "Unauthorized": {
+        "description": "Authentication required or token invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "message": "Unauthorized"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "description": "Request validation failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "message": "Invalid input",
+              "errors": {
+                "username": ["Username must be at least 3 characters"],
+                "email": ["Invalid email format"]
+              }
+            }
+          }
+        }
+      },
+      "RateLimitExceeded": {
+        "description": "Rate limit exceeded",
+        "headers": {
+          "X-RateLimit-Limit": {
+            "schema": {"type": "integer"},
+            "description": "Maximum requests allowed in the time window"
+          },
+          "X-RateLimit-Remaining": {
+            "schema": {"type": "integer"},
+            "description": "Remaining requests in current window"
+          },
+          "X-RateLimit-Reset": {
+            "schema": {"type": "integer"},
+            "description": "Unix timestamp when the rate limit resets"
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            },
+            "example": {
+              "message": "Too many requests, please try again later"
+            }
+          }
+        }
+      }
+    }
+  }
+}
