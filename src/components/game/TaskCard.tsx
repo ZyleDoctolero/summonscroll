@@ -162,7 +162,7 @@ export const TaskCard = React.memo(function TaskCard({
 
   return (
     <article
-      className="ss-card ss-panel-holographic holographic flex gap-3 group relative transition-all overflow-visible duration-150"
+      className="ss-card flex gap-3 group relative transition-all overflow-visible duration-150"
       /* eslint-disable no-restricted-syntax */
       style={{
         borderLeft: `4px solid ${task.is_starred ? "#fcd34d" : color}`,

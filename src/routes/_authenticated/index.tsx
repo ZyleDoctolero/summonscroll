@@ -302,80 +302,9 @@ function HubPage() {
       {showOnboarding && <Onboarding onComplete={() => onboardingMut.mutate()} />}
       <DeathOverlay trigger={deathTick} />
 
-      {/* Inline Hub Content */}
+      {/* Inline Hub Content — the quest board IS the page; everything else
+          lives below it as quiet support panes. */}
       <div className="relative z-10 p-4 md:p-6 max-w-5xl mx-auto pb-28">
-        {/* Tethered Monster + Utilities Row */}
-        <div className="flex flex-wrap items-start gap-4 mb-6">
-          {/* Tethered Monster Compact */}
-          <div className="flex items-center gap-3 flex-1 min-w-0">
-            {tetheredUm ? (
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-16 h-16 border-[3px] border-[rgba(200,154,62,0.3)] bg-gradient-to-b from-[rgba(200,154,62,0.08)] to-transparent flex items-center justify-center overflow-hidden"
-                  style={{
-                    borderRadius: 0,
-                    boxShadow: "3px 3px 0 rgba(0,0,0,0.4)",
-                    imageRendering: "pixelated" as const,
-                  }}
-                >
-                  <img
-                    src={
-                      tetheredUm.monster.art_url
-                        ? tetheredUm.monster.art_url
-                        : `/sprites/monsters/${tetheredUm.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
-                    }
-                    alt={tetheredUm.monster.name}
-                    className="w-full h-full object-contain p-1 drop-shadow-[0_0_8px_rgba(212,175,63,0.4)]"
-                    onError={(e) => {
-                      e.currentTarget.src = "/monsters/placeholder.png";
-                    }}
-                  />
-                </div>
-                <div>
-                  <p
-                    className="text-[11px] uppercase tracking-wider font-bold"
-                    style={{ color: "var(--ink-tertiary)" }}
-                  >
-                    Life-Bound
-                  </p>
-                  <h2 className="text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
-                    {tetheredUm.monster.name}
-                  </h2>
-                </div>
-              </div>
-            ) : (
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-16 h-16 border-2 border-dashed border-[rgba(200,154,62,0.2)] flex items-center justify-center"
-                  style={{ borderRadius: 0 }}
-                >
-                  <Icon name="scroll" size={24} color="var(--ink-tertiary)" />
-                </div>
-                <p className="text-xs" style={{ color: "var(--ink-tertiary)" }}>
-                  No beast tethered
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Compact Utilities */}
-          <div className="flex flex-wrap items-center gap-2">
-            <Compass
-              onOpenMorning={() => setShowMorning(true)}
-              onOpenEvening={() => setShowEvening(true)}
-            />
-            <SoulResonanceTimer
-              monsterId={profile?.soul_tether_id || "unlinked"}
-              monsterName="Life-Bound Beast"
-              onComplete={() => {
-                confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
-                toast.success("Resonance Complete! Buff applied.");
-              }}
-              onFail={() => {}}
-            />
-          </div>
-        </div>
-
         {/* Inline Quest Board */}
         <div className="ss-card p-0 overflow-hidden border-[rgba(200,154,62,0.2)]">
           {/* Header */}
@@ -633,6 +562,83 @@ function HubPage() {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Support row — nudges, companion, focus timer (subordinate to the board) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4 items-start">
+          <div className="md:col-span-2 flex flex-col gap-2">
+            <Compass
+              onOpenMorning={() => setShowMorning(true)}
+              onOpenEvening={() => setShowEvening(true)}
+            />
+            {/* Life-Bound companion chip */}
+            <div
+              className="flex items-center gap-3 px-3 py-2"
+              style={{
+                background: "var(--bg-pane)",
+                border: "2px solid rgba(200,154,62,0.2)",
+                borderRadius: 0,
+                boxShadow: "2px 2px 0 rgba(44,31,20,0.2)",
+              }}
+            >
+              {tetheredUm ? (
+                <>
+                  <div
+                    className="w-10 h-10 border-2 border-[rgba(200,154,62,0.3)] flex items-center justify-center overflow-hidden shrink-0"
+                    style={{ borderRadius: 0, imageRendering: "pixelated" as const }}
+                  >
+                    <img
+                      src={
+                        tetheredUm.monster.art_url
+                          ? tetheredUm.monster.art_url
+                          : `/sprites/monsters/${tetheredUm.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                      }
+                      alt={tetheredUm.monster.name}
+                      className="w-full h-full object-contain p-0.5"
+                      onError={(e) => {
+                        e.currentTarget.src = "/monsters/placeholder.png";
+                      }}
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <p
+                      className="text-[9px] uppercase tracking-wider font-bold"
+                      style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-tertiary)" }}
+                    >
+                      Life-Bound
+                    </p>
+                    <p
+                      className="text-xs font-bold truncate"
+                      style={{ color: "var(--ink-primary)" }}
+                    >
+                      {tetheredUm.monster.name}
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div
+                    className="w-10 h-10 border-2 border-dashed border-[rgba(200,154,62,0.25)] flex items-center justify-center shrink-0"
+                    style={{ borderRadius: 0 }}
+                  >
+                    <Icon name="scroll" size={16} color="var(--ink-tertiary)" />
+                  </div>
+                  <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                    No beast tethered — summon one at the Altar.
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+          <SoulResonanceTimer
+            monsterId={profile?.soul_tether_id || "unlinked"}
+            monsterName="Life-Bound Beast"
+            onComplete={() => {
+              confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+              toast.success("Resonance Complete! Buff applied.");
+            }}
+            onFail={() => {}}
+          />
         </div>
       </div>
 

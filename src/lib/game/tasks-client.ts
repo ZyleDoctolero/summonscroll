@@ -63,14 +63,38 @@ export type TaskInput = {
   is_starred?: boolean;
 };
 
+// Realm affinity and element feed game systems (Ritual Incubation, Realm
+// Pulse) but the user shouldn't have to micro-manage them — auto-assign
+// randomly when the form doesn't provide them.
+const TASK_ELEMENTS = ["fire", "water", "nature", "light", "dark", "arcane"];
+
+let realmIdsPromise: Promise<number[]> | null = null;
+function getRealmIds(): Promise<number[]> {
+  realmIdsPromise ??= (async () => {
+    try {
+      const { data } = await supabase.from("realms").select("id");
+      return (data ?? []).map((r) => r.id);
+    } catch {
+      return [];
+    }
+  })();
+  return realmIdsPromise;
+}
+
+const pick = <T>(arr: T[]): T | null =>
+  arr.length ? arr[Math.floor(Math.random() * arr.length)] : null;
+
 export async function createTask(input: TaskInput) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
+  const element = input.element ?? pick(TASK_ELEMENTS);
+  const realm_id = input.realm_id ?? pick(await getRealmIds());
+
   const { data, droppedFields } = await withColumnFallback(
-    { ...input, user_id: user.id },
+    { ...input, element, realm_id, user_id: user.id },
     async (payload) => {
       // payload keys are pruned at runtime, so the generated row type can't apply
       const res = await supabase

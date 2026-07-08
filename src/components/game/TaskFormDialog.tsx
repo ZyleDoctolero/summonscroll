@@ -1,15 +1,6 @@
 import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
 import type { Task } from "./TaskCard";
 import type { Difficulty, TaskType } from "@/lib/game/constants";
-import { listRealms } from "@/lib/game/supabase-api";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 
 const DOW = ["S", "M", "T", "W", "T", "F", "S"];
 
@@ -28,15 +19,6 @@ export type TaskFormValue = {
   due_date: string | null;
   due_time: string | null;
 };
-
-const ELEMENT_OPTIONS: { key: string; label: string; color: string; icon: string }[] = [
-  { key: "fire", label: "Fire", color: "#ff5e2a", icon: "🔥" },
-  { key: "water", label: "Water", color: "#38b8f5", icon: "💧" },
-  { key: "nature", label: "Nature", color: "#3ed97a", icon: "🌿" },
-  { key: "light", label: "Light", color: "#ffe066", icon: "✨" },
-  { key: "dark", label: "Dark", color: "#c47fff", icon: "🌑" },
-  { key: "arcane", label: "Arcane", color: "#c89a3e", icon: "🔮" },
-];
 
 export function TaskFormDialog({
   open,
@@ -66,14 +48,7 @@ export function TaskFormDialog({
     due_date: null,
     due_time: null,
   });
-  const [tagsInput, setTagsInput] = useState("");
   const [saving, setSaving] = useState(false);
-
-  const realmsQ = useQuery({
-    queryKey: ["realms"],
-    queryFn: listRealms,
-    staleTime: Infinity,
-  });
 
   useEffect(() => {
     if (!open) return;
@@ -92,7 +67,6 @@ export function TaskFormDialog({
       due_date: initial?.due_date ?? null,
       due_time: initial?.due_time ? initial.due_time.slice(0, 5) : null,
     });
-    setTagsInput((initial?.tags ?? []).join(", "));
   }, [open, initial, defaultType]);
 
   if (!open) return null;
@@ -102,13 +76,8 @@ export function TaskFormDialog({
     if (!v.title.trim()) return;
     setSaving(true);
     try {
-      const finalTags = tagsInput
-        .split(",")
-        .map((t) => t.trim())
-        .filter(Boolean);
       await onSubmit({
         ...v,
-        tags: finalTags,
         // habits have no schedule; dailies recur so a fixed date makes no sense
         due_date: v.type === "todo" ? v.due_date : null,
         due_time: v.type === "habit" ? null : v.due_time,
@@ -200,44 +169,6 @@ export function TaskFormDialog({
           </div>
         )}
 
-        <Field label="Category (optional)">
-          <input
-            className="ss-input"
-            value={v.category}
-            onChange={(e) => setV({ ...v, category: e.target.value })}
-            maxLength={40}
-            placeholder="Mind . Body . Vaults"
-          />
-        </Field>
-
-        <Field label="Realm Affinity (optional)">
-          <Select
-            value={v.realm_id ? String(v.realm_id) : "none"}
-            onValueChange={(val) => setV({ ...v, realm_id: val === "none" ? null : Number(val) })}
-          >
-            <SelectTrigger className="ss-input flex h-auto min-h-[42px] w-full items-center justify-between outline-none focus:border-[var(--ss-gold)] transition-colors">
-              <SelectValue placeholder="No Realm Affinity" />
-            </SelectTrigger>
-            <SelectContent className="bg-[var(--bg-pane)] border-[var(--ss-hairline)] text-[var(--ink-primary)]">
-              <SelectItem value="none">No Realm Affinity</SelectItem>
-              {realmsQ.data?.realms.map((r) => (
-                <SelectItem key={r.id} value={String(r.id)}>
-                  {r.name}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </Field>
-
-        <Field label="Tags (comma separated)">
-          <input
-            className="ss-input"
-            value={tagsInput}
-            onChange={(e) => setTagsInput(e.target.value)}
-            placeholder="fitness, work, reading"
-          />
-        </Field>
-
         <Field label="Notes (optional)">
           <textarea
             className="ss-input"
@@ -268,45 +199,6 @@ export function TaskFormDialog({
                 }}
               >
                 {d}
-              </button>
-            ))}
-          </div>
-        </Field>
-
-        <Field label="Element Tag — for Ritual Incubation">
-          <div className="flex gap-1 flex-wrap">
-            <button
-              type="button"
-              onClick={() => setV({ ...v, element: null })}
-              className="py-1 px-2 text-[9px] font-bold uppercase"
-              style={{
-                fontFamily: "var(--ss-font-pixel)",
-                background: v.element === null ? "rgba(180,150,100,0.25)" : "transparent",
-                color: v.element === null ? "var(--ink-primary)" : "var(--ink-tertiary)",
-                border: `1px solid ${v.element === null ? "rgba(180,150,100,0.5)" : "rgba(180,150,100,0.2)"}`,
-                borderRadius: 0,
-                letterSpacing: "0.04em",
-              }}
-            >
-              None
-            </button>
-            {ELEMENT_OPTIONS.map((el) => (
-              <button
-                key={el.key}
-                type="button"
-                onClick={() => setV({ ...v, element: el.key })}
-                className="py-1 px-2 text-[9px] font-bold uppercase flex items-center gap-1"
-                style={{
-                  fontFamily: "var(--ss-font-pixel)",
-                  background: v.element === el.key ? `${el.color}22` : "transparent",
-                  color: v.element === el.key ? el.color : "var(--ink-tertiary)",
-                  border: `1px solid ${v.element === el.key ? el.color : "rgba(180,150,100,0.2)"}`,
-                  borderRadius: 0,
-                  letterSpacing: "0.04em",
-                  boxShadow: v.element === el.key ? `2px 2px 0 rgba(0,0,0,0.35)` : "none",
-                }}
-              >
-                {el.icon} {el.label}
               </button>
             ))}
           </div>

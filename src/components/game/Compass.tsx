@@ -234,30 +234,17 @@ export function Compass({
 
   if (suggestions.length === 0) return null;
 
-  const toneStyles: Record<string, React.CSSProperties & Record<string, string>> = {
-    calm: {
-      background: "rgba(255, 217, 92, 0.03)",
-      "--ss-glow-start": "var(--gold-glow)",
-      "--ss-glow-end": "var(--gold-bright)",
-      boxShadow: "0 4px 20px rgba(255, 217, 92, 0.03)",
-    },
-    urgent: {
-      background: "rgba(255, 94, 94, 0.03)",
-      "--ss-glow-start": "var(--danger)",
-      "--ss-glow-end": "var(--rose)",
-      boxShadow: "0 4px 20px rgba(255, 94, 94, 0.03)",
-    },
-    rare: {
-      background: "rgba(200, 154, 62, 0.04)",
-      "--ss-glow-start": "var(--gold-bright)",
-      "--ss-glow-end": "var(--gold-glow)",
-      boxShadow: "0 4px 20px rgba(200, 154, 62, 0.06)",
-    },
+  // Accent color per tone — carried by the left border and icon only,
+  // so the rows stay quiet parchment instead of glowing banners.
+  const toneAccent: Record<string, string> = {
+    calm: "var(--gold-bright)",
+    urgent: "var(--danger)",
+    rare: "var(--violet)",
   };
 
   return (
-    <div className="flex flex-col gap-3 mb-4">
-      {suggestions.map((suggestion, index) => (
+    <div className="flex flex-col gap-2">
+      {suggestions.slice(0, 2).map((suggestion, index) => (
         <motion.div
           key={suggestion.id}
           initial={{ opacity: 0, y: -4 }}
@@ -265,22 +252,36 @@ export function Compass({
           transition={{ ...trans.cascadeIn, delay: index * 0.1 }}
           role="region"
           aria-label="Next action"
-          className="ss-card-d-glow flex items-center gap-4"
-          style={toneStyles[suggestion.tone]}
+          className="flex items-center gap-3 px-3 py-2"
+          style={{
+            background: "var(--bg-panel)",
+            border: "2px solid rgba(200,154,62,0.25)",
+            borderLeft: `4px solid ${toneAccent[suggestion.tone]}`,
+            borderRadius: 0,
+            boxShadow: "2px 2px 0 rgba(44,31,20,0.25)",
+          }}
         >
           <div className="shrink-0">
-            <Icon name={suggestion.icon as React.ComponentProps<typeof Icon>["name"]} size={28} />
+            <Icon
+              name={suggestion.icon as React.ComponentProps<typeof Icon>["name"]}
+              size={18}
+              color={toneAccent[suggestion.tone]}
+            />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="t-h3">{suggestion.title}</p>
-            <p className="t-lore mt-0.5">{suggestion.reason}</p>
+            <p className="text-xs font-bold truncate" style={{ color: "var(--ink-primary)" }}>
+              {suggestion.title}
+            </p>
+            <p className="text-[10px] truncate" style={{ color: "var(--ink-secondary)" }}>
+              {suggestion.reason}
+            </p>
           </div>
           <button
             onClick={() => {
               if (suggestion.action) suggestion.action();
               else if (suggestion.to) nav({ to: suggestion.to });
             }}
-            className="ss-btn ss-btn-primary whitespace-nowrap"
+            className="ss-btn ss-btn-secondary whitespace-nowrap text-[10px] px-3 py-1.5"
           >
             {suggestion.cta}
           </button>
