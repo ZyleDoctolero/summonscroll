@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 4,
+    "name": "Jade Undead Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7,
+    "name": "Marrow Knight Beta",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8,
+    "name": "Fallen Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 19,
+    "name": "Charred Corpse IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 22,
+    "name": "Cursed Ash Knight Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 29,
+    "name": "Plague Zombie",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 35,
+    "name": "Fetid Bone Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 45,
+    "name": "Rust Grave Knight II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 63,
+    "name": "Ancient Grave Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 68,
+    "name": "Titan Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 72,
+    "name": "Titan Grave Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 84,
+    "name": "Squalid Cursed Pilgrim Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 85,
+    "name": "Rusted Hollow Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 89,
+    "name": "Swamp Undead Pilgrim Young",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 96,
+    "name": "Grand Knight Commander",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 97,
+    "name": "Bleached Skeleton Champion",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 100,
+    "name": "Ether Undead Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 102,
+    "name": "Skeleton Soldier I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 103,
+    "name": "Scarred Hollow Champion II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 104,
+    "name": "Dark Dark Walker Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 107,
+    "name": "Ember Knight II",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 126,
+    "name": "Cinder Hollow Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 135,
+    "name": "Blood Tomb Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 138,
+    "name": "Nightmare Ash Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 169,
+    "name": "Sand Hollow Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 171,
+    "name": "Mangy Diseased Corpse",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 176,
+    "name": "Shard Skeleton Champion Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 180,
+    "name": "Filthy Wandering Hollow Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 189,
+    "name": "Waning Ash Knight Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 196,
+    "name": "Grand Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 217,
+    "name": "Slime Charred Corpse",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 231,
+    "name": "Infernal Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 232,
+    "name": "Wild Mound Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 238,
+    "name": "Dark Undead Pilgrim Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 242,
+    "name": "Hoar Lost Champion III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 251,
+    "name": "Death Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 262,
+    "name": "Crag Diseased Corpse Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 269,
+    "name": "Ravaged Rot Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 281,
+    "name": "Fetid Diseased Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 289,
+    "name": "Spindly Twilight Walker Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 293,
+    "name": "Scrawny Burned Hollow I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 311,
+    "name": "Dire Tomb Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 313,
+    "name": "Fell Mound Walker Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 340,
+    "name": "Wild Gloaming Walker Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 343,
+    "name": "Cursed Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 350,
+    "name": "Ether Death Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 361,
+    "name": "Withered Sand Hollow Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 367,
+    "name": "Jagged Lost Champion Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 388,
+    "name": "Wrath Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 390,
+    "name": "Bristled Cinder Knight VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 405,
+    "name": "Ember Hollow Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 412,
+    "name": "Cursed Pilgrim Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 413,
+    "name": "Forsaken Grave Warden Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 418,
+    "name": "Sewer Wandering Hollow Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 431,
+    "name": "Forsaken Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 432,
+    "name": "Rot Knight Lesser",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 435,
+    "name": "Skeleton Soldier V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 439,
+    "name": "Tattered Dusk Walker Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 450,
+    "name": "Forgotten Hollow Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 451,
+    "name": "Sorrow Cinder Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 466,
+    "name": "Cardinal Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 474,
+    "name": "Siege Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 481,
+    "name": "Blazing Bone Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 482,
+    "name": "Small Forgotten Hollow II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 487,
+    "name": "Forgotten Champion",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 489,
+    "name": "Champion Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 502,
+    "name": "Frost Forgotten Champion Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 530,
+    "name": "Drowned Ash Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 531,
+    "name": "Cursed Undead Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 542,
+    "name": "Primordial Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 546,
+    "name": "Master Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 550,
+    "name": "Vanguard Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 561,
+    "name": "Archon Fullborn Vessel",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 562,
+    "name": "Ash Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 567,
+    "name": "Ashen Rot Knight Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 578,
+    "name": "Venom Lost Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 588,
+    "name": "Frozen Undead Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 592,
+    "name": "Ash Hollow Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 593,
+    "name": "Noxious Grave Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 606,
+    "name": "Godlike Artorias Shadow",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 617,
+    "name": "Skeleton Soldier Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 620,
+    "name": "Haze Wandering Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 639,
+    "name": "Sacred Grave Warden",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 651,
+    "name": "Cursed Pilgrim II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 657,
+    "name": "Omega Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 659,
+    "name": "Ember Rusted Knight Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 687,
+    "name": "Grave Walker",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 729,
+    "name": "Blazing Death Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 740,
+    "name": "Ash Knight Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 741,
+    "name": "Murky Zombie Knight I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 749,
+    "name": "Weedy Burned Hollow III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 751,
+    "name": "Undying Zombie Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 754,
+    "name": "Rusted Hollow I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 774,
+    "name": "Yellow Void Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 781,
+    "name": "Haggard Twilight Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 794,
+    "name": "Archon Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 809,
+    "name": "Battle Zombie Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 818,
+    "name": "Sewer Sand Hollow V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 827,
+    "name": "Scourge Barrow Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 841,
+    "name": "Immortal Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 842,
+    "name": "Raging Cursed Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 849,
+    "name": "Pitted Corroded Knight VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 863,
+    "name": "Corrupt Hollow Champion Omega",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 886,
+    "name": "Spectral Cursed Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 887,
+    "name": "Wrath Corrupted Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 889,
+    "name": "Siege Mistborn Shade",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 907,
+    "name": "Relentless Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 912,
+    "name": "Dire Crypt Warden",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 916,
+    "name": "Blazing Soot Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 917,
+    "name": "Murky Cursed Pilgrim Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 925,
+    "name": "Cursed Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 952,
+    "name": "Rotten Crypt Walker VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 958,
+    "name": "Grave Walker VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 959,
+    "name": "Silver Undead Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 985,
+    "name": "Grave Bone Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 986,
+    "name": "Decay Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 996,
+    "name": "Weedy Rusted Hollow Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1009,
+    "name": "Craven Abandoned Champion",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1035,
+    "name": "War Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1038,
+    "name": "Ash Starved Hollow Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1054,
+    "name": "Leaking Hollow Champion III",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1059,
+    "name": "Warped Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1060,
+    "name": "Hollow Crypt Walker Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1062,
+    "name": "Silver Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1078,
+    "name": "Broken Hollow Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1092,
+    "name": "Sinuous Bone Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1095,
+    "name": "Eternal Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1096,
+    "name": "Scorched Cinder Knight I",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1099,
+    "name": "Ravaged Cursed Knight Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1111,
+    "name": "Vanguard Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1122,
+    "name": "Scraped Hollow II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1127,
+    "name": "Undead Pilgrim Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1129,
+    "name": "Salt Night Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1149,
+    "name": "Mound Walker Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1155,
+    "name": "Decay Walker Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1166,
+    "name": "Singed Rusted Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1178,
+    "name": "Giant Fallen Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1208,
+    "name": "Dread Ash Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1211,
+    "name": "Plague Knight Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1225,
+    "name": "Titan Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1231,
+    "name": "Ash Zombie Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1232,
+    "name": "Torn Decay Walker Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1235,
+    "name": "Drowned Tomb Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1239,
+    "name": "Iron Twilight Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1257,
+    "name": "Tempest Tomb Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1262,
+    "name": "Ether Corrupted Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1275,
+    "name": "Sunken Crypt Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1280,
+    "name": "Wild Burned Hollow Prime",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1311,
+    "name": "Dread Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1328,
+    "name": "Sinuous Tomb Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1336,
+    "name": "Swamp Sand Hollow Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1349,
+    "name": "Mangy Decay Walker Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1354,
+    "name": "Ash Knight Corrupted",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1389,
+    "name": "Spectral Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1390,
+    "name": "Jagged Decay Walker Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1407,
+    "name": "Eternal Slave Knight Gael",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1417,
+    "name": "Ash Hollow Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1427,
+    "name": "Forsaken Sovereign Hollow",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1428,
+    "name": "Wretched Broken Hollow IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1441,
+    "name": "Absolute Pontiff Sulyvahn",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1453,
+    "name": "Slime Undead Pilgrim",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1459,
+    "name": "Transcendent Nameless King",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1467,
+    "name": "Pit Walker Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1469,
+    "name": "Dire Bone Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1471,
+    "name": "Eternal Undead Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1475,
+    "name": "Murky Dusk Walker Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1496,
+    "name": "Gaunt Barrow Walker Minor",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1505,
+    "name": "Transcendent Artorias Shadow",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1524,
+    "name": "Squalid Rot Corpse",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1527,
+    "name": "Pitted Decay Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1544,
+    "name": "Vanguard Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1556,
+    "name": "Dust Hollow II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1559,
+    "name": "Rusted Hollow II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1561,
+    "name": "Torn Death Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1563,
+    "name": "Eternal Koloss Giant",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1569,
+    "name": "Shadow Walker Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1577,
+    "name": "Soot Hollow Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1590,
+    "name": "Dread Grave Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1598,
+    "name": "Wild Skeleton Soldier Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1630,
+    "name": "Shard Rot Knight Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1645,
+    "name": "Grim Soot Hollow Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1653,
+    "name": "Lichen Wandering Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1689,
+    "name": "Scourge Zombie Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1697,
+    "name": "Colossus Kandra Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1703,
+    "name": "Cinder Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1723,
+    "name": "Noxious Bone Knight Tamed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1724,
+    "name": "Tar Broken Hollow Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1725,
+    "name": "Giant Ash Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1726,
+    "name": "Apocalypse Mistborn Shade",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1740,
+    "name": "Nemesis Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1788,
+    "name": "Thunder Skeleton Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1806,
+    "name": "Battle Lost Champion Greater",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1818,
+    "name": "Hoar Soot Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1819,
+    "name": "Slime Abandoned Hollow VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1822,
+    "name": "Gloom Skeleton Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1824,
+    "name": "Knotted Lost Champion Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1835,
+    "name": "Lost Soul Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1838,
+    "name": "Mangy Shadow Walker Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1856,
+    "name": "Chosen Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1893,
+    "name": "Fallen Koloss Giant",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1903,
+    "name": "Scraped Diseased Corpse III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1914,
+    "name": "Cursed Grave Knight VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1934,
+    "name": "Bone Decay Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1957,
+    "name": "Ash Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 1969,
+    "name": "Mottled Corroded Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2015,
+    "name": "Exalted Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2021,
+    "name": "Transcendent Gwyn Fragment",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2026,
+    "name": "Starved Hollow Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2029,
+    "name": "Grave Fallen Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2039,
+    "name": "Flame Ash Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2059,
+    "name": "Dire Dusk Walker Minor",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2061,
+    "name": "Omega Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2070,
+    "name": "Dusk Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2102,
+    "name": "Night Abandoned Hollow Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2109,
+    "name": "Frozen Ash Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2113,
+    "name": "Burned Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2116,
+    "name": "Rune Fallen Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2123,
+    "name": "Grave Ash Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2136,
+    "name": "Rotten Barrow Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2147,
+    "name": "Hollow Champion Feral",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2148,
+    "name": "Void Ember Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2161,
+    "name": "Plague Marrow Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2163,
+    "name": "Cursed Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2172,
+    "name": "Thorn Undead Champion Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2222,
+    "name": "Wrath Ember Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2229,
+    "name": "Lord Knight Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2253,
+    "name": "Siege Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2265,
+    "name": "Abyssal Knight Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2278,
+    "name": "Cataclysm Steel Inquisitor",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2286,
+    "name": "Skeleton Soldier Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2293,
+    "name": "Grim Ember Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2295,
+    "name": "Singed Skeleton Champion Blessed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2321,
+    "name": "Cosmic Ruin Shard",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2327,
+    "name": "Pale Twilight Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2331,
+    "name": "Supreme Warden Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2357,
+    "name": "Eternal Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2380,
+    "name": "Leviathan Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2397,
+    "name": "Sunken Barrow Walker III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2418,
+    "name": "Charred Corpse Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2422,
+    "name": "Undead Champion Omega",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2439,
+    "name": "Invincible Mistborn Shade",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2445,
+    "name": "Tomb Knight Junior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2447,
+    "name": "Hollow",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2459,
+    "name": "Warlord Warden Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2466,
+    "name": "Ragged Diseased Corpse Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2470,
+    "name": "Corroded Knight V",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2511,
+    "name": "Twilight Walker Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2540,
+    "name": "Storm Barrow Knight Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2547,
+    "name": "Death Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2548,
+    "name": "Abyss Zombie Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2584,
+    "name": "Mud Crypt Walker Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2587,
+    "name": "Undead Champion Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2593,
+    "name": "Supreme Gwyn Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2596,
+    "name": "Warped Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2600,
+    "name": "Risen Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2607,
+    "name": "Apex Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2615,
+    "name": "Murky Hollow Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2618,
+    "name": "Voidborn Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2625,
+    "name": "Infernal Skeleton Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2644,
+    "name": "Dire Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2648,
+    "name": "Diseased Corpse",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2704,
+    "name": "Yellow Lost Soul Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2710,
+    "name": "Tomb Walker Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2730,
+    "name": "Cinder Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2737,
+    "name": "Archon Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2740,
+    "name": "Weedy Forgotten Hollow Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2745,
+    "name": "Cursed Hollow Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2746,
+    "name": "Herald Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2755,
+    "name": "Crowned Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2766,
+    "name": "Sacred Soot Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2769,
+    "name": "Abandoned Hollow V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2804,
+    "name": "Celestial Lord Ruler Rashek",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2825,
+    "name": "Wretched Dead",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2848,
+    "name": "Demon Tomb Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2857,
+    "name": "Soul Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2866,
+    "name": "Scourge Ash Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2903,
+    "name": "Gale Ember Knight Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2914,
+    "name": "Corrupt Grave Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2934,
+    "name": "Drowned Death Knight Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2935,
+    "name": "Lanky Undead Soldier Minor",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2936,
+    "name": "Corrupt Wandering Champion VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2960,
+    "name": "Dire Night Walker Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2970,
+    "name": "Dust Cursed Pilgrim II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2971,
+    "name": "Eternal Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2972,
+    "name": "Bristled Marrow Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 2992,
+    "name": "Shadow Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3012,
+    "name": "Godlike Gwyn Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3029,
+    "name": "Craven Marrow Knight Beta",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3032,
+    "name": "Ember Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3040,
+    "name": "Infernal Knight Commander",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3041,
+    "name": "Progenitor Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3047,
+    "name": "Rot Knight Beta",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3055,
+    "name": "Abyss Grave Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3062,
+    "name": "Thunder Zombie Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3077,
+    "name": "Filthy Cinder Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3092,
+    "name": "Rotten Dust Hollow III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3093,
+    "name": "Dingy Ash Zombie",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3129,
+    "name": "Overlord Warden Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3134,
+    "name": "Warlord Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3141,
+    "name": "Champion Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3163,
+    "name": "Grave Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3164,
+    "name": "Frozen Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3187,
+    "name": "Drowned Plague Knight Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3189,
+    "name": "Undying Kandra Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3192,
+    "name": "Mud Crypt Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3209,
+    "name": "Sludge Crypt Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3210,
+    "name": "Supreme Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3234,
+    "name": "Cinder Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3253,
+    "name": "Immortal Aldrich Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3257,
+    "name": "Slime Starved Hollow II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3287,
+    "name": "Dread Grave Warden Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3298,
+    "name": "Squalid Soot Hollow VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3309,
+    "name": "Twilight Ember Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3311,
+    "name": "Squalid Pit Walker Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3349,
+    "name": "Lightning Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3353,
+    "name": "Celestial Undead Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3380,
+    "name": "Celestial Barrow Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3381,
+    "name": "Cataclysm Fullborn Vessel",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3386,
+    "name": "Abandoned Hollow Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3391,
+    "name": "Necrotic Zombie Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3415,
+    "name": "Tempest Bone Dragon",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3438,
+    "name": "Abyssal Warden Commander",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3457,
+    "name": "Gaunt Undead Pilgrim Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3463,
+    "name": "Dire Fallen Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3464,
+    "name": "Scraped Gloaming Walker Minor",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3475,
+    "name": "Crypt Knight Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3521,
+    "name": "Death Knight Recruit I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3539,
+    "name": "Gale Undead Champion V",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3560,
+    "name": "Haze Hollow Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3565,
+    "name": "Dark Walker Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3571,
+    "name": "Rusted Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3583,
+    "name": "Hellborn Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3590,
+    "name": "Hoar Abandoned Champion Lesser",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3592,
+    "name": "Death Walker Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3598,
+    "name": "Wandering Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3614,
+    "name": "Abyss Barrow Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3617,
+    "name": "Marsh Skeleton Soldier V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3623,
+    "name": "Putrid Barrow Walker Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3625,
+    "name": "Gaunt Burned Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3633,
+    "name": "Shard Ash Knight Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3647,
+    "name": "Death Zombie Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3671,
+    "name": "Lunar Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3680,
+    "name": "Elder Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3694,
+    "name": "Twisted Corroded Knight II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3719,
+    "name": "Master Warden Commander",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3722,
+    "name": "Charred Corpse Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3746,
+    "name": "Immortal Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3756,
+    "name": "Cave Shadow Walker IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3780,
+    "name": "Night Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3789,
+    "name": "Godlike Sister Friede",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3791,
+    "name": "Lichen Rot Knight III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3792,
+    "name": "High Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3808,
+    "name": "Risen Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3823,
+    "name": "Crude Rot Corpse",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3826,
+    "name": "Hollow Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3841,
+    "name": "Charred Corpse",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3851,
+    "name": "Runed Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3854,
+    "name": "Eternal Crypt Warden",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3871,
+    "name": "Undead Champion II",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3889,
+    "name": "Undying Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3890,
+    "name": "Plague Decay Knight Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3891,
+    "name": "Hollow Champion Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3899,
+    "name": "Mire Tomb Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3913,
+    "name": "Celestial Grave Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3929,
+    "name": "Corrupt Rot Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3930,
+    "name": "Nemesis Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3933,
+    "name": "Filthy Night Walker Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3946,
+    "name": "Tattered Charred Corpse Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3958,
+    "name": "Eclipse Fallen Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3967,
+    "name": "Bleak Abandoned Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3975,
+    "name": "Eternal Tomb Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 3990,
+    "name": "Rust Plague Knight VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4000,
+    "name": "Necrotic Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4005,
+    "name": "Infernal Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4007,
+    "name": "Astral Ash Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4011,
+    "name": "Barrow Knight IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4019,
+    "name": "Titan Crypt Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4062,
+    "name": "Corrupt Tomb Knight Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4076,
+    "name": "Hollow Barrow Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4082,
+    "name": "Dire Forgotten Hollow Junior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4084,
+    "name": "Chaos Undead Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4091,
+    "name": "Ash Crypt Walker Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4099,
+    "name": "Fallen Kandra Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4100,
+    "name": "Sable Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4103,
+    "name": "Threadbare Sand Hollow Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4105,
+    "name": "Primordial Kandra Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4107,
+    "name": "Crude Ember Hollow Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4118,
+    "name": "Infernal Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4120,
+    "name": "Ash Hollow",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4140,
+    "name": "Supreme Sovereign Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4142,
+    "name": "Iron Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4147,
+    "name": "Skeleton Champion Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4148,
+    "name": "Wrathful Mistborn Shade",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4155,
+    "name": "Astral Ember Dragon",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4157,
+    "name": "Thunder Undead Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4160,
+    "name": "Abyssal Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4173,
+    "name": "Wandering Ossified Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4176,
+    "name": "Marsh Zombie Knight Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4180,
+    "name": "Ancient Nameless King",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4182,
+    "name": "Broken Hollow Lesser",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4187,
+    "name": "Rune Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4188,
+    "name": "Tar Undead Pilgrim Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4204,
+    "name": "Progenitor Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4207,
+    "name": "Champion Sovereign Hollow",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4210,
+    "name": "Bone Zombie Knight Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4219,
+    "name": "Lightning Undead Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4220,
+    "name": "Transcendent Slave Knight Gael",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4229,
+    "name": "Arcane Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4233,
+    "name": "Ash Knight I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4239,
+    "name": "Mythic Radagon Fragment",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4240,
+    "name": "Bone Abandoned Hollow Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4241,
+    "name": "Scraggly Dust Hollow",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4244,
+    "name": "Infernal Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4247,
+    "name": "Dire Ash Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4271,
+    "name": "Corrupted Barrow Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4283,
+    "name": "Abyssal Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4294,
+    "name": "Mound Walker III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4300,
+    "name": "Salt Wandering Hollow Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4302,
+    "name": "Diseased Corpse Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4308,
+    "name": "Wrath Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4309,
+    "name": "Rusted Hollow Blessed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4318,
+    "name": "Plague Zombie Ancient",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4330,
+    "name": "Spindly Dust Hollow I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4342,
+    "name": "Undying Mistborn Shade",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4346,
+    "name": "Slime Shadow Walker Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4354,
+    "name": "Marsh Ash Zombie VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4369,
+    "name": "Rotten Dusk Walker I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4412,
+    "name": "Jagged Ash Hollow",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4417,
+    "name": "Siege Koloss Giant",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4422,
+    "name": "Wild Cursed Pilgrim Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4438,
+    "name": "Ether Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4462,
+    "name": "Meager Plague Zombie Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4463,
+    "name": "Immortal Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4470,
+    "name": "Dusk Forgotten Champion Tamed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4477,
+    "name": "Filthy Broken Hollow Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4484,
+    "name": "Shadow Plague Zombie Elite",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4496,
+    "name": "Tattered Skeleton Soldier",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4500,
+    "name": "Eclipse Ember Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4504,
+    "name": "Umbral Diseased Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4509,
+    "name": "Battle Ossified Knight II",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4519,
+    "name": "Murky Soot Hollow Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4536,
+    "name": "Leaking Rusted Knight Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4547,
+    "name": "Skeleton Champion Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4567,
+    "name": "Ash Knight Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4579,
+    "name": "Herald Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4586,
+    "name": "Death Walker Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4587,
+    "name": "Spectral Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4589,
+    "name": "Abyssal Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4599,
+    "name": "Weedy Abandoned Hollow IV",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4616,
+    "name": "True Elden Beast Shard",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4619,
+    "name": "Sovereign Knight Commander",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4649,
+    "name": "Demon Barrow Warden",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4664,
+    "name": "Mottled Diseased Corpse Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4686,
+    "name": "Thorn Ossified Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4688,
+    "name": "Mottled Wretched Dead",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4708,
+    "name": "Tattered Wretched Dead Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4713,
+    "name": "Crypt Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4735,
+    "name": "Swamp Sand Hollow",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4744,
+    "name": "Hoar Hollow Champion Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4746,
+    "name": "Forbidden Koloss Giant",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4760,
+    "name": "Nightmare Cursed Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4763,
+    "name": "Flame Undead Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4786,
+    "name": "Wretched Dark Walker Young",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4787,
+    "name": "Death Skeleton Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4797,
+    "name": "Corroded Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4812,
+    "name": "Ash Knight V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4817,
+    "name": "Thunder Corrupted Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4819,
+    "name": "Gnawed Crypt Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4821,
+    "name": "Corrupt Marrow Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4822,
+    "name": "Bleak Rusted Hollow Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4829,
+    "name": "High Knight Commander",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4831,
+    "name": "Ancient Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4836,
+    "name": "Storm Lost Champion Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4842,
+    "name": "Supreme Slave Knight Gael",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4845,
+    "name": "Corrupted Cursed Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4857,
+    "name": "Dark Walker Ancient",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4858,
+    "name": "Forsaken Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4859,
+    "name": "Apex Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4873,
+    "name": "Diseased Knight Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4890,
+    "name": "Death Knight Recruit",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4909,
+    "name": "Bristled Tomb Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4915,
+    "name": "Lord Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4931,
+    "name": "Undead Soldier",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4934,
+    "name": "Frozen Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4937,
+    "name": "Cataclysm Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4948,
+    "name": "Cinder Knight Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4954,
+    "name": "Meager Undead Soldier Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4958,
+    "name": "Chaos Bone Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4967,
+    "name": "Grave Tomb Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4969,
+    "name": "Cursed Pilgrim VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 4984,
+    "name": "Jade Cursed Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5004,
+    "name": "Undead Champion Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5008,
+    "name": "Grave Cursed Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5032,
+    "name": "Mire Soot Knight Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5047,
+    "name": "Slime Grave Walker Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5073,
+    "name": "Eternal Nameless King",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5083,
+    "name": "Skeleton Champion V",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5085,
+    "name": "Shroud Wandering Champion Beta",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5094,
+    "name": "Haggard Rot Corpse Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5100,
+    "name": "Wretched Death Walker Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5105,
+    "name": "Blood Barrow Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5112,
+    "name": "Grimy Broken Hollow",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5120,
+    "name": "Night Walker Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5134,
+    "name": "Scrawny Wandering Hollow",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5145,
+    "name": "Barrow Walker",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5150,
+    "name": "Bristled Forgotten Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5185,
+    "name": "Scorched Undead Champion Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5192,
+    "name": "Fallen Grave Warden Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5200,
+    "name": "Bleak Burned Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5224,
+    "name": "Bone Barrow Walker IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5246,
+    "name": "Risen Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5248,
+    "name": "Sewer Dusk Walker VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5251,
+    "name": "Dark Walker",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5253,
+    "name": "Tattered Sand Hollow",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5274,
+    "name": "Scrawny Forgotten Hollow Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5293,
+    "name": "Salt Abandoned Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5298,
+    "name": "Shadow Tomb Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5303,
+    "name": "Lost Champion Cursed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5333,
+    "name": "Skeleton Soldier Alpha",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5338,
+    "name": "Night Crypt Walker Tamed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5346,
+    "name": "Void Tomb Warden",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5359,
+    "name": "Lanky Burned Hollow Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5363,
+    "name": "Tyrant Knight Commander",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5379,
+    "name": "Crypt Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5402,
+    "name": "Crude Cursed Pilgrim VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5414,
+    "name": "Shadow Walker Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5431,
+    "name": "Wretched Dead Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5437,
+    "name": "Cursed Knight Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5455,
+    "name": "Eternal Sister Friede",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5483,
+    "name": "Withering Cursed Knight VII",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5493,
+    "name": "Jagged Hollow",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5499,
+    "name": "Grimy Crypt Walker V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5508,
+    "name": "Soggy Gloaming Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5516,
+    "name": "Feral Ash Zombie",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5517,
+    "name": "Mythic Slave Knight Gael",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5550,
+    "name": "Diseased Knight Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5554,
+    "name": "Ragged Starved Hollow",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5556,
+    "name": "Titan Mistborn Shade",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5563,
+    "name": "Plague Ash Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5567,
+    "name": "Scraggly Ash Zombie",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5584,
+    "name": "Sunken Tomb Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5598,
+    "name": "Death Ember Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5602,
+    "name": "Grave Ember Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5607,
+    "name": "Wretched Gloaming Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5612,
+    "name": "Forsaken Knight Commander",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5624,
+    "name": "Rust Ash Knight Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5627,
+    "name": "Forgotten Hollow Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5634,
+    "name": "Drowned Zombie Champion IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5663,
+    "name": "Hallowed Warden Commander",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5667,
+    "name": "Tar Pit Walker Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5678,
+    "name": "Lesser Dusk Walker Senior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5704,
+    "name": "Hollow Champion Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5712,
+    "name": "Infernal Warden Commander",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5713,
+    "name": "Supreme Radagon Fragment",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5721,
+    "name": "Meager Undead Pilgrim Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5741,
+    "name": "Leviathan Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5749,
+    "name": "Rust Wandering Champion VII",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5754,
+    "name": "Howling Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5756,
+    "name": "Tomb Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5774,
+    "name": "Eternal Radagon Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5790,
+    "name": "Infernal Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5791,
+    "name": "Crimson Decay Knight Elite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5798,
+    "name": "Chosen Warden Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5803,
+    "name": "Thorn Corroded Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5822,
+    "name": "Soot Knight Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5849,
+    "name": "Skeleton Champion VI",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5853,
+    "name": "Death Undead Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5872,
+    "name": "Juggernaut Knight Commander",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5875,
+    "name": "Tattered Cursed Pilgrim Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5889,
+    "name": "Bone Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5891,
+    "name": "Sacred Tomb Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5898,
+    "name": "Iron Abandoned Hollow Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5909,
+    "name": "Undead Pilgrim V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5928,
+    "name": "Chaos Soot Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5938,
+    "name": "Astral Ash Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5940,
+    "name": "Sinuous Soot Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5943,
+    "name": "Torn Zombie Knight Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5945,
+    "name": "Lesser Decay Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5948,
+    "name": "Infernal Ash Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5957,
+    "name": "Undying Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5972,
+    "name": "Frost Barrow Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5975,
+    "name": "Silver Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5984,
+    "name": "Marrow Knight VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5993,
+    "name": "Crystal Grave Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 5999,
+    "name": "Cursed Grave Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6012,
+    "name": "Wandering Hollow III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6014,
+    "name": "Night Ember Hollow Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6015,
+    "name": "Hungry Plague Knight I",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6022,
+    "name": "Lost Soul Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6029,
+    "name": "Ash Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6044,
+    "name": "Arcane Ember Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6047,
+    "name": "Cursed Pilgrim",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6049,
+    "name": "Abandoned Champion",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6058,
+    "name": "Umbral Zombie Champion I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6070,
+    "name": "Obsidian Plague Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6085,
+    "name": "Swamp Grave Walker Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6087,
+    "name": "Rust Marrow Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6088,
+    "name": "Lanky Decay Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6089,
+    "name": "Astral Zombie Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6092,
+    "name": "Sunken Night Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6093,
+    "name": "Death Ember Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6095,
+    "name": "Lesser Barrow Walker Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6097,
+    "name": "Night Charred Corpse",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6111,
+    "name": "Dust Hollow Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6113,
+    "name": "Blood Bone Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6115,
+    "name": "Decay Walker Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6116,
+    "name": "Slime Mound Walker I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6119,
+    "name": "Hollow Champion II",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6120,
+    "name": "Gale Lost Champion Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6121,
+    "name": "Ash Hollow Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6131,
+    "name": "Scourge Ember Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6132,
+    "name": "Rusted Knight Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6148,
+    "name": "Shadowed Skeleton Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6174,
+    "name": "Broken Hollow Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6181,
+    "name": "Wild Ash Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6197,
+    "name": "Crystal Bone Dragon",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6199,
+    "name": "Arcane Fallen Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6215,
+    "name": "Warlord Knight Commander",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6219,
+    "name": "Rusted Hollow Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6231,
+    "name": "Infernal Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6237,
+    "name": "Skeleton Soldier Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6246,
+    "name": "Cursed Knight Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6268,
+    "name": "Decayed Crypt Knight Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6281,
+    "name": "Warlord Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6284,
+    "name": "Decayed Diseased Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6287,
+    "name": "Crag Pit Walker II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6297,
+    "name": "Abyss Ash Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6311,
+    "name": "War Tomb Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6313,
+    "name": "Apocalypse Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6328,
+    "name": "Torn Crypt Walker Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6334,
+    "name": "Eternal Bone Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6350,
+    "name": "Squalid Soot Hollow VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6352,
+    "name": "Plague Ossified Knight Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6372,
+    "name": "Primordial Fullborn Vessel",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6384,
+    "name": "Void Undead Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6394,
+    "name": "Soggy Barrow Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6395,
+    "name": "Giant Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6401,
+    "name": "Fell Gloaming Walker Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6406,
+    "name": "Mottled Ember Hollow Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6409,
+    "name": "Shadowed Undead Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6411,
+    "name": "Scraggly Diseased Corpse",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6415,
+    "name": "Void Undead Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6417,
+    "name": "Master Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6435,
+    "name": "Bleak Night Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6448,
+    "name": "Crowned Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6458,
+    "name": "Iron Cursed Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6517,
+    "name": "Savage Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6530,
+    "name": "Sand Hollow IV",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6542,
+    "name": "Dire Grave Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6551,
+    "name": "Sacred Zombie Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6552,
+    "name": "Mire Abandoned Champion Beta",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6566,
+    "name": "Ascendant Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6577,
+    "name": "Unholy Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6605,
+    "name": "Cursed Ember Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6654,
+    "name": "Undead Pilgrim Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6658,
+    "name": "Diseased Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6672,
+    "name": "Jagged Cursed Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6675,
+    "name": "Undead Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6685,
+    "name": "Ember Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6686,
+    "name": "Lunar Bone Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6706,
+    "name": "Cinder Hollow Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6720,
+    "name": "Jagged Diseased Corpse",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6721,
+    "name": "Hollow Champion VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6756,
+    "name": "Grave Walker Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6759,
+    "name": "Infernal Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6772,
+    "name": "Wild Hollow Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6773,
+    "name": "Craven Death Knight Recruit V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6785,
+    "name": "Quarried Decay Knight Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6801,
+    "name": "Swamp Ash Zombie Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6809,
+    "name": "Knotted Corroded Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6827,
+    "name": "Ember Hollow Young",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6833,
+    "name": "Singed Cursed Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6836,
+    "name": "Brine Bone Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6840,
+    "name": "Gale Plague Knight VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6846,
+    "name": "Swamp Plague Zombie",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6882,
+    "name": "Frost Tomb Knight IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6886,
+    "name": "Rune Bone Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6893,
+    "name": "Void Ember Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6894,
+    "name": "Grimy Soot Hollow",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6895,
+    "name": "Ember Cursed Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6908,
+    "name": "Storm Ossified Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6913,
+    "name": "Eternal Gwyn Fragment",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6919,
+    "name": "Soggy Crypt Walker Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6920,
+    "name": "Dingy Wretched Dead III",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6922,
+    "name": "Rune Ash Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6923,
+    "name": "Astral Grave Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6929,
+    "name": "Rusted Hollow VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6940,
+    "name": "Sinuous Corroded Knight VII",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6941,
+    "name": "Burned Hollow Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6942,
+    "name": "Ascendant Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6950,
+    "name": "Malevolent Undead Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6969,
+    "name": "Ascendant Kandra Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6978,
+    "name": "Howling Zombie Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 6999,
+    "name": "Quarried Ossified Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7008,
+    "name": "Scourge Undead Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7023,
+    "name": "Forsaken Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7033,
+    "name": "Haze Forgotten Champion Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7045,
+    "name": "Grim Plague Zombie I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7049,
+    "name": "Abyss Ash Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7055,
+    "name": "Marrow Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7066,
+    "name": "Spectral Ember Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7087,
+    "name": "Dragon Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7089,
+    "name": "Cursed Zombie Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7100,
+    "name": "Lunar Tomb Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7114,
+    "name": "Scraggly Rot Corpse Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7121,
+    "name": "Immortal Nameless King",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7129,
+    "name": "Haggard Mound Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7131,
+    "name": "Bleak Lost Soul VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7137,
+    "name": "Ember Knight V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7146,
+    "name": "Feral Tomb Walker Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7149,
+    "name": "Gloom Diseased Knight Alpha",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7160,
+    "name": "Lost Soul Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7165,
+    "name": "Warden Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7170,
+    "name": "Runed Knight Commander",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7179,
+    "name": "Blood Ash Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7193,
+    "name": "Mythic Artorias Shadow",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7198,
+    "name": "Drowned Hollow Champion Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7200,
+    "name": "Jagged Ember Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7205,
+    "name": "Forbidden Steel Inquisitor",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7207,
+    "name": "Lord Warden Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7211,
+    "name": "Marsh Plague Zombie Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7217,
+    "name": "Archon Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7220,
+    "name": "Twilight Bone Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7221,
+    "name": "Dire Gloaming Walker Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7222,
+    "name": "Wandering Champion III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7271,
+    "name": "Ash Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7273,
+    "name": "Archon Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7277,
+    "name": "Plague Soot Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7284,
+    "name": "Crypt Walker Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7292,
+    "name": "Void Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7296,
+    "name": "Ash Knight Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7297,
+    "name": "Dim Ash Zombie Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7311,
+    "name": "Bristled Forgotten Champion Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7314,
+    "name": "Forgotten Champion VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7319,
+    "name": "Yellow Forgotten Hollow",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7320,
+    "name": "Jagged Barrow Knight Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7344,
+    "name": "Hungry Barrow Knight",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7347,
+    "name": "Frost Wandering Champion Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7350,
+    "name": "Sand Hollow",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7358,
+    "name": "Diseased Corpse Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7369,
+    "name": "Corrupted Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7381,
+    "name": "Charred Corpse V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7382,
+    "name": "Royal Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7391,
+    "name": "Mottled Marrow Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7394,
+    "name": "Shadow Walker V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7433,
+    "name": "Progenitor Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7440,
+    "name": "Progenitor Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7448,
+    "name": "Skeleton Soldier Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7463,
+    "name": "Abyss Bone Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7505,
+    "name": "Feral Lost Soul Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7507,
+    "name": "Umbral Hollow Champion",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7508,
+    "name": "Demon Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7518,
+    "name": "Tyrant Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7537,
+    "name": "Meager Mound Walker Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7538,
+    "name": "Zealous Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7545,
+    "name": "Gaunt Charred Corpse Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7565,
+    "name": "Coiled Abandoned Champion Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7583,
+    "name": "Cinder Hollow III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7618,
+    "name": "Filthy Undead Soldier VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7636,
+    "name": "Zero Azathoth-Touched Lord of Cinder",
+    "rarity": "EX",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7638,
+    "name": "Lanky Broken Hollow Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7646,
+    "name": "Putrid Night Walker Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7651,
+    "name": "Plague Zombie Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7657,
+    "name": "Pack Zombie Knight II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7660,
+    "name": "Lost Champion Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7662,
+    "name": "Ravaged Rot Knight Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7667,
+    "name": "Hoar Wandering Champion Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7686,
+    "name": "Bleak Zombie Knight V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7694,
+    "name": "Dust Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7717,
+    "name": "Fell Lost Soul Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7732,
+    "name": "Weedy Sand Hollow Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7761,
+    "name": "Sinuous Abandoned Champion I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7765,
+    "name": "Transcendent Morgott Fragment",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7797,
+    "name": "Omega Azathoth-Touched Lord of Cinder",
+    "rarity": "EX",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7802,
+    "name": "Archon Grave Warden Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7803,
+    "name": "Colossus Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7805,
+    "name": "Hollow Ember Knight Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7809,
+    "name": "Grave Knight I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7810,
+    "name": "Dragon Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7812,
+    "name": "Crude Night Walker V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7818,
+    "name": "Warped Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7820,
+    "name": "Blazing Skeleton Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7831,
+    "name": "Lunar Corrupted Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7837,
+    "name": "Zombie Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7845,
+    "name": "Primordial Ash Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7855,
+    "name": "Pale Dark Walker V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7856,
+    "name": "Juggernaut Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7865,
+    "name": "Hallowed Ancient Tomb Warden",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7868,
+    "name": "Rusted Knight Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7874,
+    "name": "Drowned Wandering Champion Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7878,
+    "name": "Knotted Plague Knight Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7882,
+    "name": "Meager Cinder Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7901,
+    "name": "Titan Fallen Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7907,
+    "name": "Hollow Champion Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7911,
+    "name": "Shard Crypt Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7915,
+    "name": "Ember Death Knight Recruit III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7932,
+    "name": "Grimy Skeleton Soldier Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7955,
+    "name": "Cave Dark Walker Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7959,
+    "name": "Feral Ember Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7977,
+    "name": "Bone Sand Hollow Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 7979,
+    "name": "Tar Starved Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8014,
+    "name": "Skeleton Soldier",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8019,
+    "name": "Withered Wandering Hollow Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8027,
+    "name": "Champion Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8030,
+    "name": "Filthy Ash Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8040,
+    "name": "Death Knight Recruit Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8041,
+    "name": "Drowned Cursed Knight",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8057,
+    "name": "Putrid Plague Zombie Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8058,
+    "name": "Ascendant Koloss Giant",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8063,
+    "name": "Dire Decay Walker I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8097,
+    "name": "Siege Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8116,
+    "name": "Zombie Knight Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8124,
+    "name": "Meager Void Walker Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8128,
+    "name": "Umbral Crypt Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8149,
+    "name": "Thorn Death Knight Recruit Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8166,
+    "name": "Forbidden Grave Warden Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8171,
+    "name": "Howling Cursed Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8173,
+    "name": "Corrupted Zombie Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8190,
+    "name": "Skeleton Champion Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8194,
+    "name": "Ember Hollow Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8201,
+    "name": "Twisted Marrow Knight VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8213,
+    "name": "Diseased Knight Corrupted",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8220,
+    "name": "Doom Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8246,
+    "name": "Chaos Corrupted Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8273,
+    "name": "Wrathful Kandra Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8286,
+    "name": "Sewer Grave Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8294,
+    "name": "Diseased Corpse Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8302,
+    "name": "True Seath the Scaleless",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8306,
+    "name": "Fallen Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8309,
+    "name": "Ancient Morgott Fragment",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8318,
+    "name": "Rusted Hollow",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8328,
+    "name": "Titan Ash Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8329,
+    "name": "Sand Hollow Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8361,
+    "name": "Titan Ember Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8364,
+    "name": "Corroded Knight IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8368,
+    "name": "Knotted Soot Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8369,
+    "name": "Dire Abandoned Hollow Awakened",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8375,
+    "name": "Bone Knight II",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8395,
+    "name": "Abandoned Hollow VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8409,
+    "name": "Crystal Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8418,
+    "name": "Night Walker Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8425,
+    "name": "Feral Void Walker IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8429,
+    "name": "Cardinal Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8448,
+    "name": "Mire Abandoned Champion",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8453,
+    "name": "Dingy Soot Hollow",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8456,
+    "name": "Eternal Artorias Shadow",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8457,
+    "name": "Grave Knight VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8468,
+    "name": "Gale Corroded Knight VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8500,
+    "name": "Barrow Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8514,
+    "name": "Craven Bone Knight I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8521,
+    "name": "Rot Corpse",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8553,
+    "name": "Ultimate Dark Souls Lord Fragment",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8560,
+    "name": "Commander Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8584,
+    "name": "Shadow Walker Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8585,
+    "name": "Dire Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8612,
+    "name": "Dire Skeleton Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8615,
+    "name": "Rotten Skeleton Soldier II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8629,
+    "name": "Dread Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8649,
+    "name": "Ash Zombie Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8668,
+    "name": "Obsidian Tomb Knight VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8701,
+    "name": "Soul Corrupted Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8705,
+    "name": "Transcendent Malenia Echo",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8724,
+    "name": "Dim Skeleton Soldier Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8740,
+    "name": "Dominant Elder Grave Warden",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8752,
+    "name": "Death Knight Recruit Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8762,
+    "name": "Omnipotent Preservation Shard",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8787,
+    "name": "Wandering Lost Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8789,
+    "name": "Ossified Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8795,
+    "name": "Cursed Bone Dragon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8804,
+    "name": "Eternal Ember Giant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8813,
+    "name": "Undying Warden Commander",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8824,
+    "name": "Ravaged Lost Champion Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8825,
+    "name": "Commander Elite Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8847,
+    "name": "Tyrant Chosen Death Knight",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8854,
+    "name": "Barrow Walker Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8860,
+    "name": "Apex Sovereign Hollow",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8877,
+    "name": "Hungry Death Knight Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8878,
+    "name": "Soul Soot Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8881,
+    "name": "Ancient Skeleton Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8885,
+    "name": "Scraped Shadow Walker Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8893,
+    "name": "Scourge Death Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8898,
+    "name": "Tomb Knight Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8904,
+    "name": "Gloaming Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8907,
+    "name": "Howling Abyssal Hollow",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8911,
+    "name": "Undead Champion Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8930,
+    "name": "Lunar Ember Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8945,
+    "name": "Mud Void Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8951,
+    "name": "Diseased Knight Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8957,
+    "name": "Undying Abyssal Knight",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8965,
+    "name": "Lightning Barrow Warden",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8970,
+    "name": "Jagged Skeleton Champion",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8975,
+    "name": "Shadowed Ash Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8982,
+    "name": "Void Death Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 8997,
+    "name": "Wrathful Steel Inquisitor",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9000,
+    "name": "Wretched Dead Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9009,
+    "name": "Exalted Sovereign Hollow",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9012,
+    "name": "Hollow Skeleton Soldier Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9014,
+    "name": "Twilight Walker Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9019,
+    "name": "Dark Walker VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9030,
+    "name": "Corrupt Forgotten Champion Junior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9038,
+    "name": "Shadow Starved Hollow Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9041,
+    "name": "Cursed Barrow Knight Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9051,
+    "name": "Cinder Hollow Alpha",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9071,
+    "name": "Tomb Knight Prime",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9102,
+    "name": "Scorched Zombie Champion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9109,
+    "name": "Forbidden Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9124,
+    "name": "Nemesis Kandra Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9125,
+    "name": "Nemesis Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9135,
+    "name": "Doom Undead Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9151,
+    "name": "Legendary Morgott Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9154,
+    "name": "Blood Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9157,
+    "name": "Rust Ember Knight Major",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9169,
+    "name": "Tyrant Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9170,
+    "name": "Night Walker Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9182,
+    "name": "Hellborn Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9188,
+    "name": "Primordial Barrow Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9200,
+    "name": "Crystal Fallen Giant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9217,
+    "name": "Withering Skeleton Champion",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9248,
+    "name": "Twilight Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9250,
+    "name": "Shroud Ember Knight III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9256,
+    "name": "Rot Knight",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9268,
+    "name": "Pack Pit Walker Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9285,
+    "name": "Mangy Barrow Walker III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9287,
+    "name": "Hollow Ash Knight Junior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9324,
+    "name": "Filthy Gloaming Walker VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9338,
+    "name": "Decay Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9352,
+    "name": "Murky Grave Walker Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9355,
+    "name": "Wrathful Elden Sovereign Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9360,
+    "name": "Infernal Fullborn Vessel",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9366,
+    "name": "Blazing Undead Dragon",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9370,
+    "name": "Prime Knight Commander",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9394,
+    "name": "Slime Decay Walker IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9402,
+    "name": "Spectral Soot Dragon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9403,
+    "name": "Eternal Death Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9410,
+    "name": "Murk Corroded Knight Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9418,
+    "name": "Tomb Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9420,
+    "name": "Scarred Grave Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9421,
+    "name": "Hollow Death Walker",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9435,
+    "name": "Progenitor Sovereign Hollow",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9436,
+    "name": "Twisted Bone Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9437,
+    "name": "Starved Hollow Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9442,
+    "name": "Malevolent Fallen Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9448,
+    "name": "Sewer Soot Hollow Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9458,
+    "name": "Divine Elden Beast Shard",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9467,
+    "name": "Godlike Aldrich Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9471,
+    "name": "Bone Knight III",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9488,
+    "name": "Chosen Supreme Hollow",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9505,
+    "name": "Ember Death Knight Recruit",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9511,
+    "name": "Spectral Tomb Warden",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9514,
+    "name": "Rune Corrupted Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9538,
+    "name": "Withered Tomb Walker IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9541,
+    "name": "Dust Hollow Alpha",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9547,
+    "name": "Marsh Wandering Hollow",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9549,
+    "name": "Crystal Corrupted Warden",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9560,
+    "name": "Soot Knight Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9568,
+    "name": "Abandoned Hollow IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9615,
+    "name": "Vile Dusk Walker II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9634,
+    "name": "Colossus Ashen Colossus",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9639,
+    "name": "Torn Mound Walker Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9643,
+    "name": "Rune Grave Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9662,
+    "name": "Crude Burned Hollow Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9663,
+    "name": "Hollow Mound Walker Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9664,
+    "name": "Ancient Barrow Warden",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9667,
+    "name": "Murk Zombie Champion Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9670,
+    "name": "Eternal Aldrich Fragment",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9676,
+    "name": "Plague Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9680,
+    "name": "Wandering Hollow Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9682,
+    "name": "Forgotten Hollow",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9683,
+    "name": "Battle Undead Champion VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9688,
+    "name": "Malevolent Cursed Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9700,
+    "name": "Plague Zombie Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9702,
+    "name": "Tattered Burned Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9728,
+    "name": "Divine Gwyn Lord of Cinder",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9739,
+    "name": "Plague Ossified Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9740,
+    "name": "Putrid Twilight Walker Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9743,
+    "name": "Grave Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9744,
+    "name": "Dusk Walker Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9777,
+    "name": "Lost Champion",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9782,
+    "name": "Decay Walker V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9791,
+    "name": "Ragged Decay Walker Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9793,
+    "name": "Small Hollow Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9816,
+    "name": "Soggy Rusted Hollow",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9818,
+    "name": "Ash Sand Hollow Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9829,
+    "name": "Cinder Knight Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9845,
+    "name": "Soggy Grave Walker Ancient",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9867,
+    "name": "Spectral Undead Giant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9868,
+    "name": "Silver Corrupted Warden",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9896,
+    "name": "Plague Skeleton Champion",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9900,
+    "name": "Demon Fallen Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9921,
+    "name": "Primordial Cinder Dragon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9923,
+    "name": "Jade Barrow Warden",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9935,
+    "name": "Cursed Death Knight Recruit Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9958,
+    "name": "Barrow Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9970,
+    "name": "Salt Undead Soldier Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9974,
+    "name": "Master Crowned Hollow",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9975,
+    "name": "Scourge Undead Giant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9989,
+    "name": "Mire Death Knight Recruit",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9991,
+    "name": "Corrupt Plague Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9993,
+    "name": "Twilight Ash Giant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  },
+  {
+    "id": 9999,
+    "name": "Ancient Gwyn Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Blighted Expanse",
+    "element": "Death"
+  }
+]

@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 6,
+    "name": "Crystal Reaper Unit",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9,
+    "name": "Siege Taken Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 18,
+    "name": "Void Predator Hunter",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 24,
+    "name": "Infernal Crota Son Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 25,
+    "name": "Siege Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 42,
+    "name": "Infernal Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 44,
+    "name": "Bristled Vex Hobgoblin Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 47,
+    "name": "Alien Worm Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 49,
+    "name": "Squalid Reaper Grot Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 50,
+    "name": "Fell Cosmic Bat",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 56,
+    "name": "World The Witness Final Shape",
+    "rarity": "EX",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 70,
+    "name": "Prime Geth Prime",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 79,
+    "name": "Star Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 92,
+    "name": "Arcane Fallen Captain",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 93,
+    "name": "Battle Flood Infection Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 121,
+    "name": "Quarried Fallen Vandal Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 122,
+    "name": "Murky Nebula Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 128,
+    "name": "Venom Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 137,
+    "name": "Star Grub Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 156,
+    "name": "Soul Hive Wizard",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 162,
+    "name": "Rotten Fallen Dreg Cursed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 172,
+    "name": "Colossus Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 187,
+    "name": "Eclipse Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 198,
+    "name": "Ancient Taken Ogre",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 212,
+    "name": "Murky Cosmic Bat Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 215,
+    "name": "Transcendent Savathun Witch Queen",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 248,
+    "name": "Fallen Reaper Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 250,
+    "name": "Cosmic Grub Awakened",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 261,
+    "name": "Bleak Cosmic Mote Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 268,
+    "name": "Hive Acolyte Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 271,
+    "name": "Death Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 280,
+    "name": "Dragon Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 299,
+    "name": "Dingy Void Bat Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 300,
+    "name": "Soggy Void Bat Junior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 302,
+    "name": "Drowned Collector Drone",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 303,
+    "name": "Metroid Larva",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 306,
+    "name": "Pitted Flood Infection Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 307,
+    "name": "Titan Xivu Arath Fragment",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 309,
+    "name": "Tar Alien Bat Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 310,
+    "name": "Withered Taken Psion Minor VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 327,
+    "name": "Ragged Void Mote III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 329,
+    "name": "Rotten Cosmic Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 336,
+    "name": "Fallen Shadow Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 360,
+    "name": "Crag Cabal Legionary I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 364,
+    "name": "Space Pirate Drone Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 392,
+    "name": "Ancient Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 397,
+    "name": "Arcane Hive Wizard",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 398,
+    "name": "Zealous Vex Hydra",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 410,
+    "name": "Infernal Fallen Baron",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 416,
+    "name": "Soggy Reaper Grot Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 426,
+    "name": "Transcendent Harbinger Ancient",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 496,
+    "name": "Star Worm Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 503,
+    "name": "Scout Drone Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 507,
+    "name": "Howling Taken Ogre",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 515,
+    "name": "Supreme Cabal Centurion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 525,
+    "name": "Vile Drone Unit V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 548,
+    "name": "Scarred Taken Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 576,
+    "name": "Astral Bat Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 587,
+    "name": "Murk Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 594,
+    "name": "Alien Worm V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 601,
+    "name": "Raging Reaper Unit",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 607,
+    "name": "Crag Vex Goblin III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 608,
+    "name": "Taken Psion Minor Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 628,
+    "name": "Thunder Predator Hunter",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 630,
+    "name": "Battle Husk Zombie VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 632,
+    "name": "Undying Taken Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 638,
+    "name": "Hive Acolyte Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 643,
+    "name": "Reaper Grot Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 661,
+    "name": "Apocalypse Sovereign Fragment",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 663,
+    "name": "Torn Scout Drone II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 666,
+    "name": "Blazing Taken Ogre",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 669,
+    "name": "Star Grub VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 682,
+    "name": "Cabal Phalanx Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 700,
+    "name": "Thorn Metroid Hunter Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 705,
+    "name": "Primordial Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 709,
+    "name": "Sewer Alien Bat Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 711,
+    "name": "Eclipse Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 716,
+    "name": "Shroud Reaper Scout Elite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 725,
+    "name": "Champion Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 733,
+    "name": "Risen Fallen Baron",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 747,
+    "name": "Space Rat Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 766,
+    "name": "Elder Elite Predator",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 770,
+    "name": "Void Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 797,
+    "name": "Alien Bat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 810,
+    "name": "Void Bat Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 820,
+    "name": "Dragon Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 821,
+    "name": "Celestial Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 822,
+    "name": "Withered Reaper Grot",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 825,
+    "name": "Obsidian Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 833,
+    "name": "Legendary Harbinger Ancient",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 834,
+    "name": "Cursed Fallen Vandal Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 846,
+    "name": "Space Pirate Warrior Elite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 851,
+    "name": "Space Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 855,
+    "name": "Dim Space Mote Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 862,
+    "name": "Hallowed Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 870,
+    "name": "Ash Astral Mote",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 877,
+    "name": "Torn Recon Drone Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 880,
+    "name": "Geth Trooper Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 940,
+    "name": "Nebula Bat Cursed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 950,
+    "name": "Ravaged Metroid Hunter Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 955,
+    "name": "Cosmic Rat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 957,
+    "name": "Unholy Cabal Centurion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 960,
+    "name": "Cosmic Worm Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 971,
+    "name": "Shadow Attack Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 976,
+    "name": "Fallen Vandal IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 995,
+    "name": "Drowned Geth Trooper Beta",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1011,
+    "name": "Thorn Cabal Phalanx Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1015,
+    "name": "Frost Taken Knight II",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1045,
+    "name": "Astral Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1046,
+    "name": "Jagged Space Bat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1048,
+    "name": "Astral Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1056,
+    "name": "Dragon Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1061,
+    "name": "Scarred Metroid Hunter IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1073,
+    "name": "Knotted Necromorph Slasher Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1081,
+    "name": "Necrotic Taken Ogre",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1121,
+    "name": "Giant Predator Hunter",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1133,
+    "name": "Hungry Space Pirate Warrior Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1137,
+    "name": "Weak Worker Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1172,
+    "name": "Reaper Scout VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1175,
+    "name": "Grave Fallen Captain",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1180,
+    "name": "Lunar Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1182,
+    "name": "Feral Star Rat V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1184,
+    "name": "Void Grub VII",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1197,
+    "name": "Fell Void Rat III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1230,
+    "name": "Siege Elite Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1242,
+    "name": "Lunar Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1251,
+    "name": "Necrotic Reaper Unit",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1266,
+    "name": "Juggernaut Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1269,
+    "name": "Infernal Reaper Elite",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1283,
+    "name": "Grimy Recon Drone Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1287,
+    "name": "Colossus Reaper Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1297,
+    "name": "Lesser Alien Bat Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1301,
+    "name": "Necromorph Leaper Omega",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1314,
+    "name": "Transcendent Xivu Arath War",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1324,
+    "name": "Howling Reaper Unit",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1325,
+    "name": "Star Mote",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1355,
+    "name": "Spectral Reaper Unit",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1358,
+    "name": "Crystal Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1361,
+    "name": "Cardinal Fallen Baron",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1365,
+    "name": "Cataclysm Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1374,
+    "name": "Necromorph Slasher II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1386,
+    "name": "Plague Fallen Captain",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1398,
+    "name": "Corrupt Collector Drone",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1405,
+    "name": "Void Worm VI",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1409,
+    "name": "Knotted Hive Acolyte Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1429,
+    "name": "Vex Goblin",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1432,
+    "name": "Leaking Geth Trooper",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1434,
+    "name": "Rune Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1472,
+    "name": "Squalid Cosmic Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1478,
+    "name": "Necrotic Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1483,
+    "name": "Tyrant Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1486,
+    "name": "Dingy Alien Grub Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1498,
+    "name": "Mud Metroid Larva VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1503,
+    "name": "Metroid Hunter Alpha",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1509,
+    "name": "Leaking Cabal Phalanx Tamed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1520,
+    "name": "Hollow Geth Trooper Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1532,
+    "name": "Spindly Cosmic Worm III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1546,
+    "name": "Juggernaut Reaper Elite",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1547,
+    "name": "Squalid Defense Drone",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1549,
+    "name": "Iron Void Grub Lesser",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1550,
+    "name": "Decayed Flood Infection Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1564,
+    "name": "Raging Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1570,
+    "name": "Grimy Star Rat Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1579,
+    "name": "Dusk Hive Acolyte Cursed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1581,
+    "name": "Star Mote Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1582,
+    "name": "Bristled Fallen Vandal Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1585,
+    "name": "Lunar Fallen Captain",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1589,
+    "name": "Tyrant Reaper Elite",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1602,
+    "name": "Collector Drone Omega",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1611,
+    "name": "Exalted Reaper Elite",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1620,
+    "name": "Metroid Hunter Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1622,
+    "name": "Jagged Hive Thrall Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1632,
+    "name": "Dust Star Worm VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1646,
+    "name": "Torn Space Mote Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1650,
+    "name": "Thunder Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1655,
+    "name": "Leaking Flood Infection V",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1668,
+    "name": "Titan Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1671,
+    "name": "Dust Void Worm Major",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1683,
+    "name": "Twilight Geth Sniper",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1685,
+    "name": "Gloom Necromorph Slasher III",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1708,
+    "name": "Small Nebula Mote Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1710,
+    "name": "Astral Reaper Unit",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1734,
+    "name": "Ancient Savathun Witch Queen",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1744,
+    "name": "Obsidian Necromorph Slasher Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1753,
+    "name": "Bristled Geth Trooper Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1757,
+    "name": "Dingy Recon Drone Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1764,
+    "name": "Dread Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1768,
+    "name": "Necromorph Slasher Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1772,
+    "name": "Barbed Metroid Hunter II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1776,
+    "name": "Fallen Dreg II",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1779,
+    "name": "Lightning Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1793,
+    "name": "Pale Alien Worm Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1799,
+    "name": "Slime Void Bat Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1800,
+    "name": "Haggard Defense Drone Young",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1805,
+    "name": "Tattered Fallen Dreg II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1813,
+    "name": "Cabal Legionary Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1858,
+    "name": "Arcane Taken Ogre",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1875,
+    "name": "Ancient Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1884,
+    "name": "Space Pirate Warrior Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1907,
+    "name": "Champion Cabal Centurion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1924,
+    "name": "Noxious Necromorph Slasher",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1931,
+    "name": "Grim Nebula Mote VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1953,
+    "name": "Death Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1960,
+    "name": "Elder Reaper Elite",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1961,
+    "name": "Dingy Space Rat VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1963,
+    "name": "Immortal Sovereign Prothean",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1976,
+    "name": "Coiled Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1978,
+    "name": "Small Metroid Larva Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1987,
+    "name": "Ragged Hive Thrall",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 1990,
+    "name": "Doom Predator Hunter",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2009,
+    "name": "Rust Flood Infection Omega",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2010,
+    "name": "Tar Defense Drone",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2011,
+    "name": "Rotten Nebula Mote Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2017,
+    "name": "Storm Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2048,
+    "name": "Sewer Void Worm",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2069,
+    "name": "Nebula Mote Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2079,
+    "name": "Ancient Fallen Captain",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2085,
+    "name": "Hoar Metroid Hunter VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2101,
+    "name": "Void Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2118,
+    "name": "Cosmic Bat",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2150,
+    "name": "Cosmic Mote Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2169,
+    "name": "Dread Taken Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2188,
+    "name": "Grim Star Rat III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2194,
+    "name": "Corrupt Vex Hobgoblin Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2203,
+    "name": "Abyss Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2212,
+    "name": "Silver Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2230,
+    "name": "Dragon Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2240,
+    "name": "Alien Worm",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2242,
+    "name": "Fetid Husk Zombie",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2263,
+    "name": "Ancient Xivu Arath War",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2269,
+    "name": "Archon Shadow Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2270,
+    "name": "Star Grub Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2274,
+    "name": "Abyss Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2276,
+    "name": "Squalid Taken Psion Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2281,
+    "name": "Apocalypse Xivu Arath Fragment",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2294,
+    "name": "Wretched Drone Unit",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2315,
+    "name": "Sacred Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2332,
+    "name": "Lunar Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2358,
+    "name": "Hellborn Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2364,
+    "name": "Leaking Flood Infection Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2368,
+    "name": "Wretched Nebula Grub Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2395,
+    "name": "Dark Scout Drone Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2405,
+    "name": "Necromorph Slasher Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2417,
+    "name": "Zero The Witness Final Shape",
+    "rarity": "EX",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2419,
+    "name": "Alien Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2420,
+    "name": "Sable Savathun Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2424,
+    "name": "Jagged Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2431,
+    "name": "Star Grub Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2446,
+    "name": "Supreme Taken Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2448,
+    "name": "Titan Predator Hunter",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2454,
+    "name": "Wrathful Reaper Capital Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2460,
+    "name": "Space Pirate Drone Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2478,
+    "name": "Quarried Collector Drone Corrupted",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2494,
+    "name": "Space Rat Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2524,
+    "name": "Infernal Shadow Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2526,
+    "name": "Alien Bat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2546,
+    "name": "Absolute Sovereign Prothean",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2556,
+    "name": "Cabal Phalanx Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2557,
+    "name": "Haze Reaper Scout Alpha",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2573,
+    "name": "Weak Star Grub Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2583,
+    "name": "Transcendent Sea Emperor Leviathan",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2586,
+    "name": "Metroid Hunter Major",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2597,
+    "name": "Vex Hobgoblin",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2598,
+    "name": "Cardinal Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2608,
+    "name": "Gaunt Void Mote V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2623,
+    "name": "Bleak Void Bat V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2627,
+    "name": "Infernal Reaper Unit",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2635,
+    "name": "Reaper Scout Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2645,
+    "name": "Vile Astral Mote Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2649,
+    "name": "Celestial Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2654,
+    "name": "Pitted Vex Hobgoblin",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2669,
+    "name": "Space Pirate Warrior VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2671,
+    "name": "Pale Alien Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2680,
+    "name": "Murk Vex Hobgoblin Senior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2685,
+    "name": "Blood Hive Wizard",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2699,
+    "name": "Cabal Legionary",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2709,
+    "name": "Mud Space Rat Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2718,
+    "name": "Eternal Xivu Arath War",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2720,
+    "name": "Jade Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2749,
+    "name": "Nebula Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2750,
+    "name": "Warden Hive Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2758,
+    "name": "Sorrow Space Pirate Warrior Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2774,
+    "name": "Mottled Collector Drone II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2789,
+    "name": "Spindly Cosmic Grub V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2820,
+    "name": "Supreme Reaper Elite",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2855,
+    "name": "Withering Reaper Scout VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2856,
+    "name": "Overlord Elite Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2861,
+    "name": "Star Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2865,
+    "name": "Frost Space Pirate Warrior Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2874,
+    "name": "Savage Cabal Centurion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2894,
+    "name": "Waning Geth Trooper IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2897,
+    "name": "Gaunt Cosmic Grub Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2899,
+    "name": "Legendary Reaper Leviathan",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2901,
+    "name": "Eternal Sovereign Prothean",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2922,
+    "name": "Chaos Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2930,
+    "name": "Dire Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2933,
+    "name": "Astral Bat III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2938,
+    "name": "Space Pirate Warrior Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2941,
+    "name": "Soggy Star Bat VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2942,
+    "name": "Juggernaut Vex Hydra",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2945,
+    "name": "Spectral Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2951,
+    "name": "Supreme Fallen Baron",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2981,
+    "name": "Umbral Cabal Phalanx II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2990,
+    "name": "Tattered Astral Bat V",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 2994,
+    "name": "Void Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3002,
+    "name": "Threadbare Taken Psion Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3006,
+    "name": "Herald Reaper Elite",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3015,
+    "name": "Knotted Taken Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3028,
+    "name": "Cabal Phalanx",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3046,
+    "name": "Necromorph Slasher",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3049,
+    "name": "Hoar Reaper Scout II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3097,
+    "name": "Torn Space Bat Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3098,
+    "name": "Jade Geth Sniper",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3099,
+    "name": "Hollow Defense Drone Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3102,
+    "name": "Lichen Necromorph Slasher Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3109,
+    "name": "Champion Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3118,
+    "name": "Crowned Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3122,
+    "name": "Mottled Necromorph Leaper Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3127,
+    "name": "Bleak Space Pirate Drone II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3156,
+    "name": "Wrathful Shadow Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3165,
+    "name": "Nebula Mote Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3170,
+    "name": "Abyssal Reaper Elite",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3177,
+    "name": "Hollow Collector Drone Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3182,
+    "name": "Void Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3193,
+    "name": "Spectral Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3201,
+    "name": "Defense Drone",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3206,
+    "name": "Dire Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3211,
+    "name": "Taken Psion Minor Prime",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3214,
+    "name": "Small Nebula Mote III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3215,
+    "name": "Pale Star Mote Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3220,
+    "name": "Rust Fallen Vandal",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3225,
+    "name": "War Geth Sniper",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3239,
+    "name": "Royal Fallen Baron",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3245,
+    "name": "Omnipotent The Overmind Eternal",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3267,
+    "name": "Necromorph Leaper",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3280,
+    "name": "Void Grub Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3285,
+    "name": "Supreme Geth Prime",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3286,
+    "name": "Chaos Reaper Unit",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3304,
+    "name": "Rotten Cosmic Worm Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3317,
+    "name": "Withering Taken Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3319,
+    "name": "Sunken Fallen Dreg",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3322,
+    "name": "Forbidden Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3331,
+    "name": "Grim Star Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3337,
+    "name": "Progenitor Geth Prime",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3340,
+    "name": "Filthy Drone Unit Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3342,
+    "name": "Meager Void Worm Cursed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3356,
+    "name": "Cosmic Grub Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3357,
+    "name": "Vile Cosmic Bat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3419,
+    "name": "Siege Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3423,
+    "name": "Husk Zombie Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3433,
+    "name": "Leviathan Geth Prime",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3440,
+    "name": "Decayed Husk Zombie Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3441,
+    "name": "Ether Geth Sniper",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3442,
+    "name": "Sorrow Vex Hobgoblin",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3444,
+    "name": "Mottled Nebula Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3468,
+    "name": "Giant Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3470,
+    "name": "Infernal Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3474,
+    "name": "Star Rat Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3486,
+    "name": "Frost Husk Zombie",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3487,
+    "name": "Primordial Xivu Arath Fragment",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3493,
+    "name": "Lichen Taken Knight Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3508,
+    "name": "Storm Reaper Scout VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3515,
+    "name": "Cave Cosmic Bat Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3533,
+    "name": "Fallen Dreg V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3534,
+    "name": "Blood Predator Hunter",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3536,
+    "name": "Ravaged Husk Zombie Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3551,
+    "name": "Lichen Necromorph Leaper",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3552,
+    "name": "Titan Reaper Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3564,
+    "name": "Alien Grub Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3570,
+    "name": "Nemesis Crota Son Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3576,
+    "name": "Swamp Astral Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3586,
+    "name": "Nebula Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3609,
+    "name": "Dusk Metroid Hunter II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3620,
+    "name": "Spindly Cabal Legionary",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3622,
+    "name": "Space Bat Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3632,
+    "name": "Risen Vex Hydra",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3636,
+    "name": "Celestial Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3638,
+    "name": "Tattered Space Pirate Drone Elite",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3639,
+    "name": "Ember Cabal Phalanx Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3644,
+    "name": "Tattered Star Grub",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3674,
+    "name": "Attack Drone III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3682,
+    "name": "Howling Fallen Captain",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3687,
+    "name": "Wrathful Crota Son Scout",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3710,
+    "name": "Flood Infection I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3711,
+    "name": "Obsidian Taken Ogre",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3715,
+    "name": "Tyrant Geth Prime",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3731,
+    "name": "Elder Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3736,
+    "name": "Marsh Taken Psion Minor",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3745,
+    "name": "Cosmic Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3747,
+    "name": "Ultimate Oryx Ascendant",
+    "rarity": "Mythic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3760,
+    "name": "Titan Reaper Unit",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3771,
+    "name": "Hellborn Harbinger Fragment",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3794,
+    "name": "Eternal Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3800,
+    "name": "Metroid Hunter",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3805,
+    "name": "Wrathful Reaper Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3830,
+    "name": "Dire Geth Sniper",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3831,
+    "name": "Star Bat Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3837,
+    "name": "Giant Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3839,
+    "name": "Commander Geth Prime",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3846,
+    "name": "Grimy Space Rat Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3852,
+    "name": "Noxious Taken Knight Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3893,
+    "name": "Void Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3900,
+    "name": "Sewer Star Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3912,
+    "name": "Putrid Metroid Larva",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3927,
+    "name": "Coiled Vex Hobgoblin",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3945,
+    "name": "Sinuous Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3950,
+    "name": "Soggy Space Bat Lesser",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3962,
+    "name": "Attack Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3965,
+    "name": "Ashen Husk Zombie Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3973,
+    "name": "Frozen Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3991,
+    "name": "Omega Fallen Baron",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3995,
+    "name": "Cosmic Savathun True",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 3998,
+    "name": "Tempest Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4001,
+    "name": "Void Worm VII",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4004,
+    "name": "Haggard Cosmic Worm Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4032,
+    "name": "Dire Void Worm II",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4041,
+    "name": "Threadbare Drone Unit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4042,
+    "name": "Flood Infection Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4053,
+    "name": "Undying Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4059,
+    "name": "Immortal Taken Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4073,
+    "name": "Crude Void Bat Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4125,
+    "name": "Ash Cosmic Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4170,
+    "name": "Drone Unit VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4172,
+    "name": "Rotten Void Grub Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4178,
+    "name": "Nebula Mote II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4183,
+    "name": "Nebula Bat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4191,
+    "name": "War Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4194,
+    "name": "Gale Fallen Vandal IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4203,
+    "name": "Howling Geth Sniper",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4213,
+    "name": "Necromorph Leaper Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4215,
+    "name": "Primordial Oryx Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4217,
+    "name": "Lanky Recon Drone Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4249,
+    "name": "Immortal Vex Hydra",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4274,
+    "name": "Death Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4284,
+    "name": "Commander Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4293,
+    "name": "Crude Cosmic Bat II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4311,
+    "name": "Star Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4317,
+    "name": "Hallowed Cabal Centurion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4336,
+    "name": "Ravaged Fallen Vandal Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4340,
+    "name": "Apocalypse Reaper Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4349,
+    "name": "Hungry Necromorph Leaper",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4363,
+    "name": "Royal Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4367,
+    "name": "Grimy Defense Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4384,
+    "name": "Undying Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4394,
+    "name": "Dire Nebula Mote",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4406,
+    "name": "Giant Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4411,
+    "name": "Bristled Flood Infection Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4414,
+    "name": "Torn Attack Drone",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4437,
+    "name": "Squalid Cabal Legionary V",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4441,
+    "name": "Dim Fallen Dreg Elite",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4442,
+    "name": "Crowned Vex Hydra",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4443,
+    "name": "Necromorph Leaper II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4451,
+    "name": "Shadow Void Grub Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4452,
+    "name": "Space Bat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4456,
+    "name": "Arcane Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4465,
+    "name": "Lord Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4482,
+    "name": "Juggernaut Elite Predator",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4493,
+    "name": "Night Nebula Rat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4501,
+    "name": "Ragged Void Worm III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4526,
+    "name": "Pack Nebula Bat IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4531,
+    "name": "Lightning Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4533,
+    "name": "Cursed Reaper Unit",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4544,
+    "name": "Grand Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4584,
+    "name": "Barbed Collector Drone",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4598,
+    "name": "Crude Cosmic Bat Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4603,
+    "name": "Fallen Vandal Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4605,
+    "name": "Astral Bat",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4627,
+    "name": "Blighted Hive Acolyte Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4631,
+    "name": "Unholy Reaper Elite",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4635,
+    "name": "Eclipse Fallen Captain",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4636,
+    "name": "Scourge Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4650,
+    "name": "Collector Drone Minor",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4654,
+    "name": "Grim Taken Psion Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4661,
+    "name": "Twilight Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4679,
+    "name": "Iron Drone Unit",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4684,
+    "name": "Nebula Mote",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4685,
+    "name": "Salt Alien Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4711,
+    "name": "Bleached Space Pirate Warrior Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4712,
+    "name": "Geth Trooper Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4717,
+    "name": "Gloom Necromorph Slasher V",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4718,
+    "name": "Sinuous Taken Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4719,
+    "name": "Metroid Hunter Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4725,
+    "name": "Sunken Cabal Legionary",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4730,
+    "name": "Eternal Taken Ogre",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4738,
+    "name": "Void Grub Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4761,
+    "name": "Abyssal Taken Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4765,
+    "name": "Blazing Reaper Unit",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4774,
+    "name": "Leaking Hive Acolyte V",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4784,
+    "name": "Mud Alien Grub Lesser",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4798,
+    "name": "Tar Astral Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4802,
+    "name": "Doom Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4816,
+    "name": "Worker Drone Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4833,
+    "name": "Nightmare Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4835,
+    "name": "Squalid Void Worm Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4839,
+    "name": "Storm Necromorph Slasher Cursed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4841,
+    "name": "Putrid Attack Drone Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4864,
+    "name": "Necromorph Slasher Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4867,
+    "name": "Cave Cosmic Worm VII",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4881,
+    "name": "Scout Drone",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4882,
+    "name": "Geth Trooper Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4884,
+    "name": "Eternal Crota Son",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4900,
+    "name": "Iron Reaper Unit",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4913,
+    "name": "Tempest Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4941,
+    "name": "Jagged Taken Psion Minor I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4943,
+    "name": "Primordial Sovereign Prothean",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4945,
+    "name": "Collector Drone Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4964,
+    "name": "Corrupted Predator Hunter",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4973,
+    "name": "Sacred Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4975,
+    "name": "Yellow Nebula Rat Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4978,
+    "name": "Sewer Alien Rat Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4988,
+    "name": "Space Grub",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4990,
+    "name": "Taken Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4992,
+    "name": "Bleak Star Grub Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4995,
+    "name": "Wandering Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 4998,
+    "name": "High Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5006,
+    "name": "Husk Zombie VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5016,
+    "name": "Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5019,
+    "name": "Battle Hive Acolyte",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5027,
+    "name": "Crimson Flood Infection Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5067,
+    "name": "Metroid Hunter Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5080,
+    "name": "Obsidian Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5081,
+    "name": "Primordial Savathun Witch Queen",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5086,
+    "name": "Weedy Star Worm Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5106,
+    "name": "Knotted Necromorph Slasher Cursed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5116,
+    "name": "Invincible Sovereign Fragment",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5137,
+    "name": "Fetid Husk Zombie Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5144,
+    "name": "Sorrow Husk Zombie IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5158,
+    "name": "Knotted Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5161,
+    "name": "Corrupt Geth Trooper",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5172,
+    "name": "Star Mote Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5186,
+    "name": "Pack Scout Drone Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5191,
+    "name": "Tar Space Pirate Drone VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5211,
+    "name": "Meager Alien Bat Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5217,
+    "name": "Vex Hobgoblin Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5218,
+    "name": "Twilight Necromorph Slasher VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5228,
+    "name": "Mottled Metroid Larva Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5233,
+    "name": "Hallowed Fallen Baron",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5241,
+    "name": "Noxious Taken Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5247,
+    "name": "Scarred Cabal Phalanx Major",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5252,
+    "name": "Scorched Necromorph Slasher",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5255,
+    "name": "Husk Zombie Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5259,
+    "name": "Nebula Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5283,
+    "name": "Star Worm IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5291,
+    "name": "Champion Elite Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5301,
+    "name": "Spindly Nebula Bat Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5331,
+    "name": "Siege Sovereign Fragment",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5335,
+    "name": "Sorrow Cabal Phalanx",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5348,
+    "name": "Godlike Savathun Witch Queen",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5353,
+    "name": "Wild Cosmic Mote Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5356,
+    "name": "Undying Hive Wizard",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5372,
+    "name": "Arcane Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5376,
+    "name": "Blazing Predator Hunter",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5387,
+    "name": "Scorched Necromorph Slasher Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5400,
+    "name": "Haggard Space Rat Omega",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5406,
+    "name": "Howling Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5432,
+    "name": "Space Grub I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5438,
+    "name": "Godlike Reaper Leviathan",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5442,
+    "name": "Cosmic Bat Alpha",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5448,
+    "name": "Nemesis Harbinger Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5449,
+    "name": "Wretched Astral Bat",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5470,
+    "name": "Thorn Flood Infection Junior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5474,
+    "name": "Frost Taken Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5479,
+    "name": "Howling Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5486,
+    "name": "Murk Hive Acolyte Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5488,
+    "name": "Gaunt Cabal Legionary Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5495,
+    "name": "Nemesis Reaper Capital Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5507,
+    "name": "Gloom Taken Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5518,
+    "name": "Lunar Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5521,
+    "name": "Storm Fallen Vandal",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5532,
+    "name": "Scraped Space Bat Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5539,
+    "name": "Omega Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5544,
+    "name": "Venom Vex Hobgoblin II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5560,
+    "name": "Space Mote",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5573,
+    "name": "Divine Oryx Ascendant",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5577,
+    "name": "Soul Reaper Unit",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5586,
+    "name": "Gnawed Vex Hobgoblin",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5587,
+    "name": "Sacred Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5588,
+    "name": "Forsaken Fallen Baron",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5604,
+    "name": "Space Pirate Warrior Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5606,
+    "name": "Astral Bat Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5618,
+    "name": "Cursed Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5625,
+    "name": "Ancient Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5647,
+    "name": "Hive Acolyte VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5652,
+    "name": "Geth Trooper",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5657,
+    "name": "Scourge Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5670,
+    "name": "Bleached Collector Drone",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5671,
+    "name": "Twisted Flood Infection VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5673,
+    "name": "Savage Fallen Baron",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5677,
+    "name": "Metroid Larva Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5687,
+    "name": "Mud Void Mote V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5692,
+    "name": "Lord Reaper Elite",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5693,
+    "name": "Ancient Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5695,
+    "name": "Jagged Metroid Hunter Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5697,
+    "name": "Hollow Cosmic Mote Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5705,
+    "name": "Flood Infection Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5716,
+    "name": "Astral Mote V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5738,
+    "name": "Star Worm",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5748,
+    "name": "Decayed Husk Zombie V",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5761,
+    "name": "Weak Void Worm Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5771,
+    "name": "Recon Drone Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5804,
+    "name": "Hive Thrall",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5805,
+    "name": "Frost Husk Zombie III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5837,
+    "name": "Iron Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5851,
+    "name": "Reaper Scout Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5858,
+    "name": "Celestial Geth Sniper",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5865,
+    "name": "Geth Trooper Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5879,
+    "name": "Tempest Hive Wizard",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5888,
+    "name": "Scraggly Scout Drone VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5894,
+    "name": "Eternal Sovereign Fragment",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5899,
+    "name": "Recon Drone II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5904,
+    "name": "Spectral Geth Sniper",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5916,
+    "name": "Hallowed Elite Predator",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5931,
+    "name": "Crude Star Mote I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5946,
+    "name": "Withering Flood Infection",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5947,
+    "name": "Barbed Flood Infection II",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5965,
+    "name": "Mottled Necromorph Leaper IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5966,
+    "name": "Undying Savathun Fragment",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5976,
+    "name": "Scraggly Star Rat Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5980,
+    "name": "Eclipse Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 5983,
+    "name": "Jade Taken Ogre",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6007,
+    "name": "Undying Xivu Arath Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6019,
+    "name": "Necromorph Slasher Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6026,
+    "name": "Apocalypse Oryx Fragment",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6030,
+    "name": "Mud Void Worm Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6033,
+    "name": "Exalted Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6045,
+    "name": "Coiled Metroid Hunter Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6056,
+    "name": "Vex Hobgoblin III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6076,
+    "name": "Sorrow Husk Zombie VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6081,
+    "name": "Scorched Metroid Hunter",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6099,
+    "name": "Yellow Cosmic Grub Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6104,
+    "name": "Gloom Hive Acolyte Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6126,
+    "name": "Thunder Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6134,
+    "name": "Wretched Hive Thrall",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6152,
+    "name": "Soul Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6159,
+    "name": "Sinuous Hive Acolyte VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6162,
+    "name": "Vanguard Vex Hydra",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6169,
+    "name": "Lesser Hive Thrall",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6191,
+    "name": "Death Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6222,
+    "name": "Space Bat Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6255,
+    "name": "Craven Space Pirate Warrior Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6260,
+    "name": "Thorn Collector Drone Minor",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6264,
+    "name": "Obsidian Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6286,
+    "name": "Grave Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6322,
+    "name": "Fallen Dreg Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6366,
+    "name": "Leviathan Vex Hydra",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6424,
+    "name": "Flood Infection",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6439,
+    "name": "Wretched Alien Worm II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6442,
+    "name": "Obsidian Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6444,
+    "name": "Raging Fallen Captain",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6472,
+    "name": "Mottled Geth Trooper Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6483,
+    "name": "Dread Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6484,
+    "name": "Warden Cabal Centurion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6492,
+    "name": "Blood Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6516,
+    "name": "Haze Reaper Scout Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6528,
+    "name": "Void Worm",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6584,
+    "name": "Silver Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6586,
+    "name": "Meager Space Grub Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6590,
+    "name": "Supreme Reaper Leviathan",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6606,
+    "name": "Husk Zombie Awakened",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6612,
+    "name": "Invincible Savathun Fragment",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6613,
+    "name": "Twilight Taken Knight Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6614,
+    "name": "Craven Husk Zombie Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6616,
+    "name": "Giant Hive Wizard",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6626,
+    "name": "Hive Acolyte II",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6631,
+    "name": "Ancient Reaper Leviathan",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6650,
+    "name": "Torn Fallen Dreg Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6655,
+    "name": "Alien Rat Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6657,
+    "name": "Putrid Metroid Larva Tamed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6668,
+    "name": "Swamp Alien Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6676,
+    "name": "Ether Hive Wizard",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6678,
+    "name": "Haggard Scout Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6681,
+    "name": "Blighted Vex Hobgoblin Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6700,
+    "name": "Dusk Vex Hobgoblin Young",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6709,
+    "name": "Tempest Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6717,
+    "name": "Geth Trooper Greater",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6719,
+    "name": "Dread Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6726,
+    "name": "Abyss Predator Hunter",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6734,
+    "name": "Corrupt Space Pirate Warrior Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6744,
+    "name": "Quarried Reaper Scout",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6757,
+    "name": "Grimy Nebula Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6770,
+    "name": "Herald Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6787,
+    "name": "Fell Void Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6788,
+    "name": "Relentless Crota Son Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6793,
+    "name": "Torn Star Mote Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6800,
+    "name": "Lunar Hive Wizard",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6807,
+    "name": "Metroid Larva Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6813,
+    "name": "Noxious Space Pirate Warrior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6815,
+    "name": "Mottled Vex Hobgoblin Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6821,
+    "name": "Weedy Alien Grub I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6825,
+    "name": "Fallen Dreg",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6829,
+    "name": "Vile Star Grub VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6839,
+    "name": "Wrathful Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6852,
+    "name": "Dread Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6866,
+    "name": "Mottled Metroid Larva VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6870,
+    "name": "Ember Necromorph Slasher",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6873,
+    "name": "Spindly Cosmic Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6890,
+    "name": "Jagged Alien Rat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6903,
+    "name": "Brine Flood Infection Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6939,
+    "name": "Nebula Bat Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6964,
+    "name": "Royal Vex Hydra",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6966,
+    "name": "Silver Predator Hunter",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6976,
+    "name": "Ether Taken Ogre",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6980,
+    "name": "Dark Cosmic Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6984,
+    "name": "Primordial Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6985,
+    "name": "Nightmare Hive Wizard",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6993,
+    "name": "Bristled Reaper Scout",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 6995,
+    "name": "Ether Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7005,
+    "name": "Iron Attack Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7025,
+    "name": "Salt Star Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7029,
+    "name": "Space Rat Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7034,
+    "name": "Soul Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7047,
+    "name": "Slime Void Mote Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7048,
+    "name": "Defense Drone Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7052,
+    "name": "Decayed Fallen Vandal Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7054,
+    "name": "Relentless Reaper Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7106,
+    "name": "Singed Flood Infection IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7112,
+    "name": "Legendary Savathun Witch Queen",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7124,
+    "name": "Infinite Akka the Worm Full",
+    "rarity": "Mythic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7144,
+    "name": "Alien Rat Elite",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7152,
+    "name": "Silver Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7163,
+    "name": "Nebula Grub Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7175,
+    "name": "Collector Drone",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7178,
+    "name": "Celestial Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7201,
+    "name": "Death Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7202,
+    "name": "Lesser Star Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7209,
+    "name": "Drowned Flood Infection",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7223,
+    "name": "Necrotic Predator Hunter",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7235,
+    "name": "High Reaper Elite",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7244,
+    "name": "Attack Drone IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7267,
+    "name": "Pitted Reaper Scout Beta",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7269,
+    "name": "Necromorph Leaper Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7279,
+    "name": "Ragged Cosmic Bat Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7331,
+    "name": "Mottled Alien Rat Ancient",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7332,
+    "name": "Quarried Husk Zombie Corrupted",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7335,
+    "name": "Necromorph Leaper Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7349,
+    "name": "Dragon Taken Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7355,
+    "name": "Undying Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7366,
+    "name": "Gnawed Geth Trooper Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7379,
+    "name": "Hallowed Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7406,
+    "name": "Infernal Reaper Capital Scout",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7409,
+    "name": "Haze Cabal Phalanx VII",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7412,
+    "name": "Gaunt Void Grub",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7418,
+    "name": "Abyss Reaper Unit",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7443,
+    "name": "Commander Hive Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7444,
+    "name": "Cursed Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7461,
+    "name": "Apex Elite Predator",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7471,
+    "name": "Raging Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7476,
+    "name": "Thunder Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7520,
+    "name": "Hive Acolyte",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7529,
+    "name": "Salt Nebula Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7541,
+    "name": "Warped Elite Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7550,
+    "name": "Demon Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7556,
+    "name": "Mire Collector Drone",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7564,
+    "name": "Flood Infection Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7569,
+    "name": "Cabal Phalanx Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7570,
+    "name": "Voidborn Sovereign Fragment",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7574,
+    "name": "Demon Fallen Captain",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7601,
+    "name": "Leaking Space Pirate Warrior IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7605,
+    "name": "Alien Rat Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7610,
+    "name": "Abyssal Fallen Baron",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7611,
+    "name": "Star Worm Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7612,
+    "name": "Eternal Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7626,
+    "name": "Undying Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7631,
+    "name": "Dark Worker Drone Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7635,
+    "name": "Tyrant Vex Hydra",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7641,
+    "name": "Dire Astral Mote Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7650,
+    "name": "Reaper Scout",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7665,
+    "name": "Ether Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7677,
+    "name": "Spindly Cabal Legionary VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7683,
+    "name": "Reaper Grot Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7687,
+    "name": "Mottled Fallen Vandal Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7703,
+    "name": "Lanky Star Grub VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7708,
+    "name": "Wandering Reaper Scout Young",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7720,
+    "name": "Putrid Hive Thrall Blessed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7727,
+    "name": "Rune Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7734,
+    "name": "Blazing Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7748,
+    "name": "Drowned Necromorph Slasher VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7753,
+    "name": "Putrid Cabal Legionary",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7759,
+    "name": "Small Void Worm Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7775,
+    "name": "Collector Drone Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7777,
+    "name": "Celestial Taken Ogre",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7782,
+    "name": "Space Mote Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7794,
+    "name": "Hoar Metroid Hunter",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7795,
+    "name": "Slime Cosmic Worm VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7799,
+    "name": "Vex Hobgoblin VII",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7814,
+    "name": "Mottled Void Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7824,
+    "name": "Void Mote Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7825,
+    "name": "Frozen Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7832,
+    "name": "Spectral Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7858,
+    "name": "Forsaken Elite Predator",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7891,
+    "name": "Master Hive Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7894,
+    "name": "Tattered Drone Unit Elite",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7895,
+    "name": "Space Grub V",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7926,
+    "name": "Filthy Alien Grub Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7927,
+    "name": "Zealous Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7951,
+    "name": "Ash Space Mote Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7983,
+    "name": "Crimson Flood Infection Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7985,
+    "name": "Rust Vex Hobgoblin V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 7988,
+    "name": "Colossus Xivu Arath Fragment",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8001,
+    "name": "Plague Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8003,
+    "name": "Scraped Defense Drone Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8004,
+    "name": "Attack Drone Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8017,
+    "name": "Shroud Reaper Scout",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8020,
+    "name": "Warped Fallen Baron",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8025,
+    "name": "Space Pirate Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8049,
+    "name": "Scraggly Star Bat IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8066,
+    "name": "Hive Acolyte VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8072,
+    "name": "Cabal Phalanx VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8075,
+    "name": "Salt Space Grub",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8085,
+    "name": "Titan Oryx Fragment",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8108,
+    "name": "Hollow Vex Goblin Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8113,
+    "name": "Iron Hive Wizard",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8119,
+    "name": "Immortal Crota Son",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8120,
+    "name": "Hollow Void Mote Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8127,
+    "name": "Lichen Reaper Scout",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8131,
+    "name": "Husk Zombie",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8142,
+    "name": "Jagged Void Grub Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8147,
+    "name": "Eternal Reaper Leviathan",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8168,
+    "name": "Infernal Elite Predator",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8177,
+    "name": "Scrawny Alien Worm IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8182,
+    "name": "Wild Metroid Larva Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8183,
+    "name": "Rune Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8188,
+    "name": "Fallen Harbinger Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8189,
+    "name": "Iron Star Rat",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8203,
+    "name": "Timeless The Overmind Eternal",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8215,
+    "name": "Withering Flood Infection I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8247,
+    "name": "Cosmic Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8260,
+    "name": "Twisted Flood Infection",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8263,
+    "name": "Primordial Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8264,
+    "name": "Dim Nebula Grub",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8267,
+    "name": "Nemesis Sovereign Fragment",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8271,
+    "name": "Grim Space Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8279,
+    "name": "Malevolent Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8291,
+    "name": "Lightning Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8292,
+    "name": "Jagged Space Rat I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8317,
+    "name": "Silver Hive Wizard",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8320,
+    "name": "Dire Star Mote",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8325,
+    "name": "Nightmare Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8333,
+    "name": "Archon Crota Son Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8346,
+    "name": "Fallen Vandal",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8359,
+    "name": "Coiled Space Pirate Warrior Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8366,
+    "name": "Twilight Geth Trooper Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8374,
+    "name": "Drone Unit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8390,
+    "name": "Chosen Elite Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8392,
+    "name": "Putrid Void Bat III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8397,
+    "name": "Warden Taken Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8398,
+    "name": "Sludge Nebula Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8404,
+    "name": "Cosmic Rat Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8412,
+    "name": "Relentless Shadow Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8416,
+    "name": "Hoar Reaper Scout",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8443,
+    "name": "Alien Grub",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8449,
+    "name": "Silver Fallen Captain",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8461,
+    "name": "Apex Xenomorph Praetorian",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8463,
+    "name": "Sable Harbinger Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8478,
+    "name": "War Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8502,
+    "name": "Fetid Necromorph Leaper",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8503,
+    "name": "Noxious Fallen Vandal",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8505,
+    "name": "Space Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8520,
+    "name": "Flood Infection Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8534,
+    "name": "Slime Cosmic Worm",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8542,
+    "name": "Corrupted Geth Sniper",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8546,
+    "name": "Cosmic Grub VII",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8550,
+    "name": "Gaunt Fallen Dreg VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8565,
+    "name": "Hellborn Crota Son Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8580,
+    "name": "Weak Vex Goblin",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8594,
+    "name": "Forsaken Reaper Capital Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8601,
+    "name": "Soggy Star Rat Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8606,
+    "name": "Hive Acolyte Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8625,
+    "name": "Hellborn Shadow Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8626,
+    "name": "Giant Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8635,
+    "name": "Juggernaut Hive Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8662,
+    "name": "Apocalypse Harbinger Fragment",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8664,
+    "name": "Thunder Hive Wizard",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8670,
+    "name": "Colossus Oryx Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8676,
+    "name": "Malevolent Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8757,
+    "name": "Withered Hive Thrall",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8759,
+    "name": "Scrawny Vex Goblin",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8772,
+    "name": "Cursed Hive Acolyte V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8798,
+    "name": "Thunder Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8800,
+    "name": "Crystal Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8801,
+    "name": "Putrid Space Bat I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8812,
+    "name": "Jagged Flood Infection II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8814,
+    "name": "Mud Void Mote Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8830,
+    "name": "Salt Scout Drone Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8833,
+    "name": "Cardinal Reaper Elite",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8839,
+    "name": "Corrupted Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8850,
+    "name": "Star Worm Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8872,
+    "name": "Geth Trooper V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8883,
+    "name": "Shadow Alien Bat Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8884,
+    "name": "Lord Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8890,
+    "name": "Infernal Savathun Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8902,
+    "name": "Spindly Void Worm",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8913,
+    "name": "Sunken Nebula Mote Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8914,
+    "name": "Blood Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8920,
+    "name": "Wandering Necromorph Leaper",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8921,
+    "name": "Ancient Harbinger Ancient",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8926,
+    "name": "Space Rat Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8934,
+    "name": "Timeless Savathun True",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8969,
+    "name": "Void Mote Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8984,
+    "name": "Undying Hive Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8985,
+    "name": "Nebula Rat Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 8988,
+    "name": "Immortal Reaper Elite",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9002,
+    "name": "Threadbare Star Grub Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9003,
+    "name": "Thunder Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9034,
+    "name": "Filthy Nebula Rat Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9040,
+    "name": "Cosmic Worm Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9043,
+    "name": "Bone Star Worm",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9053,
+    "name": "Alien Rat Tamed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9054,
+    "name": "Brine Collector Drone VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9056,
+    "name": "Lightning Flood Combat Form",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9062,
+    "name": "Godlike Sea Emperor Leviathan",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9069,
+    "name": "Small Star Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9070,
+    "name": "Obsidian Fallen Captain",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9098,
+    "name": "Rust Cabal Phalanx VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9107,
+    "name": "Death Hive Wizard",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9110,
+    "name": "Eternal Savathun Witch Queen",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9113,
+    "name": "Sable Ghost Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9122,
+    "name": "Infernal Xivu Arath Fragment",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9137,
+    "name": "Dark Taken Psion Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9139,
+    "name": "Void Bat Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9163,
+    "name": "Master Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9176,
+    "name": "Transcendent Crota Son",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9185,
+    "name": "Vile Void Worm",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9193,
+    "name": "Wrath Taken Ogre",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9208,
+    "name": "Wandering Fallen Vandal Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9215,
+    "name": "Omega Taken Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9222,
+    "name": "Gloom Geth Trooper",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9224,
+    "name": "Wretched Space Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9231,
+    "name": "Hive Acolyte V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9262,
+    "name": "Celestial Predator Hunter",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9283,
+    "name": "Threadbare Void Grub VI",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9293,
+    "name": "Eclipse Collector Praetorian",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9308,
+    "name": "Mangy Star Mote Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9317,
+    "name": "Primeval Savathun True",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9328,
+    "name": "Sovereign Elite Predator",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9334,
+    "name": "Gale Metroid Hunter",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9364,
+    "name": "Forsaken Geth Prime",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9377,
+    "name": "Fell Recon Drone Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9387,
+    "name": "Savage Vex Hydra",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9388,
+    "name": "Hollow Necromorph Leaper Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9393,
+    "name": "Blazing Cabal Colossus",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9396,
+    "name": "Space Rat II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9411,
+    "name": "Tar Scout Drone Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9459,
+    "name": "Iron Taken Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9461,
+    "name": "Exalted Elite Predator",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9464,
+    "name": "Astral Hive Wizard",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9475,
+    "name": "Hive Acolyte Greater",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9493,
+    "name": "Fallen Dreg Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9502,
+    "name": "Cabal Phalanx Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9503,
+    "name": "Spectral Xenomorph Drone",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9540,
+    "name": "Geth Trooper Corrupted",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9555,
+    "name": "Grimy Cosmic Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9558,
+    "name": "Dire Attack Drone Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9571,
+    "name": "Mud Star Grub I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9572,
+    "name": "Ascendant Shadow Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9576,
+    "name": "Risen Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9579,
+    "name": "Noxious Husk Zombie",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9588,
+    "name": "Tempest Reaper Unit",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9596,
+    "name": "Weedy Space Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9597,
+    "name": "Elder Cabal Centurion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9601,
+    "name": "Scrawny Star Worm Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9612,
+    "name": "Crystal Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9614,
+    "name": "Immortal Oryx the Taken King",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9623,
+    "name": "Pitted Metroid Hunter",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9633,
+    "name": "Recon Drone",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9666,
+    "name": "Putrid Void Grub Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9691,
+    "name": "Supreme Savathun Witch Queen",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9693,
+    "name": "Sable Reaper Capital Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9705,
+    "name": "Barbed Space Pirate Warrior I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9707,
+    "name": "Fallen Vandal II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9713,
+    "name": "Eternal Harbinger Ancient",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9714,
+    "name": "Twilight Flood Infection",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9730,
+    "name": "Risen Geth Prime",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9769,
+    "name": "Barbed Vex Hobgoblin VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9783,
+    "name": "Hollow Defense Drone I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9784,
+    "name": "Overlord Flood Pure Form",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9788,
+    "name": "Undying Oryx Fragment",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9810,
+    "name": "Ancient Oryx the Taken King",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9813,
+    "name": "Crystal Necromorph Brute",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9824,
+    "name": "Doom Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9827,
+    "name": "Sewer Recon Drone Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9831,
+    "name": "Husk Zombie III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9836,
+    "name": "Ancient Vex Minotaur",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9838,
+    "name": "Warped Reaper Elite",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9873,
+    "name": "Squalid Recon Drone Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9875,
+    "name": "Cosmic Worm",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9881,
+    "name": "Hoar Necromorph Leaper",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9884,
+    "name": "Cabal Phalanx Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9890,
+    "name": "Necrotic Metroid Prime Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9914,
+    "name": "Astral Mote",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9917,
+    "name": "Herald Elite Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9925,
+    "name": "Star Rat Elite",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9931,
+    "name": "Flame Reaper Unit",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9938,
+    "name": "Thorn Necromorph Leaper",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9939,
+    "name": "Astral Mote Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9944,
+    "name": "Gloom Cabal Phalanx VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9953,
+    "name": "Void Rat Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9957,
+    "name": "Giant Xenomorph Warrior",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9964,
+    "name": "Primordial Reaper Leviathan Scout",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  },
+  {
+    "id": 9990,
+    "name": "Squalid Alien Worm Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Void Frontier",
+    "element": "Stellar"
+  }
+]

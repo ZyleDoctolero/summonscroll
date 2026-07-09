@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 2,
+    "name": "Pawn Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 15,
+    "name": "Cave Slime Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 17,
+    "name": "Cataclysm Ancient Green Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 21,
+    "name": "Primordial Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 26,
+    "name": "Elder Arcane Golem",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 57,
+    "name": "Giant Banshee",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 66,
+    "name": "Cataclysm Dracolich Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 67,
+    "name": "Specter",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 80,
+    "name": "Undying Mind Flayer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 105,
+    "name": "Royal Elder Brain",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 106,
+    "name": "Scraggly Chewer",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 114,
+    "name": "Lightning Displacer Beast",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 116,
+    "name": "Spindly Lurker Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 117,
+    "name": "Sorrow Drow",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 125,
+    "name": "Zealous Elder Brain",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 147,
+    "name": "Dragon Medusa",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 151,
+    "name": "Divine Larloch Perfected",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 158,
+    "name": "Salt Goblin",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 163,
+    "name": "Cultist III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 185,
+    "name": "Shard Xorn Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 188,
+    "name": "Wretched Thrall Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 192,
+    "name": "Frost Mimic",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 199,
+    "name": "Ravaged Grell",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 244,
+    "name": "Demon Rust Monster",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 249,
+    "name": "Nemesis Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 263,
+    "name": "Bugbear Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 277,
+    "name": "Grick Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 286,
+    "name": "Weedy Mite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 288,
+    "name": "Overlord Storm Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 298,
+    "name": "Thorn Quaggoth Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 301,
+    "name": "Dim Scout Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 304,
+    "name": "Hellborn Vampire Ancient",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 312,
+    "name": "Mimic II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 333,
+    "name": "Umbral Doppelganger",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 339,
+    "name": "Demon Basilisk",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 342,
+    "name": "Undying Elder Vampire",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 345,
+    "name": "Twisted Drow Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 369,
+    "name": "Filthy Grunt",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 374,
+    "name": "Lightning Gibbering Mouther",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 376,
+    "name": "Otyugh Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 378,
+    "name": "Fetid Mimic V",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 400,
+    "name": "Celestial Mind Flayer",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 411,
+    "name": "Imp Cursed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 419,
+    "name": "Rust Drow Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 424,
+    "name": "Plague Hook Horror",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 428,
+    "name": "Spectral Rust Monster",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 440,
+    "name": "Filthy Straggler IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 447,
+    "name": "Cataclysm Archmage Supreme",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 448,
+    "name": "Torn Stirge Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 456,
+    "name": "Barbed Bugbear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 469,
+    "name": "Swamp Picker Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 494,
+    "name": "Mud Minion Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 495,
+    "name": "Lackey Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 499,
+    "name": "Fallen Death Knight Lord",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 504,
+    "name": "Ancient Sardior Shard",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 518,
+    "name": "Unholy Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 519,
+    "name": "Hollow Derro Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 521,
+    "name": "Bleached Gargoyle VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 527,
+    "name": "Hellborn Ancient Green Dragon",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 528,
+    "name": "Sahuagin Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 532,
+    "name": "Primordial Acererak's Echo",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 533,
+    "name": "Shadowed Medusa",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 552,
+    "name": "Immortal Elder Beholder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 559,
+    "name": "Grick I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 581,
+    "name": "Final Io the Concordant Omega",
+    "rarity": "EX",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 613,
+    "name": "Flame Basilisk",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 635,
+    "name": "Goblin Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 642,
+    "name": "Slime Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 649,
+    "name": "Blood Naga",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 653,
+    "name": "Pale Myconid",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 655,
+    "name": "Fell Rat Alpha",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 677,
+    "name": "Spectral Bone Naga",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 685,
+    "name": "Scourge Vampire",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 689,
+    "name": "Ancient Larloch's Shade",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 703,
+    "name": "Xorn Lesser",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 713,
+    "name": "Spindly Crawler Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 720,
+    "name": "Sacred Revenant",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 736,
+    "name": "Blazing Mind Flayer",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 757,
+    "name": "Grave Mind Flayer",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 758,
+    "name": "Dark Burrower Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 759,
+    "name": "Worker Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 761,
+    "name": "Tattered Forager Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 782,
+    "name": "Picker Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 800,
+    "name": "Undying Hook Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 807,
+    "name": "Grunt Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 813,
+    "name": "Crawler V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 848,
+    "name": "Legendary Sardior Shard",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 856,
+    "name": "Wraith",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 869,
+    "name": "Barbed Harpy Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 890,
+    "name": "Scout Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 901,
+    "name": "Savage Dracolich",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 922,
+    "name": "Imp Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 923,
+    "name": "Mimic IV",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 928,
+    "name": "Giant Rust Monster",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 946,
+    "name": "Blazing Archmage",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 953,
+    "name": "Grimy Scavenger Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 956,
+    "name": "Obsidian Vampire",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 972,
+    "name": "Drowned Quaggoth",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 973,
+    "name": "Dark Goblin IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 975,
+    "name": "Thorn Gargoyle IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 991,
+    "name": "Sludge Orc IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 998,
+    "name": "Cursed Drow Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1016,
+    "name": "Transcendent Vecna Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1029,
+    "name": "Slime Slime Junior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1040,
+    "name": "Silver Vampire",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1053,
+    "name": "Lesser Mite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1065,
+    "name": "Mottled Nibbler Blessed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1077,
+    "name": "Dim Bat Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1083,
+    "name": "Craven Wraith",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1085,
+    "name": "Twilight Beholder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1108,
+    "name": "Mottled Straggler Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1138,
+    "name": "Harpy",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1144,
+    "name": "Pawn Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1146,
+    "name": "Colossus Vampire Ancient",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1154,
+    "name": "Grand Elder Brain",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1159,
+    "name": "Sinuous Svirfneblin",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1161,
+    "name": "Arcane Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1177,
+    "name": "Jade Medusa",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1189,
+    "name": "Warped Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1199,
+    "name": "Xorn",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1217,
+    "name": "Thrall Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1218,
+    "name": "Archon Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1234,
+    "name": "Xorn Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1237,
+    "name": "Svirfneblin Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1243,
+    "name": "Grell Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1252,
+    "name": "Myconid",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1260,
+    "name": "Hoar Quaggoth Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1265,
+    "name": "Prime Cloud Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1268,
+    "name": "Twilight Mimic VI",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1291,
+    "name": "Sovereign Elder Beholder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1299,
+    "name": "Eternal Aboleth",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1306,
+    "name": "Infernal Death Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1310,
+    "name": "Imp",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1350,
+    "name": "Spectral Revenant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1353,
+    "name": "Digger Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1371,
+    "name": "Kenku II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1379,
+    "name": "Sludge Nibbler Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1380,
+    "name": "Mottled Shuffler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1381,
+    "name": "Scorched Kuo-toa",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1396,
+    "name": "Tar Mite Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1413,
+    "name": "Giant Hook Horror",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1435,
+    "name": "Shadowed Lich",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1437,
+    "name": "Lichen Gnoll Omega",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1440,
+    "name": "Arcane Naga",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1443,
+    "name": "Grell Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1454,
+    "name": "Pawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1456,
+    "name": "Siege Arcane Golem",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1463,
+    "name": "Dusk Kenku Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1470,
+    "name": "Sunken Creeper",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1477,
+    "name": "Hungry Specter Senior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1488,
+    "name": "Pale Drone Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1494,
+    "name": "Titan Cloaker",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1514,
+    "name": "Hallowed Iron Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1525,
+    "name": "Gaunt Kobold Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1528,
+    "name": "Sovereign Dracolich",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1536,
+    "name": "Scourge Basilisk",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1542,
+    "name": "Hoar Grick",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1548,
+    "name": "Drowned Wraith VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1560,
+    "name": "Gnawer Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1574,
+    "name": "Creeper VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1580,
+    "name": "Warden Elder Beholder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1593,
+    "name": "Knotted Xorn V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1643,
+    "name": "Bleak Drone Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1664,
+    "name": "Dread Mind Flayer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1670,
+    "name": "Forbidden Lich Lord",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1680,
+    "name": "Mud Centipede VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1701,
+    "name": "Necrotic Bone Naga",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1722,
+    "name": "Giant Mind Flayer",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1730,
+    "name": "Brine Svirfneblin",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1739,
+    "name": "Gnawed Gargoyle VI",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1742,
+    "name": "Rust Imp Prime",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1747,
+    "name": "Grunt Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1803,
+    "name": "Sacred Basilisk",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1820,
+    "name": "Herald Elder Vampire",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1828,
+    "name": "Imp IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1832,
+    "name": "Blighted Troll Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1833,
+    "name": "Colossus Archmage Supreme",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1844,
+    "name": "Twisted Lizardfolk Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1881,
+    "name": "Quaggoth Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1888,
+    "name": "Forbidden Ancient Black Dragon",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1900,
+    "name": "Necrotic Vampire",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1905,
+    "name": "Grick II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1917,
+    "name": "Silver Roper",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1927,
+    "name": "Threadbare Goblin",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1946,
+    "name": "Dread Ancient White Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1951,
+    "name": "Snake",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 1979,
+    "name": "Mud Mite Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2013,
+    "name": "Scorched Doppelganger Awakened",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2028,
+    "name": "Bone Beetle Cursed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2030,
+    "name": "Bugbear I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2031,
+    "name": "Unholy Storm Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2035,
+    "name": "Frost Sahuagin II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2037,
+    "name": "Sahuagin Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2038,
+    "name": "Coiled Troglodyte V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2075,
+    "name": "Crowned Arcane Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2081,
+    "name": "Worm Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2096,
+    "name": "Champion Cloud Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2097,
+    "name": "Titan Ancient Red Dragon",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2106,
+    "name": "Blood Archmage",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2114,
+    "name": "Infernal Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2144,
+    "name": "Lizardfolk Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2151,
+    "name": "Iron Vampire",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2165,
+    "name": "Sacred Banshee",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2173,
+    "name": "Wrathful Ancient Green Dragon",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2176,
+    "name": "Worm Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2178,
+    "name": "Dingy Pawn",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2190,
+    "name": "Gnawed Gargoyle Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2201,
+    "name": "Lightning Beholder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2236,
+    "name": "Twilight Cloaker",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2256,
+    "name": "Dust Spider I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2260,
+    "name": "Mottled Wanderer Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2262,
+    "name": "Sunken Toad Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2266,
+    "name": "Withered Slime Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2280,
+    "name": "Lurker Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2296,
+    "name": "Plague Duergar",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2298,
+    "name": "Abyss Medusa",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2304,
+    "name": "Mud Worm V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2311,
+    "name": "Imp VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2312,
+    "name": "Grim Kobold Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2339,
+    "name": "Hollow Gnawer Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2349,
+    "name": "Ash Forager Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2354,
+    "name": "Crude Drone Omega",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2374,
+    "name": "Murky Scraper",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2376,
+    "name": "Hobgoblin IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2378,
+    "name": "Duergar Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2434,
+    "name": "Dark Guard Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2444,
+    "name": "Ultimate Larloch Perfected",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2452,
+    "name": "Chaos Revenant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2463,
+    "name": "Lesser Spider Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2465,
+    "name": "Wandering Gargoyle Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2468,
+    "name": "Squalid Guard",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2475,
+    "name": "Thunder Cloaker",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2479,
+    "name": "Brine Imp VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2483,
+    "name": "Sunken Skeleton Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2496,
+    "name": "Grave Hook Horror",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2504,
+    "name": "Scratcher V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2510,
+    "name": "Wanderer I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2512,
+    "name": "Wrath Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2514,
+    "name": "Wild Gnoll",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2542,
+    "name": "Mite III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2554,
+    "name": "Celestial Gibbering Mouther",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2562,
+    "name": "Small Grunt Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2579,
+    "name": "Small Skeleton Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2612,
+    "name": "Hallowed Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2614,
+    "name": "Jade Roper",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2617,
+    "name": "Immortal Ashardalon's Claw",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2620,
+    "name": "Master Death Tyrant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2636,
+    "name": "Ash Worm II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2642,
+    "name": "Arcane Gibbering Mouther",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2647,
+    "name": "Infernal Iron Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2652,
+    "name": "Toad IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2655,
+    "name": "Feral Digger Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2657,
+    "name": "Grimy Scout",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2658,
+    "name": "Chaos Vampire",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2659,
+    "name": "Haggard Myconid",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2662,
+    "name": "Ether Roper",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2681,
+    "name": "Coiled Derro",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2682,
+    "name": "Slave",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2689,
+    "name": "Tar Slave Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2691,
+    "name": "Doom Hook Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2696,
+    "name": "Legendary Acererak's Echo",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2697,
+    "name": "Eternal Lich",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2714,
+    "name": "Haggard Spider Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2727,
+    "name": "Doom Banshee",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2747,
+    "name": "Eternal Rakshasa",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2757,
+    "name": "Gaunt Scout Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2761,
+    "name": "Battle Svirfneblin Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2779,
+    "name": "Siege Ancient Red Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2785,
+    "name": "Sludge Scratcher",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2791,
+    "name": "Waning Gnoll Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2799,
+    "name": "Crimson Mimic",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2803,
+    "name": "Scourge Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2805,
+    "name": "Grim Rat Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2816,
+    "name": "Dragon Cloaker",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2822,
+    "name": "Immortal Bahamut Aspect",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2829,
+    "name": "Hungry Svirfneblin Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2834,
+    "name": "Troll Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2863,
+    "name": "Dusk Bugbear Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2873,
+    "name": "Putrid Scout",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2893,
+    "name": "Bleached Wraith Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2907,
+    "name": "Lunar Mind Flayer",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2909,
+    "name": "Infernal Ancient Black Dragon",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2921,
+    "name": "Hobgoblin Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2931,
+    "name": "Corrupted Beholder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2957,
+    "name": "Fetid Drow III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2962,
+    "name": "Grell",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2966,
+    "name": "Umbral Quaggoth Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2982,
+    "name": "High Elder Vampire",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2985,
+    "name": "Forsaken Iron Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2987,
+    "name": "Immortal Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 2996,
+    "name": "Dire Revenant",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3005,
+    "name": "Imp Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3043,
+    "name": "Invincible Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3044,
+    "name": "Noxious Gnoll",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3053,
+    "name": "Shroud Kuo-toa Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3056,
+    "name": "Ragged Creeper",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3079,
+    "name": "Colossus Death Knight Lord",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3080,
+    "name": "Digger",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3088,
+    "name": "Primordial Ancient Red Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3137,
+    "name": "Supreme Vampire Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3140,
+    "name": "War Rust Monster",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3145,
+    "name": "Dread Elder Aboleth",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3158,
+    "name": "Gale Derro V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3178,
+    "name": "Scourge Revenant",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3179,
+    "name": "Obsidian Lizardfolk Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3180,
+    "name": "Wanderer Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3203,
+    "name": "Shroud Otyugh",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3204,
+    "name": "Raging Bone Naga",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3213,
+    "name": "Scarred Drow",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3236,
+    "name": "Eclipse Revenant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3243,
+    "name": "Frozen Aboleth",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3247,
+    "name": "Scout",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3250,
+    "name": "Demon Lich",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3254,
+    "name": "Rat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3256,
+    "name": "Filthy Orc",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3258,
+    "name": "Immortal Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3276,
+    "name": "Night Zombie Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3277,
+    "name": "Crawler Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3316,
+    "name": "Grick",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3332,
+    "name": "Void Vampire",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3334,
+    "name": "Scrawny Myconid Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3336,
+    "name": "Specter Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3338,
+    "name": "Ember Sahuagin Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3341,
+    "name": "Soul Cloaker",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3351,
+    "name": "Dire Crawler Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3354,
+    "name": "Thrall Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3365,
+    "name": "Risen Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3370,
+    "name": "Supreme Bahamut Aspect",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3373,
+    "name": "Demon Bone Naga",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3376,
+    "name": "Torn Worker IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3388,
+    "name": "Picker V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3397,
+    "name": "Dire Death Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3398,
+    "name": "Titan Ancient Green Dragon",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3404,
+    "name": "Scraggly Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3412,
+    "name": "Ghoul",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3418,
+    "name": "Craven Ghoul VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3425,
+    "name": "Nemesis Elder Aboleth",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3430,
+    "name": "Shadow Zombie",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3448,
+    "name": "Salt Cultist Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3452,
+    "name": "Thunder Rust Monster",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3456,
+    "name": "Savage Archmage Lich",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3460,
+    "name": "Grimy Chewer Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3473,
+    "name": "Transcendent Tiamat Avatar",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3485,
+    "name": "Scraped Beetle Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3488,
+    "name": "Scourge Beholder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3497,
+    "name": "Haggard Orc I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3507,
+    "name": "Sludge Skeleton Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3512,
+    "name": "Guard Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3519,
+    "name": "Kobold Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3532,
+    "name": "Jade Hook Horror",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3549,
+    "name": "Ash Worker Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3593,
+    "name": "Iron Bone Naga",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3603,
+    "name": "Sewer Zombie III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3664,
+    "name": "Doom Basilisk",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3685,
+    "name": "Lurker VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3692,
+    "name": "Xorn IV",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3701,
+    "name": "Wrathful Elder Mind Flayer",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3708,
+    "name": "Archon Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3709,
+    "name": "Night Shuffler III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3724,
+    "name": "Coiled Mimic V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3730,
+    "name": "Cultist VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3733,
+    "name": "Toad",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3754,
+    "name": "Meager Goblin Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3764,
+    "name": "Putrid Bat V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3770,
+    "name": "Goblin IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3786,
+    "name": "Wanderer",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3811,
+    "name": "Exalted Elder Vampire",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3820,
+    "name": "Undying Beholder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3828,
+    "name": "Grunt Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3842,
+    "name": "Dread Archmage Supreme",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3843,
+    "name": "Crude Worker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3848,
+    "name": "Fell Spider Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3866,
+    "name": "Soul Rust Monster",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3878,
+    "name": "Scrawny Worker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3881,
+    "name": "Picker Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3885,
+    "name": "Spindly Gnawer II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3894,
+    "name": "Wrath Rust Monster",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3901,
+    "name": "Gaunt Shuffler V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3910,
+    "name": "Otyugh",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3922,
+    "name": "Siege Ancient White Dragon",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3923,
+    "name": "Mythic Ashardalon's Claw",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3925,
+    "name": "Herald Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3936,
+    "name": "Demon Mind Flayer",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3939,
+    "name": "Drowned Drow",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3956,
+    "name": "Withering Doppelganger Beta",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3964,
+    "name": "Singed Duergar",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3968,
+    "name": "Wraith Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3969,
+    "name": "Tempest Rust Monster",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3974,
+    "name": "Weedy Bat I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3993,
+    "name": "Minion Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 3999,
+    "name": "Thrall Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4016,
+    "name": "Torn Zombie Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4021,
+    "name": "Scourge Medusa",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4027,
+    "name": "Leaking Kuo-toa",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4072,
+    "name": "Shuffler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4074,
+    "name": "Gnawed Quaggoth",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4077,
+    "name": "Champion Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4083,
+    "name": "Infernal Elder Aboleth",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4098,
+    "name": "Quarried Xorn Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4101,
+    "name": "Arcane Mind Flayer",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4116,
+    "name": "Lanky Lurker Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4122,
+    "name": "Relentless Death Knight Lord",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4130,
+    "name": "Slime Gnawer Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4135,
+    "name": "Infernal Cloaker",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4146,
+    "name": "Hoar Bugbear Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4156,
+    "name": "Doppelganger VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4164,
+    "name": "Wandering Wight Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4175,
+    "name": "Gnawer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4198,
+    "name": "Salt Gnawer Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4223,
+    "name": "Tyrant Elder Vampire",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4236,
+    "name": "Twilight Wight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4245,
+    "name": "Scraggly Rat Cursed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4252,
+    "name": "Howling Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4254,
+    "name": "Craven Svirfneblin Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4262,
+    "name": "Withering Wraith",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4265,
+    "name": "Ultimate Tiamat Reborn",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4268,
+    "name": "Cardinal Arcane Golem",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4278,
+    "name": "Unholy Cloud Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4285,
+    "name": "Sable Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4286,
+    "name": "Knotted Sahuagin Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4295,
+    "name": "Wild Goblin Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4301,
+    "name": "Gaunt Drone Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4322,
+    "name": "Pale Hobgoblin IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4326,
+    "name": "Necrotic Hook Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4329,
+    "name": "Kuo-toa Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4334,
+    "name": "Vile Goblin Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4335,
+    "name": "Soggy Kobold Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4350,
+    "name": "Forager IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4376,
+    "name": "Grave Vampire",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4381,
+    "name": "Ash Creeper",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4383,
+    "name": "Iron Archmage Lich",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4386,
+    "name": "Squalid Toad V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4387,
+    "name": "Immortal Vecna Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4395,
+    "name": "Flame Rakshasa",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4403,
+    "name": "Mottled Grunt",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4418,
+    "name": "Absolute Tiamat Avatar",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4431,
+    "name": "Crude Digger Greater",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4460,
+    "name": "Tempest Medusa",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4476,
+    "name": "Lizardfolk",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4479,
+    "name": "Sahuagin Greater",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4483,
+    "name": "Spider IV",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4506,
+    "name": "Shadow Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4514,
+    "name": "Wrath Vampire",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4516,
+    "name": "Cursed Roper",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4517,
+    "name": "Salt Bat Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4525,
+    "name": "Ogre",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4530,
+    "name": "Crystal Mind Flayer",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4549,
+    "name": "Void Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4568,
+    "name": "Twilight Aboleth",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4570,
+    "name": "Pawn Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4572,
+    "name": "Vile Creeper Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4573,
+    "name": "Cursed Troglodyte Feral",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4580,
+    "name": "Thrall VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4585,
+    "name": "Forager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4595,
+    "name": "Quarried Otyugh",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4597,
+    "name": "Specter VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4601,
+    "name": "Chaos Aboleth",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4614,
+    "name": "Infernal Elder Vampire",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4622,
+    "name": "Lightning Banshee",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4634,
+    "name": "Cursed Rakshasa",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4644,
+    "name": "Dust Rat Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4651,
+    "name": "Undying Cloaker",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4653,
+    "name": "Abyss Naga",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4657,
+    "name": "Thunder Lich",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4663,
+    "name": "Toad Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4682,
+    "name": "Shroud Troglodyte Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4704,
+    "name": "Nibbler Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4715,
+    "name": "Craven Derro II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4733,
+    "name": "Drone Awakened",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4739,
+    "name": "Sorrow Wraith",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4745,
+    "name": "Legendary Tiamat Avatar",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4749,
+    "name": "Dread Hook Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4756,
+    "name": "Shroud Harpy Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4757,
+    "name": "Dusk Quaggoth III",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4773,
+    "name": "Eclipse Rust Monster",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4775,
+    "name": "Straggler Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4777,
+    "name": "Cursed Aboleth",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4792,
+    "name": "Obsidian Ghoul Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4794,
+    "name": "Runed Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4803,
+    "name": "Fetid Troglodyte Prime",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4844,
+    "name": "Rotten Bat II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4851,
+    "name": "Dingy Worker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4854,
+    "name": "Corrupt Bugbear III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4861,
+    "name": "Sovereign Iron Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4870,
+    "name": "Picker Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4874,
+    "name": "Mud Stirge Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4877,
+    "name": "Swamp Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4887,
+    "name": "Eternal Acererak's Echo",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4902,
+    "name": "Leviathan Death Tyrant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4923,
+    "name": "Blazing Banshee",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4953,
+    "name": "Zealous Cloud Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4966,
+    "name": "Rat Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4970,
+    "name": "Frozen Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4971,
+    "name": "Feral Guard Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4979,
+    "name": "Scavenger II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 4996,
+    "name": "Scraper Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5000,
+    "name": "Infernal Vampire Ancient",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5003,
+    "name": "Shuffler Young",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5007,
+    "name": "Meager Zombie I",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5014,
+    "name": "Ogre Young",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5020,
+    "name": "Putrid Chewer Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5022,
+    "name": "Lesser Lackey",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5040,
+    "name": "Pack Scavenger Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5045,
+    "name": "Bone Pawn",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5062,
+    "name": "Celestial Banshee",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5076,
+    "name": "Gnoll Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5093,
+    "name": "Nightmare Lich",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5096,
+    "name": "Dim Orc VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5103,
+    "name": "Supreme Sardior Shard",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5109,
+    "name": "Sable Vampire Ancient",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5111,
+    "name": "Mud Straggler Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5113,
+    "name": "Dingy Straggler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5118,
+    "name": "Chosen Vampire Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5121,
+    "name": "Corrupted Cloaker",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5122,
+    "name": "Worm Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5126,
+    "name": "Zombie Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5128,
+    "name": "Herald Death Tyrant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5152,
+    "name": "Obsidian Banshee",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5153,
+    "name": "Drow",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5159,
+    "name": "Archon Iron Golem",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5162,
+    "name": "Murky Slime V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5168,
+    "name": "Warlord Elder Beholder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5179,
+    "name": "Bugbear Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5197,
+    "name": "Brine Troglodyte",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5208,
+    "name": "Celestial Basilisk",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5210,
+    "name": "Centipede Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5219,
+    "name": "Gargoyle Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5225,
+    "name": "Forsaken Ancient Red Dragon",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5234,
+    "name": "Weedy Gnawer Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5237,
+    "name": "Bleached Specter II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5250,
+    "name": "Wrath Banshee",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5268,
+    "name": "Nibbler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5276,
+    "name": "Gnoll IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5282,
+    "name": "Pale Snake",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5288,
+    "name": "Zombie",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5289,
+    "name": "Dominant Dracolich",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5292,
+    "name": "Abyss Displacer Beast",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5309,
+    "name": "Chaos Mind Flayer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5320,
+    "name": "Mangy Grunt Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5322,
+    "name": "Apocalypse Death Knight Lord",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5330,
+    "name": "Decayed Specter",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5332,
+    "name": "Murky Digger",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5343,
+    "name": "War Bone Naga",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5351,
+    "name": "Hollow Cultist Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5373,
+    "name": "Death Beholder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5385,
+    "name": "Invincible Ancient Red Dragon",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5397,
+    "name": "Iron Digger I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5401,
+    "name": "Threadbare Thrall Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5407,
+    "name": "Savage Storm Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5409,
+    "name": "Filthy Spider Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5410,
+    "name": "Nightmare Hook Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5411,
+    "name": "Ghoul Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5418,
+    "name": "Lackey I",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5433,
+    "name": "Slime III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5444,
+    "name": "Bone Cultist",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5450,
+    "name": "Quaggoth Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5473,
+    "name": "Pack Picker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5484,
+    "name": "Lizardfolk Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5489,
+    "name": "Barbed Grell Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5492,
+    "name": "Origin Tiamat Five-Queen Ultimate",
+    "rarity": "EX",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5504,
+    "name": "Gaunt Toad IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5512,
+    "name": "Voidborn Death Knight Lord",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5547,
+    "name": "Thunder Death Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5559,
+    "name": "Grave Gibbering Mouther",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5568,
+    "name": "Blood Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5585,
+    "name": "Quaggoth Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5631,
+    "name": "Mottled Kobold Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5675,
+    "name": "Archon Arcane Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5723,
+    "name": "Scraped Goblin Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5724,
+    "name": "Cursed Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5728,
+    "name": "Crystal Medusa",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5737,
+    "name": "Elder Death Tyrant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5758,
+    "name": "Bleached Specter",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5779,
+    "name": "Small Nibbler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5787,
+    "name": "Ragged Toad Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5789,
+    "name": "Drow Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5792,
+    "name": "Ragged Wanderer",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5800,
+    "name": "Commander Iron Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5806,
+    "name": "Giant Bone Naga",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5809,
+    "name": "Barbed Svirfneblin I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5826,
+    "name": "Rust Grick Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5829,
+    "name": "Plague Naga",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5838,
+    "name": "Immortal Death Tyrant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5840,
+    "name": "Singed Ogre Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5844,
+    "name": "Bristled Troll I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5863,
+    "name": "Runed Elder Vampire",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5868,
+    "name": "Mythic Io's Voice",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5870,
+    "name": "Eternal Basilisk",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5878,
+    "name": "Abyssal Elder Beholder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5906,
+    "name": "Mottled Gargoyle Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5911,
+    "name": "Sorrow Svirfneblin",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5919,
+    "name": "Forbidden Ancient White Dragon",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5932,
+    "name": "Grimy Beetle Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5971,
+    "name": "Gale Troglodyte I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5977,
+    "name": "Crimson Kenku Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 5988,
+    "name": "Prime Storm Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6000,
+    "name": "Transcendent Larloch's Shade",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6016,
+    "name": "Grick VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6017,
+    "name": "Voidborn Ancient Red Dragon",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6021,
+    "name": "Eternal Lich Lord",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6025,
+    "name": "Wandering Drow",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6042,
+    "name": "Crawler Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6050,
+    "name": "Scraped Scout Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6061,
+    "name": "Svirfneblin Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6073,
+    "name": "Hungry Grick Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6100,
+    "name": "Wrath Naga",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6101,
+    "name": "Sludge Spider II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6109,
+    "name": "Obsidian Cloaker",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6110,
+    "name": "Beetle Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6125,
+    "name": "Hallowed Cloud Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6129,
+    "name": "Torn Spider Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6135,
+    "name": "Scourge Archmage",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6137,
+    "name": "Bone Gnawer VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6138,
+    "name": "Eternal Dragotha's Remnant",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6144,
+    "name": "Dominant Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6200,
+    "name": "Shadow Thrall Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6212,
+    "name": "Nightmare Beholder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6241,
+    "name": "Vile Worm Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6244,
+    "name": "Abyss Rakshasa",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6248,
+    "name": "Cursed Mimic V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6257,
+    "name": "Dark Rat Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6275,
+    "name": "Colossus Ancient Black Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6277,
+    "name": "Derro Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6282,
+    "name": "Obsidian Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6294,
+    "name": "Gargoyle Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6299,
+    "name": "Scorched Doppelganger Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6307,
+    "name": "Cardinal Cloud Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6320,
+    "name": "Apex Archmage Lich",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6323,
+    "name": "Leviathan Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6324,
+    "name": "Pack Burrower IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6342,
+    "name": "Dominant Elder Vampire",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6382,
+    "name": "Tar Scout",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6403,
+    "name": "Dark Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6408,
+    "name": "Chewer Corrupted",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6410,
+    "name": "Squalid Chewer",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6412,
+    "name": "Plague Lizardfolk Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6428,
+    "name": "Eternal Revenant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6431,
+    "name": "Grave Cloaker",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6437,
+    "name": "Mire Kuo-toa",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6440,
+    "name": "Dread Bone Naga",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6450,
+    "name": "Feral Digger",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6468,
+    "name": "Svirfneblin I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6475,
+    "name": "Scrawny Hobgoblin Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6479,
+    "name": "Corrupt Sahuagin",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6488,
+    "name": "Titan Elder Mind Flayer",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6500,
+    "name": "Doom Rust Monster",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6508,
+    "name": "Chewer Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6509,
+    "name": "Gargoyle",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6526,
+    "name": "True Bahamut Eternal",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6531,
+    "name": "Coiled Troglodyte",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6545,
+    "name": "Kobold Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6546,
+    "name": "Beetle",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6547,
+    "name": "Ancient Vampire",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6553,
+    "name": "Minion",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6556,
+    "name": "Juggernaut Vampire Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6579,
+    "name": "Kenku Feral",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6634,
+    "name": "Wraith Major",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6659,
+    "name": "Abyss Roper",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6660,
+    "name": "Dragon Gibbering Mouther",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6692,
+    "name": "Gnawer III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6696,
+    "name": "Thrall",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6703,
+    "name": "Godlike Acererak's Echo",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6704,
+    "name": "Gnoll Major",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6711,
+    "name": "Hollow Troll Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6714,
+    "name": "Svirfneblin",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6715,
+    "name": "Herald Elder Beholder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6722,
+    "name": "Juggernaut Elder Brain",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6727,
+    "name": "Xorn II",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6743,
+    "name": "Burrower Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6760,
+    "name": "Demon Displacer Beast",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6761,
+    "name": "Dusk Gnoll I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6762,
+    "name": "Swamp Lackey Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6774,
+    "name": "Juggernaut Iron Golem",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6784,
+    "name": "War Aboleth",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6797,
+    "name": "Doom Mind Flayer",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6830,
+    "name": "Jagged Sahuagin",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6831,
+    "name": "Silver Hook Horror",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6874,
+    "name": "Commander Elder Brain",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6875,
+    "name": "Grimy Cultist Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6917,
+    "name": "Archon Archmage Supreme",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6925,
+    "name": "Apocalypse Ancient Black Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6927,
+    "name": "Mud Beetle Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6934,
+    "name": "Rotten Scratcher",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6938,
+    "name": "Minion Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6946,
+    "name": "Snake I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6954,
+    "name": "Apocalypse Elder Aboleth",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6971,
+    "name": "Ancient Ashardalon's Claw",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6982,
+    "name": "Omega Arcane Golem",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6989,
+    "name": "Grave Displacer Beast",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6991,
+    "name": "Crude Wanderer",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 6998,
+    "name": "Iron Cloud Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7012,
+    "name": "Bat Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7040,
+    "name": "Mire Kuo-toa Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7042,
+    "name": "Elder Cloud Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7063,
+    "name": "Gnoll Tamed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7083,
+    "name": "Rotten Scout",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7086,
+    "name": "Scratcher",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7094,
+    "name": "Undying Arcane Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7102,
+    "name": "Lightning Medusa",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7119,
+    "name": "Twilight Grell",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7123,
+    "name": "Quaggoth Major",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7132,
+    "name": "Dark Burrower Elite",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7133,
+    "name": "Grimy Snake I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7168,
+    "name": "Storm Ghoul IV",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7177,
+    "name": "Obsidian Naga",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7181,
+    "name": "Battle Kuo-toa Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7190,
+    "name": "Coiled Grick",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7196,
+    "name": "Pawn Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7210,
+    "name": "Twilight Grick",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7216,
+    "name": "Sludge Hobgoblin Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7229,
+    "name": "Weak Myconid VI",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7232,
+    "name": "Straggler Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7239,
+    "name": "Dire Gnawer Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7243,
+    "name": "Dim Kobold",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7262,
+    "name": "Shuffler Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7265,
+    "name": "Scorched Lizardfolk Young",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7286,
+    "name": "Zealous Elder Vampire",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7291,
+    "name": "Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7306,
+    "name": "Demon Hook Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7323,
+    "name": "Bristled Mimic II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7329,
+    "name": "Scourge Bone Naga",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7343,
+    "name": "Doom Lich",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7351,
+    "name": "Gnoll Senior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7393,
+    "name": "Umbral Derro",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7397,
+    "name": "Scraggly Grunt",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7401,
+    "name": "Night Slime Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7404,
+    "name": "Gnoll",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7414,
+    "name": "Crystal Displacer Beast",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7428,
+    "name": "Lurker IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7438,
+    "name": "Chaos Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7439,
+    "name": "Ether Displacer Beast",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7445,
+    "name": "Wrathful Dracolich Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7446,
+    "name": "Murk Specter Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7451,
+    "name": "Lizardfolk Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7457,
+    "name": "Threadbare Creeper V",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7464,
+    "name": "Bleak Gnoll Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7472,
+    "name": "Scout Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7478,
+    "name": "Stirge Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7492,
+    "name": "Absolute Ashardalon's Claw",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7495,
+    "name": "Venom Harpy",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7499,
+    "name": "Wandering Gargoyle VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7504,
+    "name": "Siege Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7511,
+    "name": "Rotten Myconid IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7517,
+    "name": "Rotten Orc IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7528,
+    "name": "Duergar Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7534,
+    "name": "Small Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7546,
+    "name": "Burrower",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7555,
+    "name": "Lackey Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7567,
+    "name": "Sunken Snake",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7585,
+    "name": "Lesser Creeper Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7587,
+    "name": "Pitted Doppelganger",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7588,
+    "name": "Brine Troglodyte Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7590,
+    "name": "Eternal Io's Voice",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7600,
+    "name": "Blazing Beholder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7615,
+    "name": "Torn Nibbler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7619,
+    "name": "Swamp Picker",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7623,
+    "name": "Fetid Gnoll Young",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7663,
+    "name": "Titan Flameskull",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7671,
+    "name": "Zealous Vampire Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7689,
+    "name": "Mire Wraith",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7696,
+    "name": "Shard Sahuagin V",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7698,
+    "name": "Sludge Forager II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7710,
+    "name": "Spectral Lich",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7714,
+    "name": "Wight VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7724,
+    "name": "Ether Rakshasa",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7749,
+    "name": "Prime Death Tyrant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7754,
+    "name": "Waning Grell",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7778,
+    "name": "Centipede Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7781,
+    "name": "Godlike Vecna Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7808,
+    "name": "Lord Elder Beholder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7822,
+    "name": "Small Spider Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7823,
+    "name": "Grunt",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7828,
+    "name": "Voidborn Elder Mind Flayer",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7836,
+    "name": "Withered Mite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7840,
+    "name": "Haggard Mite Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7841,
+    "name": "Stirge Lesser",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7843,
+    "name": "Eternal Mind Flayer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7847,
+    "name": "Divine Io Primordial",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7850,
+    "name": "Singed Imp",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7852,
+    "name": "Warden Iron Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7872,
+    "name": "Nightmare Flameskull",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7875,
+    "name": "Corrupt Otyugh",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7876,
+    "name": "Squalid Shuffler",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7879,
+    "name": "Jade Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7884,
+    "name": "Kobold Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7890,
+    "name": "Forbidden Dracolich Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7896,
+    "name": "Duergar Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7920,
+    "name": "Murk Kuo-toa",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7921,
+    "name": "Shroud Quaggoth",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7925,
+    "name": "Otyugh V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7928,
+    "name": "Crag Shuffler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7945,
+    "name": "Nightmare Naga",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7950,
+    "name": "Gnawed Otyugh Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7962,
+    "name": "Gaunt Minion Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7972,
+    "name": "Raging Mummy Lord",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7974,
+    "name": "Drone Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7978,
+    "name": "Ravaged Otyugh",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7980,
+    "name": "Scourge Hook Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 7995,
+    "name": "Zealous Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8015,
+    "name": "Mire Ogre",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8039,
+    "name": "Derro Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8062,
+    "name": "Troglodyte Blessed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8077,
+    "name": "Jagged Doppelganger VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8083,
+    "name": "Ancient Aboleth",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8084,
+    "name": "Gnoll Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8088,
+    "name": "Wretched Straggler",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8095,
+    "name": "Quarried Specter",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8101,
+    "name": "Centipede Young",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8109,
+    "name": "Chaos Banshee",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8115,
+    "name": "Derro Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8129,
+    "name": "Scraper",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8156,
+    "name": "Commander Dracolich",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8157,
+    "name": "Slave Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8161,
+    "name": "Plague Beholder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8162,
+    "name": "Jagged Svirfneblin IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8180,
+    "name": "Cardinal Elder Vampire",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8198,
+    "name": "Ether Basilisk",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8199,
+    "name": "Cataclysm Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8210,
+    "name": "Barbed Imp Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8217,
+    "name": "Sinuous Kuo-toa Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8228,
+    "name": "Invincible Ancient Green Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8237,
+    "name": "Beetle Prime",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8240,
+    "name": "Pale Drone",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8244,
+    "name": "Risen Death Tyrant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8258,
+    "name": "Sewer Cultist V",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8289,
+    "name": "Doom Mummy Lord",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8301,
+    "name": "Mite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8303,
+    "name": "Supreme Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8327,
+    "name": "Legendary Dragotha's Remnant",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8344,
+    "name": "Death Hook Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8354,
+    "name": "Skeleton V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8371,
+    "name": "Jagged Thrall",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8372,
+    "name": "Primordial Revenant",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8386,
+    "name": "Mire Quaggoth",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8415,
+    "name": "Archon Dracolich Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8426,
+    "name": "Twisted Duergar Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8430,
+    "name": "Frost Wraith VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8435,
+    "name": "Primordial Io's Voice",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8447,
+    "name": "Cultist Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8450,
+    "name": "Sinuous Wight Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8452,
+    "name": "Iron Wanderer Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8475,
+    "name": "Jagged Bugbear Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8485,
+    "name": "Ascendant Vampire Ancient",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8489,
+    "name": "Ghoul Young",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8497,
+    "name": "Astral Flameskull",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8509,
+    "name": "Stirge",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8524,
+    "name": "Nemesis Archmage Supreme",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8544,
+    "name": "Chaos Displacer Beast",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8555,
+    "name": "Crag Guard Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8566,
+    "name": "Orc",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8567,
+    "name": "Scratcher Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8605,
+    "name": "Dread Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8613,
+    "name": "Raging Flameskull",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8648,
+    "name": "Astral Cloaker",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8651,
+    "name": "True Acererak Supreme",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8661,
+    "name": "Grimy Chewer Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8677,
+    "name": "Doppelganger",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8678,
+    "name": "Abyss Mind Flayer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8680,
+    "name": "Plague Displacer Beast",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8681,
+    "name": "Goblin Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8682,
+    "name": "Prime Vampire Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8683,
+    "name": "Shuffler Greater",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8692,
+    "name": "Ragged Hobgoblin Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8695,
+    "name": "Cardinal Iron Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8703,
+    "name": "Sinuous Wight",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8704,
+    "name": "Blighted Sahuagin Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8710,
+    "name": "Silver Death Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8712,
+    "name": "Filthy Rat III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8720,
+    "name": "Relentless Elder Mind Flayer",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8723,
+    "name": "Noxious Ghoul",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8737,
+    "name": "Night Scraper IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8741,
+    "name": "Withering Drow",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8744,
+    "name": "Hollow Xorn Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8747,
+    "name": "Shroud Xorn",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8754,
+    "name": "Crimson Otyugh",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8758,
+    "name": "Primeval Bahamut Eternal",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8776,
+    "name": "Giant Roper",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8781,
+    "name": "Swamp Orc",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8782,
+    "name": "Progenitor Elder Vampire",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8786,
+    "name": "Obsidian Sahuagin",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8790,
+    "name": "Sewer Pawn Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8796,
+    "name": "Cataclysm Elder Mind Flayer",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8803,
+    "name": "Plague Troll Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8816,
+    "name": "Celestial Bahamut Eternal",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8821,
+    "name": "Torn Straggler VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8823,
+    "name": "Waning Kenku VI",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8844,
+    "name": "Infernal Ancient White Dragon",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8849,
+    "name": "Doppelganger Corrupted",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8862,
+    "name": "Pack Guard II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8863,
+    "name": "Weak Lackey VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8866,
+    "name": "Bleached Wight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8886,
+    "name": "Shadow Kobold",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8899,
+    "name": "Scrawny Spider Junior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8901,
+    "name": "Savage Death Tyrant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8916,
+    "name": "Soggy Nibbler",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8922,
+    "name": "Mythic Dragotha's Remnant",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8928,
+    "name": "Shroud Svirfneblin III",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8943,
+    "name": "Celestial Flameskull",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8948,
+    "name": "Lizardfolk Elite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8950,
+    "name": "Commander Archmage Lich",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8981,
+    "name": "Wretched Stirge",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8986,
+    "name": "Chosen Archmage Lich",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 8999,
+    "name": "Svirfneblin Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9031,
+    "name": "Grimy Nibbler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9057,
+    "name": "Sahuagin Alpha",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9073,
+    "name": "Supreme Arcane Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9086,
+    "name": "Corrupt Bugbear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9089,
+    "name": "Pack Forager Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9092,
+    "name": "Digger Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9100,
+    "name": "Filthy Scout Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9103,
+    "name": "Pack Spider Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9105,
+    "name": "Jade Flameskull",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9116,
+    "name": "Rust Kuo-toa Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9134,
+    "name": "Weak Shuffler Tamed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9146,
+    "name": "Flame Displacer Beast",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9149,
+    "name": "Shuffler II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9162,
+    "name": "Quaggoth Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9164,
+    "name": "Spindly Scout",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9189,
+    "name": "Overlord Death Tyrant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9226,
+    "name": "Relentless Ancient Blue Dragon",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9233,
+    "name": "Kenku Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9234,
+    "name": "Feral Creeper Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9242,
+    "name": "Gloom Gnoll Cursed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9255,
+    "name": "Death Displacer Beast",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9259,
+    "name": "Hollow Ogre",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9266,
+    "name": "Slave Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9269,
+    "name": "Pawn Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9273,
+    "name": "Lord Archmage Lich",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9279,
+    "name": "Weedy Goblin Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9330,
+    "name": "Death Mummy Lord",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9342,
+    "name": "Bristled Quaggoth Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9347,
+    "name": "Forsaken Storm Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9354,
+    "name": "Quaggoth",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9374,
+    "name": "Picker",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9375,
+    "name": "Scraggly Stirge Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9378,
+    "name": "Jagged Harpy",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9382,
+    "name": "Chaos Cloaker",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9392,
+    "name": "Meager Digger",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9397,
+    "name": "Vanguard Iron Golem",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9412,
+    "name": "Omega Elder Vampire",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9417,
+    "name": "Squalid Scavenger Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9423,
+    "name": "Sahuagin I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9427,
+    "name": "Celestial Vampire",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9429,
+    "name": "Mite Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9439,
+    "name": "Meager Worker Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9449,
+    "name": "Undying Shadow Dragon",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9450,
+    "name": "Knotted Mimic Corrupted",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9453,
+    "name": "Iron Hobgoblin",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9454,
+    "name": "Infernal Mummy Lord",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9462,
+    "name": "Slime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9477,
+    "name": "Eternal Vampire Ancient",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9478,
+    "name": "Cardinal Dracolich",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9497,
+    "name": "Ether Mind Flayer",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9527,
+    "name": "Shuffler Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9529,
+    "name": "Malevolent Mummy Lord",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9534,
+    "name": "Forsaken Elder Beholder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9535,
+    "name": "Gargoyle III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9537,
+    "name": "Pack Pawn V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9539,
+    "name": "Torn Scraper",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9546,
+    "name": "Overlord Arcane Golem",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9551,
+    "name": "Shadowed Vampire",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9562,
+    "name": "Herald Cloud Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9577,
+    "name": "Centipede Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9583,
+    "name": "Plague Grick Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9586,
+    "name": "Godlike Dragotha's Remnant",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9590,
+    "name": "Dragon Displacer Beast",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9608,
+    "name": "Iron Gibbering Mouther",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9611,
+    "name": "Godlike Bahamut Aspect",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9618,
+    "name": "Scraggly Digger Cursed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9621,
+    "name": "Wight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9645,
+    "name": "Primordial Elder Mind Flayer",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9651,
+    "name": "Grim Scraper Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9657,
+    "name": "Grunt II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9668,
+    "name": "Chaos Flameskull",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9672,
+    "name": "Fell Zombie",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9681,
+    "name": "Decayed Grick",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9690,
+    "name": "Pale Wanderer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9741,
+    "name": "Drowned Ogre Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9751,
+    "name": "Straggler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9761,
+    "name": "Wild Grunt",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9770,
+    "name": "Torn Burrower Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9797,
+    "name": "Hollow Kobold Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9805,
+    "name": "Bleak Scout",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9819,
+    "name": "Slime Goblin",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9826,
+    "name": "Iron Revenant",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9850,
+    "name": "Chaos Naga",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9861,
+    "name": "Lunar Roper",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9874,
+    "name": "Primordial Bahamut Aspect",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9876,
+    "name": "Crystal Rakshasa",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9911,
+    "name": "Vanguard Death Tyrant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9922,
+    "name": "Weedy Straggler Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9932,
+    "name": "Chewer Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9940,
+    "name": "Siege Death Tyrant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9945,
+    "name": "Dust Gnawer Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9955,
+    "name": "Wretched Forager VII",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9961,
+    "name": "Dusk Gargoyle Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9962,
+    "name": "Giant Basilisk",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9963,
+    "name": "Cursed Otyugh Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9977,
+    "name": "Arcane Bone Naga",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  },
+  {
+    "id": 9994,
+    "name": "Blood Vampire",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Ancient Vaults",
+    "element": "Arcane"
+  }
+]

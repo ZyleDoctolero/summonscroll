@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 3,
+    "name": "Knotted Vampire Thrall Awakened",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 28,
+    "name": "Dim Cave Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 46,
+    "name": "Scraped Zombie Farmer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 73,
+    "name": "Twisted Banshee Wail",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 75,
+    "name": "Brine Apparition",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 94,
+    "name": "Torn Zombie Farmer Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 111,
+    "name": "Gloom Banshee Sob",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 112,
+    "name": "Haunted Doll",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 123,
+    "name": "Banshee Moan VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 127,
+    "name": "Absolute Hanami Forest Arms",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 150,
+    "name": "Lesser Cursed Villager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 159,
+    "name": "Eclipse Iron Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 161,
+    "name": "Mangy Crypt Ghoul Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 170,
+    "name": "Grim Wisp",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 191,
+    "name": "Overlord Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 206,
+    "name": "Cursed Night Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 216,
+    "name": "Storm Werewolf Scout Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 225,
+    "name": "Werewolf Minor Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 229,
+    "name": "Squalid Faint Spirit Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 230,
+    "name": "Supreme Banshee Matron",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 237,
+    "name": "Savage Shadow Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 246,
+    "name": "Venom Werewolf Minor Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 254,
+    "name": "Exalted Shadow Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 255,
+    "name": "Mire Hag",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 256,
+    "name": "Corrupted Grave Hag Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 266,
+    "name": "Specter Blessed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 270,
+    "name": "Warlord Shadow Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 279,
+    "name": "Primordial Zommari Rureaux",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 284,
+    "name": "Grave Hag Minor V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 314,
+    "name": "Abyssal Elder Vampire",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 330,
+    "name": "Scraggly Haunted Weapon",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 331,
+    "name": "Soggy Cave Ghoul Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 332,
+    "name": "Dusk Wisp Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 335,
+    "name": "Tattered Cave Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 352,
+    "name": "Scraped Haunted Doll Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 354,
+    "name": "Bleached Banshee Shriek VI",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 368,
+    "name": "Ragged Haunted Weapon Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 417,
+    "name": "Timeless Ulquiorra Fragment",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 421,
+    "name": "Decayed Grave Hag Minor IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 433,
+    "name": "Ancient Walter Bernhard",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 438,
+    "name": "Vampire Spawn Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 470,
+    "name": "Night Zombie Villager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 479,
+    "name": "Haze Shadow Warrior Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 483,
+    "name": "Chosen Elder Vampire",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 551,
+    "name": "Malevolent Flesh Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 554,
+    "name": "Forsaken Vampire Lord",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 556,
+    "name": "Elder Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 569,
+    "name": "Cave Zombie Peasant",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 570,
+    "name": "Flame Dark Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 573,
+    "name": "Murk Vampire Servant",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 574,
+    "name": "Marsh Hag II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 579,
+    "name": "Corrupted Vampire Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 612,
+    "name": "Scrawny Cave Ghoul Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 618,
+    "name": "Pale Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 619,
+    "name": "Transcendent Aizen Fragment",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 672,
+    "name": "Archon Legion Hive",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 686,
+    "name": "Lanky Weak Spirit I",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 692,
+    "name": "Shade Warrior Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 696,
+    "name": "Barbed Vampire Servant",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 701,
+    "name": "Apocalypse Shaft Dark Priest",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 704,
+    "name": "Small Shadow Wisp Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 718,
+    "name": "Dust Haunted Doll Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 730,
+    "name": "Spindly Cursed Farmer I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 750,
+    "name": "Omega Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 756,
+    "name": "Nemesis Legion Hive",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 769,
+    "name": "Hellborn Alpha Werewolf",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 804,
+    "name": "Bone Barrow Ghoul Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 814,
+    "name": "Iron Vampire Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 817,
+    "name": "Soggy Cursed Farmer I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 823,
+    "name": "Cardinal Grand Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 865,
+    "name": "Rust Swamp Hag",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 872,
+    "name": "Mythic Mahito Shapeless",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 879,
+    "name": "Grimy Zombie Farmer VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 882,
+    "name": "Mottled Grave Hag Minor Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 893,
+    "name": "Brine Dark Warrior Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 895,
+    "name": "Infernal Castlevania Dracula Minor",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 897,
+    "name": "Cave Zombie Merchant Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 906,
+    "name": "Dread Wraith Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 909,
+    "name": "Eternal Legion Hive",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 919,
+    "name": "Invincible Shaft Dark Priest",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 932,
+    "name": "Fallen Zommari Rureaux",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 948,
+    "name": "Waning Werewolf Minor Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 974,
+    "name": "Night Bat",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 980,
+    "name": "Blood Bat Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 981,
+    "name": "Filthy Grim Wisp Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 987,
+    "name": "Cursed Farmer VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1002,
+    "name": "Putrid Wisp Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1004,
+    "name": "Plague Phantom Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1005,
+    "name": "Haunted Armor II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1006,
+    "name": "Decayed Wraith III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1007,
+    "name": "Filthy Zombie Peasant Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1010,
+    "name": "Shadowed Stone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1018,
+    "name": "Cursed Bone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1036,
+    "name": "Gale Banshee Scout Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1050,
+    "name": "Rotten Cursed Peasant",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1055,
+    "name": "Vampire Spawn II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1064,
+    "name": "Swamp Cursed Merchant II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1071,
+    "name": "Dire Bone Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1090,
+    "name": "Cursed Peasant Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1093,
+    "name": "Murky Grave Ghoul Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1101,
+    "name": "Wrath Bone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1110,
+    "name": "Hollow Dusk Wisp",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1112,
+    "name": "Titan Grave Hag Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1114,
+    "name": "Soul Shadow Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1123,
+    "name": "Mottled Grave Hag Minor Lesser",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1126,
+    "name": "Immortal Banshee Matron",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1141,
+    "name": "Grave Golem Guardian",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1145,
+    "name": "Waning Grave Hag Minor Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1152,
+    "name": "Grim Wisp Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1158,
+    "name": "Eclipse Banshee Queen",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1165,
+    "name": "Sewer Cursed Villager",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1183,
+    "name": "Shadow Shadow Bat Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1193,
+    "name": "Plague Banshee Shriek",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1194,
+    "name": "Wrath Iron Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1203,
+    "name": "Lightning Shadow Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1215,
+    "name": "Feral Barrow Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1226,
+    "name": "Dusk Werewolf Minor Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1241,
+    "name": "Warlord Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1258,
+    "name": "Iron Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1279,
+    "name": "Withered Night Bat II",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1281,
+    "name": "Zombie Peasant Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1284,
+    "name": "Howling Specter Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1289,
+    "name": "Bleak Tomb Ghoul Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1296,
+    "name": "Necrotic Phantom Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1302,
+    "name": "Rotten Dark Wisp III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1303,
+    "name": "Spindly Shadow Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1305,
+    "name": "Jagged Zombie Farmer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1312,
+    "name": "Scraped Grave Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1313,
+    "name": "Lightning Wraith Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1315,
+    "name": "Giant Dark Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1323,
+    "name": "Vampire Slave Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1351,
+    "name": "Sovereign Shadow Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1395,
+    "name": "Ashen Grave Hag Scout VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1402,
+    "name": "Wild Dim Spirit Alpha",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1412,
+    "name": "Specter Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1420,
+    "name": "Salt Gaunt Wisp Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1422,
+    "name": "Primordial Shaft Dark Priest",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1430,
+    "name": "Iron Dark Wisp Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1446,
+    "name": "Primordial Walter Bernhard",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1458,
+    "name": "Haze Banshee Scout Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1460,
+    "name": "Gnawed Werewolf Juvenile Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1464,
+    "name": "Cursed Peasant Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1473,
+    "name": "Swamp Pale Wisp Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1479,
+    "name": "Rune Grave Hag Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1485,
+    "name": "Soul Vampire Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1501,
+    "name": "Cursed Dark Warrior Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1516,
+    "name": "Grimy Grave Ghoul Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1523,
+    "name": "Phantom",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1538,
+    "name": "Decayed Werewolf Pack Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1539,
+    "name": "Vampire Servant Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1540,
+    "name": "Zombie Peasant",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1553,
+    "name": "Meager Dim Spirit II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1562,
+    "name": "Pale Bat Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1565,
+    "name": "Warden Shadow Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1568,
+    "name": "Tempest Bone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1587,
+    "name": "Dim Spirit Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1594,
+    "name": "Cursed Peasant Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1599,
+    "name": "Giant Night Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1609,
+    "name": "True Yhwach Fragment",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1615,
+    "name": "Chaos Ghost Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1631,
+    "name": "Transcendent Mahito Shapeless",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1633,
+    "name": "Grimy Cave Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1657,
+    "name": "Grimy Pale Wisp Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1667,
+    "name": "Dark Warrior Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1672,
+    "name": "Transcendent Vampire Progenitor Ancient",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1678,
+    "name": "Corrupted Shadow Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1691,
+    "name": "Arcane Specter Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1692,
+    "name": "Meager Zombie Villager Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1706,
+    "name": "Void Phantom Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1717,
+    "name": "Lightning Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1719,
+    "name": "Rust Banshee Shriek Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1728,
+    "name": "Weedy Zombie Farmer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1729,
+    "name": "Cursed Grave Hag Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1738,
+    "name": "Grave Hag Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1741,
+    "name": "Gaunt Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1755,
+    "name": "Mangy Dark Wisp Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1761,
+    "name": "Ultimate Sukuna King Minor",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1766,
+    "name": "Rotten Zombie Soldier",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1774,
+    "name": "Wrath Shadow Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1794,
+    "name": "Banshee Sob Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1795,
+    "name": "Mottled Phantom Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1797,
+    "name": "Omega Shadow Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1814,
+    "name": "Vampire Spawn Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1826,
+    "name": "Drowned Werewolf Pack",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1827,
+    "name": "Knotted Shadow Warrior Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1830,
+    "name": "Undying Shaft Dark Priest",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1862,
+    "name": "Blood Bat Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1874,
+    "name": "Eternal Nnoitra Scythe",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1877,
+    "name": "Corrupt Vampire Fledgling Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1899,
+    "name": "Mottled Banshee Cry Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1902,
+    "name": "Salt Weak Spirit",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1920,
+    "name": "Phantom Elite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1922,
+    "name": "Threadbare Haunted Puppet Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1933,
+    "name": "Vile Grave Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1943,
+    "name": "Sorrow Vampire Thrall Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1944,
+    "name": "Cursed Peasant",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1948,
+    "name": "Prime Elder Vampire",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1950,
+    "name": "Squalid Grim Bat IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1959,
+    "name": "Vanguard Vampire Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1972,
+    "name": "Decayed Wraith Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 1992,
+    "name": "Gnawed Banshee Moan Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2006,
+    "name": "Royal Ghost Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2012,
+    "name": "Withered Cave Bat Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2018,
+    "name": "Jade Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2022,
+    "name": "Dark Warrior I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2045,
+    "name": "Shadow Warrior Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2068,
+    "name": "Haze Shadow Warrior Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2100,
+    "name": "Putrid Night Bat Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2104,
+    "name": "Scraped Cursed Farmer Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2107,
+    "name": "Silver Bone Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2119,
+    "name": "Bone Shadow Bat Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2125,
+    "name": "Weedy Cursed Farmer VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2149,
+    "name": "Plague Vampire Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2153,
+    "name": "Ascendant Vampire Progenitor",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2155,
+    "name": "Crimson Werewolf Scout",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2156,
+    "name": "Jagged Shadow Spirit Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2159,
+    "name": "Forsaken Castlevania Dracula Minor",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2166,
+    "name": "Shadow Faint Spirit",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2175,
+    "name": "Dim Spirit Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2196,
+    "name": "Night Night Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2198,
+    "name": "Haunted Shield Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2199,
+    "name": "Siege Elder Vampire",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2204,
+    "name": "Giant Phantom Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2218,
+    "name": "Rune Iron Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2219,
+    "name": "Swamp Cave Bat Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2239,
+    "name": "Infernal Vampire Progenitor",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2243,
+    "name": "Dim Spirit III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2248,
+    "name": "Shade Warrior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2252,
+    "name": "Scourge Golem Guardian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2272,
+    "name": "Bleak Faint Spirit I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2273,
+    "name": "Bristled Banshee Moan VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2282,
+    "name": "Ancient Shadow Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2288,
+    "name": "Vampire Spawn IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2289,
+    "name": "Swamp Hag Major",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2297,
+    "name": "Frozen Iron Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2300,
+    "name": "Juggernaut Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2303,
+    "name": "Twilight Werewolf Pack Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2316,
+    "name": "Dread Nnoitra Scythe",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2320,
+    "name": "Vampire Spawn",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2322,
+    "name": "Scraggly Barrow Ghoul Young",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2329,
+    "name": "Swamp Cursed Guard Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2334,
+    "name": "Voidborn Shaft Dark Priest",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2345,
+    "name": "Faint Spirit Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2388,
+    "name": "Spectral Iron Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2398,
+    "name": "Torn Cursed Merchant",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2402,
+    "name": "Hungry Banshee Cry",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2449,
+    "name": "Zombie Villager VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2455,
+    "name": "Crowned Banshee Matron",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2476,
+    "name": "Dark Cursed Villager Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2499,
+    "name": "Crowned Ghost Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2532,
+    "name": "Hollow Mire Hag",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2537,
+    "name": "Master Shadow Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2539,
+    "name": "Wandering Vampire Thrall",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2541,
+    "name": "Knotted Vampire Spawn",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2543,
+    "name": "Lord Vampire Lord",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2545,
+    "name": "Wretched Night Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2569,
+    "name": "Chosen Banshee Matron",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2580,
+    "name": "Shadow Warrior Beta",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2590,
+    "name": "Ghoul II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2595,
+    "name": "Meager Gaunt Wisp Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2613,
+    "name": "Cursed Merchant Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2641,
+    "name": "Bone Grim Bat",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2670,
+    "name": "Chaos Banshee Queen",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2678,
+    "name": "Obsidian Flesh Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2684,
+    "name": "Celestial Flesh Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2694,
+    "name": "Demon Clay Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2700,
+    "name": "Gaunt Ghoul I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2705,
+    "name": "Grave Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2707,
+    "name": "Leviathan Ghost Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2719,
+    "name": "Abyss Stone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2724,
+    "name": "Lunar Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2732,
+    "name": "Soul Banshee Queen",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2733,
+    "name": "Ravaged Swamp Hag Senior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2734,
+    "name": "Sludge Shadow Bat Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2753,
+    "name": "Banshee Scout Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2770,
+    "name": "Silver Banshee Queen",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2777,
+    "name": "Sludge Dark Bat Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2778,
+    "name": "Dim Ghoul VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2786,
+    "name": "Lesser Zombie Peasant Ancient",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2796,
+    "name": "Werewolf Scout",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2814,
+    "name": "Wraith Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2817,
+    "name": "Night Bat Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2826,
+    "name": "Marsh Shadow Spirit Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2843,
+    "name": "Decayed Banshee Wail Alpha",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2862,
+    "name": "Blighted Werewolf Pack Blessed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2877,
+    "name": "Poltergeist Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2878,
+    "name": "Poltergeist Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2898,
+    "name": "Vampire Thrall Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2915,
+    "name": "Haunted Puppet Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2916,
+    "name": "Risen Specter Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2919,
+    "name": "Eternal Night Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2923,
+    "name": "Scraggly Dark Wisp Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2928,
+    "name": "Grim Haunted Armor Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2932,
+    "name": "Colossus Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2940,
+    "name": "Immortal Jogo Volcano Head",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2955,
+    "name": "Gnawed Vampire Thrall",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2959,
+    "name": "Abyssal Ghost Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2961,
+    "name": "Haggard Haunted Puppet",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2965,
+    "name": "Drowned Werewolf Juvenile II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 2998,
+    "name": "Vampire Spawn Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3007,
+    "name": "Malevolent Banshee Queen",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3009,
+    "name": "Noxious Vampire Slave",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3023,
+    "name": "Arcane Wraith Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3033,
+    "name": "Werewolf Juvenile",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3037,
+    "name": "Twilight Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3051,
+    "name": "Dark Haunted Shield IV",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3052,
+    "name": "Dingy Weak Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3065,
+    "name": "Chosen Ghost Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3066,
+    "name": "Soggy Grim Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3067,
+    "name": "Transcendent Jogo Volcano Head",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3081,
+    "name": "Dingy Cave Bat VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3095,
+    "name": "Putrid Grim Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3116,
+    "name": "Arcane Grave Hag Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3119,
+    "name": "Night Bat I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3132,
+    "name": "Zombie Villager IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3186,
+    "name": "Shade Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3194,
+    "name": "Shade Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3198,
+    "name": "Dark Poltergeist IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3219,
+    "name": "Ghoul VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3221,
+    "name": "Ravaged Werewolf Scout",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3238,
+    "name": "Scraggly Cursed Peasant",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3248,
+    "name": "Vile Poltergeist",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3252,
+    "name": "Arcane Night Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3259,
+    "name": "Zombie Merchant",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3262,
+    "name": "Eclipse Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3272,
+    "name": "Archon Shadow Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3275,
+    "name": "Murk Werewolf Scout",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3283,
+    "name": "Scraggly Cursed Villager",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3293,
+    "name": "Fell Zombie Farmer",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3295,
+    "name": "Cave Cave Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3299,
+    "name": "Wraith III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3303,
+    "name": "Soggy Faint Spirit",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3308,
+    "name": "Grave Hag Scout",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3318,
+    "name": "Eternal Wraith Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3348,
+    "name": "Shade",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3367,
+    "name": "Battle Barrow Hag Major",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3389,
+    "name": "Titan Stone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3394,
+    "name": "Infernal Grand Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3399,
+    "name": "Archon Nnoitra Scythe",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3409,
+    "name": "Feral Pale Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3443,
+    "name": "Wretched Poltergeist VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3445,
+    "name": "Weedy Haunted Doll VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3446,
+    "name": "Death Golem Guardian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3453,
+    "name": "Wandering Apparition Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3455,
+    "name": "Warlord Elder Vampire",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3459,
+    "name": "Marsh Zombie Farmer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3461,
+    "name": "Warped Banshee Matron",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3465,
+    "name": "Knotted Grave Hag Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3471,
+    "name": "Zombie Farmer Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3479,
+    "name": "Grand Vampire Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3483,
+    "name": "Haunted Puppet II",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3499,
+    "name": "Singed Specter Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3502,
+    "name": "Dominant Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3509,
+    "name": "Weak Weak Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3518,
+    "name": "Vile Ghoul Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3522,
+    "name": "Wrathful Legion Hive",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3523,
+    "name": "Shadow Grim Bat Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3541,
+    "name": "Vampire Fledgling Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3543,
+    "name": "Iron Grand Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3553,
+    "name": "Spectral Dark Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3568,
+    "name": "Storm Dark Warrior Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3581,
+    "name": "Murky Crypt Ghoul Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3588,
+    "name": "Flame Wraith Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3602,
+    "name": "Ether Dark Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3607,
+    "name": "Siege Shadow Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3619,
+    "name": "Zombie Peasant Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3630,
+    "name": "Faint Spirit Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3631,
+    "name": "Pale Shadow Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3645,
+    "name": "Lichen Werewolf Scout V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3648,
+    "name": "Blighted Banshee Cry Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3650,
+    "name": "Overlord Grand Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3654,
+    "name": "Blazing Golem Guardian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3658,
+    "name": "Knotted Specter",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3665,
+    "name": "Gaunt Wisp Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3677,
+    "name": "Mire Mire Hag",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3688,
+    "name": "Crypt Ghoul Young",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3693,
+    "name": "Werewolf Juvenile IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3695,
+    "name": "Mud Dim Spirit",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3697,
+    "name": "Sunken Cursed Villager Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3707,
+    "name": "Twilight Shadow Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3713,
+    "name": "Supreme Carmilla Castle",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3735,
+    "name": "Nemesis Alpha Werewolf",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3749,
+    "name": "Storm Werewolf Minor Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3757,
+    "name": "Relentless Vampire Progenitor",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3765,
+    "name": "Nightmare Grave Hag Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3788,
+    "name": "Primordial Bone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3801,
+    "name": "Sovereign Grand Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3807,
+    "name": "Dominant Shadow Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3812,
+    "name": "Crystal Golem Guardian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3816,
+    "name": "Putrid Zombie Soldier Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3836,
+    "name": "Banshee Shriek",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3845,
+    "name": "Cursed Farmer",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3860,
+    "name": "Abyss Ghost Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3862,
+    "name": "Feral Barrow Ghoul Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3863,
+    "name": "Scrawny Faint Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3921,
+    "name": "Obsidian Werewolf Runt",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3928,
+    "name": "Soul Wraith Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3934,
+    "name": "Mire Shade Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3940,
+    "name": "Cave Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3971,
+    "name": "Supreme Ghost Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3981,
+    "name": "Blood Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 3985,
+    "name": "Abyss Bone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4003,
+    "name": "Celestial Iron Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4012,
+    "name": "Frozen Ghost Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4013,
+    "name": "Drowned Vampire Thrall",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4034,
+    "name": "Wrathful Alpha Werewolf",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4036,
+    "name": "Warped Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4050,
+    "name": "Primordial Stone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4057,
+    "name": "Colossus Zommari Rureaux",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4067,
+    "name": "Torn Poltergeist Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4070,
+    "name": "Abyss Phantom Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4092,
+    "name": "Crypt Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4121,
+    "name": "Grave Hag Minor Cursed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4123,
+    "name": "Giant Iron Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4134,
+    "name": "Banshee Wail II",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4144,
+    "name": "Zealous Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4145,
+    "name": "Lanky Shadow Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4165,
+    "name": "Plague Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4168,
+    "name": "Decayed Werewolf Scout",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4174,
+    "name": "Crag Tomb Ghoul Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4224,
+    "name": "Celestial Bone Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4225,
+    "name": "Dusk Barrow Hag Ancient",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4231,
+    "name": "Mud Gaunt Wisp II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4243,
+    "name": "Void Bone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4246,
+    "name": "Pack Blood Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4256,
+    "name": "Cataclysm Zommari Rureaux",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4296,
+    "name": "Vile Tomb Ghoul Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4304,
+    "name": "Dark Gaunt Wisp",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4315,
+    "name": "Salt Dim Spirit Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4316,
+    "name": "Malevolent Iron Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4324,
+    "name": "Tattered Haunted Doll Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4325,
+    "name": "Infernal Alpha Werewolf",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4345,
+    "name": "Filthy Cave Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4351,
+    "name": "Mottled Blood Bat Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4360,
+    "name": "Nightmare Specter Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4375,
+    "name": "Absolute Mahito Shapeless",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4380,
+    "name": "Werewolf Juvenile Young",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4401,
+    "name": "Gnawed Shadow Warrior Major",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4410,
+    "name": "Dark Warrior Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4424,
+    "name": "Hungry Banshee Sob Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4453,
+    "name": "Crag Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4469,
+    "name": "Dust Poltergeist Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4471,
+    "name": "Rotten Weak Spirit Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4473,
+    "name": "Arcane Golem Guardian",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4487,
+    "name": "Banshee Shriek Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4489,
+    "name": "Ancient Golem Guardian",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4490,
+    "name": "Filthy Shadow Wisp Alpha",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4510,
+    "name": "Arcane Banshee Queen",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4511,
+    "name": "Wandering Shadow Warrior Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4512,
+    "name": "Infernal Stone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4522,
+    "name": "Barrow Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4528,
+    "name": "Sludge Ghoul Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4532,
+    "name": "Crimson Grave Hag Scout",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4548,
+    "name": "Weedy Grim Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4566,
+    "name": "Corrupt Dark Warrior VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4582,
+    "name": "Murky Zombie Soldier",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4583,
+    "name": "Herald Phantom Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4594,
+    "name": "Dim Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4596,
+    "name": "Torn Ghoul V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4608,
+    "name": "Dingy Grave Ghoul Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4612,
+    "name": "Spindly Dark Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4624,
+    "name": "Shadowed Dark Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4632,
+    "name": "Sacred Dark Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4633,
+    "name": "Rune Dark Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4667,
+    "name": "Ember Grave Hag Scout Prime",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4668,
+    "name": "Phantom Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4672,
+    "name": "Dusk Banshee Shriek",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4674,
+    "name": "Shade Warrior IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4687,
+    "name": "Malevolent Night Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4694,
+    "name": "Frozen Banshee Queen",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4709,
+    "name": "Jade Banshee Queen",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4728,
+    "name": "Lanky Haunted Armor Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4750,
+    "name": "Ashen Banshee Scout IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4751,
+    "name": "Scrawny Tomb Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4755,
+    "name": "Infernal Legion Hive",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4770,
+    "name": "Giant Bone Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4783,
+    "name": "Plague Grave Hag Minor III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4806,
+    "name": "Vampire Servant Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4811,
+    "name": "Master Vampire Lord",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4826,
+    "name": "Werewolf Runt Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4837,
+    "name": "Soggy Pale Bat Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4840,
+    "name": "Blazing Iron Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4893,
+    "name": "Demon Specter Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4898,
+    "name": "Celestial Vampire Elder",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4904,
+    "name": "Thunder Dark Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4911,
+    "name": "Wisp Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4916,
+    "name": "Flame Banshee Queen",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4929,
+    "name": "Ash Pale Bat Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4932,
+    "name": "Titan Clay Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4939,
+    "name": "Threadbare Barrow Ghoul",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4950,
+    "name": "Crystal Banshee Queen",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4951,
+    "name": "Zombie Farmer Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4960,
+    "name": "Mire Hag II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4961,
+    "name": "Scourge Phantom Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4965,
+    "name": "Weak Cave Bat VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4981,
+    "name": "Immortal Shadow Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4983,
+    "name": "Noxious Werewolf Runt",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4989,
+    "name": "Crimson Barrow Hag VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 4997,
+    "name": "Titan Phantom Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5021,
+    "name": "Herald Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5029,
+    "name": "Forbidden Legion Hive",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5042,
+    "name": "Abyss Wraith Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5046,
+    "name": "Dim Cursed Villager Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5057,
+    "name": "Wisp Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5060,
+    "name": "Vile Grim Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5070,
+    "name": "Werewolf Pack II",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5078,
+    "name": "Cursed Shade Warrior VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5088,
+    "name": "Immortal Carmilla Castle",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5091,
+    "name": "Scraggly Cursed Peasant Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5099,
+    "name": "Ash Zombie Peasant Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5104,
+    "name": "Undying Alpha Werewolf",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5114,
+    "name": "Death Stone Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5131,
+    "name": "Dark Wisp",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5136,
+    "name": "Shroud Banshee Shriek Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5138,
+    "name": "Pale Ghoul",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5193,
+    "name": "Dust Dusk Wisp III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5214,
+    "name": "Zombie Villager Alpha",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5216,
+    "name": "Threadbare Shadow Wisp Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5243,
+    "name": "Dire Specter Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5256,
+    "name": "Pack Cave Ghoul Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5271,
+    "name": "Weak Spirit Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5278,
+    "name": "Primordial Phantom Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5280,
+    "name": "Pack Cave Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5295,
+    "name": "Filthy Grave Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5296,
+    "name": "Plague Clay Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5302,
+    "name": "Warlord Grand Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5313,
+    "name": "Primeval Menace Dark",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5314,
+    "name": "Blazing Ghost Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5317,
+    "name": "Ember Banshee Shriek Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5334,
+    "name": "Noxious Banshee Wail Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5342,
+    "name": "Nightmare Night Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5347,
+    "name": "Twilight Dark Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5349,
+    "name": "Hallowed Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5350,
+    "name": "Rune Specter Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5362,
+    "name": "Crowned Phantom Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5383,
+    "name": "Singed Banshee Cry",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5390,
+    "name": "Sinuous Dark Warrior Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5394,
+    "name": "Ancient Vampire Progenitor Ancient",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5399,
+    "name": "Astral Night Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5412,
+    "name": "Obsidian Werewolf Scout VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5422,
+    "name": "Werewolf Pack",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5427,
+    "name": "Rune Phantom Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5428,
+    "name": "Vampire Spawn Beta",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5454,
+    "name": "Scraped Zombie Villager Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5462,
+    "name": "Cardinal Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5463,
+    "name": "Sable Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5464,
+    "name": "Poltergeist",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5467,
+    "name": "Lesser Haunted Puppet Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5472,
+    "name": "Scraped Crypt Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5475,
+    "name": "Giant Vampire Elder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5494,
+    "name": "Zombie Villager Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5502,
+    "name": "Hungry Werewolf Minor Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5503,
+    "name": "Dusk Wisp",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5520,
+    "name": "Rust Banshee Shriek Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5523,
+    "name": "Howling Grave Hag Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5526,
+    "name": "Quarried Marsh Hag Greater",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5529,
+    "name": "Soggy Shade Lesser",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5535,
+    "name": "Plague Werewolf Juvenile Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5541,
+    "name": "Gale Banshee Shriek Young",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5545,
+    "name": "Legendary Hanami Forest Arms",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5548,
+    "name": "Werewolf Juvenile Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5569,
+    "name": "Banshee Scout Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5570,
+    "name": "Cursed Werewolf Scout",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5571,
+    "name": "Hollow Zombie Peasant Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5592,
+    "name": "Pale Crypt Ghoul VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5611,
+    "name": "Primordial Ghost Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5626,
+    "name": "Dust Cave Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5630,
+    "name": "Shadow Bat II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5641,
+    "name": "Phantom Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5650,
+    "name": "Titan Ghost Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5654,
+    "name": "Tempest Phantom Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5659,
+    "name": "Mangy Zombie Villager Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5661,
+    "name": "Siege Castlevania Dracula Minor",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5683,
+    "name": "Fell Zombie Villager Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5684,
+    "name": "Murky Cave Ghoul Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5685,
+    "name": "Blood Vampire Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5698,
+    "name": "Chosen Grand Golem",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5711,
+    "name": "Warped Shadow Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5714,
+    "name": "Storm Swamp Hag",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5742,
+    "name": "Poltergeist II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5744,
+    "name": "Ragged Haunted Shield",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5745,
+    "name": "Crystal Iron Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5760,
+    "name": "Gaunt Haunted Weapon IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5762,
+    "name": "Shadow Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5764,
+    "name": "Eclipse Wraith Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5775,
+    "name": "Shadow Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5776,
+    "name": "Grand Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5778,
+    "name": "Raging Shadow Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5782,
+    "name": "Mangy Barrow Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5786,
+    "name": "Banshee Wail",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5788,
+    "name": "Unholy Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5799,
+    "name": "Haggard Cursed Guard Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5820,
+    "name": "Venom Vampire Fledgling II",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5836,
+    "name": "Dusk Wisp Tamed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5845,
+    "name": "Banshee Cry Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5852,
+    "name": "Transcendent Walter Bernhard",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5855,
+    "name": "Scraped Dark Wisp Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5856,
+    "name": "Cave Tomb Ghoul Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5886,
+    "name": "Banshee Shriek Feral",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5897,
+    "name": "Bleached Vampire Servant Blessed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5918,
+    "name": "Sludge Barrow Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5923,
+    "name": "Gaunt Faint Spirit",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5926,
+    "name": "Wild Shadow Spirit Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5930,
+    "name": "Pitted Banshee Sob Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5956,
+    "name": "Iron Grim Wisp Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5959,
+    "name": "Crystal Ghost Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5973,
+    "name": "Tyrant Phantom Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5978,
+    "name": "Soul Ghost Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5986,
+    "name": "Dread Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 5991,
+    "name": "Undying Banshee Matron",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6003,
+    "name": "Iron Poltergeist III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6008,
+    "name": "Immortal Elder Vampire",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6009,
+    "name": "Scrawny Cursed Merchant Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6024,
+    "name": "Soggy Cursed Farmer II",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6106,
+    "name": "Necrotic Dark Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6114,
+    "name": "Mottled Werewolf Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6118,
+    "name": "Howling Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6122,
+    "name": "Cave Grim Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6139,
+    "name": "Doom Dark Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6142,
+    "name": "Specter Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6165,
+    "name": "Ash Cursed Guard Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6177,
+    "name": "Jagged Apparition",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6194,
+    "name": "Blood Bat Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6210,
+    "name": "Lesser Shadow Wisp II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6221,
+    "name": "Flame Bone Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6253,
+    "name": "Archon Vampire Progenitor",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6258,
+    "name": "Dire Vampire Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6270,
+    "name": "Pitted Banshee Moan",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6274,
+    "name": "Primordial Banshee Queen",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6289,
+    "name": "Dragon Banshee Queen",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6295,
+    "name": "Crowned Grand Golem",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6309,
+    "name": "Cursed Merchant Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6321,
+    "name": "Hellborn Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6327,
+    "name": "Tempest Vampire Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6338,
+    "name": "Doom Stone Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6353,
+    "name": "Swamp Hag",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6355,
+    "name": "Knotted Swamp Hag Tamed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6357,
+    "name": "Progenitor Vampire Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6360,
+    "name": "Void Ghost Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6362,
+    "name": "Abyss Shadow Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6369,
+    "name": "Pale Bat Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6376,
+    "name": "Grave Hag Scout Lesser",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6386,
+    "name": "Eternal Galamoth Time",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6389,
+    "name": "Dark Pale Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6414,
+    "name": "Exalted Banshee Matron",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6418,
+    "name": "Grim Wisp Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6449,
+    "name": "Bone Dim Spirit I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6473,
+    "name": "Pale Shadow Wisp Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6485,
+    "name": "Scrawny Haunted Shield Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6496,
+    "name": "Night Shadow Bat VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6498,
+    "name": "Swamp Pale Bat Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6503,
+    "name": "Demon Golem Guardian",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6514,
+    "name": "Haunted Armor V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6549,
+    "name": "Cursed Vampire Servant Awakened",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6563,
+    "name": "Grave Hag Minor Greater",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6564,
+    "name": "Fetid Marsh Hag Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6571,
+    "name": "Mud Haunted Puppet Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6576,
+    "name": "Master Phantom Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6596,
+    "name": "Murk Werewolf Scout Awakened",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6599,
+    "name": "Absolute Walter Bernhard",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6617,
+    "name": "Unholy Vampire Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6618,
+    "name": "Grave Vampire Elder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6621,
+    "name": "Lightning Vampire Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6623,
+    "name": "Banshee Shriek Corrupted",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6624,
+    "name": "Slime Zombie Villager",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6627,
+    "name": "High Phantom Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6636,
+    "name": "Crypt Ghoul Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6664,
+    "name": "Silver Vampire Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6677,
+    "name": "Dim Shade Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6684,
+    "name": "Crimson Vampire Thrall",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6690,
+    "name": "Savage Ghost Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6697,
+    "name": "Nemesis Castlevania Dracula Minor",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6702,
+    "name": "War Flesh Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6705,
+    "name": "Soggy Dark Wisp",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6713,
+    "name": "Squalid Shadow Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6718,
+    "name": "Dingy Barrow Ghoul Junior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6725,
+    "name": "Dingy Haunted Puppet",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6739,
+    "name": "War Clay Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6745,
+    "name": "Umbral Banshee Shriek Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6767,
+    "name": "Colossus Nnoitra Scythe",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6780,
+    "name": "Dragon Bone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6781,
+    "name": "Werewolf Runt II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6786,
+    "name": "Hollow Vampire Slave Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6789,
+    "name": "Void Wraith Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6791,
+    "name": "Juggernaut Phantom Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6812,
+    "name": "Zombie Merchant Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6837,
+    "name": "Weak Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6849,
+    "name": "Soggy Wisp Omega",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6854,
+    "name": "Mire Hag Blessed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6872,
+    "name": "Dingy Cursed Guard Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6896,
+    "name": "Banshee Sob I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6909,
+    "name": "Voidborn Legion Hive",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6926,
+    "name": "Threadbare Grave Ghoul V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6935,
+    "name": "Wrath Ghost Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6947,
+    "name": "Titan Wraith Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6970,
+    "name": "Warlord Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6973,
+    "name": "Raging Stone Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6979,
+    "name": "Pale Wisp Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 6987,
+    "name": "Wraith I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7004,
+    "name": "Werewolf Pack Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7011,
+    "name": "Royal Shadow Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7032,
+    "name": "Gaunt Faint Spirit Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7061,
+    "name": "Pitted Apparition",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7062,
+    "name": "Doom Flesh Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7103,
+    "name": "Banshee Moan",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7128,
+    "name": "Timeless Chaos Entity",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7130,
+    "name": "Spindly Haunted Doll Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7148,
+    "name": "Overlord Phantom Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7150,
+    "name": "Giant Golem Guardian",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7182,
+    "name": "Void Sukuna King of Curses Supreme",
+    "rarity": "EX",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7189,
+    "name": "Archon Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7204,
+    "name": "Vile Pale Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7215,
+    "name": "Infernal Wraith Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7224,
+    "name": "Elder Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7228,
+    "name": "Banshee Sob",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7242,
+    "name": "Sunken Tomb Ghoul Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7255,
+    "name": "Blazing Vampire Elder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7259,
+    "name": "Tempest Iron Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7270,
+    "name": "Vampire Fledgling Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7281,
+    "name": "Banshee Shriek Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7290,
+    "name": "Crypt Ghoul Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7294,
+    "name": "Scraped Haunted Weapon",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7324,
+    "name": "Arcane Iron Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7338,
+    "name": "Forsaken Shaft Dark Priest",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7339,
+    "name": "Necrotic Clay Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7340,
+    "name": "Necrotic Grave Hag Elder",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7346,
+    "name": "Twilight Bone Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7356,
+    "name": "Transcendent Death Reaper",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7376,
+    "name": "Iron Zombie Merchant",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7377,
+    "name": "Wandering Banshee Wail",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7384,
+    "name": "Vile Crypt Ghoul Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7385,
+    "name": "Vampire Slave",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7388,
+    "name": "Sovereign Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7402,
+    "name": "Raging Vampire Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7408,
+    "name": "Iron Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7430,
+    "name": "Meager Zombie Merchant Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7431,
+    "name": "Grimy Gaunt Wisp",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7437,
+    "name": "Hungry Marsh Hag Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7449,
+    "name": "Infernal Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7465,
+    "name": "Hungry Vampire Slave Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7479,
+    "name": "Cave Grim Wisp III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7493,
+    "name": "Zero Sukuna King of Curses Supreme",
+    "rarity": "EX",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7496,
+    "name": "Werewolf Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7500,
+    "name": "Scraped Haunted Weapon Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7509,
+    "name": "Voidborn Castlevania Dracula Minor",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7522,
+    "name": "Shadowed Wraith Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7524,
+    "name": "Lesser Shadow Bat Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7526,
+    "name": "Zealous Phantom Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7535,
+    "name": "Scarred Werewolf Pack",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7559,
+    "name": "Warped Phantom Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7561,
+    "name": "Astral Flesh Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7568,
+    "name": "Shadow Night Bat Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7572,
+    "name": "Ashen Barrow Hag Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7573,
+    "name": "Infernal Shadow Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7576,
+    "name": "Immortal Walter Bernhard",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7589,
+    "name": "Crude Grim Wisp Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7599,
+    "name": "Corrupted Ghost Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7607,
+    "name": "Plague Specter Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7609,
+    "name": "Cursed Golem Guardian",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7622,
+    "name": "Dusk Specter Minor",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7632,
+    "name": "Spectral Ghost Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7642,
+    "name": "Specter Beta",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7655,
+    "name": "Mire Hag Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7664,
+    "name": "Murky Haunted Doll",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7688,
+    "name": "Haunted Armor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7697,
+    "name": "Gnawed Barrow Hag",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7700,
+    "name": "Undying Stone Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7709,
+    "name": "Pack Zombie Soldier Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7716,
+    "name": "Wandering Banshee Scout Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7718,
+    "name": "Fell Pale Wisp Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7721,
+    "name": "Barrow Ghoul Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7730,
+    "name": "Cursed Villager Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7733,
+    "name": "Barrow Ghoul VI",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7739,
+    "name": "Blood Phantom Knight",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7741,
+    "name": "Celestial Stone Golem",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7746,
+    "name": "Wretched Cursed Farmer Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7756,
+    "name": "Marsh Hag VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7768,
+    "name": "Dire Haunted Armor Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7786,
+    "name": "Threadbare Cursed Villager",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7789,
+    "name": "Rune Golem Guardian",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7790,
+    "name": "Cursed Banshee Shriek",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7801,
+    "name": "Sinuous Banshee Scout III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7826,
+    "name": "Marsh Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7829,
+    "name": "Crypt Ghoul I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7833,
+    "name": "Progenitor Banshee Matron",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7839,
+    "name": "Craven Apparition Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7844,
+    "name": "Shadow Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7853,
+    "name": "Salt Night Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7857,
+    "name": "Obsidian Wraith V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7859,
+    "name": "Ragged Cursed Villager",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7910,
+    "name": "Spindly Dusk Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7918,
+    "name": "Corrupted Werewolf Alpha",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7922,
+    "name": "Sable Castlevania Dracula Minor",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7930,
+    "name": "Pitted Dark Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7933,
+    "name": "Scraggly Ghoul Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7935,
+    "name": "Small Zombie Merchant Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7940,
+    "name": "Dingy Poltergeist Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7947,
+    "name": "Wretched Cursed Guard",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7954,
+    "name": "Godlike Walter Bernhard",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7957,
+    "name": "Vile Dim Spirit",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7968,
+    "name": "Shroud Marsh Hag Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7981,
+    "name": "Craven Banshee Shriek",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7982,
+    "name": "War Ghost Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7987,
+    "name": "Pitted Werewolf Juvenile",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 7990,
+    "name": "Dark Warrior II",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8005,
+    "name": "Cursed Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8009,
+    "name": "Marsh Weak Spirit III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8016,
+    "name": "Ragged Zombie Merchant Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8024,
+    "name": "Dominant Banshee Matron",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8033,
+    "name": "Undying Nnoitra Scythe",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8045,
+    "name": "Wretched Shade Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8048,
+    "name": "Shroud Barrow Hag Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8055,
+    "name": "Sinuous Werewolf Scout IV",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8061,
+    "name": "Cardinal Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8065,
+    "name": "Lunar Stone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8080,
+    "name": "Meager Dusk Wisp Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8089,
+    "name": "Banshee Cry",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8091,
+    "name": "Ultimate Menace Dark",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8094,
+    "name": "Spectral Shadow Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8098,
+    "name": "Shadowed Golem Guardian",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8100,
+    "name": "Grand Ghost Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8121,
+    "name": "Wrathful Vampire Progenitor",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8141,
+    "name": "Eternal Hanami Forest Arms",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8145,
+    "name": "Hoar Dark Warrior II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8146,
+    "name": "Doom Specter Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8160,
+    "name": "Warden Phantom Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8165,
+    "name": "Infernal Golem Guardian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8175,
+    "name": "Eternal Death Reaper",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8187,
+    "name": "Wandering Specter VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8206,
+    "name": "Zombie Soldier",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8214,
+    "name": "Mangy Zombie Merchant VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8226,
+    "name": "Sable Legion Hive",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8253,
+    "name": "Zombie Villager Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8254,
+    "name": "Spindly Haunted Weapon Minor",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8256,
+    "name": "Dust Faint Spirit V",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8262,
+    "name": "Gaunt Grim Wisp Senior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8276,
+    "name": "Sinuous Vampire Servant Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8284,
+    "name": "Titan Vampire Progenitor",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8310,
+    "name": "Dingy Zombie Villager VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8326,
+    "name": "Cursed Villager Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8352,
+    "name": "Ragged Gaunt Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8381,
+    "name": "Infinite Sukuna King Minor",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8384,
+    "name": "Wraith Greater",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8396,
+    "name": "Vampire Spawn VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8400,
+    "name": "Supreme Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8413,
+    "name": "Quarried Werewolf Scout",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8427,
+    "name": "Ascendant Nnoitra Scythe",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8428,
+    "name": "Nightmare Iron Golem",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8431,
+    "name": "Corrupted Specter Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8432,
+    "name": "Legendary Jogo Volcano Head",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8439,
+    "name": "Hungry Vampire Thrall IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8458,
+    "name": "Tempest Flesh Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8459,
+    "name": "Scorched Banshee Sob",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8469,
+    "name": "Banshee Scout",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8470,
+    "name": "Blood Bat III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8479,
+    "name": "Shadow Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8499,
+    "name": "Risen Shadow Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8507,
+    "name": "Unholy Ghost Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8518,
+    "name": "Pale Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8525,
+    "name": "Werewolf Scout Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8526,
+    "name": "Legendary Walter Bernhard",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8549,
+    "name": "Warped Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8551,
+    "name": "Blighted Barrow Hag III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8561,
+    "name": "Plague Night Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8564,
+    "name": "Dark Wisp VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8593,
+    "name": "Master Grand Golem",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8599,
+    "name": "Ancient Ghost Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8607,
+    "name": "Pitted Grave Hag Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8616,
+    "name": "Grave Ghoul Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8633,
+    "name": "Feral Dusk Wisp Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8636,
+    "name": "Scraggly Grave Ghoul Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8639,
+    "name": "Scraggly Cursed Guard Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8652,
+    "name": "Forbidden Nnoitra Scythe",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8656,
+    "name": "Transcendent Hanami Forest Arms",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8657,
+    "name": "Barrow Hag Cursed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8675,
+    "name": "Frozen Stone Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8694,
+    "name": "Waning Marsh Hag",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8708,
+    "name": "Banshee Shriek Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8715,
+    "name": "Vanguard Banshee Matron",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8717,
+    "name": "Vile Shadow Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8735,
+    "name": "Flame Shadow Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8751,
+    "name": "Dark Bat Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8779,
+    "name": "Cave Shadow Wisp Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8785,
+    "name": "Grave Banshee Queen",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8815,
+    "name": "Bleached Vampire Spawn Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8818,
+    "name": "Apex Werewolf Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8819,
+    "name": "Raging Night Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8820,
+    "name": "Haunted Puppet Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8829,
+    "name": "Supreme Hanami Forest Arms",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8869,
+    "name": "Wisp Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8895,
+    "name": "Jagged Cave Ghoul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8905,
+    "name": "Titan Legion Hive",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8940,
+    "name": "Silver Dark Knight",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8944,
+    "name": "Bleak Blood Bat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8962,
+    "name": "Primordial Castlevania Dracula Minor",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8974,
+    "name": "Shade Warrior Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 8993,
+    "name": "Cave Ghoul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9025,
+    "name": "Fallen Galamoth Time",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9036,
+    "name": "Coiled Shadow Warrior V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9061,
+    "name": "Salt Cursed Peasant Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9067,
+    "name": "Transcendent Dracula the First",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9072,
+    "name": "Waning Grave Hag Minor",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9075,
+    "name": "Shroud Shadow Warrior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9076,
+    "name": "Venom Apparition",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9095,
+    "name": "Singed Vampire Slave VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9114,
+    "name": "Ancient Hanami Forest Arms",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9121,
+    "name": "Hollow Cave Ghoul Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9140,
+    "name": "Faint Spirit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9152,
+    "name": "Godlike Mahito Shapeless",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9173,
+    "name": "Cataclysm Vampire Progenitor",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9179,
+    "name": "Grave Hag Minor IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9180,
+    "name": "Invincible Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9190,
+    "name": "Vampire Servant",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9198,
+    "name": "Eternal Mahito Shapeless",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9207,
+    "name": "Shroud Apparition",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9219,
+    "name": "Hellborn Legion Hive",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9227,
+    "name": "Apparition",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9236,
+    "name": "Relentless Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9238,
+    "name": "Zombie Soldier II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9258,
+    "name": "Pack Cursed Farmer III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9277,
+    "name": "Venom Marsh Hag",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9278,
+    "name": "Corrupted Stone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9289,
+    "name": "Master Specter Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9309,
+    "name": "Singed Barrow Hag Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9329,
+    "name": "Hollow Pale Wisp Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9337,
+    "name": "Withered Zombie Farmer Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9343,
+    "name": "Invincible Legion Hive",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9345,
+    "name": "Void Stone Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9346,
+    "name": "Wandering Grave Hag Scout Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9350,
+    "name": "Sewer Grim Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9367,
+    "name": "Siege Grand Golem",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9372,
+    "name": "Titan Flesh Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9400,
+    "name": "Dingy Cursed Farmer Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9404,
+    "name": "Obsidian Grave Hag Minor Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9405,
+    "name": "Pale Wisp Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9408,
+    "name": "Bristled Apparition",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9413,
+    "name": "Scraggly Zombie Merchant Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9424,
+    "name": "Jade Flesh Golem",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9431,
+    "name": "Savage Grand Golem",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9432,
+    "name": "Chosen Grave Hag Queen",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9433,
+    "name": "Withered Cursed Peasant Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9469,
+    "name": "Eternal Bone Golem",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9470,
+    "name": "Singed Phantom",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9484,
+    "name": "Bristled Apparition Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9490,
+    "name": "Wisp",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9530,
+    "name": "Vampire Fledgling Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9532,
+    "name": "Plague Werewolf Juvenile",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9556,
+    "name": "Werewolf Juvenile Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9559,
+    "name": "Overlord Elder Vampire",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9563,
+    "name": "Dark Wisp III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9564,
+    "name": "Royal Elder Vampire",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9565,
+    "name": "Plague Banshee Shriek Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9567,
+    "name": "Relentless Galamoth Time",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9589,
+    "name": "Warden Banshee Matron",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9594,
+    "name": "Ancient Jogo Volcano Head",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9606,
+    "name": "Dire Dark Knight",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9609,
+    "name": "Banshee Wail III",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9613,
+    "name": "Withered Shade",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9616,
+    "name": "Tyrant Shadow Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9619,
+    "name": "Primordial Vampire Progenitor Ancient",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9620,
+    "name": "Zombie Farmer Cursed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9648,
+    "name": "Nemesis Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9654,
+    "name": "Bleached Banshee Cry",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9655,
+    "name": "Ashen Grave Hag Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9678,
+    "name": "Lichen Phantom I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9686,
+    "name": "Voidborn Galamoth Time",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9687,
+    "name": "Sacred Golem Guardian",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9694,
+    "name": "Blazing Wraith Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9699,
+    "name": "Archon Vampire Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9712,
+    "name": "Filthy Ghoul Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9726,
+    "name": "Malevolent Clay Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9733,
+    "name": "Death Banshee Queen",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9745,
+    "name": "Banshee Wail Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9759,
+    "name": "Rust Werewolf Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9760,
+    "name": "Dark Bat Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9785,
+    "name": "Lanky Cursed Villager IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9806,
+    "name": "Siege Phantom Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9812,
+    "name": "Hollow Vampire Thrall Senior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9834,
+    "name": "Cursed Villager Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9837,
+    "name": "Obsidian Specter Knight",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9846,
+    "name": "Jagged Cursed Merchant",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9852,
+    "name": "Forsaken Phantom Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9858,
+    "name": "Grave Ghoul VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9862,
+    "name": "Apocalypse Zommari Rureaux",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9887,
+    "name": "Barbed Grave Hag Minor III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9891,
+    "name": "Battle Werewolf Pack",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9895,
+    "name": "Dread Draconic Revenant",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9902,
+    "name": "Jagged Grim Wisp I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9904,
+    "name": "Weedy Cursed Guard Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9905,
+    "name": "Cursed Flesh Golem",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9909,
+    "name": "Shadow Blood Bat Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9918,
+    "name": "Hollow Zombie Soldier Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9927,
+    "name": "Spectral Night Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9928,
+    "name": "Battle Werewolf Scout VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9943,
+    "name": "Weak Cursed Farmer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9951,
+    "name": "Infernal Specter Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9966,
+    "name": "Swamp Hag Feral",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9967,
+    "name": "Ancient Wraith Knight",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9988,
+    "name": "Primordial Golem Guardian",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  },
+  {
+    "id": 9992,
+    "name": "Vampire Thrall",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Haunted Veil",
+    "element": "Dread"
+  }
+]

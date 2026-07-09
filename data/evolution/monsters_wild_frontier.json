@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 20,
+    "name": "Cave Spider Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 31,
+    "name": "Pitted Cave Bear Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 60,
+    "name": "Dingy Frost Bug Prime",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 65,
+    "name": "Swamp Bear",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 74,
+    "name": "Dire Rock Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 99,
+    "name": "Tar Cave Bat Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 129,
+    "name": "Soggy Bark Frog IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 140,
+    "name": "Dingy Swamp Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 146,
+    "name": "Frost Bug Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 168,
+    "name": "Cardinal Stone Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 182,
+    "name": "Threadbare Bark Frog Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 194,
+    "name": "Soul Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 204,
+    "name": "Jade Fire Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 205,
+    "name": "Colossus Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 227,
+    "name": "Yellow Tree Frog Omega",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 228,
+    "name": "Bark Bug Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 235,
+    "name": "Dire Leaf Bug VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 258,
+    "name": "Dirt Bug Young",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 259,
+    "name": "Umbral Soot Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 274,
+    "name": "Dragon Mountain Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 275,
+    "name": "Cinder Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 287,
+    "name": "Storm Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 317,
+    "name": "Chaos Shadow Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 321,
+    "name": "Archon Barioth Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 322,
+    "name": "Shard Rock Bear Omega",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 323,
+    "name": "Siege Drake Alpha",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 347,
+    "name": "Haggard Swamp Bat Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 355,
+    "name": "Risen Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 365,
+    "name": "Scraped Bark Bug V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 370,
+    "name": "Necrotic River Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 371,
+    "name": "Wretched Cinder Bug Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 372,
+    "name": "Wild Twig Bug Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 389,
+    "name": "Corrupt Cave Bear",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 403,
+    "name": "Crimson Thunder Wolf Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 436,
+    "name": "Blighted Sand Spider",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 446,
+    "name": "Feral Smoke Bug V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 449,
+    "name": "Ragged Cave Frog Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 467,
+    "name": "Blazing Fire Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 471,
+    "name": "Shroud Swamp Spider Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 473,
+    "name": "Rotten Mud Frog Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 493,
+    "name": "Bark Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 497,
+    "name": "Fetid Ash Spider Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 517,
+    "name": "Squalid Twig Bug Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 526,
+    "name": "Bleak Forest Cricket Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 536,
+    "name": "Dusk Forest Spider Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 537,
+    "name": "Chosen Forest Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 549,
+    "name": "Dim Leaf Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 564,
+    "name": "Hollow Thunder Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 589,
+    "name": "Commander Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 596,
+    "name": "Ember Sand Spider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 598,
+    "name": "Dirt Bug VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 604,
+    "name": "Plague Rock Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 609,
+    "name": "Salt Swamp Bat Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 621,
+    "name": "Nightmare Void Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 633,
+    "name": "Leaf Bug Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 637,
+    "name": "Frost Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 641,
+    "name": "Eternal Lake Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 656,
+    "name": "Withered Root Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 673,
+    "name": "Umbral Night Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 684,
+    "name": "Shadow Mud Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 712,
+    "name": "Celestial Forest Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 721,
+    "name": "Mangy Hail Bug Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 723,
+    "name": "Frost Dark Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 746,
+    "name": "Jade Thunder Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 762,
+    "name": "Ascendant Barioth Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 771,
+    "name": "Lanky Leaf Bug Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 773,
+    "name": "Progenitor Mountain Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 780,
+    "name": "Night Cave Cricket Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 784,
+    "name": "Sinuous Ash Spider Greater",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 786,
+    "name": "Night Wolf Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 789,
+    "name": "Forsaken Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 802,
+    "name": "Storm Soot Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 806,
+    "name": "Lightning Lake Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 811,
+    "name": "Plague Giant Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 816,
+    "name": "Flame Jungle Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 824,
+    "name": "Cave Wolf",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 828,
+    "name": "Eternal Moon Lord Shard",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 830,
+    "name": "Cave Bat Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 852,
+    "name": "Tattered Vine Crawler Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 864,
+    "name": "Malevolent River Serpent",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 866,
+    "name": "Voidborn Mizutsune Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 867,
+    "name": "Ember Spider Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 868,
+    "name": "Fallen Barioth Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 873,
+    "name": "Quarried Forest Wolf IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 892,
+    "name": "Lightning Ice Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 898,
+    "name": "Sand Bug Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 905,
+    "name": "Runed Forest Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 911,
+    "name": "Primordial Fire Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 913,
+    "name": "Master Mountain Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 915,
+    "name": "Tree Frog VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 937,
+    "name": "Herald Elder Drake",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 947,
+    "name": "Gnawed Sand Spider Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 969,
+    "name": "Mist Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 970,
+    "name": "Leaking Cave Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 979,
+    "name": "Forest Spider IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 983,
+    "name": "Pack Cave Cricket Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1012,
+    "name": "Progenitor Rock Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1013,
+    "name": "Thunder Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1024,
+    "name": "Swamp Leaf Frog Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1027,
+    "name": "Transcendent Radiance Echo",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1032,
+    "name": "Colossus Barioth Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1041,
+    "name": "Cinder Bug III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1042,
+    "name": "Dingy Thunder Bug Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1052,
+    "name": "Lesser Cave Cricket Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1074,
+    "name": "Wrathful Rathalos Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1091,
+    "name": "Snow Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1104,
+    "name": "Sludge Stone Bug VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1106,
+    "name": "Dust Spider Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1130,
+    "name": "Scorched Ember Spider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1132,
+    "name": "Hail Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1143,
+    "name": "Cloud Bug Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1171,
+    "name": "Lightning Bug VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1174,
+    "name": "Doom Lake Serpent",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1196,
+    "name": "Obsidian Cave Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1201,
+    "name": "Malevolent Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1224,
+    "name": "War Elder Wolf",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1259,
+    "name": "Shadowed Drake Feral",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1274,
+    "name": "Swamp Frog Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1278,
+    "name": "Sludge Storm Bug Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1290,
+    "name": "Juggernaut Apex Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1292,
+    "name": "Bone Cinder Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1298,
+    "name": "Craven Mountain Bear Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1300,
+    "name": "Ice Wolf V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1317,
+    "name": "Stone Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1326,
+    "name": "Eclipse Elder Wolf",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1346,
+    "name": "Dire Forest Rat Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1347,
+    "name": "High Cave Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1348,
+    "name": "Crowned Drake Alpha",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1359,
+    "name": "Scrawny Frost Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1367,
+    "name": "Chaos Swamp Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1377,
+    "name": "Champion Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1383,
+    "name": "Wind Bug Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1393,
+    "name": "Thunder Shadow Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1400,
+    "name": "Craven Rock Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1401,
+    "name": "Wrath Elder Wolf",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1415,
+    "name": "Lightning Bug Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1419,
+    "name": "Withered Cave Bat II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1433,
+    "name": "Jagged Swamp Frog VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1439,
+    "name": "Cave Spider I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1449,
+    "name": "Malevolent Mountain Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1452,
+    "name": "Void Desert Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1474,
+    "name": "Wretched Swamp Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1487,
+    "name": "Transcendent Elder Dragon Ancient",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1492,
+    "name": "Leviathan Champion Bear",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1493,
+    "name": "Cursed Void Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1508,
+    "name": "Thunder Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1513,
+    "name": "Battle Cave Wolf II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1545,
+    "name": "Salt Mist Bug Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1552,
+    "name": "Night Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1555,
+    "name": "Grimy Rain Bug Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1572,
+    "name": "Venom Sand Spider Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1591,
+    "name": "Tar Jungle Cricket",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1595,
+    "name": "Bark Frog Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1601,
+    "name": "Chaos Void Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1604,
+    "name": "Murk Night Wolf Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1624,
+    "name": "Sable Hornet Sentinel Elite",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1628,
+    "name": "Dim Pebble Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1634,
+    "name": "Legendary Fatalis Scale",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1644,
+    "name": "Cinder Spider Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1647,
+    "name": "Umbral Stone Spider Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1648,
+    "name": "Royal Cave Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1651,
+    "name": "Mottled Leaf Frog",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1665,
+    "name": "Dusk Cinder Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1669,
+    "name": "Vine Frog Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1687,
+    "name": "Hellborn Mizutsune Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1695,
+    "name": "Transcendent Moon Lord Shard",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1702,
+    "name": "Mythic Moon Lord Shard",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1711,
+    "name": "Stone Bug Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1735,
+    "name": "Dragon River Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1743,
+    "name": "Wrath Shadow Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1765,
+    "name": "Bone Rain Bug",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1773,
+    "name": "Scorched Twilight Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1791,
+    "name": "Dusk Wolf Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1807,
+    "name": "Giant Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1815,
+    "name": "Rock Bear",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1831,
+    "name": "Fetid Rock Spider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1840,
+    "name": "Nightmare River Serpent",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1847,
+    "name": "Relentless Hornet Sentinel Elite",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1850,
+    "name": "Void Deep Sea Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1851,
+    "name": "Ancient Elder Dragon Ancient",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1855,
+    "name": "Abyss Drake Feral",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1882,
+    "name": "Cinder Bug Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1889,
+    "name": "Sinuous Storm Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1894,
+    "name": "Iron Fire Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1929,
+    "name": "Overlord Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1930,
+    "name": "Mangy Mud Crawler",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1935,
+    "name": "Immortal Swamp Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1937,
+    "name": "Battle Mountain Bear Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1939,
+    "name": "Undying Nergigante Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1941,
+    "name": "Meager Forest Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1942,
+    "name": "Lichen Swamp Wolf Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1949,
+    "name": "Cardinal Drake Alpha",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1958,
+    "name": "Mythic Empress of Light Fragment",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1962,
+    "name": "Chosen Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1964,
+    "name": "Gloom Mountain Bear",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1968,
+    "name": "Astral Cave Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1971,
+    "name": "Savage Stone Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1982,
+    "name": "Howling Mountain Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1991,
+    "name": "Meager Hail Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 1997,
+    "name": "Cave Cricket Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2016,
+    "name": "Obsidian Fire Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2033,
+    "name": "Murky Branch Bug VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2072,
+    "name": "Flame River Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2082,
+    "name": "Progenitor Champion Bear",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2090,
+    "name": "Transcendent Fatalis Scale",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2105,
+    "name": "Hellborn Nergigante Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2120,
+    "name": "Master Champion Bear",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2127,
+    "name": "Mythic Alatreon Fragment",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2140,
+    "name": "Iron Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2154,
+    "name": "Primordial Thunder Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2157,
+    "name": "Forest Cricket Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2179,
+    "name": "Corrupt Thunder Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2181,
+    "name": "Grim Cloud Bug Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2187,
+    "name": "Scraggly Rain Bug Greater",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2189,
+    "name": "Dread Mizutsune Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2197,
+    "name": "Storm Frost Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2202,
+    "name": "Root Crawler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2215,
+    "name": "Cave Crawler Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2221,
+    "name": "Infernal Cave Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2224,
+    "name": "Scraggly Root Crawler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2232,
+    "name": "Wrathful Barioth Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2233,
+    "name": "Ancient Rock Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2238,
+    "name": "Vile Rock Crawler",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2246,
+    "name": "Grimy Stone Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2247,
+    "name": "Shadow Wolf Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2250,
+    "name": "Immortal Empress of Light Fragment",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2254,
+    "name": "Dominant Apex Predator",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2257,
+    "name": "Mottled Pebble Bug Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2301,
+    "name": "Infernal Giant Bear Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2333,
+    "name": "Mythic Hollow Knight Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2340,
+    "name": "Wrath Ice Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2341,
+    "name": "Ice Wolf Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2347,
+    "name": "Twilight Tundra Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2365,
+    "name": "Raging Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2385,
+    "name": "Umbral Giant Spider Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2430,
+    "name": "Wild Swamp Frog",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2438,
+    "name": "Marsh Rock Crawler III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2441,
+    "name": "Dim Smoke Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2450,
+    "name": "Feral Rock Frog",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2451,
+    "name": "Putrid Cave Frog Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2456,
+    "name": "Craven Night Wolf II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2469,
+    "name": "Mud Cave Cricket",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2473,
+    "name": "Voidborn Tigrex Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2474,
+    "name": "Grimy Leaf Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2500,
+    "name": "Plague Ice Wolf Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2516,
+    "name": "Cave Cave Crawler Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2530,
+    "name": "Void Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2531,
+    "name": "Plague Shadow Wolf Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2536,
+    "name": "Flame Swamp Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2553,
+    "name": "Dread Fire Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2570,
+    "name": "Dread Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2581,
+    "name": "Abyssal Stone Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2588,
+    "name": "Putrid Cinder Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2602,
+    "name": "Slime Snow Bug IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2630,
+    "name": "Dominant Rock Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2633,
+    "name": "Forest Rat Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2663,
+    "name": "Hollow Lightning Bug IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2665,
+    "name": "Nightmare Forest Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2687,
+    "name": "Twilight Drake Feral",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2690,
+    "name": "Lichen Snow Wolf Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2693,
+    "name": "Frost Bug Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2713,
+    "name": "Ember Thunder Wolf IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2725,
+    "name": "Necrotic Wyvern Juvenile",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2739,
+    "name": "Pitted Frost Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2741,
+    "name": "Herald Cave Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2743,
+    "name": "Feral Root Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2790,
+    "name": "Mist Bug Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2793,
+    "name": "Lanky Thunder Bug Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2801,
+    "name": "Swamp Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2802,
+    "name": "Abyss Ice Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2837,
+    "name": "Death Elder Wolf",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2847,
+    "name": "Corrupt Rock Spider II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2860,
+    "name": "Gale Shadow Wolf VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2871,
+    "name": "Tempest Void Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2875,
+    "name": "Gaunt Leaf Frog II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2881,
+    "name": "Astral Desert Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2883,
+    "name": "Dire Deep Sea Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2884,
+    "name": "Bleached Stone Spider Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2886,
+    "name": "Lunar Tundra Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2888,
+    "name": "Lunar Fire Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2906,
+    "name": "Dim Root Crawler Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2929,
+    "name": "Barbed Thunder Wolf Awakened",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2943,
+    "name": "Tree Frog Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2944,
+    "name": "Rock Bear Omega",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2956,
+    "name": "Silver Desert Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2973,
+    "name": "Astral Fire Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2978,
+    "name": "Ancient Thunder Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2980,
+    "name": "Rain Bug Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2986,
+    "name": "Silver Rock Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 2997,
+    "name": "Forsaken Barioth Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3022,
+    "name": "Omega Mountain Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3036,
+    "name": "Wind Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3038,
+    "name": "Gnawed Twilight Wolf",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3059,
+    "name": "Eternal Elder Dragon Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3060,
+    "name": "Dusk Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3064,
+    "name": "Twilight Night Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3070,
+    "name": "Iron Champion Bear",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3076,
+    "name": "Rotten Rock Crawler Tamed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3083,
+    "name": "Sacred Desert Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3089,
+    "name": "Demon Thunder Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3091,
+    "name": "Swamp Spider III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3113,
+    "name": "Shadow Wolf Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3128,
+    "name": "Thunder Bug Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3130,
+    "name": "Primordial Desert Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3142,
+    "name": "Grand Champion Bear",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3144,
+    "name": "Snow Wolf Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3148,
+    "name": "Abyssal Swamp Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3149,
+    "name": "Night Wolf VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3153,
+    "name": "Swamp Wolf Alpha",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3167,
+    "name": "Scarred Pack Wolf Omega",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3169,
+    "name": "Bleak Pebble Bug Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3175,
+    "name": "Infernal Wyvern Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3207,
+    "name": "Absolute Empress of Light Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3217,
+    "name": "Juggernaut Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3228,
+    "name": "Obsidian Swamp Wolf I",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3229,
+    "name": "Rock Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3241,
+    "name": "Filthy Jungle Cricket Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3268,
+    "name": "Shadowed Desert Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3270,
+    "name": "Meager Root Frog",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3271,
+    "name": "Warlord Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3291,
+    "name": "Dark Bark Bug Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3313,
+    "name": "Stone Bug Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3315,
+    "name": "Gaunt Forest Cricket II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3345,
+    "name": "Archon Forest Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3346,
+    "name": "Withered Forest Bat I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3350,
+    "name": "Sacred Mountain Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3360,
+    "name": "True White Fatalis",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3363,
+    "name": "Lightning Deep Sea Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3390,
+    "name": "Exalted Stone Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3396,
+    "name": "Undying Swamp Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3408,
+    "name": "Corrupt Dust Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3413,
+    "name": "Ragged Snow Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3416,
+    "name": "Umbral Forest Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3420,
+    "name": "Root Frog Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3435,
+    "name": "Titan Shadow Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3436,
+    "name": "Wretched Cloud Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3437,
+    "name": "Eternal Fatalis Scale",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3451,
+    "name": "Leviathan Elder Drake",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3466,
+    "name": "Cave Crawler Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3477,
+    "name": "Marsh Thunder Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3481,
+    "name": "Doom Cave Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3494,
+    "name": "Ice Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3501,
+    "name": "Blood Fire Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3505,
+    "name": "Cursed Ice Wolf Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3525,
+    "name": "Cataclysm Diablos Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3526,
+    "name": "Vine Crawler VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3527,
+    "name": "Drowned Forest Bear Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3535,
+    "name": "Lightning Forest Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3542,
+    "name": "Slime Soot Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3550,
+    "name": "Eternal Empress of Light Fragment",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3554,
+    "name": "Ravaged Cave Spider",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3580,
+    "name": "Swamp Spider Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3582,
+    "name": "Transcendent Empress of Light Eternal",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3584,
+    "name": "Fell Cave Crawler Prime",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3606,
+    "name": "Ember Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3611,
+    "name": "Forsaken Tigrex Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3627,
+    "name": "Royal Rock Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3634,
+    "name": "Dust Bug I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3642,
+    "name": "Forest Wolf Lesser",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3652,
+    "name": "Hallowed Elder Drake",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3655,
+    "name": "Ice Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3661,
+    "name": "Unholy Ancient Wolf",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3686,
+    "name": "Cursed Ember Spider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3690,
+    "name": "Fallen Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3712,
+    "name": "Overlord Champion Bear",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3714,
+    "name": "Tree Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3720,
+    "name": "Ravaged Night Wolf Corrupted",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3723,
+    "name": "Hungry Snow Wolf Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3734,
+    "name": "Titan Forest Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3740,
+    "name": "Bone Cinder Bug IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3748,
+    "name": "Eternal Nightmare King Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3761,
+    "name": "Undying Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3767,
+    "name": "Fallen Tigrex Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3773,
+    "name": "Frost Swamp Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3785,
+    "name": "Cave Spider III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3798,
+    "name": "Primordial Radiance Echo",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3804,
+    "name": "Primordial Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3810,
+    "name": "Bleached Cave Bear",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3818,
+    "name": "Malevolent Deep Sea Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3833,
+    "name": "War Tundra Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3859,
+    "name": "Dark Wolf I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3861,
+    "name": "Twilight Stone Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3869,
+    "name": "Giant Ice Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3875,
+    "name": "Absolute Nightmare King Fragment",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3880,
+    "name": "Plague Shadow Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3883,
+    "name": "Lord Cave Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3898,
+    "name": "Knotted Cave Spider Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3924,
+    "name": "Ether Tundra Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3935,
+    "name": "Storm Wolf V",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3937,
+    "name": "Void Mountain Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3944,
+    "name": "Bristled Ember Spider Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3960,
+    "name": "Soot Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3961,
+    "name": "Yellow Dust Bug III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3970,
+    "name": "Cloud Bug Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3972,
+    "name": "Small Swamp Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 3982,
+    "name": "Lightning Shadow Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4026,
+    "name": "Knotted Giant Spider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4038,
+    "name": "Mountain Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4044,
+    "name": "Mire Cave Wolf IV",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4045,
+    "name": "Rust Ice Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4058,
+    "name": "Crimson Soot Spider V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4066,
+    "name": "Frozen River Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4068,
+    "name": "Night Swamp Bat Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4069,
+    "name": "Swamp Wolf Elite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4075,
+    "name": "Shadow Wolf Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4094,
+    "name": "Squalid Ice Bug IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4108,
+    "name": "Commander Cave Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4109,
+    "name": "Cosmic Empress of Light Eternal",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4119,
+    "name": "Vile Storm Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4126,
+    "name": "Hoar Storm Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4132,
+    "name": "Bone Wind Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4159,
+    "name": "Hail Bug Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4167,
+    "name": "Crag Branch Bug Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4184,
+    "name": "Dire Drake Feral",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4190,
+    "name": "Titan Lake Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4192,
+    "name": "Primordial Hornet Sentinel Elite",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4197,
+    "name": "Invincible Elder Dragon Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4202,
+    "name": "Savage Elder Drake",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4226,
+    "name": "Necrotic Forest Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4259,
+    "name": "Soot Spider Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4261,
+    "name": "Absolute Hollow Knight Fragment",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4263,
+    "name": "Supreme Nightmare King Fragment",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4267,
+    "name": "Venom Stone Bear Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4280,
+    "name": "Eternal Alatreon Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4313,
+    "name": "Twilight Wolf Cursed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4314,
+    "name": "Cave Ash Bug Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4348,
+    "name": "Arcane Mountain Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4355,
+    "name": "Thunder Bug Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4357,
+    "name": "Apex Apex Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4361,
+    "name": "Death Thunder Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4362,
+    "name": "Raging Forest Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4365,
+    "name": "Haze Cave Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4382,
+    "name": "Thunder Jungle Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4404,
+    "name": "Twilight Giant Spider Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4435,
+    "name": "Omega Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4440,
+    "name": "Mud Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4445,
+    "name": "Cloud Bug Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4450,
+    "name": "Lunar Swamp Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4459,
+    "name": "Undying Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4468,
+    "name": "Overlord Forest Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4486,
+    "name": "Ether Ice Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4505,
+    "name": "Giant Swamp Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4518,
+    "name": "Lightning Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4523,
+    "name": "Jagged Tree Frog",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4535,
+    "name": "Siege Forest Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4541,
+    "name": "Feral Mud Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4550,
+    "name": "Cave Crawler VI",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4553,
+    "name": "Primordial Barioth Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4557,
+    "name": "Swamp Spider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4561,
+    "name": "Root Crawler I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4565,
+    "name": "Obsidian Sand Spider III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4574,
+    "name": "Dim Mud Crawler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4576,
+    "name": "Primordial Diablos Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4588,
+    "name": "Murky Sand Bug Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4613,
+    "name": "Dusk Wolf IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4623,
+    "name": "Dread Hornet Sentinel Elite",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4625,
+    "name": "Pitted Frost Wolf Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4638,
+    "name": "Grim Pebble Bug Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4645,
+    "name": "Rain Bug III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4662,
+    "name": "Gale Rock Bear Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4671,
+    "name": "Wretched Stone Bug Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4690,
+    "name": "Feral Cave Frog Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4698,
+    "name": "Frost Forest Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4720,
+    "name": "Sovereign Forest Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4727,
+    "name": "Lunar Forest Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4729,
+    "name": "Flame Shadow Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4734,
+    "name": "Primordial Rathian Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4743,
+    "name": "Eclipse Wyvern Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4778,
+    "name": "Ember Spider Blessed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4785,
+    "name": "Yellow Rain Bug VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4804,
+    "name": "Ragged Fog Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4827,
+    "name": "Soot Spider I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4843,
+    "name": "Infernal Elder Dragon Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4846,
+    "name": "Grave Rock Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4848,
+    "name": "Haggard Bark Frog Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4853,
+    "name": "Death Swamp Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4856,
+    "name": "Vanguard Swamp Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4865,
+    "name": "Eternal Mountain Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4869,
+    "name": "Ash Spider Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4872,
+    "name": "Leaf Frog",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4883,
+    "name": "Jungle Cricket",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4886,
+    "name": "Swamp Spider Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4891,
+    "name": "Swamp Wolf II",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4905,
+    "name": "Squalid Forest Bat Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4910,
+    "name": "Forest Cricket",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4918,
+    "name": "Plague Thunder Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4919,
+    "name": "Frozen Thunder Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4927,
+    "name": "Ash Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 4974,
+    "name": "Small Mud Crawler V",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5018,
+    "name": "Leaf Bug Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5038,
+    "name": "Twilight Wyvern Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5044,
+    "name": "Twilight Wolf Major",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5056,
+    "name": "Arcane Shadow Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5089,
+    "name": "Putrid Root Crawler Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5110,
+    "name": "Warped Drake Alpha",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5115,
+    "name": "Noxious Rock Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5117,
+    "name": "Forbidden Diablos Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5127,
+    "name": "Herald Apex Predator",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5129,
+    "name": "Bark Bug Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5140,
+    "name": "Malevolent Reef Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5149,
+    "name": "Scraped Forest Rat VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5175,
+    "name": "Tattered Vine Crawler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5187,
+    "name": "Scourge Swamp Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5196,
+    "name": "Undying Forest Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5201,
+    "name": "Abyssal Elder Drake",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5245,
+    "name": "Frost Bug Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5260,
+    "name": "Storm Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5269,
+    "name": "Dusk Cinder Spider Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5287,
+    "name": "Nightmare Mountain Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5290,
+    "name": "Necrotic Mountain Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5308,
+    "name": "Snow Wolf III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5311,
+    "name": "Withering Dust Spider Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5315,
+    "name": "Scraggly Snow Bug Blessed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5324,
+    "name": "Murky Mud Frog II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5344,
+    "name": "Primordial Elder Dragon Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5364,
+    "name": "Unholy Champion Bear",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5368,
+    "name": "Lanky Cinder Bug Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5374,
+    "name": "Archon Drake Alpha",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5392,
+    "name": "Sunken Wind Bug Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5405,
+    "name": "Prime Rock Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5416,
+    "name": "Fell Wind Bug Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5419,
+    "name": "Undying Deep Sea Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5423,
+    "name": "Ash Spider V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5452,
+    "name": "Branch Bug VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5460,
+    "name": "Grim Cave Frog",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5468,
+    "name": "Pale Swamp Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5477,
+    "name": "Eternal Nergigante Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5478,
+    "name": "Wrathful Mizutsune Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5481,
+    "name": "Archon Ancient Wolf",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5482,
+    "name": "Arcane Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5490,
+    "name": "Bleak Leaf Frog Tamed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5531,
+    "name": "Storm Wolf III",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5533,
+    "name": "Umbral Cinder Spider Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5542,
+    "name": "Forest Wolf Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5543,
+    "name": "Risen Cave Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5553,
+    "name": "Coiled Thunder Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5582,
+    "name": "Singed Forest Spider Alpha",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5591,
+    "name": "Shadow Branch Bug Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5600,
+    "name": "Frozen Drake Feral",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5603,
+    "name": "Scraped Dirt Bug II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5608,
+    "name": "Torn Tree Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5617,
+    "name": "Leaf Frog Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5620,
+    "name": "Squalid Stone Bug Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5632,
+    "name": "Leaking Dusk Wolf Omega",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5637,
+    "name": "Thunder Thunder Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5640,
+    "name": "Wrath Thunder Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5669,
+    "name": "Craven Ember Spider",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5691,
+    "name": "Crimson Sand Spider Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5703,
+    "name": "Crude Dirt Bug Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5708,
+    "name": "Ancient Giant Bear Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5710,
+    "name": "Crimson Giant Spider",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5727,
+    "name": "Forbidden Barioth Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5732,
+    "name": "Bark Frog Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5734,
+    "name": "Herald Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5736,
+    "name": "Cosmic Crimson Fatalis",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5751,
+    "name": "Storm Wolf VII",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5757,
+    "name": "Vine Crawler",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5772,
+    "name": "Iron Drake Alpha",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5783,
+    "name": "Ember Spider Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5785,
+    "name": "Soot Bug Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5795,
+    "name": "True Crimson Fatalis",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5810,
+    "name": "Crag Cave Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5816,
+    "name": "Filthy Rain Bug III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5830,
+    "name": "Blazing Lake Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5831,
+    "name": "Wandering Cave Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5846,
+    "name": "Relentless Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5857,
+    "name": "Scourge Giant Bear Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5862,
+    "name": "Dingy Dirt Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5871,
+    "name": "Pack Wolf Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5896,
+    "name": "Supreme Hollow Knight Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5903,
+    "name": "Ember Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5907,
+    "name": "Grimy Forest Bat Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5922,
+    "name": "Infernal Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5936,
+    "name": "Grimy Fog Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5942,
+    "name": "Gale Cave Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5944,
+    "name": "Blighted Stone Bear Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5952,
+    "name": "Filthy Tree Frog Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5953,
+    "name": "Fell Dirt Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5954,
+    "name": "Swamp Spider IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5955,
+    "name": "Infernal River Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5960,
+    "name": "Rotten Dirt Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5961,
+    "name": "Sinuous Dark Wolf VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5964,
+    "name": "Branch Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5968,
+    "name": "Apocalypse Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5981,
+    "name": "Dread Shadow Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 5987,
+    "name": "Immortal Champion Bear",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6011,
+    "name": "Invincible Hornet Sentinel Elite",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6027,
+    "name": "Arcane Jungle Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6032,
+    "name": "Fog Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6034,
+    "name": "Lanky Frost Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6036,
+    "name": "Elder Apex Predator",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6037,
+    "name": "Ice Wolf Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6069,
+    "name": "Forest Bat Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6133,
+    "name": "Wandering Cave Bear",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6176,
+    "name": "Obsidian Swamp Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6182,
+    "name": "Malevolent Lake Serpent",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6184,
+    "name": "Grand Forest Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6196,
+    "name": "Siege Nergigante Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6218,
+    "name": "Grimy Tree Frog Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6229,
+    "name": "Eternal Thunder Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6236,
+    "name": "Crowned Stone Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6238,
+    "name": "Dark Cinder Bug Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6250,
+    "name": "Rotten Jungle Cricket Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6296,
+    "name": "Shadowed Ice Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6308,
+    "name": "Fell Frost Bug Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6316,
+    "name": "Astral Rock Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6318,
+    "name": "Forbidden Mizutsune Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6325,
+    "name": "Apocalypse Tigrex Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6330,
+    "name": "Sludge Swamp Bat Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6332,
+    "name": "Corrupted Void Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6347,
+    "name": "Yellow Jungle Cricket",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6354,
+    "name": "Risen Champion Bear",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6364,
+    "name": "Stone Bug Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6371,
+    "name": "Wild Forest Bat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6374,
+    "name": "Mangy Leaf Frog Omega",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6380,
+    "name": "Dirt Bug Beta",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6421,
+    "name": "Ragged Tree Crawler Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6423,
+    "name": "Root Frog Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6463,
+    "name": "Omega The Radiance Omega Eternal",
+    "rarity": "EX",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6474,
+    "name": "Forest Bat",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6497,
+    "name": "Sludge Vine Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6501,
+    "name": "Necrotic Reef Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6502,
+    "name": "Eternal Swamp Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6510,
+    "name": "Leviathan Swamp Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6511,
+    "name": "Spindly Bark Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6518,
+    "name": "Siege Elder Dragon Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6520,
+    "name": "Sludge Swamp Frog Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6524,
+    "name": "Dust Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6533,
+    "name": "Corrupted Drake Feral",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6536,
+    "name": "Mangy Cinder Bug Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6541,
+    "name": "Obsidian Dust Spider Corrupted",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6543,
+    "name": "Giant Rock Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6544,
+    "name": "Chosen Rock Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6555,
+    "name": "Obsidian Ice Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6561,
+    "name": "Cave Frog",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6585,
+    "name": "Soot Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6587,
+    "name": "Night Dirt Bug I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6593,
+    "name": "Master Stone Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6607,
+    "name": "Undying Rathalos Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6625,
+    "name": "Swamp Tree Crawler Tamed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6637,
+    "name": "Lunar Cave Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6639,
+    "name": "Swamp Bat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6640,
+    "name": "Decayed Snow Wolf V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6642,
+    "name": "Apocalypse Mizutsune Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6645,
+    "name": "Soggy Fog Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6648,
+    "name": "Quarried Ember Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6652,
+    "name": "Crystal Reef Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6663,
+    "name": "Dingy Ash Bug Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6680,
+    "name": "War Lake Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6701,
+    "name": "Scraped Stone Bug Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6716,
+    "name": "Scourge Ice Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6731,
+    "name": "Dirt Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6732,
+    "name": "Eternal Fire Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6733,
+    "name": "Giant Spider Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6758,
+    "name": "Salt Thunder Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6769,
+    "name": "Juggernaut Forest Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6775,
+    "name": "Supreme Ancient Wolf",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6779,
+    "name": "Doom Shadow Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6782,
+    "name": "Forbidden Elder Dragon Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6811,
+    "name": "Rune Forest Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6817,
+    "name": "Bark Bug Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6820,
+    "name": "Bleached Stone Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6822,
+    "name": "Pack Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6834,
+    "name": "War Cave Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6838,
+    "name": "Leaf Frog Blessed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6847,
+    "name": "Scrawny Swamp Bat Alpha",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6848,
+    "name": "Mythic Radiance Echo",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6851,
+    "name": "Coiled Stone Spider Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6859,
+    "name": "Withered Cave Bat Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6860,
+    "name": "Soot Spider Tamed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6868,
+    "name": "Pale Wind Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6888,
+    "name": "Primordial Fatalis Scale",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6891,
+    "name": "Axiom Fatalis Black Dragon Supreme",
+    "rarity": "EX",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6897,
+    "name": "Twilight Jungle Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6912,
+    "name": "Spindly Pebble Bug Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6916,
+    "name": "Archon Nergigante Scout",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6932,
+    "name": "Rotten Dirt Bug Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6937,
+    "name": "Crag Mud Crawler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6952,
+    "name": "Ice Wolf Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6953,
+    "name": "Sewer Frost Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6961,
+    "name": "Ascendant Hornet Sentinel Elite",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6962,
+    "name": "Hallowed Cave Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 6994,
+    "name": "Tree Frog Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7007,
+    "name": "Cinder Bug",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7013,
+    "name": "Swamp Wolf Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7024,
+    "name": "Celestial River Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7038,
+    "name": "Cave Crawler V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7059,
+    "name": "Crimson Mountain Bear",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7065,
+    "name": "Ember Snow Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7067,
+    "name": "Scraped Vine Crawler VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7073,
+    "name": "Withering Swamp Spider Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7077,
+    "name": "Venom Sand Spider Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7080,
+    "name": "Quarried Giant Spider Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7082,
+    "name": "Hoar Cave Bear",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7088,
+    "name": "Forsaken Rathalos Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7091,
+    "name": "Timeless Nightmare King Grimm",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7099,
+    "name": "Tyrant Champion Bear",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7104,
+    "name": "Frost Wolf II",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7107,
+    "name": "Small Mud Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7120,
+    "name": "Royal Swamp Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7126,
+    "name": "Lightning Bug Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7136,
+    "name": "Rust Cave Spider Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7141,
+    "name": "Rain Bug Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7155,
+    "name": "Forest Cricket Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7162,
+    "name": "Ragged Smoke Bug Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7169,
+    "name": "Cave Cricket",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7173,
+    "name": "Corrupt Stone Bear VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7174,
+    "name": "Sacred Elder Wolf",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7176,
+    "name": "Immortal Alatreon Fragment",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7180,
+    "name": "Jade Jungle Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7186,
+    "name": "Ash Snow Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7188,
+    "name": "Knotted Twilight Wolf IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7191,
+    "name": "Frost Bug VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7197,
+    "name": "Scraped Snow Bug Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7219,
+    "name": "Frost Bug Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7233,
+    "name": "Grimy Cave Frog Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7245,
+    "name": "Lunar Thunder Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7251,
+    "name": "Crag Rain Bug Minor",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7252,
+    "name": "Squalid Cave Cricket Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7274,
+    "name": "Spectral Lake Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7275,
+    "name": "Mire Forest Bear",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7278,
+    "name": "Swamp Wolf Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7288,
+    "name": "Astral Lake Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7295,
+    "name": "Ravaged Night Wolf",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7300,
+    "name": "Leviathan Rock Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7318,
+    "name": "Necrotic Ice Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7322,
+    "name": "Tempest Lake Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7325,
+    "name": "Bristled Swamp Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7333,
+    "name": "Timeless The Radiance True",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7354,
+    "name": "Archon Mizutsune Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7361,
+    "name": "Astral Shadow Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7367,
+    "name": "Bone Fog Bug IV",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7371,
+    "name": "Giant Drake Feral",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7373,
+    "name": "Chaos Tundra Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7389,
+    "name": "Fallen Rathalos Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7390,
+    "name": "Lightning Giant Bear Elder",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7400,
+    "name": "Forest Bat Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7413,
+    "name": "Scrawny Forest Bat Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7417,
+    "name": "Smoke Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7435,
+    "name": "Frost Wolf Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7453,
+    "name": "Rust Thunder Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7467,
+    "name": "Soot Bug Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7469,
+    "name": "Dire Mud Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7477,
+    "name": "Frost Wolf VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7481,
+    "name": "Lichen Ash Spider Awakened",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7489,
+    "name": "Cave Bear Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7512,
+    "name": "Shadowed Giant Bear Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7513,
+    "name": "Wind Bug Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7515,
+    "name": "Tree Crawler Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7523,
+    "name": "Snow Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7543,
+    "name": "Dread Thunder Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7552,
+    "name": "Omnipotent Fatalis Ancient",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7553,
+    "name": "Lichen Dust Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7571,
+    "name": "Death Giant Bear Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7579,
+    "name": "Fell Cinder Bug Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7597,
+    "name": "Craven Swamp Wolf I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7602,
+    "name": "Meager Tree Frog Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7603,
+    "name": "Leaking Frost Wolf II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7621,
+    "name": "Scorched Rock Bear Tamed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7653,
+    "name": "Ember Sand Spider Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7658,
+    "name": "Cursed Ice Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7701,
+    "name": "Dire Bark Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7705,
+    "name": "Waning Dark Wolf I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7706,
+    "name": "Cave Wolf Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7713,
+    "name": "Corrupt Swamp Spider V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7726,
+    "name": "Knotted Stone Bear",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7728,
+    "name": "Dark Wolf Awakened",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7731,
+    "name": "Cardinal Champion Bear",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7742,
+    "name": "Rune Tundra Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7743,
+    "name": "Elder Elder Drake",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7750,
+    "name": "Sacred Rock Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7752,
+    "name": "Cinder Bug IV",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7764,
+    "name": "Crimson Swamp Bear",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7776,
+    "name": "Cardinal Ancient Wolf",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7783,
+    "name": "Iron Swamp Giant",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7787,
+    "name": "Drowned Dark Wolf Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7793,
+    "name": "Wrathful Nergigante Scout",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7807,
+    "name": "Bleak Bark Frog Young",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7817,
+    "name": "Frost Ash Spider Feral",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7838,
+    "name": "Shadow Cave Cricket VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7860,
+    "name": "Apex Mountain Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7873,
+    "name": "Sand Spider Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7880,
+    "name": "Ash Spider IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7906,
+    "name": "Iron Dirt Bug Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7913,
+    "name": "Threadbare Rock Crawler Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7931,
+    "name": "Frost Bug Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7958,
+    "name": "Bark Frog Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7961,
+    "name": "Scarred Shadow Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7963,
+    "name": "Cave Bat Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7970,
+    "name": "Dust Bug Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7971,
+    "name": "Celestial Elder Wolf",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7984,
+    "name": "Frozen Mountain Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7989,
+    "name": "Sunken Bark Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 7993,
+    "name": "Storm Bug VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8000,
+    "name": "Scrawny Root Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8007,
+    "name": "Ash Bug Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8013,
+    "name": "Apex Wyvern Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8034,
+    "name": "Salt Rain Bug VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8042,
+    "name": "Legendary Moon Lord Shard",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8044,
+    "name": "Cave Bat II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8056,
+    "name": "Hellborn Tigrex Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8074,
+    "name": "Corrupted Thunder Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8093,
+    "name": "Ember Forest Bear VII",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8103,
+    "name": "Frost Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8125,
+    "name": "Wretched Rain Bug IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8143,
+    "name": "Noxious Swamp Spider Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8167,
+    "name": "Zealous Champion Bear",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8186,
+    "name": "Ash Vine Crawler VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8195,
+    "name": "Haze Rock Bear III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8207,
+    "name": "Eternal Rathalos Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8222,
+    "name": "Death Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8230,
+    "name": "Pale Dirt Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8231,
+    "name": "Tree Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8232,
+    "name": "Rock Spider Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8239,
+    "name": "Threadbare Storm Bug Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8241,
+    "name": "Celestial Fire Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8250,
+    "name": "Abyss Fire Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8259,
+    "name": "Warlord Mountain Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8272,
+    "name": "Rust Cave Bear IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8281,
+    "name": "Haze Swamp Spider Greater",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8311,
+    "name": "Forsaken Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8314,
+    "name": "Necrotic Deep Sea Serpent",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8319,
+    "name": "Thunder Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8322,
+    "name": "Smoke Bug Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8337,
+    "name": "Branch Bug Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8343,
+    "name": "Forest Rat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8345,
+    "name": "Sunken Vine Frog I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8347,
+    "name": "Colossus Tigrex Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8356,
+    "name": "Malevolent Ice Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8357,
+    "name": "Gale Swamp Bear",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8362,
+    "name": "Archon Zinogre Prime",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8399,
+    "name": "Ancient Fire Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8403,
+    "name": "Singed Pack Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8419,
+    "name": "Soul Reef Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8421,
+    "name": "Lanky Cave Frog IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8434,
+    "name": "Knotted Swamp Bear Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8454,
+    "name": "Hoar Swamp Bear Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8464,
+    "name": "Sorrow Stone Bear Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8465,
+    "name": "Obsidian Forest Bear III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8466,
+    "name": "Meager Vine Crawler",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8476,
+    "name": "Flame Drake Feral",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8477,
+    "name": "Cloud Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8490,
+    "name": "Hungry Giant Spider Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8495,
+    "name": "Dust Spider Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8496,
+    "name": "Godlike Empress of Light Fragment",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8517,
+    "name": "Dark Forest Rat Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8541,
+    "name": "Ashen Sand Spider IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8548,
+    "name": "Weak Vine Frog I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8558,
+    "name": "Rune Rock Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8562,
+    "name": "Wild Swamp Frog VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8569,
+    "name": "Dread Elder Dragon Scout",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8570,
+    "name": "Ember Shadow Wolf Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8576,
+    "name": "Craven Thunder Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8577,
+    "name": "Waning Twilight Wolf Awakened",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8588,
+    "name": "Grim Sand Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8592,
+    "name": "Silver Thunder Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8595,
+    "name": "Umbral Giant Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8596,
+    "name": "Jade Ice Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8597,
+    "name": "Haggard Vine Frog V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8610,
+    "name": "Bark Bug Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8619,
+    "name": "Withering Swamp Spider",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8622,
+    "name": "Mud Frog IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8658,
+    "name": "Soul Forest Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8660,
+    "name": "Malevolent Giant Bear Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8667,
+    "name": "Zealous Mountain Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8672,
+    "name": "Sunken Vine Frog Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8679,
+    "name": "Savage Champion Bear",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8684,
+    "name": "Dim Rock Frog",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8689,
+    "name": "Gnawed Frost Wolf",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8690,
+    "name": "Cave Bat Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8698,
+    "name": "Immortal Elder Dragon Ancient",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8700,
+    "name": "Ragged Rain Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8713,
+    "name": "Forest Wolf",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8721,
+    "name": "Swamp Tree Frog Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8725,
+    "name": "Runed Ancient Wolf",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8726,
+    "name": "Leaf Frog Beta",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8733,
+    "name": "Bristled Forest Bear Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8734,
+    "name": "Vine Crawler Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8764,
+    "name": "Obsidian Sand Spider Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8768,
+    "name": "Royal Ancient Wolf",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8770,
+    "name": "Rock Spider Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8780,
+    "name": "Plague Fire Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8797,
+    "name": "Bleak Frost Bug Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8802,
+    "name": "Scraggly Jungle Cricket V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8828,
+    "name": "High Forest Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8841,
+    "name": "Ice Wolf III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8853,
+    "name": "Small Lightning Bug IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8873,
+    "name": "Stone Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8874,
+    "name": "Mottled Dirt Bug Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8888,
+    "name": "Crag Cave Frog Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8889,
+    "name": "Obsidian Thunder Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8918,
+    "name": "Mud Crawler",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8937,
+    "name": "Eclipse Drake Feral",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8939,
+    "name": "Shroud Pack Wolf Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8941,
+    "name": "Threadbare Cave Crawler II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8973,
+    "name": "Undying Rock Giant",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8989,
+    "name": "Doom River Serpent",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 8995,
+    "name": "Mottled Soot Bug Young",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9001,
+    "name": "Yellow Forest Cricket Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9007,
+    "name": "Tattered Twig Bug Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9018,
+    "name": "Pitted Ember Spider Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9021,
+    "name": "Weedy Wind Bug I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9063,
+    "name": "Stone Bear Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9079,
+    "name": "Frost Wolf III",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9093,
+    "name": "Waning Sand Spider Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9104,
+    "name": "Wild Cinder Bug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9119,
+    "name": "Dirt Bug Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9123,
+    "name": "Forest Spider Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9129,
+    "name": "Void River Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9130,
+    "name": "Gale Forest Spider",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9133,
+    "name": "Mountain Bear Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9153,
+    "name": "Abyss Swamp Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9160,
+    "name": "Necrotic Tundra Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9166,
+    "name": "Mountain Bear Greater",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9172,
+    "name": "Lesser Leaf Frog",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9174,
+    "name": "Blood Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9181,
+    "name": "Dark Wolf",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9191,
+    "name": "Rock Frog",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9197,
+    "name": "Overlord Cave Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9204,
+    "name": "Ashen Cave Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9211,
+    "name": "Dark Cave Frog V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9214,
+    "name": "Immortal Nightmare King Fragment",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9216,
+    "name": "Drowned Ember Spider Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9218,
+    "name": "Crimson Ash Spider Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9229,
+    "name": "Giant Shadow Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9235,
+    "name": "Vine Crawler Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9241,
+    "name": "Meager Sand Bug III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9267,
+    "name": "Scraped Lightning Bug II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9281,
+    "name": "Crude Snow Bug Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9294,
+    "name": "Plague Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9297,
+    "name": "Bleak Fog Bug Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9299,
+    "name": "Yellow Cave Bat",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9307,
+    "name": "Haggard Smoke Bug Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9331,
+    "name": "Titan Tigrex Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9333,
+    "name": "Dread Swamp Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9340,
+    "name": "Immortal Drake Alpha",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9357,
+    "name": "Snow Bug Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9383,
+    "name": "Leaf Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9386,
+    "name": "Warden Cave Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9398,
+    "name": "Sacred Fire Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9407,
+    "name": "Knotted Sand Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9430,
+    "name": "Ragged Thunder Bug VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9438,
+    "name": "Wrath Fire Drake",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9473,
+    "name": "Forest Spider Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9481,
+    "name": "Singed Cave Wolf",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9489,
+    "name": "Titan Rock Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9492,
+    "name": "Vanguard Mountain Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9494,
+    "name": "Tattered Cave Crawler V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9495,
+    "name": "Lord Swamp Giant",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9498,
+    "name": "Fog Bug III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9523,
+    "name": "Death Desert Drake",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9525,
+    "name": "Dragon Deep Sea Serpent",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9542,
+    "name": "Dark Wolf Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9552,
+    "name": "Crystal Shadow Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9584,
+    "name": "Dire Mountain Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9592,
+    "name": "Slime Dirt Bug Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9610,
+    "name": "Astral Swamp Drake",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9626,
+    "name": "Cave Crawler Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9627,
+    "name": "Wretched Mud Crawler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9635,
+    "name": "Brine Stone Spider III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9649,
+    "name": "Vine Frog Tamed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9653,
+    "name": "Twilight Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9669,
+    "name": "Relentless Barioth Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9703,
+    "name": "Forest Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9704,
+    "name": "War Rock Drake",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9708,
+    "name": "Omega Stone Giant",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9720,
+    "name": "Grave Shadow Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9729,
+    "name": "Tattered Snow Bug III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9735,
+    "name": "Storm Bug Elite",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9754,
+    "name": "Shadow Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9767,
+    "name": "Barbed Dusk Wolf",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9775,
+    "name": "Frost Bug Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9790,
+    "name": "Death Forest Serpent",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9798,
+    "name": "Leaking Thunder Wolf Blessed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9799,
+    "name": "Fell Lightning Bug",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9803,
+    "name": "Celestial Desert Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9814,
+    "name": "Frost Bug VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9825,
+    "name": "Slime Forest Rat Omega",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9833,
+    "name": "Twig Bug III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9835,
+    "name": "Lightning Swamp Serpent",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9842,
+    "name": "Spectral Forest Drake",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9843,
+    "name": "Mottled Cave Bat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9848,
+    "name": "Mud Crawler Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9849,
+    "name": "Squalid Rock Crawler",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9855,
+    "name": "Tree Frog I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9856,
+    "name": "Weedy Cloud Bug Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9860,
+    "name": "Scorched Forest Wolf II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9878,
+    "name": "Leaking Shadow Wolf",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9906,
+    "name": "Pebble Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9908,
+    "name": "Vine Frog",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9919,
+    "name": "Unholy Rock Giant",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9946,
+    "name": "Titan Hornet Sentinel Elite",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9954,
+    "name": "Bleached Pack Wolf Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9960,
+    "name": "Dust Vine Frog Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9965,
+    "name": "Marsh Frost Bug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9968,
+    "name": "Bleached Stone Bear Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9969,
+    "name": "Rotten Smoke Bug Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9971,
+    "name": "Supreme Drake Alpha",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9983,
+    "name": "Legendary Elder Dragon Ancient",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  },
+  {
+    "id": 9987,
+    "name": "Grave Drake Feral",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Wild Frontier",
+    "element": "Nature"
+  }
+]

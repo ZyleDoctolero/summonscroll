@@ -1,0 +1,197 @@
+{
+  "realms": [
+    {
+      "name": "Divine Threshold",
+      "slug": "divine_threshold",
+      "element": "Divine",
+      "tagline": "Where attention is prayer.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Radiant",
+        "Fallen",
+        "Hierophant"
+      ],
+      "apex_quest": "The Final Threshold",
+      "is_new_realm": false
+    },
+    {
+      "name": "Ancient Vaults",
+      "slug": "ancient_vaults",
+      "element": "Arcane",
+      "tagline": "Where knowledge keeps itself.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Sage",
+        "Ruinous",
+        "Archivist"
+      ],
+      "apex_quest": "The Vault Unsealed",
+      "is_new_realm": false
+    },
+    {
+      "name": "Haunted Veil",
+      "slug": "haunted_veil",
+      "element": "Dread",
+      "tagline": "Where the night is honest.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Nightmare",
+        "Redeemed",
+        "Dread Court"
+      ],
+      "apex_quest": "The Waking Dream",
+      "is_new_realm": false
+    },
+    {
+      "name": "Blighted Expanse",
+      "slug": "blighted_expanse",
+      "element": "Death",
+      "tagline": "Where rest is sacred.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Blighted",
+        "Necrotic",
+        "Spectral"
+      ],
+      "apex_quest": "The Last Rite",
+      "is_new_realm": false
+    },
+    {
+      "name": "Void Frontier",
+      "slug": "void_frontier",
+      "element": "Stellar",
+      "tagline": "Where the next horizon is the only horizon.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Nova",
+        "Void Walker",
+        "Star Sovereign"
+      ],
+      "apex_quest": "The Last Horizon",
+      "is_new_realm": false
+    },
+    {
+      "name": "Chaos Wastes",
+      "slug": "chaos_wastes",
+      "element": "Chaos",
+      "tagline": "Where strength is the only law.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Berserker",
+        "Warlord",
+        "Chaos Ascendant"
+      ],
+      "apex_quest": "The Eternal Warpath",
+      "is_new_realm": false
+    },
+    {
+      "name": "The Outer Dark",
+      "slug": "outer_dark",
+      "element": "Void",
+      "tagline": "Where stillness reveals.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Cosmic",
+        "Corrupted",
+        "The Witnessed"
+      ],
+      "apex_quest": "The Silence Beyond Stars",
+      "is_new_realm": false
+    },
+    {
+      "name": "Wild Frontier",
+      "slug": "wild_frontier",
+      "element": "Nature",
+      "tagline": "Where the body remembers.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Feral",
+        "Ancestral",
+        "Apex Predator"
+      ],
+      "apex_quest": "The Grand Hunt",
+      "is_new_realm": false
+    },
+    {
+      "name": "Elder Realm",
+      "slug": "elder_realm",
+      "element": "Primal",
+      "tagline": "Where the first lives still live.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Leviathan",
+        "Ancestral",
+        "Tidal Sovereign"
+      ],
+      "apex_quest": "The First Ocean",
+      "is_new_realm": false
+    },
+    {
+      "name": "Digital Nexus",
+      "slug": "digital_nexus",
+      "element": "Digital",
+      "tagline": "Where intention compiles.",
+      "base_monsters": 1000,
+      "evolution_entries": 13000,
+      "paths": [
+        "Overclock",
+        "Corrupted Glitch",
+        "Sovereign AI"
+      ],
+      "apex_quest": "The Final Compile",
+      "is_new_realm": false
+    },
+    {
+      "name": "Myth Eternal",
+      "slug": "myth_eternal",
+      "element": "Primordial",
+      "tagline": "Where the world remembers being born.",
+      "base_monsters": 50,
+      "evolution_entries": 650,
+      "paths": [
+        "Titan Born",
+        "Myth Ascendant",
+        "Origin God"
+      ],
+      "apex_quest": "Before the First Word",
+      "is_new_realm": true
+    },
+    {
+      "name": "Iron Dominion",
+      "slug": "iron_dominion",
+      "element": "Synthetic",
+      "tagline": "Where intention becomes leverage.",
+      "base_monsters": 50,
+      "evolution_entries": 650,
+      "paths": [
+        "War Machine",
+        "Steam Titan",
+        "Iron Sovereign"
+      ],
+      "apex_quest": "The Grand Forge",
+      "is_new_realm": true
+    }
+  ],
+  "total_base_monsters": 10100,
+  "total_evolution_entries": 131300,
+  "generated_at": "2026-06-27T02:49:00.393Z",
+  "expansion": {
+    "myth_eternal_total": 784,
+    "iron_dominion_total": 556,
+    "fusion_chains": 20,
+    "skill_trees": 8,
+    "new_evolution_entries": 21440,
+    "grand_total_evolution_entries": 151440,
+    "base_monsters_total": 11340,
+    "generated_at": "2026-06-27T03:23:09.574Z"
+  }
+}

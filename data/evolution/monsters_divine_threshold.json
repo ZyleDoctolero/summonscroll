@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 1,
+    "name": "Lightning Dark Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5,
+    "name": "Twilight Templar Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 13,
+    "name": "Grim Chosen Acolyte Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 33,
+    "name": "Cataclysm Leviathan Sea",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 34,
+    "name": "Mottled Chapel Priest Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 36,
+    "name": "Holy Guard",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 40,
+    "name": "Fell Divine Acolyte Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 51,
+    "name": "Bleak Church Acolyte Minor",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 54,
+    "name": "Abyss Shadow Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 69,
+    "name": "Spindly Chapel Priest II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 81,
+    "name": "Slime Temple Guard Ancient",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 95,
+    "name": "Howling Paladin Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 101,
+    "name": "Haze Earth Sprite Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 130,
+    "name": "Dusk Blessed Sprite Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 136,
+    "name": "Cursed Temple Knight III",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 141,
+    "name": "Exalted Angel Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 144,
+    "name": "Initiate Angel",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 154,
+    "name": "Sable Phoenix Rebirth",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 165,
+    "name": "Altar Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 177,
+    "name": "Obsidian Chapel Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 181,
+    "name": "Shadowed Paladin Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 190,
+    "name": "Night Sacred Monk Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 197,
+    "name": "Sacred Acolyte Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 209,
+    "name": "Grand Grand Crusader",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 213,
+    "name": "Herald Holy Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 224,
+    "name": "Swamp Chapel Acolyte Prime",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 233,
+    "name": "Hollow Dark Sprite Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 243,
+    "name": "Blessed Sprite Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 252,
+    "name": "Howling Crusader Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 282,
+    "name": "Flame Crusader Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 285,
+    "name": "Bone Temple Monk Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 305,
+    "name": "Frost Wind Sprite Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 319,
+    "name": "Divine Guard Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 348,
+    "name": "Gale Earth Sprite II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 353,
+    "name": "Ragged Sacred Guard Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 359,
+    "name": "Abyssal Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 363,
+    "name": "Waning Sacred Sprite VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 366,
+    "name": "Spectral Crusader Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 383,
+    "name": "Chaos Fallen Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 396,
+    "name": "Celestial Monk Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 406,
+    "name": "Trainee Angel",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 444,
+    "name": "Novice Angel Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 452,
+    "name": "Drowned Water Sprite IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 476,
+    "name": "Archon Grand Crusader",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 500,
+    "name": "Flame Shadow Angel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 509,
+    "name": "Shadowed Valkyrie",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 511,
+    "name": "Dark Sprite Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 520,
+    "name": "Doom Shadow Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 535,
+    "name": "Quarried Inquisitor Recruit Awakened",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 543,
+    "name": "Pale Holy Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 557,
+    "name": "Jagged Chapel Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 563,
+    "name": "Ravaged Templar Recruit",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 565,
+    "name": "Holy Monk Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 582,
+    "name": "Abyss Crusader Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 600,
+    "name": "Immortal Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 616,
+    "name": "Primordial Hades Underworld",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 652,
+    "name": "Temple Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 654,
+    "name": "Noxious Templar Recruit Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 688,
+    "name": "Infernal Shiva Eternal",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 693,
+    "name": "Divine Sprite Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 697,
+    "name": "Titan Titan Earth Lord",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 699,
+    "name": "Sewer Chosen Guard III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 707,
+    "name": "Chapel Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 714,
+    "name": "Rust Altar Knight Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 727,
+    "name": "Murky Altar Priest Junior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 735,
+    "name": "Pitted Divine Sprite Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 738,
+    "name": "Silver Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 745,
+    "name": "Sorrow Apprentice Valkyrie Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 760,
+    "name": "Corrupt Ice Sprite V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 772,
+    "name": "Abyss Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 775,
+    "name": "Grim Shrine Acolyte Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 788,
+    "name": "Elder Holy Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 795,
+    "name": "Void Paladin Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 803,
+    "name": "Jagged Holy Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 805,
+    "name": "Cardinal Divine Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 847,
+    "name": "Ancient Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 860,
+    "name": "Lesser Valkyrie Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 876,
+    "name": "Archon Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 903,
+    "name": "Shroud Divine Sprite Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 904,
+    "name": "Weedy Sacred Monk Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 910,
+    "name": "Frozen Fallen Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 929,
+    "name": "Archon Holy Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 938,
+    "name": "Champion Divine Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 942,
+    "name": "Silver Titan Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 944,
+    "name": "Necrotic Valkyrie",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 945,
+    "name": "Lunar Crusader Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 954,
+    "name": "Astral Paladin Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 968,
+    "name": "Gloom Light Sprite Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 977,
+    "name": "Dusk Sacred Sprite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 989,
+    "name": "Hellborn Ramuh Elder",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1017,
+    "name": "Ascendant Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1022,
+    "name": "Divine Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1023,
+    "name": "Weedy Temple Guard Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1026,
+    "name": "Savage Archangel Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1070,
+    "name": "War Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1072,
+    "name": "Rust Sacred Sprite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1089,
+    "name": "Scraped Altar Guard",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1107,
+    "name": "Thorn Divine Sprite Young",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1109,
+    "name": "Temple Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1113,
+    "name": "Siege Leviathan Sea",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1118,
+    "name": "Blessed Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1131,
+    "name": "Chaos Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1136,
+    "name": "Astral Night Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1168,
+    "name": "Inquisitor Recruit II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1170,
+    "name": "Death Valkyrie",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1186,
+    "name": "Shrine Priest VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1188,
+    "name": "Temple Monk",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1198,
+    "name": "Soggy Holy Monk Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1212,
+    "name": "Prime Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1222,
+    "name": "Infernal Angel Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1223,
+    "name": "Iron Shrine Priest",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1248,
+    "name": "Dire Shadow Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1285,
+    "name": "Primordial Paladin Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1288,
+    "name": "Lightning Garuda Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1295,
+    "name": "Jagged Paladin Recruit Awakened",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1318,
+    "name": "Iron Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1320,
+    "name": "Primordial Sigrun Valkyrie",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1332,
+    "name": "Tattered Church Guard",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1341,
+    "name": "Doom Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1343,
+    "name": "Shadowed Crusader Champion",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1352,
+    "name": "Sacred Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1357,
+    "name": "Vile Chapel Guard Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1372,
+    "name": "Divine Acolyte Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1392,
+    "name": "Threadbare Shrine Monk Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1403,
+    "name": "Wrath Tainted Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1410,
+    "name": "Shrine Guard V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1414,
+    "name": "Wretched Blessed Acolyte Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1426,
+    "name": "Filthy Temple Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1447,
+    "name": "Ether Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1450,
+    "name": "Transcendent Achilles Invincible",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1461,
+    "name": "Crusader Recruit",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1462,
+    "name": "Doom Paladin Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1465,
+    "name": "Thorn Inquisitor Recruit II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1480,
+    "name": "Murky Temple Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1490,
+    "name": "Corrupt Sentinel Recruit Omega",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1500,
+    "name": "Night Church Acolyte Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1504,
+    "name": "Church Priest Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1506,
+    "name": "Holy Monk Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1507,
+    "name": "Ancient Garuda Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1517,
+    "name": "Holy Monk Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1518,
+    "name": "Chosen Archangel Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1535,
+    "name": "Obsidian Divine Sprite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1554,
+    "name": "Silver Fallen Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1557,
+    "name": "Templar Recruit Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1588,
+    "name": "Dust Chapel Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1592,
+    "name": "Rune Titan Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1600,
+    "name": "Infernal Divine Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1613,
+    "name": "Dim Chapel Guard Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1618,
+    "name": "Dire Titan Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1619,
+    "name": "Knotted Lightning Sprite Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1621,
+    "name": "Forbidden Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1626,
+    "name": "Wind Sprite Cursed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1641,
+    "name": "Mottled Chapel Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1658,
+    "name": "Chosen Acolyte Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1660,
+    "name": "Apocalypse Phoenix Rebirth",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1673,
+    "name": "Ash Novice Angel",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1684,
+    "name": "Minor Valkyrie III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1693,
+    "name": "Shrine Guard III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1707,
+    "name": "Archon Angel Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1714,
+    "name": "Dread Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1715,
+    "name": "Sacred Acolyte Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1720,
+    "name": "Royal Sacred Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1721,
+    "name": "Immortal Sigrun Valkyrie",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1731,
+    "name": "Ultimate Kefka God",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1733,
+    "name": "War Tainted Angel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1746,
+    "name": "Progenitor Master Templar",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1756,
+    "name": "Shrine Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1767,
+    "name": "Rotten Initiate Angel",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1782,
+    "name": "Cataclysm Garuda Storm",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1786,
+    "name": "Herald Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1789,
+    "name": "Chapel Guard Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1790,
+    "name": "Crag Blessed Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1810,
+    "name": "Shard Paladin Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1812,
+    "name": "Wild Fledgling Angel",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1825,
+    "name": "Rotten Chosen Acolyte Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1837,
+    "name": "Night Sacred Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1839,
+    "name": "Frozen Titan Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1843,
+    "name": "Shadowed Shadow Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1852,
+    "name": "Scraggly Altar Priest Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1854,
+    "name": "Chaos Tainted Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1860,
+    "name": "Eclipse Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1864,
+    "name": "Putrid Altar Priest Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1867,
+    "name": "Sewer Sacred Acolyte Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1880,
+    "name": "Shrine Knight II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1887,
+    "name": "Plague Night Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1895,
+    "name": "Cursed Ice Sprite Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1897,
+    "name": "Scraggly Holy Monk",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1904,
+    "name": "Wild Shrine Monk Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1911,
+    "name": "Death Shiva Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1921,
+    "name": "Vile Chapel Monk Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1925,
+    "name": "Lesser Valkyrie VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1966,
+    "name": "Shroud Shrine Knight Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1967,
+    "name": "Dusk Chapel Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1970,
+    "name": "Immortal Archangel Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1984,
+    "name": "Ancient Hades Underworld",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1989,
+    "name": "Godlike Bahamut Prime",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 1996,
+    "name": "Putrid Chosen Guard Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2000,
+    "name": "Undying Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2001,
+    "name": "Sovereign Master Templar",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2007,
+    "name": "Forbidden Titan Earth Lord",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2019,
+    "name": "Doom Tainted Angel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2024,
+    "name": "Temple Priest IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2034,
+    "name": "Siege Sacred Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2046,
+    "name": "Grave Fallen Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2049,
+    "name": "Gnawed Shrine Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2052,
+    "name": "Ash Altar Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2057,
+    "name": "Thorn Sentinel Recruit Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2074,
+    "name": "Scorched Sacred Sprite Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2077,
+    "name": "Battle Earth Sprite Prime",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2083,
+    "name": "Pale Temple Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2117,
+    "name": "Ice Sprite Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2121,
+    "name": "Sewer Holy Monk Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2122,
+    "name": "Mottled Altar Guard",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2131,
+    "name": "Titan Odin All-Father",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2133,
+    "name": "Hollow Temple Knight",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2134,
+    "name": "Eclipse Valkyrie",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2141,
+    "name": "Apprentice Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2146,
+    "name": "Umbral Apprentice Valkyrie Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2158,
+    "name": "Sinuous Dark Sprite Lesser",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2180,
+    "name": "Pitted Sentinel Recruit Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2182,
+    "name": "Sacred Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2183,
+    "name": "Lightning Night Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2193,
+    "name": "Night Trainee Angel Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2207,
+    "name": "Mottled Lesser Valkyrie Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2220,
+    "name": "Soggy Sacred Guard IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2226,
+    "name": "Sacred Monk Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2249,
+    "name": "Primordial Titan Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2258,
+    "name": "Void Tainted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2271,
+    "name": "Infernal Holy Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2287,
+    "name": "Forsaken Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2290,
+    "name": "Dread Shiva Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2306,
+    "name": "Putrid Holy Monk Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2314,
+    "name": "Water Sprite Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2337,
+    "name": "Divine Monk II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2346,
+    "name": "Ancient Achilles Invincible",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2360,
+    "name": "Shrine Acolyte Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2363,
+    "name": "Mottled Church Guard Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2373,
+    "name": "Siege Ramuh Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2375,
+    "name": "Hoar Inquisitor Recruit Corrupted",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2383,
+    "name": "Shrine Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2390,
+    "name": "Blood Templar Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2396,
+    "name": "Dingy Sacred Acolyte Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2399,
+    "name": "Vile Divine Acolyte",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2406,
+    "name": "Crusader Recruit Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2421,
+    "name": "Murk Church Knight III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2433,
+    "name": "Novice Angel Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2453,
+    "name": "Raging Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2467,
+    "name": "Blood Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2486,
+    "name": "Church Knight Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2495,
+    "name": "Storm Holy Sprite VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2497,
+    "name": "Shroud Sentinel Recruit Tamed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2501,
+    "name": "Chapel Guard",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2503,
+    "name": "Frozen Shadow Angel",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2506,
+    "name": "Dire Temple Monk Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2509,
+    "name": "War Titan Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2513,
+    "name": "Water Sprite Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2517,
+    "name": "Obsidian Minor Valkyrie VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2520,
+    "name": "Hallowed Master Templar",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2522,
+    "name": "Scraggly Altar Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2523,
+    "name": "Divine Sprite Lesser",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2528,
+    "name": "Novice Angel",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2538,
+    "name": "Obsidian Dark Sprite Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2552,
+    "name": "Meager Chapel Priest",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2563,
+    "name": "Gloom Ice Sprite VII",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2567,
+    "name": "Altar Guard Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2575,
+    "name": "Royal High Paladin",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2576,
+    "name": "Brine Holy Sprite Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2589,
+    "name": "Lichen Shrine Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2594,
+    "name": "Chosen Acolyte",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2605,
+    "name": "Altar Guard Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2616,
+    "name": "Withered Chapel Acolyte Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2637,
+    "name": "Rotten Sacred Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2638,
+    "name": "Brine Lightning Sprite Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2640,
+    "name": "Sovereign Archangel Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2643,
+    "name": "Gloom Paladin Recruit Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2650,
+    "name": "Obsidian Low Valkyrie Tamed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2653,
+    "name": "Legendary Perseus Gorgon-Slayer",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2667,
+    "name": "Supreme Divine Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2672,
+    "name": "Wretched Initiate Angel Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2674,
+    "name": "Sewer Fledgling Angel III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2677,
+    "name": "Dim Initiate Angel",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2683,
+    "name": "Decayed Initiate Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2698,
+    "name": "Sacred Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2738,
+    "name": "Eternal Bahamut Prime",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2744,
+    "name": "Minor Angel",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2748,
+    "name": "Fire Sprite IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2760,
+    "name": "Squalid Blessed Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2762,
+    "name": "Salt Church Acolyte",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2795,
+    "name": "Progenitor Divine Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2821,
+    "name": "Warped Archangel Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2828,
+    "name": "Yellow Holy Acolyte Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2833,
+    "name": "Umbral Church Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2840,
+    "name": "Demon Shiva Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2858,
+    "name": "Death Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2864,
+    "name": "Immortal Angel Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2885,
+    "name": "Crag Divine Monk IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2895,
+    "name": "Sacred Monk Beta",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2910,
+    "name": "Scourge Templar Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2920,
+    "name": "Blood Titan Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2925,
+    "name": "Earth Sprite Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2939,
+    "name": "Iron Chapel Priest",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2952,
+    "name": "Eternal Valkyrie",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2963,
+    "name": "Scraggly Altar Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2968,
+    "name": "Church Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2975,
+    "name": "Dread Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2983,
+    "name": "Shrine Guard Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2984,
+    "name": "Venom Temple Knight Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2988,
+    "name": "Jagged Church Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2989,
+    "name": "Blessed Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 2999,
+    "name": "Twilight Light Sprite Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3001,
+    "name": "Sovereign Divine Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3018,
+    "name": "Weedy Blessed Monk Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3019,
+    "name": "Sludge Minor Angel Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3024,
+    "name": "Colossus Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3034,
+    "name": "Altar Priest Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3048,
+    "name": "Shrine Acolyte Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3057,
+    "name": "Sovereign High Paladin",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3069,
+    "name": "Slime Altar Priest",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3082,
+    "name": "Lunar Valkyrie",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3096,
+    "name": "Altar Guard Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3104,
+    "name": "Thunder Crusader Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3117,
+    "name": "Frost Templar Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3126,
+    "name": "Murk Crusader Recruit",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3152,
+    "name": "Church Priest II",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3161,
+    "name": "Warlord Sacred Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3172,
+    "name": "Obsidian Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3181,
+    "name": "Wrath Fallen Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3183,
+    "name": "Church Priest Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3197,
+    "name": "Dire Valkyrie",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3218,
+    "name": "Obsidian Lesser Valkyrie Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3222,
+    "name": "Meager Sacred Guard Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3227,
+    "name": "Chapel Guard Omega",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3233,
+    "name": "Eternal Ramuh Elder",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3265,
+    "name": "Mangy Chapel Acolyte Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3274,
+    "name": "Rune Templar Champion",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3288,
+    "name": "Celestial Crusader Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3305,
+    "name": "Blessed Sprite Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3326,
+    "name": "Chosen Guard II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3359,
+    "name": "Swamp Novice Angel",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3369,
+    "name": "Iron Angel Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3379,
+    "name": "Divine Eden Eternal",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3383,
+    "name": "Chosen Guard Lesser",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3392,
+    "name": "Commander Grand Crusader",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3403,
+    "name": "Dingy Shrine Priest",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3406,
+    "name": "Frozen Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3411,
+    "name": "Celestial Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3476,
+    "name": "Lightning Paladin Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3498,
+    "name": "Threadbare Shrine Priest Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3503,
+    "name": "Astral Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3510,
+    "name": "Templar Recruit III",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3513,
+    "name": "Forbidden Poseidon Sea God",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3514,
+    "name": "Brine Fire Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3530,
+    "name": "Temple Acolyte Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3538,
+    "name": "Noxious Water Sprite Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3544,
+    "name": "Blood Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3545,
+    "name": "Eternal Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3561,
+    "name": "Slime Church Priest VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3566,
+    "name": "Apocalypse Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3587,
+    "name": "Trainee Angel Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3599,
+    "name": "Howling Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3608,
+    "name": "Leviathan Divine Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3615,
+    "name": "Shrine Acolyte Major",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3635,
+    "name": "Dim Blessed Monk Ancient",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3640,
+    "name": "Obsidian Shadow Angel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3659,
+    "name": "Cave Trainee Angel Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3660,
+    "name": "Void Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3668,
+    "name": "Relentless Odin All-Father",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3676,
+    "name": "Corrupt Inquisitor Recruit Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3679,
+    "name": "Dread Titan Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3681,
+    "name": "Weak Church Guard",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3696,
+    "name": "Apprentice Valkyrie Beta",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3700,
+    "name": "Undying Shiva Eternal",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3702,
+    "name": "Undying Shadow Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3703,
+    "name": "Earth Sprite Corrupted",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3725,
+    "name": "Runed Divine Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3726,
+    "name": "Infernal Tainted Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3744,
+    "name": "Ether Paladin Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3752,
+    "name": "Ancient Shadow Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3753,
+    "name": "Silver Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3795,
+    "name": "Sovereign Grand Crusader",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3797,
+    "name": "Spectral Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3799,
+    "name": "Filthy Altar Acolyte Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3813,
+    "name": "Primordial Achilles Invincible",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3817,
+    "name": "Filthy Holy Acolyte Lesser",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3829,
+    "name": "Cave Altar Monk",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3835,
+    "name": "Salt Altar Monk Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3838,
+    "name": "Frost Crusader Recruit Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3847,
+    "name": "Jade Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3849,
+    "name": "Giant Valkyrie",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3872,
+    "name": "Pitted Paladin Recruit Beta",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3879,
+    "name": "Craven Sacred Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3908,
+    "name": "Blazing Tainted Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3917,
+    "name": "Infinite Bahamut Zero",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3920,
+    "name": "Holy Monk Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3926,
+    "name": "Scraggly Chapel Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3932,
+    "name": "Plague Initiate Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3947,
+    "name": "Necrotic Night Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3954,
+    "name": "Plague Earth Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3963,
+    "name": "Chapel Priest Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3979,
+    "name": "Sinuous Water Sprite I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3983,
+    "name": "Gloom Sentinel Recruit IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3992,
+    "name": "Lanky Shrine Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 3997,
+    "name": "Scraggly Shrine Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4010,
+    "name": "Church Guard",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4014,
+    "name": "Cataclysm Odin All-Father",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4017,
+    "name": "Lightning Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4020,
+    "name": "Dire Shrine Acolyte",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4028,
+    "name": "Fire Sprite Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4037,
+    "name": "Twilight Tainted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4056,
+    "name": "Shrine Acolyte Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4065,
+    "name": "Iron Grand Crusader",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4086,
+    "name": "Paladin Recruit III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4095,
+    "name": "Weak Chosen Acolyte",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4112,
+    "name": "Lord Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4128,
+    "name": "Pale Altar Monk Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4138,
+    "name": "Hollow Wind Sprite Prime",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4141,
+    "name": "Scourge Night Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4143,
+    "name": "Meager Chosen Guard Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4150,
+    "name": "Threadbare Altar Priest Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4152,
+    "name": "Noxious Blessed Sprite Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4177,
+    "name": "Dragon Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4186,
+    "name": "Savage Angel Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4195,
+    "name": "Sacred Shadow Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4205,
+    "name": "Raging Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4209,
+    "name": "Colossus Ifrit Sovereign",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4230,
+    "name": "Scraped Temple Priest Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4238,
+    "name": "Hoar Dark Sprite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4251,
+    "name": "Iron Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4264,
+    "name": "Church Guard III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4266,
+    "name": "Mire Shrine Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4269,
+    "name": "Umbral Water Sprite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4281,
+    "name": "Sacred Monk Ancient",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4288,
+    "name": "Shrine Knight Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4289,
+    "name": "Plague Tainted Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4312,
+    "name": "Church Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4333,
+    "name": "Ultimate Anima Pain",
+    "rarity": "Mythic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4343,
+    "name": "Wild Holy Guard Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4353,
+    "name": "Sacred Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4378,
+    "name": "Dim Altar Acolyte Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4391,
+    "name": "Mottled Dark Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4416,
+    "name": "Forbidden Leviathan Sea",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4426,
+    "name": "Apocalypse Poseidon Sea God",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4436,
+    "name": "Chapel Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4467,
+    "name": "Sorrow Blessed Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4475,
+    "name": "Herald Master Templar",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4492,
+    "name": "Murky Temple Priest Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4507,
+    "name": "Twisted Light Sprite IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4508,
+    "name": "Fledgling Angel",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4527,
+    "name": "Undying Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4538,
+    "name": "Water Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4558,
+    "name": "Tar Fledgling Angel Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4562,
+    "name": "Invincible Ifrit Sovereign",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4564,
+    "name": "Juggernaut Holy Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4569,
+    "name": "Initiate Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4577,
+    "name": "Ancient Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4590,
+    "name": "Temple Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4615,
+    "name": "Lesser Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4617,
+    "name": "Hollow Divine Monk Awakened",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4618,
+    "name": "Waning Wind Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4641,
+    "name": "Giant Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4642,
+    "name": "Holy Acolyte Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4646,
+    "name": "Divine Guard Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4659,
+    "name": "Supreme Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4660,
+    "name": "Leaking Water Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4675,
+    "name": "Divine Monk",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4680,
+    "name": "Wandering Sentinel Recruit I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4693,
+    "name": "Drowned Minor Valkyrie Feral",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4701,
+    "name": "Malevolent Paladin Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4705,
+    "name": "Jade Templar Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4714,
+    "name": "Shrine Monk Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4722,
+    "name": "Legendary Bahamut Prime",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4736,
+    "name": "Legendary Hades Underworld",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4742,
+    "name": "Vile Chosen Acolyte Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4753,
+    "name": "Chapel Priest Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4754,
+    "name": "Decayed Crusader Recruit VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4768,
+    "name": "Withered Church Acolyte Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4771,
+    "name": "Howling Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4779,
+    "name": "Relentless Phoenix Rebirth",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4788,
+    "name": "Dominant Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4796,
+    "name": "Malevolent Valkyrie",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4814,
+    "name": "Blessed Acolyte Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4820,
+    "name": "Withered Celestial Monk Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4823,
+    "name": "Church Priest III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4824,
+    "name": "Umbral Sacred Sprite Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4834,
+    "name": "Obsidian Shiva Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4849,
+    "name": "Crystal Night Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4860,
+    "name": "Cosmic Safer Sephiroth",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4862,
+    "name": "Soggy Church Guard Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4895,
+    "name": "Ice Sprite Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4897,
+    "name": "Demon Dark Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4899,
+    "name": "Chapel Knight Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4936,
+    "name": "Transcendent Alexander Divine",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4938,
+    "name": "Fetid Inquisitor Recruit Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4940,
+    "name": "Church Guard Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4946,
+    "name": "Juggernaut Angel Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 4952,
+    "name": "Tyrant Sacred Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5002,
+    "name": "Temple Knight Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5012,
+    "name": "Feral Altar Guard Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5013,
+    "name": "Obsidian Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5017,
+    "name": "Grimy Minor Angel",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5064,
+    "name": "Ashen Initiate Valkyrie Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5069,
+    "name": "Noxious Low Valkyrie Elite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5082,
+    "name": "Forsaken Odin All-Father",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5095,
+    "name": "Hoar Templar Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5142,
+    "name": "Archon Leviathan Sea",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5163,
+    "name": "Primordial Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5164,
+    "name": "Templar Recruit Greater",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5165,
+    "name": "Blessed Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5167,
+    "name": "Shrine Knight Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5169,
+    "name": "Transcendent Heracles Divine",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5176,
+    "name": "Shrine Guard II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5188,
+    "name": "Hollow Chapel Acolyte Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5199,
+    "name": "Transcendent Perseus Gorgon-Slayer",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5202,
+    "name": "Demon Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5213,
+    "name": "Zero Zeus Thunder King Absolute Omega",
+    "rarity": "EX",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5229,
+    "name": "Chaos Dark Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5235,
+    "name": "Pale Sacred Guard",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5240,
+    "name": "Spindly Chapel Acolyte Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5262,
+    "name": "Primordial Dark Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5267,
+    "name": "Apprentice Valkyrie Lesser",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5273,
+    "name": "Yellow Chapel Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5305,
+    "name": "Twilight Fallen Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5328,
+    "name": "Low Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5355,
+    "name": "Infernal Fallen Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5371,
+    "name": "Flame Paladin Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5375,
+    "name": "Exalted Archangel Minor",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5377,
+    "name": "Craven Initiate Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5413,
+    "name": "Gale Initiate Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5421,
+    "name": "Leviathan Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5430,
+    "name": "Mottled Chapel Guard",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5434,
+    "name": "Murky Shrine Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5439,
+    "name": "Iron Temple Acolyte VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5441,
+    "name": "Champion Sacred Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5445,
+    "name": "Shrine Priest Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5447,
+    "name": "Chapel Monk Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5451,
+    "name": "Crowned Angel Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5453,
+    "name": "Venom Lesser Valkyrie Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5466,
+    "name": "Celestial Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5471,
+    "name": "Gale Blessed Sprite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5480,
+    "name": "Chapel Acolyte II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5505,
+    "name": "Colossus Phoenix Rebirth",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5527,
+    "name": "Light Sprite Alpha",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5530,
+    "name": "Soul Shiva Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5551,
+    "name": "Sinuous Ice Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5564,
+    "name": "Small Temple Acolyte V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5572,
+    "name": "Axiom Bahamut Zero Supreme Eternal",
+    "rarity": "EX",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5574,
+    "name": "Chaos Night Angel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5575,
+    "name": "Paladin Recruit Lesser",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5593,
+    "name": "Prime Holy Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5594,
+    "name": "Withered Temple Monk Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5610,
+    "name": "Immortal Achilles Invincible",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5615,
+    "name": "Dark Chosen Guard Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5628,
+    "name": "High High Paladin",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5642,
+    "name": "Unholy High Paladin",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5649,
+    "name": "Lightning Sprite II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5674,
+    "name": "Scarred Temple Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5681,
+    "name": "Grim Chapel Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5694,
+    "name": "Plague Dark Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5696,
+    "name": "Blood Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5699,
+    "name": "Coiled Light Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5700,
+    "name": "Temple Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5706,
+    "name": "Fetid Fire Sprite Elite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5750,
+    "name": "Infinite Anima Pain",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5769,
+    "name": "Rune Garuda Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5773,
+    "name": "Ancient Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5777,
+    "name": "Torn Altar Monk Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5780,
+    "name": "Hoar Lesser Valkyrie Cursed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5797,
+    "name": "Eternal Crusader Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5812,
+    "name": "Chapel Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5814,
+    "name": "Ashen Water Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5817,
+    "name": "Spindly Altar Priest",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5824,
+    "name": "Rune Valkyrie",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5825,
+    "name": "Jagged Celestial Monk",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5827,
+    "name": "Dim Trainee Angel Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5828,
+    "name": "Crystal Valkyrie",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5842,
+    "name": "Leaking Wind Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5860,
+    "name": "Lord Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5867,
+    "name": "Umbral Minor Valkyrie Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5874,
+    "name": "Cave Sacred Guard VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5881,
+    "name": "Chapel Knight Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5883,
+    "name": "Cosmic Exdeath Tree",
+    "rarity": "Mythic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5884,
+    "name": "Crimson Sentinel Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5893,
+    "name": "Minor Angel IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5915,
+    "name": "Archon Poseidon Sea God",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5929,
+    "name": "Hallowed Sacred Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5934,
+    "name": "Scourge Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5941,
+    "name": "Chaos Templar Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5963,
+    "name": "Bristled Dark Sprite Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5995,
+    "name": "Coiled Minor Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 5996,
+    "name": "Scrawny Divine Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6023,
+    "name": "Fell Blessed Monk VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6053,
+    "name": "Twilight Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6060,
+    "name": "Grim Temple Acolyte Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6065,
+    "name": "Colossus Odin All-Father",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6067,
+    "name": "Dust Sacred Acolyte V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6078,
+    "name": "Temple Guard Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6091,
+    "name": "Titan Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6105,
+    "name": "Cardinal Holy Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6112,
+    "name": "Spectral Templar Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6117,
+    "name": "Marsh Church Monk Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6149,
+    "name": "Spindly Novice Angel Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6154,
+    "name": "Gaunt Blessed Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6155,
+    "name": "Wandering Temple Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6160,
+    "name": "Chapel Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6164,
+    "name": "Unholy Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6172,
+    "name": "Night Celestial Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6180,
+    "name": "Frost Lightning Sprite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6188,
+    "name": "Crimson Wind Sprite Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6207,
+    "name": "Coiled Low Valkyrie Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6216,
+    "name": "Novice Angel Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6217,
+    "name": "Earth Sprite Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6223,
+    "name": "Battle Blessed Sprite Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6228,
+    "name": "Rune Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6230,
+    "name": "Minor Angel V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6233,
+    "name": "Absolute Hades Underworld",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6243,
+    "name": "Church Priest",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6247,
+    "name": "Initiate Angel V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6254,
+    "name": "Scraped Shrine Acolyte Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6261,
+    "name": "Paladin Recruit V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6265,
+    "name": "Fledgling Angel Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6278,
+    "name": "Small Church Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6285,
+    "name": "Trainee Angel Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6291,
+    "name": "Sewer Divine Acolyte Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6293,
+    "name": "Umbral Earth Sprite V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6298,
+    "name": "Pale Shrine Acolyte",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6305,
+    "name": "Ash Chapel Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6317,
+    "name": "Titan Shiva Eternal",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6333,
+    "name": "Siege Archangel Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6341,
+    "name": "Brine Apprentice Valkyrie Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6358,
+    "name": "Astral Fallen Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6361,
+    "name": "Twilight Templar Recruit Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6368,
+    "name": "Novice Angel VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6370,
+    "name": "Altar Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6390,
+    "name": "Altar Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6391,
+    "name": "Leviathan Sacred Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6398,
+    "name": "Plague Water Sprite Prime",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6402,
+    "name": "Altar Guard II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6404,
+    "name": "Forbidden Ramuh Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6405,
+    "name": "Divine Monk Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6407,
+    "name": "Crag Blessed Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6433,
+    "name": "Weedy Temple Monk Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6445,
+    "name": "Eternal Alexander Divine",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6446,
+    "name": "Jade Titan Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6451,
+    "name": "Blessed Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6454,
+    "name": "Brine Lesser Valkyrie Omega",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6462,
+    "name": "Gaunt Holy Acolyte Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6476,
+    "name": "Plague Crusader Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6478,
+    "name": "Unholy Divine Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6487,
+    "name": "Hollow Blessed Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6537,
+    "name": "Murky Chapel Acolyte Alpha",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6548,
+    "name": "Twilight Initiate Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6550,
+    "name": "Soggy Divine Guard Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6567,
+    "name": "Vile Blessed Guard IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6569,
+    "name": "Vanguard Holy Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6572,
+    "name": "Divine Acolyte",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6573,
+    "name": "Bleak Chosen Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6580,
+    "name": "Abyss Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6582,
+    "name": "Transcendent Anima Pain",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6589,
+    "name": "Withering Altar Knight V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6592,
+    "name": "Chaos Titan Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6601,
+    "name": "Tar Divine Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6611,
+    "name": "Lichen Paladin Recruit III",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6630,
+    "name": "Hoar Chapel Knight Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6632,
+    "name": "Primordial Phoenix Rebirth",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6646,
+    "name": "Titan Ifrit Sovereign",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6649,
+    "name": "Overlord Sacred Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6653,
+    "name": "Necrotic Shadow Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6670,
+    "name": "Undying Titan Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6679,
+    "name": "Mud Shrine Monk Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6695,
+    "name": "Bone Church Guard Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6698,
+    "name": "Dark Sprite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6707,
+    "name": "Mire Paladin Recruit Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6708,
+    "name": "Decayed Sacred Sprite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6710,
+    "name": "Scraggly Sacred Monk Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6729,
+    "name": "Iron Night Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6735,
+    "name": "Chapel Knight I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6738,
+    "name": "Elder Master Templar",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6742,
+    "name": "Lanky Divine Acolyte Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6747,
+    "name": "Undying Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6748,
+    "name": "Shadow Sacred Acolyte II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6751,
+    "name": "Archon Odin All-Father",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6754,
+    "name": "Low Valkyrie Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6764,
+    "name": "Colossus Garuda Storm",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6798,
+    "name": "Immortal Bahamut Prime",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6805,
+    "name": "Scraggly Temple Acolyte Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6816,
+    "name": "Threadbare Chapel Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6842,
+    "name": "Pale Temple Acolyte Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6850,
+    "name": "Withering Fire Sprite Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6856,
+    "name": "Weak Blessed Guard III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6861,
+    "name": "Temple Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6865,
+    "name": "High Holy Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6876,
+    "name": "Paladin Recruit",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6880,
+    "name": "Crude Shrine Acolyte Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6883,
+    "name": "Supreme Angel Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6902,
+    "name": "Crimson Ice Sprite Corrupted",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6906,
+    "name": "Soggy Shrine Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6911,
+    "name": "Waning Shrine Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6914,
+    "name": "Nightmare Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6930,
+    "name": "Immortal Master Templar",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6948,
+    "name": "Voidborn Odin All-Father",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6968,
+    "name": "Shroud Sacred Sprite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 6983,
+    "name": "Bone Temple Priest Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7002,
+    "name": "Scourge Tainted Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7010,
+    "name": "Shadowed Templar Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7014,
+    "name": "Fallen Ramuh Elder",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7018,
+    "name": "Fledgling Angel Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7021,
+    "name": "Astral Titan Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7026,
+    "name": "Novice Angel Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7031,
+    "name": "Hellborn Phoenix Rebirth",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7037,
+    "name": "Scourge Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7039,
+    "name": "Lightning Sprite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7050,
+    "name": "Lunar Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7070,
+    "name": "Cataclysm Titan Earth Lord",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7074,
+    "name": "Temple Priest",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7076,
+    "name": "Dread Titan Earth Lord",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7092,
+    "name": "Jagged Church Priest",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7093,
+    "name": "Wind Sprite Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7096,
+    "name": "Initiate Angel VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7101,
+    "name": "Lightning Sprite Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7111,
+    "name": "Earth Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7117,
+    "name": "Relentless Titan Earth Lord",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7125,
+    "name": "Frost Light Sprite Blessed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7139,
+    "name": "Minor Angel Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7140,
+    "name": "Initiate Angel Awakened",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7151,
+    "name": "Noxious Chapel Knight V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7153,
+    "name": "Church Monk Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7154,
+    "name": "Sorrow Divine Sprite IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7166,
+    "name": "Astral Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7167,
+    "name": "Fledgling Angel III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7213,
+    "name": "Minor Angel Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7236,
+    "name": "Risen Holy Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7237,
+    "name": "Titan Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7238,
+    "name": "Scraggly Temple Guard Prime",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7246,
+    "name": "Blighted Shrine Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7250,
+    "name": "Shrine Monk Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7253,
+    "name": "Blood Tainted Angel",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7280,
+    "name": "Shroud Earth Sprite VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7301,
+    "name": "Nightmare Templar Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7305,
+    "name": "Gale Earth Sprite Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7308,
+    "name": "Scourge Paladin Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7309,
+    "name": "Dark Sprite Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7327,
+    "name": "Salt Holy Monk Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7330,
+    "name": "Bleak Chosen Acolyte Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7359,
+    "name": "Sorrow Initiate Valkyrie Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7364,
+    "name": "Scrawny Temple Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7380,
+    "name": "Giant Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7403,
+    "name": "Vanguard Master Templar",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7420,
+    "name": "Frozen Crusader Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7422,
+    "name": "Soggy Fledgling Angel V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7427,
+    "name": "Supreme Master Templar",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7432,
+    "name": "Barbed Shrine Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7455,
+    "name": "Malevolent Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7490,
+    "name": "Putrid Blessed Guard Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7497,
+    "name": "Dire Blessed Acolyte Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7501,
+    "name": "Rune Crusader Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7514,
+    "name": "Paladin Recruit Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7527,
+    "name": "Mottled Chapel Priest Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7536,
+    "name": "Mottled Shrine Priest",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7540,
+    "name": "Shard Earth Sprite Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7549,
+    "name": "Salt Trainee Angel III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7551,
+    "name": "Twilight Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7554,
+    "name": "Savage High Paladin",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7558,
+    "name": "Swamp Shrine Priest",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7562,
+    "name": "War Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7575,
+    "name": "Cardinal Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7586,
+    "name": "Church Priest VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7594,
+    "name": "Chosen Acolyte Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7617,
+    "name": "Novice Angel III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7630,
+    "name": "Weak Blessed Guard IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7661,
+    "name": "Celestial Dark Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7672,
+    "name": "Gaunt Chapel Acolyte Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7685,
+    "name": "Immortal Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7690,
+    "name": "Prime Angel Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7699,
+    "name": "Mire Earth Sprite Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7735,
+    "name": "Sunken Temple Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7747,
+    "name": "Celestial Shiva Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7751,
+    "name": "Ember Blessed Sprite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7755,
+    "name": "Eternal Titan Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7766,
+    "name": "Spindly Altar Monk Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7792,
+    "name": "Forsaken Poseidon Sea God",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7806,
+    "name": "Swamp Initiate Angel Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7827,
+    "name": "Progenitor Grand Crusader",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7834,
+    "name": "Corrupted Valkyrie",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7851,
+    "name": "Corrupt Chapel Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7863,
+    "name": "Barbed Paladin Recruit I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7877,
+    "name": "Mottled Blessed Sprite Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7881,
+    "name": "Mottled Shrine Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7892,
+    "name": "Hungry Chapel Knight Cursed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7903,
+    "name": "Wild Sacred Guard Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7912,
+    "name": "Haze Divine Sprite III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7914,
+    "name": "Chapel Knight V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7924,
+    "name": "Tempest Dark Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7938,
+    "name": "Chosen Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 7969,
+    "name": "Plague Paladin Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8002,
+    "name": "Transcendent Ares God of War",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8008,
+    "name": "Astral Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8010,
+    "name": "Templar Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8051,
+    "name": "Arcane Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8064,
+    "name": "Wretched Fledgling Angel",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8071,
+    "name": "Sunken Minor Angel",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8076,
+    "name": "Sacred Fallen Angel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8092,
+    "name": "Dominant Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8102,
+    "name": "Sable Garuda Storm",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8112,
+    "name": "Blessed Guard Alpha",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8134,
+    "name": "Murk Ice Sprite Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8135,
+    "name": "Infernal Phoenix Rebirth",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8155,
+    "name": "Twilight Holy Sprite Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8163,
+    "name": "Lesser Valkyrie Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8164,
+    "name": "Tar Chosen Acolyte Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8179,
+    "name": "Wrath Valkyrie",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8208,
+    "name": "Pack Divine Monk Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8218,
+    "name": "Sacred Guard Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8219,
+    "name": "Forsaken Grand Crusader",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8225,
+    "name": "Transcendent Sigrun Valkyrie",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8248,
+    "name": "Filthy Temple Priest Minor",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8252,
+    "name": "Dire Fledgling Angel Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8280,
+    "name": "Dark Altar Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8287,
+    "name": "Celestial Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8290,
+    "name": "Forsaken Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8304,
+    "name": "Sewer Celestial Monk Ancient",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8305,
+    "name": "Meager Divine Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8315,
+    "name": "Exalted Grand Crusader",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8334,
+    "name": "Twilight Titan Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8335,
+    "name": "Overlord Elder Valkyrie",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8351,
+    "name": "Jade Garuda Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8367,
+    "name": "Dingy Chosen Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8382,
+    "name": "Corrupted Crusader Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8387,
+    "name": "Undying Fallen Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8389,
+    "name": "Titan Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8393,
+    "name": "Gale Minor Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8410,
+    "name": "Prime High Paladin",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8417,
+    "name": "Fallen Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8422,
+    "name": "Shrine Guard Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8438,
+    "name": "Gnawed Templar Recruit Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8451,
+    "name": "Quarried Earth Sprite Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8455,
+    "name": "Apprentice Valkyrie Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8462,
+    "name": "Blessed Sprite Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8472,
+    "name": "Sacred Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8474,
+    "name": "Filthy Chosen Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8480,
+    "name": "Royal Grand Crusader",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8483,
+    "name": "Primordial Ares God of War",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8488,
+    "name": "Omega Holy Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8508,
+    "name": "Risen Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8515,
+    "name": "Ancient Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8531,
+    "name": "Marsh Altar Priest Junior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8539,
+    "name": "Sacred Night Angel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8543,
+    "name": "Grimy Temple Monk",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8563,
+    "name": "Withering Light Sprite Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8568,
+    "name": "Church Acolyte",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8572,
+    "name": "Haggard Temple Priest Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8587,
+    "name": "Ragged Chapel Priest",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8591,
+    "name": "Godlike Heracles Divine",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8602,
+    "name": "Vile Chapel Priest Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8603,
+    "name": "Voidborn Leviathan Sea",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8627,
+    "name": "Cursed Divine Sprite Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8630,
+    "name": "Shrine Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8632,
+    "name": "Wind Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8638,
+    "name": "Tempest Paladin Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8646,
+    "name": "Quarried Ice Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8654,
+    "name": "Fell Holy Monk Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8663,
+    "name": "Hellborn Ifrit Sovereign",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8665,
+    "name": "Grave Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8673,
+    "name": "Elder Sacred Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8686,
+    "name": "Blessed Monk Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8687,
+    "name": "Progenitor Holy Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8696,
+    "name": "Raging Templar Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8706,
+    "name": "Dark Novice Angel VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8716,
+    "name": "Soggy Chapel Guard Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8719,
+    "name": "Sable Leviathan Sea",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8722,
+    "name": "Haggard Holy Acolyte II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8730,
+    "name": "Lesser Valkyrie Feral",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8732,
+    "name": "Tar Blessed Acolyte Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8738,
+    "name": "Shadow Holy Monk III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8739,
+    "name": "Sludge Celestial Monk Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8743,
+    "name": "Lunar Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8753,
+    "name": "Murk Dark Sprite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8756,
+    "name": "Gale Blessed Sprite Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8760,
+    "name": "Voidborn Zeus Thunder King",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8805,
+    "name": "Murk Divine Sprite Young",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8806,
+    "name": "Haze Minor Valkyrie",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8826,
+    "name": "Altar Priest IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8834,
+    "name": "Champion High Paladin",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8837,
+    "name": "Temple Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8845,
+    "name": "Gaunt Chapel Acolyte I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8858,
+    "name": "Blessed Acolyte Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8859,
+    "name": "Abyssal Sacred Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8861,
+    "name": "Squalid Trainee Angel Omega",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8867,
+    "name": "Slime Divine Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8868,
+    "name": "Church Guard IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8870,
+    "name": "Celestial Monk Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8924,
+    "name": "Bone Chapel Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8946,
+    "name": "Lichen Low Valkyrie Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8956,
+    "name": "Shrine Monk VII",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8968,
+    "name": "Eternal Fallen Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8979,
+    "name": "Master Archangel Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8980,
+    "name": "Transcendent Bahamut Prime",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8983,
+    "name": "Shard Earth Sprite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 8987,
+    "name": "Raging Garuda Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9004,
+    "name": "Altar Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9011,
+    "name": "Trainee Angel Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9028,
+    "name": "Giant Shiva Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9032,
+    "name": "Twilight Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9037,
+    "name": "Crusader Recruit IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9045,
+    "name": "Gloom Low Valkyrie Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9064,
+    "name": "Flame Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9085,
+    "name": "Giant Inquisitor Champion",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9087,
+    "name": "Hallowed Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9088,
+    "name": "Corrupt Lesser Valkyrie Greater",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9091,
+    "name": "Royal Angel Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9096,
+    "name": "Ashen Initiate Valkyrie III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9106,
+    "name": "Dingy Divine Monk V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9112,
+    "name": "Archon Ramuh Elder",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9127,
+    "name": "Filthy Altar Priest",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9131,
+    "name": "Chapel Acolyte Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9142,
+    "name": "Holy Guard Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9161,
+    "name": "Night Shrine Guard Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9165,
+    "name": "Gaunt Blessed Guard V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9171,
+    "name": "Trainee Angel Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9178,
+    "name": "Withered Altar Monk Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9184,
+    "name": "Sorrow Sacred Sprite Minor",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9186,
+    "name": "Malevolent Dark Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9209,
+    "name": "Withered Church Guard",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9230,
+    "name": "Wild Church Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9237,
+    "name": "Grand Supreme Inquisitor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9240,
+    "name": "Dark Sacred Acolyte Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9271,
+    "name": "Titan Tainted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9274,
+    "name": "Tar Chapel Priest Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9275,
+    "name": "Grim Trainee Angel",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9276,
+    "name": "Squalid Chosen Acolyte",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9290,
+    "name": "Blessed Guard Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9291,
+    "name": "Mythic Perseus Gorgon-Slayer",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9292,
+    "name": "Church Guard Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9303,
+    "name": "Feral Chapel Monk",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9315,
+    "name": "Holy Acolyte Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9319,
+    "name": "Frozen Tainted Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9325,
+    "name": "Sorrow Earth Sprite VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9344,
+    "name": "Bleak Shrine Monk Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9359,
+    "name": "Fallen Ifrit Sovereign",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9365,
+    "name": "Mythic Alexander Divine",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9369,
+    "name": "Iron Holy Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9373,
+    "name": "Templar Recruit Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9379,
+    "name": "Sable Shiva Eternal",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9381,
+    "name": "Singed Altar Knight",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9385,
+    "name": "Divine Acolyte Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9419,
+    "name": "Battle Shrine Knight I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9425,
+    "name": "Chapel Priest Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9441,
+    "name": "Primordial Ramuh Elder",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9455,
+    "name": "Infernal Titan Earth Lord",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9460,
+    "name": "Battle Inquisitor Recruit",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9463,
+    "name": "Eternal Heracles Divine",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9465,
+    "name": "Spectral Titan Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9482,
+    "name": "Eternal Odin All-Father",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9483,
+    "name": "Small Chapel Guard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9499,
+    "name": "Ashen Sacred Sprite I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9508,
+    "name": "Divine Sprite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9521,
+    "name": "Temple Monk Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9533,
+    "name": "Lightning Sprite Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9569,
+    "name": "Scourge Titan Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9581,
+    "name": "Chapel Monk Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9591,
+    "name": "Earth Sprite Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9598,
+    "name": "Knotted Sacred Sprite VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9603,
+    "name": "Mud Church Acolyte I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9624,
+    "name": "Meager Temple Monk",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9629,
+    "name": "Champion Archangel Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9636,
+    "name": "Twilight Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9640,
+    "name": "Ancient Heracles Divine",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9660,
+    "name": "Tar Altar Priest Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9671,
+    "name": "Storm Fire Sprite II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9689,
+    "name": "Scorched Fire Sprite Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9697,
+    "name": "Astral Ifrit Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9718,
+    "name": "Apprentice Valkyrie Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9742,
+    "name": "Shrine Acolyte III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9762,
+    "name": "Mottled Templar Recruit Tamed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9765,
+    "name": "Wrathful Garuda Storm",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9768,
+    "name": "Wrath Crusader Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9772,
+    "name": "Blood Fallen Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9773,
+    "name": "Juggernaut Sacred Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9786,
+    "name": "Lichen Paladin Recruit",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9787,
+    "name": "Necrotic Templar Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9792,
+    "name": "Dragon Ramuh Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9801,
+    "name": "Sewer Chosen Guard",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9809,
+    "name": "Night Blessed Guard",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9811,
+    "name": "Temple Guard Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9841,
+    "name": "Soul Shadow Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9851,
+    "name": "Crusader Recruit Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9865,
+    "name": "Sinuous Wind Sprite Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9877,
+    "name": "Primordial Heracles Divine",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9880,
+    "name": "Sewer Chosen Acolyte Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9883,
+    "name": "Cardinal Angel Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9897,
+    "name": "Arcane Shadow Angel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9907,
+    "name": "Church Monk Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9912,
+    "name": "Mythic Sigrun Valkyrie",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9948,
+    "name": "Temple Acolyte Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9959,
+    "name": "Iron High Paladin",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9973,
+    "name": "Blood Archangel Initiate",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9981,
+    "name": "Weak Church Monk Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9982,
+    "name": "Eternal Poseidon Sea God",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9996,
+    "name": "Infernal Corrupted Angel",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 9998,
+    "name": "Chapel Knight Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  },
+  {
+    "id": 10000,
+    "name": "Night Novice Angel Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Divine Threshold",
+    "element": "Divine"
+  }
+]

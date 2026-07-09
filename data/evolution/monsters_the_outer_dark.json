@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 11,
+    "name": "Torn Shadow Fragment I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 12,
+    "name": "Prime Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 14,
+    "name": "Byakhee Rider Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 16,
+    "name": "Mangy Chaos Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 27,
+    "name": "Crimson Void Crawler Prime",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 37,
+    "name": "Cursed Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 38,
+    "name": "Grimy Warped Hermit Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 39,
+    "name": "Forbidden Gug Alpha",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 41,
+    "name": "Bristled Cosmic Crawler",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 48,
+    "name": "Night Stalker Beta",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 59,
+    "name": "Dark Tendril Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 83,
+    "name": "Dream Stalker V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 91,
+    "name": "Primordial Zoth-Ommog Sunken",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 98,
+    "name": "Nightgaunt",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 108,
+    "name": "Scourge Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 113,
+    "name": "Dreamer Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 120,
+    "name": "Night Corrupt Scholar",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 139,
+    "name": "Flame Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 166,
+    "name": "Siege Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 175,
+    "name": "Arcane Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 195,
+    "name": "Necrotic Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 234,
+    "name": "Iron Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 239,
+    "name": "Void Tendril Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 253,
+    "name": "Weak Horror Fragment V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 264,
+    "name": "Soggy Abyss Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 276,
+    "name": "Infernal Elder Thing Thawed",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 278,
+    "name": "Iron Nightmare Fragment Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 292,
+    "name": "Byakhee Rider Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 296,
+    "name": "Chaos Fragment Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 297,
+    "name": "Ascendant Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 308,
+    "name": "Fell Dark Mote Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 315,
+    "name": "Night Cultist Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 334,
+    "name": "Ember Dream Stalker",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 337,
+    "name": "Filthy Void Spawn",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 356,
+    "name": "Salt Cultist Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 362,
+    "name": "Blighted Byakhee Rider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 373,
+    "name": "Dark Stalker",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 382,
+    "name": "Champion Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 385,
+    "name": "Sewer Void Worm Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 395,
+    "name": "Sunken Cultist Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 399,
+    "name": "Ascendant Byatis Berkeley Toad",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 402,
+    "name": "Nemesis Gug Alpha",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 407,
+    "name": "Mangy Darkness Shard Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 415,
+    "name": "Cardinal Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 427,
+    "name": "Cursed Elder Thing Thawed",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 441,
+    "name": "Forbidden Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 443,
+    "name": "Howling Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 460,
+    "name": "Mottled Rat-Thing II",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 463,
+    "name": "Plague Dream Ghoul",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 468,
+    "name": "Leng Spider Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 514,
+    "name": "Cosmic Nyarlathotep Crawling",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 516,
+    "name": "Brine Dark Stalker IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 523,
+    "name": "Flame Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 529,
+    "name": "Wretched Abyss Fragment",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 541,
+    "name": "Champion Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 544,
+    "name": "Dread Y'golonac Servant",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 547,
+    "name": "Dread Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 553,
+    "name": "Torn Void Spawn",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 560,
+    "name": "Haggard Void Spawn Junior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 575,
+    "name": "Madness Fragment Lesser",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 597,
+    "name": "Prime Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 615,
+    "name": "Mire Fire Vampire Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 623,
+    "name": "Dire Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 625,
+    "name": "Tempest Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 650,
+    "name": "Haze Dark Crawler",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 668,
+    "name": "Wrathful Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 671,
+    "name": "Cosmic Fragment",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 675,
+    "name": "Immortal Mother Hydra Deep",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 676,
+    "name": "Squalid Void Fragment Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 681,
+    "name": "Brine Void Stalker Greater",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 683,
+    "name": "Hellborn Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 694,
+    "name": "Zealous Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 695,
+    "name": "Yellow Shadow Fragment Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 706,
+    "name": "Hollow Leng Spider Feral",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 710,
+    "name": "Knotted Dark Crawler Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 719,
+    "name": "Crude Eldritch Spawn Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 722,
+    "name": "Night-Walker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 724,
+    "name": "Decayed Dream Ghoul IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 748,
+    "name": "Dire Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 752,
+    "name": "Champion Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 763,
+    "name": "Slime Dream Fragment Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 768,
+    "name": "Swamp Eldritch Spawn IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 777,
+    "name": "Nightmare Stalker Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 785,
+    "name": "Champion Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 799,
+    "name": "Scrawny Eldritch Spawn IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 832,
+    "name": "Venom Tcho-Tcho Cultist Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 835,
+    "name": "Void Stalker Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 840,
+    "name": "Ash Void Fragment Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 853,
+    "name": "Siege Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 878,
+    "name": "Obsidian Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 884,
+    "name": "Bone Madness Fragment Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 888,
+    "name": "Risen Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 899,
+    "name": "Howling Hunting Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 918,
+    "name": "World Yog-Sothoth Omega Gate",
+    "rarity": "EX",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 939,
+    "name": "Grand Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 961,
+    "name": "Exalted Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 964,
+    "name": "Warlord Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 966,
+    "name": "Undying Zhar Twin",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 978,
+    "name": "Plague Nightmare Stalker III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 988,
+    "name": "Dragon Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 992,
+    "name": "Rust Nightmare Stalker Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 997,
+    "name": "Ash Dreamer",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1001,
+    "name": "Nightmare Spawn III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1008,
+    "name": "Haze Byakhee Rider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1014,
+    "name": "Pitted Nightgaunt Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1020,
+    "name": "Giant Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1033,
+    "name": "Celestial Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1044,
+    "name": "Mad Preacher",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1067,
+    "name": "Star Spawn Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1068,
+    "name": "Nightmare Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1094,
+    "name": "Yellow Darkness Shard Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1097,
+    "name": "Sunken Darkness Shard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1105,
+    "name": "Dark Wisp VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1116,
+    "name": "Feral Dark Spawn Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1125,
+    "name": "War Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1147,
+    "name": "Eternal Tsathoggua Sleeping",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1150,
+    "name": "Tyrant Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1151,
+    "name": "Quarried Cosmic Crawler Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1157,
+    "name": "Hungry Void Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1163,
+    "name": "Twilight Dark Crawler",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1167,
+    "name": "Titan Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1173,
+    "name": "Lanky Void Touched VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1190,
+    "name": "Star Gazer Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1192,
+    "name": "Withered Warped Hermit VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1202,
+    "name": "Gnawed Star Vampire Minor",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1219,
+    "name": "Haggard Eldritch Spawn Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1220,
+    "name": "Frost Night Stalker VI",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1228,
+    "name": "Lightning Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1229,
+    "name": "Void Spawn VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1245,
+    "name": "Blood Elder Thing Thawed",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1247,
+    "name": "Omega Yog-Sothoth Omega Gate",
+    "rarity": "EX",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1254,
+    "name": "Abyss Fragment VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1276,
+    "name": "Grim Nightmare Fragment Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1286,
+    "name": "Scraped Void Wisp V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1294,
+    "name": "Cursed Abyss Crawler",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1330,
+    "name": "Archon Shoggoth Ancient",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1342,
+    "name": "Hallowed Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1360,
+    "name": "Night-Walker VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1363,
+    "name": "Warped Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1366,
+    "name": "Gale Void Crawler Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1370,
+    "name": "Gnawed Byakhee Rider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1375,
+    "name": "Blighted Nightmare Stalker Elite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1378,
+    "name": "Grimy Cultist",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1385,
+    "name": "Hollow Dark Spawn I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1421,
+    "name": "Infinite Hastur the Unspeakable",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1423,
+    "name": "Archon Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1431,
+    "name": "Blighted Eldritch Crawler Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1448,
+    "name": "Dream Stalker",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1455,
+    "name": "Sunken Shadow Fragment Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1468,
+    "name": "Demon Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1484,
+    "name": "Void Tendril Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1489,
+    "name": "Dusk Void Stalker I",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1491,
+    "name": "Obsidian Hunting Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1495,
+    "name": "Corrupted Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1529,
+    "name": "Haze Nightgaunt Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1551,
+    "name": "Eclipse Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1576,
+    "name": "Doom Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1578,
+    "name": "Ravaged Dark Crawler Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1586,
+    "name": "Vile Dark Spawn I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1608,
+    "name": "Fire Vampire Beta",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1614,
+    "name": "Swamp Night-Walker Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1627,
+    "name": "Ravaged Tcho-Tcho Cultist",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1642,
+    "name": "Void Mote",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1649,
+    "name": "Eternal Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1654,
+    "name": "Marsh Star Gazer",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1661,
+    "name": "Nightgaunt Senior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1662,
+    "name": "Abyssal Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1675,
+    "name": "Bristled Fire Vampire",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1686,
+    "name": "Silver Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1688,
+    "name": "Sinuous Tcho-Tcho Cultist VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1700,
+    "name": "Dark Stalker Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1709,
+    "name": "Apex Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1718,
+    "name": "Putrid Dark Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1732,
+    "name": "Yellow Shadow Fragment",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1758,
+    "name": "Filthy Shadow Fragment VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1770,
+    "name": "Wrath Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1777,
+    "name": "Primordial Gug Alpha",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1778,
+    "name": "Raging Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1780,
+    "name": "Crag Dark Wisp",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1796,
+    "name": "Necrotic Deep One Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1798,
+    "name": "Dread Byatis Berkeley Toad",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1802,
+    "name": "Meager Abyss Fragment Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1809,
+    "name": "Tempest Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1823,
+    "name": "Abyss Crawler Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1841,
+    "name": "Tar Void Tendril Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1845,
+    "name": "Scarred Rat-Thing Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1848,
+    "name": "Grimy Dark Mote Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1849,
+    "name": "Dragon Elder Thing Thawed",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1853,
+    "name": "Absolute Othuyeg Doom-Walker",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1878,
+    "name": "Dream Spawn Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1885,
+    "name": "Titan Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1901,
+    "name": "Scorched Sand Dweller",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1913,
+    "name": "Dark Wisp Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1923,
+    "name": "Coiled Void Crawler Ancient",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1936,
+    "name": "Dominant Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1938,
+    "name": "Wandering Void Crawler Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1945,
+    "name": "Hollow Mad Spawn Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1947,
+    "name": "Eldritch Fragment Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1975,
+    "name": "Sunken Eternal Fragment Ancient",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1980,
+    "name": "Sand Dweller",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1981,
+    "name": "Dusk Dark Stalker Ancient",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 1993,
+    "name": "Jagged Mad Spawn",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2042,
+    "name": "Eternal Zoth-Ommog Sunken",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2047,
+    "name": "Haze Star Vampire Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2050,
+    "name": "Dark Void Mote IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2051,
+    "name": "Haze Moon Beast Scout VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2058,
+    "name": "Cursed Formless Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2065,
+    "name": "Eternal Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2073,
+    "name": "Weak Chaos Fragment VI",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2078,
+    "name": "Rat-Thing Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2086,
+    "name": "Immortal Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2087,
+    "name": "Nightmare Fragment II",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2089,
+    "name": "Iron Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2103,
+    "name": "Murky Voidling",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2110,
+    "name": "Bristled Nightmare Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2124,
+    "name": "Wrath Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2129,
+    "name": "Shadow Void Worm",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2137,
+    "name": "Iron Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2139,
+    "name": "Pale Eternal Fragment",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2143,
+    "name": "Rune Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2170,
+    "name": "Eldritch Crawler VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2177,
+    "name": "Ember Night Stalker",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2185,
+    "name": "Blood Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2186,
+    "name": "Undying Formless Spawn",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2191,
+    "name": "Hellborn Byatis Berkeley Toad",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2208,
+    "name": "Rust Rat-Thing Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2211,
+    "name": "Void Worm Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2213,
+    "name": "Lord Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2216,
+    "name": "Hungry Nightmare Stalker Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2223,
+    "name": "Thunder Formless Spawn",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2225,
+    "name": "Jade Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2234,
+    "name": "Fetid Night Stalker IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2235,
+    "name": "Horror Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2237,
+    "name": "Eternal Dagon the Fish God",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2245,
+    "name": "Nemesis Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2255,
+    "name": "Scourge Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2267,
+    "name": "Herald Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2268,
+    "name": "Necrotic Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2284,
+    "name": "Warped Hermit Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2285,
+    "name": "Ashen Byakhee Rider Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2328,
+    "name": "Ash Chaos Fragment Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2343,
+    "name": "Titan Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2351,
+    "name": "Iron Hunting Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2379,
+    "name": "Dark Crawler Young",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2384,
+    "name": "Sunken Dark Mote Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2391,
+    "name": "Dark Crawler",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2407,
+    "name": "Withered Star Gazer",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2408,
+    "name": "Waning Leng Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2409,
+    "name": "Sludge Void Shard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2416,
+    "name": "Wretched Voidling IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2423,
+    "name": "Demon Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2425,
+    "name": "Blazing Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2427,
+    "name": "Dusk Abyss Crawler",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2442,
+    "name": "Star Gazer",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2464,
+    "name": "Void Spawn Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2484,
+    "name": "Eclipse Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2485,
+    "name": "Night Stalker",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2488,
+    "name": "Weedy Dark Wisp II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2490,
+    "name": "Wretched Voidling Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2502,
+    "name": "Void Tendril Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2505,
+    "name": "Ascendant Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2518,
+    "name": "Shadow Dreamer Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2519,
+    "name": "Haggard Madness Fragment Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2521,
+    "name": "Death Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2564,
+    "name": "Dream Ghoul",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2578,
+    "name": "Battle Deep One Hybrid II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2582,
+    "name": "Dread Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2591,
+    "name": "Soul Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2592,
+    "name": "Haggard Dream Fragment",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2599,
+    "name": "Eldritch Crawler Tamed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2609,
+    "name": "Sacred Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2611,
+    "name": "Night Dark Priest",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2622,
+    "name": "Dingy Dark Mote Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2629,
+    "name": "Void Formless Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2634,
+    "name": "Dire Dark Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2646,
+    "name": "Nightgaunt Lesser",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2661,
+    "name": "Noxious Abyss Crawler",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2676,
+    "name": "Warlord Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2686,
+    "name": "Spectral Elder Thing Thawed",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2695,
+    "name": "Crag Void Tendril Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2702,
+    "name": "Void Fragment I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2706,
+    "name": "Hallowed Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2712,
+    "name": "Scraggly Void Shard Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2723,
+    "name": "Elder Flying Polyp",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2726,
+    "name": "Dreamer Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2729,
+    "name": "Dream Stalker I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2735,
+    "name": "Hellborn Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2767,
+    "name": "Hollow Voidling Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2771,
+    "name": "Grim Abyss Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2772,
+    "name": "Nightmare Stalker Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2781,
+    "name": "Giant Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2784,
+    "name": "Rune Hunting Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2798,
+    "name": "Ancient Tsathoggua Sleeping",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2808,
+    "name": "Nemesis Y'golonac Servant",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2809,
+    "name": "Putrid Eldritch Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2813,
+    "name": "Lord Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2815,
+    "name": "Arcane Deep One Elder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2819,
+    "name": "Eldritch Crawler Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2831,
+    "name": "Giant Elder Thing Thawed",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2832,
+    "name": "Mangy Lost Soul Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2836,
+    "name": "Squalid Mad Spawn Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2838,
+    "name": "Ash Dark Fragment Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2844,
+    "name": "Small Void Touched Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2846,
+    "name": "War Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2851,
+    "name": "Plague Abyss Crawler Feral",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2868,
+    "name": "Vanguard Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2872,
+    "name": "Infernal Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2879,
+    "name": "Dream Spawn",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2892,
+    "name": "Knotted Star Vampire",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2902,
+    "name": "Dire Formless Spawn",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2926,
+    "name": "Giant Deep One Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2950,
+    "name": "Withering Cosmic Crawler VI",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2964,
+    "name": "Omega Flying Polyp",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 2974,
+    "name": "Madness Fragment VI",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3013,
+    "name": "Spectral Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3025,
+    "name": "Undying Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3026,
+    "name": "Ashen Fire Vampire Ancient",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3027,
+    "name": "Doom Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3054,
+    "name": "Blazing Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3073,
+    "name": "Sacred Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3075,
+    "name": "Grave Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3086,
+    "name": "Mangy Lost Soul",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3107,
+    "name": "Dread Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3111,
+    "name": "Night Dream Fragment Junior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3114,
+    "name": "Withering Rat-Thing",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3136,
+    "name": "Cursed Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3151,
+    "name": "Madness Fragment Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3184,
+    "name": "Lesser Eldritch Spawn I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3185,
+    "name": "Archon Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3205,
+    "name": "Tattered Horror Fragment VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3224,
+    "name": "Hoar Eldritch Crawler Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3226,
+    "name": "Invincible Lloigor Vortex",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3244,
+    "name": "Void Wisp Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3255,
+    "name": "Weedy Nightmare Spawn Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3273,
+    "name": "Star Vampire I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3278,
+    "name": "Nightgaunt Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3279,
+    "name": "Night Spawn Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3282,
+    "name": "Legendary Cthugha Living Flame",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3284,
+    "name": "Thorn Tcho-Tcho Cultist Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3292,
+    "name": "Transcendent Nyarlathotep Crawling",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3306,
+    "name": "Sacred Formless Spawn",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3307,
+    "name": "Arcane Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3328,
+    "name": "Wretched Horror Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3343,
+    "name": "Eternal Fragment Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3344,
+    "name": "Ash Night-Walker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3371,
+    "name": "Wrath Formless Spawn",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3372,
+    "name": "Vile Void Shard",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3378,
+    "name": "Dark Fragment Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3434,
+    "name": "Twilight Hunting Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3449,
+    "name": "Plague Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3450,
+    "name": "Nightmare Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3467,
+    "name": "Star Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3472,
+    "name": "Blazing Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3489,
+    "name": "Bone Cultist I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3492,
+    "name": "Mud Shadow Fragment Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3496,
+    "name": "Brine Byakhee Rider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3516,
+    "name": "Sewer Night Spawn Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3517,
+    "name": "Fire Vampire Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3529,
+    "name": "Dust Eldritch Fragment Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3557,
+    "name": "Bleak Madness Fragment II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3558,
+    "name": "Scourge Deep One Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3562,
+    "name": "Lightning Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3569,
+    "name": "Squalid Void Shard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3577,
+    "name": "Sorrow Abyss Crawler Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3594,
+    "name": "Void Worm Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3613,
+    "name": "Void Crawler Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3621,
+    "name": "Eldritch Fragment II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3628,
+    "name": "Meager Star Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3629,
+    "name": "Sinuous Abyss Crawler",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3637,
+    "name": "Hallowed Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3653,
+    "name": "Night Stalker IV",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3656,
+    "name": "Storm Moon Beast Scout Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3683,
+    "name": "Shard Tcho-Tcho Cultist",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3689,
+    "name": "Unholy Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3691,
+    "name": "Ash Lost Soul Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3705,
+    "name": "Nightmare Spawn Alpha",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3718,
+    "name": "Deep One Hybrid Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3721,
+    "name": "Forbidden Zhar Twin",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3729,
+    "name": "Dragon Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3742,
+    "name": "Plague Hunting Horror",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3750,
+    "name": "Dark Fragment",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3762,
+    "name": "Undying Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3775,
+    "name": "Sable Gug Alpha",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3777,
+    "name": "Horror Fragment II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3783,
+    "name": "Cultist",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3784,
+    "name": "Runed Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3787,
+    "name": "Death Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3793,
+    "name": "Murky Star Spawn",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3819,
+    "name": "Champion Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3821,
+    "name": "Hoar Void Stalker",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3822,
+    "name": "Crag Mad Preacher II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3825,
+    "name": "Craven Nightmare Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3834,
+    "name": "Infernal Deep One Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3855,
+    "name": "Infernal Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3858,
+    "name": "Sand Dweller VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3865,
+    "name": "Frozen Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3867,
+    "name": "Abyss Hunting Horror",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3873,
+    "name": "Giant Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3874,
+    "name": "Sacred Hunting Horror",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3888,
+    "name": "Forbidden Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3892,
+    "name": "Twisted Nightmare Stalker",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3896,
+    "name": "Dread Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3897,
+    "name": "Cataclysm Gug Alpha",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3909,
+    "name": "Cultist Minor",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3915,
+    "name": "Void Stalker Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3931,
+    "name": "Immortal Ithaqua Wind-Walker",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3942,
+    "name": "Vile Eldritch Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3949,
+    "name": "Herald Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3953,
+    "name": "Primordial Formless Spawn",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 3980,
+    "name": "Withering Moon Beast Scout",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4009,
+    "name": "Blighted Dream Ghoul Feral",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4024,
+    "name": "Tempest Formless Spawn",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4030,
+    "name": "Demon Formless Spawn",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4031,
+    "name": "Dark Priest Junior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4048,
+    "name": "Bleak Cosmic Fragment",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4063,
+    "name": "Forsaken Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4079,
+    "name": "Torn Star Spawn Prime",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4088,
+    "name": "Horror Fragment IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4102,
+    "name": "Star Gazer Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4104,
+    "name": "Knotted Cosmic Crawler Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4114,
+    "name": "Dread Shoggoth Ancient",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4124,
+    "name": "Nightmare Stalker V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4136,
+    "name": "Blood Formless Spawn",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4151,
+    "name": "Sunken Abyss Fragment",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4161,
+    "name": "Lost Soul Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4162,
+    "name": "Fetid Nightmare Stalker Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4196,
+    "name": "Void Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4232,
+    "name": "Prime Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4242,
+    "name": "Crowned Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4248,
+    "name": "Howling Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4250,
+    "name": "Night Spawn Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4257,
+    "name": "Sand Dweller Tamed",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4270,
+    "name": "Filthy Void Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4272,
+    "name": "Frost Rat-Thing",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4277,
+    "name": "Frost Void Crawler",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4279,
+    "name": "Obsidian Eldritch Crawler Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4282,
+    "name": "Plague Deep One Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4290,
+    "name": "Hollow Dream Ghoul",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4298,
+    "name": "Shadow Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4305,
+    "name": "Thunder Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4307,
+    "name": "Undying Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4319,
+    "name": "Void Stalker",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4328,
+    "name": "Siege Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4347,
+    "name": "Plague Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4356,
+    "name": "Deep One Hybrid Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4359,
+    "name": "Immortal Tsathoggua Sleeping",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4366,
+    "name": "Cataclysm Shoggoth Ancient",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4368,
+    "name": "Dream Ghoul Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4388,
+    "name": "Abyss Deep One Elder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4389,
+    "name": "Abyss Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4396,
+    "name": "Iron Shadow Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4399,
+    "name": "Hoar Fire Vampire Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4423,
+    "name": "Abyssal Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4427,
+    "name": "Shadow Fragment Lesser",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4428,
+    "name": "Dark Priest Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4430,
+    "name": "Weedy Void Wisp Omega",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4446,
+    "name": "Grave Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4447,
+    "name": "Mottled Eternal Fragment",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4449,
+    "name": "Absolute Zoth-Ommog Sunken",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4455,
+    "name": "Dominant Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4457,
+    "name": "Hallowed Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4458,
+    "name": "Dream Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4472,
+    "name": "Nightmare Stalker Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4474,
+    "name": "Forsaken Lloigor Vortex",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4480,
+    "name": "Raging Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4497,
+    "name": "Grave Deep One Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4499,
+    "name": "Nightmare Stalker Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4502,
+    "name": "Scraped Void Shard Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4515,
+    "name": "Tar Void Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4520,
+    "name": "Jagged Dark Priest II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4529,
+    "name": "Dread Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4534,
+    "name": "Shard Dark Stalker",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4543,
+    "name": "Dire Void Fragment Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4545,
+    "name": "Squalid Void Tendril II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4556,
+    "name": "Corrupted Hunting Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4571,
+    "name": "Doom Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4581,
+    "name": "Fire Vampire",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4591,
+    "name": "Rat-Thing III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4593,
+    "name": "Void Worm Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4604,
+    "name": "Void Shard Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4610,
+    "name": "Archon Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4611,
+    "name": "Mythic Dagon the Fish God",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4629,
+    "name": "Ragged Madness Fragment",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4643,
+    "name": "Plague Void Crawler VII",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4656,
+    "name": "Void Tendril VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4665,
+    "name": "Voidling",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4676,
+    "name": "Small Warped Hermit Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4681,
+    "name": "Nightmare Fragment Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4692,
+    "name": "Divine Shub-Niggurath Black Goat",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4700,
+    "name": "Void Wisp Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4710,
+    "name": "Cursed Deep One Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4721,
+    "name": "Abyss Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4724,
+    "name": "Sorrow Dark Stalker Senior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4759,
+    "name": "Murky Eldritch Spawn",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4762,
+    "name": "Swamp Abyss Fragment VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4790,
+    "name": "Tcho-Tcho Cultist Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4793,
+    "name": "Mottled Cosmic Fragment",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4825,
+    "name": "Dire Abyss Fragment VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4838,
+    "name": "Torn Lost Soul Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4876,
+    "name": "Lunar Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4889,
+    "name": "Infernal Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4896,
+    "name": "Shadowed Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4901,
+    "name": "Rotten Star Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4903,
+    "name": "War Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4921,
+    "name": "Dark Wisp Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4922,
+    "name": "Drowned Fire Vampire II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4925,
+    "name": "Unholy Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4947,
+    "name": "Dominant Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4963,
+    "name": "Jagged Night-Walker Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4968,
+    "name": "Slime Nightmare Fragment Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4972,
+    "name": "Feral Shadow Fragment",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4976,
+    "name": "Singed Dark Crawler Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4977,
+    "name": "Vanguard Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4986,
+    "name": "Void Tendril",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4991,
+    "name": "Cursed Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 4993,
+    "name": "Supreme Othuyeg Doom-Walker",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5001,
+    "name": "Nightmare Stalker Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5011,
+    "name": "Ash Mad Preacher",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5015,
+    "name": "Iron Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5026,
+    "name": "Dim Abyss Fragment V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5031,
+    "name": "Abyss Fragment",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5036,
+    "name": "Mottled Dream Ghoul Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5037,
+    "name": "Archon Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5049,
+    "name": "Absolute Ithaqua Wind-Walker",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5050,
+    "name": "Barbed Fire Vampire",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5054,
+    "name": "Void Crawler Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5061,
+    "name": "Void Worm Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5063,
+    "name": "Jagged Dream Ghoul Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5066,
+    "name": "Cultist Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5068,
+    "name": "Malevolent Hunting Horror",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5075,
+    "name": "Scraped Voidling",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5097,
+    "name": "Fallen Shoggoth Ancient",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5119,
+    "name": "Warped Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5135,
+    "name": "Fire Vampire Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5139,
+    "name": "Wretched Abyss Fragment VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5146,
+    "name": "Pack Void Spawn Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5154,
+    "name": "Colossus Lloigor Vortex",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5160,
+    "name": "Drowned Sand Dweller Beta",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5194,
+    "name": "Umbral Leng Spider Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5207,
+    "name": "Ancient Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5209,
+    "name": "Supreme Tsathoggua Sleeping",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5231,
+    "name": "Warlord Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5238,
+    "name": "Transcendent Zoth-Ommog Sunken",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5254,
+    "name": "Threadbare Dark Spawn Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5257,
+    "name": "Pitted Leng Spider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5277,
+    "name": "Blood Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5286,
+    "name": "Warden Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5297,
+    "name": "Warlord Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5300,
+    "name": "Jagged Dream Fragment VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5307,
+    "name": "Necrotic Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5357,
+    "name": "Weedy Night-Walker Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5360,
+    "name": "Spectral Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5370,
+    "name": "Lichen Dream Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5389,
+    "name": "Star Spawn VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5391,
+    "name": "Void Touched Junior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5425,
+    "name": "Dread Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5435,
+    "name": "Haze Abyss Crawler Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5440,
+    "name": "Blazing Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5443,
+    "name": "Infernal Gug Alpha",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5457,
+    "name": "Mire Sand Dweller",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5476,
+    "name": "Mottled Lost Soul",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5498,
+    "name": "Void Worm Ancient",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5500,
+    "name": "Bleak Void Worm Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5509,
+    "name": "Nightmare Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5513,
+    "name": "Frozen Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5514,
+    "name": "Eldritch Crawler",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5515,
+    "name": "Chaos Fragment VI",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5522,
+    "name": "Raging Formless Spawn",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5536,
+    "name": "Tar Warped Hermit",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5537,
+    "name": "Silver Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5558,
+    "name": "Darkness Shard I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5583,
+    "name": "Herald Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5614,
+    "name": "Shroud Cosmic Crawler Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5622,
+    "name": "Soul Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5635,
+    "name": "Tempest Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5639,
+    "name": "Zealous Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5644,
+    "name": "Pale Star Spawn Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5646,
+    "name": "Night Lost Soul Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5651,
+    "name": "Sacred Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5666,
+    "name": "Eldritch Spawn Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5668,
+    "name": "Supreme Ithaqua Wind-Walker",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5676,
+    "name": "Star Spawn Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5682,
+    "name": "Dream Ghoul Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5707,
+    "name": "Crimson Eldritch Crawler Elite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5718,
+    "name": "Tattered Shadow Fragment II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5729,
+    "name": "Transcendent Ithaqua Wind-Walker",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5733,
+    "name": "Warden Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5735,
+    "name": "Torn Mad Preacher Junior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5739,
+    "name": "Torn Void Touched",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5743,
+    "name": "Brine Dark Crawler Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5753,
+    "name": "Royal Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5759,
+    "name": "Ultimate Yog-Sothoth All-in-One",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5766,
+    "name": "Meager Voidling",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5770,
+    "name": "Dread Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5781,
+    "name": "Rotten Void Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5784,
+    "name": "Exalted Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5794,
+    "name": "Chaos Fragment VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5807,
+    "name": "Nightgaunt V",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5808,
+    "name": "Quarried Void Crawler Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5839,
+    "name": "Malevolent Deep One Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5843,
+    "name": "Progenitor Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5848,
+    "name": "Wandering Deep One Hybrid Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5850,
+    "name": "Leng Spider VI",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5854,
+    "name": "Void Tendril Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5864,
+    "name": "Godlike Ithaqua Wind-Walker",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5885,
+    "name": "Eldritch Fragment Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5905,
+    "name": "Mangy Dream Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5910,
+    "name": "Doom Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5921,
+    "name": "Primordial Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5950,
+    "name": "Voidling Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5974,
+    "name": "Void Mote Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 5985,
+    "name": "Sludge Star Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6002,
+    "name": "Scrawny Darkness Shard Tamed",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6005,
+    "name": "Void Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6020,
+    "name": "Grand Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6039,
+    "name": "Sinuous Leng Spider III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6041,
+    "name": "Eclipse Hunting Horror",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6054,
+    "name": "Mottled Night Stalker Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6059,
+    "name": "Dream Stalker Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6072,
+    "name": "Eclipse Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6075,
+    "name": "Haze Nightmare Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6090,
+    "name": "Mottled Star Vampire",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6102,
+    "name": "Pale Night-Walker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6107,
+    "name": "Undying Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6123,
+    "name": "Salt Corrupt Scholar I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6124,
+    "name": "Mad Preacher Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6127,
+    "name": "Voidborn Lloigor Vortex",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6141,
+    "name": "Savage Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6146,
+    "name": "Nightmare Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6151,
+    "name": "Undying Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6158,
+    "name": "Colossus Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6167,
+    "name": "Fell Dark Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6178,
+    "name": "Hollow Deep One Hybrid",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6179,
+    "name": "Ash Void Shard Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6189,
+    "name": "Void Shard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6190,
+    "name": "Decayed Eldritch Crawler Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6192,
+    "name": "Void Crawler Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6198,
+    "name": "Cursed Hunting Horror",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6206,
+    "name": "Eternal Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6209,
+    "name": "Zealous Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6214,
+    "name": "Nightgaunt Corrupted",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6240,
+    "name": "Jade Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6252,
+    "name": "Ancient Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6256,
+    "name": "Supreme Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6263,
+    "name": "Dread Zhar Twin",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6267,
+    "name": "Corrupt Void Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6306,
+    "name": "Sable Shoggoth Ancient",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6312,
+    "name": "Sunken Mad Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6315,
+    "name": "Tcho-Tcho Cultist VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6319,
+    "name": "Dark Stalker Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6343,
+    "name": "Corrupt Scholar VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6344,
+    "name": "Iron Dream Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6345,
+    "name": "Mythic Cthugha Living Flame",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6346,
+    "name": "Withering Cosmic Crawler Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6426,
+    "name": "Dark Warped Hermit Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6427,
+    "name": "Dragon Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6434,
+    "name": "Withering Fire Vampire",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6453,
+    "name": "Torn Voidling Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6459,
+    "name": "Eternal Formless Spawn",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6461,
+    "name": "Cursed Leng Spider Lesser",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6464,
+    "name": "War Shoggoth Fragment",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6480,
+    "name": "Spindly Darkness Shard Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6489,
+    "name": "Undying Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6491,
+    "name": "Elder Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6493,
+    "name": "Eternal Fragment Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6499,
+    "name": "Ancient Ghatanothoa Buried",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6505,
+    "name": "Immortal Zoth-Ommog Sunken",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6507,
+    "name": "High Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6512,
+    "name": "Bone Cultist Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6519,
+    "name": "Herald Flying Polyp",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6521,
+    "name": "Eternal Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6532,
+    "name": "Bleak Lost Soul",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6540,
+    "name": "Byakhee Rider I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6557,
+    "name": "Dark Crawler Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6574,
+    "name": "Dark Priest Lesser",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6578,
+    "name": "Deep One Hybrid",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6581,
+    "name": "Filthy Night-Walker Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6591,
+    "name": "Rat-Thing Elite",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6603,
+    "name": "Slime Void Worm",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6610,
+    "name": "Gaunt Corrupt Scholar",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6615,
+    "name": "Scraped Night Spawn Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6628,
+    "name": "Soul Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6629,
+    "name": "Overlord Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6638,
+    "name": "Leaking Byakhee Rider Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6643,
+    "name": "Dread Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6644,
+    "name": "Immortal Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6651,
+    "name": "Vanguard Byakhee Alpha",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6661,
+    "name": "Lanky Eldritch Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6665,
+    "name": "Filthy Void Tendril Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6667,
+    "name": "Sacred Deep One Elder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6669,
+    "name": "Undying Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6674,
+    "name": "Dragon Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6683,
+    "name": "Moon Spawn Elite",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6689,
+    "name": "Cave Lost Soul Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6693,
+    "name": "Voidborn Y'golonac Servant",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6736,
+    "name": "Primordial Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6750,
+    "name": "Scorched Void Stalker",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6765,
+    "name": "Gale Moon Beast Scout Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6766,
+    "name": "Obsidian Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6768,
+    "name": "Doom Deep One Elder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6783,
+    "name": "Yellow Star Gazer",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6792,
+    "name": "Squalid Dream Fragment Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6804,
+    "name": "Primeval Nug and Yeb Twins",
+    "rarity": "Mythic",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6819,
+    "name": "Leng Spider Ancient",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6824,
+    "name": "Rotten Voidling Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6828,
+    "name": "Archon Byatis Berkeley Toad",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6843,
+    "name": "Colossus Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6871,
+    "name": "Mangy Void Wisp",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6879,
+    "name": "Fell Cosmic Fragment Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6898,
+    "name": "Dread Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6899,
+    "name": "Vile Void Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6901,
+    "name": "Battle Dream Stalker",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6904,
+    "name": "Bleached Dream Ghoul VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6910,
+    "name": "Bristled Tcho-Tcho Cultist Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6921,
+    "name": "Craven Night Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6924,
+    "name": "Blazing Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6928,
+    "name": "Grimy Shadow Fragment",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6936,
+    "name": "Bristled Nightmare Stalker I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6957,
+    "name": "Feral Void Fragment Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6960,
+    "name": "Warped Hermit III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6967,
+    "name": "Plague Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6974,
+    "name": "Hollow Lost Soul Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6986,
+    "name": "Twilight Formless Spawn",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6988,
+    "name": "Dire Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 6990,
+    "name": "Ashen Sand Dweller Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7003,
+    "name": "Scourge Hunting Horror",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7020,
+    "name": "Byakhee Rider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7027,
+    "name": "Blood Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7053,
+    "name": "Dire Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7056,
+    "name": "Murky Void Wisp Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7060,
+    "name": "Wild Cultist",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7068,
+    "name": "Lesser Chaos Fragment Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7071,
+    "name": "Overlord Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7095,
+    "name": "Warped Hermit VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7110,
+    "name": "Dust Abyss Fragment",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7118,
+    "name": "Storm Fire Vampire V",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7164,
+    "name": "Mythic Mother Hydra Deep",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7171,
+    "name": "Storm Byakhee Rider",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7195,
+    "name": "Cataclysm Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7206,
+    "name": "Sinuous Byakhee Rider Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7218,
+    "name": "Gnawed Sand Dweller Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7227,
+    "name": "Murk Dark Stalker",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7231,
+    "name": "Warped Hermit",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7240,
+    "name": "Rune Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7261,
+    "name": "Moon Spawn Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7285,
+    "name": "Crimson Leng Spider",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7298,
+    "name": "Crude Void Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7304,
+    "name": "Bleached Void Crawler V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7313,
+    "name": "Twisted Leng Spider Beta",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7341,
+    "name": "Eldritch Crawler I",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7370,
+    "name": "Eternal Fragment VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7392,
+    "name": "Lunar Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7396,
+    "name": "Pale Void Fragment Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7399,
+    "name": "Dark Fragment Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7407,
+    "name": "Knotted Dark Crawler Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7411,
+    "name": "Titan Shoggoth Ancient",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7415,
+    "name": "Sewer Dark Mote Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7426,
+    "name": "Eternal Ghatanothoa Buried",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7429,
+    "name": "Apex Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7441,
+    "name": "Dire Void Worm Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7450,
+    "name": "Celestial Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7452,
+    "name": "Eternal Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7460,
+    "name": "Dusk Void Crawler Junior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7466,
+    "name": "Raging Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7473,
+    "name": "Void Crawler Corrupted",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7485,
+    "name": "Nightmare Stalker VII",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7488,
+    "name": "Lightning Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7498,
+    "name": "War Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7506,
+    "name": "Scrawny Star Gazer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7519,
+    "name": "Void Fragment Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7525,
+    "name": "Drowned Eldritch Crawler Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7532,
+    "name": "Dust Void Tendril Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7533,
+    "name": "Mottled Cultist Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7539,
+    "name": "Scrawny Void Touched Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7560,
+    "name": "Cursed Void Crawler IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7566,
+    "name": "Weedy Chaos Fragment",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7580,
+    "name": "Leng Spider",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7582,
+    "name": "Wrath Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7592,
+    "name": "Twisted Dark Stalker Corrupted",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7616,
+    "name": "Dream Spawn VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7624,
+    "name": "Colossus Y'golonac Servant",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7625,
+    "name": "Swamp Night Spawn Greater",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7627,
+    "name": "Silver Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7675,
+    "name": "Runed Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7702,
+    "name": "Dread Gug Alpha",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7719,
+    "name": "Progenitor Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7738,
+    "name": "Fell Void Shard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7740,
+    "name": "Dark Fragment Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7744,
+    "name": "Commander Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7757,
+    "name": "Crude Madness Fragment Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7767,
+    "name": "Legendary Dagon the Fish God",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7772,
+    "name": "Immortal Othuyeg Doom-Walker",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7780,
+    "name": "Night-Walker VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7784,
+    "name": "Tcho-Tcho Cultist",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7811,
+    "name": "Godlike Ghatanothoa Buried",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7816,
+    "name": "Night Horror Fragment I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7830,
+    "name": "Omega Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7842,
+    "name": "Raging Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7848,
+    "name": "Chaos Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7849,
+    "name": "Void Stalker Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7867,
+    "name": "Eternal Y'golonac Servant",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7870,
+    "name": "Salt Chaos Fragment II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7897,
+    "name": "Grimy Void Shard Tamed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7899,
+    "name": "Tcho-Tcho Cultist Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7905,
+    "name": "Mottled Corrupt Scholar Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7919,
+    "name": "Silver Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7923,
+    "name": "Warden Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7936,
+    "name": "Threadbare Shadow Fragment IV",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7941,
+    "name": "Eternal Fragment Minor",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7943,
+    "name": "Thorn Nightgaunt",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7946,
+    "name": "Crimson Fire Vampire Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7949,
+    "name": "Squalid Void Fragment VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7952,
+    "name": "Soul Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7965,
+    "name": "Nemesis Zhar Twin",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7966,
+    "name": "Obsidian Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7997,
+    "name": "Mad Spawn VI",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 7999,
+    "name": "Demon Elder Thing Thawed",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8011,
+    "name": "Void Spawn",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8023,
+    "name": "Rotten Nightmare Fragment Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8026,
+    "name": "Exalted Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8028,
+    "name": "Venom Dark Crawler Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8031,
+    "name": "Dire Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8036,
+    "name": "Dark Priest Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8086,
+    "name": "Gloom Star Vampire",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8099,
+    "name": "Tar Dark Spawn Young",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8104,
+    "name": "Jade Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8105,
+    "name": "Vile Madness Fragment Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8106,
+    "name": "Moon Spawn Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8111,
+    "name": "Crimson Dream Stalker VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8122,
+    "name": "Shadow Fragment Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8123,
+    "name": "Void Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8132,
+    "name": "Dark Mote",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8152,
+    "name": "Sorrow Deep One Hybrid III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8191,
+    "name": "Forsaken Y'golonac Servant",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8233,
+    "name": "Cultist I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8243,
+    "name": "Night Dark Spawn Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8251,
+    "name": "Cosmic Cthulhu the Dreamer",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8255,
+    "name": "Sacred Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8270,
+    "name": "Apex Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8277,
+    "name": "Pitted Eldritch Crawler Minor",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8282,
+    "name": "Mottled Tcho-Tcho Cultist Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8285,
+    "name": "Star Vampire Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8297,
+    "name": "Wretched Void Shard",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8300,
+    "name": "Forsaken Cthulhu Star Spawn Major",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8313,
+    "name": "Demon Deep One Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8321,
+    "name": "Umbral Moon Beast Scout Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8331,
+    "name": "Bristled Night Stalker Awakened",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8340,
+    "name": "Gale Eldritch Crawler Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8348,
+    "name": "Warden Flying Polyp",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8358,
+    "name": "Runed Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8360,
+    "name": "Apocalypse Byatis Berkeley Toad",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8365,
+    "name": "Eldritch Spawn",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8376,
+    "name": "Mangy Void Mote",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8388,
+    "name": "Warlord Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8420,
+    "name": "Omega Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8433,
+    "name": "Corrupt Rat-Thing Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8441,
+    "name": "Sunken Night Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8442,
+    "name": "Dark Mote Senior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8445,
+    "name": "Silver Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8471,
+    "name": "Night Spawn Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8484,
+    "name": "Rotten Dark Priest",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8516,
+    "name": "Corrupt Scholar",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8519,
+    "name": "Corrupted Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8533,
+    "name": "Scraped Corrupt Scholar Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8535,
+    "name": "Moon Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8540,
+    "name": "Plague Void Stalker I",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8559,
+    "name": "Storm Fire Vampire Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8574,
+    "name": "Tcho-Tcho Cultist I",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8589,
+    "name": "Forbidden Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8604,
+    "name": "Silver Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8611,
+    "name": "Waning Dark Stalker",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8637,
+    "name": "Champion Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8641,
+    "name": "Necrotic Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8655,
+    "name": "Swamp Abyss Fragment Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8659,
+    "name": "Hollow Darkness Shard",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8711,
+    "name": "Supreme Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8745,
+    "name": "Death Dimensional Shambler",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8748,
+    "name": "Lost Soul II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8755,
+    "name": "Soggy Darkness Shard Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8761,
+    "name": "Quarried Eldritch Crawler II",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8767,
+    "name": "Lost Soul IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8771,
+    "name": "Timeless Azathoth Blind Idiot",
+    "rarity": "Mythic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8774,
+    "name": "Star Vampire",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8777,
+    "name": "Threadbare Void Tendril",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8783,
+    "name": "Weak Nightmare Spawn",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8838,
+    "name": "Scourge Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8843,
+    "name": "Tattered Moon Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8848,
+    "name": "Undying Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8851,
+    "name": "Iron Lost Soul Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8855,
+    "name": "Dingy Voidling V",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8871,
+    "name": "Arcane Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8880,
+    "name": "Iron Dark Priest III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8903,
+    "name": "Moon Spawn Minor",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8908,
+    "name": "Iron Madness Fragment",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8909,
+    "name": "Twilight Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8929,
+    "name": "Sacred Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8931,
+    "name": "Ancient Cthugha Living Flame",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8932,
+    "name": "Yellow Star Spawn",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8933,
+    "name": "Scraped Dark Tendril Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8935,
+    "name": "Celestial Deep One Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8942,
+    "name": "Voidborn Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8959,
+    "name": "Twilight Cosmic Crawler Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8960,
+    "name": "Dreamer",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8966,
+    "name": "Moon Beast Scout",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 8972,
+    "name": "Mythic Zoth-Ommog Sunken",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9006,
+    "name": "Titan Byatis Berkeley Toad",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9013,
+    "name": "Nightmare Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9017,
+    "name": "Elder Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9024,
+    "name": "Commander Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9026,
+    "name": "Sludge Lost Soul",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9033,
+    "name": "Crag Moon Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9042,
+    "name": "Crystal Deep One Elder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9044,
+    "name": "Soggy Dark Spawn Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9048,
+    "name": "Frost Nightgaunt Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9049,
+    "name": "Scraggly Eldritch Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9060,
+    "name": "Wrathful Elder Thing Ancient",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9077,
+    "name": "Gale Star Vampire",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9083,
+    "name": "Thorn Star Vampire",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9090,
+    "name": "Dragon Star Spawn Priest",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9111,
+    "name": "Venom Cosmic Crawler",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9177,
+    "name": "Knotted Nightgaunt Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9183,
+    "name": "Abyss Crawler Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9196,
+    "name": "Slime Chaos Fragment Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9201,
+    "name": "Iron Dark Spawn Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9202,
+    "name": "Rat-Thing",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9205,
+    "name": "Leng Spider Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9212,
+    "name": "Bone Mad Preacher",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9220,
+    "name": "Salt Dream Spawn",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9223,
+    "name": "Abyss Crawler",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9228,
+    "name": "Wretched Void Wisp",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9243,
+    "name": "Celestial Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9252,
+    "name": "Murky Cultist V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9265,
+    "name": "Crag Eternal Fragment",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9295,
+    "name": "Waning Fire Vampire Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9298,
+    "name": "Malevolent Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9318,
+    "name": "Titan Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9322,
+    "name": "Mad Preacher Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9323,
+    "name": "Rust Nightgaunt",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9339,
+    "name": "Nightmare Great Race of Yith",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9341,
+    "name": "Corrupted Chthonian Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9353,
+    "name": "Jagged Dream Ghoul Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9358,
+    "name": "Mythic Ithaqua Wind-Walker",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9368,
+    "name": "Rat-Thing Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9395,
+    "name": "Gnawed Dark Stalker",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9406,
+    "name": "Void Touched",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9414,
+    "name": "Vanguard Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9415,
+    "name": "Howling Flying Polyp Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9445,
+    "name": "Singed Nightgaunt Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9474,
+    "name": "Sovereign Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9500,
+    "name": "Siege Cthonian Elder",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9504,
+    "name": "Infernal Shoggoth Greater",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9506,
+    "name": "Singed Void Stalker Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9507,
+    "name": "Undying Mi-Go Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9513,
+    "name": "Raging Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9516,
+    "name": "Cardinal Dark Young Elder",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9526,
+    "name": "Hellborn Atlach-Nacha Spawn",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9531,
+    "name": "Forsaken Gug Alpha",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9536,
+    "name": "Coiled Leng Spider",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9554,
+    "name": "Lightning Mi-Go Surgeon",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9575,
+    "name": "Dark Fragment VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9595,
+    "name": "Jagged Cosmic Crawler Cursed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9599,
+    "name": "Night Stalker VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9600,
+    "name": "Hollow Void Wisp",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9604,
+    "name": "Hoar Dark Crawler VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9605,
+    "name": "Infernal Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9607,
+    "name": "Dust Dark Wisp",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9647,
+    "name": "Yellow Dark Spawn",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9650,
+    "name": "Obsidian Dream Ghoul Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9677,
+    "name": "Bleak Abyss Fragment Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9695,
+    "name": "Cosmic Crawler IV",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9706,
+    "name": "Gale Tcho-Tcho Cultist Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9715,
+    "name": "Torn Dark Wisp V",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9725,
+    "name": "Dark Void Shard Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9727,
+    "name": "Withering Dark Crawler Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9731,
+    "name": "Sorrow Void Crawler Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9734,
+    "name": "Dream Ghoul VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9746,
+    "name": "Dream Stalker Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9749,
+    "name": "Bleached Dark Stalker Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9752,
+    "name": "Juggernaut Deep One Archpriest",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9764,
+    "name": "Dream Fragment Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9766,
+    "name": "Void Tendril I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9774,
+    "name": "Sludge Mad Spawn Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9779,
+    "name": "Hungry Leng Spider Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9781,
+    "name": "Horror Fragment Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9789,
+    "name": "Murk Nightmare Stalker V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9794,
+    "name": "Hollow Moon Spawn",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9796,
+    "name": "Death Moon Beast Trader",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9808,
+    "name": "Iron Nightgaunt Elder",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9820,
+    "name": "Star Gazer Junior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9839,
+    "name": "Bleached Abyss Crawler Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9859,
+    "name": "Undying Star Spawn Elder",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9885,
+    "name": "Corrupted Hound of Tindalos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9886,
+    "name": "Master Hound of Tindalos Ancient",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9893,
+    "name": "Chaos Fragment Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9898,
+    "name": "Cosmic Crawler",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9903,
+    "name": "Barbed Dark Stalker Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9915,
+    "name": "Relentless Byatis Berkeley Toad",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9949,
+    "name": "Giant Gug Juvenile",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9984,
+    "name": "Infernal Dark Young Spawn",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  },
+  {
+    "id": 9985,
+    "name": "Mad Preacher Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "The Outer Dark",
+    "element": "Void"
+  }
+]

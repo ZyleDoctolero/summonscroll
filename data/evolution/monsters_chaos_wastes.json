@@ -1,0 +1,8002 @@
+[
+  {
+    "id": 10,
+    "name": "Twilight Stormvermin",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 30,
+    "name": "Madman",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 55,
+    "name": "Sunken Wrecker III",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 82,
+    "name": "Haggard Brute",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 87,
+    "name": "Squalid Brawler Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 124,
+    "name": "Withered Berserker Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 134,
+    "name": "Dread Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 142,
+    "name": "Immortal Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 143,
+    "name": "Wretched Plague Rat III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 149,
+    "name": "Dragon Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 153,
+    "name": "Soggy Dark Cultist Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 167,
+    "name": "Twilight Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 186,
+    "name": "Origin Archaon Everchosen Final",
+    "rarity": "EX",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 193,
+    "name": "Supreme Kairos Fateweaver",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 200,
+    "name": "Hallowed Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 203,
+    "name": "Prime Keeper Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 208,
+    "name": "Soul Chaos Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 211,
+    "name": "Cave Rat Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 218,
+    "name": "Stormvermin Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 221,
+    "name": "Sacred Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 223,
+    "name": "Rune Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 241,
+    "name": "Night Runner Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 245,
+    "name": "Crowned Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 257,
+    "name": "Brute",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 267,
+    "name": "Hellborn Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 272,
+    "name": "Forbidden Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 294,
+    "name": "Blood Seeker Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 316,
+    "name": "Legendary Kairos Fateweaver",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 320,
+    "name": "Sinuous Warhound V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 328,
+    "name": "Gaunt Mutt Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 338,
+    "name": "Spindly Gorebeast Cursed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 341,
+    "name": "Rampager Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 344,
+    "name": "Dark Warrior Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 349,
+    "name": "Mythic Bloodthirster Ka'Bandha",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 351,
+    "name": "Spectral Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 357,
+    "name": "Primordial Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 358,
+    "name": "Ash Slugger Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 375,
+    "name": "Bone Brute Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 381,
+    "name": "Tempest Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 384,
+    "name": "Blood Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 387,
+    "name": "Mottled Gutter Runner Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 401,
+    "name": "Chaos Warrior Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 409,
+    "name": "Demon Plague Censer",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 420,
+    "name": "Plague Rat IV",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 423,
+    "name": "Supreme Archaon's Herald",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 425,
+    "name": "Hollow Frenzied",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 437,
+    "name": "Chaos Hound",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 454,
+    "name": "Frenzied II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 480,
+    "name": "Wretched Ransacker VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 485,
+    "name": "Howling Stormfiend",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 486,
+    "name": "Lightning Plague Priest",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 490,
+    "name": "Celestial Plague Priest",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 491,
+    "name": "Royal Skaven General",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 498,
+    "name": "Wandering Fleshhound Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 501,
+    "name": "Crystal Plague Priest",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 508,
+    "name": "Brine Brimstone Horror Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 512,
+    "name": "Dust Wrecker III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 513,
+    "name": "Hellborn Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 534,
+    "name": "Small Hound Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 538,
+    "name": "Chaos Follower Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 539,
+    "name": "Supreme Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 540,
+    "name": "Titan Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 545,
+    "name": "Noxious Night Runner V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 555,
+    "name": "Rampager I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 566,
+    "name": "Shadowed Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 583,
+    "name": "Feral Sewer Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 585,
+    "name": "Blood Seeker Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 599,
+    "name": "Chosen Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 603,
+    "name": "Weak Frenzied Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 610,
+    "name": "Cataclysm Ikit Claw",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 624,
+    "name": "Daemonette VI",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 626,
+    "name": "Runed Chaos Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 634,
+    "name": "Howling Warp-grinder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 636,
+    "name": "Corrupt Warhound",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 644,
+    "name": "Pillager I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 646,
+    "name": "Commander Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 660,
+    "name": "Brawler Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 662,
+    "name": "Mangy Mongrel Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 664,
+    "name": "Ravaged Stormvermin",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 665,
+    "name": "Mutt Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 667,
+    "name": "Quarried Daemonette Alpha",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 679,
+    "name": "Ether Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 698,
+    "name": "Gloom Bloodletter Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 715,
+    "name": "Venom Stormvermin",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 732,
+    "name": "Celestial Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 734,
+    "name": "Murky Pillager Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 753,
+    "name": "Pack Sacker II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 755,
+    "name": "Plague Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 765,
+    "name": "Sacred Rat Ogre",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 767,
+    "name": "Shard Fleshhound",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 783,
+    "name": "Supreme Ku'gath Plaguefather",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 790,
+    "name": "Venom Chaos Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 808,
+    "name": "Blood Knight II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 829,
+    "name": "Scraggly Mutt",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 831,
+    "name": "Marsh Waster",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 838,
+    "name": "Champion Chaos Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 874,
+    "name": "Twilight Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 875,
+    "name": "Forsaken Daemon Prince of Khorne",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 894,
+    "name": "Thug Young",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 902,
+    "name": "Putrid Looter",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 914,
+    "name": "Master Keeper Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 930,
+    "name": "Hoar Plaguebearer Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 936,
+    "name": "Night Chaos Follower",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 943,
+    "name": "Jagged Zealot Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 965,
+    "name": "Blood Knight I",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 982,
+    "name": "Haggard Pack Rat Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 984,
+    "name": "Putrid Vandal",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 994,
+    "name": "Sacker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 999,
+    "name": "Crowned Chaos Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1000,
+    "name": "Abyss Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1003,
+    "name": "Divine Verminlord Prime",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1021,
+    "name": "Weedy Thug Prime",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1034,
+    "name": "Mangy Vandal Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1037,
+    "name": "Undying Thanquol the Grey",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1069,
+    "name": "War Khorne Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1076,
+    "name": "Ragged Raider Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1082,
+    "name": "Night Marauder Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1086,
+    "name": "Plague Fleshhound",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1124,
+    "name": "Frost Clanrat Blessed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1128,
+    "name": "Spectral Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1134,
+    "name": "Plaguebearer",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1135,
+    "name": "Murky Brawler Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1139,
+    "name": "Shadow Plague Carrier VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1181,
+    "name": "Sludge Raider Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1200,
+    "name": "Brine Warhound Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1204,
+    "name": "Fell Rampager Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1205,
+    "name": "Ascendant Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1213,
+    "name": "Chosen Skaven General",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1214,
+    "name": "Corrupt Plague Monk Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1227,
+    "name": "Hollow Dark Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1238,
+    "name": "Night Raider",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1240,
+    "name": "Titan Rat Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1244,
+    "name": "Fell Dark Cultist",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1246,
+    "name": "Crowned Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1256,
+    "name": "Demon Khorne Herald",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1263,
+    "name": "Celestial Warp-grinder",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1272,
+    "name": "Swamp Gorebeast Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1273,
+    "name": "Fallen Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1282,
+    "name": "Scourge Rat Ogre",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1293,
+    "name": "Archon Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1304,
+    "name": "Scorched Plaguebearer V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1307,
+    "name": "Voidborn Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1329,
+    "name": "Raider II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1331,
+    "name": "Colossus Ikit Claw",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1339,
+    "name": "Wretched Rowdy Ancient",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1344,
+    "name": "Mangy Ransacker Tamed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1345,
+    "name": "Shadow Raider VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1384,
+    "name": "Blood Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1387,
+    "name": "Forsaken Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1399,
+    "name": "Forbidden Daemon Prince of Khorne",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1406,
+    "name": "Relentless Daemon Prince of Khorne",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1418,
+    "name": "Frost Plaguebearer",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1444,
+    "name": "Chaos Hound Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1445,
+    "name": "Immortal Queek Headtaker",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1466,
+    "name": "Scourge Plague Censer",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1476,
+    "name": "Zealot Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1519,
+    "name": "Lightning Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1521,
+    "name": "Mongrel",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1534,
+    "name": "Gutter Runner Young",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1537,
+    "name": "Obsidian Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1541,
+    "name": "Scarred Rat Minion Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1573,
+    "name": "Primordial Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1575,
+    "name": "Corrupted Rat Ogre",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1583,
+    "name": "Scarred Warhound",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1603,
+    "name": "Jagged Dark Cultist Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1605,
+    "name": "Hallowed Keeper Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1606,
+    "name": "Disease Spreader",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1607,
+    "name": "Destroyer Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1625,
+    "name": "Exalted Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1635,
+    "name": "Shroud Clanrat III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1656,
+    "name": "Pink Horror Senior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1666,
+    "name": "Squalid Pillager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1674,
+    "name": "Ragged Plague Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1676,
+    "name": "Thunder Plague Priest",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1679,
+    "name": "Swamp Gorebeast I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1699,
+    "name": "Obsidian Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1716,
+    "name": "Scraped Madman",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1736,
+    "name": "Shadowed Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1745,
+    "name": "Scraggly Chaos Follower",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1749,
+    "name": "Warped Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1752,
+    "name": "Scraggly Marauder",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1760,
+    "name": "Blazing Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1771,
+    "name": "Small Pack Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1801,
+    "name": "Venom Plaguebearer Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1804,
+    "name": "Pack Rat Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1808,
+    "name": "Hoar Skaven Scout",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1846,
+    "name": "Swamp Pack Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1861,
+    "name": "Daemonette Blessed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1869,
+    "name": "Savage Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1873,
+    "name": "Putrid Frenzied Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1879,
+    "name": "Threadbare Frenzied",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1892,
+    "name": "Demon Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1896,
+    "name": "Twisted Bloodletter",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1898,
+    "name": "Fallen Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1908,
+    "name": "Shard Stormvermin Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1915,
+    "name": "Godlike Queek Headtaker",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1926,
+    "name": "Ember Clanrat",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1928,
+    "name": "Slime Brawler Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1956,
+    "name": "Jagged Chaos Warrior III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1985,
+    "name": "Dark Cultist II",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1995,
+    "name": "Dragon Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 1999,
+    "name": "Dusk Warhound Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2005,
+    "name": "Bleached Brimstone Horror Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2025,
+    "name": "Celestial Doom-wheel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2044,
+    "name": "Bloodletter III",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2055,
+    "name": "Giant Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2056,
+    "name": "Necrotic Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2063,
+    "name": "Blue Horror",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2064,
+    "name": "Zealous Chaos Lord",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2066,
+    "name": "Pack Rat Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2084,
+    "name": "Thunder Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2092,
+    "name": "Soul Doom-wheel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2093,
+    "name": "Bloodletter",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2094,
+    "name": "Frost Stormvermin Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2095,
+    "name": "Rat Minion Ancient",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2099,
+    "name": "Gale Daemonette Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2111,
+    "name": "Murky Berserker Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2126,
+    "name": "Titan Thanquol the Grey",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2132,
+    "name": "Bleached Plague Monk Beta",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2135,
+    "name": "Dark Cultist Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2138,
+    "name": "Warhound Junior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2145,
+    "name": "Dark Warrior Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2152,
+    "name": "Bloodletter V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2164,
+    "name": "Gutter Runner VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2168,
+    "name": "Vile Sewer Rat Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2174,
+    "name": "Umbral Bloodletter",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2192,
+    "name": "Silver Stormfiend",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2195,
+    "name": "Meager Spoiler Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2217,
+    "name": "Lanky Berserker Awakened",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2241,
+    "name": "Dominant Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2279,
+    "name": "Soul Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2291,
+    "name": "Eternal Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2305,
+    "name": "Shroud Chaos Warrior VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2308,
+    "name": "Master Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2309,
+    "name": "Prime Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2310,
+    "name": "Chaos Hound Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2330,
+    "name": "Gnawed Brimstone Horror Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2336,
+    "name": "Astral Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2342,
+    "name": "Doom Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2350,
+    "name": "Wandering Blood Knight Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2353,
+    "name": "Slime Vandal III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2356,
+    "name": "Swamp Blood Seeker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2361,
+    "name": "Waning Chaos Hound Corrupted",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2366,
+    "name": "Slime Plague Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2367,
+    "name": "Ravaged Daemonette Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2372,
+    "name": "Venom Plague Monk",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2382,
+    "name": "Cursed Plague Priest",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2393,
+    "name": "Blood Knight Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2400,
+    "name": "Umbral Bloodletter Lesser",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2403,
+    "name": "Exalted Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2404,
+    "name": "Shard Dark Warrior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2410,
+    "name": "Nightmare Plague Priest",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2414,
+    "name": "Plaguebearer Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2428,
+    "name": "Lanky Mutt",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2429,
+    "name": "Crowned Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2440,
+    "name": "Decayed Daemonette Young",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2462,
+    "name": "Thunder Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2471,
+    "name": "Dim Frenzied VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2472,
+    "name": "Vile Thug Beta",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2491,
+    "name": "Void Chaos Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2492,
+    "name": "Singed Blood Knight Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2493,
+    "name": "Withering Bloodletter II",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2533,
+    "name": "Night Runner",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2534,
+    "name": "Tattered Marauder",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2544,
+    "name": "Spoiler",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2551,
+    "name": "Colossus Daemon Prince of Khorne",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2560,
+    "name": "Mottled Plague Carrier Elite",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2585,
+    "name": "Infernal Rat Ogre",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2604,
+    "name": "Spindly Brawler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2621,
+    "name": "Dragon Rat Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2664,
+    "name": "Eternal Queek Headtaker",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2692,
+    "name": "Scourge Plague Priest",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2701,
+    "name": "Lord Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2708,
+    "name": "Filthy Marauder Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2711,
+    "name": "Mongrel Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2715,
+    "name": "Yellow Plunderer VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2717,
+    "name": "Scraggly Sewer Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2759,
+    "name": "Hallowed Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2765,
+    "name": "Pack Thug Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2780,
+    "name": "Royal Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2782,
+    "name": "Iron Frenzied Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2797,
+    "name": "Obsidian Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2800,
+    "name": "Zealot Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2806,
+    "name": "Plague Monk Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2810,
+    "name": "Dim Mutt Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2835,
+    "name": "Hollow Brute Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2839,
+    "name": "Ransacker VII",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2841,
+    "name": "Frozen Plague Censer",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2849,
+    "name": "Cursed Dark Warrior Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2859,
+    "name": "Tattered Raider Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2867,
+    "name": "Crude Gorebeast Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2876,
+    "name": "Frozen Warp-grinder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2882,
+    "name": "Celestial Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2887,
+    "name": "Undying Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2889,
+    "name": "Gorebeast II",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2891,
+    "name": "Apex Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2911,
+    "name": "Archon Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2912,
+    "name": "War Plague Priest",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2917,
+    "name": "Crude Blood Seeker Blessed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2918,
+    "name": "Corrupt Bloodletter Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2927,
+    "name": "Dire Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2937,
+    "name": "Ragged Mongrel Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2946,
+    "name": "Gaunt Plague Carrier Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2953,
+    "name": "Destroyer V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2958,
+    "name": "Dark Warrior Awakened",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2967,
+    "name": "Timeless Archaon Everchosen",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2969,
+    "name": "Salt Madman VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 2979,
+    "name": "Slugger VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3004,
+    "name": "Jagged Sewer Rat Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3017,
+    "name": "Ash Sacker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3039,
+    "name": "Timeless Lord of Change Grand",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3063,
+    "name": "Noxious Daemonette",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3068,
+    "name": "Brawler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3085,
+    "name": "Gale Plaguebearer Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3100,
+    "name": "High Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3101,
+    "name": "Lanky Waster Feral",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3105,
+    "name": "Grim Despoiler I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3115,
+    "name": "Shard Pink Horror",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3123,
+    "name": "Tar Zealot Cursed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3135,
+    "name": "Undying Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3138,
+    "name": "Immortal Kairos Fateweaver",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3139,
+    "name": "Primordial Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3146,
+    "name": "Giant Plague Priest",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3147,
+    "name": "Arcane Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3176,
+    "name": "Scarred Blue Horror Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3202,
+    "name": "Siege Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3223,
+    "name": "Lunar Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3230,
+    "name": "Withered Dark Cultist Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3231,
+    "name": "Pink Horror Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3232,
+    "name": "Mottled Pink Horror VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3240,
+    "name": "Sovereign Skaven General",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3246,
+    "name": "Gaunt Brawler VI",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3249,
+    "name": "Yellow Spoiler VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3261,
+    "name": "Doom Stormfiend",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3264,
+    "name": "Putrid Ravager",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3266,
+    "name": "Supreme Be'lakor's Shadow",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3281,
+    "name": "Despoiler Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3296,
+    "name": "Warlord Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3297,
+    "name": "Pink Horror Major",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3300,
+    "name": "Stormvermin Cursed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3312,
+    "name": "Bloodletter Senior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3333,
+    "name": "Apex Skaven General",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3352,
+    "name": "Flame Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3355,
+    "name": "Dark Warrior V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3358,
+    "name": "Sable Ikit Claw",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3362,
+    "name": "Chaos Warrior Alpha",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3368,
+    "name": "Tempest Warp-grinder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3374,
+    "name": "Mongrel Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3384,
+    "name": "Scorched Warhound",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3385,
+    "name": "Shroud Plague Monk VII",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3402,
+    "name": "Battle Dark Warrior Young",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3421,
+    "name": "Gale Clanrat",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3422,
+    "name": "Elder Keeper Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3424,
+    "name": "Fleshhound Lesser",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3431,
+    "name": "Ancient Ku'gath Plaguefather",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3432,
+    "name": "Putrid Wrecker Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3454,
+    "name": "Flame Rat Ogre",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3469,
+    "name": "Absolute Be'lakor's Shadow",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3480,
+    "name": "Frenzied",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3490,
+    "name": "Absolute N'kari",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3491,
+    "name": "Slugger",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3500,
+    "name": "Dark Cultist III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3506,
+    "name": "Sludge Brute Young",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3511,
+    "name": "Ancient N'kari",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3524,
+    "name": "Withering Chaos Warrior Beta",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3540,
+    "name": "Grimy Spoiler",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3547,
+    "name": "Cardinal Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3555,
+    "name": "Ether Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3556,
+    "name": "Withered Pillager I",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3597,
+    "name": "Archon Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3604,
+    "name": "Fleshhound Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3610,
+    "name": "Tattered Looter Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3624,
+    "name": "Jagged Daemonette Senior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3626,
+    "name": "Knotted Blood Knight",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3641,
+    "name": "Barbed Rat Minion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3646,
+    "name": "Leaking Gutter Runner VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3657,
+    "name": "Crude Sewer Rat",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3704,
+    "name": "Dark Cultist",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3706,
+    "name": "Gaunt Sewer Rat Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3717,
+    "name": "Elder Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3738,
+    "name": "Ether Stormfiend",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3739,
+    "name": "Madman Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3741,
+    "name": "Dingy Blood Seeker V",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3743,
+    "name": "Blighted Skaven Scout Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3763,
+    "name": "Hallowed Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3772,
+    "name": "Skaven Scout",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3776,
+    "name": "Ravager Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3779,
+    "name": "Soggy Pack Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3790,
+    "name": "Eclipse Plague Priest",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3796,
+    "name": "Malevolent Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3850,
+    "name": "Crystal Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3856,
+    "name": "Twilight Chaos Hound Awakened",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3868,
+    "name": "Crag Blood Seeker Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3882,
+    "name": "Blood Seeker I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3886,
+    "name": "Drowned Dark Warrior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3902,
+    "name": "Brimstone Horror Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3903,
+    "name": "Chaos Plague Priest",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3907,
+    "name": "Chaos Follower",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3914,
+    "name": "Grim Despoiler Lesser",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3918,
+    "name": "Lightning Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3919,
+    "name": "Pale Blood Seeker Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3948,
+    "name": "Sewer Rat III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3952,
+    "name": "Warped Chaos Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3959,
+    "name": "Iron Frenzied Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3984,
+    "name": "Twisted Daemonette",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3986,
+    "name": "Gorebeast V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3988,
+    "name": "Fell Plague Carrier Awakened",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 3989,
+    "name": "Daemonette Omega",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4006,
+    "name": "Cave Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4008,
+    "name": "Wrecker Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4023,
+    "name": "Apocalypse Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4029,
+    "name": "Plaguebearer Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4033,
+    "name": "Zealot I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4035,
+    "name": "Zealot V",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4039,
+    "name": "Lesser Dark Cultist Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4046,
+    "name": "Commander Keeper Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4049,
+    "name": "Murky Plague Carrier Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4052,
+    "name": "Night Runner VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4055,
+    "name": "Looter",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4064,
+    "name": "Rotten Blood Seeker Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4078,
+    "name": "Void Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4085,
+    "name": "Dragon Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4087,
+    "name": "Void Plague Censer",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4096,
+    "name": "Warhound Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4110,
+    "name": "Infernal Plague Priest",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4111,
+    "name": "Singed Plague Monk",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4129,
+    "name": "Cataclysm Thanquol the Grey",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4149,
+    "name": "Scraped Fanatic Junior",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4154,
+    "name": "Mottled Vandal VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4158,
+    "name": "Singed Night Runner Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4169,
+    "name": "Spoiler VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4189,
+    "name": "Putrid Berserker Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4199,
+    "name": "Crag Plague Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4208,
+    "name": "Jade Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4212,
+    "name": "Grimy Disease Spreader Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4214,
+    "name": "Plague Warp-grinder",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4222,
+    "name": "Colossus Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4255,
+    "name": "Dire Rat Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4260,
+    "name": "Gaunt Rowdy",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4275,
+    "name": "Umbral Pink Horror VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4291,
+    "name": "Mottled Rampager VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4292,
+    "name": "Siege Ikit Claw",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4310,
+    "name": "Royal Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4321,
+    "name": "Bone Zealot Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4327,
+    "name": "Barbed Blue Horror",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4352,
+    "name": "Dark Cultist Alpha",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4371,
+    "name": "Quarried Plaguebearer Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4374,
+    "name": "Sludge Despoiler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4377,
+    "name": "Ancient Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4402,
+    "name": "Risen Chaos Lord",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4405,
+    "name": "Brawler Corrupted",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4409,
+    "name": "Apocalypse Thanquol the Grey",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4419,
+    "name": "Pack Rat Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4433,
+    "name": "Plague Monk",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4434,
+    "name": "Hungry Fleshhound Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4444,
+    "name": "Fallen Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4478,
+    "name": "Mythic Be'lakor's Shadow",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4481,
+    "name": "Chaos Hound V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4494,
+    "name": "War Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4503,
+    "name": "Pack Pack Rat V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4513,
+    "name": "Lesser Ravager Beta",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4539,
+    "name": "Infinite Archaon Everchosen",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4555,
+    "name": "Grand Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4560,
+    "name": "Cosmic Archaon Everchosen",
+    "rarity": "Mythic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4563,
+    "name": "Clanrat Senior",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4602,
+    "name": "Knotted Blood Knight Alpha",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4620,
+    "name": "Siege Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4621,
+    "name": "Dire Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4626,
+    "name": "War Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4637,
+    "name": "Risen Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4640,
+    "name": "Dominant Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4648,
+    "name": "Mutt I",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4658,
+    "name": "Death Plague Censer",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4670,
+    "name": "Murk Daemonette",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4677,
+    "name": "Ragged Despoiler I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4695,
+    "name": "Fanatic Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4699,
+    "name": "Warden Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4716,
+    "name": "Gutter Runner Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4726,
+    "name": "Grand Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4731,
+    "name": "Grave Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4740,
+    "name": "Fanatic Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4748,
+    "name": "Corrupt Dark Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4764,
+    "name": "Absolute Bloodthirster Ka'Bandha",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4766,
+    "name": "Siege Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4767,
+    "name": "Blue Horror Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4769,
+    "name": "Mutt Ancient",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4789,
+    "name": "Rat Minion Corrupted",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4805,
+    "name": "Leviathan Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4808,
+    "name": "Dread Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4810,
+    "name": "Dust Sacker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4813,
+    "name": "Blue Horror VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4866,
+    "name": "Omega Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4868,
+    "name": "Siege Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4871,
+    "name": "Raging Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4875,
+    "name": "Ravaged Dark Warrior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4880,
+    "name": "Brine Skaven Scout IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4892,
+    "name": "Battle Night Runner Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4906,
+    "name": "Feral Thug Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4917,
+    "name": "Threadbare Sewer Rat Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4930,
+    "name": "Mottled Pink Horror Cursed",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4944,
+    "name": "Dust Pack Rat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4955,
+    "name": "Twilight Stormfiend",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4956,
+    "name": "Titan Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4957,
+    "name": "Lichen Warhound Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4982,
+    "name": "Ravaged Plaguebearer Ancient",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 4994,
+    "name": "Gutter Runner Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5005,
+    "name": "Iron Plague Priest",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5025,
+    "name": "Dire Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5028,
+    "name": "Sewer Destroyer II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5034,
+    "name": "Abyss Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5052,
+    "name": "Eclipse Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5059,
+    "name": "Plague Carrier IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5077,
+    "name": "Waster",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5090,
+    "name": "Filthy Pack Rat VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5101,
+    "name": "Mangy Sacker Greater",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5125,
+    "name": "Salt Chaos Follower",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5132,
+    "name": "Pack Destroyer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5157,
+    "name": "Dire Ravager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5170,
+    "name": "Zealous Skaven General",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5178,
+    "name": "Progenitor Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5181,
+    "name": "Apocalypse Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5182,
+    "name": "Voidborn Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5189,
+    "name": "Wrath Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5203,
+    "name": "Scrawny Sewer Rat Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5204,
+    "name": "Chosen Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5205,
+    "name": "Lightning Warp-grinder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5221,
+    "name": "Bleak Raider",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5230,
+    "name": "Tyrant Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5232,
+    "name": "Astral Plague Censer",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5242,
+    "name": "Destroyer",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5249,
+    "name": "Ascendant Ikit Claw",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5266,
+    "name": "Cursed Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5275,
+    "name": "Runed Keeper Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5285,
+    "name": "Elder Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5294,
+    "name": "Gloom Stormvermin II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5316,
+    "name": "Vandal Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5318,
+    "name": "Gnawed Chaos Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5326,
+    "name": "Dire Looter",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5339,
+    "name": "Gaunt Destroyer",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5340,
+    "name": "Salt Blood Seeker",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5345,
+    "name": "Brimstone Horror Elite",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5369,
+    "name": "Invincible Ikit Claw",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5378,
+    "name": "Celestial Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5386,
+    "name": "Yellow Chaos Follower",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5388,
+    "name": "Dread Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5404,
+    "name": "Wandering Clanrat Junior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5424,
+    "name": "Singed Daemonette II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5426,
+    "name": "Raging Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5436,
+    "name": "Gnawed Dark Warrior III",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5446,
+    "name": "Hollow Rat Minion Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5465,
+    "name": "Despoiler Feral",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5469,
+    "name": "Crystal Warp-grinder",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5496,
+    "name": "Night Waster",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5501,
+    "name": "Dire Khorne Herald",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5506,
+    "name": "Thorn Plaguebearer Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5519,
+    "name": "Umbral Gutter Runner",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5528,
+    "name": "Yellow Dark Cultist Corrupted",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5534,
+    "name": "Barbed Gutter Runner Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5546,
+    "name": "Wrathful Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5549,
+    "name": "Astral Plague Priest",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5561,
+    "name": "Arcane Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5565,
+    "name": "Pillager Blessed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5566,
+    "name": "Primordial Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5576,
+    "name": "Corrupted Plague Priest",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5579,
+    "name": "Wrecker Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5581,
+    "name": "Small Sewer Rat Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5589,
+    "name": "Wrath Doom-wheel",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5595,
+    "name": "Squalid Sewer Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5599,
+    "name": "Brimstone Horror Minor",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5601,
+    "name": "Scarred Bloodletter V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5616,
+    "name": "Clanrat",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5633,
+    "name": "Bristled Gutter Runner",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5643,
+    "name": "Ragged Mutt Young",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5645,
+    "name": "Archon Ikit Claw",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5648,
+    "name": "Exalted Chaos Lord",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5656,
+    "name": "Transcendent Kairos Fateweaver",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5690,
+    "name": "Dark Warrior VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5701,
+    "name": "Eternal Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5702,
+    "name": "Gnawed Clanrat",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5719,
+    "name": "Doom Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5720,
+    "name": "Dread Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5730,
+    "name": "Bloodletter Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5731,
+    "name": "Void Khorne Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5747,
+    "name": "Sewer Ravager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5763,
+    "name": "Overlord Skaven General",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5793,
+    "name": "Torn Plague Rat",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5823,
+    "name": "Blood Seeker IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5869,
+    "name": "Herald Keeper Minor",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5873,
+    "name": "Nemesis Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5880,
+    "name": "Rune Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5882,
+    "name": "Plaguebearer Minor",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5892,
+    "name": "Eternal Be'lakor's Shadow",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5900,
+    "name": "Brine Clanrat VII",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5914,
+    "name": "Dim Thug Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5933,
+    "name": "Forsaken Ikit Claw",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5935,
+    "name": "Fetid Chaos Warrior",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5939,
+    "name": "Rat Minion IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5949,
+    "name": "Dragon Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5951,
+    "name": "Brawler Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5969,
+    "name": "Ragged Rampager Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 5989,
+    "name": "Nightmare Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6038,
+    "name": "Warhound",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6040,
+    "name": "Lunar Stormfiend",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6043,
+    "name": "Royal Keeper Minor",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6062,
+    "name": "True Be'lakor First Prince",
+    "rarity": "Mythic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6063,
+    "name": "Supreme Queek Headtaker",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6064,
+    "name": "Gaunt Brawler Beta",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6080,
+    "name": "Lesser Zealot I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6082,
+    "name": "Decayed Warhound Awakened",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6098,
+    "name": "Night Runner Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6103,
+    "name": "Undying Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6163,
+    "name": "Soggy Mongrel Elite",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6173,
+    "name": "Rat Minion",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6202,
+    "name": "Mottled Mongrel",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6205,
+    "name": "Lightning Chaos Champion",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6213,
+    "name": "Frost Daemonette V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6227,
+    "name": "Fleshhound Young",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6235,
+    "name": "Primordial Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6239,
+    "name": "Undying Khorne Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6245,
+    "name": "Plague Fleshhound Prime",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6271,
+    "name": "Gnawed Daemonette Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6276,
+    "name": "Disease Spreader Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6292,
+    "name": "Chaos Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6300,
+    "name": "Silver Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6302,
+    "name": "Warlord Skaven General",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6314,
+    "name": "Plague Monk III",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6329,
+    "name": "Chaos Hound Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6331,
+    "name": "Spindly Gorebeast Feral",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6337,
+    "name": "Master Chaos Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6351,
+    "name": "Plague Blood Knight Corrupted",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6356,
+    "name": "Scorched Skaven Scout VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6359,
+    "name": "Bone Vandal Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6367,
+    "name": "Primordial Kairos Fateweaver",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6383,
+    "name": "Rotten Sacker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6387,
+    "name": "Dim Blood Seeker",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6393,
+    "name": "Hoar Chaos Hound",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6396,
+    "name": "Chaos Hound Greater",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6397,
+    "name": "Abyss Khorne Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6400,
+    "name": "Grim Waster Senior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6419,
+    "name": "Infernal Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6432,
+    "name": "Haggard Looter",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6436,
+    "name": "Rat Minion Senior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6441,
+    "name": "Ash Mutt Minor",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6443,
+    "name": "Jagged Wrecker Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6447,
+    "name": "Spectral Plague Priest",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6460,
+    "name": "Wrathful Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6486,
+    "name": "Haggard Cave Rat Ancient",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6494,
+    "name": "Prime Skaven General",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6535,
+    "name": "Daemonette",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6538,
+    "name": "Scarred Clanrat Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6560,
+    "name": "Twilight Rat Ogre",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6565,
+    "name": "Mud Gorebeast Tamed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6575,
+    "name": "Looter Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6597,
+    "name": "Risen Skaven General",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6598,
+    "name": "Herald Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6608,
+    "name": "Torn Plague Carrier",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6620,
+    "name": "Infernal Chaos Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6622,
+    "name": "Disease Spreader Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6635,
+    "name": "Umbral Daemonette",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6673,
+    "name": "Sludge Pillager",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6687,
+    "name": "Spindly Berserker Young",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6694,
+    "name": "Tar Spoiler Alpha",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6724,
+    "name": "Arcane Plague Censer",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6737,
+    "name": "Grimy Looter",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6740,
+    "name": "Murk Plaguebearer Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6746,
+    "name": "Torn Gorebeast",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6755,
+    "name": "Plague Carrier Lesser",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6806,
+    "name": "Crowned Skaven General",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6808,
+    "name": "Meager Dark Cultist Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6810,
+    "name": "Pack Spoiler Tamed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6818,
+    "name": "Arcane Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6835,
+    "name": "Withering Blood Knight",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6844,
+    "name": "Fell Cave Rat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6845,
+    "name": "Meager Chaos Follower",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6853,
+    "name": "Doom Chaos Champion",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6855,
+    "name": "Thug Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6857,
+    "name": "Invincible Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6858,
+    "name": "Frozen Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6864,
+    "name": "Primordial Ikit Claw",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6867,
+    "name": "Dim Berserker Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6869,
+    "name": "Lord Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6884,
+    "name": "Crude Ravager Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6885,
+    "name": "Mangy Pillager Young",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6892,
+    "name": "Chaos Warrior Blessed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6905,
+    "name": "Frenzied IV",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6918,
+    "name": "Jagged Sacker Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6949,
+    "name": "Omega Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6951,
+    "name": "Vandal",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6956,
+    "name": "Iron Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6965,
+    "name": "Zealot",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6972,
+    "name": "Fleshhound",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6977,
+    "name": "Scourge Chaos Champion",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6981,
+    "name": "Apocalypse Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 6997,
+    "name": "Sacker Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7000,
+    "name": "Primordial Ku'gath Plaguefather",
+    "rarity": "Legendary",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7006,
+    "name": "Sinuous Blood Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7009,
+    "name": "Frozen Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7019,
+    "name": "Sovereign Keeper Minor",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7041,
+    "name": "Astral Doom-wheel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7043,
+    "name": "Murk Brimstone Horror Greater",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7046,
+    "name": "Crude Looter",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7057,
+    "name": "Plague Monk Major",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7079,
+    "name": "Undying Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7084,
+    "name": "Shadow Blood Seeker Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7085,
+    "name": "Titan Plague Censer",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7097,
+    "name": "Slugger Greater",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7098,
+    "name": "Sunken Fanatic III",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7115,
+    "name": "Mangy Sewer Rat Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7122,
+    "name": "Dire Madman",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7142,
+    "name": "Twilight Clanrat Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7147,
+    "name": "Coiled Daemonette",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7159,
+    "name": "Withered Sewer Rat Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7172,
+    "name": "Drowned Clanrat V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7183,
+    "name": "Hoar Night Runner Feral",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7184,
+    "name": "Death Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7192,
+    "name": "Hollow Pink Horror Junior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7199,
+    "name": "Celestial Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7208,
+    "name": "Jagged Looter",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7212,
+    "name": "Dingy Sacker Major",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7234,
+    "name": "Marauder",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7241,
+    "name": "Fanatic",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7256,
+    "name": "Legendary Queek Headtaker",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7257,
+    "name": "Lightning Rat Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7260,
+    "name": "Mottled Mongrel Cursed",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7263,
+    "name": "Nightmare Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7264,
+    "name": "Putrid Despoiler Beta",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7268,
+    "name": "Godlike Be'lakor's Shadow",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7282,
+    "name": "Relentless Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7312,
+    "name": "Blazing Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7315,
+    "name": "Obsidian Bloodletter Tamed",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7321,
+    "name": "Apex Keeper Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7328,
+    "name": "Ragged Thug Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7334,
+    "name": "Undying Rat Ogre",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7336,
+    "name": "Titan Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7337,
+    "name": "Plunderer Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7348,
+    "name": "Cursed Stormfiend",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7357,
+    "name": "Blood Knight Elite",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7360,
+    "name": "Plague Carrier II",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7368,
+    "name": "Royal Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7378,
+    "name": "Gorebeast Tamed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7383,
+    "name": "Lanky Plague Rat Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7386,
+    "name": "Abyss Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7387,
+    "name": "Undying Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7405,
+    "name": "Ravager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7424,
+    "name": "Grave Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7425,
+    "name": "Blood Seeker Greater",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7442,
+    "name": "Fanatic II",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7454,
+    "name": "Dire Pack Rat Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7458,
+    "name": "Chaos Hound VI",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7459,
+    "name": "Dominant Keeper Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7462,
+    "name": "Berserker",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7468,
+    "name": "Sunken Pillager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7470,
+    "name": "Pale Gorebeast Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7475,
+    "name": "Hoar Gutter Runner Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7483,
+    "name": "Eternal Doom-wheel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7510,
+    "name": "Tar Plague Carrier Junior",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7516,
+    "name": "Plague Carrier Ancient",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7521,
+    "name": "Primordial Queek Headtaker",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7563,
+    "name": "Master Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7595,
+    "name": "Dragon Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7608,
+    "name": "Wrath Stormfiend",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7628,
+    "name": "Fetid Pink Horror Greater",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7629,
+    "name": "Destroyer Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7640,
+    "name": "Ultimate Verminlord Prime",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7643,
+    "name": "Tar Waster Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7647,
+    "name": "Fleshhound I",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7659,
+    "name": "Mud Plague Carrier Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7669,
+    "name": "Meager Wrecker Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7684,
+    "name": "Immortal Ku'gath Plaguefather",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7691,
+    "name": "Rat Minion Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7712,
+    "name": "Raging Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7715,
+    "name": "Pale Brawler V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7723,
+    "name": "Bloodletter Blessed",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7762,
+    "name": "Shadowed Doom-wheel",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7763,
+    "name": "Cardinal Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7769,
+    "name": "Drowned Stormvermin Ancient",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7771,
+    "name": "Gorebeast",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7785,
+    "name": "Ascendant Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7796,
+    "name": "Hound I",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7815,
+    "name": "Waning Gutter Runner",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7861,
+    "name": "Commander Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7864,
+    "name": "Vile Rampager Corrupted",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7869,
+    "name": "Lord Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7888,
+    "name": "Wild Berserker Awakened",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7898,
+    "name": "Ash Ransacker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7908,
+    "name": "Plague Monk VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7916,
+    "name": "Runed Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7917,
+    "name": "Haggard Vandal",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7934,
+    "name": "Vandal V",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7939,
+    "name": "Sludge Frenzied VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7960,
+    "name": "Gutter Runner",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 7992,
+    "name": "Filthy Rampager Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8021,
+    "name": "Mottled Gutter Runner II",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8022,
+    "name": "Thorn Bloodletter II",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8029,
+    "name": "Slime Chaos Follower I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8054,
+    "name": "Stormvermin Lesser",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8059,
+    "name": "Marauder Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8079,
+    "name": "Mythic Archaon's Herald",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8137,
+    "name": "Torn Slugger",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8140,
+    "name": "Rowdy Omega",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8148,
+    "name": "Ash Vandal",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8150,
+    "name": "Thorn Fleshhound V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8172,
+    "name": "Lunar Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8184,
+    "name": "Sable Daemon Prince of Nurgle",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8193,
+    "name": "Rust Night Runner",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8197,
+    "name": "Threadbare Looter VII",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8202,
+    "name": "Chaos Warrior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8209,
+    "name": "Supreme Chaos Lord",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8212,
+    "name": "Brute Elite",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8216,
+    "name": "Swamp Cave Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8223,
+    "name": "Malevolent Stormfiend",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8235,
+    "name": "Corrupted Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8238,
+    "name": "Gaunt Zealot IV",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8245,
+    "name": "Looter Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8261,
+    "name": "Blood Knight Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8293,
+    "name": "Crude Plague Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8296,
+    "name": "Grimy Waster Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8332,
+    "name": "Salt Pack Rat VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8338,
+    "name": "Wandering Night Runner VII",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8341,
+    "name": "Plague Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8342,
+    "name": "Mangy Looter Corrupted",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8349,
+    "name": "Cataclysm Daemon Prince of Khorne",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8350,
+    "name": "Apocalypse Ikit Claw",
+    "rarity": "Epic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8353,
+    "name": "Venom Blue Horror",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8355,
+    "name": "Giant Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8370,
+    "name": "Bone Thug Elite",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8379,
+    "name": "Cave Spoiler Major",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8383,
+    "name": "Jagged Mutt Lesser",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8385,
+    "name": "Shadowed Rat Ogre",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8401,
+    "name": "Soul Warp-grinder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8481,
+    "name": "Skaven Scout VI",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8491,
+    "name": "Grand Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8504,
+    "name": "Wrathful Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8513,
+    "name": "Grand Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8522,
+    "name": "Ancient Kairos Fateweaver",
+    "rarity": "Legendary",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8523,
+    "name": "Ragged Sewer Rat",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8538,
+    "name": "Savage Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8571,
+    "name": "Bleached Bloodletter",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8581,
+    "name": "Scarred Bloodletter Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8582,
+    "name": "Wretched Pack Rat VI",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8586,
+    "name": "Battle Warhound",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8600,
+    "name": "Eternal Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8609,
+    "name": "Transcendent Skarbrand Exiled",
+    "rarity": "Mythic",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8614,
+    "name": "Dragon Stormfiend",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8621,
+    "name": "Spindly Fanatic Feral",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8624,
+    "name": "Squalid Dark Cultist Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8628,
+    "name": "Jade Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8634,
+    "name": "Dread Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8640,
+    "name": "Celestial Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8642,
+    "name": "Exalted Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8644,
+    "name": "Warhound Feral",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8645,
+    "name": "Dust Waster Minor",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8650,
+    "name": "Scorched Pink Horror II",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8691,
+    "name": "Scrawny Destroyer",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8699,
+    "name": "Mottled Brute III",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8702,
+    "name": "Ash Slugger Blessed",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8709,
+    "name": "Ascendant Thanquol the Grey",
+    "rarity": "Epic",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8718,
+    "name": "Pink Horror Elite",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8728,
+    "name": "Tattered Thug",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8736,
+    "name": "Ether Doom-wheel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8749,
+    "name": "Transcendent Be'lakor's Shadow",
+    "rarity": "Legendary",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8773,
+    "name": "Dusk Clanrat VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8784,
+    "name": "Gnawed Dark Warrior Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8792,
+    "name": "Pillager Elite",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8799,
+    "name": "Progenitor Bloodthirster Scout",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8807,
+    "name": "Giant Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8808,
+    "name": "Sinuous Plaguebearer Major",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8810,
+    "name": "Slugger Prime",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8811,
+    "name": "Blazing Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8827,
+    "name": "Primordial Chaos Champion",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8831,
+    "name": "Sewer Thug Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8852,
+    "name": "Infernal Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8875,
+    "name": "Bleak Sacker Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8879,
+    "name": "Rust Blue Horror",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8892,
+    "name": "Haggard Plunderer Senior",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8894,
+    "name": "Silver Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8896,
+    "name": "Pillager",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8906,
+    "name": "Royal Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8919,
+    "name": "Blazing Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8936,
+    "name": "Raging Warp-grinder",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8949,
+    "name": "Doom Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8953,
+    "name": "Mangy Gorebeast Junior",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8954,
+    "name": "Necrotic Chaos Champion",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8955,
+    "name": "Malevolent Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8958,
+    "name": "Waning Brimstone Horror Junior",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8961,
+    "name": "Ash Gorebeast III",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8963,
+    "name": "Giant Plague Censer",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8990,
+    "name": "Gaunt Mutt Lesser",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 8994,
+    "name": "Savage Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9005,
+    "name": "Twilight Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9020,
+    "name": "Dusk Brimstone Horror IV",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9022,
+    "name": "Nemesis Verminlord Warmaster",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9039,
+    "name": "Dim Fanatic Minor",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9047,
+    "name": "Titan Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9050,
+    "name": "Dark Warrior Omega",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9065,
+    "name": "Bleached Plague Monk V",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9066,
+    "name": "Scorched Gutter Runner Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9068,
+    "name": "Dim Fanatic VI",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9081,
+    "name": "Ransacker Feral",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9099,
+    "name": "Gnawed Bloodletter",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9108,
+    "name": "Murky Cave Rat",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9115,
+    "name": "Pink Horror",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9132,
+    "name": "Shadowed Khorne Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9138,
+    "name": "Infernal Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9150,
+    "name": "Necrotic Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9155,
+    "name": "Celestial Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9158,
+    "name": "Withering Pink Horror Lesser",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9159,
+    "name": "Obsidian Tzeentch Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9168,
+    "name": "Raging Slaanesh Herald",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9194,
+    "name": "Wretched Plague Rat Prime",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9195,
+    "name": "Tattered Mutt I",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9199,
+    "name": "Blood Seeker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9213,
+    "name": "Ransacker Awakened",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9221,
+    "name": "Feral Despoiler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9232,
+    "name": "Fell Raider V",
+    "rarity": "Common",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9245,
+    "name": "Gloom Blood Knight Tamed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9247,
+    "name": "Blood Knight",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9253,
+    "name": "Infernal Warp-grinder",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9254,
+    "name": "Lord Keeper Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9257,
+    "name": "Death Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9261,
+    "name": "Blighted Pink Horror VI",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9264,
+    "name": "Drowned Stormvermin IV",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9280,
+    "name": "Battle Gutter Runner Alpha",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9286,
+    "name": "Wild Wrecker Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9296,
+    "name": "Forsaken Daemon Prince of Tzeentch",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9300,
+    "name": "Marauder Tamed",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9301,
+    "name": "Scorched Stormvermin Beta",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9302,
+    "name": "Abyssal Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9304,
+    "name": "Silver Exalted Warrior",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9306,
+    "name": "Soul Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9310,
+    "name": "Commander Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9316,
+    "name": "Axiom Be'lakor Primordial Eternal",
+    "rarity": "EX",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9327,
+    "name": "Gale Night Runner Lesser",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9332,
+    "name": "Sludge Frenzied",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9348,
+    "name": "Howling Khorne Herald",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9356,
+    "name": "Eclipse Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9363,
+    "name": "Wandering Rat Minion Prime",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9376,
+    "name": "Mutt Major",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9380,
+    "name": "Abyssal Chaos Lord",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9389,
+    "name": "Fetid Fleshhound",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9391,
+    "name": "Slime Sacker",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9399,
+    "name": "Hoar Gutter Runner",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9401,
+    "name": "Primordial Thanquol the Grey",
+    "rarity": "Epic",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9409,
+    "name": "Raider Blessed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9422,
+    "name": "Leaking Bloodletter V",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9426,
+    "name": "Plague Brimstone Horror",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9428,
+    "name": "Supreme Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9434,
+    "name": "Hallowed Skaven General",
+    "rarity": "Elite",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9443,
+    "name": "Despoiler Major",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9444,
+    "name": "Knotted Rat Minion",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9447,
+    "name": "Immortal Great Unclean Minor",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9487,
+    "name": "Waning Chaos Warrior",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9496,
+    "name": "Progenitor Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9509,
+    "name": "Voidborn Daemon Prince of Khorne",
+    "rarity": "Epic",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9515,
+    "name": "Despoiler",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9543,
+    "name": "Knotted Clanrat Corrupted",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9553,
+    "name": "Apex Lord of Change Minor",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9557,
+    "name": "Pitted Rat Minion Omega",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9573,
+    "name": "Thug",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9582,
+    "name": "Mutt VII",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9587,
+    "name": "Scrawny Plague Rat",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9593,
+    "name": "Lunar Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9622,
+    "name": "Umbral Night Runner Elite",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9625,
+    "name": "Twisted Plague Monk Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9630,
+    "name": "Frost Gutter Runner Senior",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9637,
+    "name": "Juggernaut Keeper Minor",
+    "rarity": "Elite",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9638,
+    "name": "Crag Slugger",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9644,
+    "name": "Undying Daemon Prince of Slaanesh",
+    "rarity": "Epic",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9656,
+    "name": "Demon Chosen of Chaos",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9659,
+    "name": "Wandering Brimstone Horror Minor",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9661,
+    "name": "Infernal Plague Censer",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9675,
+    "name": "Giant Doom-wheel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9679,
+    "name": "Wrecker",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9701,
+    "name": "Berserker Omega",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9736,
+    "name": "Raging Nurgle Herald",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9747,
+    "name": "Rampager VII",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9756,
+    "name": "Mottled Fanatic Cursed",
+    "rarity": "Common",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9771,
+    "name": "Mottled Mutt Senior",
+    "rarity": "Common",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9778,
+    "name": "Chaos Warrior V",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9802,
+    "name": "Absolute Ku'gath Plaguefather",
+    "rarity": "Legendary",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9830,
+    "name": "Archon Exalted Daemon Prince",
+    "rarity": "Elite",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9832,
+    "name": "Ashen Gutter Runner",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9847,
+    "name": "Spectral Skaven Warlord",
+    "rarity": "Rare",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9853,
+    "name": "Stormvermin III",
+    "rarity": "Uncommon",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9857,
+    "name": "Brimstone Horror",
+    "rarity": "Uncommon",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9863,
+    "name": "Pink Horror Cursed",
+    "rarity": "Uncommon",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9866,
+    "name": "Rust Skaven Scout Minor",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9870,
+    "name": "Primordial N'kari",
+    "rarity": "Legendary",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9894,
+    "name": "Twilight Chaos Champion",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9899,
+    "name": "Vanguard Verminlord Champion",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9910,
+    "name": "Undying Doom-wheel",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9913,
+    "name": "Stormvermin V",
+    "rarity": "Uncommon",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9916,
+    "name": "Eclipse Verminlord Scout",
+    "rarity": "Rare",
+    "role": "Attacker",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9924,
+    "name": "Lightning Doom-wheel",
+    "rarity": "Rare",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9929,
+    "name": "Progenitor Keeper Minor",
+    "rarity": "Elite",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9934,
+    "name": "Ragged Chaos Follower Alpha",
+    "rarity": "Common",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9942,
+    "name": "Plague Rat Ogre",
+    "rarity": "Rare",
+    "role": "Healer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9947,
+    "name": "Cursed Plague Censer",
+    "rarity": "Rare",
+    "role": "Debuffer",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9972,
+    "name": "Plunderer",
+    "rarity": "Common",
+    "role": "Support",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  },
+  {
+    "id": 9979,
+    "name": "Singed Fleshhound",
+    "rarity": "Uncommon",
+    "role": "Tank",
+    "realm": "Chaos Wastes",
+    "element": "Chaos"
+  }
+]

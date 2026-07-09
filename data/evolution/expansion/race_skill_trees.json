@@ -1,0 +1,258 @@
+{
+  "Draconic": {
+    "passive_tree": [
+      "Dragon Scales",
+      "Ancient Flame",
+      "Wyrm Sight",
+      "Apex Predator Aura",
+      "World Breaker"
+    ],
+    "active_branches": {
+      "Breath Mastery": [
+        "Fire Breath I",
+        "Fire Breath II",
+        "Elemental Breath",
+        "Omega Breath",
+        "World Scorch"
+      ],
+      "Scale Fortification": [
+        "Iron Scale I",
+        "Iron Scale II",
+        "Mythic Hide",
+        "Diamond Carapace",
+        "Invincible Form"
+      ],
+      "Dragon Lore": [
+        "Hoard Instinct",
+        "Ancient Memory",
+        "Realm Dominion",
+        "Dragon God's Eye",
+        "Eternity Mark"
+      ]
+    }
+  },
+  "Knight": {
+    "passive_tree": [
+      "Iron Will",
+      "Battle Hardened",
+      "Legendary Valor",
+      "Unbreakable",
+      "Champion's Aura"
+    ],
+    "active_branches": {
+      "Blade Arts": [
+        "Steel Slash I",
+        "Steel Slash II",
+        "Knight's Combo",
+        "Sovereign Blade",
+        "World Cleave"
+      ],
+      "Shield Mastery": [
+        "Guard I",
+        "Guard II",
+        "Parry",
+        "Deflect",
+        "Absolute Defense"
+      ],
+      "Command": [
+        "Rally",
+        "War Cry",
+        "Tactical Advance",
+        "Battle Formation",
+        "Knight's Oath"
+      ]
+    }
+  },
+  "Spectral": {
+    "passive_tree": [
+      "Phase Shift",
+      "Chill Presence",
+      "Soul Drain",
+      "Terror Aura",
+      "Void Step"
+    ],
+    "active_branches": {
+      "Haunting": [
+        "Chill Touch",
+        "Wail I",
+        "Wail II",
+        "Banshee Scream",
+        "Soul Shatter"
+      ],
+      "Possession": [
+        "Weaken Spirit",
+        "Puppet I",
+        "Puppet II",
+        "Full Possession",
+        "Soul Override"
+      ],
+      "Phase Arts": [
+        "Phase Step",
+        "Blink",
+        "Dimensional Shift",
+        "Void Walk",
+        "Reality Tear"
+      ]
+    }
+  },
+  "Great Old One": {
+    "passive_tree": [
+      "Madness Aura",
+      "Cosmic Dread",
+      "Reality Warp",
+      "Eternal Patience",
+      "World Presence"
+    ],
+    "active_branches": {
+      "Eldritch Assault": [
+        "Tentacle Strike",
+        "Madness Ray",
+        "Void Burst",
+        "Reality Crush",
+        "World Unravel"
+      ],
+      "Mind Domination": [
+        "Confuse",
+        "Terrify",
+        "Nightmare",
+        "Mind Shatter",
+        "Absolute Domination"
+      ],
+      "Void Mastery": [
+        "Void Pull",
+        "Null Field",
+        "Abyss Open",
+        "Cosmic Event",
+        "The Silence"
+      ]
+    }
+  },
+  "Digital Entity": {
+    "passive_tree": [
+      "Data Processing",
+      "Firewall",
+      "Error Correction",
+      "Overclock",
+      "Root Access"
+    ],
+    "active_branches": {
+      "Code Assault": [
+        "Virus Send",
+        "Data Breach",
+        "DDoS",
+        "System Crash",
+        "Kernel Wipe"
+      ],
+      "System Defense": [
+        "Encryption",
+        "Firewall Deploy",
+        "Error Handler",
+        "Backup Restore",
+        "Absolute Secure"
+      ],
+      "Evolution Protocol": [
+        "Patch Self",
+        "Upgrade",
+        "Version 2.0",
+        "Quantum Compile",
+        "Singularity Boot"
+      ]
+    }
+  },
+  "Titan Born": {
+    "passive_tree": [
+      "Mountain Skin",
+      "Colossus Step",
+      "World Weight",
+      "Ancient Strength",
+      "Titan's Roar"
+    ],
+    "active_branches": {
+      "Ground Slam": [
+        "Stomp I",
+        "Stomp II",
+        "Shockwave",
+        "World Quake",
+        "Continent Crack"
+      ],
+      "Titan's Will": [
+        "Endure",
+        "Unshakeable",
+        "Immortal Stand",
+        "Titan Guard",
+        "World Pillar"
+      ],
+      "Ancient Power": [
+        "Primordial Crush",
+        "Age of Giants",
+        "Titan Call",
+        "Myth Strike",
+        "Origin Power"
+      ]
+    }
+  },
+  "Construct": {
+    "passive_tree": [
+      "Iron Body",
+      "Repair Protocol",
+      "Overclock",
+      "Armored Shell",
+      "Eternal Machine"
+    ],
+    "active_branches": {
+      "Heavy Arms": [
+        "Cannon Fire",
+        "Siege Mode",
+        "Artillery Barrage",
+        "Maximum Output",
+        "World Bombardment"
+      ],
+      "Defense Matrix": [
+        "Shield Deploy",
+        "Armor Lock",
+        "Barrier Field",
+        "Absolute Defense",
+        "Iron Fortress"
+      ],
+      "Maintenance": [
+        "Self-Repair",
+        "Ally Repair",
+        "Full Restore",
+        "System Reboot",
+        "Omega Protocol"
+      ]
+    }
+  },
+  "Myth God": {
+    "passive_tree": [
+      "Divine Right",
+      "Myth Authority",
+      "World Narrative",
+      "Eternal Story",
+      "Living Legend"
+    ],
+    "active_branches": {
+      "Legend Strike": [
+        "Myth Blade I",
+        "Myth Blade II",
+        "Story Weapon",
+        "Legendary Blow",
+        "World-Ending Act"
+      ],
+      "Narrative Defense": [
+        "Plot Armor",
+        "Protagonist Shield",
+        "Deus Ex Machina",
+        "Myth Ward",
+        "Eternal Story"
+      ],
+      "God Power": [
+        "Miracle",
+        "Divine Intervention",
+        "World Edit",
+        "Myth Rewrite",
+        "The Word"
+      ]
+    }
+  }
+}
