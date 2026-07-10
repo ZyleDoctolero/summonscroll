@@ -65,7 +65,7 @@ function AuthPage() {
             className="text-xl sm:text-2xl md:text-3xl font-bold uppercase"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "var(--gold-glow)",
+              color: "var(--gold-ink)",
               letterSpacing: "0.1em",
             }}
           >
