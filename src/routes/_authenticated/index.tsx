@@ -307,11 +307,12 @@ function HubPage() {
       <div className="relative z-10 p-4 md:p-6 max-w-5xl mx-auto pb-28">
         {/* Inline Quest Board */}
         <div className="ss-card p-0 overflow-hidden border-[rgba(200,154,62,0.2)]">
-          {/* Header */}
-          <div className="px-4 py-3 border-b border-[rgba(200,154,62,0.15)] flex justify-between items-center bg-gradient-to-r from-[rgba(200,154,62,0.06)] to-transparent">
-            <div>
+          {/* Header — wraps on narrow screens so the title never collides with
+              the button */}
+          <div className="px-4 py-3 border-b border-[rgba(200,154,62,0.15)] flex flex-wrap justify-between items-center gap-2 bg-gradient-to-r from-[rgba(200,154,62,0.06)] to-transparent">
+            <div className="min-w-0">
               <h2
-                className="text-lg font-bold uppercase"
+                className="text-lg font-bold uppercase whitespace-nowrap"
                 style={{
                   fontFamily: "var(--ss-font-pixel)",
                   color: "var(--gold-ink)",
@@ -338,7 +339,7 @@ function HubPage() {
                 setEditing(null);
                 setDialogOpen(true);
               }}
-              className="ss-btn ss-btn-d-primary text-xs px-4 py-2"
+              className="ss-btn ss-btn-d-primary text-xs px-4 py-2 shrink-0"
             >
               + Issue Quest
             </button>
