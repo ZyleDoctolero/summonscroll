@@ -60,7 +60,10 @@ function CodexPage() {
           What you did, what you felt, what you forged. The mirror.
         </p>
 
-        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
+        <div
+          className="flex gap-6 mb-6 border-b overflow-x-auto no-scrollbar"
+          style={{ borderColor: "rgba(61,46,31,0.08)" }}
+        >
           {[
             { key: "heatmap" as const, label: "Heatmap" },
             { key: "journal" as const, label: "Journal" },
@@ -70,7 +73,7 @@ function CodexPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className={`ss-tab-d pb-2 text-sm font-semibold ${tab === t.key ? "active" : ""}`}
+              className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${tab === t.key ? "active" : ""}`}
             >
               {t.label}
             </button>

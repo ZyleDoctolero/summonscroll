@@ -297,8 +297,12 @@ function ProfilePage() {
             <VoidFrontierSeal streak={profile.streak} />
           </div>
 
-          {/* Tabs */}
-          <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
+          {/* Tabs — scroll horizontally on narrow screens instead of forcing
+              the whole page to overflow. */}
+          <div
+            className="flex gap-2 mb-6 border-b overflow-x-auto no-scrollbar"
+            style={{ borderColor: "rgba(61,46,31,0.08)" }}
+          >
             {(
               [
                 ["stats", "Stats"],
@@ -310,7 +314,7 @@ function ProfilePage() {
               <button
                 key={k}
                 onClick={() => setTab(k as Tab)}
-                className={`ss-tab-d pb-2 text-sm font-semibold capitalize ${tab === k ? "active" : ""}`}
+                className={`ss-tab-d pb-2 text-sm font-semibold capitalize whitespace-nowrap ${tab === k ? "active" : ""}`}
               >
                 {l}
               </button>

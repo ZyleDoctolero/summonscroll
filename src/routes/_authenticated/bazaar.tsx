@@ -94,8 +94,11 @@ function ShopPage() {
           </span>
         </div>
 
-        {/* Tabs */}
-        <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
+        {/* Tabs — scroll on narrow screens instead of overflowing the page. */}
+        <div
+          className="flex gap-2 mb-6 border-b overflow-x-auto no-scrollbar"
+          style={{ borderColor: "rgba(61,46,31,0.08)" }}
+        >
           {(
             [
               ["potion", "Potions & Items"],
@@ -107,7 +110,7 @@ function ShopPage() {
             <button
               key={key}
               onClick={() => setTab(key)}
-              className={`ss-tab-d pb-2 text-sm font-semibold ${tab === key ? "active" : ""}`}
+              className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${tab === key ? "active" : ""}`}
             >
               {label}
             </button>

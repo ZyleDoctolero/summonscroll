@@ -288,10 +288,10 @@ function PillBtn({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-1.5 text-[10px] font-bold transition-all border whitespace-nowrap ${
+      className={`inline-flex items-center min-h-[44px] px-3 text-[10px] font-bold transition-all border whitespace-nowrap ${
         active
-          ? "bg-[rgba(200,154,62,0.12)] border-[#c89a3e]/50 text-[#3d2e1e] shadow-[0_0_10px_rgba(200,154,62,0.15)]"
-          : "bg-transparent border-[#b5a28a]/20 text-[#8b7355]/60 hover:text-[#3d2e1e]/90 hover:border-[#b5a28a]/40"
+          ? "bg-[rgba(200,154,62,0.12)] border-[#c89a3e]/50 text-[var(--ink-primary)] shadow-[0_0_10px_rgba(200,154,62,0.15)]"
+          : "bg-transparent border-[#b5a28a]/30 text-[var(--ink-tertiary)] hover:text-[var(--ink-primary)] hover:border-[#b5a28a]/50"
       }`}
     >
       {children}

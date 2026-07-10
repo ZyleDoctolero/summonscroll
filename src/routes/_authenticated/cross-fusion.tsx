@@ -88,7 +88,7 @@ function CrossFusionPage() {
         </p>
 
         {/* Fusion Slots */}
-        <div className="flex items-center gap-6 md:gap-12 mb-10">
+        <div className="flex items-center justify-center gap-3 md:gap-12 mb-10">
           {/* Primary Slot */}
           <div className="flex flex-col items-center">
             <p
