@@ -7,6 +7,9 @@ import { param } from '../lib/routeUtils.js'
 export const habitsRouter = Router()
 habitsRouter.use(requireAuth)
 
+// Realms are seeded with numbers 1–12 (see prisma/seed.ts).
+const REALM_COUNT = 12
+
 // Reward calculation
 function calcReward(difficulty: string, streak: number) {
   const base: Record<string, { crystals: number; xp: number }> = {
@@ -44,8 +47,13 @@ habitsRouter.post('/', async (req: AuthRequest, res) => {
   const parsed = schema.safeParse(req.body)
   if (!parsed.success) { res.status(400).json({ message: 'Invalid input' }); return }
 
+  // Auto-assign a realm affinity (1–12) so the player never has to micro-manage
+  // it. This also activates the bond-XP-on-completion hook below, which is dead
+  // for any habit whose realmAffinity stays null.
+  const realmAffinity = 1 + Math.floor(Math.random() * REALM_COUNT)
+
   const habit = await prisma.habit.create({
-    data: { userId: req.userId!, ...parsed.data },
+    data: { userId: req.userId!, realmAffinity, ...parsed.data },
   })
   res.status(201).json({ data: habit })
 })
