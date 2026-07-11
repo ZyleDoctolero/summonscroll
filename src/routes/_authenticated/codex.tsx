@@ -145,14 +145,17 @@ function CodexPage() {
 // ─── Heatmap ────────────────────────────────────────────────────────────────
 
 function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: string) => void }) {
+  // Enforce the array contract at the boundary — a bad/empty payload must
+  // render an empty heatmap, never crash the whole Codex page.
+  const safeCells = Array.isArray(cells) ? cells : [];
+
   // Group into weeks: first cell's day-of-week determines offset
   const weeks = useMemo(() => {
-    if (!Array.isArray(cells) || cells.length === 0 || !cells[0]?.date)
-      return [] as HeatmapCell[][];
+    if (safeCells.length === 0 || !safeCells[0]?.date) return [] as HeatmapCell[][];
     const out: HeatmapCell[][] = [];
-    const firstDay = new Date(cells[0].date).getDay(); // 0..6
+    const firstDay = new Date(safeCells[0].date).getDay(); // 0..6
     let week: (HeatmapCell | null)[] = Array(firstDay).fill(null);
-    for (const c of cells) {
+    for (const c of safeCells) {
       week.push(c);
       if (week.length === 7) {
         out.push(week as HeatmapCell[]);
@@ -164,12 +167,12 @@ function Heatmap({ cells, onClick }: { cells: HeatmapCell[]; onClick: (date: str
       out.push(week as HeatmapCell[]);
     }
     return out;
-  }, [cells]);
+  }, [safeCells]);
 
   // Total stats
-  const totalDays = cells.length;
-  const activeDays = cells.filter((c) => c.ritualScore > 0).length;
-  const totalAwakenings = cells.filter((c) => c.hasAwakening).length;
+  const totalDays = safeCells.length;
+  const activeDays = safeCells.filter((c) => c.ritualScore > 0).length;
+  const totalAwakenings = safeCells.filter((c) => c.hasAwakening).length;
 
   return (
     <div>
