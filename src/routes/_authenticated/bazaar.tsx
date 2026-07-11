@@ -49,6 +49,25 @@ function ShopPage() {
   });
 
   if (profileQ.isLoading) return <LoadingScreen realmSlug="ancient-vaults" />;
+  if (profileQ.isError)
+    return (
+      <div
+        className="min-h-screen grid place-items-center p-6 text-center"
+        style={{ background: "var(--bg-stage)" }}
+      >
+        <div>
+          <p className="mb-4 text-lg font-serif" style={{ color: "var(--ink-primary)" }}>
+            The Bazaar&apos;s gates are sealed. Your ledger could not be summoned.
+          </p>
+          <button
+            onClick={() => profileQ.refetch()}
+            className="ss-btn ss-btn-d-primary min-h-[44px]"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -157,7 +176,7 @@ function ShopPage() {
                 if (armoireItem) purchaseMut.mutate(armoireItem.id);
               }}
               disabled={purchaseMut.isPending || profile.crystals < 100}
-              className="ss-btn ss-btn-d-primary disabled:opacity-40 flex items-center gap-1.5"
+              className="ss-btn ss-btn-d-primary disabled:opacity-40 flex items-center gap-1.5 min-h-[44px]"
             >
               {purchaseMut.isPending ? (
                 "Opening…"
@@ -174,8 +193,41 @@ function ShopPage() {
           </div>
         )}
 
+        {/* Item grid — loading skeletons */}
+        {tab !== "armoire" && itemsQ.isLoading && (
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
+            aria-busy="true"
+            aria-label="Loading shop items"
+          >
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={`sk-${i}`} className="ss-card animate-pulse">
+                <div className="h-4 w-2/3 mb-2 bg-[var(--bg-pane)]" />
+                <div className="h-3 w-full mb-1 bg-[var(--bg-pane)]" />
+                <div className="h-3 w-4/5 mb-4 bg-[var(--bg-pane)]" />
+                <div className="h-8 w-full bg-[var(--bg-pane)]" />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Item grid — error + retry */}
+        {tab !== "armoire" && itemsQ.isError && (
+          <div className="ss-card text-center p-8 flex flex-col items-center gap-4">
+            <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+              The market ledger could not be read.
+            </p>
+            <button
+              onClick={() => itemsQ.refetch()}
+              className="ss-btn ss-btn-d-primary min-h-[44px]"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
         {/* Item grid */}
-        {tab !== "armoire" && (
+        {tab !== "armoire" && !itemsQ.isLoading && !itemsQ.isError && items.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {items.map((item: ShopItem) => {
               const canAfford =
@@ -226,7 +278,7 @@ function ShopPage() {
                         }
                       }}
                       disabled={!canAfford || purchaseMut.isPending}
-                      className={`ss-btn disabled:opacity-40 ${canAfford ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
+                      className={`ss-btn disabled:opacity-40 min-h-[44px] ${canAfford ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
                     >
                       {purchaseMut.isPending ? "…" : armedId === item.id ? "Confirm?" : "Buy"}
                     </button>
@@ -237,7 +289,7 @@ function ShopPage() {
           </div>
         )}
 
-        {tab !== "armoire" && items.length === 0 && (
+        {tab !== "armoire" && !itemsQ.isLoading && !itemsQ.isError && items.length === 0 && (
           <EmptyState
             icon="gold"
             title="The Market Rests Between Cycles"

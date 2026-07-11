@@ -5,8 +5,9 @@ import { motion } from "motion/react";
 import { toast } from "sonner";
 import { AppShell } from "@/components/game/AppShell";
 import { Icon } from "@/components/ui/Icon";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listBanners, pullBanner } from "@/lib/game/supabase-api";
-import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
+import { type Rarity } from "@/lib/game/gacha.constants";
 import { SummonReveal, SummonResults, type PullResultData } from "@/components/game/SummonReveal";
 
 export const Route = createFileRoute("/_authenticated/altar")({
@@ -70,14 +71,66 @@ function AltarPage() {
 
   if (profileQ.isLoading || bannersQ.isLoading)
     return (
-      <div className="min-h-screen grid place-items-center text-muted-foreground">
-        Loading the Soul Resonance Array…
+      <div
+        className="relative w-full h-screen overflow-hidden flex flex-col md:flex-row bg-[var(--bg-stage)]"
+        aria-busy="true"
+        aria-label="Loading the Soul Resonance Array"
+      >
+        <div className="w-full md:w-[320px] p-6 md:pt-24 flex flex-col gap-3 bg-[var(--bg-stage)]/80">
+          <div className="w-16 h-16 mb-3 animate-pulse bg-[var(--bg-pane)]" />
+          <div className="h-8 w-3/4 mb-8 animate-pulse bg-[var(--bg-pane)]" />
+          <div className="h-16 w-full mb-4 animate-pulse bg-[var(--bg-pane)]" />
+          <div className="flex flex-row md:flex-col gap-3 overflow-hidden">
+            <div className="h-14 min-w-[200px] flex-1 animate-pulse bg-[var(--bg-pane)]" />
+            <div className="h-14 min-w-[200px] flex-1 animate-pulse bg-[var(--bg-pane)]" />
+            <div className="h-14 min-w-[200px] flex-1 animate-pulse bg-[var(--bg-pane)]" />
+          </div>
+        </div>
+        <div className="flex-1 flex flex-col justify-end p-8 md:p-16 gap-6">
+          <div className="h-24 w-2/3 mx-auto animate-pulse bg-[var(--bg-pane)]" />
+          <div className="flex flex-wrap gap-4 justify-end">
+            <div className="h-[80px] w-[200px] animate-pulse bg-[var(--bg-pane)]" />
+            <div className="h-[80px] w-[280px] animate-pulse bg-[var(--bg-pane)]" />
+          </div>
+        </div>
+      </div>
+    );
+  if (profileQ.isError || bannersQ.isError)
+    return (
+      <div className="min-h-screen grid place-items-center p-6 text-center bg-[var(--bg-stage)]">
+        <div>
+          <p className="mb-4 text-lg font-serif" style={{ color: "var(--ink-primary)" }}>
+            The resonance array could not attune. Something disrupted the signal.
+          </p>
+          <button
+            onClick={() => {
+              profileQ.refetch();
+              bannersQ.refetch();
+            }}
+            className="ss-btn ss-btn-d-primary min-h-[44px]"
+          >
+            Retry
+          </button>
+        </div>
       </div>
     );
   if (!profileQ.data || !bannersQ.data) return null;
 
   const profile = profileQ.data.profile;
   const banners = bannersData as Banner[];
+
+  if (banners.length === 0)
+    return (
+      <AppShell profile={profile}>
+        <div className="p-6 md:p-10 max-w-2xl">
+          <EmptyState
+            icon="altar"
+            title="The Array Lies Dormant"
+            body="No resonance banners are attuned right now. Return when the Page turns."
+          />
+        </div>
+      </AppShell>
+    );
 
   if (isSynthesizing) {
     return (
@@ -221,7 +274,7 @@ function AltarPage() {
                     style={{
                       fontFamily: "var(--ss-font-pixel)",
                       fontSize: 9,
-                      color: elColor,
+                      color: "var(--ink-secondary)",
                       marginTop: 3,
                       textTransform: "uppercase",
                       letterSpacing: "0.04em",
@@ -247,17 +300,23 @@ function AltarPage() {
             );
           })()}
 
-          <div className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
+          <div
+            className="flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible no-scrollbar pb-4 md:pb-0"
+            role="tablist"
+            aria-label="Featured banners"
+          >
             {banners.map((b, i) => {
               const isActive = selectedBanner?.id === b.id;
               return (
                 <motion.button
                   key={b.id}
+                  role="tab"
+                  aria-selected={isActive}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: Math.min(i * 0.03, 0.3) }}
                   onClick={() => setSelectedBannerId(b.id)}
-                  className={`relative flex items-center justify-start px-6 py-4 border-2 transition-all duration-150 overflow-hidden group min-w-[200px]`}
+                  className={`relative flex items-center justify-start px-6 py-4 border-2 transition-all duration-150 overflow-hidden group min-w-[200px] min-h-[44px] whitespace-nowrap`}
                   style={{
                     borderRadius: 0,
                     background: isActive ? "var(--bg-panel)" : "var(--bg-pane)",
@@ -351,7 +410,7 @@ function AltarPage() {
                   </div>
 
                   {/* Runic Rounded Action Buttons */}
-                  <div className="flex gap-4 w-full md:w-auto">
+                  <div className="flex flex-wrap gap-4 w-full md:w-auto">
                     {/* Pull x1 */}
                     <button
                       onClick={() => pullMut.mutate({ bannerId: selectedBanner.id, count: 1 })}
@@ -361,7 +420,7 @@ function AltarPage() {
                     >
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
-                        <span className="text-[var(--ink-secondary)] group-hover:text-[var(--gold-bright)] text-lg transition-colors">
+                        <span className="text-[var(--ink-secondary)] group-hover:text-[var(--gold-ink)] text-lg transition-colors">
                           PULL ×1
                         </span>
                         <div className="flex items-center gap-1.5 text-[var(--ink-tertiary)] text-sm mt-1">
@@ -389,7 +448,7 @@ function AltarPage() {
 
                       <div className="relative h-full flex flex-col items-center justify-center font-serif font-bold tracking-widest">
                         <span className="text-[var(--ink-primary)] text-2xl">★ PULL ×10 ★</span>
-                        <div className="flex items-center gap-2 text-[var(--ink-primary)]/85 text-base mt-1">
+                        <div className="flex items-center gap-2 text-[var(--ink-primary)] text-base mt-1">
                           <Icon
                             name={icon as React.ComponentProps<typeof Icon>["name"]}
                             size={16}
