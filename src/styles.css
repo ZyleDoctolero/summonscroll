@@ -1999,3 +1999,14 @@ body {
   outline: 2px solid var(--gold-glow);
   outline-offset: 1px;
 }
+
+/* Manual reduce-motion preference (Profile -> Stats toggle) — mirrors the
+   prefers-reduced-motion media override above. */
+[data-reduce-motion="true"] *,
+[data-reduce-motion="true"] *::before,
+[data-reduce-motion="true"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}

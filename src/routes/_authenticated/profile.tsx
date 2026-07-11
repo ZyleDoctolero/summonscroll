@@ -477,55 +477,84 @@ function ProfilePage() {
           )}
 
           {/* Achievements tab */}
-          {tab === "achievements" && (
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {(achieveQ.data?.achievements ?? []).map(
-                (a: {
-                  id: string;
-                  name: string;
-                  description: string;
-                  icon: string;
-                  unlocked: boolean;
-                  reward_crystals: number;
-                }) => (
-                  <div
-                    key={a.id}
-                    className="ss-card p-4 text-center"
-                    style={{
-                      borderColor: a.unlocked ? "var(--gold-bright)" : undefined,
-                      opacity: a.unlocked ? 1 : 0.4,
-                    }}
-                  >
-                    <div className="text-3xl mb-2 flex justify-center">
-                      {a.unlocked ? (
-                        a.icon
-                      ) : (
-                        <Icon name="close" size={24} color="var(--ink-secondary)" />
-                      )}
-                    </div>
-                    <p
-                      className="text-xs font-bold"
-                      style={{ color: a.unlocked ? "var(--ink-primary)" : "var(--ink-secondary)" }}
-                    >
-                      {a.name}
-                    </p>
-                    <p className="text-[11px] mt-1" style={{ color: "var(--ink-secondary)" }}>
-                      {a.description}
-                    </p>
-                    {a.reward_crystals > 0 && (
-                      <p
-                        className="text-[11px] mt-1 flex items-center justify-center gap-0.5"
-                        style={{ color: "var(--gold-ink)" }}
-                      >
-                        <Icon name="crystal" size={10} color="var(--gold-bright)" />+
-                        {a.reward_crystals}
-                      </p>
+          {tab === "achievements" &&
+            (() => {
+              type Achievement = {
+                id: string;
+                name: string;
+                description: string;
+                icon: string;
+                unlocked: boolean;
+                reward_crystals: number;
+              };
+              const all = (achieveQ.data?.achievements ?? []) as Achievement[];
+              const unlocked = all.filter((a) => a.unlocked);
+              const locked = all.filter((a) => !a.unlocked);
+              const card = (a: Achievement) => (
+                <div
+                  key={a.id}
+                  className="ss-card p-4 text-center"
+                  style={{
+                    borderColor: a.unlocked ? "var(--gold-bright)" : undefined,
+                    opacity: a.unlocked ? 1 : 0.4,
+                  }}
+                >
+                  <div className="text-3xl mb-2 flex justify-center">
+                    {a.unlocked ? (
+                      a.icon
+                    ) : (
+                      <Icon name="close" size={24} color="var(--ink-secondary)" />
                     )}
                   </div>
-                ),
-              )}
-            </div>
-          )}
+                  <p
+                    className="text-xs font-bold"
+                    style={{ color: a.unlocked ? "var(--ink-primary)" : "var(--ink-secondary)" }}
+                  >
+                    {a.name}
+                  </p>
+                  <p className="text-[11px] mt-1" style={{ color: "var(--ink-secondary)" }}>
+                    {a.description}
+                  </p>
+                  {a.reward_crystals > 0 && (
+                    <p
+                      className="text-[11px] mt-1 flex items-center justify-center gap-0.5"
+                      style={{ color: "var(--gold-ink)" }}
+                    >
+                      <Icon name="crystal" size={10} color="var(--gold-bright)" />+
+                      {a.reward_crystals}
+                    </p>
+                  )}
+                </div>
+              );
+              return (
+                <div className="space-y-6">
+                  <section aria-label="Unlocked achievements">
+                    <h3 className="t-label mb-3" style={{ color: "var(--ink-secondary)" }}>
+                      Unlocked — {unlocked.length}/{all.length}
+                    </h3>
+                    {unlocked.length === 0 ? (
+                      <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                        Nothing unlocked yet — complete tasks and battles to earn your first badge.
+                      </p>
+                    ) : (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {unlocked.map(card)}
+                      </div>
+                    )}
+                  </section>
+                  {locked.length > 0 && (
+                    <section aria-label="Locked achievements">
+                      <h3 className="t-label mb-3" style={{ color: "var(--ink-secondary)" }}>
+                        Still sealed — {locked.length}
+                      </h3>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {locked.map(card)}
+                      </div>
+                    </section>
+                  )}
+                </div>
+              );
+            })()}
 
           {/* Inventory tab */}
           {tab === "inventory" && (
@@ -688,6 +717,14 @@ function ProfilePage() {
           {/* Stats tab (default) */}
           {tab === "stats" && (
             <div className="space-y-4">
+              {/* Settings */}
+              <div className="ss-card">
+                <h3 className="t-h2 font-bold text-lg mb-3" style={{ color: "var(--ink-primary)" }}>
+                  Settings
+                </h3>
+                <ReduceMotionToggle />
+              </div>
+
               {/* Talents */}
               <div className="ss-card">
                 <h3
@@ -973,5 +1010,57 @@ function VoidFrontierSeal({ streak }: { streak: number }) {
         />
       </div>
     </div>
+  );
+}
+
+function ReduceMotionToggle() {
+  const [on, setOn] = useState(() => document.documentElement.dataset.reduceMotion === "true");
+
+  function toggle() {
+    const next = !on;
+    setOn(next);
+    if (next) {
+      document.documentElement.dataset.reduceMotion = "true";
+      localStorage.setItem("ss-reduce-motion", "true");
+    } else {
+      delete document.documentElement.dataset.reduceMotion;
+      localStorage.removeItem("ss-reduce-motion");
+    }
+  }
+
+  return (
+    <label className="flex items-center justify-between gap-3 cursor-pointer min-h-[44px]">
+      <span className="min-w-0">
+        <span className="block text-sm font-bold" style={{ color: "var(--ink-primary)" }}>
+          Reduce motion
+        </span>
+        <span className="block text-xs" style={{ color: "var(--ink-secondary)" }}>
+          Turns off animations and transitions. Also follows your device setting automatically.
+        </span>
+      </span>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={on}
+        aria-label="Reduce motion"
+        onClick={toggle}
+        className="shrink-0 w-14 h-8 border-2 relative transition-colors"
+        style={{
+          borderRadius: 0,
+          borderColor: on ? "var(--gold-glow)" : "rgba(139,115,85,0.4)",
+          background: on ? "var(--gold-bright)" : "rgba(139,115,85,0.12)",
+          boxShadow: "2px 2px 0 rgba(44,31,20,0.3)",
+        }}
+      >
+        <span
+          className="absolute top-0.5 w-6 h-6 transition-all"
+          style={{
+            borderRadius: 0,
+            left: on ? "calc(100% - 26px)" : "2px",
+            background: on ? "var(--ink-primary)" : "var(--ink-tertiary)",
+          }}
+        />
+      </button>
+    </label>
   );
 }

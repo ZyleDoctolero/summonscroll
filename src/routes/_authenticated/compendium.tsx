@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { AppShell } from "@/components/game/AppShell";
 import { Icon } from "@/components/ui/Icon";
@@ -403,6 +403,35 @@ function CompendiumPage() {
     return list;
   }, [monstersQ.data, realmFilter, rarityFilter, search, sortBy]);
 
+  // Incremental rendering: only mount PAGE_SIZE cards at a time so the grid
+  // doesn't create ~150 DOM subtrees up front. Grows automatically when the
+  // sentinel scrolls into view; a Load More button is the fallback.
+  const PAGE_SIZE = 48;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    // new filter/search/sort = new list — start from the first page again
+    setVisibleCount(PAGE_SIZE);
+  }, [realmFilter, rarityFilter, search, sortBy]);
+
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el || visibleCount >= filtered.length) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisibleCount((c) => Math.min(c + PAGE_SIZE, filtered.length));
+        }
+      },
+      { rootMargin: "400px" },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [visibleCount, filtered.length]);
+
+  const visibleMonsters = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+
   const realmStats = useMemo(() => {
     const stats: Record<number, { total: number; owned: number }> = {};
     for (const m of monstersQ.data?.monsters ?? []) {
@@ -605,7 +634,7 @@ function CompendiumPage() {
         {/* Monster Grid */}
         <div className="relative z-20">
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2.5">
-            {filtered.map(
+            {visibleMonsters.map(
               (
                 m: {
                   id: string;
@@ -719,6 +748,18 @@ function CompendiumPage() {
               </div>
             )}
           </div>
+
+          {/* Infinite-scroll sentinel + manual fallback */}
+          {visibleCount < filtered.length && (
+            <div ref={sentinelRef} className="flex justify-center py-6">
+              <button
+                onClick={() => setVisibleCount((c) => Math.min(c + PAGE_SIZE, filtered.length))}
+                className="ss-btn ss-btn-secondary min-h-[44px]"
+              >
+                Load more ({filtered.length - visibleCount} remaining)
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
