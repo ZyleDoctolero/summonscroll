@@ -87,6 +87,20 @@ function GuildPage() {
   });
 
   if (profileQ.isLoading) return <LoadingScreen realmSlug="iron-dominion" />;
+  if (profileQ.isError) {
+    return (
+      <AppShell profile={undefined as never} withHeader={false}>
+        <div className="relative z-10 p-6 max-w-xl mx-auto pt-20">
+          <EmptyState
+            icon="warning"
+            title="The hall doors are barred."
+            body={profileQ.error?.message ?? "Something went wrong loading the Guild Hall."}
+            cta={{ label: "Try Again", onClick: () => profileQ.refetch() }}
+          />
+        </div>
+      </AppShell>
+    );
+  }
   if (!profileQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -284,6 +298,30 @@ function GuildPage() {
                 <h3 className="t-h3 text-lg font-bold mb-3" style={{ color: "var(--ink-primary)" }}>
                   Start a Quest
                 </h3>
+                {templatesQ.isLoading && (
+                  <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                    Unrolling the quest ledger…
+                  </p>
+                )}
+                {templatesQ.isError && (
+                  <p className="text-xs" style={{ color: "var(--danger)" }}>
+                    Could not load quests.{" "}
+                    <button
+                      onClick={() => templatesQ.refetch()}
+                      className="underline"
+                      style={{ color: "var(--gold-ink)" }}
+                    >
+                      Retry
+                    </button>
+                  </p>
+                )}
+                {!templatesQ.isLoading &&
+                  !templatesQ.isError &&
+                  (templatesQ.data?.templates ?? []).length === 0 && (
+                    <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
+                      No quests are available right now.
+                    </p>
+                  )}
                 <div className="space-y-2">
                   {(templatesQ.data?.templates ?? []).map(
                     (t: {
@@ -298,8 +336,11 @@ function GuildPage() {
                         (s: { item_name: string }) => s.item_name === requiredScroll,
                       );
                       return (
-                        <div key={t.id} className="ss-pane flex items-center justify-between p-3">
-                          <div>
+                        <div
+                          key={t.id}
+                          className="ss-pane flex items-center justify-between gap-3 p-3"
+                        >
+                          <div className="min-w-0">
                             <p
                               className="text-sm font-bold"
                               style={{ color: "var(--ink-primary)" }}
@@ -331,7 +372,7 @@ function GuildPage() {
                               questMut.mutate({ templateId: t.id, scrollName: requiredScroll })
                             }
                             disabled={!hasScroll || questMut.isPending}
-                            className={`ss-btn disabled:opacity-40 ${hasScroll ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
+                            className={`ss-btn disabled:opacity-40 shrink-0 ${hasScroll ? "ss-btn-d-primary" : "ss-btn-secondary"}`}
                           >
                             Start
                           </button>
@@ -392,7 +433,7 @@ function GuildPage() {
                         style={{
                           background:
                             m.role === "leader" ? "rgba(200,154,62,0.18)" : "rgba(44,31,20,0.06)",
-                          color: m.role === "leader" ? "var(--gold-glow)" : "var(--ink-secondary)",
+                          color: m.role === "leader" ? "var(--gold-ink)" : "var(--ink-secondary)",
                         }}
                       >
                         {m.role}
@@ -413,7 +454,22 @@ function GuildPage() {
         )}
 
         {/* Browse */}
-        {tab === "browse" && (
+        {tab === "browse" && guildsQ.isLoading && (
+          <div className="ss-card">
+            <p className="text-sm" style={{ color: "var(--ink-secondary)" }}>
+              Scouting the realm for fellowships…
+            </p>
+          </div>
+        )}
+        {tab === "browse" && guildsQ.isError && (
+          <EmptyState
+            icon="warning"
+            title="The guild roll could not be read."
+            body={guildsQ.error?.message ?? "Something went wrong loading guilds."}
+            cta={{ label: "Try Again", onClick: () => guildsQ.refetch() }}
+          />
+        )}
+        {tab === "browse" && !guildsQ.isLoading && !guildsQ.isError && (
           <div className="space-y-2">
             {(guildsQ.data?.guilds ?? []).map(
               (g: {
@@ -423,9 +479,12 @@ function GuildPage() {
                 privacy: string;
                 guild_members?: { count: number }[];
               }) => (
-                <div key={g.id} className="ss-card flex items-center justify-between">
-                  <div>
-                    <p className="t-h3 font-bold text-sm" style={{ color: "var(--ink-primary)" }}>
+                <div key={g.id} className="ss-card flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <p
+                      className="t-h3 font-bold text-sm truncate"
+                      style={{ color: "var(--ink-primary)" }}
+                    >
                       {g.name}
                     </p>
                     <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
@@ -435,7 +494,7 @@ function GuildPage() {
                   <button
                     onClick={() => joinMut.mutate(g.id)}
                     disabled={!!myGuild || joinMut.isPending}
-                    className="ss-btn ss-btn-d-primary disabled:opacity-30"
+                    className="ss-btn ss-btn-d-primary disabled:opacity-30 shrink-0"
                   >
                     {myGuild ? "Already in guild" : "Join"}
                   </button>

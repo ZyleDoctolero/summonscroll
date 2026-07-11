@@ -13,7 +13,7 @@ import {
   harvestIsland,
   createTask,
 } from "@/lib/game/supabase-api";
-import { RARITY_COLOR, RARITY_GLOW, type Rarity } from "@/lib/game/gacha.constants";
+import { type Rarity } from "@/lib/game/gacha.constants";
 import { supabase } from "@/integrations/supabase/client";
 import { Icon } from "@/components/ui/Icon";
 import { LoadingScreen } from "@/components/game/LoadingScreen";
@@ -142,68 +142,82 @@ function IslandPage() {
   );
 
   // Weather based on today's task completion
-  const tasks = (tasksQ.data?.tasks ?? []) as Array<{ type: string; completed: boolean }>;
-  const dailies = tasks.filter((t) => t.type === "daily");
-  const completedDailies = dailies.filter((t) => t.completed).length;
-  const completionPct = dailies.length > 0 ? (completedDailies / dailies.length) * 100 : 100;
-  const weather = completionPct >= 100 ? "sunny" : completionPct >= 50 ? "overcast" : "stormy";
-  const weatherIcon =
-    weather === "sunny" ? "morning" : weather === "overcast" ? "evening" : "death";
-  const weatherBg =
-    weather === "sunny"
-      ? "rgba(95,173,65,0.08)"
-      : weather === "overcast"
-        ? "rgba(255,183,77,0.08)"
-        : "rgba(224,82,82,0.08)";
+  const { dailyCount, completedDailies, weather, weatherIcon, weatherBg } = useMemo(() => {
+    const tasks = (tasksQ.data?.tasks ?? []) as Array<{ type: string; completed: boolean }>;
+    const dailies = tasks.filter((t) => t.type === "daily");
+    const completed = dailies.filter((t) => t.completed).length;
+    const completionPct = dailies.length > 0 ? (completed / dailies.length) * 100 : 100;
+    const w = completionPct >= 100 ? "sunny" : completionPct >= 50 ? "overcast" : "stormy";
+    const icon = w === "sunny" ? "morning" : w === "overcast" ? "evening" : "death";
+    const bg =
+      w === "sunny"
+        ? "rgba(95,173,65,0.08)"
+        : w === "overcast"
+          ? "rgba(255,183,77,0.08)"
+          : "rgba(224,82,82,0.08)";
+    return {
+      dailyCount: dailies.length,
+      completedDailies: completed,
+      weather: w,
+      weatherIcon: icon,
+      weatherBg: bg,
+    };
+  }, [tasksQ.data?.tasks]);
 
-  const basePower = team.reduce(
-    (
-      sum: number,
-      um: {
-        monster: {
-          base_atk: number;
-          base_def: number;
-          base_hp: number;
-          realm_id: number;
-          element: string;
-        };
-        level: number;
-        bond_percent: number;
-        ascension_level: number;
+  const { teamPower, realmSynergy, elementSynergy } = useMemo(() => {
+    const basePower = team.reduce(
+      (
+        sum: number,
+        um: {
+          monster: {
+            base_atk: number;
+            base_def: number;
+            base_hp: number;
+            realm_id: number;
+            element: string;
+          };
+          level: number;
+          bond_percent: number;
+          ascension_level: number;
+        },
+      ) => {
+        const m = um.monster;
+        const power =
+          (m.base_atk + m.base_def + m.base_hp / 10) *
+          (1 + um.level * 0.05) *
+          (1 + (um.ascension_level ?? 0) * 0.1);
+        const fatigue = um.bond_percent < 10 ? 0.7 : 1;
+        return sum + Math.round(power * fatigue);
       },
-    ) => {
-      const m = um.monster;
-      const power =
-        (m.base_atk + m.base_def + m.base_hp / 10) *
-        (1 + um.level * 0.05) *
-        (1 + (um.ascension_level ?? 0) * 0.1);
-      const fatigue = um.bond_percent < 10 ? 0.7 : 1;
-      return sum + Math.round(power * fatigue);
-    },
-    0,
-  );
+      0,
+    );
 
-  const realmCounts = Object.values(
-    team.reduce((acc: Record<string, number>, t: IslandTeamMember) => {
-      acc[t.monster.realm_id] = (acc[t.monster.realm_id] || 0) + 1;
-      return acc;
-    }, {}),
-  );
-  const elementCounts = Object.values(
-    team.reduce((acc: Record<string, number>, t: IslandTeamMember) => {
-      acc[t.monster.element] = (acc[t.monster.element] || 0) + 1;
-      return acc;
-    }, {}),
-  );
+    const realmCounts = Object.values(
+      team.reduce((acc: Record<string, number>, t: IslandTeamMember) => {
+        acc[t.monster.realm_id] = (acc[t.monster.realm_id] || 0) + 1;
+        return acc;
+      }, {}),
+    );
+    const elementCounts = Object.values(
+      team.reduce((acc: Record<string, number>, t: IslandTeamMember) => {
+        acc[t.monster.element] = (acc[t.monster.element] || 0) + 1;
+        return acc;
+      }, {}),
+    );
 
-  const realmSynergy = realmCounts.some((c) => (c as number) >= 3);
-  const elementSynergy = elementCounts.some((c) => (c as number) >= 2);
+    const rSynergy = realmCounts.some((c) => (c as number) >= 3);
+    const eSynergy = elementCounts.some((c) => (c as number) >= 2);
 
-  let synergyMult = 1.0;
-  if (realmSynergy) synergyMult += 0.15;
-  if (elementSynergy) synergyMult += 0.05;
+    let synergyMult = 1.0;
+    if (rSynergy) synergyMult += 0.15;
+    if (eSynergy) synergyMult += 0.05;
 
-  const teamPower = Math.round(basePower * synergyMult);
+    return {
+      teamPower: Math.round(basePower * synergyMult),
+      realmSynergy: rSynergy,
+      elementSynergy: eSynergy,
+    };
+  }, [team]);
 
   const pendingHarvest = useMemo(() => {
     const profile = profileQ.data?.profile;
@@ -226,6 +240,20 @@ function IslandPage() {
   }, [profileQ.data?.profile, team]);
 
   if (profileQ.isLoading) return <LoadingScreen realmSlug="divine-threshold" />;
+  if (profileQ.isError) {
+    return (
+      <AppShell profile={undefined as never} withHeader={false}>
+        <div className="relative z-10 p-6 max-w-xl mx-auto pt-20">
+          <EmptyState
+            icon="warning"
+            title="The realm could not be reached."
+            body={profileQ.error?.message ?? "Something went wrong loading your cultivation realm."}
+            cta={{ label: "Try Again", onClick: () => profileQ.refetch() }}
+          />
+        </div>
+      </AppShell>
+    );
+  }
   if (!profileQ.data) return null;
 
   return (
@@ -312,16 +340,16 @@ function IslandPage() {
               <p className="text-xs" style={{ color: "var(--ink-secondary)" }}>
                 {weather === "sunny" && "All dailies complete — your realm prospers!"}
                 {weather === "overcast" &&
-                  `${completedDailies}/${dailies.length} dailies done — clouds gather.`}
+                  `${completedDailies}/${dailyCount} dailies done — clouds gather.`}
                 {weather === "stormy" &&
-                  `Only ${completedDailies}/${dailies.length} dailies — demonic qi rages!`}
+                  `Only ${completedDailies}/${dailyCount} dailies — demonic qi rages!`}
               </p>
             </div>
           </div>
 
           {/* Synergy indicators */}
           {(realmSynergy || elementSynergy) && (
-            <div className="flex gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mb-4">
               {realmSynergy && (
                 <span
                   className="text-[9px] px-2 py-1 font-bold uppercase"
@@ -343,7 +371,7 @@ function IslandPage() {
                     fontFamily: "var(--ss-font-pixel)",
                     borderRadius: 0,
                     background: "rgba(56,184,245,0.1)",
-                    color: "#38b8f5",
+                    color: "var(--ink-primary)",
                     border: "1px solid rgba(56,184,245,0.2)",
                   }}
                 >
@@ -355,16 +383,16 @@ function IslandPage() {
 
           {/* Team slots */}
           <div className="mb-8">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
               <h2 className="t-h3 text-lg font-bold" style={{ color: "var(--ink-primary)" }}>
                 Your Team
               </h2>
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 {pendingHarvest > 0 && (
                   <button
                     onClick={() => harvestMut.mutate()}
                     disabled={harvestMut.isPending}
-                    className="ss-btn ss-btn-d-primary animate-pulse"
+                    className="ss-btn ss-btn-d-primary animate-pulse min-h-[44px]"
                     style={{
                       background: "linear-gradient(135deg, var(--success), var(--realm-wild))",
                     }}
@@ -433,7 +461,7 @@ function IslandPage() {
                         <button
                           onClick={() => ascendMut.mutate(um.id)}
                           disabled={ascendMut.isPending}
-                          className="w-full mt-2 py-1.5 text-[10px] font-bold uppercase transition-all disabled:opacity-50"
+                          className="w-full mt-2 py-1.5 text-[10px] font-bold uppercase transition-all disabled:opacity-50 min-h-[44px]"
                           style={{
                             borderRadius: 0,
                             fontFamily: "var(--ss-font-pixel)",
@@ -462,13 +490,13 @@ function IslandPage() {
           className="fixed bottom-0 left-0 right-0 z-40 p-4 border-t ss-modal rounded-b-none"
           style={{ background: "var(--bg-stage)" }}
         >
-          <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <div className="max-w-4xl mx-auto flex items-center justify-between gap-3">
             <p className="text-sm font-semibold" style={{ color: "var(--gold-ink)" }}>
               Select a monster for Slot {assignSlot}
             </p>
             <button
               onClick={() => setAssignSlot(null)}
-              className="ss-btn ss-btn-secondary py-1 text-xs"
+              className="ss-btn ss-btn-secondary py-1 text-xs min-h-[44px]"
             >
               Cancel
             </button>

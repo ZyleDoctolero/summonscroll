@@ -339,7 +339,7 @@ function HubPage() {
                 setEditing(null);
                 setDialogOpen(true);
               }}
-              className="ss-btn ss-btn-d-primary text-xs px-4 py-2 shrink-0"
+              className="ss-btn ss-btn-d-primary text-xs px-4 py-2 shrink-0 min-h-[44px]"
             >
               + Issue Quest
             </button>
@@ -598,6 +598,8 @@ function HubPage() {
                           : `/sprites/monsters/${tetheredUm.monster.name.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
                       }
                       alt={tetheredUm.monster.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain p-0.5"
                       onError={(e) => {
                         e.currentTarget.src = "/monsters/placeholder.png";
