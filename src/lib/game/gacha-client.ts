@@ -19,7 +19,16 @@ export async function pullBanner(bannerId: string, count: 1 | 10) {
   });
 
   if (error) {
-    throw new Error(error.message);
+    // Surface DB-level failures as something a player can act on rather
+    // than a raw Postgres message.
+    throw new Error(`The summon failed — ${error.message}`);
+  }
+
+  const shaped = data as { results?: unknown[] } | null;
+  if (!shaped || !Array.isArray(shaped.results) || shaped.results.length === 0) {
+    // A "successful" RPC with no results would otherwise render nothing
+    // after the synthesizing cutscene — fail loudly instead.
+    throw new Error("The summon returned no souls. Please try again.");
   }
 
   // The RPC returns { results: [...], newBalance: { pactSeals: ... } | { crystals: ... } }

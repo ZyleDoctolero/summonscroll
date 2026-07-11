@@ -197,6 +197,19 @@ function HubPage() {
       warnDropped(res.droppedFields);
       qc.invalidateQueries({ queryKey: ["tasks"] });
       setDialogOpen(false);
+      toast.success(`Quest issued: ${res.task?.title ?? "quest"}`);
+      // Jump to the tab where the new quest actually lives — before this,
+      // creating an undated todo from the Today tab looked like nothing
+      // happened (Today filters it out).
+      const t = res.task as { type?: TaskType; due_date?: string | null } | null;
+      if (t?.type === "todo") {
+        if (!(t.due_date && t.due_date <= todayLocal)) setTab("todo");
+        else setTab("today");
+      } else if (t?.type === "daily") {
+        setTab("daily");
+      } else if (t?.type === "habit") {
+        setTab("habit");
+      }
     },
     onError: (e: Error) => toast.error(e.message),
   });
@@ -219,6 +232,7 @@ function HubPage() {
       qc.invalidateQueries({ queryKey: ["tasks"] });
       setDialogOpen(false);
       setEditing(null);
+      toast.success("Quest updated.");
     },
     onError: (e: Error) => toast.error(e.message),
   });
@@ -242,7 +256,9 @@ function HubPage() {
     mutationFn: (id: string) => deleteTask(id),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["tasks"] });
+      toast("Quest removed.");
     },
+    onError: (e: Error) => toast.error(e.message),
   });
 
   const onboardingMut = useMutation({
@@ -651,6 +667,7 @@ function HubPage() {
       <TaskFormDialog
         open={dialogOpen}
         defaultType={tab === "vice" ? "habit" : tab === "today" ? "todo" : tab}
+        defaultDueDate={tab === "today" ? todayLocal : null}
         initial={editing ?? undefined}
         onClose={() => {
           setDialogOpen(false);

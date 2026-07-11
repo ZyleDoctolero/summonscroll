@@ -23,12 +23,15 @@ export type TaskFormValue = {
 export function TaskFormDialog({
   open,
   defaultType,
+  defaultDueDate = null,
   initial,
   onSubmit,
   onClose,
 }: {
   open: boolean;
   defaultType: TaskType;
+  /** Pre-fill the due date for new todos (e.g. today when opened from the Today tab). */
+  defaultDueDate?: string | null;
   initial?: Task & { schedule_days?: number[]; tags?: string[]; realm_id?: number | null };
   onSubmit: (v: TaskFormValue) => void | Promise<void>;
   onClose: () => void;
@@ -64,10 +67,10 @@ export function TaskFormDialog({
       tags: initial?.tags ?? [],
       realm_id: initial?.realm_id ?? null,
       element: (initial as { element?: string | null })?.element ?? null,
-      due_date: initial?.due_date ?? null,
+      due_date: initial?.due_date ?? defaultDueDate,
       due_time: initial?.due_time ? initial.due_time.slice(0, 5) : null,
     });
-  }, [open, initial, defaultType]);
+  }, [open, initial, defaultType, defaultDueDate]);
 
   if (!open) return null;
 

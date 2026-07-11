@@ -24,7 +24,15 @@ export function ResponsiveDialog({
           <Drawer.Content className="ss-modal fixed bottom-0 left-0 right-0 rounded-b-none mt-24 max-h-[92vh] overflow-y-auto">
             {/* Drag handle */}
             <div className="mx-auto w-12 h-1.5 rounded-full bg-[#b5a28a]/30 mb-4" />
-            {title && <h2 className="t-h2 mb-4">{title}</h2>}
+            {/* Radix (via vaul) requires a Title inside DialogContent for
+                screen readers — render it visually hidden when none given */}
+            {title ? (
+              <Drawer.Title asChild>
+                <h2 className="t-h2 mb-4">{title}</h2>
+              </Drawer.Title>
+            ) : (
+              <Drawer.Title className="sr-only">Dialog</Drawer.Title>
+            )}
             {children}
           </Drawer.Content>
         </Drawer.Portal>
