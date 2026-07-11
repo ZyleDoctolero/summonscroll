@@ -164,7 +164,7 @@ function BattlePage() {
                 transition={{ duration: dur.measured, ease: ease.weighty, delay: 0.08 }}
                 className="font-serif text-4xl font-bold mb-1"
                 style={{
-                  color: result.won ? "var(--gold-ink)" : "#7d2e2f",
+                  color: result.won ? "var(--gold-ink)" : "var(--danger)",
                   letterSpacing: "0.05em",
                 }}
               >
@@ -212,6 +212,7 @@ function BattlePage() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: dur.fast, ease: ease.out, delay: logDelays[i] }}
                   className="text-xs flex items-center gap-2"
+                  // enemy turns keep semantic red (--danger is AA on parchment)
                   style={{
                     color: entry.actor === "player" ? "var(--ink-primary)" : "var(--danger)",
                   }}
@@ -235,7 +236,7 @@ function BattlePage() {
                   <button
                     onClick={() => turnMut.mutate("attack")}
                     disabled={turnMut.isPending}
-                    className="ss-btn ss-btn-primary"
+                    className="ss-btn ss-btn-primary min-h-[44px]"
                     style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 10 }}
                   >
                     ⚔ Attack
@@ -243,7 +244,7 @@ function BattlePage() {
                   <button
                     onClick={() => turnMut.mutate("defend")}
                     disabled={turnMut.isPending}
-                    className="ss-btn ss-btn-secondary"
+                    className="ss-btn ss-btn-secondary min-h-[44px]"
                     style={{ fontFamily: "var(--ss-font-pixel)", fontSize: 10 }}
                   >
                     🛡 Defend
@@ -251,7 +252,7 @@ function BattlePage() {
                   <button
                     onClick={() => turnMut.mutate("special")}
                     disabled={turnMut.isPending || result.initialState.specialCooldown > 0}
-                    className="ss-btn ss-btn-danger"
+                    className="ss-btn ss-btn-danger min-h-[44px]"
                     style={{
                       opacity: result.initialState.specialCooldown > 0 ? 0.4 : 1,
                       fontFamily: "var(--ss-font-pixel)",
@@ -267,7 +268,7 @@ function BattlePage() {
                 <button
                   onClick={() => turnMut.mutate("tamer_bond")}
                   disabled={turnMut.isPending}
-                  className="w-full py-2 border"
+                  className="w-full py-2 border min-h-[44px]"
                   style={{
                     fontFamily: "var(--ss-font-pixel)",
                     fontSize: 10,
@@ -276,7 +277,7 @@ function BattlePage() {
                     background: "rgba(127,119,221,0.1)",
                     borderColor: "rgba(127,119,221,0.3)",
                     borderRadius: 0,
-                    color: "var(--violet)",
+                    color: "var(--violet-ink)",
                     boxShadow: "2px 2px 0 rgba(0,0,0,0.3)",
                   }}
                 >
@@ -291,7 +292,7 @@ function BattlePage() {
                 whileTap={{ scale: 0.97 }}
                 whileHover={{ y: -1 }}
                 transition={trans.springy}
-                className="ss-btn ss-btn-secondary w-full mt-4"
+                className="ss-btn ss-btn-secondary w-full mt-4 min-h-[44px]"
               >
                 Next →
               </motion.button>
@@ -474,7 +475,7 @@ function BattlePage() {
             onClick={() => setModeSelection("auto")}
             role="tab"
             aria-selected={modeSelection === "auto"}
-            className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${modeSelection === "auto" ? "active" : ""}`}
+            className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap min-h-[44px] ${modeSelection === "auto" ? "active" : ""}`}
           >
             Auto Mode
           </button>
@@ -482,7 +483,7 @@ function BattlePage() {
             onClick={() => setModeSelection("manual")}
             role="tab"
             aria-selected={modeSelection === "manual"}
-            className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${modeSelection === "manual" ? "active" : ""}`}
+            className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap min-h-[44px] ${modeSelection === "manual" ? "active" : ""}`}
           >
             Manual Mode (+15% Gold)
           </button>
@@ -536,7 +537,27 @@ function BattlePage() {
           >
             RECENT BATTLES
           </h2>
-          {(historyQ.data?.battles ?? []).length === 0 ? (
+          {historyQ.isLoading ? (
+            <div
+              className="ss-card p-6 text-center text-sm"
+              style={{ color: "var(--ink-secondary)" }}
+            >
+              Loading recent battles…
+            </div>
+          ) : historyQ.isError ? (
+            <div
+              className="ss-card p-6 text-center text-sm"
+              style={{ color: "var(--ink-secondary)" }}
+            >
+              <p className="mb-3">The ledger is smudged — battle history failed to load.</p>
+              <button
+                onClick={() => historyQ.refetch()}
+                className="ss-btn ss-btn-secondary min-h-[44px]"
+              >
+                Retry
+              </button>
+            </div>
+          ) : (historyQ.data?.battles ?? []).length === 0 ? (
             <EmptyState
               icon="battle"
               title="No battles fought."
@@ -668,7 +689,15 @@ function ModeCard({
         </p>
       )}
       {progress !== undefined && (
-        <div className="ss-bar-pixel mb-4" style={{ height: 10 }}>
+        <div
+          className="ss-bar-pixel mb-4"
+          style={{ height: 10 }}
+          role="progressbar"
+          aria-label={`${title} progress`}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(progress)}
+        >
           <div
             className="ss-bar-pixel-fill transition-all duration-700"
             style={{ width: `${progress}%`, background: accent }}
