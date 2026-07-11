@@ -302,6 +302,8 @@ function ProfilePage() {
           <div
             className="flex gap-2 mb-6 border-b overflow-x-auto no-scrollbar"
             style={{ borderColor: "rgba(61,46,31,0.08)" }}
+            role="tablist"
+            aria-label="Profile sections"
           >
             {(
               [
@@ -314,6 +316,8 @@ function ProfilePage() {
               <button
                 key={k}
                 onClick={() => setTab(k as Tab)}
+                role="tab"
+                aria-selected={tab === k}
                 className={`ss-tab-d pb-2 text-sm font-semibold capitalize whitespace-nowrap ${tab === k ? "active" : ""}`}
               >
                 {l}

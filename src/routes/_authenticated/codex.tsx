@@ -63,6 +63,8 @@ function CodexPage() {
         <div
           className="flex gap-6 mb-6 border-b overflow-x-auto no-scrollbar"
           style={{ borderColor: "rgba(61,46,31,0.08)" }}
+          role="tablist"
+          aria-label="Codex sections"
         >
           {[
             { key: "heatmap" as const, label: "Heatmap" },
@@ -73,6 +75,8 @@ function CodexPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
+              role="tab"
+              aria-selected={tab === t.key}
               className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${tab === t.key ? "active" : ""}`}
             >
               {t.label}

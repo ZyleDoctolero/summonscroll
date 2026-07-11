@@ -465,16 +465,24 @@ function BattlePage() {
           </div>
         )}
 
-        <div className="flex gap-4 mb-6">
+        <div
+          className="flex gap-4 mb-6 overflow-x-auto no-scrollbar"
+          role="tablist"
+          aria-label="Battle mode"
+        >
           <button
             onClick={() => setModeSelection("auto")}
-            className={`ss-tab-d pb-2 text-sm font-semibold ${modeSelection === "auto" ? "active" : ""}`}
+            role="tab"
+            aria-selected={modeSelection === "auto"}
+            className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${modeSelection === "auto" ? "active" : ""}`}
           >
             Auto Mode
           </button>
           <button
             onClick={() => setModeSelection("manual")}
-            className={`ss-tab-d pb-2 text-sm font-semibold ${modeSelection === "manual" ? "active" : ""}`}
+            role="tab"
+            aria-selected={modeSelection === "manual"}
+            className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${modeSelection === "manual" ? "active" : ""}`}
           >
             Manual Mode (+15% Gold)
           </button>

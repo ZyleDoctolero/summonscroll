@@ -410,10 +410,12 @@ function HubPage() {
             </div>
           </div>
 
-          {/* Tabs */}
+          {/* Tabs — proper ARIA tab pattern (was mislabeled with aria-current) */}
           <div
-            className="px-4 pt-3 flex gap-4 border-b-2"
+            className="px-4 pt-3 flex gap-4 border-b-2 overflow-x-auto no-scrollbar"
             style={{ borderColor: "rgba(200,154,62,0.2)" }}
+            role="tablist"
+            aria-label="Quest board filter"
           >
             {(
               [
@@ -426,7 +428,7 @@ function HubPage() {
               <button
                 key={t.key}
                 onClick={() => setTab(t.key)}
-                className={`pb-2 text-sm min-h-[44px] flex items-center gap-2 border-b-2 transition-colors ${
+                className={`pb-2 text-sm min-h-[44px] flex items-center gap-2 border-b-2 transition-colors whitespace-nowrap ${
                   tab === t.key
                     ? "font-bold border-[var(--gold-glow)]"
                     : "font-semibold border-transparent"
@@ -435,7 +437,8 @@ function HubPage() {
                   // gold marks the active tab via the border; text stays AA-readable ink
                   color: tab === t.key ? "var(--ink-primary)" : "var(--ink-secondary)",
                 }}
-                aria-current={tab === t.key ? "page" : undefined}
+                role="tab"
+                aria-selected={tab === t.key}
               >
                 {t.label}
                 {t.key in tabCounts && tabCounts[t.key] > 0 && (
@@ -501,7 +504,7 @@ function HubPage() {
           })()}
 
           {/* Task List */}
-          <div className="p-4">
+          <div className="p-4" role="tabpanel" aria-label={`${tab} quests`}>
             {sortedTasks.length === 0 ? (
               <EmptyState
                 icon={

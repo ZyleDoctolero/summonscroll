@@ -98,6 +98,8 @@ function ShopPage() {
         <div
           className="flex gap-2 mb-6 border-b overflow-x-auto no-scrollbar"
           style={{ borderColor: "rgba(61,46,31,0.08)" }}
+          role="tablist"
+          aria-label="Shop categories"
         >
           {(
             [
@@ -110,6 +112,8 @@ function ShopPage() {
             <button
               key={key}
               onClick={() => setTab(key)}
+              role="tab"
+              aria-selected={tab === key}
               className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${tab === key ? "active" : ""}`}
             >
               {label}

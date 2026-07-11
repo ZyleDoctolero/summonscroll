@@ -123,7 +123,12 @@ function TrialPage() {
           </p>
         </header>
 
-        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
+        <div
+          className="flex gap-6 mb-6 border-b overflow-x-auto no-scrollbar"
+          style={{ borderColor: "rgba(61,46,31,0.08)" }}
+          role="tablist"
+          aria-label="Trial sections"
+        >
           {[
             { key: "trial" as const, label: "Enter Trial" },
             { key: "memorial" as const, label: "Memorial" },
@@ -131,7 +136,9 @@ function TrialPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className={`ss-tab-d pb-2 text-sm font-semibold capitalize min-h-[44px] ${tab === t.key ? "active" : ""}`}
+              role="tab"
+              aria-selected={tab === t.key}
+              className={`ss-tab-d pb-2 text-sm font-semibold capitalize min-h-[44px] whitespace-nowrap ${tab === t.key ? "active" : ""}`}
             >
               {t.label}
             </button>

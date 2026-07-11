@@ -96,7 +96,12 @@ function QuestsPage() {
         </p>
 
         {/* Tabs */}
-        <div className="flex gap-6 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
+        <div
+          className="flex gap-6 mb-6 border-b overflow-x-auto no-scrollbar"
+          style={{ borderColor: "rgba(61,46,31,0.08)" }}
+          role="tablist"
+          aria-label="Quest sections"
+        >
           {[
             { key: "active" as const, label: "Active" },
             { key: "slain" as const, label: "Slain" },
@@ -105,7 +110,9 @@ function QuestsPage() {
             <button
               key={t.key}
               onClick={() => setTab(t.key)}
-              className={`ss-tab-d pb-2 text-sm font-semibold ${tab === t.key ? "active" : ""}`}
+              role="tab"
+              aria-selected={tab === t.key}
+              className={`ss-tab-d pb-2 text-sm font-semibold whitespace-nowrap ${tab === t.key ? "active" : ""}`}
             >
               {t.label}
             </button>

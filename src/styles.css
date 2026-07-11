@@ -1985,3 +1985,17 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* ─── Global keyboard focus indicator (a11y — judgment #10) ─────────────────
+   :focus-visible only triggers for keyboard/programmatic focus, never on mouse
+   click, so it adds a clear focus ring for keyboard users without touching the
+   mouse experience. Placed last so it wins the outline over .ss-input's
+   `outline: none`. */
+:focus-visible {
+  outline: 2px solid var(--gold-glow);
+  outline-offset: 2px;
+}
+.ss-input:focus-visible {
+  outline: 2px solid var(--gold-glow);
+  outline-offset: 1px;
+}

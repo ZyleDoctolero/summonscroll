@@ -184,7 +184,12 @@ function GuildPage() {
         )}
 
         {/* Tabs */}
-        <div className="flex gap-2 mb-6 border-b" style={{ borderColor: "rgba(61,46,31,0.08)" }}>
+        <div
+          className="flex gap-2 mb-6 border-b overflow-x-auto no-scrollbar"
+          style={{ borderColor: "rgba(61,46,31,0.08)" }}
+          role="tablist"
+          aria-label="Guild sections"
+        >
           {(
             [
               ["guild", "My Guild"],
@@ -195,7 +200,9 @@ function GuildPage() {
             <button
               key={k}
               onClick={() => setTab(k)}
-              className={`ss-tab-d pb-2 text-sm font-semibold min-h-[44px] ${tab === k ? "active" : ""}`}
+              role="tab"
+              aria-selected={tab === k}
+              className={`ss-tab-d pb-2 text-sm font-semibold min-h-[44px] whitespace-nowrap ${tab === k ? "active" : ""}`}
             >
               {l}
             </button>
