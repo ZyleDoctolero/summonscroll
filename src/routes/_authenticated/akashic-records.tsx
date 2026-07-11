@@ -8,6 +8,7 @@ import { useState, useMemo } from "react";
 import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
 import { ChevronLeft } from "lucide-react";
 import { AscensionTree } from "@/components/game/AscensionTree";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listMyMonsters } from "@/lib/game/supabase-api";
 
 type MonsterRecord = {
@@ -44,6 +45,18 @@ function AkashicRecordsPage() {
   }, [selectedTarget, monstersData]);
 
   if (profileQ.isLoading || monstersQ.isLoading) return <LoadingScreen realmSlug="void" />;
+  if (monstersQ.isError) {
+    return (
+      <div className="min-h-screen grid place-items-center p-6">
+        <EmptyState
+          icon="alert"
+          title="Failed to load the archives"
+          body="The Akashic Records could not be reached. Please try again."
+          cta={{ label: "Retry", onClick: () => monstersQ.refetch() }}
+        />
+      </div>
+    );
+  }
   if (!profileQ.data || !monstersQ.data) return null;
 
   const profile = profileQ.data.profile;
@@ -59,7 +72,7 @@ function AkashicRecordsPage() {
             className="text-3xl font-bold uppercase"
             style={{
               fontFamily: "var(--ss-font-pixel)",
-              color: "#b8860b",
+              color: "var(--gold-ink)",
               letterSpacing: "0.08em",
             }}
           >
@@ -81,56 +94,70 @@ function AkashicRecordsPage() {
           <>
             <p
               className="text-center text-xs tracking-widest uppercase font-bold"
-              style={{ color: "#b8860b" }}
+              style={{ color: "var(--gold-ink)" }}
             >
               Select a soul to view its evolution milestones and future paths.
             </p>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-8">
-              {monsters.map((m) => {
-                const rarity = (m.monster?.rarity || "common") as Rarity;
-                const rarityColor = RARITY_COLOR[rarity] || "var(--ink-secondary)";
-                const currentStar = m.current_star ?? m.star_level ?? 1;
+            {monsters.length === 0 ? (
+              <div className="mt-8">
+                <EmptyState
+                  icon="sparkle"
+                  title="No souls to trace"
+                  body="Summon monsters first — their ascension lineage will appear here."
+                />
+              </div>
+            ) : (
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 mt-8">
+                {monsters.map((m) => {
+                  const rarity = (m.monster?.rarity || "common") as Rarity;
+                  const currentStar = m.current_star ?? m.star_level ?? 1;
 
-                return (
-                  <button
-                    key={m.id}
-                    onClick={() => setSelectedTarget(m.id)}
-                    className={`ss-card p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity}`}
-                  >
-                    <div className="w-14 h-14 mx-auto mb-2 overflow-hidden ss-pane flex items-center justify-center transition-colors">
-                      <img
-                        src={
-                          m.monster?.art_url
-                            ? m.monster.art_url
-                            : `/sprites/monsters/${(m.monster?.name || "unknown").toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
-                        }
-                        alt={m.monster?.name || "Monster"}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "/monsters/placeholder.png";
-                        }}
-                      />
-                    </div>
-                    <div className="font-serif font-bold text-sm" style={{ color: rarityColor }}>
-                      {currentStar}★
-                    </div>
-                    <div
-                      className="text-xs truncate mt-1"
-                      title={m.monster?.name}
-                      style={{ color: "var(--ink-primary)" }}
+                  return (
+                    <button
+                      key={m.id}
+                      onClick={() => setSelectedTarget(m.id)}
+                      className={`ss-card p-3 text-center cursor-pointer transition-all duration-300 group hover:scale-105 aura-${rarity}`}
                     >
-                      {m.monster?.name}
-                    </div>
-                    <div
-                      className="text-[11px] uppercase tracking-wider mt-0.5"
-                      style={{ color: rarityColor }}
-                    >
-                      {rarity}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
+                      <div className="w-14 h-14 mx-auto mb-2 overflow-hidden ss-pane flex items-center justify-center transition-colors">
+                        <img
+                          src={
+                            m.monster?.art_url
+                              ? m.monster.art_url
+                              : `/sprites/monsters/${(m.monster?.name || "unknown").toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png`
+                          }
+                          alt={m.monster?.name || "Monster"}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            e.currentTarget.src = "/monsters/placeholder.png";
+                          }}
+                        />
+                      </div>
+                      <div
+                        className="font-serif font-bold text-sm"
+                        style={{ color: "var(--ink-primary)" }}
+                      >
+                        {currentStar}★
+                      </div>
+                      <div
+                        className="text-xs truncate mt-1"
+                        title={m.monster?.name}
+                        style={{ color: "var(--ink-primary)" }}
+                      >
+                        {m.monster?.name}
+                      </div>
+                      <div
+                        className="text-[11px] uppercase tracking-wider mt-0.5"
+                        style={{ color: "var(--ink-secondary)" }}
+                      >
+                        {rarity}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </>
         ) : targetMonster ? (
           <div className="flex flex-col items-center">

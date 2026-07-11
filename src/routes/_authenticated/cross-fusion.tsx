@@ -4,7 +4,6 @@ import { useState } from "react";
 import { AppShell } from "@/components/game/AppShell";
 import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { getMyProfile, listMyMonsters } from "@/lib/game/supabase-api";
-import { Icon } from "@/components/ui/Icon";
 import { LoadingScreen } from "@/components/game/LoadingScreen";
 import { EmptyState } from "@/components/ui/EmptyState";
 
@@ -78,12 +77,17 @@ function CrossFusionPage() {
       <div className="p-6 md:p-10 max-w-5xl mx-auto relative z-10 min-h-screen flex flex-col items-center">
         <h1
           className="text-3xl font-bold mb-2 uppercase"
-          style={{ fontFamily: "var(--ss-font-pixel)", color: "#9b6dff", letterSpacing: "0.08em" }}
+          style={{
+            fontFamily: "var(--ss-font-pixel)",
+            color: "var(--violet-ink)",
+            letterSpacing: "0.08em",
+          }}
         >
           CROSS-REALM FUSION
         </h1>
         <p className="text-sm mb-10 max-w-lg text-center" style={{ color: "var(--ink-secondary)" }}>
-          Merge two ★5+ souls from <b style={{ color: "#9b6dff" }}>different realms</b> to birth a
+          Merge two ★5+ souls from <b style={{ color: "var(--violet-ink)" }}>different realms</b> to
+          birth a
           hybrid entity with dual-realm affinities and a unique Cross-Realm passive skill.
         </p>
 
@@ -100,7 +104,7 @@ function CrossFusionPage() {
             {primary ? (
               <button
                 onClick={() => setSelectingSlot("primary")}
-                className="w-36 h-44 border-2 p-2 flex flex-col items-center justify-center relative"
+                className="w-28 h-40 sm:w-36 sm:h-44 border-2 p-2 flex flex-col items-center justify-center relative"
                 style={{
                   borderRadius: 0,
                   borderColor: getRealmColor(primaryRealm),
@@ -109,7 +113,7 @@ function CrossFusionPage() {
                 }}
               >
                 <div
-                  className="w-20 h-20 mb-2 overflow-hidden flex items-center justify-center"
+                  className="w-16 h-16 sm:w-20 sm:h-20 mb-2 overflow-hidden flex items-center justify-center"
                   style={{ borderRadius: 0, border: `1px solid ${getRealmColor(primaryRealm)}40` }}
                 >
                   <img
@@ -120,6 +124,8 @@ function CrossFusionPage() {
                     className="w-full h-full object-cover"
                     style={{ imageRendering: "pixelated" }}
                     alt={primary.monster.name}
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       e.currentTarget.src = "/monsters/placeholder.png";
                     }}
@@ -127,7 +133,7 @@ function CrossFusionPage() {
                 </div>
                 <span
                   className="text-[10px] font-bold truncate w-full text-center"
-                  style={{ fontFamily: "var(--ss-font-pixel)", color: getRealmColor(primaryRealm) }}
+                  style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)" }}
                 >
                   {primary.monster.name}
                 </span>
@@ -141,11 +147,11 @@ function CrossFusionPage() {
             ) : (
               <button
                 onClick={() => setSelectingSlot("primary")}
-                className="w-36 h-44 border-2 border-dashed flex flex-col items-center justify-center"
+                className="w-28 h-40 sm:w-36 sm:h-44 border-2 border-dashed flex flex-col items-center justify-center"
                 style={{
                   borderRadius: 0,
                   borderColor: "rgba(155,109,255,0.4)",
-                  color: "#9b6dff",
+                  color: "var(--violet-ink)",
                   fontFamily: "var(--ss-font-pixel)",
                 }}
               >
@@ -197,7 +203,7 @@ function CrossFusionPage() {
             {catalyst ? (
               <button
                 onClick={() => setSelectingSlot("catalyst")}
-                className="w-36 h-44 border-2 p-2 flex flex-col items-center justify-center relative"
+                className="w-28 h-40 sm:w-36 sm:h-44 border-2 p-2 flex flex-col items-center justify-center relative"
                 style={{
                   borderRadius: 0,
                   borderColor: getRealmColor(catalystRealm),
@@ -206,7 +212,7 @@ function CrossFusionPage() {
                 }}
               >
                 <div
-                  className="w-20 h-20 mb-2 overflow-hidden flex items-center justify-center"
+                  className="w-16 h-16 sm:w-20 sm:h-20 mb-2 overflow-hidden flex items-center justify-center"
                   style={{ borderRadius: 0, border: `1px solid ${getRealmColor(catalystRealm)}40` }}
                 >
                   <img
@@ -217,6 +223,8 @@ function CrossFusionPage() {
                     className="w-full h-full object-cover"
                     style={{ imageRendering: "pixelated" }}
                     alt={catalyst.monster.name}
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       e.currentTarget.src = "/monsters/placeholder.png";
                     }}
@@ -226,7 +234,7 @@ function CrossFusionPage() {
                   className="text-[10px] font-bold truncate w-full text-center"
                   style={{
                     fontFamily: "var(--ss-font-pixel)",
-                    color: getRealmColor(catalystRealm),
+                    color: "var(--ink-primary)",
                   }}
                 >
                   {catalyst.monster.name}
@@ -241,11 +249,11 @@ function CrossFusionPage() {
             ) : (
               <button
                 onClick={() => setSelectingSlot("catalyst")}
-                className="w-36 h-44 border-2 border-dashed flex flex-col items-center justify-center"
+                className="w-28 h-40 sm:w-36 sm:h-44 border-2 border-dashed flex flex-col items-center justify-center"
                 style={{
                   borderRadius: 0,
                   borderColor: "rgba(155,109,255,0.4)",
-                  color: "#9b6dff",
+                  color: "var(--violet-ink)",
                   fontFamily: "var(--ss-font-pixel)",
                 }}
               >
@@ -269,7 +277,7 @@ function CrossFusionPage() {
           >
             <p
               className="text-[10px] uppercase font-bold mb-2"
-              style={{ fontFamily: "var(--ss-font-pixel)", color: "#9b6dff" }}
+              style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--violet-ink)" }}
             >
               FUSION RESULT PREVIEW
             </p>
@@ -289,7 +297,7 @@ function CrossFusionPage() {
         <button
           disabled={!canFuse}
           // the disabled state doubles as the page's instruction — keep it legible
-          className="px-8 py-3 font-bold uppercase transition-all"
+          className="px-8 py-3 min-h-[44px] font-bold uppercase transition-all"
           style={{
             fontFamily: "var(--ss-font-pixel)",
             fontSize: 12,
@@ -320,13 +328,13 @@ function CrossFusionPage() {
             <div className="flex items-center justify-between mb-3">
               <p
                 className="text-[10px] uppercase font-bold"
-                style={{ fontFamily: "var(--ss-font-pixel)", color: "#9b6dff" }}
+                style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--violet-ink)" }}
               >
                 SELECT {selectingSlot.toUpperCase()} SOUL (★5+)
               </p>
               <button
                 onClick={() => setSelectingSlot(null)}
-                className="text-[10px] px-2 py-1 border"
+                className="inline-flex items-center min-h-[44px] text-[10px] px-2 py-1 border"
                 style={{
                   fontFamily: "var(--ss-font-pixel)",
                   borderRadius: 0,
@@ -382,6 +390,8 @@ function CrossFusionPage() {
                           className="w-full h-full object-cover"
                           style={{ imageRendering: "pixelated" }}
                           alt={m.monster.name}
+                          loading="lazy"
+                          decoding="async"
                           onError={(e) => {
                             e.currentTarget.src = "/monsters/placeholder.png";
                           }}
@@ -389,7 +399,7 @@ function CrossFusionPage() {
                       </div>
                       <span
                         className="text-[8px] truncate w-full text-center font-bold"
-                        style={{ fontFamily: "var(--ss-font-pixel)", color: getRealmColor(realm) }}
+                        style={{ fontFamily: "var(--ss-font-pixel)", color: "var(--ink-primary)" }}
                       >
                         {m.monster.name}
                       </span>

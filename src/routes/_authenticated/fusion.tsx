@@ -6,7 +6,6 @@ import { AtmosphereBackdrop } from "@/components/game/AtmosphereBackdrop";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { getMyProfile, listMyMonsters, synthesizeMonster } from "@/lib/game/supabase-api";
 import { RARITY_COLOR, type Rarity } from "@/lib/game/gacha.constants";
-import { Icon } from "@/components/ui/Icon";
 import { LoadingScreen } from "@/components/game/LoadingScreen";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
@@ -145,7 +144,7 @@ function FusionPage() {
                 <p className="t-label truncate" style={{ color: "var(--ink-primary)" }}>
                   {targetMonster.monster.name}
                 </p>
-                <p className="text-[11px]" style={{ color: "#8a6d3b" }}>
+                <p className="text-[11px]" style={{ color: "var(--ink-secondary)" }}>
                   Level {targetMonster.level}
                 </p>
               </div>
@@ -209,6 +208,7 @@ function FusionPage() {
                           {um.monster.name}
                         </p>
                         <button
+                          aria-label={`Remove ${um.monster.name} from sacrifice`}
                           onClick={(e) => {
                             e.stopPropagation();
                             const n = [...fodderIds];
