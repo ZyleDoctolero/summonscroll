@@ -1,0 +1,597 @@
+[
+  {
+    "id": "f2557180-ddcd-4504-91fc-2da016814eba",
+    "name": "Absolute Hanami Forest Arms",
+    "file": "/monsters/absolute_hanami_forest_arms.webp"
+  },
+  {
+    "id": "abd4ecfd-acc9-49bd-9755-2966f786a07a",
+    "name": "Abyss WoW Kel'Thuzad Scout",
+    "file": "/monsters/abyss_wow_kel_thuzad_scout.webp"
+  },
+  {
+    "id": "5e06b255-3ff2-44a6-83dc-f98a95efe1ad",
+    "name": "Ancient Grave Warden",
+    "file": "/monsters/ancient_grave_warden.webp"
+  },
+  {
+    "id": "451d674b-3ac5-432f-8a5d-a2a8bda58a1e",
+    "name": "Apocalypse Old God Fragment",
+    "file": "/monsters/apocalypse_old_god_fragment.webp"
+  },
+  {
+    "id": "7e40e49a-9639-4efa-9d22-3a3b0a5da7e8",
+    "name": "Arcane Fallen Captain",
+    "file": "/monsters/arcane_fallen_captain.webp"
+  },
+  {
+    "id": "77b7f596-3392-4b03-8456-a205f0696515",
+    "name": "Archon FFXIV Elite",
+    "file": "/monsters/archon_ffxiv_elite.webp"
+  },
+  {
+    "id": "757cc512-7af5-4f32-b936-3256d1bb97da",
+    "name": "Banshee Moan VI",
+    "file": "/monsters/banshee_moan_vi.webp"
+  },
+  {
+    "id": "94bff2cb-6c79-4ebc-881f-47908c9de6ef",
+    "name": "Battle Flood Infection Blessed",
+    "file": "/monsters/battle_flood_infection_blessed.webp"
+  },
+  {
+    "id": "5c428974-b5b9-4bc4-80a3-c816b79e87c2",
+    "name": "Bleached Skeleton Champion",
+    "file": "/monsters/bleached_skeleton_champion.webp"
+  },
+  {
+    "id": "039954c5-75a3-466b-97ea-4872e1e500c5",
+    "name": "Blood Tomb Warden",
+    "file": "/monsters/blood_tomb_warden.webp"
+  },
+  {
+    "id": "853b9e67-ce04-43c8-93e2-507b4f87f6ef",
+    "name": "Brine Apparition",
+    "file": "/monsters/brine_apparition.webp"
+  },
+  {
+    "id": "da6a2c7a-e5f5-4633-ad00-6e11985e6919",
+    "name": "Cataclysm Ancient Green Dragon",
+    "file": "/monsters/cataclysm_ancient_green_dragon.webp"
+  },
+  {
+    "id": "e290a89b-f50a-46ca-9afa-2b31205baf82",
+    "name": "Cataclysm Dracolich Elder",
+    "file": "/monsters/cataclysm_dracolich_elder.webp"
+  },
+  {
+    "id": "c455997d-c350-4b69-b336-86f1d886a0c8",
+    "name": "Cataclysm Leviathan Sea",
+    "file": "/monsters/cataclysm_leviathan_sea.webp"
+  },
+  {
+    "id": "39eeeabf-3e27-4d08-9b58-d8d21f193d7f",
+    "name": "Cave Slime Junior",
+    "file": "/monsters/cave_slime_junior.webp"
+  },
+  {
+    "id": "db7f565e-5a32-45e5-9829-b669d6cdb56a",
+    "name": "Cave Spider Minor",
+    "file": "/monsters/cave_spider_minor.webp"
+  },
+  {
+    "id": "fd04b767-9655-4f19-ab94-a709d53e91a6",
+    "name": "Charred Corpse IV",
+    "file": "/monsters/charred_corpse_iv.webp"
+  },
+  {
+    "id": "104b8df5-cd56-4d20-8696-5ab253f4e7b3",
+    "name": "Cinder Hollow Beta",
+    "file": "/monsters/cinder_hollow_beta.webp"
+  },
+  {
+    "id": "4a339b59-c608-40c6-a320-e4989e7beea2",
+    "name": "Cursed Ash Knight Junior",
+    "file": "/monsters/cursed_ash_knight_junior.webp"
+  },
+  {
+    "id": "2709ae7e-4d7e-4a46-8d5b-42916e38f078",
+    "name": "Cursed Star Spawn Priest",
+    "file": "/monsters/cursed_star_spawn_priest.webp"
+  },
+  {
+    "id": "0427e378-8036-4c79-afe2-079eb91d609f",
+    "name": "Cursed Temple Knight III",
+    "file": "/monsters/cursed_temple_knight_iii.webp"
+  },
+  {
+    "id": "56f9f521-cfe4-495c-bb78-d482d232e89b",
+    "name": "Dark Dark Walker Tamed",
+    "file": "/monsters/dark_dark_walker_tamed.webp"
+  },
+  {
+    "id": "d82aa8ed-4787-46a3-92fb-2332be8249a9",
+    "name": "Dark Tendril Feral",
+    "file": "/monsters/dark_tendril_feral.webp"
+  },
+  {
+    "id": "02e82146-aa40-4350-994a-97e266b56c7e",
+    "name": "Demon Black Frost",
+    "file": "/monsters/demon_black_frost.webp"
+  },
+  {
+    "id": "abd2379e-981f-43b0-93bd-b9a12edd263d",
+    "name": "Dim Cave Bat",
+    "file": "/monsters/dim_cave_bat.webp"
+  },
+  {
+    "id": "9535f6cb-5a95-4a64-a610-13e99030658f",
+    "name": "Dingy Frost Bug Prime",
+    "file": "/monsters/dingy_frost_bug_prime.webp"
+  },
+  {
+    "id": "61e2ebd8-6618-4654-a1ba-c7a24856c83b",
+    "name": "Dingy Swamp Bat",
+    "file": "/monsters/dingy_swamp_bat.webp"
+  },
+  {
+    "id": "220b2bc7-4c23-40ad-b8f0-b23478fc3bd7",
+    "name": "Dire Rock Drake",
+    "file": "/monsters/dire_rock_drake.webp"
+  },
+  {
+    "id": "6a964eee-de35-4ff4-b748-4043ca86c90f",
+    "name": "Dragon Chosen of Chaos",
+    "file": "/monsters/dragon_chosen_of_chaos.webp"
+  },
+  {
+    "id": "f9368346-c0c2-41d1-9b39-a93f6bd00e19",
+    "name": "Dragon Medusa",
+    "file": "/monsters/dragon_medusa.webp"
+  },
+  {
+    "id": "15b38446-e880-4dc8-994e-e500429e63db",
+    "name": "Dread Slaanesh Herald",
+    "file": "/monsters/dread_slaanesh_herald.webp"
+  },
+  {
+    "id": "4b08545d-bbae-4a39-ae09-1c5a945db1ef",
+    "name": "Dream Stalker V",
+    "file": "/monsters/dream_stalker_v.webp"
+  },
+  {
+    "id": "f1e9859e-2037-4fdf-9b46-f8e318db1658",
+    "name": "Dreamer Greater",
+    "file": "/monsters/dreamer_greater.webp"
+  },
+  {
+    "id": "5e6a10e2-5a60-4897-a75e-e372fc3591c5",
+    "name": "Dusk Blessed Sprite Tamed",
+    "file": "/monsters/dusk_blessed_sprite_tamed.webp"
+  },
+  {
+    "id": "5e5746b8-fd45-4a1e-8c20-531b52274ed4",
+    "name": "Ember Knight II",
+    "file": "/monsters/ember_knight_ii.webp"
+  },
+  {
+    "id": "99555c91-b985-4bd6-a16b-4f47b1ce6b06",
+    "name": "Ether Undead Dragon",
+    "file": "/monsters/ether_undead_dragon.webp"
+  },
+  {
+    "id": "0cc9b46d-67c0-49ab-9865-7fc533e56a43",
+    "name": "Exalted Angel Champion",
+    "file": "/monsters/exalted_angel_champion.webp"
+  },
+  {
+    "id": "c2633837-facc-4bd3-97f8-c88a4b0aa2c2",
+    "name": "Fallen Abyssal Knight",
+    "file": "/monsters/fallen_abyssal_knight.webp"
+  },
+  {
+    "id": "7f61f359-b44b-46b8-a20d-a13f449612d7",
+    "name": "Fell Cosmic Bat",
+    "file": "/monsters/fell_cosmic_bat.webp"
+  },
+  {
+    "id": "1a701efa-a6af-48da-88f3-bc1ea990064e",
+    "name": "Flame Moon Beast Trader",
+    "file": "/monsters/flame_moon_beast_trader.webp"
+  },
+  {
+    "id": "a8e35741-87a8-4541-b18c-900faeb46f73",
+    "name": "Forbidden Gug Alpha",
+    "file": "/monsters/forbidden_gug_alpha.webp"
+  },
+  {
+    "id": "50905606-84a5-4fa4-bcb9-48e33750d940",
+    "name": "Forest Critter Awakened",
+    "file": "/monsters/forest_critter_awakened.webp"
+  },
+  {
+    "id": "84ce39c3-7c61-404b-93ed-55fcfd85c1d0",
+    "name": "Frost Bug Lesser",
+    "file": "/monsters/frost_bug_lesser.webp"
+  },
+  {
+    "id": "32837266-478f-46c7-b227-8743c3390b41",
+    "name": "Gale Desert Guardian IV",
+    "file": "/monsters/gale_desert_guardian_iv.webp"
+  },
+  {
+    "id": "5b5275a1-6abe-4271-a262-dd120006d863",
+    "name": "Giant Banshee",
+    "file": "/monsters/giant_banshee.webp"
+  },
+  {
+    "id": "9839ab81-dc09-4dc5-ab7e-6ce5e852f5d1",
+    "name": "Gloom Banshee Sob",
+    "file": "/monsters/gloom_banshee_sob.webp"
+  },
+  {
+    "id": "1ed2cd29-d8ff-446f-926b-a1b255b4f865",
+    "name": "Gnawed Naga Common Minor",
+    "file": "/monsters/gnawed_naga_common_minor.webp"
+  },
+  {
+    "id": "481969f3-c9ec-4219-b9d3-b3eafba3a06c",
+    "name": "Grand Knight Commander",
+    "file": "/monsters/grand_knight_commander.webp"
+  },
+  {
+    "id": "57fa83b8-720a-4f91-8da5-14c3cba608b9",
+    "name": "Haggard Brute",
+    "file": "/monsters/haggard_brute.webp"
+  },
+  {
+    "id": "6aa6a36f-4e44-49cc-88bd-d0db0041dcf8",
+    "name": "Haunted Doll",
+    "file": "/monsters/haunted_doll.webp"
+  },
+  {
+    "id": "bcd1d30f-7457-47a4-a902-da8d37783f32",
+    "name": "Haze Earth Sprite Junior",
+    "file": "/monsters/haze_earth_sprite_junior.webp"
+  },
+  {
+    "id": "36c127fa-9c09-49d5-83fb-5c125f32c75f",
+    "name": "Holy Guard",
+    "file": "/monsters/holy_guard.webp"
+  },
+  {
+    "id": "20489934-ab9d-49de-a487-c80c909bace3",
+    "name": "Howling Paladin Champion",
+    "file": "/monsters/howling_paladin_champion.webp"
+  },
+  {
+    "id": "01efe592-674c-474f-9294-c9cd6c6d753c",
+    "name": "Immortal Lord of Change Minor",
+    "file": "/monsters/immortal_lord_of_change_minor.webp"
+  },
+  {
+    "id": "ddcbd12b-c4f9-46d3-975a-52e4a8c5d127",
+    "name": "Infernal Crota Son Scout",
+    "file": "/monsters/infernal_crota_son_scout.webp"
+  },
+  {
+    "id": "e7479b4d-715c-45bb-97e2-6cfb7aae6586",
+    "name": "Initiate Angel",
+    "file": "/monsters/initiate_angel.webp"
+  },
+  {
+    "id": "20215525-6c1f-4a97-8e23-2ad1eb764361",
+    "name": "Knotted Naga Common Greater",
+    "file": "/monsters/knotted_naga_common_greater.webp"
+  },
+  {
+    "id": "5b65d5ba-a439-4525-8fb4-61b981f63a53",
+    "name": "Knotted Vampire Thrall Awakened",
+    "file": "/monsters/knotted_vampire_thrall_awakened.webp"
+  },
+  {
+    "id": "eca0242c-12ba-41aa-88b2-3124d05863cc",
+    "name": "Lesser Code Goblin Omega",
+    "file": "/monsters/lesser_code_goblin_omega.webp"
+  },
+  {
+    "id": "f23a4988-87bc-47d4-b236-f14332f30afb",
+    "name": "Lesser Cursed Villager",
+    "file": "/monsters/lesser_cursed_villager.webp"
+  },
+  {
+    "id": "974c4202-05a1-4b2f-afda-446dba9047ae",
+    "name": "Lightning Dark Angel",
+    "file": "/monsters/lightning_dark_angel.webp"
+  },
+  {
+    "id": "4944be5a-1cc7-4e78-9a2d-ab3af6a0deb5",
+    "name": "Lightning Displacer Beast",
+    "file": "/monsters/lightning_displacer_beast.webp"
+  },
+  {
+    "id": "5114eaee-25f4-4f67-8df5-31632cc47d19",
+    "name": "Mangy Chaos Fragment",
+    "file": "/monsters/mangy_chaos_fragment.webp"
+  },
+  {
+    "id": "cd1108c1-deb9-4e2a-8e23-702865bfb483",
+    "name": "Marsh Corrupted Bit IV",
+    "file": "/monsters/marsh_corrupted_bit_iv.webp"
+  },
+  {
+    "id": "1c31b4cd-dff1-4c52-877f-7cb33d2c3f72",
+    "name": "Mottled Chapel Priest Minor",
+    "file": "/monsters/mottled_chapel_priest_minor.webp"
+  },
+  {
+    "id": "ba50ffa5-a792-4511-afc5-25f42160b726",
+    "name": "Murky Nebula Mote",
+    "file": "/monsters/murky_nebula_mote.webp"
+  },
+  {
+    "id": "f734ef54-e52b-4459-9849-a616dba65773",
+    "name": "Night Corrupt Scholar",
+    "file": "/monsters/night_corrupt_scholar.webp"
+  },
+  {
+    "id": "546f06d1-5372-41bf-85e7-73bf627fb702",
+    "name": "Nightgaunt",
+    "file": "/monsters/nightgaunt.webp"
+  },
+  {
+    "id": "30376a07-8aab-4b91-aaf1-4e0430bf6e06",
+    "name": "Nightmare Ash Giant",
+    "file": "/monsters/nightmare_ash_giant.webp"
+  },
+  {
+    "id": "a7fdda47-6f2e-41db-9090-64ca2d33cfeb",
+    "name": "Pack Binary Rat II",
+    "file": "/monsters/pack_binary_rat_ii.webp"
+  },
+  {
+    "id": "50d850b3-32c0-425b-9210-d834311a7c23",
+    "name": "Pitted Cave Bear Awakened",
+    "file": "/monsters/pitted_cave_bear_awakened.webp"
+  },
+  {
+    "id": "06d0b9e8-8ba4-4f43-ba2d-2545054876f6",
+    "name": "Plague Zombie",
+    "file": "/monsters/plague_zombie.webp"
+  },
+  {
+    "id": "88b2df0d-5e7a-4639-9fbe-ddb286ebd9df",
+    "name": "Prime Deep One Archpriest",
+    "file": "/monsters/prime_deep_one_archpriest.webp"
+  },
+  {
+    "id": "c11bfd6d-04b3-441b-abcd-4283f03702fd",
+    "name": "Prime Geth Prime",
+    "file": "/monsters/prime_geth_prime.webp"
+  },
+  {
+    "id": "9b8d5e9c-92f7-4f62-a3de-58dbcdcd44cb",
+    "name": "Primordial Golem",
+    "file": "/monsters/primordial_golem.webp"
+  },
+  {
+    "id": "06a5b21f-e947-499e-88e6-9962e0ca0ca1",
+    "name": "Primordial Zoth-Ommog Sunken",
+    "file": "/monsters/primordial_zoth_ommog_sunken.webp"
+  },
+  {
+    "id": "1c705f20-c150-416d-b8a1-844ab2ffe786",
+    "name": "Putrid Gray Slime",
+    "file": "/monsters/putrid_gray_slime.webp"
+  },
+  {
+    "id": "9a2866a6-16e8-4690-b5ca-6541e0e75d63",
+    "name": "Quarried Fallen Vandal Prime",
+    "file": "/monsters/quarried_fallen_vandal_prime.webp"
+  },
+  {
+    "id": "16c5d878-0334-400b-bc75-74a4baf888ec",
+    "name": "Royal Elder Brain",
+    "file": "/monsters/royal_elder_brain.webp"
+  },
+  {
+    "id": "6c9071ad-842a-4ac7-a93c-3cb71a8f70c8",
+    "name": "Rune Street Wyrm",
+    "file": "/monsters/rune_street_wyrm.webp"
+  },
+  {
+    "id": "497c3dde-ed56-48d5-b263-5a4dfb1d802f",
+    "name": "Rusted Hollow Feral",
+    "file": "/monsters/rusted_hollow_feral.webp"
+  },
+  {
+    "id": "a31b0bc7-4eaa-4db0-8c43-97353e1d1c95",
+    "name": "Salt Yellow Slime",
+    "file": "/monsters/salt_yellow_slime.webp"
+  },
+  {
+    "id": "5316d145-0c8f-438c-9f9e-f9f9140aabc3",
+    "name": "Scarred Hollow Champion II",
+    "file": "/monsters/scarred_hollow_champion_ii.webp"
+  },
+  {
+    "id": "79082cdb-e1d0-4cbe-99c6-f07ae2ec3a83",
+    "name": "Scourge Mi-Go Surgeon",
+    "file": "/monsters/scourge_mi_go_surgeon.webp"
+  },
+  {
+    "id": "889dfcba-464f-41af-9898-a12daa8a9420",
+    "name": "Scraggly Chewer",
+    "file": "/monsters/scraggly_chewer.webp"
+  },
+  {
+    "id": "e3bd8016-ab4e-4bbf-8add-a507dedafd52",
+    "name": "Scraped Zombie Farmer",
+    "file": "/monsters/scraped_zombie_farmer.webp"
+  },
+  {
+    "id": "e404f9e6-df07-43f5-bd48-9ab5d8129920",
+    "name": "Siege Xenomorph Praetorian",
+    "file": "/monsters/siege_xenomorph_praetorian.webp"
+  },
+  {
+    "id": "10ac2cc5-102c-4333-9efd-879aa6d2c578",
+    "name": "Skeleton Soldier I",
+    "file": "/monsters/skeleton_soldier_i.webp"
+  },
+  {
+    "id": "91ddf614-8eb9-40fc-b3ca-9b088fccfa1e",
+    "name": "Slime Digital Greater",
+    "file": "/monsters/slime_digital_greater.webp"
+  },
+  {
+    "id": "909928ef-5a8b-4e88-b10c-93fcb463908e",
+    "name": "Slime Knight",
+    "file": "/monsters/slime_knight.webp"
+  },
+  {
+    "id": "ef4f1d24-6503-4e8d-9c1a-b531ba68650a",
+    "name": "Slime Temple Guard Ancient",
+    "file": "/monsters/slime_temple_guard_ancient.webp"
+  },
+  {
+    "id": "7c062b2c-14a1-4958-903c-1e0848c23063",
+    "name": "Soggy Bark Frog IV",
+    "file": "/monsters/soggy_bark_frog_iv.webp"
+  },
+  {
+    "id": "ffffa88f-5903-498d-a730-3a3a8fe2b8e4",
+    "name": "Sorrow Drow",
+    "file": "/monsters/sorrow_drow.webp"
+  },
+  {
+    "id": "e4bebf29-bc5d-4b67-b69c-217ca5596655",
+    "name": "Soul Mountain Spirit",
+    "file": "/monsters/soul_mountain_spirit.webp"
+  },
+  {
+    "id": "3c150eca-e218-4c12-8372-5f94fba566bc",
+    "name": "Specter",
+    "file": "/monsters/specter.webp"
+  },
+  {
+    "id": "1d66edf4-8a36-4e0a-ae25-5da0235cb7ab",
+    "name": "Spindly Chapel Priest II",
+    "file": "/monsters/spindly_chapel_priest_ii.webp"
+  },
+  {
+    "id": "a191523f-3d00-43fe-8341-d0d49d793c7f",
+    "name": "Spindly Lurker Ancient",
+    "file": "/monsters/spindly_lurker_ancient.webp"
+  },
+  {
+    "id": "dbe128ef-1499-4bac-82c1-b5473ad060f6",
+    "name": "Squalid Brawler Tamed",
+    "file": "/monsters/squalid_brawler_tamed.webp"
+  },
+  {
+    "id": "86d209ca-fecd-42d2-911b-30eb137c3bfa",
+    "name": "Squalid Cursed Pilgrim Senior",
+    "file": "/monsters/squalid_cursed_pilgrim_senior.webp"
+  },
+  {
+    "id": "53b277a7-10c3-43e7-aa4d-76032e7e8b0e",
+    "name": "Star Bat",
+    "file": "/monsters/star_bat.webp"
+  },
+  {
+    "id": "69426bc8-3645-4655-9bb2-604317fbcd57",
+    "name": "Star Grub Prime",
+    "file": "/monsters/star_grub_prime.webp"
+  },
+  {
+    "id": "f8d5f5b6-2c72-4492-bd61-c775a805a2d8",
+    "name": "Supreme Champion Digimon",
+    "file": "/monsters/supreme_champion_digimon.webp"
+  },
+  {
+    "id": "f98c6024-20fe-4c40-978c-a3df6d718e18",
+    "name": "Swamp Bear",
+    "file": "/monsters/swamp_bear.webp"
+  },
+  {
+    "id": "0a73c416-f659-4129-ac6c-1407d20ca127",
+    "name": "Swamp Undead Pilgrim Young",
+    "file": "/monsters/swamp_undead_pilgrim_young.webp"
+  },
+  {
+    "id": "daaebf55-c38e-4816-96d0-73a4283d0359",
+    "name": "Tar Cave Bat Junior",
+    "file": "/monsters/tar_cave_bat_junior.webp"
+  },
+  {
+    "id": "6f63b580-89ba-45fb-9043-f785090c8daa",
+    "name": "Titan Corrupted Knight",
+    "file": "/monsters/titan_corrupted_knight.webp"
+  },
+  {
+    "id": "769fbb39-c900-4bb8-8160-5ea3d94348f1",
+    "name": "Titan Grave Warden",
+    "file": "/monsters/titan_grave_warden.webp"
+  },
+  {
+    "id": "eec2f578-1fe8-41ef-9cdb-b2da416fc512",
+    "name": "Titan Slime Stack Giant",
+    "file": "/monsters/titan_slime_stack_giant.webp"
+  },
+  {
+    "id": "a9057ba4-813d-48c6-82c1-6702b7f610fb",
+    "name": "Torn Zombie Farmer Blessed",
+    "file": "/monsters/torn_zombie_farmer_blessed.webp"
+  },
+  {
+    "id": "c3f37f94-d8fa-47b8-9774-feda578fc4fe",
+    "name": "Troll Common IV",
+    "file": "/monsters/troll_common_iv.webp"
+  },
+  {
+    "id": "a435ad58-2cf2-45bf-985e-3d6a40440fe9",
+    "name": "Twilight Stormvermin",
+    "file": "/monsters/twilight_stormvermin.webp"
+  },
+  {
+    "id": "d4853513-1033-4f60-9975-c396713f87ae",
+    "name": "Twisted Banshee Wail",
+    "file": "/monsters/twisted_banshee_wail.webp"
+  },
+  {
+    "id": "6eb16e07-19d0-4681-8388-bebf01e81ba3",
+    "name": "Undying Mind Flayer",
+    "file": "/monsters/undying_mind_flayer.webp"
+  },
+  {
+    "id": "05b47321-fb21-4d0d-b347-f7fe047eaffd",
+    "name": "Venom Space Pirate Warrior",
+    "file": "/monsters/venom_space_pirate_warrior.webp"
+  },
+  {
+    "id": "187522ae-a04b-4ca5-acdb-c2c866b2758f",
+    "name": "Withered Berserker Beta",
+    "file": "/monsters/withered_berserker_beta.webp"
+  },
+  {
+    "id": "b60b90d7-69bf-4b52-bd7f-69b2455b214f",
+    "name": "Withered Glitch Rat Greater",
+    "file": "/monsters/withered_glitch_rat_greater.webp"
+  },
+  {
+    "id": "84e94fec-efb9-4e87-a5f4-38dbf2e2f1e2",
+    "name": "World The Witness Final Shape",
+    "file": "/monsters/world_the_witness_final_shape.webp"
+  },
+  {
+    "id": "14579ee6-3311-41d5-b935-88737ce288eb",
+    "name": "Wretched Plague Rat III",
+    "file": "/monsters/wretched_plague_rat_iii.webp"
+  },
+  {
+    "id": "5b9e0752-4d1b-466e-9fb0-f9c42c021781",
+    "name": "Zealous Elder Brain",
+    "file": "/monsters/zealous_elder_brain.webp"
+  }
+]
