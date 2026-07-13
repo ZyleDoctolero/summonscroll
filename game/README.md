@@ -12,6 +12,18 @@ Plan + architecture: see `GAME_PLAN.md`. MVP = Login → Sanctum → Expedition 
 6. "Begin Expedition" spends stamina via the same server RPC the web app uses,
    then plays the battle log and shows the real loot (M3).
 
+## Verified headless (Godot 4.4.1, 2026-07-12)
+- M0 ✅ project imports + runs 120 frames with zero script errors
+- Sim ✅ `tests/test_sim.gd`: 31-event log, deterministic, 5 floors, loot+end ordered
+- Net ✅ `tests/net_check.tscn`: live GoTrue round-trip, clean error path
+- Remaining for you: M1–M3 need YOUR login (steps above)
+
+Re-run the checks any time:
+```
+godot --headless -s tests/test_sim.gd --path .
+godot --headless res://tests/net_check.tscn --path .
+```
+
 Notes
 - The game stores only a refresh token, in Godot's `user://` folder.
 - All outcomes are server-decided; the fight you watch is a deterministic
