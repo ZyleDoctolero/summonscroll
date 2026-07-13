@@ -1,0 +1,28 @@
+; Engine configuration file.
+; Godot 4.4 — SummonScroll companion game (Throne State MVP).
+
+config_version=5
+
+[application]
+
+config/name="SummonScroll"
+config/description="Companion game for the SummonScroll habit RPG — watch your real-life effort fight."
+run/main_scene="res://scenes/boot.tscn"
+config/features=PackedStringArray("4.4")
+
+[autoload]
+
+Config="*res://autoloads/config.gd"
+Sb="*res://autoloads/sb.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
